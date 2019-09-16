@@ -1,0 +1,43 @@
+{
+  "name": "tapcart-library",
+  "version": "0.5.159",
+  "description": "tapcart component kit",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel lib -d build",
+    "build:watch": "babel lib -w -d build",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexiastandish/tapcart-ui.git"
+  },
+  "author": "Alexia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexiastandish/tapcart-ui/issues"
+  },
+  "homepage": "https://github.com/alexiastandish/tapcart-ui#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "polished": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "resolve-url-loader": "^3.1.0"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
+    "nuka-carousel": "^4.5.9",
+    "react-select": "^3.0.4",
+    "styled-components": "^4.3.2",
+    "styled-jsx": "^3.2.1"
+  }
+}
