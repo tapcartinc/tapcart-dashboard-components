@@ -12,7 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var Hero = _styledComponents["default"].section.withConfig({
   displayName: "Layout__Hero",
   componentId: "pze9na-0"
-})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";text-align:", ";min-height:900px;background:", ";"], function (props) {
+})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";text-align:", ";min-height:900px;align-items:center;background:", ";"], function (props) {
   return props.layout ? props.layout.direction : "row";
 }, function (props) {
   return props.layout ? props.layout.justify : "flex-start";
