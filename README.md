@@ -1,10 +1,33 @@
-Title of the project
-Brief description
-How to get the project running locally
-Running the linter
-Running the test suite
-How to contribute
-Steps to submit a PR
-How to raise issues
-A link to the Code of Conduct
-A changelog
+# Tapcart UI Library
+
+## Table of Contents
+
+- [General Info](#general-info)
+- [Setup](#setup)
+- [Technologies](#technologies)
+
+## General Info
+
+This project is a ui kit and component libarary for the Tapcart brand
+
+## Setup
+
+Use the package manager to add the library to your node_modules
+
+Add to your dependencies in the package.json file
+
+```
+"tapcart-ui-library": "github:tapcartinc/tapcart-ui-library#master"
+```
+
+```
+$ cd ../your-project
+$ npm install
+```
+
+Make sure your github account has SSH enabled
+
+## Technologies
+
+- **[Styled Components](https://www.styled-components.com/)**
+- **[React](https://reactjs.org/)**
