@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.input = exports.placeholder = exports.Paragraph = exports.Generic = exports.Body = exports.Subtext = exports.H5 = exports.H4 = exports.H3 = exports.H2 = exports.H1 = void 0;
+exports.input = exports.placeholder = exports.Paragraph = exports.Generic = exports.H5 = exports.H4 = exports.H3 = exports.H2 = exports.H1 = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -75,24 +75,6 @@ var H5 = _styledComponents["default"].h5.withConfig({
 });
 
 exports.H5 = H5;
-var Subtext = (0, _styledComponents["default"])(font).withConfig({
-  displayName: "Typography__Subtext",
-  componentId: "sc-1g2eju0-6"
-})(["color:", ";font-size:15px;", ";", ""], function (props) {
-  return props.color ? props.color : _variables.colors.black;
-}, _variables.sofia.sofiaRegular, function (props) {
-  return props.style ? props.style : null;
-});
-exports.Subtext = Subtext;
-var Body = (0, _styledComponents["default"])(font).withConfig({
-  displayName: "Typography__Body",
-  componentId: "sc-1g2eju0-7"
-})(["color:", ";font-size:15px;", ";letter-spacing:0.2px;line-height:23px;", ""], function (props) {
-  return props.color ? props.color : _variables.colors.black;
-}, _variables.sofia.sofiaRegular, function (props) {
-  return props.style ? props.style : null;
-});
-exports.Body = Body;
 var placeholder = {
   fontSize: "15px",
   color: "#DBE1EF",
@@ -112,7 +94,7 @@ exports.input = input;
 
 var Generic = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Generic",
-  componentId: "sc-1g2eju0-8"
+  componentId: "sc-1g2eju0-6"
 })(["font-size:", ";letter-spacing:0.3px;font-weight:400;color:", ";font-family:CircularStd-Book;margin-top:5px;margin-bottom:5px;", ""], function (props) {
   if (props.fontSize) {
     return props.fontSize;
@@ -133,7 +115,7 @@ exports.Generic = Generic;
 
 var Paragraph = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Paragraph",
-  componentId: "sc-1g2eju0-9"
+  componentId: "sc-1g2eju0-7"
 })(["font-size:", ";", ";letter-spacing:0.3px;color:", ";margin-top:5px;line-height:20px;margin-bottom:5px;", ";"], function (props) {
   if (props.fontSize) {
     return props.fontSize;

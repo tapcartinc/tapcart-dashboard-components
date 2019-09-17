@@ -16,7 +16,6 @@ var _exportNames = {
   Paragraph: true,
   placeholder: true,
   input: true,
-  Body: true,
   SegmentedControl: true,
   SearchBar: true,
   Input: true,
@@ -43,10 +42,11 @@ var _exportNames = {
   getColors: true,
   ThemeProvider: true,
   Hero: true,
-  MarketingHeading: true,
-  MarketingSubHeading: true,
-  MarketingNavLink: true,
-  MarketingFooterLink: true,
+  QuoteContainer: true,
+  Header: true,
+  Subheader: true,
+  Body: true,
+  FooterLink: true,
   MarketingIcon: true
 };
 Object.defineProperty(exports, "Icon", {
@@ -119,12 +119,6 @@ Object.defineProperty(exports, "input", {
   enumerable: true,
   get: function get() {
     return _Typography.input;
-  }
-});
-Object.defineProperty(exports, "Body", {
-  enumerable: true,
-  get: function get() {
-    return _Typography.Body;
   }
 });
 Object.defineProperty(exports, "SegmentedControl", {
@@ -283,28 +277,34 @@ Object.defineProperty(exports, "Hero", {
     return _Layout.Hero;
   }
 });
-Object.defineProperty(exports, "MarketingHeading", {
+Object.defineProperty(exports, "QuoteContainer", {
   enumerable: true,
   get: function get() {
-    return _Typography2.MarketingHeading;
+    return _Layout.QuoteContainer;
   }
 });
-Object.defineProperty(exports, "MarketingSubHeading", {
+Object.defineProperty(exports, "Header", {
   enumerable: true,
   get: function get() {
-    return _Typography2.MarketingSubHeading;
+    return _Typography2.Header;
   }
 });
-Object.defineProperty(exports, "MarketingNavLink", {
+Object.defineProperty(exports, "Subheader", {
   enumerable: true,
   get: function get() {
-    return _Typography2.MarketingNavLink;
+    return _Typography2.Subheader;
   }
 });
-Object.defineProperty(exports, "MarketingFooterLink", {
+Object.defineProperty(exports, "Body", {
   enumerable: true,
   get: function get() {
-    return _Typography2.MarketingFooterLink;
+    return _Typography2.Body;
+  }
+});
+Object.defineProperty(exports, "FooterLink", {
+  enumerable: true,
+  get: function get() {
+    return _Typography2.FooterLink;
   }
 });
 Object.defineProperty(exports, "MarketingIcon", {

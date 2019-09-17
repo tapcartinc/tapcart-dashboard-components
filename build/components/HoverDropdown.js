@@ -76,7 +76,7 @@ exports.HoverDropdown = HoverDropdown;
 var ClickableDropdown = _styledComponents["default"].ul.withConfig({
   displayName: "HoverDropdown__ClickableDropdown",
   componentId: "sc-1a8mo2v-0"
-})(["margin:0px;list-style:none;background:white;width:150px;", ";padding:0px;color:", ";box-shadow:0 0 8px 0 rgba(0,0,0,0.08);position:absolute;z-index:1;", ";"], _variables.sofia.sofiaRegular, _variables.colors.blue, function (props) {
+})(["margin:0px;list-style:none;background:white;width:150px;", ";padding:0px;color:", ";box-shadow:0 0 8px 0 rgba(0,0,0,0.08);position:absolute;z-index:1;", ";"], _variables.sofia.Regular, _variables.colors.blue, function (props) {
   return props.style ? props.style : null;
 });
 

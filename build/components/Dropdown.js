@@ -64,10 +64,10 @@ var Dropdown = function Dropdown(_ref) {
     onMouseLeave: function onMouseLeave() {
       return setOpen(false);
     }
-  }), props.children, open && options && _react["default"].createElement(HoverDD, _extends({
+  }), props.children, open && options && _react["default"].createElement("ul", _extends({
     open: open
   }, props), options.map(function (option) {
-    return _react["default"].createElement(HoverDDItem, {
+    return _react["default"].createElement("li", {
       onClick: option.onClick,
       key: option.title
     }, _react["default"].createElement(DDCircle, null), option.title);

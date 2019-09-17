@@ -28,6 +28,7 @@ var colors = _defineProperty({
   gray50: "#e9e9e9",
   gray75: "#D8D8D8",
   darkgray: "#8A888A",
+  grayText: "#abb1c2",
   green: "#1BDFBA",
   bluegray: "#A1A8B9",
   black: "#000000",
