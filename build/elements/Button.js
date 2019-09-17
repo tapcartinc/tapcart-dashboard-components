@@ -23,7 +23,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var options = ["primary", "primary--reversed", "secondary", "transparent", "save", "save--reversed", "delete", "delete--reversed", "inverted", "inverted--reversed"];
+var options = ["primary", "primary--reversed", "secondary", "transparent--blue", "transparent--green", "transparent--red", "transparent--white", "save", "save--reversed", "delete", "delete--reversed", "inverted", "inverted--reversed", "secondary--green"];
 
 var StyledButton = _styledComponents["default"].button.attrs(function (props) {
   var type = options.includes(props.type) ? props.type : "primary";
@@ -36,9 +36,9 @@ var StyledButton = _styledComponents["default"].button.attrs(function (props) {
   displayName: "Button__StyledButton",
   componentId: "sc-12aqe4e-0"
 })(["border-radius:3px;display:flex;flex-direction:row;align-items:center;justify-items:center;font-size:14px;", ";text-transform:uppercase;line-height:1.71;letter-spacing:1px;padding-top:12px;padding-bottom:12px;padding-right:", ";padding-left:", ";outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " ", " ", ""], _variables.sofia.sofiaMedium, function (props) {
-  return props.type === "transparent" ? "0px" : "20px";
+  return props.type.includes("transparent") ? "0px" : "20px";
 }, function (props) {
-  return props.type === "transparent" ? "0px" : "20px";
+  return props.type.includes("transparent") ? "0px" : "20px";
 }, _animations.transition, _animations.hover, function (props) {
   return (0, _functions.getColors)(props.type);
 }, function (props) {

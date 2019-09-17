@@ -27,6 +27,7 @@ var _exportNames = {
   SelectDropdown: true,
   Toggle: true,
   IconToggle: true,
+  Dropdown: true,
   Container: true,
   Accordion: true,
   Card: true,
@@ -186,6 +187,12 @@ Object.defineProperty(exports, "IconToggle", {
     return _IconToggle.IconToggle;
   }
 });
+Object.defineProperty(exports, "Dropdown", {
+  enumerable: true,
+  get: function get() {
+    return _Dropdown.Dropdown;
+  }
+});
 Object.defineProperty(exports, "Container", {
   enumerable: true,
   get: function get() {
@@ -334,6 +341,8 @@ var _SelectDropdown = require("./components/SelectDropdown");
 var _Toggle = require("./components/Toggle");
 
 var _IconToggle = require("./components/IconToggle");
+
+var _Dropdown = require("./components/Dropdown");
 
 var _Container = require("./layout/Container");
 

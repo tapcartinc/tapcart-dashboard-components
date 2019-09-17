@@ -68,10 +68,35 @@ var getColors = function getColors(type) {
         boxShadow: "inset 0px 0px 0px 1px #FFFFFF"
       };
 
-    case "transparent":
+    case "transparent--blue":
       return {
         color: _variables.colors.blue,
         background: "transparent"
+      };
+
+    case "transparent--green":
+      return {
+        color: _variables.colors.green,
+        background: "transparent"
+      };
+
+    case "transparent--red":
+      return {
+        color: _variables.colors.red,
+        background: "transparent"
+      };
+
+    case "transparent--white":
+      return {
+        color: "white",
+        background: "transparent"
+      };
+
+    case "secondary--green":
+      return {
+        color: "white",
+        background: "transparent",
+        boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.green)
       };
 
     case "blue":

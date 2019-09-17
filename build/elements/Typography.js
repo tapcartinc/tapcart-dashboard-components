@@ -113,7 +113,7 @@ exports.input = input;
 var Generic = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Generic",
   componentId: "sc-1g2eju0-8"
-})(["font-size:", ";letter-spacing:0.3px;font-weight:400;color:", ";font-family:\"CircularStd-Book\",margin-top:5px;margin-bottom:5px;", ""], function (props) {
+})(["font-size:", ";letter-spacing:0.3px;font-weight:400;color:", ";font-family:CircularStd-Book;margin-top:5px;margin-bottom:5px;", ""], function (props) {
   if (props.fontSize) {
     return props.fontSize;
   } else {
