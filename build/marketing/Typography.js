@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FooterLink = exports.Body = exports.Subheader = exports.Header = void 0;
+exports.FooterLink = exports.Subheader = exports.Header = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -47,24 +47,9 @@ var Subheader = _styledComponents["default"].p.withConfig({
 
 exports.Subheader = Subheader;
 
-var Body = _styledComponents["default"].p.withConfig({
-  displayName: "Typography__Body",
-  componentId: "sc-1bwqgjv-2"
-})(["color:", ";font-size:18px;", ";letter-spacing:0.2px;line-height:28px;", ""], function (props) {
-  if (props.color) {
-    return (0, _functions.getColors)(props.color);
-  } else {
-    return props.theme.header;
-  }
-}, _variables.sofia.sofiaRegular, function (props) {
-  return props.style ? props.style : null;
-});
-
-exports.Body = Body;
-
 var FooterLink = _styledComponents["default"].span.withConfig({
   displayName: "Typography__FooterLink",
-  componentId: "sc-1bwqgjv-3"
+  componentId: "sc-1bwqgjv-2"
 })(["", ";font-size:18px;line-height:2;color:", ";", ""], _variables.sofia.sofiaMedium, _variables.colors.black, function (props) {
   return props.style ? props.style : null;
 });

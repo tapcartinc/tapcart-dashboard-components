@@ -79,6 +79,14 @@ var QuoteContainer = function QuoteContainer(props) {
   }, " ", props.position)), _react["default"].createElement("img", {
     src: props.logo,
     alt: "quote"
+  })), _react["default"].createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    className: "green-path",
+    viewBox: "0 0 1440 13.8"
+  }, _react["default"].createElement("title", null, "Path 9"), _react["default"].createElement("path", {
+    d: "M1440,150.8c-22.5-.8-103.1-1.6-142.1-2.3-43.9-.9-201.2-2.6-238.5-2.2s-142.9,1.3-200.3,4.8-88.6,2.1-129,3.4-190.2.9-246.3,1.3-170.3-1.3-213.7-1.7-112.9-.4-142-.9c-25.9-.3-109.8-1.8-128.1-2.1V160H1440Z",
+    transform: "translate(0 -146.2)",
+    fill: "#1bdfba"
   })));
 };
 
@@ -87,7 +95,7 @@ exports.QuoteContainer = QuoteContainer;
 var QuoteContainerWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Layout__QuoteContainerWrapper",
   componentId: "pze9na-1"
-})(["background:", ";width:100%;display:flex;flex-direction:row;align-items:center;justify-content:center;padding:40px;position:relative;.bg-image{position:absolute;width:20%;top:0;right:0;}"], _variables.colors.blue);
+})(["background:", ";width:100%;display:flex;flex-direction:row;align-items:center;justify-content:center;padding:40px;box-sizing:border-box;position:relative;.bg-image{position:absolute;width:20%;top:0;right:0;}"], _variables.colors.blue);
 
 var ImageWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Layout__ImageWrapper",
@@ -102,4 +110,4 @@ var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "Layout__Context",
   componentId: "pze9na-4"
-})(["padding:40px;display:flex;flex-direction:column;justify-items:flex-start;width:40%;margin-left:60px;z-index:1;img{margin-top:20px;width:100px;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight);
+})(["padding:40px;display:flex;flex-direction:column;justify-content:flex-start;width:40%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight);

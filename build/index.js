@@ -12,8 +12,7 @@ var _exportNames = {
   H3: true,
   H4: true,
   H5: true,
-  Generic: true,
-  Paragraph: true,
+  Body: true,
   placeholder: true,
   input: true,
   SegmentedControl: true,
@@ -45,7 +44,6 @@ var _exportNames = {
   QuoteContainer: true,
   Header: true,
   Subheader: true,
-  Body: true,
   FooterLink: true,
   MarketingIcon: true
 };
@@ -97,16 +95,10 @@ Object.defineProperty(exports, "H5", {
     return _Typography.H5;
   }
 });
-Object.defineProperty(exports, "Generic", {
+Object.defineProperty(exports, "Body", {
   enumerable: true,
   get: function get() {
-    return _Typography.Generic;
-  }
-});
-Object.defineProperty(exports, "Paragraph", {
-  enumerable: true,
-  get: function get() {
-    return _Typography.Paragraph;
+    return _Typography.Body;
   }
 });
 Object.defineProperty(exports, "placeholder", {
@@ -293,12 +285,6 @@ Object.defineProperty(exports, "Subheader", {
   enumerable: true,
   get: function get() {
     return _Typography2.Subheader;
-  }
-});
-Object.defineProperty(exports, "Body", {
-  enumerable: true,
-  get: function get() {
-    return _Typography2.Body;
   }
 });
 Object.defineProperty(exports, "FooterLink", {
