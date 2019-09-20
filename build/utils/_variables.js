@@ -12,7 +12,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /////////
 // Colors
 /////////
-var colors = _defineProperty({
+var colors = {
   blue: "#373aaf",
   blue10: "#f6faff",
   blue15: "#CBCFDD",
@@ -36,8 +36,7 @@ var colors = _defineProperty({
   highlightblue: "#E3EFFD",
   yellow: "#F6B343",
   red: "#D94747"
-}, "black", "#000000");
-
+};
 exports.colors = colors;
 var sofia = {
   sofiaSemiBold: {
