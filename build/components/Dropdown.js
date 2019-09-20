@@ -11,8 +11,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _variables = require("../utils/_variables");
 
-var _functions = require("../utils/_functions");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
@@ -76,25 +74,12 @@ var Dropdown = function Dropdown(_ref) {
 
 exports.Dropdown = Dropdown;
 
-var HoverDD = _styledComponents["default"].ul.withConfig({
-  displayName: "Dropdown__HoverDD",
-  componentId: "sc-18wceag-0"
-})(["list-style:none;", ";padding:0px;margin:0px;color:", ";position:absolute;z-index:1;", ";"], _variables.sofia.sofiaRegular, function (props) {
-  if (props.color) {
-    return (0, _functions.getColors)(props.color);
-  } else {
-    return _variables.colors.blue;
-  }
-}, function (props) {
-  return props.style ? props.style : null;
-});
-
 var HoverDDItem = _styledComponents["default"].li.withConfig({
   displayName: "Dropdown__HoverDDItem",
-  componentId: "sc-18wceag-1"
+  componentId: "sc-18wceag-0"
 })(["&:hover{cursor:pointer;}display:flex;flex-direction:row;align-items:center;"]);
 
 var DDCircle = _styledComponents["default"].div.withConfig({
   displayName: "Dropdown__DDCircle",
-  componentId: "sc-18wceag-2"
+  componentId: "sc-18wceag-1"
 })(["background:transparent;box-shadow:inset 0px 0px 0px 1px ", ";height:10px;width:10px;border-radius:50px;margin-right:15px;", ":hover &{background:", ";box-shadow:none;}"], _variables.colors.blue, HoverDDItem, _variables.colors.blue);

@@ -22,6 +22,7 @@ var colors = _defineProperty({
   lightpurple: "#7574EF",
   // 393cb4
   offwhite: "#FCFEFF",
+  white: "#F3F3F7",
   gray: "#BDBDBD",
   gray10: "#F8F7F8",
   gray25: "#F0F2F5",

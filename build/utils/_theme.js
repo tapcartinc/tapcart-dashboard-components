@@ -3,13 +3,13 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.neutral = exports.invert = exports.base = void 0;
+exports.offWhite = exports.scrollingNav = exports.topNav = exports.neutral = exports.invert = exports.base = void 0;
 
 var _variables = require("./_variables");
 
 var base = {
   fg: _variables.colors.blue,
-  bg: "white",
+  bg: "#FFFFFF",
   header: _variables.colors.black,
   subtext: _variables.colors.black,
   body: _variables.colors.blue
@@ -29,6 +29,22 @@ var invert = function invert(_ref) {
 };
 
 exports.invert = invert;
+
+var offWhite = function offWhite(_ref2) {
+  var fg = _ref2.fg,
+      header = _ref2.header,
+      subtext = _ref2.subtext,
+      body = _ref2.body;
+  return {
+    fg: fg,
+    header: header,
+    subtext: subtext,
+    body: body,
+    bg: _variables.colors.offwhite
+  };
+};
+
+exports.offWhite = offWhite;
 var neutral = {
   fg: _variables.colors.black,
   bg: "#F3F3F7",
@@ -37,3 +53,13 @@ var neutral = {
   body: _variables.colors.blue
 };
 exports.neutral = neutral;
+var topNav = {
+  background: "transparent",
+  fg: _variables.colors.white
+};
+exports.topNav = topNav;
+var scrollingNav = {
+  background: "white",
+  fg: _variables.colors.blue
+};
+exports.scrollingNav = scrollingNav;
