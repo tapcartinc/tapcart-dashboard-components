@@ -1781,8 +1781,7 @@ var MarketingIcon = function MarketingIcon(props) {
 
     case "chat":
       return _react["default"].createElement(MarketingSVG, _extends({}, props, {
-        width: "44px",
-        height: "43px",
+        width: "24px",
         viewBox: "0 0 44 43",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
