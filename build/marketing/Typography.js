@@ -16,7 +16,7 @@ var _media = _interopRequireDefault(require("../utils/_media"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 38px;\n    line-height: 48px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 38px;\n  line-height: 48px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -26,7 +26,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 38px;\n    line-height: 48px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 38px;\n  line-height: 48px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37,11 +37,11 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+// import {vertical} from '../utils/_layout'
 var Header = _styledComponents["default"].h1.withConfig({
   displayName: "Typography__Header",
   componentId: "sc-1bwqgjv-0"
-})(["font-family:\"CircularStd-Bold\";font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;text-align:", ";color:", ";", ";", ";", ""], function (props) {
-  console.log("props", props);
+})(["font-family:CircularStd-Bold;font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;text-align:", ";color:", ";", ";", ";", ""], function (props) {
   return props.layout ? props.layout.text : "left";
 }, function (props) {
   if (props.color) {

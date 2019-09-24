@@ -76,8 +76,6 @@ function (_Component) {
       var sofiaRegular = _variables.sofia.sofiaRegular;
 
       var SegmentedControlType = function SegmentedControlType(props) {
-        console.log("props", props);
-
         switch (props.type) {
           case "primary":
             return _react["default"].createElement(_Container.Container, {

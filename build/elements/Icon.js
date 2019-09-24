@@ -3758,28 +3758,14 @@ function Icon(props) {
 var SVG = _styledComponents["default"].svg.withConfig({
   displayName: "Icon__SVG",
   componentId: "sc-1iborph-0"
-})(["", " margin-left:", ";", ";"], function (props) {
+})(["", " margin-left:", ";", ";", ";", ";"], function (props) {
   return props.circleIcon && "background: ".concat(props.backgroundColor ? (0, _functions.getColors)(props.backgroundColor) : _variables.colors.blue25, "\n    border-radius: 50%;\n    padding: 5px;\n    overflow: visible;\n    -webkit-transform: scale(1.5);\n    -ms-transform: scale(1.5);\n    transform: scale(1.5);\n    margin: 0 auto;\n    margin-left: auto;\n    height: 25px;\n    width: 25px;");
 }, function (props) {
   return props.buttonIcon && "10px";
 }, function (props) {
+  return props.marginRight && "margin-right: 10px";
+}, function (props) {
+  return props.marginLeft && "margin-left: 10px";
+}, function (props) {
   return props.style ? props.style : null;
-}); // ${props => {
-//   return (
-//     props.circleIcon &&
-//     `background: ${props =>
-//       props.backgroundColor
-//         ? getColors(props.backgroundColor)
-//         : colors.blue25};
-//     border-radius: 50%;
-//     padding: 5px;
-//     overflow: visible;
-//     -webkit-transform: scale(1.5);
-//     -ms-transform: scale(1.5);
-//     transform: scale(1.5);
-//     margin: 0 auto;
-//     margin-left: auto;
-//     height: 25px;
-//     width: 25px;`
-//   );
-// }};
+});

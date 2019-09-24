@@ -137,8 +137,6 @@ var getColors = function getColors(type) {
 exports.getColors = getColors;
 
 var getBorder = function getBorder(type) {
-  console.log(type);
-
   switch (type) {
     case "primary":
       return "0px";

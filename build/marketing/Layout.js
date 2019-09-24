@@ -13,12 +13,36 @@ var _Typography = require("../marketing/Typography");
 
 var _variables = require("../utils/_variables");
 
+var _media = _interopRequireDefault(require("../utils/_media"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    margin-left: 0px;\n  "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    margin-left: 0px;\n  "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var Hero = _styledComponents["default"].section.withConfig({
   displayName: "Layout__Hero",
   componentId: "pze9na-0"
-})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";text-align:", ";min-height:720px;align-items:center;background:", ";"], function (props) {
+})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";text-align:", ";min-height:720px;align-items:center;background:", ";margin:0px;"], function (props) {
   return props.layout ? props.layout.direction : "row";
 }, function (props) {
   return props.layout ? props.layout.justify : "flex-start";
@@ -95,7 +119,7 @@ exports.QuoteContainer = QuoteContainer;
 var QuoteContainerWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Layout__QuoteContainerWrapper",
   componentId: "pze9na-1"
-})(["background:", ";width:100%;display:flex;flex-direction:row;align-items:center;justify-content:center;padding:40px;box-sizing:border-box;position:relative;.bg-image{position:absolute;width:20%;top:0;right:0;}"], _variables.colors.blue);
+})(["background:", ";width:100%;display:flex;flex-direction:row;align-items:center;justify-content:center;padding:40px;box-sizing:border-box;position:relative;flex-wrap:wrap;.bg-image{position:absolute;width:20%;top:0;right:0;}"], _variables.colors.blue);
 
 var ImageWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Layout__ImageWrapper",
@@ -110,4 +134,4 @@ var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "Layout__Context",
   componentId: "pze9na-4"
-})(["padding:40px;display:flex;flex-direction:column;justify-content:flex-start;width:40%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight);
+})(["padding:40px;display:flex;flex-direction:column;justify-content:flex-start;width:40%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", ";", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].md(_templateObject()), _media["default"].sm(_templateObject2()));

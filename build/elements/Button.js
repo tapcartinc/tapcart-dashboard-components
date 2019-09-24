@@ -35,7 +35,7 @@ var StyledButton = _styledComponents["default"].button.attrs(function (props) {
 }).withConfig({
   displayName: "Button__StyledButton",
   componentId: "sc-12aqe4e-0"
-})(["border-radius:3px;display:flex;flex-direction:row;align-items:center;justify-items:center;font-size:14px;", ";text-transform:uppercase;line-height:1.71;letter-spacing:1px;padding-top:12px;padding-bottom:12px;padding-right:", ";padding-left:", ";outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " ", " ", ""], _variables.sofia.sofiaMedium, function (props) {
+})(["border-radius:5px;display:flex;flex-direction:row;align-items:center;justify-items:center;font-size:14px;", ";text-transform:uppercase;line-height:1.71;letter-spacing:1px;padding-top:12px;padding-bottom:12px;padding-right:", ";padding-left:", ";outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " ", " a{font-size:14px;", ";", "}", ""], _variables.sofia.sofiaMedium, function (props) {
   return props.type.includes("transparent") ? "0px" : "20px";
 }, function (props) {
   return props.type.includes("transparent") ? "0px" : "20px";
@@ -43,6 +43,8 @@ var StyledButton = _styledComponents["default"].button.attrs(function (props) {
   return (0, _functions.getColors)(props.type);
 }, function (props) {
   return props.isDisabled && "background: ".concat(_variables.colors.darkgray, "; color: ").concat(_variables.colors.gray, "; border: none; box-shadow: none;\n    &:hover{\n      cursor: default;\n      transform: translateY(0px)\n    }\n    ");
+}, _variables.sofia.sofiaMedium, function (props) {
+  return (0, _functions.getColors)(props.type);
 }, function (props) {
   return props.style ? props.style : null;
 });

@@ -87,8 +87,6 @@ function (_Component) {
         }
       }
 
-      console.log("transition", _animations.transition); // console.log("stepComplete", stepComplete(index));
-
       return _react["default"].createElement(AccordionStyledItem, {
         boxShadow: boxShadow,
         style: style
