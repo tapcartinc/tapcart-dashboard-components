@@ -31,3 +31,35 @@ Make sure your github account has SSH enabled
 
 - **[Styled Components](https://www.styled-components.com/)**
 - **[React](https://reactjs.org/)**
+
+# Library: <b>UI Elements</b>
+
+## Button
+
+#### **`props:`**
+
+primary, primary--reversed, secondary, transparent--blue, transparent--green, transparent--red, transparent--white, save, save--reversed, delete, delete--reversed, inverted, inverted--reversed, secondary--green
+
+| Prop      | type     | required | default |
+| --------- | -------- | -------- | ------- |
+| type      | string   | true     | primary |
+| disabled  | bool     | false    | false   |
+| isLoading | bool     | false    | false   |
+| onClick   | function |          |         |
+
+#### **`example:`**
+
+`<Button type="primary"> Button Text </Button>`
+
+`<Button type="primary"> <Icon type="trash" iconButton /> Icon Button Text </Button>`
+
+## Input
+
+#### **`props:`**
+
+| Prop      | type     | required | default |
+| --------- | -------- | -------- | ------- |
+| type      | string   | true     | primary |
+| disabled  | bool     | false    | false   |
+| isLoading | bool     | false    | false   |
+| onClick   | function |          |         |
