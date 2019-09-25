@@ -37,7 +37,6 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-// import {vertical} from '../utils/_layout'
 var Header = _styledComponents["default"].h1.withConfig({
   displayName: "Typography__Header",
   componentId: "sc-1bwqgjv-0"

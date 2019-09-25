@@ -7,12 +7,12 @@ exports.leftAlign = exports.centered = void 0;
 var centered = {
   textAlign: "center",
   direction: "column",
-  justify: "flex-start"
+  justify: "center"
 };
 exports.centered = centered;
 var leftAlign = {
   textAlign: "left",
   direction: "row",
-  justify: "center"
+  justify: "flex-start"
 };
 exports.leftAlign = leftAlign;
