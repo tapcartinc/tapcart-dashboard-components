@@ -47,7 +47,7 @@ var Hero = _styledComponents["default"].section.withConfig({
 }, function (props) {
   return props.layout ? props.layout.justify : "flex-start";
 }, function (props) {
-  return props.layout ? props.layout.text : "left";
+  return props.layout ? props.layout.textAlign : "left";
 }, function (props) {
   return props.bgColor ? props.bgColor : props.theme.bg;
 });

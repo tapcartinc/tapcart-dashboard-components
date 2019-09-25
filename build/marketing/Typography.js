@@ -41,9 +41,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var Header = _styledComponents["default"].h1.withConfig({
   displayName: "Typography__Header",
   componentId: "sc-1bwqgjv-0"
-})(["font-family:CircularStd-Bold;font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;text-align:", ";color:", ";", ";", ";", ""], function (props) {
-  return props.layout ? props.layout.text : "left";
-}, function (props) {
+})(["font-family:CircularStd-Bold;font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;color:", ";", ";", ";", ""], function (props) {
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {
@@ -58,9 +56,7 @@ exports.Header = Header;
 var Subheader = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Subheader",
   componentId: "sc-1bwqgjv-1"
-})(["font-size:26px;line-height:36px;margin-bottom:30px;text-align:", ";", ";color:", ";", ""], function (props) {
-  return props.layout ? props.layout.text : "left";
-}, _variables.sofia.sofiaRegular, function (props) {
+})(["font-size:26px;line-height:36px;margin-bottom:30px;", ";color:", ";", ""], _variables.sofia.sofiaRegular, function (props) {
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {
