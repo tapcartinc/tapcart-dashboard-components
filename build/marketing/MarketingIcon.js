@@ -1824,6 +1824,132 @@ var MarketingIcon = function MarketingIcon(props) {
         stroke: "#373AAF"
       })))))))));
 
+    case "abstract-builder-icon":
+      return _react["default"].createElement(MarketingSVG, {
+        width: "73px",
+        height: "75px",
+        viewBox: "0 0 73 75",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/Marketingsvg"
+      }, _react["default"].createElement("g", {
+        id: "Landing-Page",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Landing-Page",
+        transform: "translate(-806.000000, -5962.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Design",
+        transform: "translate(100.000000, 5962.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Design-text-section",
+        transform: "translate(705.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Section-1-header"
+      }, _react["default"].createElement("g", {
+        id: "Header,-title,-"
+      }, _react["default"].createElement("g", {
+        id: "Design"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "75",
+        height: "75"
+      }), _react["default"].createElement("g", {
+        id: "design",
+        transform: "translate(1.000000, 0.000000)"
+      }, _react["default"].createElement("path", {
+        d: "M50.8458642,66.2134099 C50.216088,62.6277866 49.2149863,59.168838 47.8833486,55.877066 C54.2841785,52.2527049 58.6038961,45.3808145 58.6038961,37.5 C58.6038961,25.84464 49.15536,16.3961039 37.5,16.3961039 C29.5975117,16.3961039 22.7095046,20.7396143 19.0931046,27.1695093 C15.8048167,25.8418891 12.3493635,24.8377027 8.76680061,24.1967232 C13.7925992,13.3599426 24.7685966,5.84415584 37.5,5.84415584 C54.98304,5.84415584 69.1558442,20.01696 69.1558442,37.5 C69.1558442,50.214719 61.6597433,61.1786299 50.8458642,66.2134099 Z",
+        id: "Combined-Shape",
+        fill: "#36F4D0",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("path", {
+        d: "M37.5,69.1558442 C54.98304,69.1558442 69.1558442,54.98304 69.1558442,37.5 C69.1558442,20.01696 54.98304,5.84415584 37.5,5.84415584 C20.01696,5.84415584 5.84415584,20.01696 5.84415584,37.5 C5.84415584,54.98304 20.01696,69.1558442 37.5,69.1558442 Z M37.5,58.6038961 C25.84464,58.6038961 16.3961039,49.15536 16.3961039,37.5 C16.3961039,25.84464 25.84464,16.3961039 37.5,16.3961039 C49.15536,16.3961039 58.6038961,25.84464 58.6038961,37.5 C58.6038961,49.15536 49.15536,58.6038961 37.5,58.6038961 Z",
+        id: "Combined-Shape",
+        fill: "#36F4D0",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("circle", {
+        id: "Oval-Copy-26",
+        fill: "#3951EA",
+        cx: "55.9195269",
+        cy: "16.9584879",
+        r: "16.9584879"
+      }), _react["default"].createElement("path", {
+        d: "M-4.97935027e-14,24.1245362 C28.0894749,24.4102434 50.7825394,47.0628334 50.8754638,75 L-5.68434189e-14,75 L-4.97379915e-14,24.1245362 Z",
+        id: "Combined-Shape-Copy-4",
+        fill: "#FFB8AD"
+      }), _react["default"].createElement("path", {
+        d: "M50.1421942,66.530594 C46.2699055,68.2192494 41.9943295,69.1558442 37.5,69.1558442 C20.01696,69.1558442 5.84415584,54.98304 5.84415584,37.5 C5.84415584,33.0217538 6.77405923,28.7606981 8.45130601,24.899393 C12.0203013,25.5242768 15.4623304,26.5147124 18.7367717,27.8303649 C17.2408575,30.7272118 16.3961039,34.0149545 16.3961039,37.5 C16.3961039,49.15536 25.84464,58.6038961 37.5,58.6038961 C41.0062943,58.6038961 44.3128726,57.7488099 47.222579,56.2357933 C48.5418869,59.5135194 49.5288775,62.9588079 50.1421942,66.530594 Z",
+        id: "Combined-Shape",
+        fill: "#FFFFFF",
+        fillRule: "nonzero"
+      }))))))))));
+
+    case "quote":
+      return _react["default"].createElement(MarketingSVG, {
+        width: "24px",
+        height: "21px",
+        viewBox: "0 0 24 21",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/MarketingSVG"
+      }, _react["default"].createElement("g", {
+        id: "Landing-Page",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Landing-Page",
+        transform: "translate(-809.000000, -6502.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Design",
+        transform: "translate(100.000000, 5962.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Design-text-section",
+        transform: "translate(705.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Section-1-header"
+      }, _react["default"].createElement("g", {
+        id: "Header,-title,-"
+      }, _react["default"].createElement("g", {
+        id: "Quote",
+        transform: "translate(0.000000, 535.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-quote",
+        transform: "translate(4.000000, 3.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "language",
+        transform: "translate(1.000000, 3.000000)",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M0,19 L1,19 C2.1,19 3,18.1 3,17 L3,16 L0.8,14.8 C0.1,14.4 0.1,13.4 0.8,13 L3,12 L3,10 L5.3,9.4 C6.1,9.2 6.3,8.3 5.8,7.7 L3,5 L3,0",
+        id: "Path",
+        stroke: "#393CB4"
+      }), _react["default"].createElement("path", {
+        d: "M7,14 L10,10 L10,4 C10,2.9 10.9,2 12,2 L20,2 C21.1,2 22,2.9 22,4 L22,12 C22,13.1 21.1,14 20,14 L13,14 L7,14 Z",
+        id: "Path",
+        stroke: "#393CB4"
+      }), _react["default"].createElement("path", {
+        d: "M14,6 L18,6",
+        id: "Path",
+        stroke: "#1BDFBA"
+      }), _react["default"].createElement("path", {
+        d: "M14,10 L16,10",
+        id: "Path",
+        stroke: "#1BDFBA"
+      })))))))))));
+
     default:
       break;
   }
@@ -1834,11 +1960,11 @@ exports.MarketingIcon = MarketingIcon;
 var MarketingSVG = _styledComponents["default"].svg.withConfig({
   displayName: "MarketingIcon__MarketingSVG",
   componentId: "sc-1xbzoc8-0"
-})(["margin:0 auto;margin-left:", " ", ";"], function (props) {
+})(["margin-left:", " ", ";"], function (props) {
   if (props.buttonIcon) {
     return "10px";
   } else {
-    return "auto";
+    return "0px";
   }
 }, function (props) {
   return props.style ? props.style : null;

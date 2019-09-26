@@ -90,18 +90,14 @@ exports.input = input;
 var Body = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Body",
   componentId: "sc-1g2eju0-5"
-})(["font-size:", ";line-height:28px;", ";", ";margin-top:5px;margin-bottom:5px;", ""], function (props) {
+})(["font-size:", ";line-height:28px;color:", ";", ";margin-top:5px;margin-bottom:5px;", ""], function (props) {
   if (props.fontSize) {
     return props.fontSize;
   } else {
     return "18px";
   }
 }, function (props) {
-  if (props.color) {
-    return "color: ".concat(props.color);
-  } else {
-    return "color: #000000";
-  }
+  return props.color ? props.color : "#000000";
 }, _variables.sofia.sofiaRegular, function (props) {
   return props.style ? props.style : null;
 });

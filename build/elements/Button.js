@@ -44,7 +44,7 @@ var StyledButton = _styledComponents["default"].button.attrs(function (props) {
 }, _variables.sofia.sofiaMedium, function (props) {
   return (0, _functions.getColors)(props.type);
 }, function (props) {
-  return props.mobileHide ? "display: none;" : "display: flex;";
+  return props.mobileHide ? "display: none" : "display: flex";
 }, function (props) {
   return props.style ? props.style : null;
 });
