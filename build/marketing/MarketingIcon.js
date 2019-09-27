@@ -1951,7 +1951,7 @@ var MarketingIcon = function MarketingIcon(props) {
       })))))))))));
 
     default:
-      break;
+      return _react["default"].createElement("span", null);
   }
 };
 
@@ -1960,12 +1960,8 @@ exports.MarketingIcon = MarketingIcon;
 var MarketingSVG = _styledComponents["default"].svg.withConfig({
   displayName: "MarketingIcon__MarketingSVG",
   componentId: "sc-1xbzoc8-0"
-})(["margin-left:", " ", ";"], function (props) {
-  if (props.buttonIcon) {
-    return "10px";
-  } else {
-    return "0px";
-  }
+})(["margin-left:", ";", ";"], function (props) {
+  return props.buttonIcon ? 10 : 0;
 }, function (props) {
   return props.style ? props.style : null;
 });

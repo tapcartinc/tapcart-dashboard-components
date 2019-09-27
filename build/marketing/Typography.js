@@ -46,7 +46,7 @@ var Header = _styledComponents["default"].h1.withConfig({
   } else {
     return props.theme.header;
   }
-}, _media["default"].mdlg(_templateObject()), _media["default"].sm(_templateObject2()), function (props) {
+}, _media["default"].lg(_templateObject()), _media["default"].sm(_templateObject2()), function (props) {
   return props.style ? props.style : null;
 });
 
