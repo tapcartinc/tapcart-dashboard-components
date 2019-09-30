@@ -35,6 +35,10 @@ var _exportNames = {
   colors: true,
   gradientOverlay: true,
   border: true,
+  marginRight: true,
+  marginLeft: true,
+  sofia: true,
+  circular: true,
   transition: true,
   hover: true,
   onClickTransition: true,
@@ -232,6 +236,30 @@ Object.defineProperty(exports, "border", {
   enumerable: true,
   get: function get() {
     return _variables.border;
+  }
+});
+Object.defineProperty(exports, "marginRight", {
+  enumerable: true,
+  get: function get() {
+    return _variables.marginRight;
+  }
+});
+Object.defineProperty(exports, "marginLeft", {
+  enumerable: true,
+  get: function get() {
+    return _variables.marginLeft;
+  }
+});
+Object.defineProperty(exports, "sofia", {
+  enumerable: true,
+  get: function get() {
+    return _variables.sofia;
+  }
+});
+Object.defineProperty(exports, "circular", {
+  enumerable: true,
+  get: function get() {
+    return _variables.circular;
   }
 });
 Object.defineProperty(exports, "transition", {

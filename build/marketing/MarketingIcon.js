@@ -2204,8 +2204,10 @@ exports.MarketingIcon = MarketingIcon;
 var MarketingSVG = _styledComponents["default"].svg.withConfig({
   displayName: "MarketingIcon__MarketingSVG",
   componentId: "sc-1xbzoc8-0"
-})(["margin-left:", ";", ";"], function (props) {
-  return props.buttonIcon ? "10px" : "0px";
+})(["margin-left:", ";margin-right:", ";", ";"], function (props) {
+  return props.iconLeft ? "10px" : "0px";
+}, function (props) {
+  return props.iconRight ? "10px" : "0px";
 }, function (props) {
   return props.style ? props.style : null;
 });

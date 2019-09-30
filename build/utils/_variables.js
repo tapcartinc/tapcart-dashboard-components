@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.space = exports.gradientOverlay = exports.border = exports.circular = exports.inputBorder = exports.borderRadius = exports.margin = exports.boxShadow = exports.sofia = exports.colors = void 0;
+exports.marginLeft = exports.marginRight = exports.gradientOverlay = exports.border = exports.circular = exports.inputBorder = exports.borderRadius = exports.margin = exports.boxShadow = exports.sofia = exports.colors = void 0;
 
 var _leftToRight, _rightToLeft, _bottomToTop, _topToBottom;
 
@@ -138,5 +138,11 @@ var gradientOverlay = {
   }, _defineProperty(_topToBottom, "background", "-webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)"), _defineProperty(_topToBottom, "background", "linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)"), _topToBottom)
 };
 exports.gradientOverlay = gradientOverlay;
-var space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
-exports.space = space;
+var marginRight = {
+  marginRight: "10px"
+};
+exports.marginRight = marginRight;
+var marginLeft = {
+  marginLeft: "10px"
+};
+exports.marginLeft = marginLeft;
