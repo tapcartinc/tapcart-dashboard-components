@@ -1950,6 +1950,250 @@ var MarketingIcon = function MarketingIcon(props) {
         stroke: "#1BDFBA"
       })))))))))));
 
+    case "abstract-convert-customers":
+      return _react["default"].createElement(MarketingSVG, {
+        width: "131px",
+        height: "107px",
+        viewBox: "0 0 131 107",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, _react["default"].createElement("g", {
+        id: "Style-Guide",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Style-guide",
+        transform: "translate(-5037.000000, -1160.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Large-icons",
+        transform: "translate(4249.000000, 269.000000)"
+      }, _react["default"].createElement("g", {
+        transform: "translate(118.800000, 273.600000)",
+        id: "Convert-more-customers"
+      }, _react["default"].createElement("g", {
+        transform: "translate(667.800000, 603.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "135",
+        height: "135"
+      }), _react["default"].createElement("g", {
+        id: "convert-moer-customers",
+        transform: "translate(1.800000, 14.400000)"
+      }, _react["default"].createElement("path", {
+        d: "M130.382913,106.2 L0.0408156631,106.2 C0.0136808803,105.44056 8.80457755e-13,104.677757 8.81072992e-13,103.911816 C8.81072992e-13,68.5281363 29.1963462,39.8440678 65.2118644,39.8440678 C101.227383,39.8440678 130.423729,68.5281363 130.423729,103.911816 C130.423729,104.677757 130.410048,105.44056 130.382913,106.2 Z",
+        id: "Combined-Shape",
+        fill: "#3951EA",
+        style: {
+          mixBlendMode: "multiply"
+        }
+      }), _react["default"].createElement("path", {
+        d: "M108,106.2 L25.2,106.2 C25.2,83.3353731 43.7354114,64.8 66.6,64.8 C89.4645886,64.8 108,83.3353731 108,106.199979 Z",
+        id: "Combined-Shape",
+        fill: "#FFB8AD"
+      }), _react["default"].createElement("path", {
+        d: "M66.6,54 C81.5116882,54 93.6,41.9116882 93.6,27 C93.6,12.0883118 81.5116882,0 66.6,0 C51.6883118,0 39.6,12.0883118 39.6,27 C39.6,41.9116882 51.6883118,54 66.6,54 Z M66.6,37.8 C60.6353247,37.8 55.8,32.9646753 55.8,27 C55.8,21.0353247 60.6353247,16.2 66.6,16.2 C72.5646753,16.2 77.4,21.0353247 77.4,27 C77.4,32.9646753 72.5646753,37.8 66.6,37.8 Z",
+        id: "Oval-Copy-2",
+        fill: "#3EF5D6",
+        fillRule: "nonzero",
+        transform: "translate(66.600000, 27.000000) rotate(-270.000000) translate(-66.600000, -27.000000) "
+      }), _react["default"].createElement("path", {
+        d: "M44.8666778,43.0236516 C51.2685686,40.9601752 58.1075483,39.8440678 65.2118644,39.8440678 C73.136531,39.8440678 80.7310453,41.2328157 87.7570222,43.7761099 C82.8109955,50.0053768 75.1719949,54 66.6,54 C57.6876538,54 49.7838618,49.6818659 44.8666778,43.0236516 Z",
+        id: "Combined-Shape",
+        fill: "#FFFFFF"
+      }))))))));
+
+    case "abstract-increase-order":
+      return _react["default"].createElement(MarketingSVG, {
+        width: "136px",
+        height: "104px",
+        viewBox: "0 0 136 104",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, _react["default"].createElement("defs", null, _react["default"].createElement("path", {
+        d: "M93.4591194,21.9083435 C99.027486,24.2438643 104.348539,27.3639743 109.256116,31.2686735 L62.4718814,102.452864 L47.2251982,92.2551583 L93.4591194,21.9083435 Z",
+        id: "path-1"
+      })), _react["default"].createElement("g", {
+        id: "Style-Guide",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Style-guide",
+        transform: "translate(-4367.000000, -1161.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Large-icons",
+        transform: "translate(4249.000000, 269.000000)"
+      }, _react["default"].createElement("g", {
+        transform: "translate(118.800000, 273.600000)",
+        id: "Increase-order-value"
+      }, _react["default"].createElement("g", {
+        transform: "translate(0.000000, 603.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "135",
+        height: "135"
+      }), _react["default"].createElement("g", {
+        id: "increase-order-value",
+        transform: "translate(0.000000, 16.200000)"
+      }, _react["default"].createElement("g", {
+        id: "increase-average-order",
+        transform: "translate(39.461538, 0.000000)"
+      }, _react["default"].createElement("path", {
+        d: "M68.3742724,0.0336153909 L83.6209557,10.2313212 L23.010343,102.452864 L7.76365969,92.2551583 L68.3742724,0.0336153909 Z M53.9975809,21.9083435 L7.76365969,92.2551583 L23.010343,102.452864 L69.7945772,31.2686735 C64.8870008,27.3639743 59.5659475,24.2438643 53.9975809,21.9083435 Z",
+        id: "Combined-Shape",
+        fill: "#FFB8AD",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("path", {
+        d: "M0.319269965,85.5130356 C-0.178574785,77.9549733 2.43752539,70.2274423 8.16757048,64.4504447 C18.7118882,53.8203759 35.8073426,53.8203759 46.3516603,64.4504447 C52.0817054,70.2274423 54.6978056,77.9549733 54.1999608,85.5130356 L0.319269965,85.5130356 Z",
+        id: "Combined-Shape",
+        fill: "#3349DA",
+        style: {
+          mixBlendMode: "multiply"
+        },
+        transform: "translate(27.259615, 70.995707) rotate(-360.000000) translate(-27.259615, -70.995707) "
+      })), _react["default"].createElement("path", {
+        d: "M134.992061,85.8489796 L110.064336,85.8489796 C110.336855,74.5173489 106.18422,63.0976547 97.606431,54.449843 C80.9791083,37.686787 54.0208917,37.686787 37.393569,54.449843 C28.8157801,63.0976547 24.6631451,74.5173489 24.935664,85.8489796 L0.00793880444,85.8489796 C-0.261468592,68.0859049 6.32598256,50.236762 19.7702923,36.6827028 C46.130682,10.1071263 88.869318,10.1071263 115.229708,36.6827028 C128.674017,50.236762 135.261469,68.0859049 134.992061,85.8489796 Z",
+        id: "Combined-Shape",
+        fill: "#3EF5D6",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("mask", {
+        id: "mask-2",
+        fill: "white"
+      }, _react["default"].createElement("use", null)), _react["default"].createElement("path", {
+        stroke: "#FFFFFF",
+        strokeWidth: "21.6",
+        d: "M97.1636271,35.9357549 C99.0162946,37.0862518 100.808394,38.3486974 102.531864,39.7199718 L109.256116,31.2686735 L100.230849,25.3370164 L99.7618229,26.050659 L93.4591194,21.9083435 L89.2818639,31.8677881 C91.0074095,32.5915278 92.6961333,33.4015342 94.3428787,34.2958117 L59.4263421,87.4227985 L53.2295071,83.278061 L55.3317543,93.6528869 L53.4466144,96.521207 L55.8156896,96.0411617 L56.2504632,98.1868183 L57.9440984,95.6098827 L68.4761903,93.4757668 L62.134441,89.2341037 L97.1636271,35.9357549 Z"
+      }))))))));
+
+    case "abstract-reduce-abandoned-checkouts":
+      return _react["default"].createElement(MarketingSVG, {
+        width: "136px",
+        height: "136px",
+        viewBox: "0 0 136 136",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, _react["default"].createElement("g", {
+        id: "Style-Guide",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Style-guide",
+        transform: "translate(-4826.000000, -1145.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Large-icons",
+        transform: "translate(4249.000000, 269.000000)"
+      }, _react["default"].createElement("g", {
+        transform: "translate(118.800000, 273.600000)",
+        id: "Reduce-abandonned-checkouts"
+      }, _react["default"].createElement("g", {
+        transform: "translate(459.000000, 603.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "135",
+        height: "135"
+      }), _react["default"].createElement("g", {
+        id: "reduce-abandoned-checkouts"
+      }, _react["default"].createElement("g", {
+        id: "Group-13-Copy-6"
+      }, _react["default"].createElement("g", {
+        id: "Group-3",
+        transform: "translate(39.555738, 39.555738)"
+      }, _react["default"].createElement("circle", {
+        id: "Combined-Shape-Copy-5",
+        fill: "#FFC0B6",
+        style: {
+          mixBlendMode: "multiply"
+        },
+        cx: "27.0442623",
+        cy: "27.0442623",
+        r: "27"
+      }), _react["default"].createElement("circle", {
+        id: "Oval-Copy-9",
+        fill: "#3951EA",
+        cx: "27.5084489",
+        cy: "27.6786885",
+        r: "10.8"
+      })), _react["default"].createElement("path", {
+        d: "M67.5,135 C30.2207794,135 0,104.779221 0,67.5 C0,30.2207794 30.2207794,0 67.5,0 C104.779221,0 135,30.2207794 135,67.5 C135,104.779221 104.779221,135 67.5,135 Z M67.5,110.655738 C91.3342558,110.655738 110.655738,91.3342558 110.655738,67.5 C110.655738,43.6657442 91.3342558,24.3442623 67.5,24.3442623 C43.6657442,24.3442623 24.3442623,43.6657442 24.3442623,67.5 C24.3442623,91.3342558 43.6657442,110.655738 67.5,110.655738 Z",
+        id: "Combined-Shape-Copy-21",
+        fill: "#3EF5D6"
+      })), _react["default"].createElement("path", {
+        d: "M66.3934426,134.991113 L66.3934426,110.641827 C66.7611709,110.651082 67.1300418,110.655738 67.5,110.655738 C91.3342558,110.655738 110.655738,91.3342558 110.655738,67.5 C110.655738,43.6657442 91.3342558,24.3442623 67.5,24.3442623 C67.1300418,24.3442623 66.7611709,24.3489175 66.3934426,24.3581726 L66.3934426,0.00888683028 C66.7615864,0.00296979806 67.1304464,0 67.5,0 C104.779221,0 135,30.2207794 135,67.5 C135,104.779221 104.779221,135 67.5,135 C67.1304464,135 66.7615864,134.99703 66.3934426,134.991113 Z",
+        id: "Combined-Shape",
+        fill: "#3951EA"
+      }))))))));
+
+    case "abstract-load-products":
+      return _react["default"].createElement(MarketingSVG, {
+        width: "117px",
+        height: "135px",
+        viewBox: "0 0 117 135",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, _react["default"].createElement("g", {
+        id: "Style-Guide",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Style-guide",
+        transform: "translate(-5509.000000, -944.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Large-icons",
+        transform: "translate(4249.000000, 269.000000)"
+      }, _react["default"].createElement("g", {
+        transform: "translate(118.800000, 273.600000)",
+        id: "Load-products-faster"
+      }, _react["default"].createElement("g", {
+        transform: "translate(1132.200000, 401.400000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "135",
+        height: "135"
+      }), _react["default"].createElement("g", {
+        id: "load-products-faster",
+        transform: "translate(9.000000, 0.000000)"
+      }, _react["default"].createElement("path", {
+        d: "M31.3777428,27 C30.8964824,19.9717286 33.4254179,12.7858618 38.964549,7.4138596 C49.1572331,-2.47128653 65.682839,-2.47128653 75.875523,7.4138596 C81.4146542,12.7858618 83.9435896,19.9717286 83.4623293,27 L31.3777428,27 Z",
+        id: "Combined-Shape-Copy-3",
+        fill: "#3349DA",
+        transform: "translate(57.420036, 13.500228) rotate(-360.000000) translate(-57.420036, -13.500228) "
+      }), _react["default"].createElement("path", {
+        d: "M99.8658694,117.86587 C122.711377,95.0200638 122.711377,57.9799362 99.8658694,35.1341299 C77.0200638,12.2886234 39.9799362,12.2886234 17.1341306,35.1341299 C-5.71137686,57.9799362 -5.71137686,95.0200638 17.1341306,117.86587 C39.9799362,140.711377 77.0200638,140.711377 99.8658694,117.86587 Z M36.8316155,97.9574579 C24.964064,86.0897512 24.964064,66.9102488 36.8318746,55.042283 C48.781852,43.092462 68.218148,43.092462 80.1683845,55.0425421 C92.0358928,66.9102056 92.035936,86.0896116 80.1682549,97.9575875 C68.2180075,109.907538 48.7818088,109.907495 36.8316155,97.9574579 Z",
+        id: "Combined-Shape-Copy-2",
+        fill: "#3EF5D6",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("path", {
+        d: "M68.4,82.8 L50.4,82.8 L50.4,19.8 L68.4,19.8 L68.4,82.8 Z",
+        id: "Path-14",
+        fill: "#FFB8AD",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("path", {
+        d: "M57.675036,18.0110265 L57.675036,45.0210084 L57.675036,18.0110265 Z",
+        id: "Combined-Shape",
+        fill: "#FFFFFF",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("path", {
+        d: "M50.4,47.6866911 L50.4,18.8261655 C56.3509159,17.8176461 62.4278053,17.732469 68.4,18.5706341 L68.4,47.1823676 C62.5039174,45.5601519 56.2145051,45.7282647 50.4,47.6866911 Z",
+        id: "Combined-Shape",
+        fill: "#FFFFFF",
+        fillRule: "nonzero"
+      }))))))));
+
     default:
       return _react["default"].createElement("span", null);
   }
@@ -1961,7 +2205,7 @@ var MarketingSVG = _styledComponents["default"].svg.withConfig({
   displayName: "MarketingIcon__MarketingSVG",
   componentId: "sc-1xbzoc8-0"
 })(["margin-left:", ";", ";"], function (props) {
-  return props.buttonIcon ? 10 : 0;
+  return props.buttonIcon ? "10px" : "0px";
 }, function (props) {
   return props.style ? props.style : null;
 });
