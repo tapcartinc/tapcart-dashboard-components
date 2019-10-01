@@ -28,7 +28,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  margin: 0 auto;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0 auto;\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -136,7 +136,7 @@ var QuoteContainerWrapper = _styledComponents["default"].div.withConfig({
 var StyledQuoteContainer = _styledComponents["default"].div.withConfig({
   displayName: "Layout__StyledQuoteContainer",
   componentId: "pze9na-2"
-})(["display:flex;padding:40px;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;box-sizing:border-box;position:relative;max-width:1240px;"]);
+})(["display:flex;padding:40px;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;box-sizing:border-box;position:relative;max-width:1140px;"]);
 
 var ImageWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Layout__ImageWrapper",
