@@ -17,6 +17,16 @@ var _media = _interopRequireDefault(require("../utils/_media"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    margin-left: 0px;\n  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
   var data = _taggedTemplateLiteral(["\n    width: 100%;\n    margin-left: 0px;\n  "]);
 
@@ -28,7 +38,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    margin-left: 0px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    padding: 20px 0px;\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43,13 +53,13 @@ var Hero = _styledComponents["default"].section.withConfig({
   displayName: "Layout__Hero",
   componentId: "pze9na-0"
 })(["width:100%;display:flex;flex-direction:", ";justify-content:", ";justify-items:", ";text-align:", ";min-height:900px;align-items:center;background:", ";margin:0px;"], function (props) {
-  return props.layout ? props.layout.direction : "row";
+  return props.layout ? props.layout.direction : 'row';
 }, function (props) {
-  return props.layout ? props.layout.justify : "flex-start";
+  return props.layout ? props.layout.justify : 'flex-start';
 }, function (props) {
-  return props.layout ? props.layout.justify : "flex-start";
+  return props.layout ? props.layout.justify : 'flex-start';
 }, function (props) {
-  return props.layout ? props.layout.textAlign : "left";
+  return props.layout ? props.layout.textAlign : 'left';
 }, function (props) {
   return props.bgColor ? props.bgColor : props.theme.bg;
 });
@@ -136,4 +146,4 @@ var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "Layout__Context",
   componentId: "pze9na-4"
-})(["padding:40px;display:flex;flex-direction:column;justify-content:flex-start;width:40%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", ";", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].md(_templateObject()), _media["default"].sm(_templateObject2()));
+})(["padding:40px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", " ", ";", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].lg(_templateObject()), _media["default"].md(_templateObject2()), _media["default"].sm(_templateObject3()));

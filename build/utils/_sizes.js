@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.sizes = void 0;
 var sizes = {
-  xl: 1400,
+  xl: 1240,
   lg: 1090,
   md: 900,
   sm: 700,
