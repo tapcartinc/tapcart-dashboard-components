@@ -18,7 +18,7 @@ var _media = _interopRequireDefault(require("../utils/_media"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    margin-left: 0px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 80%;\n    margin: 0 auto;\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -28,7 +28,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    margin-left: 0px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  margin: 0 auto;\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -38,7 +38,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    padding: 20px 0px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 325px;\n  height: 375px;\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -71,7 +71,7 @@ var QuoteContainer = function QuoteContainer(props) {
     className: "bg-image",
     src: "https://i.imgur.com/zkEi123.png",
     alt: "blob"
-  }), _react["default"].createElement(ImageWrapper, null, _react["default"].createElement("img", {
+  }), _react["default"].createElement(StyledQuoteContainer, null, _react["default"].createElement(ImageWrapper, null, _react["default"].createElement("img", {
     src: "https://i.imgur.com/KUWgSbr.png",
     className: "left",
     alt: "oval"
@@ -115,7 +115,7 @@ var QuoteContainer = function QuoteContainer(props) {
   }, " ", props.position)), _react["default"].createElement("img", {
     src: props.logo,
     alt: "quote"
-  })), _react["default"].createElement("svg", {
+  }))), _react["default"].createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     className: "green-path",
     viewBox: "0 0 1440 13.8"
@@ -131,19 +131,24 @@ exports.QuoteContainer = QuoteContainer;
 var QuoteContainerWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Layout__QuoteContainerWrapper",
   componentId: "pze9na-1"
-})(["background:", ";width:100%;display:flex;flex-direction:row;align-items:center;justify-content:center;padding:40px;box-sizing:border-box;position:relative;flex-wrap:wrap;.bg-image{position:absolute;width:20%;top:0;right:0;}"], _variables.colors.blue);
+})(["background:", ";width:100%;display:flex;justify-content:center;.bg-image{position:absolute;width:20%;top:0;right:0;}"], _variables.colors.blue);
+
+var StyledQuoteContainer = _styledComponents["default"].div.withConfig({
+  displayName: "Layout__StyledQuoteContainer",
+  componentId: "pze9na-2"
+})(["display:flex;padding:40px;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;box-sizing:border-box;position:relative;max-width:1240px;"]);
 
 var ImageWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Layout__ImageWrapper",
-  componentId: "pze9na-2"
-})(["overflow:hidden;width:425px;height:475px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;z-index:1;}.left{position:absolute;top:-5px;left:-5px;width:30%;z-index:5;}.right{position:absolute;top:0px;right:-5px;width:10%;z-index:5;bottom:0px;height:100%;}"]);
+  componentId: "pze9na-3"
+})(["overflow:hidden;width:425px;height:475px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;z-index:1;}.left{position:absolute;top:-5px;left:-5px;width:30%;z-index:5;}.right{position:absolute;top:0px;right:-5px;width:10%;z-index:5;bottom:0px;height:100%;}", " ", ""], _media["default"].lg(_templateObject()), _media["default"].md(_templateObject2()));
 
 var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig({
   displayName: "Layout__QuoteText",
-  componentId: "pze9na-3"
+  componentId: "pze9na-4"
 })(["letter-spacing:0.3px;color:white;margin-bottom:30px;text-indent:-0.5em;span{color:#1bdfba;}"]);
 
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "Layout__Context",
-  componentId: "pze9na-4"
-})(["padding:40px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", " ", ";", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].lg(_templateObject()), _media["default"].md(_templateObject2()), _media["default"].sm(_templateObject3()));
+  componentId: "pze9na-5"
+})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].md(_templateObject3()));
