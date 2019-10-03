@@ -17,8 +17,28 @@ var _media = _interopRequireDefault(require("../utils/_media"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject3() {
+function _templateObject5() {
   var data = _taggedTemplateLiteral(["\n    width: 80%;\n    margin: 0 auto;\n  "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n  width: 300px;\n  height: 350px;\n  "]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    margin: 0 auto;\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -28,7 +48,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0 auto;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 325px;\n  height: 375px;\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -38,7 +58,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 325px;\n  height: 375px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  padding: 40px 0px;\n  max-width: 100%;\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -136,12 +156,12 @@ var QuoteContainerWrapper = _styledComponents["default"].div.withConfig({
 var StyledQuoteContainer = _styledComponents["default"].div.withConfig({
   displayName: "Layout__StyledQuoteContainer",
   componentId: "pze9na-2"
-})(["display:flex;padding:40px;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;box-sizing:border-box;position:relative;max-width:1140px;"]);
+})(["display:flex;padding:40px;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;box-sizing:border-box;position:relative;max-width:1140px;", ""], _media["default"].xs(_templateObject()));
 
 var ImageWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Layout__ImageWrapper",
   componentId: "pze9na-3"
-})(["overflow:hidden;width:425px;height:475px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;z-index:1;}.left{position:absolute;top:-5px;left:-5px;width:30%;z-index:5;}.right{position:absolute;top:0px;right:-5px;width:10%;z-index:5;bottom:0px;height:100%;}", " ", ""], _media["default"].lg(_templateObject()), _media["default"].md(_templateObject2()));
+})(["overflow:hidden;width:425px;height:475px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;z-index:1;}.left{position:absolute;top:-5px;left:-5px;width:30%;z-index:5;}.right{position:absolute;top:0px;right:-5px;width:10%;z-index:5;bottom:0px;height:100%;}", " ", " ", ""], _media["default"].lg(_templateObject2()), _media["default"].md(_templateObject3()), _media["default"].xs(_templateObject4()));
 
 var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig({
   displayName: "Layout__QuoteText",
@@ -151,4 +171,4 @@ var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "Layout__Context",
   componentId: "pze9na-5"
-})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].md(_templateObject3()));
+})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].md(_templateObject5()));
