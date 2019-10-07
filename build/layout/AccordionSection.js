@@ -96,39 +96,39 @@ function (_Component) {
         className: className
       }, _react["default"].createElement("div", {
         style: {
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center"
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center'
         }
       }, steps && _react["default"].createElement("div", {
         style: {
           marginRight: 10,
           background: stepComplete(index) ? _variables.colors.green : _variables.colors.blue,
-          borderRadius: "50%",
-          transitionProperty: "all",
-          transitionDuration: ".2s",
+          borderRadius: '50%',
+          transitionProperty: 'all',
+          transitionDuration: '.2s',
           height: 32,
           width: 32,
           fontSize: 20,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "row",
-          color: "white",
-          paddingRight: "1px",
-          paddingBottom: "1px"
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'row',
+          color: 'white',
+          paddingRight: '1px',
+          paddingBottom: '1px'
         }
       }, steps && stepComplete(index) ? _react["default"].createElement(_Icon.Icon, {
         type: "checkmark",
         fill: "white"
       }) : index + 1), circleIcons && circleIcons.length && _react["default"].createElement("div", null, circleIcons[index]), label), _react["default"].createElement("div", {
         style: {
-          "float": "right"
+          "float": 'right'
         }
       }, !isOpen && _react["default"].createElement("span", null, _react["default"].createElement(_Icon.Icon, {
-        type: this.props.toggleIcons === "plus/minus" ? "small-add" : "arrow-down"
+        type: this.props.toggleIcons === 'plus/minus' ? 'small-add' : 'arrow-down'
       })), isOpen && _react["default"].createElement("span", null, _react["default"].createElement(_Icon.Icon, {
-        type: toggleIcons === "plus/minus" ? "small-close" : "arrow-up"
+        type: toggleIcons === 'plus/minus' ? 'small-close' : 'arrow-up'
       })))), _react["default"].createElement(AccordionWrapper, {
         isOpen: isOpen
       }, _react["default"].createElement(AccordionChildren, {
@@ -154,8 +154,8 @@ var AccordionWrapper = _styledComponents["default"].div.withConfig({
 var AccordionStyledItem = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionStyledItem",
   componentId: "llk5lt-1"
-})(["padding:15px 20px;border-radius:3px;box-shadow:", ";margin-bottom:12px;", ";"], function (props) {
-  return props.boxShadow ? "0px 2px 4px 0px rgba(0,0,0,0.2)" : null;
+})(["padding:25px 50px;border-radius:3px;background:white;box-shadow:", ";margin-bottom:12px;", ";"], function (props) {
+  return props.boxShadow ? '0px 2px 40px 0px rgba(0,0,0,0.05)' : null;
 }, function (props) {
   return props.style ? props.style : null;
 });
@@ -168,7 +168,7 @@ var AccordionLabel = _styledComponents["default"].div.attrs({
   displayName: "AccordionSection__AccordionLabel",
   componentId: "llk5lt-2"
 })(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;", ";font-size:", ";color:", ";"], _variables.sofia.sofiaRegular, function (props) {
-  return !props.className && "26px";
+  return !props.className && '26px';
 }, function (props) {
   return !props.className && (props.isOpen ? _variables.colors.blue : _variables.colors.black);
 });

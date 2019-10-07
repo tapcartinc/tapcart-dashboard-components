@@ -18,7 +18,7 @@ var MarketingIcon = function MarketingIcon(props) {
   var type = props.type;
 
   switch (type) {
-    case "abstract-icon-1":
+    case 'abstract-icon-1':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "76px",
         height: "76px",
@@ -57,7 +57,7 @@ var MarketingIcon = function MarketingIcon(props) {
         r: "7.23809524"
       })))))));
 
-    case "abstract-icon-2":
+    case 'abstract-icon-2':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "56px",
         height: "76px",
@@ -88,13 +88,13 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Combined-Shape-Copy-13",
         fill: "#3951EA",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         }
       }), _react["default"].createElement("ellipse", {
         id: "Combined-Shape-Copy-17",
         fill: "#36F4D0",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         cx: "27.6363636",
         cy: "16.4090909",
@@ -105,11 +105,11 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Combined-Shape",
         fill: "#FFB8AD",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         }
       }))))))));
 
-    case "abstract-icon-3":
+    case 'abstract-icon-3':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "76px",
         height: "71px",
@@ -139,7 +139,7 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Oval",
         fill: "#FFB8AD",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         cx: "21.9555556",
         cy: "21.9555556",
@@ -148,7 +148,7 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Oval-Copy-2",
         fill: "#36F4D0",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         cx: "38",
         cy: "48.9777778",
@@ -158,14 +158,14 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Oval-Copy-4",
         fill: "#3951EA",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         cx: "54.0444444",
         cy: "21.9555556",
         r: "21.9555556"
       }))))))));
 
-    case "abstract-icon-4":
+    case 'abstract-icon-4':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "71px",
         height: "76px",
@@ -194,26 +194,26 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Combined-Shape-Copy-8",
         fill: "#FFB8AD",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         }
       }), _react["default"].createElement("path", {
         d: "M36.1904762,0 C55.1785519,0 70.5714286,16.2030281 70.5714286,36.1904762 C70.5714286,36.7972544 70.5572424,37.4005448 70.5292002,38 L36.1904762,38 L36.1904762,0 Z",
         id: "Combined-Shape-Copy",
         fill: "#36F4D0",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         }
       }), _react["default"].createElement("path", {
         d: "M0,38 C19.9874481,38 36.1904762,54.2030281 36.1904762,74.1904762 C36.1904762,74.7972544 36.1755434,75.4005448 36.1460252,76 L0,76 L0,38 Z",
         id: "Combined-Shape-Copy-7",
         fill: "#3951EA",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         transform: "translate(18.095238, 57.000000) rotate(-180.000000) translate(-18.095238, -57.000000) "
       })))))));
 
-    case "abstract-icon-5":
+    case 'abstract-icon-5':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "73px",
         height: "75px",
@@ -276,7 +276,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fillRule: "nonzero"
       }))))))))));
 
-    case "abstract-icon-6":
+    case 'abstract-icon-6':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "53px",
@@ -337,7 +337,7 @@ var MarketingIcon = function MarketingIcon(props) {
         r: "11"
       }))))))))));
 
-    case "abstract-icon-7":
+    case 'abstract-icon-7':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "45px",
@@ -396,7 +396,7 @@ var MarketingIcon = function MarketingIcon(props) {
         r: "11"
       })))))))));
 
-    case "abstract-icon-8":
+    case 'abstract-icon-8':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "68px",
@@ -455,7 +455,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fillRule: "nonzero"
       }))))))));
 
-    case "abstract-icon-9":
+    case 'abstract-icon-9':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "75px",
@@ -491,7 +491,7 @@ var MarketingIcon = function MarketingIcon(props) {
       }, _react["default"].createElement("circle", {
         id: "Oval-Copy-23",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         cx: "22.493651",
         cy: "22.9485594",
@@ -511,7 +511,7 @@ var MarketingIcon = function MarketingIcon(props) {
         transform: "translate(56.250000, 56.250000) rotate(-180.000000) translate(-56.250000, -56.250000) "
       })))))));
 
-    case "abstract-icon-10":
+    case 'abstract-icon-10':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "54px",
@@ -553,7 +553,7 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Combined-Shape-Copy-11",
         fill: "#36F4D0",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         cx: "37.1875",
         cy: "37.1875",
@@ -571,12 +571,12 @@ var MarketingIcon = function MarketingIcon(props) {
         d: "M-2.7000624e-13,1.42108547e-14 L12.2168,1.42108547e-14 C13.241272,13.6131123 24.0612813,24.324005 37.2580446,24.324005 C50.454808,24.324005 61.2748173,13.6131123 62.2992893,1.68942638e-12 L74.375,1.42108547e-14 C73.1484818,20.1464719 56.967901,36.09375 37.1875,36.09375 C17.407099,36.09375 1.22651821,20.1464719 -2.00665873e-13,4.49307258e-13 Z",
         id: "Combined-Shape-Copy-10",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         transform: "translate(37.187500, 18.046875) rotate(-180.000000) translate(-37.187500, -18.046875) "
       }))))))))))));
 
-    case "abstract-icon-11":
+    case 'abstract-icon-11':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "74px",
@@ -625,7 +625,7 @@ var MarketingIcon = function MarketingIcon(props) {
         points: "15.2777778 0 15.2777778 73.6111111 30.5555556 73.6111111 30.5555556 0"
       }))))))))));
 
-    case "abstract-icon-12":
+    case 'abstract-icon-12':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "74px",
         height: "74px",
@@ -679,7 +679,7 @@ var MarketingIcon = function MarketingIcon(props) {
         ry: "11"
       }))))))))));
 
-    case "abstract-icon-13":
+    case 'abstract-icon-13':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "72px",
@@ -725,7 +725,7 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Combined-Shape",
         fill: "#36F4D0",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         }
       }), _react["default"].createElement("path", {
         d: "M9.41469125e-14,35.7042254 C9.96163969e-14,15.9853262 15.9853262,0 35.7042254,0 C36.1640572,0 36.6218587,0.00869268975 37.0774745,0.0259227064 L37.0774648,35.7042254 L9.59232693e-14,35.7042254 Z",
@@ -734,7 +734,7 @@ var MarketingIcon = function MarketingIcon(props) {
         transform: "translate(18.538737, 17.852113) rotate(-360.000000) translate(-18.538737, -17.852113) "
       })))))))))));
 
-    case "abstract-healthcare":
+    case 'abstract-healthcare':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "75px",
@@ -794,7 +794,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fill: "#FFB8AD"
       }))))))));
 
-    case "abstract-retreat":
+    case 'abstract-retreat':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "64px",
@@ -857,7 +857,7 @@ var MarketingIcon = function MarketingIcon(props) {
         transform: "translate(36.904762, 20.148148) rotate(-180.000000) translate(-36.904762, -20.148148) "
       })))))))));
 
-    case "abstract-taco-tues":
+    case 'abstract-taco-tues':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "43px",
@@ -912,7 +912,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fill: "#3EF5D6"
       })))))))));
 
-    case "abstract-equity":
+    case 'abstract-equity':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "74px",
         height: "75px",
@@ -964,7 +964,7 @@ var MarketingIcon = function MarketingIcon(props) {
         transform: "translate(58.469873, 31.712474) rotate(-180.000000) translate(-58.469873, -31.712474) "
       }))))))))));
 
-    case "abstract-unlimited-pto":
+    case 'abstract-unlimited-pto':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "75px",
         height: "59px",
@@ -1025,7 +1025,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fillRule: "nonzero"
       })))))))));
 
-    case "abstract-snacks":
+    case 'abstract-snacks':
       return _react["default"].createElement(MarketingSVG, {
         width: "67px",
         height: "71px",
@@ -1096,7 +1096,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fill: "#FFFFFF"
       })))))))))));
 
-    case "social-fb":
+    case 'social-fb':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "18px",
         height: "31px",
@@ -1132,7 +1132,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fillRule: "evenodd"
       }))))));
 
-    case "social-instagram":
+    case 'social-instagram':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "31px",
         height: "31px",
@@ -1168,7 +1168,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fillRule: "evenodd"
       }))))));
 
-    case "engineering":
+    case 'engineering':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "24px",
         height: "22px",
@@ -1220,7 +1220,7 @@ var MarketingIcon = function MarketingIcon(props) {
         stroke: "#373aaf"
       })))))));
 
-    case "shape-adjust":
+    case 'shape-adjust':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "24px",
         height: "24px",
@@ -1253,7 +1253,7 @@ var MarketingIcon = function MarketingIcon(props) {
         r: "8"
       })))));
 
-    case "customer-success":
+    case 'customer-success':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "24px",
         height: "24px",
@@ -1306,7 +1306,7 @@ var MarketingIcon = function MarketingIcon(props) {
         r: "2.5"
       })))))));
 
-    case "social-twitter":
+    case 'social-twitter':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "32px",
         height: "26px",
@@ -1342,7 +1342,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fillRule: "evenodd"
       }))))));
 
-    case "sales":
+    case 'sales':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "24px",
         height: "22px",
@@ -1387,10 +1387,10 @@ var MarketingIcon = function MarketingIcon(props) {
         stroke: "#1BDFBA"
       })))))));
 
-    case "time":
+    case 'time':
       return _react["default"].createElement(MarketingSVG, _extends({
-        width: "24px",
-        height: "24px",
+        width: "29px",
+        height: "29px",
         viewBox: "0 0 24 24",
         version: "1.1"
       }, props), _react["default"].createElement("g", {
@@ -1429,7 +1429,7 @@ var MarketingIcon = function MarketingIcon(props) {
         points: "3 24 0.6 17.2 7.8 17.6"
       }))))));
 
-    case "social-linkedin":
+    case 'social-linkedin':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "29px",
         height: "28px",
@@ -1457,7 +1457,7 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "LinkedIn"
       }))))));
 
-    case "social-angellist":
+    case 'social-angellist':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "23px",
         height: "33px",
@@ -1493,7 +1493,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fillRule: "evenodd"
       }))))));
 
-    case "social-crunchbase":
+    case 'social-crunchbase':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "35px",
         height: "25px",
@@ -1529,7 +1529,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fillRule: "evenodd"
       }))))));
 
-    case "restore":
+    case 'restore':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "28px",
         height: "28px",
@@ -1570,7 +1570,7 @@ var MarketingIcon = function MarketingIcon(props) {
         points: "0.3168 0.684 1.32 6.6 7.236 5.5968"
       })))))));
 
-    case "shopping-cart":
+    case 'shopping-cart':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "29px",
         height: "29px",
@@ -1635,7 +1635,7 @@ var MarketingIcon = function MarketingIcon(props) {
         points: "4.56 6 25.2 6 22.8 18 6 18 3.6 0 0 0"
       })))))));
 
-    case "path-exclude":
+    case 'path-exclude':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "30px",
         height: "30px",
@@ -1684,7 +1684,7 @@ var MarketingIcon = function MarketingIcon(props) {
         points: "15.6 18 18 18 18 15.6"
       })))))));
 
-    case "marketing-push":
+    case 'marketing-push':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "29px",
         height: "29px",
@@ -1729,7 +1729,7 @@ var MarketingIcon = function MarketingIcon(props) {
         strokeLinecap: "round"
       })))))));
 
-    case "payment-providers":
+    case 'payment-providers':
       return _react["default"].createElement(MarketingSVG, _extends({
         width: "30px",
         height: "29px",
@@ -1779,9 +1779,10 @@ var MarketingIcon = function MarketingIcon(props) {
         stroke: "#1BDFBA"
       })))))));
 
-    case "chat":
+    case 'chat':
       return _react["default"].createElement(MarketingSVG, _extends({}, props, {
-        width: "24px",
+        width: "29px",
+        height: "29px",
         viewBox: "0 0 44 43",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
@@ -1824,7 +1825,7 @@ var MarketingIcon = function MarketingIcon(props) {
         stroke: "#373AAF"
       })))))))));
 
-    case "abstract-builder-icon":
+    case 'abstract-builder-icon':
       return _react["default"].createElement(MarketingSVG, {
         width: "73px",
         height: "75px",
@@ -1888,7 +1889,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fillRule: "nonzero"
       }))))))))));
 
-    case "quote":
+    case 'quote':
       return _react["default"].createElement(MarketingSVG, {
         width: "24px",
         height: "21px",
@@ -1950,7 +1951,7 @@ var MarketingIcon = function MarketingIcon(props) {
         stroke: "#1BDFBA"
       })))))))))));
 
-    case "abstract-convert-customers":
+    case 'abstract-convert-customers':
       return _react["default"].createElement(MarketingSVG, {
         width: "131px",
         height: "107px",
@@ -1988,7 +1989,7 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Combined-Shape",
         fill: "#3951EA",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         }
       }), _react["default"].createElement("path", {
         d: "M108,106.2 L25.2,106.2 C25.2,83.3353731 43.7354114,64.8 66.6,64.8 C89.4645886,64.8 108,83.3353731 108,106.199979 Z",
@@ -2006,7 +2007,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fill: "#FFFFFF"
       }))))))));
 
-    case "abstract-increase-order":
+    case 'abstract-increase-order':
       return _react["default"].createElement(MarketingSVG, {
         width: "136px",
         height: "104px",
@@ -2055,7 +2056,7 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Combined-Shape",
         fill: "#3349DA",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         transform: "translate(27.259615, 70.995707) rotate(-360.000000) translate(-27.259615, -70.995707) "
       })), _react["default"].createElement("path", {
@@ -2072,7 +2073,7 @@ var MarketingIcon = function MarketingIcon(props) {
         d: "M97.1636271,35.9357549 C99.0162946,37.0862518 100.808394,38.3486974 102.531864,39.7199718 L109.256116,31.2686735 L100.230849,25.3370164 L99.7618229,26.050659 L93.4591194,21.9083435 L89.2818639,31.8677881 C91.0074095,32.5915278 92.6961333,33.4015342 94.3428787,34.2958117 L59.4263421,87.4227985 L53.2295071,83.278061 L55.3317543,93.6528869 L53.4466144,96.521207 L55.8156896,96.0411617 L56.2504632,98.1868183 L57.9440984,95.6098827 L68.4761903,93.4757668 L62.134441,89.2341037 L97.1636271,35.9357549 Z"
       }))))))));
 
-    case "abstract-reduce-abandoned-checkouts":
+    case 'abstract-reduce-abandoned-checkouts':
       return _react["default"].createElement(MarketingSVG, {
         width: "136px",
         height: "136px",
@@ -2113,7 +2114,7 @@ var MarketingIcon = function MarketingIcon(props) {
         id: "Combined-Shape-Copy-5",
         fill: "#FFC0B6",
         style: {
-          mixBlendMode: "multiply"
+          mixBlendMode: 'multiply'
         },
         cx: "27.0442623",
         cy: "27.0442623",
@@ -2134,7 +2135,7 @@ var MarketingIcon = function MarketingIcon(props) {
         fill: "#3951EA"
       }))))))));
 
-    case "abstract-load-products":
+    case 'abstract-load-products':
       return _react["default"].createElement(MarketingSVG, {
         width: "117px",
         height: "135px",
@@ -2205,9 +2206,9 @@ var MarketingSVG = _styledComponents["default"].svg.withConfig({
   displayName: "MarketingIcon__MarketingSVG",
   componentId: "sc-1xbzoc8-0"
 })(["margin-left:", ";margin-right:", ";", ";"], function (props) {
-  return props.iconRight ? "10px" : "0px";
+  return props.iconRight ? '10px' : '0px';
 }, function (props) {
-  return props.iconLeft ? "10px" : "0px";
+  return props.iconLeft ? '10px' : '0px';
 }, function (props) {
   return props.style ? props.style : null;
 });

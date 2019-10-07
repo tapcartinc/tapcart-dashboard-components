@@ -55,7 +55,7 @@ exports.Header = Header;
 var Subheader = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Subheader",
   componentId: "sc-1bwqgjv-1"
-})(["font-size:26px;line-height:36px;margin-bottom:30px;", ";color:", ";", ";", ""], _variables.sofia.sofiaRegular, function (props) {
+})(["font-size:26px;line-height:36px;margin-bottom:30px;max-width:800px;", ";color:", ";", ";", ""], _variables.sofia.sofiaRegular, function (props) {
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {

@@ -35,7 +35,8 @@ var colors = {
   black: '#000000',
   highlightblue: '#E3EFFD',
   yellow: '#F6B343',
-  red: '#D94747'
+  red: '#D94747',
+  gold: '#d5a83e'
 };
 exports.colors = colors;
 var sofia = {
