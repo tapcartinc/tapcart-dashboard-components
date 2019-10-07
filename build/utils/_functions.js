@@ -9,124 +9,127 @@ var _variables = require("./_variables");
 
 var getColors = function getColors(type) {
   switch (type) {
-    case "primary":
+    case 'primary':
       return {
-        color: "#FFFFFF",
+        color: '#FFFFFF',
         background: _variables.colors.blue
       };
 
-    case "primary--reversed":
+    case 'primary--reversed':
       return {
-        background: "transparent",
+        background: 'transparent',
         color: _variables.colors.blue,
         boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.blue)
       };
 
-    case "secondary":
+    case 'secondary':
       return {
         color: _variables.colors.black,
-        background: "transparent",
+        background: 'transparent',
         boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.gray25)
       };
 
-    case "delete":
+    case 'delete':
       return {
-        color: "#FFFFFF",
+        color: '#FFFFFF',
         background: _variables.colors.red
       };
 
-    case "delete--reversed":
+    case 'delete--reversed':
       return {
-        background: "transparent",
+        background: 'transparent',
         color: _variables.colors.red,
         boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.red)
       };
 
-    case "save":
+    case 'save':
       return {
-        color: "#FFFFFF",
+        color: '#FFFFFF',
         background: _variables.colors.green
       };
 
-    case "save--reversed":
+    case 'save--reversed':
       return {
-        background: "transparent",
+        background: 'transparent',
         color: _variables.colors.green,
         boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.green)
       };
 
-    case "inverted":
+    case 'inverted':
       return {
         color: _variables.colors.blue,
-        background: "#FFFFFF"
+        background: '#FFFFFF'
       };
 
-    case "inverted--reversed":
+    case 'inverted--reversed':
       return {
-        background: "transparent",
-        color: "#FFFFFF",
+        background: 'transparent',
+        color: '#FFFFFF',
         boxShadow: "inset 0px 0px 0px 1px #FFFFFF"
       };
 
-    case "transparent--blue":
+    case 'transparent--blue':
       return {
         color: _variables.colors.blue,
-        background: "transparent"
+        background: 'transparent'
       };
 
-    case "transparent--green":
+    case 'transparent--green':
       return {
         color: _variables.colors.green,
-        background: "transparent"
+        background: 'transparent'
       };
 
-    case "transparent--red":
+    case 'transparent--red':
       return {
         color: _variables.colors.red,
-        background: "transparent"
+        background: 'transparent'
       };
 
-    case "transparent--white":
+    case 'transparent--white':
       return {
-        color: "white",
-        background: "transparent"
+        color: 'white',
+        background: 'transparent'
       };
 
-    case "secondary--green":
+    case 'secondary--green':
       return {
-        color: "white",
-        background: "transparent",
+        color: 'white',
+        background: 'transparent',
         boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.green)
       };
 
-    case "blue":
+    case 'blue':
       return _variables.colors.blue;
 
-    case "green":
+    case '#373aaf':
+      return _variables.colors.blue;
+
+    case 'green':
       return _variables.colors.green;
 
-    case "lightgray":
+    case 'lightgray':
       return _variables.colors.lightgray;
 
-    case "gray":
+    case 'gray':
       return _variables.colors.gray;
 
-    case "darkgray":
+    case 'darkgray':
       return _variables.colors.darkgray;
 
-    case "black":
+    case 'black':
       return _variables.colors.black;
 
-    case "red":
+    case 'red':
       return _variables.colors.red;
 
-    case "lightblue":
+    case 'lightblue':
       return _variables.colors.lightblue;
 
-    case "white":
+    case 'white':
       return _variables.colors.white;
 
-    case "grayText":
+    case 'grayText':
       return _variables.colors.grayText;
 
     default:
@@ -138,13 +141,13 @@ exports.getColors = getColors;
 
 var getBorder = function getBorder(type) {
   switch (type) {
-    case "primary":
-      return "0px";
+    case 'primary':
+      return '0px';
 
-    case "secondary":
+    case 'secondary':
       return "inset 0px 0px 0px 2px ".concat(_variables.colors.gray25);
 
-    case "border":
+    case 'border':
       return "inset 0px 0px 0px 1px ".concat(_variables.colors.blue);
 
     default:

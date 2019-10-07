@@ -171,4 +171,4 @@ var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "Layout__Context",
   componentId: "pze9na-5"
-})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:20px;object-fit:contain;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].md(_templateObject5()));
+})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:12px;object-fit:contain;height:22px;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].md(_templateObject5()));

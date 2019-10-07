@@ -27,7 +27,7 @@ var _exportNames = {
   IconToggle: true,
   Dropdown: true,
   Pagination: true,
-  Container: true,
+  ContainerBox: true,
   Accordion: true,
   Card: true,
   DottedLineContainer: true,
@@ -190,10 +190,10 @@ Object.defineProperty(exports, "Pagination", {
     return _Pagination.Pagination;
   }
 });
-Object.defineProperty(exports, "Container", {
+Object.defineProperty(exports, "ContainerBox", {
   enumerable: true,
   get: function get() {
-    return _Container.Container;
+    return _ContainerBox.ContainerBox;
   }
 });
 Object.defineProperty(exports, "Accordion", {
@@ -367,7 +367,7 @@ var _Dropdown = require("./components/Dropdown");
 
 var _Pagination = require("./components/Pagination");
 
-var _Container = require("./layout/Container");
+var _ContainerBox = require("./layout/ContainerBox");
 
 var _Accordion = _interopRequireDefault(require("./layout/Accordion"));
 
