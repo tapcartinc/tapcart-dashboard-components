@@ -81,7 +81,7 @@ var Hero = _styledComponents["default"].section.withConfig({
 }, function (props) {
   return props.layout ? props.layout.textAlign : 'left';
 }, function (props) {
-  return props.bgColor ? props.bgColor : props.theme.bg;
+  return props.bgColor ? props.bgColor : props.theme.bg || 'white';
 });
 
 exports.Hero = Hero;

@@ -44,7 +44,7 @@ var Header = _styledComponents["default"].h1.withConfig({
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {
-    return props.theme.header;
+    return props.theme.header || _variables.colors.black;
   }
 }, _media["default"].lg(_templateObject()), function (props) {
   return props.style ? props.style : null;
@@ -59,7 +59,7 @@ var Subheader = _styledComponents["default"].p.withConfig({
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {
-    return props.theme.subtext;
+    return props.theme.subtext || _variables.colors.black;
   }
 }, _media["default"].sm(_templateObject2()), function (props) {
   return props.style ? props.style : null;
