@@ -154,17 +154,13 @@ var AccordionWrapper = _styledComponents["default"].div.withConfig({
 var AccordionStyledItem = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionStyledItem",
   componentId: "llk5lt-1"
-})(["padding:25px 50px;border-radius:3px;background:white;box-shadow:", ";margin-bottom:12px;", ";"], function (props) {
+})(["padding:25px 50px;border-radius:3px;background:white;box-shadow:", ";margin-bottom:20px;", ";"], function (props) {
   return props.boxShadow ? '0px 2px 40px 0px rgba(0,0,0,0.05)' : null;
 }, function (props) {
   return props.style ? props.style : null;
 });
 
-var AccordionLabel = _styledComponents["default"].div.attrs({
-  className: function className(props) {
-    return props.className || null;
-  }
-}).withConfig({
+var AccordionLabel = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionLabel",
   componentId: "llk5lt-2"
 })(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;", ";font-size:", ";color:", ";"], _variables.sofia.sofiaRegular, function (props) {
@@ -173,11 +169,7 @@ var AccordionLabel = _styledComponents["default"].div.attrs({
   return !props.className && (props.isOpen ? _variables.colors.blue : _variables.colors.black);
 });
 
-var AccordionChildren = _styledComponents["default"].div.attrs({
-  className: function className(props) {
-    return "".concat(props.className, "__children") || null;
-  }
-}).withConfig({
+var AccordionChildren = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionChildren",
   componentId: "llk5lt-3"
 })(["margin-top:10px;padding:10px 0px;", ""], function (props) {

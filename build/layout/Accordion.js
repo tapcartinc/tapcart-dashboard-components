@@ -78,6 +78,7 @@ function (_Component) {
           openSections = this.state.openSections;
       return _react["default"].createElement("div", null, children.map(function (child, index) {
         return _react["default"].createElement(_AccordionSection["default"], {
+          key: child.props.label,
           isOpen: !!openSections[child.props.label],
           label: child.props.label,
           index: index,

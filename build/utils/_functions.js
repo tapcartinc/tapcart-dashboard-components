@@ -127,7 +127,7 @@ var getColors = function getColors(type) {
       return _variables.colors.lightblue;
 
     case 'white':
-      return _variables.colors.white;
+      return '#ffffff';
 
     case 'grayText':
       return _variables.colors.grayText;
