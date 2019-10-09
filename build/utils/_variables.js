@@ -20,9 +20,9 @@ var colors = {
   blue50: '#BAC4E0',
   blue75: '#738EDA',
   lightpurple: '#7574EF',
-  // 393cb4
   offwhite: '#FCFEFF',
   bgGray: '#F3F3F7',
+  lightestGray: '#fcfcfc',
   gray: '#BDBDBD',
   gray10: '#F8F7F8',
   gray25: '#F0F2F5',

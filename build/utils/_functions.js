@@ -102,6 +102,51 @@ var getColors = function getColors(type) {
     case 'blue':
       return _variables.colors.blue;
 
+    case 'blue10':
+      return _variables.colors.blue10;
+
+    case 'blue15':
+      return _variables.colors.blue15;
+
+    case 'blue25':
+      return _variables.colors.blue25;
+
+    case 'blue50':
+      return _variables.colors.blue50;
+
+    case 'blue75':
+      return _variables.colors.blue75;
+
+    case 'lightpurple':
+      return _variables.colors.lightpurple;
+
+    case 'offwhite':
+      return _variables.colors.offwhite;
+
+    case 'bgGray':
+      return _variables.colors.bgGray;
+
+    case 'lightestGray':
+      return _variables.colors.lightestGray;
+
+    case 'gray10':
+      return _variables.colors.gray10;
+
+    case 'gray25':
+      return _variables.colors.gray25;
+
+    case 'gray50':
+      return _variables.colors.gray50;
+
+    case 'gray75':
+      return _variables.colors.gray75;
+
+    case 'darkgray':
+      return _variables.colors.darkgray;
+
+    case 'grayText':
+      return _variables.colors.grayText;
+
     case '#373aaf':
       return _variables.colors.blue;
 
@@ -129,8 +174,20 @@ var getColors = function getColors(type) {
     case 'white':
       return '#ffffff';
 
-    case 'grayText':
-      return _variables.colors.grayText;
+    case 'bluegray':
+      return _variables.colors.bluegray;
+
+    case 'black':
+      return _variables.colors.black;
+
+    case 'highlightblue':
+      return _variables.colors.highlightblue;
+
+    case 'yellow':
+      return _variables.colors.yellow;
+
+    case 'gold':
+      return _variables.colors.gold;
 
     default:
       break;
