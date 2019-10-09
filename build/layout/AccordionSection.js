@@ -163,7 +163,7 @@ var AccordionStyledItem = _styledComponents["default"].div.withConfig({
 var AccordionLabel = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionLabel",
   componentId: "llk5lt-2"
-})(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;", ";font-size:", ";color:", ";"], _variables.sofia.sofiaRegular, function (props) {
+})(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;", ";font-size:", ";color:", ";"], _variables.sofia.sofiaRegular, function (props) {
   return !props.className && '26px';
 }, function (props) {
   return !props.className && (props.isOpen ? _variables.colors.blue : _variables.colors.black);
