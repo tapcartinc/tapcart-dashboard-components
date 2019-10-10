@@ -82,11 +82,39 @@ var Hero = _styledComponents["default"].section.withConfig({
   return props.layout ? props.layout.textAlign : 'left';
 }, function (props) {
   return props.bgColor ? props.bgColor : props.theme ? props.theme.bg : 'white';
-});
+}); // const sortText = (quote, highlighted) => {
+//   return quote.substr(quote.indexOf(highlighted), highlighted.length);
+// };
+
 
 exports.Hero = Hero;
 
 var QuoteContainer = function QuoteContainer(props) {
+  var sortText = function sortText(quote, highlighted) {
+    var fullSentence = []; // find highlighted text
+
+    var highlightedText = quote.substr(quote.indexOf(highlighted), highlighted.length); // find the start and end indexes of that highlighted text
+
+    var startIdx = quote.indexOf(highlightedText);
+    var endIdx = startIdx + highlighted.length; // find the part of the quote before and after the highlighted text
+
+    var beforeHighlight = quote.slice(0, startIdx);
+    var afterHighlight = quote.slice(endIdx); // push each segment into full sentence array
+
+    fullSentence.push(beforeHighlight);
+    fullSentence.push(highlightedText);
+    fullSentence.push(afterHighlight); // map through fullSentence array and return content with appropriate color styles
+
+    return fullSentence.map(function (textSegment, idx) {
+      return _react["default"].createElement("span", {
+        key: textSegment,
+        style: {
+          color: idx === 1 ? _variables.colors.green : 'white'
+        }
+      }, textSegment);
+    });
+  };
+
   return _react["default"].createElement(QuoteContainerWrapper, props, _react["default"].createElement("img", {
     className: "bg-image",
     src: "https://i.imgur.com/zkEi123.png",
@@ -126,7 +154,7 @@ var QuoteContainer = function QuoteContainer(props) {
     alt: "person",
     className: "person",
     src: props.image
-  })), _react["default"].createElement(Context, null, _react["default"].createElement(QuoteText, null, "\"", props.children, "\""), _react["default"].createElement("div", {
+  })), _react["default"].createElement(Context, null, _react["default"].createElement(QuoteText, null, "\u201C", sortText(props.children, props.highlighted), "\u201D"), _react["default"].createElement("div", {
     className: "contributer"
   }, _react["default"].createElement("div", {
     className: "contributer__person"
@@ -166,9 +194,9 @@ var ImageWrapper = _styledComponents["default"].div.withConfig({
 var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig({
   displayName: "Layout__QuoteText",
   componentId: "pze9na-4"
-})(["letter-spacing:0.3px;color:white;margin-bottom:30px;text-indent:-0.5em;span{color:#1bdfba;}"]);
+})(["letter-spacing:0.3px;margin-bottom:30px;text-indent:-0.5em;font-family:CircularStd;font-style:none;font-weight:bold;color:white;"]);
 
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "Layout__Context",
   componentId: "pze9na-5"
-})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:12px;object-fit:contain;height:22px;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].md(_templateObject5()));
+})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:15px;object-fit:contain;height:25px;max-width:215px;}.contributer{color:white;font-size:18px;line-height:28px;display:flex;flex-direction:row;&__person{", " margin-right:5px;}&__position{", "}}", ";"], _variables.sofia.sofiaSemiBold, _variables.sofia.sofiaLight, _media["default"].md(_templateObject5()));
