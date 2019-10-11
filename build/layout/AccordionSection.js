@@ -126,7 +126,7 @@ function (_Component) {
           "float": 'right'
         }
       }, !isOpen && _react["default"].createElement("span", null, _react["default"].createElement(_Icon.Icon, {
-        type: this.props.toggleIcons === 'plus/minus' ? 'small-add' : 'arrow-down'
+        type: this.props.toggleIcons === 'plus/minus' ? 'small-add' : 'subtract'
       })), isOpen && _react["default"].createElement("span", null, _react["default"].createElement(_Icon.Icon, {
         type: toggleIcons === 'plus/minus' ? 'small-close' : 'arrow-up'
       })))), _react["default"].createElement(AccordionWrapper, {
