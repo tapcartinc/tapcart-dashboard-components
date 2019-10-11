@@ -3750,6 +3750,31 @@ function Icon(props) {
         fillRule: "nonzero"
       })))))));
 
+    case 'subtract':
+      return _react["default"].createElement(SVG, {
+        width: "12px",
+        height: "2px",
+        viewBox: "0 0 12 2",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, _react["default"].createElement("g", {
+        id: "Page-1",
+        stroke: "none",
+        "stroke-width": "1",
+        fill: "none",
+        fillRule: "evenodd",
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      }, _react["default"].createElement("g", {
+        id: "subtract",
+        transform: "translate(1.000000, 0.000000)",
+        stroke: "#343398",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M10,1 L0,1",
+        id: "Path"
+      }))));
+
     default:
       return null;
   }

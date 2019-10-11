@@ -82,15 +82,20 @@ var Hero = _styledComponents["default"].section.withConfig({
   return props.layout ? props.layout.textAlign : 'left';
 }, function (props) {
   return props.bgColor ? props.bgColor : props.theme ? props.theme.bg : 'white';
-}); // const sortText = (quote, highlighted) => {
-//   return quote.substr(quote.indexOf(highlighted), highlighted.length);
-// };
-
+});
 
 exports.Hero = Hero;
 
 var QuoteContainer = function QuoteContainer(props) {
   var sortText = function sortText(quote, highlighted) {
+    if (!highlightedText) {
+      return _react["default"].createElement("span", {
+        style: {
+          color: 'white'
+        }
+      }, quote);
+    }
+
     var fullSentence = []; // find highlighted text
 
     var highlightedText = quote.substr(quote.indexOf(highlighted), highlighted.length); // find the start and end indexes of that highlighted text

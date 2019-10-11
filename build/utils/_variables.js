@@ -30,6 +30,7 @@ var colors = {
   gray75: '#D8D8D8',
   darkgray: '#8A888A',
   grayText: '#abb1c2',
+  coolBgGray: '#f9fbfe',
   green: '#1BDFBA',
   bluegray: '#A1A8B9',
   black: '#000000',
