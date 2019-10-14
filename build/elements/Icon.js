@@ -3751,13 +3751,13 @@ function Icon(props) {
       })))))));
 
     case 'subtract':
-      return _react["default"].createElement(SVG, {
+      return _react["default"].createElement(SVG, _extends({
         width: "12px",
         height: "2px",
         viewBox: "0 0 12 2",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
-      }, _react["default"].createElement("g", {
+      }, props), _react["default"].createElement("g", {
         id: "Page-1",
         stroke: "none",
         "stroke-width": "1",

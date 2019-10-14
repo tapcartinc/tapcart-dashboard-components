@@ -126,9 +126,9 @@ function (_Component) {
           "float": 'right'
         }
       }, !isOpen && _react["default"].createElement("span", null, _react["default"].createElement(_Icon.Icon, {
-        type: this.props.toggleIcons === 'plus/minus' ? 'small-add' : 'subtract'
+        type: this.props.toggleIcons === 'plus/minus' ? 'small-add' : 'arrow-down'
       })), isOpen && _react["default"].createElement("span", null, _react["default"].createElement(_Icon.Icon, {
-        type: toggleIcons === 'plus/minus' ? 'small-close' : 'arrow-up'
+        type: toggleIcons === 'plus/minus' ? 'subtract' : 'arrow-up'
       })))), _react["default"].createElement(AccordionWrapper, {
         isOpen: isOpen
       }, _react["default"].createElement(AccordionChildren, {

@@ -23,6 +23,7 @@ var colors = {
   offwhite: '#FCFEFF',
   bgGray: '#F3F3F7',
   lightestGray: '#fcfcfc',
+  lightestGrayBorder: '#f4f4f4',
   gray: '#BDBDBD',
   gray10: '#F8F7F8',
   gray25: '#F0F2F5',
