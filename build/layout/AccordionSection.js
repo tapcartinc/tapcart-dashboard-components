@@ -172,6 +172,6 @@ var AccordionLabel = _styledComponents["default"].div.withConfig({
 var AccordionChildren = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionChildren",
   componentId: "llk5lt-3"
-})(["margin-top:10px;padding:10px 0px;", ""], function (props) {
+})(["margin-top:10px;padding:10px 0px;padding-bottom:0px;", ""], function (props) {
   return props.isOpen ? "\n      opacity: 1;\n      transform: translateY(0);\n      transition-delay: 0.2s;\n      transition-timing-function: ease-in-out;\n      transition-duration: 0.2s;\n      transition-property: opacity, transform;\n\n " : "opacity: 0;\n      transform: translateY(-1rem);\n    transition-timing-function: ease-in-out;\n    transition-duration: 0.2s;\n    transition-property: opacity, transform;\n\n ";
 });
