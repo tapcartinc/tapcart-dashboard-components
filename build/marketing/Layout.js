@@ -88,7 +88,7 @@ exports.Hero = Hero;
 
 var QuoteContainer = function QuoteContainer(props) {
   var sortText = function sortText(quote, highlighted) {
-    if (!highlightedText) {
+    if (!highlighted) {
       return _react["default"].createElement("span", {
         style: {
           color: 'white'
