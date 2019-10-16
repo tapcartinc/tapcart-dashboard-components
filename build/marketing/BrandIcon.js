@@ -291,9 +291,9 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'home':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "24px",
-        height: "23px",
-        viewBox: "0 0 24 23",
+        width: "28px",
+        height: "28px",
+        viewBox: "0 0 28 28",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
@@ -354,9 +354,9 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'pricing':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "24px",
-        height: "24px",
-        viewBox: "0 0 24 24",
+        width: "28px",
+        height: "28px",
+        viewBox: "0 0 28 28",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
@@ -408,9 +408,9 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'features':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "24px",
-        height: "23px",
-        viewBox: "0 0 24 23",
+        width: "28px",
+        height: "28px",
+        viewBox: "0 0 28 28",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
@@ -459,9 +459,9 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'team':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "24px",
-        height: "19px",
-        viewBox: "0 0 24 19",
+        width: "28px",
+        height: "28px",
+        viewBox: "0 0 28 28",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
@@ -505,9 +505,9 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'book-a-demo':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "24px",
-        height: "24px",
-        viewBox: "0 0 24 24",
+        width: "28px",
+        height: "28px",
+        viewBox: "0 0 28 28",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
