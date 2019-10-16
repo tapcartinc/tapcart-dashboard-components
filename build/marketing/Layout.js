@@ -72,7 +72,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var Hero = _styledComponents["default"].section.withConfig({
   displayName: "Layout__Hero",
   componentId: "pze9na-0"
-})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";justify-items:", ";text-align:", ";min-height:900px;align-items:center;background:", ";margin:0px;"], function (props) {
+})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";justify-items:", ";text-align:", ";min-height:900px;align-items:center;background:", ";margin:0px;position:relative;"], function (props) {
   return props.layout ? props.layout.direction : 'row';
 }, function (props) {
   return props.layout ? props.layout.justify : 'flex-start';

@@ -50,7 +50,8 @@ var _exportNames = {
   Header: true,
   Subheader: true,
   FooterLink: true,
-  MarketingIcon: true
+  MarketingIcon: true,
+  BrandIcon: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -334,6 +335,12 @@ Object.defineProperty(exports, "MarketingIcon", {
     return _MarketingIcon.MarketingIcon;
   }
 });
+Object.defineProperty(exports, "BrandIcon", {
+  enumerable: true,
+  get: function get() {
+    return _BrandIcon.BrandIcon;
+  }
+});
 
 var _Icon = require("./elements/Icon");
 
@@ -416,5 +423,7 @@ var _Layout = require("./marketing/Layout");
 var _Typography2 = require("./marketing/Typography");
 
 var _MarketingIcon = require("./marketing/MarketingIcon");
+
+var _BrandIcon = require("./marketing/BrandIcon");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
