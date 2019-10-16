@@ -17,8 +17,6 @@ var _animations = require("../utils/_animations");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
@@ -33,7 +31,7 @@ var StyledButton = _styledComponents["default"].button.attrs(function (props) {
 }).withConfig({
   displayName: "Button__StyledButton",
   componentId: "sc-12aqe4e-0"
-})(["border-radius:5px;flex-direction:row;align-items:center;justify-items:center;font-size:14px;", ";text-transform:uppercase;line-height:1.71;letter-spacing:1px;padding-top:12px;padding-bottom:12px;z-index:3;padding-right:", ";padding-left:", ";outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " ", " a{font-size:14px;", ";", " text-decoration:none;}img{margin-right:4px;margin-left:4px;}", ";", ""], _variables.sofia.sofiaMedium, function (props) {
+})(["border-radius:5px;flex-direction:row;align-items:center;justify-items:center;font-size:14px;", ";text-transform:uppercase;line-height:1.71;letter-spacing:1px;padding-top:12px;padding-bottom:12px;z-index:3;padding-right:", ";padding-left:", ";outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " ", " a{font-size:14px;", ";", " text-decoration:none;}img{margin-right:4px;margin-left:4px;}position:relative;display:flex;justify-content:center;", ";", ""], _variables.sofia.sofiaMedium, function (props) {
   return props.type.includes('transparent') ? '0px' : '20px';
 }, function (props) {
   return props.type.includes('transparent') ? '0px' : '20px';
@@ -53,13 +51,7 @@ var Button = function Button(_ref) {
   var label = _ref.label,
       props = _objectWithoutProperties(_ref, ["label"]);
 
-  return _react["default"].createElement(StyledButton, _extends({}, props, {
-    style: {
-      position: 'relative',
-      display: 'flex',
-      justifyContent: 'center'
-    }
-  }), props.isLoading ? _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Loader, props), _react["default"].createElement("div", {
+  return _react["default"].createElement(StyledButton, props, props.isLoading ? _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Loader, props), _react["default"].createElement("div", {
     style: {
       color: 'transparent'
     }
