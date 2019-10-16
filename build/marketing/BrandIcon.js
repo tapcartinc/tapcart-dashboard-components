@@ -291,9 +291,9 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'home':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "28px",
-        height: "27px",
-        viewBox: "0 0 28 27",
+        width: "24px",
+        height: "23px",
+        viewBox: "0 0 24 23",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
@@ -325,14 +325,14 @@ var BrandIcon = function BrandIcon(props) {
       }, _react["default"].createElement("polyline", {
         id: "Path",
         stroke: "#393CB4",
-        strokeWidth: "2.268",
+        strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round",
         points: "3.402 12.474 3.402 23.814 13.608 23.814"
       }), _react["default"].createElement("polyline", {
         id: "Path",
         stroke: "#393CB4",
-        strokeWidth: "2.268",
+        strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round",
         points: "22.52124 8.220366 12.474 0 0 10.206"
@@ -340,7 +340,7 @@ var BrandIcon = function BrandIcon(props) {
         d: "M24.948,15.668478 C24.948,18.351522 20.412,22.68 20.412,22.68 C20.412,22.68 15.876,18.351522 15.876,15.668478 C15.8917948,14.4891184 16.3815216,13.3657304 17.2348203,12.5514701 C18.088119,11.7372099 19.2331933,11.3005889 20.412,11.34 C21.5908067,11.3005889 22.735881,11.7372099 23.5891797,12.5514701 C24.4424784,13.3657304 24.9322052,14.4891184 24.948,15.668478 L24.948,15.668478 Z",
         id: "Path",
         stroke: "#1BDFBA",
-        strokeWidth: "2.268",
+        strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("circle", {
@@ -387,7 +387,7 @@ var BrandIcon = function BrandIcon(props) {
         transform: "translate(1.134000, 1.134000)",
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        strokeWidth: "2.268"
+        strokeWidth: "2"
       }, _react["default"].createElement("path", {
         d: "M0,21.546 L0,24.948 L13.608,24.948 L13.608,22.018878 C13.608,20.452824 14.876946,19.278 16.443,19.278 L2.268,19.278 C1.01493,19.278 0,20.29293 0,21.546 Z",
         id: "Path",
@@ -408,9 +408,9 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'features':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "29px",
-        height: "28px",
-        viewBox: "0 0 29 28",
+        width: "24px",
+        height: "23px",
+        viewBox: "0 0 24 23",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
@@ -441,7 +441,7 @@ var BrandIcon = function BrandIcon(props) {
         transform: "translate(1.134000, 1.134000)",
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        strokeWidth: "2.268"
+        strokeWidth: "2"
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         stroke: "#393CB4",
@@ -459,15 +459,15 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'team':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "29px",
-        height: "24px",
-        viewBox: "0 0 29 24",
+        width: "24px",
+        height: "19px",
+        viewBox: "0 0 24 19",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
         id: "Style-Guide",
         stroke: "none",
-        strokeWidth: "1",
+        strokeWidth: "2",
         fill: "none",
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
@@ -492,7 +492,7 @@ var BrandIcon = function BrandIcon(props) {
         transform: "translate(1.134000, 2.835000)",
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        strokeWidth: "2.268"
+        strokeWidth: "2"
       }, _react["default"].createElement("path", {
         d: "M20.412,20.979 L24.948,20.979 L24.948,16.076718 C24.9477066,15.613108 24.6652376,15.1963653 24.234714,15.024366 L19.991286,13.323366 C19.5615288,13.1516747 19.2792191,12.7360645 19.278,12.273282 L19.278,11.27763 C20.6778249,10.4743059 21.5424741,8.98494762 21.546,7.371 L21.546,5.103 C21.546364,3.4822613 20.6819511,1.98447161 19.2784412,1.17394463 C17.8749313,0.363417659 16.1456009,0.36332059 14.742,1.17369",
         id: "Path",
@@ -505,9 +505,9 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'book-a-demo':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "28px",
-        height: "28px",
-        viewBox: "0 0 28 28",
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
@@ -538,7 +538,7 @@ var BrandIcon = function BrandIcon(props) {
         transform: "translate(1.134000, 1.134000)",
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        strokeWidth: "2.268"
+        strokeWidth: "2"
       }, _react["default"].createElement("path", {
         d: "M10.206,18.144 L3.402,18.144 C1.4742,18.144 0,19.6182 0,21.546 L0,24.948 L13.608,24.948 L13.608,21.546 C13.608,19.6182 12.1338,18.144 10.206,18.144 Z",
         id: "Path",
