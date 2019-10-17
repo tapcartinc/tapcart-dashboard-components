@@ -28,15 +28,12 @@ addParameters({
   }
 });
 
-// addParameters({
-//   readme: {
-//     codeTheme: 'github',
-//     StoryPreview: ({ children }) => children
-//   }
-// });
-
 // const req = require.context('../stories', true, /.stories.js$/);
 const req = require.context('../stories', true, /\.stories\.(js|mdx)$/);
+// const req = require.context([
+//   require.context('../stories', true, /\.stories\.mdx$/),
+//   require.context('../stories', true, /\.stories\.js$/)
+// ]);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

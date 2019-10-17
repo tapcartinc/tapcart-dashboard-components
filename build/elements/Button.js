@@ -71,27 +71,23 @@ var Loader = _styledComponents["default"].span.withConfig({
   return props.type ? (0, _functions.getColors)(props.type).color : 'white';
 }, function (props) {
   return props.type ? (0, _functions.getColors)(props.type).background === 'transparent' ? 'white' : (0, _functions.getColors)(props.type).background : 'white';
-});
-
-Button.propTypes = {
-  isLoading: _propTypes["default"].bool,
-  isDisabled: _propTypes["default"].bool,
-
-  /**
-   The name of the user (not the nicename)
-  */
-  username: _propTypes["default"].string,
-  src: _propTypes["default"].string
-  /**
-   Specify size
-  */
-  // size: PropTypes.oneOf(Object.keys(sizes))
-
-};
-Button.defaultProps = {
-  isLoading: false,
-  isDisabled: false,
-  username: 'loading',
-  src: null // size: 'medium'
-
-};
+}); // Button.propTypes = {
+//   isLoading: PropTypes.bool,
+//   isDisabled: PropTypes.bool,
+//   /**
+//    The name of the user (not the nicename)
+//   */
+//   username: PropTypes.string,
+//   src: PropTypes.string
+//   /**
+//    Specify size
+//   */
+//   // size: PropTypes.oneOf(Object.keys(sizes))
+// };
+// Button.defaultProps = {
+//   isLoading: false,
+//   isDisabled: false,
+//   username: 'loading',
+//   src: null
+//   // size: 'medium'
+// };
