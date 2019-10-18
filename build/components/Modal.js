@@ -53,10 +53,18 @@ function ReactModalAdapter(_ref) {
 
   var contentClassName = "".concat(className, "__content");
   var overlayClassName = "".concat(className, "__overlay");
+  var bodyOpenClassName = 'ReactModal__Body--open';
+
+  if (props.type === 'full') {
+    bodyOpenClassName = 'ReactModal__Body--open-full';
+  }
+
   return _react["default"].createElement(_reactModal["default"], _extends({
     portalClassName: className,
     className: contentClassName,
-    overlayClassName: overlayClassName
+    overlayClassName: overlayClassName,
+    onRequestClose: props.closeModal,
+    bodyOpenClassName: bodyOpenClassName
   }, props));
 }
 
@@ -65,18 +73,19 @@ var Modal =
 function (_Component) {
   _inherits(Modal, _Component);
 
-  function Modal() {
+  function Modal(props) {
+    var _this;
+
     _classCallCheck(this, Modal);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Modal).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Modal).call(this, props));
+
+    _reactModal["default"].setAppElement(_this.props.rootElement || '#root');
+
+    return _this;
   }
 
   _createClass(Modal, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      _reactModal["default"].setAppElement("#root");
-    }
-  }, {
     key: "render",
     value: function render() {
       return _react["default"].createElement(StyledModal, this.props, _react["default"].createElement(ModalType, this.props, this.props.children));
@@ -95,6 +104,9 @@ function ModalType(props) {
 
     case "custom":
       return _react["default"].createElement(MinimalModalStyle, props, props.children);
+
+    case "full":
+      return _react["default"].createElement(FullscreenModal, props, props.children);
 
     case "modal-with-graphic":
       return _react["default"].createElement(ModalWithGraphic, props, _react["default"].createElement("div", {
@@ -132,7 +144,7 @@ function ModalType(props) {
         }
       }), _react["default"].createElement(CloseIcon, {
         type: "small-close",
-        onClick: props.onRequestClose,
+        onClick: props.closeModal,
         style: {
           margin: 20
         }
@@ -148,7 +160,7 @@ function ModalType(props) {
         }
       }, props.title)), _react["default"].createElement(CloseIcon, {
         type: "small-close",
-        onClick: props.onRequestClose
+        onClick: props.closeModal
       })), _react["default"].createElement("div", {
         style: {
           marginLeft: 5
@@ -182,7 +194,7 @@ var SliderModal = function SliderModal(props) {
   }, _react["default"].createElement(CloseIcon, {
     type: "small-close",
     className: "modal-graphic-close-btn",
-    onClick: props.onRequestClose,
+    onClick: props.closeModal,
     style: {
       margin: 20
     }
@@ -247,30 +259,36 @@ var MinimalModalStyle = (0, _styledComponents["default"])(ModalStyle).withConfig
 })(["width:450px;padding:25px;", ""], function (props) {
   return props.style ? props.style : null;
 });
+var FullscreenModal = (0, _styledComponents["default"])(ModalStyle).withConfig({
+  displayName: "Modal__FullscreenModal",
+  componentId: "sc-1fnp8gl-4"
+})(["position:fixed;width:100%;height:100%;top:0;left:0;", ""], function (props) {
+  return props.style ? props.style : null;
+});
 
 var ButtonsStyle = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ButtonsStyle",
-  componentId: "sc-1fnp8gl-4"
+  componentId: "sc-1fnp8gl-5"
 })(["display:flex;flex-direction:row;align-items:center;justify-content:flex-end;margin-top:25px;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
 var ModalHeader = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalHeader",
-  componentId: "sc-1fnp8gl-5"
+  componentId: "sc-1fnp8gl-6"
 })(["display:flex;flex-direction:row;justify-content:space-between;align-items:center;position:relative;margin-bottom:30px;"]);
 
 var ModalHeaderLeft = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalHeaderLeft",
-  componentId: "sc-1fnp8gl-6"
+  componentId: "sc-1fnp8gl-7"
 })(["display:flex;flex-direction:row;justify-items:flex-start;align-items:center;"]);
 
 var ModalGraphic = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalGraphic",
-  componentId: "sc-1fnp8gl-7"
+  componentId: "sc-1fnp8gl-8"
 })(["position:relative;object-fit:cover;height:100%;width:250px;"]);
 
 var CloseIcon = (0, _styledComponents["default"])(_Icon.Icon).withConfig({
   displayName: "Modal__CloseIcon",
-  componentId: "sc-1fnp8gl-8"
+  componentId: "sc-1fnp8gl-9"
 })(["height:15px;width:15px;top:0;right:0;position:absolute;z-index:10;&:hover{cursor:pointer;}"]);
