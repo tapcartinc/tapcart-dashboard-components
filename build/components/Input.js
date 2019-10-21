@@ -3,9 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Input = Input;
+exports.Input = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -21,18 +23,23 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-function Input(_ref) {
+var InputStyle = _styledComponents["default"].input.withConfig({
+  displayName: "Input__InputStyle",
+  componentId: "sc-1bkiiiy-0"
+})(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;", ";&:hover{cursor:pointer;}&::placeholder{color:", ";}&:focus{outline:none;}font-size:18px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
+  return props.error ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_variables.colors.bluegray);
+}, _variables.colors.offwhite, _variables.sofia.sofiaRegular, _variables.colors.blue25, function (props) {
+  return props.style ? props.style : null;
+});
+
+var Input = function Input(_ref) {
   var value = _ref.value,
       name = _ref.name,
       label = _ref.label,
       placeholder = _ref.placeholder,
-      icon = _ref.icon,
-      props = _objectWithoutProperties(_ref, ["value", "name", "label", "placeholder", "icon"]);
+      props = _objectWithoutProperties(_ref, ["value", "name", "label", "placeholder"]);
 
-  return _react["default"].createElement("form", {
-    onSubmit: props.onSubmit,
-    style: props.style
-  }, label && _react["default"].createElement(_Typography.Generic, {
+  return _react["default"].createElement(_react["default"].Fragment, null, label && _react["default"].createElement(_Typography.Body, {
     style: {
       marginBottom: 10
     }
@@ -42,11 +49,18 @@ function Input(_ref) {
     onChange: props.onChange,
     placeholder: placeholder
   }, props)));
-}
+};
 
-var InputStyle = _styledComponents["default"].input.withConfig({
-  displayName: "Input__InputStyle",
-  componentId: "sc-1bkiiiy-0"
-})(["border-radius:3px;border:1px ", " solid;background:", ";padding:15px 20px;letter-spacing:0.25px;", ",&:hover{cursor:pointer;}&::placeholder{", "}&:focus{outline:none;}font-weight:400;", ";"], _variables.colors.bluegray, _variables.colors.offwhite, _Typography.input, _Typography.placeholder, function (props) {
-  return props.style ? props.style : null;
-});
+exports.Input = Input;
+Input.propTypes = {
+  error: _propTypes["default"].bool,
+  label: _propTypes["default"].string,
+  value: _propTypes["default"].string.isRequired,
+  name: _propTypes["default"].string,
+  placeholder: _propTypes["default"].string,
+  onChange: _propTypes["default"].func
+};
+Input.defaultProps = {
+  error: false,
+  name: ''
+};

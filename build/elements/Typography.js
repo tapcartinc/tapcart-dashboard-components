@@ -17,11 +17,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 // HEADERS
 //////////
 var H1 = _styledComponents["default"].h1.attrs({
-  className: "h1"
+  className: 'h1'
 }).withConfig({
   displayName: "Typography__H1",
   componentId: "sc-1g2eju0-0"
-})(["font-size:25px;color:", ";font-family:\"CircularStd-Book\";line-height:35px;", ""], function (props) {
+})(["font-size:25px;color:", ";font-family:'CircularStd-Book';line-height:35px;", ""], function (props) {
   return props.color ? props.color : _variables.colors.blue;
 }, function (props) {
   return props.style ? props.style : null;
@@ -32,18 +32,18 @@ exports.H1 = H1;
 var H2 = _styledComponents["default"].h2.withConfig({
   displayName: "Typography__H2",
   componentId: "sc-1g2eju0-1"
-})(["font-size:15px;color:", ";text-transform:uppercase;font-family:\"CircularStd-Medium\";", ""], _variables.colors.blue, function (props) {
+})(["font-size:15px;color:", ";text-transform:uppercase;font-family:'CircularStd-Medium';", ""], _variables.colors.blue, function (props) {
   return props.style ? props.style : null;
 });
 
 exports.H2 = H2;
 
 var H3 = _styledComponents["default"].h3.attrs({
-  className: "h3"
+  className: 'h3'
 }).withConfig({
   displayName: "Typography__H3",
   componentId: "sc-1g2eju0-2"
-})(["font-size:20px;color:", ";font-family:\"CircularStd-Book\";", ""], _variables.colors.blue, function (props) {
+})(["font-size:20px;color:", ";font-family:'CircularStd-Book';", ""], _variables.colors.blue, function (props) {
   return props.style ? props.style : null;
 });
 
@@ -52,7 +52,7 @@ exports.H3 = H3;
 var H4 = _styledComponents["default"].h4.withConfig({
   displayName: "Typography__H4",
   componentId: "sc-1g2eju0-3"
-})(["font-size:15px;color:", ";text-transform:uppercase;font-family:\"CircularStd-Medium\";", ""], function (props) {
+})(["font-size:15px;color:", ";text-transform:uppercase;font-family:'CircularStd-Medium';", ""], function (props) {
   return props.color ? props.color : _variables.colors.black;
 }, function (props) {
   return props.style ? props.style : null;
@@ -63,7 +63,7 @@ exports.H4 = H4;
 var H5 = _styledComponents["default"].h5.withConfig({
   displayName: "Typography__H5",
   componentId: "sc-1g2eju0-4"
-})(["font-size:15px;color:", ";font-family:\"CircularStd-Book\";", ""], function (props) {
+})(["font-size:15px;color:", ";font-family:'CircularStd-Book';", ""], function (props) {
   return props.color ? props.color : _variables.colors.black;
 }, function (props) {
   return props.style ? props.style : null;
@@ -71,19 +71,19 @@ var H5 = _styledComponents["default"].h5.withConfig({
 
 exports.H5 = H5;
 var placeholder = {
-  fontSize: "15px",
-  color: "#DBE1EF",
-  fontFamily: "Sofia Pro",
+  fontSize: '18px',
+  color: '#DBE1EF',
+  fontFamily: 'Sofia Pro',
   fontWeight: 500,
-  fontStyle: "normal"
+  fontStyle: 'normal'
 };
 exports.placeholder = placeholder;
 var input = {
   color: _variables.colors.black,
-  fontSize: "15px",
-  fontFamily: "CircularStd-Book",
-  fontWeight: "normal",
-  fontStyle: "normal"
+  fontSize: '15px',
+  fontFamily: 'CircularStd-Book',
+  fontWeight: 'normal',
+  fontStyle: 'normal'
 };
 exports.input = input;
 
@@ -94,10 +94,10 @@ var Body = _styledComponents["default"].p.withConfig({
   if (props.fontSize) {
     return props.fontSize;
   } else {
-    return "18px";
+    return '18px';
   }
 }, function (props) {
-  return props.color ? props.color : "#000000";
+  return props.color ? props.color : '#000000';
 }, _variables.sofia.sofiaRegular, function (props) {
   return props.style ? props.style : null;
 });
