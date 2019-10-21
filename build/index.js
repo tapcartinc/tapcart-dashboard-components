@@ -27,6 +27,7 @@ var _exportNames = {
   IconToggle: true,
   Dropdown: true,
   Pagination: true,
+  Modal: true,
   ContainerBox: true,
   Accordion: true,
   Card: true,
@@ -189,6 +190,12 @@ Object.defineProperty(exports, "Pagination", {
   enumerable: true,
   get: function get() {
     return _Pagination.Pagination;
+  }
+});
+Object.defineProperty(exports, "Modal", {
+  enumerable: true,
+  get: function get() {
+    return _Modal.Modal;
   }
 });
 Object.defineProperty(exports, "ContainerBox", {
@@ -373,6 +380,8 @@ var _IconToggle = require("./components/IconToggle");
 var _Dropdown = require("./components/Dropdown");
 
 var _Pagination = require("./components/Pagination");
+
+var _Modal = require("./components/Modal");
 
 var _ContainerBox = require("./layout/ContainerBox");
 

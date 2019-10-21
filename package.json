@@ -20,6 +20,11 @@
     "url": "https://github.com/alexiastandish/tapcart-ui/issues"
   },
   "homepage": "https://github.com/alexiastandish/tapcart-ui#readme",
+  "peerDependencies": {
+    "nuka-carousel": "^4.5.9",
+    "react-modal": "^3.10.1",
+    "react-select": "^3.0.4"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.4.0",
@@ -47,6 +52,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "circular-std": "^1.0.0",
     "nuka-carousel": "^4.5.9",
+    "react-modal": "^3.10.1",
     "react-select": "^3.0.4",
     "styled-components": "^4.4.0",
     "styled-jsx": "^3.2.1"
