@@ -13,9 +13,13 @@ var _functions = require("../utils/_functions");
 
 var _variables = require("../utils/_variables");
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _propTypes = _interopRequireWildcard(require("prop-types"));
 
 var _animations = require("../utils/_animations");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -71,23 +75,17 @@ var Loader = _styledComponents["default"].span.withConfig({
   return props.type ? (0, _functions.getColors)(props.type).color : 'white';
 }, function (props) {
   return props.type ? (0, _functions.getColors)(props.type).background === 'transparent' ? 'white' : (0, _functions.getColors)(props.type).background : 'white';
-}); // Button.propTypes = {
-//   isLoading: PropTypes.bool,
-//   isDisabled: PropTypes.bool,
-//   /**
-//    The name of the user (not the nicename)
-//   */
-//   username: PropTypes.string,
-//   src: PropTypes.string
-//   /**
-//    Specify size
-//   */
-//   // size: PropTypes.oneOf(Object.keys(sizes))
-// };
-// Button.defaultProps = {
-//   isLoading: false,
-//   isDisabled: false,
-//   username: 'loading',
-//   src: null
-//   // size: 'medium'
-// };
+});
+
+Button.propTypes = {
+  type: _propTypes["default"].oneOf(options),
+  isLoading: _propTypes["default"].bool,
+  isDisabled: _propTypes["default"].bool,
+  onClick: _propTypes["default"].func,
+  children: _propTypes.node.isRequired
+};
+Button.defaultProps = {
+  type: 'primary',
+  isLoading: false,
+  isDisabled: false
+};

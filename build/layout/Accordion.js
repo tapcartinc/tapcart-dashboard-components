@@ -9,6 +9,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _AccordionSection = _interopRequireDefault(require("./AccordionSection"));
 
+var _propTypes = _interopRequireWildcard(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -101,3 +103,12 @@ function (_Component) {
 
 var _default = Accordion;
 exports["default"] = _default;
+var accordionIconOptions = 'plus/minus';
+Accordion.propTypes = {
+  boxShadow: _propTypes["default"].bool,
+  toggleIcons: _propTypes["default"].oneOfType(accordionIconOptions),
+  children: _propTypes.node.isRequired
+};
+Accordion.defaultProps = {
+  boxShadow: false
+};
