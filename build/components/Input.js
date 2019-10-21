@@ -47,8 +47,6 @@ function Input(_ref) {
 var InputStyle = _styledComponents["default"].input.withConfig({
   displayName: "Input__InputStyle",
   componentId: "sc-1bkiiiy-0"
-})(["border-radius:3px;border:1px ", " solid;background:", ";width:", ";padding:15px 20px;letter-spacing:0.25px;", ",&:hover{cursor:pointer;}&::placeholder{", "}&:focus{outline:none;}font-weight:400;", ";"], _variables.colors.bluegray, _variables.colors.offwhite, function (props) {
-  return props.size ? props.size : "100%";
-}, _Typography.input, _Typography.placeholder, function (props) {
+})(["border-radius:3px;border:1px ", " solid;background:", ";padding:15px 20px;letter-spacing:0.25px;", ",&:hover{cursor:pointer;}&::placeholder{", "}&:focus{outline:none;}font-weight:400;", ";"], _variables.colors.bluegray, _variables.colors.offwhite, _Typography.input, _Typography.placeholder, function (props) {
   return props.style ? props.style : null;
 });
