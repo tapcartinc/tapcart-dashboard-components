@@ -40,6 +40,7 @@ var _exportNames = {
   marginLeft: true,
   sofia: true,
   circular: true,
+  boxShadow: true,
   transition: true,
   hover: true,
   onClickTransition: true,
@@ -268,6 +269,12 @@ Object.defineProperty(exports, "circular", {
   enumerable: true,
   get: function get() {
     return _variables.circular;
+  }
+});
+Object.defineProperty(exports, "boxShadow", {
+  enumerable: true,
+  get: function get() {
+    return _variables.boxShadow;
   }
 });
 Object.defineProperty(exports, "transition", {

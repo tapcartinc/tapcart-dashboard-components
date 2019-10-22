@@ -13,8 +13,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _variables = require("../utils/_variables");
 
-var _Typography = require("../elements/Typography");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -26,7 +24,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var InputStyle = _styledComponents["default"].input.withConfig({
   displayName: "Input__InputStyle",
   componentId: "sc-1bkiiiy-0"
-})(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;", ";&:hover{cursor:pointer;}&::placeholder{color:", ";}&:focus{outline:none;}font-size:18px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
+})(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;width:100%;", ";&:hover{cursor:pointer;}&::placeholder{color:", ";}&:focus{outline:none;}font-size:18px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
   return props.error ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_variables.colors.bluegray);
 }, _variables.colors.offwhite, _variables.sofia.sofiaRegular, _variables.colors.blue25, function (props) {
   return props.style ? props.style : null;
@@ -35,15 +33,10 @@ var InputStyle = _styledComponents["default"].input.withConfig({
 var Input = function Input(_ref) {
   var value = _ref.value,
       name = _ref.name,
-      label = _ref.label,
       placeholder = _ref.placeholder,
-      props = _objectWithoutProperties(_ref, ["value", "name", "label", "placeholder"]);
+      props = _objectWithoutProperties(_ref, ["value", "name", "placeholder"]);
 
-  return _react["default"].createElement(_react["default"].Fragment, null, label && _react["default"].createElement(_Typography.Body, {
-    style: {
-      marginBottom: 10
-    }
-  }, label), _react["default"].createElement(InputStyle, _extends({
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(InputStyle, _extends({
     value: value,
     name: name,
     onChange: props.onChange,
@@ -54,7 +47,6 @@ var Input = function Input(_ref) {
 exports.Input = Input;
 Input.propTypes = {
   error: _propTypes["default"].bool,
-  label: _propTypes["default"].string,
   value: _propTypes["default"].string.isRequired,
   name: _propTypes["default"].string,
   placeholder: _propTypes["default"].string,

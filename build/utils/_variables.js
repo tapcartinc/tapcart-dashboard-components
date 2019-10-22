@@ -70,7 +70,7 @@ var sofia = {
 };
 exports.sofia = sofia;
 var boxShadow = {
-  boxShadow: '0 0 28px 0 rgba(0, 0, 0, 0.1)'
+  boxShadow: '0 2px 40px 0 rgba(0, 0, 0, 0.05)'
 };
 exports.boxShadow = boxShadow;
 var margin = {
