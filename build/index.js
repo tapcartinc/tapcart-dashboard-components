@@ -316,13 +316,13 @@ Object.defineProperty(exports, "ThemeProvider", {
 Object.defineProperty(exports, "Hero", {
   enumerable: true,
   get: function get() {
-    return _Layout.Hero;
+    return _Hero.Hero;
   }
 });
 Object.defineProperty(exports, "QuoteContainer", {
   enumerable: true,
   get: function get() {
-    return _Layout.QuoteContainer;
+    return _QuoteContainer.QuoteContainer;
   }
 });
 Object.defineProperty(exports, "Header", {
@@ -434,7 +434,9 @@ Object.keys(_layout).forEach(function (key) {
   });
 });
 
-var _Layout = require("./marketing/Layout");
+var _Hero = require("./marketing/Hero");
+
+var _QuoteContainer = require("./marketing/QuoteContainer");
 
 var _Typography2 = require("./marketing/Typography");
 

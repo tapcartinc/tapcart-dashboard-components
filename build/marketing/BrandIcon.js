@@ -145,7 +145,7 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'healthcare':
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
-        viewBox: "0 0 75 75",
+        viewBox: "0 0 86 86",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
