@@ -27,6 +27,16 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n\nflex-direction: column;\nalign-items: flex-start;\n\n.mobile-hide {\n  display: none;\n}\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject5() {
   var data = _taggedTemplateLiteral(["\n    width: 80%;\n    margin: 0 auto;\n  "]);
 
@@ -152,11 +162,11 @@ var QuoteContainer = function QuoteContainer(props) {
     alt: "person",
     className: "person",
     src: props.image
-  })), _react["default"].createElement(Context, null, _react["default"].createElement(QuoteText, null, "\u201C", sortText(props.children, props.highlighted), "\u201D"), _react["default"].createElement("div", {
-    className: "contributer"
-  }, _react["default"].createElement(_Typography2.Body, {
+  })), _react["default"].createElement(Context, null, _react["default"].createElement(QuoteText, null, "\u201C", sortText(props.children, props.highlighted), "\u201D"), _react["default"].createElement(StyledPerson, null, _react["default"].createElement(_Typography2.Body, {
     color: "white"
-  }, props.person, ", "), _react["default"].createElement(_Typography2.Body, {
+  }, props.person, _react["default"].createElement("span", {
+    className: "mobile-hide"
+  }, ","), ' '), _react["default"].createElement(_Typography2.Body, {
     color: "white"
   }, "\xA0", props.position, " ")), _react["default"].createElement("img", {
     src: props.logo,
@@ -197,7 +207,12 @@ var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__Context",
   componentId: "sc-1jclz2n-4"
-})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:15px;object-fit:contain;height:25px;max-width:215px;}.contributer{color:white;font-size:18px;display:flex;flex-direction:row;align-items:center;}", ";"], _media["default"].md(_templateObject5()));
+})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;margin-left:60px;z-index:1;align-items:flex-start;img{margin-top:15px;object-fit:contain;height:25px;max-width:215px;}", ";"], _media["default"].md(_templateObject5()));
+
+var StyledPerson = _styledComponents["default"].div.withConfig({
+  displayName: "QuoteContainer__StyledPerson",
+  componentId: "sc-1jclz2n-5"
+})(["color:white;font-size:18px;display:flex;flex-direction:row;align-items:center;", ""], _media["default"].md(_templateObject6()));
 
 QuoteContainer.propTypes = {
   /**

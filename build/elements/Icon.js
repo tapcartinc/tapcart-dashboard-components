@@ -3760,7 +3760,7 @@ function Icon(props) {
       }, props), _react["default"].createElement("g", {
         id: "Page-1",
         stroke: "none",
-        "stroke-width": "1",
+        strokeWidth: "1",
         fill: "none",
         fillRule: "evenodd",
         strokeLinecap: "round",
@@ -3774,6 +3774,46 @@ function Icon(props) {
         d: "M10,1 L0,1",
         id: "Path"
       }))));
+
+    case 'integrations':
+      return _react["default"].createElement(SVG, _extends({
+        width: "19px",
+        height: "24px",
+        viewBox: "0 0 19 24",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/SVG"
+      }, props), _react["default"].createElement("g", {
+        id: "Integrations",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "6.1-Specific-integration",
+        transform: "translate(-63.000000, -185.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Breadcrumbs",
+        transform: "translate(-7.000000, 157.000000)"
+      }, _react["default"].createElement("g", {
+        transform: "translate(67.000000, 28.000000)",
+        id: "Icon-integrations"
+      }, _react["default"].createElement("g", null, _react["default"].createElement("rect", {
+        id: "Rectangle-Copy-9",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "camera-flash",
+        transform: "translate(4.000000, 1.000000)",
+        stroke: "#A1A8B9",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("polygon", {
+        id: "Path",
+        points: "11.5789474 0 3.47368421 0 0 12.7368421 6.94736842 12.7368421 4.63157895 22 16.2105263 8.10526316 9.26315789 8.10526316"
+      }))))))));
 
     default:
       return null;
