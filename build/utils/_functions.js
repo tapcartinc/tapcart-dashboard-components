@@ -189,6 +189,9 @@ var getColors = function getColors(type) {
     case 'gold':
       return _variables.colors.gold;
 
+    case _variables.colors.grayText:
+      return _variables.colors.grayText;
+
     default:
       break;
   }
