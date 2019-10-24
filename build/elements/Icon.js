@@ -2234,24 +2234,24 @@ function Icon(props) {
     case 'video':
       return _react["default"].createElement(SVG, _extends({
         width: "24px",
-        height: "22px",
-        viewBox: "0 0 24 22",
+        height: "24px",
+        viewBox: "0 0 24 24",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/SVG"
       }, props), _react["default"].createElement("g", {
-        id: "Style-Guide",
+        id: "Landing-Page",
         stroke: "none",
         strokeWidth: "1",
         fill: "none",
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
-        transform: "translate(-435.000000, -1020.000000)",
-        id: "Icons"
+        id: "1.0-Landing-Page",
+        transform: "translate(-100.000000, -935.000000)"
       }, _react["default"].createElement("g", {
-        transform: "translate(81.000000, 1019.000000)"
+        id: "Button-Full---Large",
+        transform: "translate(100.000000, 935.000000)"
       }, _react["default"].createElement("g", {
-        id: "Icon-video",
-        transform: "translate(354.000000, 0.000000)"
+        id: "Icon-play"
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         x: "0",
@@ -2259,20 +2259,20 @@ function Icon(props) {
         width: "24",
         height: "24"
       }), _react["default"].createElement("g", {
-        id: "video-player",
-        transform: "translate(1.000000, 2.000000)",
-        style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
-        },
+        id: "frame-c-caret-right",
+        transform: "translate(1.000000, 1.000000)",
+        stroke: "#373AAF",
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
-      }, _react["default"].createElement("path", {
-        d: "M20,0 C21.1045695,0 22,0.8954305 22,2 L22,18 C22,19.1045695 21.1045695,20 20,20 L2,20 C0.8954305,20 0,19.1045695 0,18 L0,2 C0,0.8954305 0.8954305,0 2,0 L20,0 Z",
-        id: "Path"
+      }, _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "11",
+        cy: "11",
+        r: "11"
       }), _react["default"].createElement("polygon", {
         id: "Path",
-        points: "9 6 15 10 9 14"
+        points: "9 15 9 7 15 11"
       })))))));
 
     case 'toast':

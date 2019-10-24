@@ -469,53 +469,56 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'home':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "28px",
-        height: "28px",
-        viewBox: "0 0 28 28",
+        width: "24px",
+        height: "23px",
+        viewBox: "0 0 24 23",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
-        id: "Style-Guide",
+        id: "404-Page",
         stroke: "none",
         strokeWidth: "1",
         fill: "none",
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
-        id: "Style-guide",
-        transform: "translate(-2042.000000, -942.000000)"
+        id: "10.0-404",
+        transform: "translate(-338.000000, -496.000000)"
       }, _react["default"].createElement("g", {
-        id: "Small-icons",
-        transform: "translate(1669.140000, 663.070000)"
+        id: "Group-14",
+        transform: "translate(235.000000, 483.000000)"
       }, _react["default"].createElement("g", {
-        transform: "translate(66.906000, 155.358000)",
-        id: "Icon-home"
-      }, _react["default"].createElement("g", null, _react["default"].createElement("g", {
-        transform: "translate(306.180000, 123.606000)"
+        id: "Btn-book-a-demo-Copy-2"
+      }, _react["default"].createElement("g", {
+        id: "Group",
+        transform: "translate(46.000000, 12.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-home",
+        transform: "translate(57.000000, 1.000000)"
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         x: "0",
         y: "0",
-        width: "27.216",
-        height: "27.216"
+        width: "24",
+        height: "24"
       }), _react["default"].createElement("g", {
         id: "property-location",
-        transform: "translate(1.134000, 1.134000)"
+        transform: "translate(1.000000, 1.000000)"
       }, _react["default"].createElement("polyline", {
         id: "Path",
         stroke: "#393CB4",
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        points: "3.402 12.474 3.402 23.814 13.608 23.814"
+        points: "3 11 3 21 12 21"
       }), _react["default"].createElement("polyline", {
         id: "Path",
         stroke: "#393CB4",
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        points: "22.52124 8.220366 12.474 0 0 10.206"
+        points: "19.86 7.249 11 0 0 9"
       }), _react["default"].createElement("path", {
-        d: "M24.948,15.668478 C24.948,18.351522 20.412,22.68 20.412,22.68 C20.412,22.68 15.876,18.351522 15.876,15.668478 C15.8917948,14.4891184 16.3815216,13.3657304 17.2348203,12.5514701 C18.088119,11.7372099 19.2331933,11.3005889 20.412,11.34 C21.5908067,11.3005889 22.735881,11.7372099 23.5891797,12.5514701 C24.4424784,13.3657304 24.9322052,14.4891184 24.948,15.668478 L24.948,15.668478 Z",
+        d: "M22,13.817 C22,16.183 18,20 18,20 C18,20 14,16.183 14,13.817 C14.0139284,12.7770004 14.4457863,11.7863584 15.1982543,11.0683158 C15.9507222,10.3502732 16.9604879,9.96524593 18,10 C19.0395121,9.96524593 20.0492778,10.3502732 20.8017457,11.0683158 C21.5542137,11.7863584 21.9860716,12.7770004 22,13.817 L22,13.817 Z",
         id: "Path",
         stroke: "#1BDFBA",
         strokeWidth: "2",
@@ -525,211 +528,222 @@ var BrandIcon = function BrandIcon(props) {
         id: "Oval",
         fill: "#1BDFBA",
         fillRule: "nonzero",
-        cx: "20.412",
-        cy: "15.876",
-        r: "1.134"
+        cx: "18",
+        cy: "14",
+        r: "1"
       })))))))));
 
     case 'pricing':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "28px",
-        height: "28px",
-        viewBox: "0 0 28 28",
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
-        id: "Style-Guide",
+        id: "404-Page",
         stroke: "none",
         strokeWidth: "1",
         fill: "none",
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
-        id: "Style-guide",
-        transform: "translate(-2104.000000, -942.000000)"
+        id: "10.0-404",
+        transform: "translate(-545.000000, -495.000000)"
       }, _react["default"].createElement("g", {
-        id: "Small-icons",
-        transform: "translate(1669.140000, 663.070000)"
+        id: "Group-14",
+        transform: "translate(235.000000, 483.000000)"
       }, _react["default"].createElement("g", {
-        transform: "translate(66.906000, 155.358000)",
-        id: "Icon-pricing"
-      }, _react["default"].createElement("g", null, _react["default"].createElement("g", {
-        transform: "translate(368.550000, 123.606000)"
+        id: "Btn-book-a-demo-Copy-3",
+        transform: "translate(200.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-pricing",
+        transform: "translate(110.000000, 12.000000)"
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         x: "0",
         y: "0",
-        width: "27.216",
-        height: "27.216"
+        width: "24",
+        height: "24"
       }), _react["default"].createElement("g", {
         id: "cheque-3",
-        transform: "translate(1.134000, 1.134000)",
+        transform: "translate(1.000000, 1.000000)",
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
       }, _react["default"].createElement("path", {
-        d: "M0,21.546 L0,24.948 L13.608,24.948 L13.608,22.018878 C13.608,20.452824 14.876946,19.278 16.443,19.278 L2.268,19.278 C1.01493,19.278 0,20.29293 0,21.546 Z",
+        d: "M0,19 L0,22 L12,22 L12,19.417 C12,18.036 13.119,17 14.5,17 L2,17 C0.895,17 0,17.895 0,19 Z",
         id: "Path",
         stroke: "#393CB4"
       }), _react["default"].createElement("path", {
-        d: "M16.443,19.278 C17.910396,19.278 19.278,20.325816 19.278,22.113 C19.278,23.679054 20.546946,24.948 22.113,24.948 L22.113,24.948 C23.679054,24.948 24.948,23.679054 24.948,22.113 L24.948,0 L6.804,0 L6.804,19.278",
+        d: "M14.5,17 C15.794,17 17,17.924 17,19.5 C17,20.881 18.119,22 19.5,22 L19.5,22 C20.881,22 22,20.881 22,19.5 L22,0 L6,0 L6,17",
         id: "Path",
         stroke: "#393CB4"
       }), _react["default"].createElement("path", {
-        d: "M12.474,6.804 L19.278,6.804",
+        d: "M11,6 L17,6",
         id: "Path",
         stroke: "#1BDFBA"
       }), _react["default"].createElement("path", {
-        d: "M12.474,12.474 L19.278,12.474",
+        d: "M11,11 L17,11",
         id: "Path",
         stroke: "#1BDFBA"
-      })))))))));
+      }))))))));
 
     case 'features':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "28px",
-        height: "28px",
-        viewBox: "0 0 28 28",
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
-        id: "Style-Guide",
+        id: "404-Page",
         stroke: "none",
         strokeWidth: "1",
         fill: "none",
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
-        id: "Style-guide",
-        transform: "translate(-2165.000000, -942.000000)"
+        id: "10.0-404",
+        transform: "translate(-751.000000, -496.000000)"
       }, _react["default"].createElement("g", {
-        id: "Small-icons",
-        transform: "translate(1669.140000, 663.070000)"
+        id: "Group-14",
+        transform: "translate(235.000000, 483.000000)"
       }, _react["default"].createElement("g", {
-        transform: "translate(66.906000, 155.358000)",
-        id: "Icon-features"
-      }, _react["default"].createElement("g", null, _react["default"].createElement("g", {
-        transform: "translate(429.786000, 123.606000)"
+        id: "Btn-book-a-demo-Copy-4",
+        transform: "translate(400.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-features",
+        transform: "translate(116.000000, 13.000000)"
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         x: "0",
         y: "0",
-        width: "27.216",
-        height: "27.216"
+        width: "24",
+        height: "24"
       }), _react["default"].createElement("g", {
         id: "shape-adjust",
-        transform: "translate(1.134000, 1.134000)",
+        transform: "translate(1.000000, 1.000000)",
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         stroke: "#393CB4",
-        x: "6.804",
-        y: "6.804",
-        width: "18.144",
-        height: "18.144"
+        x: "6",
+        y: "6",
+        width: "16",
+        height: "16"
       }), _react["default"].createElement("circle", {
         id: "Oval",
         stroke: "#1BDFBA",
-        cx: "9.072",
-        cy: "9.072",
-        r: "9.072"
-      })))))))));
+        cx: "8",
+        cy: "8",
+        r: "8"
+      }))))))));
 
     case 'team':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "28px",
-        height: "28px",
-        viewBox: "0 0 28 28",
+        width: "24px",
+        height: "20px",
+        viewBox: "0 0 24 20",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
-        id: "Style-Guide",
-        stroke: "none",
-        strokeWidth: "2",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        id: "Style-guide",
-        transform: "translate(-2165.000000, -880.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Small-icons",
-        transform: "translate(1669.140000, 663.070000)"
-      }, _react["default"].createElement("g", {
-        transform: "translate(66.906000, 155.358000)",
-        id: "Icon-team"
-      }, _react["default"].createElement("g", null, _react["default"].createElement("g", {
-        transform: "translate(429.786000, 60.102000)"
-      }, _react["default"].createElement("rect", {
-        id: "Rectangle",
-        x: "0",
-        y: "0",
-        width: "27.216",
-        height: "27.216"
-      }), _react["default"].createElement("g", {
-        id: "users-mm",
-        transform: "translate(1.134000, 2.835000)",
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeWidth: "2"
-      }, _react["default"].createElement("path", {
-        d: "M20.412,20.979 L24.948,20.979 L24.948,16.076718 C24.9477066,15.613108 24.6652376,15.1963653 24.234714,15.024366 L19.991286,13.323366 C19.5615288,13.1516747 19.2792191,12.7360645 19.278,12.273282 L19.278,11.27763 C20.6778249,10.4743059 21.5424741,8.98494762 21.546,7.371 L21.546,5.103 C21.546364,3.4822613 20.6819511,1.98447161 19.2784412,1.17394463 C17.8749313,0.363417659 16.1456009,0.36332059 14.742,1.17369",
-        id: "Path",
-        stroke: "#1BDFBA"
-      }), _react["default"].createElement("path", {
-        d: "M15.162714,16.158366 L10.919286,14.457366 C10.4895288,14.2856747 10.2072191,13.8700645 10.206,13.407282 L10.206,12.41163 C11.6058249,11.6083059 12.4704741,10.1189476 12.474,8.505 L12.474,6.237 C12.474,3.73183637 10.4431636,1.701 7.938,1.701 C5.43283637,1.701 3.402,3.73183637 3.402,6.237 L3.402,8.505 C3.40552586,10.1189476 4.27017509,11.6083059 5.67,12.41163 L5.67,13.407282 C5.66970656,13.870892 5.38723764,14.2876347 4.956714,14.459634 L0.713286,16.160634 C0.283528834,16.3323253 0.00121909006,16.7479355 0,17.210718 L0,20.979 L15.876,20.979 L15.876,17.210718 C15.8757066,16.747108 15.5932376,16.3303653 15.162714,16.158366 Z",
-        id: "Path",
-        stroke: "#373AAF"
-      })))))))));
-
-    case 'book-a-demo':
-      return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
-        width: "28px",
-        height: "28px",
-        viewBox: "0 0 28 28",
-        version: "1.1",
-        xmlns: "http://www.w3.org/2000/svg"
-      }), _react["default"].createElement("g", {
-        id: "Style-Guide",
+        id: "404-Page",
         stroke: "none",
         strokeWidth: "1",
         fill: "none",
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
-        id: "Style-guide",
-        transform: "translate(-1797.000000, -942.000000)"
+        id: "10.0-404",
+        transform: "translate(-948.000000, -496.000000)"
       }, _react["default"].createElement("g", {
-        id: "Small-icons",
-        transform: "translate(1669.140000, 663.070000)"
+        id: "Group-14",
+        transform: "translate(235.000000, 483.000000)"
       }, _react["default"].createElement("g", {
-        transform: "translate(66.906000, 155.358000)",
-        id: "Icon-book-a-demo"
-      }, _react["default"].createElement("g", null, _react["default"].createElement("g", {
-        transform: "translate(61.236000, 123.606000)"
+        id: "Btn-book-a-demo-Copy-5",
+        transform: "translate(600.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-team",
+        transform: "translate(113.000000, 11.000000)"
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         x: "0",
         y: "0",
-        width: "27.216",
-        height: "27.216"
+        width: "24",
+        height: "24"
       }), _react["default"].createElement("g", {
-        id: "customer-support",
-        transform: "translate(1.134000, 1.134000)",
+        id: "users-mm",
+        transform: "translate(1.000000, 2.000000)",
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
       }, _react["default"].createElement("path", {
-        d: "M10.206,18.144 L3.402,18.144 C1.4742,18.144 0,19.6182 0,21.546 L0,24.948 L13.608,24.948 L13.608,21.546 C13.608,19.6182 12.1338,18.144 10.206,18.144 Z",
+        d: "M18,19 L22,19 L22,14.677 C21.9997412,14.2681728 21.7506505,13.9006748 21.371,13.749 L17.629,12.249 C17.2500254,12.0975967 17.001075,11.7310974 17,11.323 L17,10.445 C18.2344135,9.73660134 18.9968908,8.42323424 19,7 L19,5 C19.000321,3.57077716 18.2380521,2.24997496 17.0003891,1.53522455 C15.762726,0.820474126 14.2377433,0.820388527 13,1.535",
+        id: "Path",
+        stroke: "#1BDFBA"
+      }), _react["default"].createElement("path", {
+        d: "M13.371,14.749 L9.629,13.249 C9.25002543,13.0975967 9.00107504,12.7310974 9,12.323 L9,11.445 C10.2344135,10.7366013 10.9968908,9.42323424 11,8 L11,6 C11,3.790861 9.209139,2 7,2 C4.790861,2 3,3.790861 3,6 L3,8 C3.00310922,9.42323424 3.7655865,10.7366013 5,11.445 L5,12.323 C4.99974123,12.7318272 4.75065048,13.0993252 4.371,13.251 L0.629,14.751 C0.250025427,14.9024033 0.00107503532,15.2689026 0,15.677 L0,19 L14,19 L14,15.677 C13.9997412,15.2681728 13.7506505,14.9006748 13.371,14.749 Z",
+        id: "Path",
+        stroke: "#373AAF"
+      }))))))));
+
+    case 'book-a-demo':
+      return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "404-Page",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "10.0-404",
+        transform: "translate(-1168.000000, -495.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Group-14",
+        transform: "translate(235.000000, 483.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Btn-book-a-demo-Copy-6",
+        transform: "translate(800.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Group-9",
+        transform: "translate(15.000000, 12.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Group-4"
+      }, _react["default"].createElement("g", {
+        id: "Group-7"
+      }, _react["default"].createElement("g", {
+        id: "Icon-book-a-demo",
+        transform: "translate(118.000000, 0.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "customer-support",
+        transform: "translate(1.000000, 1.000000)",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M9,16 L3,16 C1.3,16 0,17.3 0,19 L0,22 L12,22 L12,19 C12,17.3 10.7,16 9,16 Z",
         id: "Path",
         stroke: "#343398"
       }), _react["default"].createElement("path", {
-        d: "M6.804,14.742 L6.804,14.742 C4.8762,14.742 3.402,13.2678 3.402,11.34 L3.402,10.206 C3.402,8.2782 4.8762,6.804 6.804,6.804 L6.804,6.804 C8.7318,6.804 10.206,8.2782 10.206,10.206 L10.206,11.34 C10.206,13.2678 8.7318,14.742 6.804,14.742 Z",
+        d: "M6,13 L6,13 C4.3,13 3,11.7 3,10 L3,9 C3,7.3 4.3,6 6,6 L6,6 C7.7,6 9,7.3 9,9 L9,10 C9,11.7 7.7,13 6,13 Z",
         id: "Path",
         stroke: "#343398"
       }), _react["default"].createElement("polygon", {
         id: "Path",
         stroke: "#1BDFBA",
-        points: "13.608 0 13.608 11.34 18.144 7.938 24.948 7.938 24.948 0"
-      })))))))));
+        points: "12 0 12 10 16 7 22 7 22 0"
+      })))))))))));
 
     case 'engineering':
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
@@ -958,6 +972,147 @@ var BrandIcon = function BrandIcon(props) {
         id: "Path",
         stroke: "#1BDFBA"
       })))))))));
+
+    case 'operations':
+      return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Careers-Page",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "3.0-Careers-Page",
+        transform: "translate(-150.000000, -4934.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Open-positions",
+        transform: "translate(100.000000, 3115.000000)"
+      }, _react["default"].createElement("g", {
+        id: "FAQ-2-Copy",
+        transform: "translate(0.000000, 1779.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-operations",
+        transform: "translate(50.000000, 40.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "preferences-circle-rotate",
+        transform: "translate(1.000000, 1.000000)",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M3,9 L3,0",
+        id: "Path",
+        stroke: "#373AAF"
+      }), _react["default"].createElement("path", {
+        d: "M3,22 L3,19",
+        id: "Path",
+        stroke: "#373AAF"
+      }), _react["default"].createElement("path", {
+        d: "M11,1 L11,0",
+        id: "Path",
+        stroke: "#373AAF"
+      }), _react["default"].createElement("path", {
+        d: "M11,22 L11,11",
+        id: "Path",
+        stroke: "#373AAF"
+      }), _react["default"].createElement("path", {
+        d: "M19,9 L19,0",
+        id: "Path",
+        stroke: "#373AAF"
+      }), _react["default"].createElement("path", {
+        d: "M19,22 L19,19",
+        id: "Path",
+        stroke: "#373AAF"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        stroke: "#1BDFBA",
+        cx: "3",
+        cy: "16",
+        r: "3"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        stroke: "#1BDFBA",
+        cx: "11",
+        cy: "8",
+        r: "3"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        stroke: "#1BDFBA",
+        cx: "19",
+        cy: "16",
+        r: "3"
+      }))))))));
+
+    case 'quote':
+      return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
+        width: "24px",
+        height: "22px",
+        viewBox: "0 0 24 22",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Landing-Page",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        "fill-rule": "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Landing-Page",
+        transform: "translate(-102.000000, -3453.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Checkout",
+        transform: "translate(-1.000000, 2804.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Group-22",
+        transform: "translate(100.000000, 148.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Section-1-header"
+      }, _react["default"].createElement("g", {
+        id: "Quote",
+        transform: "translate(0.000000, 498.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-quote",
+        transform: "translate(3.000000, 1.504473)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "language",
+        transform: "translate(1.000000, 3.000000)",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M0,19 L1,19 C2.1,19 3,18.1 3,17 L3,16 L0.8,14.8 C0.1,14.4 0.1,13.4 0.8,13 L3,12 L3,10 L5.3,9.4 C6.1,9.2 6.3,8.3 5.8,7.7 L3,5 L3,0",
+        id: "Path",
+        stroke: "#393CB4"
+      }), _react["default"].createElement("path", {
+        d: "M7,14 L10,10 L10,4 C10,2.9 10.9,2 12,2 L20,2 C21.1,2 22,2.9 22,4 L22,12 C22,13.1 21.1,14 20,14 L13,14 L7,14 Z",
+        id: "Path",
+        stroke: "#393CB4"
+      }), _react["default"].createElement("path", {
+        d: "M14,6 L18,6",
+        id: "Path",
+        stroke: "#1BDFBA"
+      }), _react["default"].createElement("path", {
+        d: "M14,10 L16,10",
+        id: "Path",
+        stroke: "#1BDFBA"
+      }))))))))));
 
     default:
       return _react["default"].createElement("span", null);
