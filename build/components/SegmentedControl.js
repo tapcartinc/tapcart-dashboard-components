@@ -15,7 +15,7 @@ var _animations = require("../utils/_animations");
 
 var _Icon = require("../elements/Icon");
 
-var _Container = require("../layout/Container");
+var _ContainerBox = require("../layout/ContainerBox");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -79,8 +79,8 @@ function (_Component) {
 
       var SegmentedControlType = function SegmentedControlType(props) {
         switch (props.type) {
-          case "primary":
-            return _react["default"].createElement(_Container.Container, {
+          case 'primary':
+            return _react["default"].createElement(_ContainerBox.ContainerBox, {
               style: {
                 marginTop: 30,
                 marginBottom: 30
@@ -89,8 +89,8 @@ function (_Component) {
               return _react["default"].createElement(Tab, _extends({}, props, {
                 htmlFor: "".concat(key),
                 style: {
-                  display: "flex",
-                  flexDirection: "column"
+                  display: 'flex',
+                  flexDirection: 'column'
                 }
               }), props.hasIcons && _react["default"].createElement("div", {
                 style: {
@@ -98,31 +98,31 @@ function (_Component) {
                 }
               }, _react["default"].createElement(_Icon.Icon, {
                 type: props.icons[key],
-                fill: props.current === key ? "white" : "blue"
+                fill: props.current === key ? 'white' : 'blue'
               })), props.items[key], _react["default"].createElement("input", {
                 type: "radio",
                 value: key,
                 id: "".concat(key),
                 name: props.name,
                 style: {
-                  visibility: "hidden",
-                  width: "100%",
-                  height: "100%",
-                  border: " 1px solid #000",
-                  margin: "0",
-                  position: "absolute"
+                  visibility: 'hidden',
+                  width: '100%',
+                  height: '100%',
+                  border: ' 1px solid #000',
+                  margin: '0',
+                  position: 'absolute'
                 },
                 onClick: props.clickHandler
               }));
             })));
 
-          case "secondary":
+          case 'secondary':
             return _react["default"].createElement(SecondaryControlStyle, props, _react["default"].createElement(SegmentedControlTabs, _extends({
               style: {
-                display: "flex",
-                width: "100%",
+                display: 'flex',
+                width: '100%',
                 boxShadow: "inset 0 0 0 1px ".concat(_variables.colors.bluegray),
-                borderRadius: "3px",
+                borderRadius: '3px',
                 sofiaRegular: sofiaRegular
               }
             }, props), Object.keys(props.items).map(function (key) {
@@ -130,7 +130,7 @@ function (_Component) {
                 htmlFor: "".concat(key)
               }, props), props.hasIcons && _react["default"].createElement("div", null, _react["default"].createElement(_Icon.Icon, {
                 type: props.icons[key],
-                fill: props.current === key ? "blue" : "lightblue",
+                fill: props.current === key ? 'blue' : 'lightblue',
                 style: {
                   marginRight: 10
                 }
@@ -141,12 +141,12 @@ function (_Component) {
                 name: props.name,
                 onClick: props.clickHandler,
                 style: {
-                  visibility: "hidden",
-                  width: "100%",
-                  height: "100%",
-                  border: " 1px solid #000",
-                  margin: "0",
-                  position: "absolute"
+                  visibility: 'hidden',
+                  width: '100%',
+                  height: '100%',
+                  border: ' 1px solid #000',
+                  margin: '0',
+                  position: 'absolute'
                 }
               }));
             })));
@@ -156,7 +156,7 @@ function (_Component) {
         }
       };
 
-      var hasIcons = this.props.hasOwnProperty("icons");
+      var hasIcons = this.props.hasOwnProperty('icons');
       return _react["default"].createElement(SegmentedControlType, _extends({}, this.props, {
         hasIcons: hasIcons,
         clickHandler: this.clickHandler
@@ -191,15 +191,15 @@ var SecondaryControlStyle = _styledComponents["default"].div.withConfig({
 var Tab = _styledComponents["default"].label.withConfig({
   displayName: "SegmentedControl__Tab",
   componentId: "w55qep-3"
-})(["color:#000;font-size:15px;font-family:\"Sofia Pro\";font-weight:normal;font-style:normal;flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-family:\"Sofia Pro\";font-weight:normal;font-style:normal;padding:20px;letter-spacing:0.5px;", " ", ";&:hover{cursor:pointer;}"], _animations.onClickTransition, function (props) {
+})(["color:#000;font-size:15px;font-family:'Sofia Pro';font-weight:normal;font-style:normal;flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-family:'Sofia Pro';font-weight:normal;font-style:normal;padding:20px;letter-spacing:0.5px;", " ", ";&:hover{cursor:pointer;}"], _animations.onClickTransition, function (props) {
   return props.current === props.htmlFor && "background: #3235ab;\n    color: #fff;\n    border-radius: 3px;\n    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);";
 });
 
 var SecondaryTab = _styledComponents["default"].label.withConfig({
   displayName: "SegmentedControl__SecondaryTab",
   componentId: "w55qep-4"
-})(["flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-family:\"Sofia Pro\";font-weight:normal;font-style:normal;padding:", ";letter-spacing:0.5px;color:#a2a4dd;font-size:14px;width:100%;transition:ease-out 0.2s;border:1px solid transparent;", " &:hover{cursor:pointer;}"], function (props) {
-  return props.hasIcons ? "10px" : "20px";
+})(["flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-family:'Sofia Pro';font-weight:normal;font-style:normal;padding:", ";letter-spacing:0.5px;color:#a2a4dd;font-size:14px;width:100%;transition:ease-out 0.2s;border:1px solid transparent;", " &:hover{cursor:pointer;}"], function (props) {
+  return props.hasIcons ? '10px' : '20px';
 }, function (props) {
   return props.current === props.htmlFor && "background: #fff;\n    color: #3235ab;\n    border-radius: 3px;\n    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);\n    opacity: 1;\n    border: 1px solid #3235ab;\n    ";
 });
