@@ -54,7 +54,7 @@ var sofia = {
   },
   sofiaRegular: {
     fontFamily: 'Sofia Pro',
-    fontWeight: 'normal',
+    fontWeight: 300,
     fontStyle: 'normal'
   },
   sofiaLight: {

@@ -40,7 +40,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var Header = _styledComponents["default"].h1.withConfig({
   displayName: "Typography__Header",
   componentId: "sc-1bwqgjv-0"
-})(["font-family:CircularStd-Bold;font-weight:bold;font-style:normal;font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;z-index:3;color:", ";", ";", ""], function (props) {
+})(["font-family:CircularStd-Medium;font-weight:500;font-style:normal;font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;z-index:3;-webkit-font-smoothing:antialiased;color:", ";", ";", ""], function (props) {
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {
@@ -55,7 +55,7 @@ exports.Header = Header;
 var Subheader = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Subheader",
   componentId: "sc-1bwqgjv-1"
-})(["font-size:26px;z-index:3;line-height:36px;margin-bottom:30px;", ";color:", ";", ";", ""], _variables.sofia.sofiaRegular, function (props) {
+})(["-webkit-font-smoothing:antialiased;font-size:26px;z-index:3;line-height:36px;margin-bottom:30px;", ";font-weight:400;color:", ";", ";", ""], _variables.sofia.sofiaRegular, function (props) {
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {
@@ -70,7 +70,7 @@ exports.Subheader = Subheader;
 var FooterLink = _styledComponents["default"].span.withConfig({
   displayName: "Typography__FooterLink",
   componentId: "sc-1bwqgjv-2"
-})(["", ";font-size:18px;line-height:28px;color:", ";", ""], _variables.sofia.sofiaMedium, _variables.colors.black, function (props) {
+})(["font-smooth:antialiased;", ";font-size:18px;line-height:28px;color:", ";", ""], _variables.sofia.sofiaMedium, _variables.colors.black, function (props) {
   return props.style ? props.style : null;
 });
 

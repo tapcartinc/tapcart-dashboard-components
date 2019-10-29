@@ -166,9 +166,9 @@ var QuoteContainer = function QuoteContainer(props) {
     color: "white"
   }, props.person, _react["default"].createElement("span", {
     className: "mobile-hide"
-  }, ","), ' '), _react["default"].createElement(_Typography2.Body, {
+  }, ","), "\xA0"), _react["default"].createElement(_Typography2.Body, {
     color: "white"
-  }, "\xA0", props.position, " ")), _react["default"].createElement("img", {
+  }, props.position, " ")), _react["default"].createElement("img", {
     src: props.logo,
     alt: "quote"
   }))), _react["default"].createElement("svg", {
@@ -197,7 +197,7 @@ var StyledQuoteContainer = _styledComponents["default"].div.withConfig({
 var ImageWrapper = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__ImageWrapper",
   componentId: "sc-1jclz2n-2"
-})(["overflow:hidden;width:425px;height:475px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;z-index:1;}.left{position:absolute;top:-5px;left:-5px;width:30%;z-index:5;}.right{position:absolute;top:0px;right:-5px;width:10%;z-index:5;bottom:0px;height:100%;}", " ", " ", ""], _media["default"].lg(_templateObject2()), _media["default"].md(_templateObject3()), _media["default"].xs(_templateObject4()));
+})(["overflow:hidden;width:425px;height:475px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;z-index:1;}.left{position:absolute;top:-5px;left:-5px;width:30%;z-index:5;}.right{position:absolute;top:0px;right:-10px;width:10%;z-index:5;bottom:0px;height:100%;}", " ", " ", ""], _media["default"].lg(_templateObject2()), _media["default"].md(_templateObject3()), _media["default"].xs(_templateObject4()));
 
 var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig({
   displayName: "QuoteContainer__QuoteText",
@@ -212,7 +212,7 @@ var Context = _styledComponents["default"].div.withConfig({
 var StyledPerson = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__StyledPerson",
   componentId: "sc-1jclz2n-5"
-})(["color:white;font-size:18px;display:flex;flex-direction:row;align-items:center;", ""], _media["default"].md(_templateObject6()));
+})(["color:white;font-size:18px;display:flex;flex-direction:row;align-items:center;p:nth-of-type(1){font-weight:700;}", ""], _media["default"].md(_templateObject6()));
 
 QuoteContainer.propTypes = {
   /**
