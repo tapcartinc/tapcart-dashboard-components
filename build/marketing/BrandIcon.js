@@ -11,6 +11,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 //import './.css';
@@ -78,6 +80,178 @@ var BrandIcon = function BrandIcon(props) {
         fillRule: "nonzero"
       })))))))));
 
+    case 'engagement-push':
+      return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
+        viewBox: "0 0 75 53",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Landing-Page",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Landing-Page",
+        transform: "translate(-805.000000, -3951.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Push",
+        transform: "translate(99.000000, 3940.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Group-21",
+        transform: "translate(706.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Section-1-header"
+      }, _react["default"].createElement("g", {
+        id: "Header,-title,-"
+      }, _react["default"].createElement("g", {
+        id: "Engagement-push"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "75",
+        height: "75"
+      }), _react["default"].createElement("g", {
+        id: "push",
+        transform: "translate(0.000000, 11.000000)"
+      }, _react["default"].createElement("path", {
+        d: "M26.4423077,52.8846154 C41.045991,52.8846154 52.8846154,41.045991 52.8846154,26.4423077 C52.8846154,11.8386244 41.045991,0 26.4423077,0 C11.8386244,0 0,11.8386244 0,26.4423077 C0,41.045991 11.8386244,52.8846154 26.4423077,52.8846154 Z M26.4423077,45.1923077 C16.0869686,45.1923077 7.69230769,36.7976468 7.69230769,26.4423077 C7.69230769,16.0869686 16.0869686,7.69230769 26.4423077,7.69230769 C36.7976468,7.69230769 45.1923077,16.0869686 45.1923077,26.4423077 C45.1923077,36.7976468 36.7976468,45.1923077 26.4423077,45.1923077 Z",
+        id: "Oval-Copy-13",
+        fill: "#3EF5D6",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("circle", {
+        id: "Oval-Copy-34",
+        fill: "#FFB8AD",
+        transform: "translate(49.519231, 26.442308) rotate(-360.000000) translate(-49.519231, -26.442308) ",
+        cx: "49.5192308",
+        cy: "26.4423077",
+        r: "25.4807692"
+      }), _react["default"].createElement("path", {
+        d: "M39.0613271,49.6849922 C36.2423568,48.4146381 33.6960291,46.6465112 31.5343432,44.4926106 C39.4152929,42.273857 45.1923077,35.0327294 45.1923077,26.4423077 C45.1923077,17.851886 39.4152929,10.6107584 31.5343432,8.39200483 C33.6960291,6.23810422 36.2423568,4.46997725 39.0613271,3.19962321 C47.2958239,7.67979507 52.8846154,16.4083853 52.8846154,26.4423077 C52.8846154,36.4762301 47.2958239,45.2048203 39.0613271,49.6849922 Z",
+        id: "Combined-Shape",
+        fill: "#FFFFFF",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("circle", {
+        id: "Oval-Copy-36",
+        fill: "#3951EA",
+        cx: "50",
+        cy: "26",
+        r: "11"
+      })))))))))));
+
+    case 'abstract-integrations':
+      return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
+        viewBox: "0 0 62 75",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Landing-Page",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Landing-Page",
+        transform: "translate(-107.000000, -4961.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Integrations-Section",
+        transform: "translate(101.000000, 4945.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Section-1-header",
+        transform: "translate(0.000000, 16.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Header,-title,-"
+      }, _react["default"].createElement("g", {
+        id: "Integrations"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "75",
+        height: "75"
+      }), _react["default"].createElement("g", {
+        id: "integrations",
+        transform: "translate(6.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Integrations"
+      }, _react["default"].createElement("g", {
+        id: "Group-Copy"
+      }, _react["default"].createElement("path", {
+        d: "M0.0611468743,43.220339 L15.2429121,43.220339 C15.0690799,44.1227565 14.9781425,45.0538461 14.9781425,46.0057328 C14.9781425,54.2549012 21.8076972,60.9421735 30.2323798,60.9421735 C38.6570624,60.9421735 45.4866171,54.2549012 45.4866171,46.0057328 C45.4866171,45.0538461 45.3956797,44.1227565 45.2218474,43.220339 L60.9558023,43.220339 C60.9963627,43.8508243 61.0169492,44.4866174 61.0169492,45.1271186 C61.0169492,61.6254554 47.3578398,75 30.5084746,75 C13.6591093,75 1.34406375e-14,61.6254554 1.34406375e-14,45.1271186 C1.34406375e-14,44.4866174 0.0205864733,43.8508243 0.0611468743,43.220339 Z",
+        id: "Combined-Shape-Copy-13",
+        fill: "#3951EA",
+        style: {
+          mixBlendMode: 'multiply'
+        }
+      }), _react["default"].createElement("g", {
+        id: "Group-11-Copy-4"
+      }, _react["default"].createElement("g", {
+        id: "Group-11-Copy-2"
+      }, _react["default"].createElement("circle", {
+        id: "Combined-Shape-Copy-17",
+        fill: "#36F4D0",
+        style: {
+          mixBlendMode: 'multiply'
+        },
+        cx: "30.2966102",
+        cy: "12.5",
+        r: "12.5"
+      }), _react["default"].createElement("path", _defineProperty({
+        d: "M1.34700316e-30,43.220339 C4.95296052e-15,26.3709737 13.6591093,12.7118644 30.5084746,12.7118644 C47.3578398,12.7118644 61.0169492,26.3709737 61.0169492,43.220339 L0,43.220339 Z",
+        id: "Combined-Shape",
+        fill: "#FFB8AD",
+        style: "mix-blend-mode: multiply;"
+      }, "style", {
+        mixBlendMode: 'multiply'
+      })), _react["default"].createElement("path", {
+        d: "M18.1180952,15.3328865 C21.9042807,13.6481664 26.0970351,12.7118644 30.5084746,12.7118644 C34.7730014,12.7118644 38.8331663,13.5868421 42.5192382,15.1670666 C41.2986106,20.7928965 36.291469,25.0069464 30.3000834,25.0069464 C24.3677093,25.0069464 19.4002864,20.8754995 18.1180952,15.3328865 Z",
+        id: "Combined-Shape",
+        fill: "#FFFFFF"
+      }))))))))))))));
+
+    case 'faster-checkout':
+      return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
+        viewBox: "0 0 75 75",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("title", null, "checkout"), _react["default"].createElement("g", null, _react["default"].createElement("path", {
+        d: "M0-15H75V60H0Z",
+        transform: "translate(0 15)",
+        style: {
+          fill: 'none'
+        }
+      }), _react["default"].createElement("g", null, _react["default"].createElement("path", {
+        d: "M52.5,0A22.5,22.5,0,1,1,38,39.7,22.1,22.1,0,0,0,38,5.3,22.5,22.5,0,0,1,52.5,0Z",
+        transform: "translate(0 15)",
+        style: {
+          fill: '#3951ea',
+          fillRule: 'evenodd'
+        }
+      }), _react["default"].createElement("ellipse", {
+        cx: "23.1",
+        cy: "37.5",
+        rx: "23.1",
+        ry: "22.5",
+        style: {
+          fill: '#36f4d0'
+        }
+      }), _react["default"].createElement("path", {
+        d: "M38,5.3a22.1,22.1,0,0,1,0,34.4,22.5,22.5,0,0,1-.1-34.3Z",
+        transform: "translate(0 15)",
+        style: {
+          fill: '#ffffff',
+          fillRule: 'evenodd'
+        }
+      }), _react["default"].createElement("circle", {
+        cx: "52",
+        cy: "37",
+        r: "11",
+        style: {
+          fill: '#ffb8ad'
+        }
+      })))));
+
     case 'convert-more-customers':
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 73 59",
@@ -139,75 +313,62 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'increase-order-value':
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
-        viewBox: "0 0 75 57",
+        viewBox: "0 0 75 59",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
-      }), _react["default"].createElement("defs", null, _react["default"].createElement("path", {
-        d: "M51.921733,12.1713019 C55.01527,13.4688135 57.9714107,15.2022079 60.697842,17.3714853 L34.7066008,56.9182578 L26.2362212,51.2528657 L51.921733,12.1713019 Z",
-        id: "path-1"
-      })), _react["default"].createElement("g", {
-        id: "Landing-Page",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
+      }), _react["default"].createElement("defs", null, _react["default"].createElement("mask", {
+        id: "a",
+        x: "-8",
+        y: "9",
+        width: "87",
+        height: "87.92",
+        maskUnits: "userSpaceOnUse"
       }, _react["default"].createElement("g", {
-        id: "1.0-Landing-Page",
-        transform: "translate(-780.000000, -1379.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Section-1",
-        transform: "translate(220.000000, 1158.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Group-4",
-        transform: "translate(45.000000, 174.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Why-1-Copy",
-        transform: "translate(485.000000, 0.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Oval-+-Oval-Copy-Mask"
-      }, _react["default"].createElement("g", {
-        id: "Increase-order-value",
-        transform: "translate(30.000000, 38.000000)"
+        transform: "translate(0 10)"
       }, _react["default"].createElement("rect", {
-        id: "Rectangle",
-        x: "0",
-        y: "0",
-        width: "75",
-        height: "75"
-      }), _react["default"].createElement("g", {
-        id: "increase-order-value",
-        transform: "translate(0.000000, 9.000000)"
-      }, _react["default"].createElement("g", {
-        id: "increase-average-order",
-        transform: "translate(21.923077, 0.000000)"
-      }, _react["default"].createElement("path", {
-        d: "M37.9857069,0.0186752172 L46.4560865,5.68406732 L12.7835239,56.9182578 L4.31314427,51.2528657 L37.9857069,0.0186752172 Z M29.9986561,12.1713019 L4.31314427,51.2528657 L12.7835239,56.9182578 L38.7747651,17.3714853 C36.0483338,15.2022079 33.0921931,13.4688135 29.9986561,12.1713019 Z",
-        id: "Combined-Shape",
-        fill: "#FFB8AD",
-        fillRule: "nonzero"
-      }), _react["default"].createElement("path", {
-        d: "M0.177372203,47.507242 C-0.0992082137,43.3083185 1.35418077,39.0152457 4.53753916,35.8058026 C10.3954934,29.9002089 19.8929681,29.9002089 25.7509224,35.8058026 C28.9342808,39.0152457 30.3876698,43.3083185 30.1110893,47.507242 L0.177372203,47.507242 Z",
-        id: "Combined-Shape",
-        fill: "#3349DA",
+        x: "-8",
+        y: "-1",
+        width: "87",
+        height: "50",
         style: {
-          mixBlendMode: 'multiply'
-        },
-        transform: "translate(15.144231, 39.441936) rotate(-360.000000) translate(-15.144231, -39.441936) "
-      })), _react["default"].createElement("path", {
-        d: "M74.9955896,47.6938776 L61.1468533,47.6938776 C61.2982527,41.3985272 58.9912333,35.0542526 54.225795,30.2499128 C44.9883935,20.9371039 30.0116065,20.9371039 20.774205,30.2499128 C16.0087667,35.0542526 13.7017473,41.3985272 13.8531467,47.6938776 L0.00441044691,47.6938776 C-0.145260329,37.8255027 3.51443476,27.9093122 10.9834957,20.3792793 C25.6281566,5.61507015 49.3718434,5.61507015 64.0165043,20.3792793 C71.4855652,27.9093122 75.1452603,37.8255027 74.9955896,47.6938776 Z",
-        id: "Combined-Shape",
-        fill: "#3EF5D6",
-        fillRule: "nonzero"
-      }), _react["default"].createElement("mask", {
-        id: "mask-2",
-        fill: "white"
-      }, _react["default"].createElement("use", {
-        href: "#path-1"
-      })), _react["default"].createElement("path", {
-        stroke: "#FFFFFF",
-        strokeWidth: "12",
-        d: "M53.9797928,19.9643083 C55.0090525,20.6034732 56.0046632,21.3048319 56.9621468,22.066651 L60.697842,17.3714853 L55.6838048,14.0761202 L55.423235,14.4725883 L51.921733,12.1713019 L49.6010355,17.7043267 C50.559672,18.1064043 51.4978518,18.5564079 52.4127104,19.0532287 L33.0146345,48.5682214 L29.5719484,46.2655895 L30.7398635,52.0293816 L29.6925636,53.6228928 L31.0087164,53.356201 L31.2502573,54.5482324 L32.1911658,53.1166015 L38.042328,51.9309816 L34.5191339,49.5745021 L53.9797928,19.9643083 Z"
-      })))))))))));
+          fill: '#ffffff'
+        }
+      })))), _react["default"].createElement("title", null, "Increase order value"), _react["default"].createElement("g", null, _react["default"].createElement("rect", {
+        width: "75",
+        height: "75",
+        style: {
+          fill: 'none'
+        }
+      }), _react["default"].createElement("polygon", {
+        points: "61.5 10.3 46 33.7 58.4 33.8 69.9 16 61.5 10.3",
+        style: {
+          fill: '#ffb8ad'
+        }
+      }), _react["default"].createElement("g", {
+        style: {
+          mask: 'url(#a)'
+        }
+      }, _react["default"].createElement("g", null, _react["default"].createElement("circle", {
+        cx: "37.1",
+        cy: "58.5",
+        r: "15.1",
+        style: {
+          fill: '#3349da'
+        }
+      }), _react["default"].createElement("path", {
+        d: "M64,75.8a37.8,37.8,0,0,0,0-53.4,37.2,37.2,0,0,0-53,0,37.8,37.8,0,0,0,0,53.4A37.2,37.2,0,0,0,64,75.8ZM20.8,66a24,24,0,0,1,0-33.8,23.5,23.5,0,0,1,33.4,0,24,24,0,0,1,0,33.8A23.5,23.5,0,0,1,20.8,66Z",
+        transform: "translate(0 10)",
+        style: {
+          fill: '#3ef5d6'
+        }
+      }), _react["default"].createElement("path", {
+        d: "M52.3,14.3a38.6,38.6,0,0,1,8.8,5.4L41.8,50H29.3Z",
+        transform: "translate(0 10)",
+        style: {
+          fill: '#ffffff',
+          fillRule: 'evenodd'
+        }
+      }))))));
 
     case 'reduce-abandoned-checkouts':
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
@@ -280,72 +441,37 @@ var BrandIcon = function BrandIcon(props) {
         viewBox: "0 0 65 75",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
-      }), _react["default"].createElement("defs", null, _react["default"].createElement("path", {
-        d: "M55.4810386,55.4810389 C68.1729871,42.7889243 68.1729871,22.2110757 55.4810386,9.51896107 C42.7889244,-3.17298702 22.2110756,-3.17298702 9.51896143,9.51896107 C-3.17298714,22.2110757 -3.17298714,42.7889243 9.51896143,55.4810389 C22.2110756,68.172987 42.7889244,68.172987 55.4810386,55.4810389 Z M20.4620086,44.42081 C13.8689245,37.8276396 13.8689245,27.1723604 20.4621526,20.5790461 C27.1010289,13.9402567 37.8989711,13.9402567 44.5379914,20.57919 C51.1310515,27.1723364 51.1310755,37.827562 44.5379194,44.4208819 C37.8988931,51.0597433 27.1010049,51.0597193 20.4620086,44.42081 Z",
-        id: "path-1"
-      })), _react["default"].createElement("g", {
-        id: "Landing-Page",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        id: "1.0-Landing-Page",
-        transform: "translate(-786.000000, -1774.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Section-1",
-        transform: "translate(220.000000, 1158.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Group-4",
-        transform: "translate(45.000000, 174.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Why-1-Copy-3",
-        transform: "translate(486.000000, 404.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Oval-+-Oval-Copy-Mask"
-      }, _react["default"].createElement("g", {
-        id: "Oval-+-Oval-Copy-3-Mask"
-      }, _react["default"].createElement("g", {
-        id: "Load-products-faster",
-        transform: "translate(30.000000, 38.000000)"
-      }, _react["default"].createElement("rect", {
-        id: "Rectangle",
-        x: "0",
-        y: "0",
-        width: "75",
-        height: "75"
-      }), _react["default"].createElement("g", {
-        id: "load-products-faster",
-        transform: "translate(5.000000, 0.000000)"
-      }, _react["default"].createElement("path", {
-        d: "M18.0320593,15 C17.7646925,11.0954048 19.1696566,7.10325657 22.2469517,4.11881089 C27.9095539,-1.37293696 37.0904461,-1.37293696 42.7530483,4.11881089 C45.8303434,7.10325657 47.2353075,11.0954048 46.9679407,15 L18.0320593,15 Z",
-        id: "Combined-Shape-Copy-3",
-        fill: "#3349DA",
-        transform: "translate(32.500000, 7.500000) rotate(-360.000000) translate(-32.500000, -7.500000) "
-      }), _react["default"].createElement("g", {
-        id: "Path-14",
-        transform: "translate(0.000000, 10.000000)"
-      }, _react["default"].createElement("mask", {
-        id: "mask-2",
-        fill: "white"
-      }, _react["default"].createElement("use", {
-        href: "#path-1"
-      })), _react["default"].createElement("use", {
-        id: "Mask",
-        fill: "#3EF5D6",
-        fillRule: "nonzero",
-        href: "#path-1"
-      }), _react["default"].createElement("polygon", {
-        fill: "#FFFFFF",
-        fillRule: "nonzero",
-        mask: "url(#mask-2)",
-        points: "38 35 38 0 28 0 28 35"
-      })), _react["default"].createElement("path", {
-        d: "M38,45 L38,26.4165039 C36.3333333,25.8721493 34.6666667,25.599972 33,25.599972 C31.3333333,25.599972 29.6666667,25.7998023 28,26.1994629 L28,45 L38,45 Z",
-        id: "Path-14",
-        fill: "#FFB8AD",
-        fillRule: "nonzero"
-      }))))))))))));
+      }), _react["default"].createElement("title", null, "Load products faster"), _react["default"].createElement("g", null, _react["default"].createElement("path", {
+        d: "M28,45V26.2a16.4,16.4,0,0,0-7.5,4.4,16.9,16.9,0,0,0,24,23.8A16.9,16.9,0,0,0,38,26.5V45Z",
+        transform: "translate(0 0)",
+        style: {
+          fill: 'none'
+        }
+      }), _react["default"].createElement("path", {
+        d: "M55.5,19.5A35.1,35.1,0,0,0,47,13.4a32.6,32.6,0,0,0-9-2.9V26.4h0a16.9,16.9,0,0,1,6.5,27.9,16.9,16.9,0,0,1-24-23.8A16.4,16.4,0,0,1,28,26.2h0V10.3a33.1,33.1,0,0,0-10,3.1,35.1,35.1,0,0,0-8.5,6.1,32.5,32.5,0,1,0,46,0Z",
+        transform: "translate(0 0)",
+        style: {
+          fill: '#3ef5d6'
+        }
+      }), _react["default"].createElement("path", {
+        d: "M32.5,10a34.1,34.1,0,0,1,5.5.5,32.6,32.6,0,0,1,9,2.9,14.3,14.3,0,0,0-4.2-9.3,14.9,14.9,0,0,0-20.6,0A14.3,14.3,0,0,0,18,13.4a33.1,33.1,0,0,1,10-3.1A34,34,0,0,1,32.5,10Z",
+        transform: "translate(0 0)",
+        style: {
+          fill: '#3349da'
+        }
+      }), _react["default"].createElement("path", {
+        d: "M28,10.3V26.2h.5a20.1,20.1,0,0,1,4.2-.5H33a17.4,17.4,0,0,1,5,.8V10.5a34.1,34.1,0,0,0-5.5-.5A34,34,0,0,0,28,10.3Z",
+        transform: "translate(0 0)",
+        style: {
+          fill: '#ffffff'
+        }
+      }), _react["default"].createElement("path", {
+        d: "M32.7,25.6a20.1,20.1,0,0,0-4.2.5H28V45H38V26.5h0a17.4,17.4,0,0,0-5-.8Z",
+        transform: "translate(0 0)",
+        style: {
+          fill: '#ffb8ad'
+        }
+      }))));
 
     case 'healthy-snacks':
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
@@ -1836,12 +1962,12 @@ exports.BrandIcon = BrandIcon;
 var BrandAbstractIconWrapper = _styledComponents["default"].div.withConfig({
   displayName: "BrandIcon__BrandAbstractIconWrapper",
   componentId: "sc-4c7rq1-0"
-})(["height:75px;width:75px;max-height:75px;display:flex;align-items:center;"]);
+})(["height:75px;width:75px;display:flex;align-items:center;"]);
 
 var BrandAbstractIconSVG = _styledComponents["default"].svg.withConfig({
   displayName: "BrandIcon__BrandAbstractIconSVG",
   componentId: "sc-4c7rq1-1"
-})(["width:100%;max-height:75px;height:auto;object-fit:contain;margin-left:", ";margin-right:", ";", ";"], function (props) {
+})(["max-height:75px;margin-left:0px;margin-right:0px;max-width:75px;width:100%;margin-left:", ";margin-right:", ";", ";"], function (props) {
   return props.iconRight ? '10px' : '0px';
 }, function (props) {
   return props.iconLeft ? '10px' : '0px';

@@ -156,7 +156,7 @@ var AccordionWrapper = _styledComponents["default"].div.withConfig({
 var AccordionStyledItem = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionStyledItem",
   componentId: "llk5lt-1"
-})(["padding:25px 50px;border-radius:3px;background:white;box-shadow:", ";margin-bottom:20px;", ";"], function (props) {
+})(["padding:0px 50px;border-radius:3px;background:white;box-shadow:", ";margin-bottom:20px;", ";"], function (props) {
   return props.boxShadow ? '0px 2px 40px 0px rgba(0,0,0,0.05)' : null;
 }, function (props) {
   return props.style ? props.style : null;
@@ -165,7 +165,7 @@ var AccordionStyledItem = _styledComponents["default"].div.withConfig({
 var AccordionLabel = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionLabel",
   componentId: "llk5lt-2"
-})(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;", ";font-size:", ";color:", ";"], _variables.sofia.sofiaRegular, function (props) {
+})(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;font-family:Sofia Pro;font-size:26px;font-weight:normal;font-stretch:normal;font-style:normal;font-weight:400;height:75px;font-size:", ";color:", ";"], function (props) {
   return !props.className && '26px';
 }, function (props) {
   return !props.className && (props.isOpen ? _variables.colors.blue : _variables.colors.black);
@@ -174,6 +174,6 @@ var AccordionLabel = _styledComponents["default"].div.withConfig({
 var AccordionChildren = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionChildren",
   componentId: "llk5lt-3"
-})(["margin-top:10px;padding:10px 0px;padding-bottom:0px;", ""], function (props) {
+})(["padding-bottom:25px;", ""], function (props) {
   return props.isOpen ? "\n      opacity: 1;\n      transform: translateY(0);\n      transition-delay: 0.2s;\n      transition-timing-function: ease-in-out;\n      transition-duration: 0.2s;\n      transition-property: opacity, transform;\n\n " : "opacity: 0;\n      transform: translateY(-1rem);\n    transition-timing-function: ease-in-out;\n    transition-duration: 0.2s;\n    transition-property: opacity, transform;\n\n ";
 });
