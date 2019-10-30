@@ -43,27 +43,27 @@ var colors = {
 exports.colors = colors;
 var sofia = {
   sofiaSemiBold: {
-    fontFamily: 'Sofia Pro',
+    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
     fontWeight: 600,
     fontStyle: 'normal'
   },
   sofiaMedium: {
-    fontFamily: 'Sofia Pro',
+    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
     fontWeight: 500,
     fontStyle: 'normal'
   },
   sofiaRegular: {
-    fontFamily: 'Sofia Pro',
+    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
     fontWeight: 300,
     fontStyle: 'normal'
   },
   sofiaLight: {
-    fontFamily: 'Sofia Pro',
+    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
     fontWeight: 200,
     fontStyle: 'normal'
   },
   sofiaItalic: {
-    fontFamily: 'Sofia Pro',
+    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
     fontWeight: 'normal',
     fontStyle: 'italic'
   }
@@ -93,19 +93,19 @@ var inputBorder = {
 exports.inputBorder = inputBorder;
 var circular = {
   circularBook: {
-    fontFamily: 'CircularStd-Book'
+    fontFamily: 'CircularStd-Book, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
   },
   circularBold: {
-    fontFamily: 'CircularStd-Bold'
+    fontFamily: 'CircularStd-Bold, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
   },
   circularMedium: {
-    fontFamily: 'CircularStd-Medium'
+    fontFamily: 'CircularStd-Medium, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
   },
   circularBlack: {
-    fontFamily: 'CircularStd-Black'
+    fontFamily: 'CircularStd-Black, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
   },
   circularBookItalic: {
-    fontFamily: 'CircularStd-BookItalic'
+    fontFamily: 'CircularStd-BookItalic, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
   }
 };
 exports.circular = circular;

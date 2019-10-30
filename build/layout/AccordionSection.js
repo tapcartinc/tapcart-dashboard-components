@@ -165,7 +165,7 @@ var AccordionStyledItem = _styledComponents["default"].div.withConfig({
 var AccordionLabel = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionLabel",
   componentId: "llk5lt-2"
-})(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;font-family:Sofia Pro;font-size:26px;font-weight:normal;font-stretch:normal;font-style:normal;font-weight:400;height:75px;font-size:", ";color:", ";"], function (props) {
+})(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-size:26px;font-stretch:normal;font-style:normal;font-weight:400;height:75px;font-size:", ";color:", ";"], function (props) {
   return !props.className && '26px';
 }, function (props) {
   return !props.className && (props.isOpen ? _variables.colors.blue : _variables.colors.black);
