@@ -470,72 +470,31 @@ var BrandIcon = function BrandIcon(props) {
 
     case '3d-shopping':
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
-        viewBox: "0 0 67 75",
+        viewBox: "0 0 66.9 74.1",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
-      }), _react["default"].createElement("defs", null, _react["default"].createElement("rect", {
-        id: "path-1",
-        x: "0",
-        y: "0",
-        width: "75",
-        height: "75"
-      })), _react["default"].createElement("g", {
-        id: "Features",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        id: "5.0-Features-Page",
-        transform: "translate(-1184.000000, -576.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Table-of-contents",
-        transform: "translate(100.000000, 542.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Drag-&-drop-Copy-2",
-        transform: "translate(1030.000000, 34.000000)"
-      }, _react["default"].createElement("g", {
-        id: "3D-Shopping",
-        transform: "translate(53.000000, 0.000000)"
-      }, _react["default"].createElement("mask", {
-        id: "mask-2",
-        fill: "white"
-      }, _react["default"].createElement("use", {
-        href: "#path-1"
-      })), _react["default"].createElement("g", {
-        id: "Mask"
-      }), _react["default"].createElement("g", {
-        mask: "url(#mask-2)"
-      }, _react["default"].createElement("g", {
-        transform: "translate(1.000000, -9.000000)"
-      }, _react["default"].createElement("path", {
-        d: "M48.36445,37.9838275 L48.36445,74.2049942 L16.5882353,93.0218459 L16.7117452,55.9302966 L48.36445,37.9838275 Z M24.6962413,60.5996486 L24.635106,78.9593068 L40.36445,69.6448955 L40.36445,51.7160784 L24.6962413,60.5996486 Z",
-        id: "Path-5-Copy-5",
-        fill: "#3EF5D6",
-        fillRule: "nonzero",
-        transform: "translate(32.476343, 65.502837) rotate(-300.000000) translate(-32.476343, -65.502837) "
-      }), _react["default"].createElement("path", {
-        d: "M48.36445,37.9838275 L48.36445,74.2049942 L16.5882353,93.0218459 L16.7117452,55.9302966 L48.36445,37.9838275 Z M24.6962413,60.5996486 L24.635106,78.9593068 L40.36445,69.6448955 L40.36445,51.7160784 L24.6962413,60.5996486 Z",
-        id: "Path-5-Copy-5",
-        fill: "#3EF5D6",
-        fillRule: "nonzero",
-        transform: "translate(32.476343, 65.502837) rotate(-300.000000) translate(-32.476343, -65.502837) "
-      }), _react["default"].createElement("polygon", {
-        id: "Path-5-Copy-6",
-        fill: "#FFB8AD",
-        fillRule: "evenodd",
+      }), _react["default"].createElement("title", null, "3D Shopping"), _react["default"].createElement("g", null, _react["default"].createElement("polygon", {
+        points: "33.8 64.3 33.2 64.6 27.8 61.8 17.9 56.2 33.4 47.2 33.8 47.4 33.8 38 33.6 37.9 33.2 37.7 1.3 56 1.7 56.2 1.5 56.3 15.4 63.9 33.5 74.1 33.8 73.9 33.8 73.5 33.8 64.3",
         style: {
-          mixBlendMode: 'multiply'
-        },
-        transform: "translate(33.213736, 28.752941) rotate(-300.000000) translate(-33.213736, -28.752941) ",
-        points: "49.8142548 -3.01641228e-13 49.8142548 37.845297 16.6132182 57.5058824 16.7422662 18.7511754"
+          fill: '#3ef5d6'
+        }
+      }), _react["default"].createElement("polygon", {
+        points: "48.8 46.6 41.9 42.5 41.8 42.6 41.8 42.6 41.8 52 48.5 55.8 41.8 59.6 41.8 60.4 57.5 51.6 48.8 46.6",
+        style: {
+          fill: '#3ef5d6'
+        }
+      }), _react["default"].createElement("polygon", {
+        points: "33.8 38 33.8 38 66.4 18.7 33.6 0 0 19.3 33.2 37.7 33.6 37.9 33.8 38",
+        style: {
+          fill: '#ffb8ad'
+        }
       }), _react["default"].createElement("path", {
-        d: "M65.6581246,84.0588129 L33.5875363,66.0915494 L33.9729526,28.0971347 L65.2727083,46.1680571 L65.6581246,84.0588129 Z M57.319551,50.8139038 L41.8336205,41.8730977 L41.6352321,61.4302658 L57.5180488,70.3284734 L57.319551,50.8139038 Z",
-        id: "Path-5-Copy-7",
-        fill: "#3951EA",
-        fillRule: "nonzero",
-        transform: "translate(49.622830, 56.077974) rotate(-120.000000) translate(-49.622830, -56.077974) "
-      }))))))))));
+        d: "M67.3,56l-.5-36.8L34.2,38.5h0V74.6ZM42.2,60.1v-17h.1L59,33.1l.3,18.2-1.4.8L42.2,60.9Z",
+        transform: "translate(-0.4 -0.5)",
+        style: {
+          fill: '#3951ea'
+        }
+      }))));
 
     case 'faster-checkout':
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
