@@ -191,14 +191,14 @@ var SecondaryControlStyle = _styledComponents["default"].div.withConfig({
 var Tab = _styledComponents["default"].label.withConfig({
   displayName: "SegmentedControl__Tab",
   componentId: "w55qep-3"
-})(["color:#000;font-size:15px;font-family:'Sofia Pro';font-weight:normal;font-style:normal;flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-family:'Sofia Pro';font-weight:normal;font-style:normal;padding:20px;letter-spacing:0.5px;", " ", ";&:hover{cursor:pointer;}"], _animations.onClickTransition, function (props) {
+})(["color:#000;font-size:15px;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-style:normal;padding:20px;letter-spacing:0.5px;", " ", ";&:hover{cursor:pointer;}"], _animations.onClickTransition, function (props) {
   return props.current === props.htmlFor && "background: #3235ab;\n    color: #fff;\n    border-radius: 3px;\n    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);";
 });
 
 var SecondaryTab = _styledComponents["default"].label.withConfig({
   displayName: "SegmentedControl__SecondaryTab",
   componentId: "w55qep-4"
-})(["flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-family:'Sofia Pro';font-weight:normal;font-style:normal;padding:", ";letter-spacing:0.5px;color:#a2a4dd;font-size:14px;width:100%;transition:ease-out 0.2s;border:1px solid transparent;", " &:hover{cursor:pointer;}"], function (props) {
+})(["flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:normal;font-style:normal;padding:", ";letter-spacing:0.5px;color:#a2a4dd;font-size:14px;width:100%;transition:ease-out 0.2s;border:1px solid transparent;", " &:hover{cursor:pointer;}"], function (props) {
   return props.hasIcons ? '10px' : '20px';
 }, function (props) {
   return props.current === props.htmlFor && "background: #fff;\n    color: #3235ab;\n    border-radius: 3px;\n    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);\n    opacity: 1;\n    border: 1px solid #3235ab;\n    ";

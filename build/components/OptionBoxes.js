@@ -44,7 +44,7 @@ function OptionBoxes(props) {
 var OptionBoxesWrapper = _styledComponents["default"].ul.withConfig({
   displayName: "OptionBoxes__OptionBoxesWrapper",
   componentId: "sc-78jb7n-0"
-})(["display:flex;justify-content:flex-start;width:100%;flex-wrap:wrap;font-family:\"Circular-Book\" font-size:15px;text-transform:capitalize;border-radius:4px;", ";"], function (props) {
+})(["display:flex;justify-content:flex-start;width:100%;flex-wrap:wrap;font-family:Circular-Book,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-size:15px;text-transform:capitalize;border-radius:4px;", ";"], function (props) {
   return props.style ? props.style : null;
 });
 

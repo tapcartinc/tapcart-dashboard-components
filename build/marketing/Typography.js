@@ -40,7 +40,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var Header = _styledComponents["default"].h1.withConfig({
   displayName: "Typography__Header",
   componentId: "sc-1bwqgjv-0"
-})(["font-family:CircularStd-Medium;font-weight:500;font-style:normal;font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;z-index:3;-webkit-font-smoothing:antialiased;color:", ";", ";", ""], function (props) {
+})(["font-family:CircularStd-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;z-index:3;-webkit-font-smoothing:antialiased;color:", ";", ";", ""], function (props) {
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {
