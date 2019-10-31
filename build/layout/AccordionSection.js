@@ -15,11 +15,25 @@ var _variables = require("../utils/_variables");
 
 var _animations = require("../utils/_animations");
 
+var _media = _interopRequireDefault(require("../utils/_media"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    line-height: 24px;\n      font-size: 16px;\n    "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -165,11 +179,11 @@ var AccordionStyledItem = _styledComponents["default"].div.withConfig({
 var AccordionLabel = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionLabel",
   componentId: "llk5lt-2"
-})(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-size:26px;font-stretch:normal;font-style:normal;font-weight:400;height:75px;font-size:", ";color:", ";"], function (props) {
+})(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-stretch:normal;font-style:normal;font-weight:400;height:75px;font-size:", ";color:", ";", ""], function (props) {
   return !props.className && '26px';
 }, function (props) {
   return !props.className && (props.isOpen ? _variables.colors.blue : _variables.colors.black);
-});
+}, _media["default"].xs(_templateObject()));
 
 var AccordionChildren = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionChildren",

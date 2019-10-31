@@ -867,68 +867,26 @@ var BrandIcon = function BrandIcon(props) {
 
     case 'healthy-snacks':
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
-        viewBox: "0 0 76 82",
+        viewBox: "0 0 61.1 66.4",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
-      }), _react["default"].createElement("defs", null, _react["default"].createElement("rect", {
-        id: "path-1",
-        x: "0",
-        y: "0",
-        width: "85.05",
-        height: "85.05"
-      })), _react["default"].createElement("g", {
-        id: "Style-Guide",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        id: "Style-guide",
-        transform: "translate(-3412.000000, -277.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Large-icons",
-        transform: "translate(2617.920000, 103.000000)"
-      }, _react["default"].createElement("g", {
-        transform: "translate(74.844000, 171.318000)",
-        id: "snacks"
-      }, _react["default"].createElement("g", {
-        transform: "translate(713.286000, 1.050000)"
-      }, _react["default"].createElement("mask", {
-        id: "mask-2",
-        fill: "white"
-      }, _react["default"].createElement("use", {
-        href: "#path-1"
-      })), _react["default"].createElement("g", {
-        id: "Mask"
-      }), _react["default"].createElement("g", {
-        mask: "url(#mask-2)"
-      }, _react["default"].createElement("g", {
-        transform: "translate(-12.474000, 2.268000)"
-      }, _react["default"].createElement("path", {
-        d: "M1.57529048,72.6327453 C1.57528916,72.6281511 1.5752885,72.6235566 1.5752885,72.618962 C1.5752885,47.1438987 21.8638199,26.4922794 46.8909916,26.4922794 C71.9181634,26.4922794 92.2066947,47.1438987 92.2066947,72.618962 C92.2066947,72.6235566 92.2066941,72.6281511 92.2066928,72.6327453 L1.57529033,72.6327453 Z",
-        id: "Combined-Shape",
-        fill: "#36F4D0",
-        transform: "translate(46.890992, 49.562632) rotate(-130.000000) translate(-46.890992, -49.562632) "
+      }), _react["default"].createElement("title", null, "healthy snacks"), _react["default"].createElement("g", null, _react["default"].createElement("path", {
+        d: "M55.5,52.4a27,27,0,0,1-34-42l1.6-1.2L16.8,1.4,16,2A37,37,0,1,0,62.6,59.5l.7-.6L57,51Z",
+        transform: "translate(-2.3 -1.4)",
+        fill: "#36f4d0"
       }), _react["default"].createElement("path", {
-        d: "M15.4221637,28.5147004 L86.7514465,28.5147004 C86.4567762,38.4954888 81.9490652,48.4430478 73.5295431,55.5078658 C58.2089001,68.3634116 35.7372722,66.8056304 23.3377573,52.028464 C17.6446857,45.2437254 15.0647104,36.8518885 15.4221637,28.5147004 Z",
-        id: "Combined-Shape",
-        fill: "#3951EA",
-        transform: "translate(51.070532, 46.364922) rotate(50.000000) translate(-51.070532, -46.364922) "
-      }), _react["default"].createElement("g", {
-        id: "Group-15",
-        strokeWidth: "1",
-        fill: "none",
-        transform: "translate(41.164200, 11.226600)"
-      }, _react["default"].createElement("path", {
-        d: "M23.0769,47.4012 C35.8219199,47.4012 46.1538,36.7900799 46.1538,23.7006 C46.1538,10.6111201 35.8219199,0 23.0769,0 C10.3318801,0 0,10.6111201 0,23.7006 C0,36.7900799 10.3318801,47.4012 23.0769,47.4012 Z M23.0769,35.5509 C16.70439,35.5509 11.53845,30.24534 11.53845,23.7006 C11.53845,17.15586 16.70439,11.8503 23.0769,11.8503 C29.44941,11.8503 34.61535,17.15586 34.61535,23.7006 C34.61535,30.24534 29.44941,35.5509 23.0769,35.5509 Z",
-        id: "Combined-Shape-Copy-17",
-        fill: "#FFB8AD",
-        fillRule: "nonzero"
+        d: "M31.5,37.1a10.1,10.1,0,0,0,14.1,1.4l.7-.6L33.8,22.4,33,23A10,10,0,0,0,31.5,37.1Z",
+        transform: "translate(-2.3 -1.4)",
+        fill: "#3951ea"
       }), _react["default"].createElement("path", {
-        d: "M8.53723447,5.29485609 L16.0764321,14.279722 C13.3179326,16.4450947 11.53845,19.8594207 11.53845,23.7006 C11.53845,30.24534 16.70439,35.5509 23.0769,35.5509 C26.2022191,35.5509 29.0373229,34.2747583 31.1151462,32.2021635 L38.6543372,41.1870215 C34.5492673,45.0464039 29.080843,47.4012 23.0769,47.4012 C10.3318801,47.4012 0,36.7900799 0,23.7006 C0,16.2712843 3.32837459,9.64036253 8.53723447,5.29485609 Z",
-        id: "Combined-Shape",
-        fill: "#FFFFFF"
-      })))))))))));
+        d: "M17.5,48.4a27,27,0,0,0,38,4L57,51l-4.4-5.4-.7.7A20,20,0,1,1,26.7,15.2l.8-.6L23.1,9.2l-1.6,1.2A27,27,0,0,0,17.5,48.4Z",
+        transform: "translate(-2.3 -1.4)",
+        fill: "#3951ea"
+      }), _react["default"].createElement("path", {
+        d: "M54.8,18.2a19.2,19.2,0,0,0-13.4-7.3,19.6,19.6,0,0,0-13.9,3.7l6.3,7.8a9.6,9.6,0,0,1,5.5-1.6h1a10.1,10.1,0,0,1,6.8,3.7h0a10.1,10.1,0,0,1-.8,13.4l6.3,7.7A19.9,19.9,0,0,0,54.8,18.2Z",
+        transform: "translate(-2.3 -1.4)",
+        fill: "#ffb8ad"
+      }))));
 
     case 'healthcare':
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
