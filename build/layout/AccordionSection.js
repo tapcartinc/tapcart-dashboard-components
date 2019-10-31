@@ -23,8 +23,28 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n      margin-right: 10px;\n    "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    line-height: 24px;\n      font-size: 16px;\n\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    line-height: 24px;\n      font-size: 16px;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  padding: 0px 20px;\n\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -110,7 +130,7 @@ function (_Component) {
         onClick: onClick,
         isOpen: isOpen,
         className: className
-      }, _react["default"].createElement("div", {
+      }, _react["default"].createElement(StyledAccordionLabel, {
         style: {
           display: 'flex',
           flexDirection: 'row',
@@ -170,9 +190,9 @@ var AccordionWrapper = _styledComponents["default"].div.withConfig({
 var AccordionStyledItem = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionStyledItem",
   componentId: "llk5lt-1"
-})(["padding:0px 50px;border-radius:3px;background:white;box-shadow:", ";margin-bottom:20px;", ";"], function (props) {
+})(["padding:0px 50px;border-radius:3px;background:white;box-shadow:", ";margin-bottom:20px;", " ", ";"], function (props) {
   return props.boxShadow ? '0px 2px 40px 0px rgba(0,0,0,0.05)' : null;
-}, function (props) {
+}, _media["default"].xs(_templateObject()), function (props) {
   return props.style ? props.style : null;
 });
 
@@ -183,7 +203,7 @@ var AccordionLabel = _styledComponents["default"].div.withConfig({
   return !props.className && '26px';
 }, function (props) {
   return !props.className && (props.isOpen ? _variables.colors.blue : _variables.colors.black);
-}, _media["default"].xs(_templateObject()));
+}, _media["default"].xs(_templateObject2()));
 
 var AccordionChildren = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionChildren",
@@ -191,3 +211,8 @@ var AccordionChildren = _styledComponents["default"].div.withConfig({
 })(["padding-bottom:25px;", ""], function (props) {
   return props.isOpen ? "\n      opacity: 1;\n      transform: translateY(0);\n      transition-delay: 0.2s;\n      transition-timing-function: ease-in-out;\n      transition-duration: 0.2s;\n      transition-property: opacity, transform;\n\n " : "opacity: 0;\n      transform: translateY(-1rem);\n    transition-timing-function: ease-in-out;\n    transition-duration: 0.2s;\n    transition-property: opacity, transform;\n\n ";
 });
+
+var StyledAccordionLabel = _styledComponents["default"].div.withConfig({
+  displayName: "AccordionSection__StyledAccordionLabel",
+  componentId: "llk5lt-4"
+})(["", ";"], _media["default"].xs(_templateObject3()));

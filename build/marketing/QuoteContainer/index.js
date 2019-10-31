@@ -351,7 +351,7 @@ var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__Context",
   componentId: "sc-1jclz2n-5"
-})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:50%;z-index:1;align-items:flex-start;img{margin-top:15px;}", ";"], _media["default"].md(_templateObject9()));
+})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:55%;z-index:1;align-items:flex-start;img{margin-top:15px;}", ";"], _media["default"].md(_templateObject9()));
 
 var StyledPerson = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__StyledPerson",
