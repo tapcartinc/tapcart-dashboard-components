@@ -25,7 +25,7 @@ var InputStyle = _styledComponents["default"].input.withConfig({
   displayName: "Input__InputStyle",
   componentId: "sc-1bkiiiy-0"
 })(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;width:100%;", ";&::placeholder{color:", ";}&:focus{outline:none;}font-size:18px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
-  return props.error ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_variables.colors.bluegray);
+  return props.error ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_variables.colors.blue50);
 }, _variables.colors.offwhite, _variables.sofia.sofiaRegular, _variables.colors.blue25, function (props) {
   return props.style ? props.style : null;
 });
