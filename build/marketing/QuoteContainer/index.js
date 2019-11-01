@@ -315,7 +315,7 @@ var StyledQuoteContainer = _styledComponents["default"].div.withConfig({
 var ImageWrapper = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__ImageWrapper",
   componentId: "sc-1jclz2n-3"
-})(["overflow:hidden;width:425px;height:475px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;width:100%;z-index:1;}.right{position:absolute;top:0px;right:0px;z-index:5;bottom:0px;height:100%;}", " ", " ", ""], _media["default"].lg(_templateObject6()), _media["default"].md(_templateObject7()), _media["default"].xs(_templateObject8()));
+})(["overflow:hidden;width:400px;height:450px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;width:100%;z-index:1;}.right{position:absolute;top:0px;right:0px;z-index:5;bottom:0px;height:100%;}", " ", " ", ""], _media["default"].lg(_templateObject6()), _media["default"].md(_templateObject7()), _media["default"].xs(_templateObject8()));
 
 var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig({
   displayName: "QuoteContainer__QuoteText",
