@@ -26,7 +26,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 38px;\n  line-height: 48px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 38px;\n  line-height: 48px;\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -37,16 +37,36 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
+// ${media.lg`
+// font-size: 38px;
+// line-height: 48px;
+// `};
+// color: ${props => {
+//   if (props.color) {
+//     return getColors(props.color);
+//   } else {
+//     return props.theme ? props.theme.header : colors.black;
+//   }
+// }};
+// ${props => {
+//   let theme = { header: (props.theme && props.theme.header) || '#000000' };
+//   if (theme && theme.header) {
+//     return `color: ${theme.header}`;
+//   }
+// }}
+// ${props => props.color && `color: ${props.color}`};
+// font-size: 3em;
+// font-size: ${48 / 16}em;
 var Header = _styledComponents["default"].h1.withConfig({
   displayName: "Typography__Header",
   componentId: "sc-1bwqgjv-0"
-})(["font-family:CircularStd-Bold,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:bold;font-style:normal;font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;z-index:3;-webkit-font-smoothing:antialiased;color:", ";", ";", ""], function (props) {
+})(["font-family:CircularStd-Bold,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:bold;font-style:normal;font-size:48px;line-height:58px;margin-bottom:15px;margin-top:20px;z-index:3;-webkit-font-smoothing:antialiased;", ";color:", ";", ""], _media["default"].lg(_templateObject()), function (props) {
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {
     return props.theme ? props.theme.header : _variables.colors.black;
   }
-}, _media["default"].lg(_templateObject()), function (props) {
+}, function (props) {
   return props.style ? props.style : null;
 });
 
