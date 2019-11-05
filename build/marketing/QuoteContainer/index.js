@@ -40,7 +40,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    width: 80%;\n    margin: 0 auto;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 90%;\n  "]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -50,7 +50,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  width: 300px;\n  height: 350px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    width: 80%;\n    margin: 0 auto;\n  "]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -60,7 +60,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0 auto;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 90%;\n  height: 430px;\n  "]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -70,7 +70,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  width: 325px;\n  height: 375px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0 auto;\n  "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -80,7 +80,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  padding: 40px 0px;\n  max-width: 100%;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 325px;\n  height: 375px;\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -90,7 +90,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  padding-left: 15px;\n  padding-right: 15px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  max-width: 100%;\n  padding-left: 1em;\n  padding-right: 1em;\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -275,7 +275,15 @@ var QuoteContainer = function QuoteContainer(props) {
     alt: "person",
     className: "person",
     src: props.image
-  })), _react["default"].createElement(Context, null, _react["default"].createElement(QuoteText, null, "\u201C", sortText(props.children, props.highlighted), "\u201D"), _react["default"].createElement(StyledPerson, null, _react["default"].createElement(_Typography2.Body, {
+  })), _react["default"].createElement(Context, null, _react["default"].createElement(QuoteText, null, _react["default"].createElement("span", {
+    style: {
+      color: _variables.colors.green
+    }
+  }, "\u201C"), sortText(props.children, props.highlighted), _react["default"].createElement("span", {
+    style: {
+      color: _variables.colors.green
+    }
+  }, "\u201D")), _react["default"].createElement(StyledPerson, null, _react["default"].createElement(_Typography2.Body, {
     color: "white"
   }, props.person, _react["default"].createElement("span", {
     className: "mobile-hide"
@@ -310,22 +318,22 @@ var QuoteContainerWrapper = _styledComponents["default"].div.withConfig({
 var StyledQuoteContainer = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__StyledQuoteContainer",
   componentId: "sc-1jclz2n-2"
-})(["display:flex;padding:40px;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;box-sizing:border-box;position:relative;width:100%;margin-left:auto;margin-right:auto;padding-left:5em;padding-right:5em;max-width:", "px;", " ", " ", " ", " ", ""], _sizes.sizes.xl, _media["default"].lg(_templateObject()), _media["default"].md(_templateObject2()), _media["default"].sm(_templateObject3()), _media["default"].xs(_templateObject4()), _media["default"].xs(_templateObject5()));
+})(["display:flex;padding:40px;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;box-sizing:border-box;position:relative;width:100%;margin-left:auto;margin-right:auto;padding-left:5em;padding-right:5em;max-width:", "px;", " ", " ", " ", ""], _sizes.sizes.xl, _media["default"].lg(_templateObject()), _media["default"].md(_templateObject2()), _media["default"].sm(_templateObject3()), _media["default"].xs(_templateObject4()));
 
 var ImageWrapper = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__ImageWrapper",
   componentId: "sc-1jclz2n-3"
-})(["overflow:hidden;width:400px;height:450px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;width:100%;z-index:1;}.right{position:absolute;top:0px;right:0px;z-index:5;bottom:0px;height:100%;}", " ", " ", ""], _media["default"].lg(_templateObject6()), _media["default"].md(_templateObject7()), _media["default"].xs(_templateObject8()));
+})(["overflow:hidden;width:400px;height:450px;position:relative;border-radius:6px;.person{object-fit:cover;height:100%;width:100%;z-index:1;}.right{position:absolute;top:0px;right:0px;z-index:5;bottom:0px;height:100%;}", " ", " ", ""], _media["default"].lg(_templateObject5()), _media["default"].md(_templateObject6()), _media["default"].xs(_templateObject7()));
 
 var QuoteText = (0, _styledComponents["default"])(_Typography.Header).withConfig({
   displayName: "QuoteContainer__QuoteText",
   componentId: "sc-1jclz2n-4"
-})(["letter-spacing:0.3px;margin-bottom:30px;text-indent:-0.5em;font-style:none;font-weight:bold;color:white;"]);
+})(["letter-spacing:0.3px;margin-bottom:30px;text-indent:-0.5em;font-style:none;color:white;"]);
 
 var Context = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__Context",
   componentId: "sc-1jclz2n-5"
-})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:55%;z-index:1;align-items:flex-start;img{margin-top:15px;}", ";"], _media["default"].md(_templateObject9()));
+})(["padding:20px 0px;display:flex;flex-direction:column;justify-content:flex-start;width:55%;z-index:1;align-items:flex-start;img{margin-top:15px;}", ";", ";"], _media["default"].md(_templateObject8()), _media["default"].xs(_templateObject9()));
 
 var StyledPerson = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__StyledPerson",

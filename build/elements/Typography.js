@@ -90,11 +90,11 @@ exports.input = input;
 var Body = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Body",
   componentId: "sc-1g2eju0-5"
-})(["-webkit-font-smoothing:antialiased;font-size:", ";line-height:28px;color:", ";", ";font-weight:400;margin-top:5px;margin-bottom:5px;", ""], function (props) {
+})(["-webkit-font-smoothing:antialiased;font-size:", ";line-height:26px;color:", ";", ";font-weight:400;margin-top:5px;margin-bottom:5px;", ""], function (props) {
   if (props.fontSize) {
     return props.fontSize;
   } else {
-    return '18px';
+    return '16px';
   }
 }, function (props) {
   return props.color ? props.color : '#000000';
