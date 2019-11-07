@@ -9,6 +9,7 @@ var sizes = {
   lg: 1090,
   md: 900,
   sm: 700,
+  smxs: 590,
   xs: 480
 };
 exports.sizes = sizes;
