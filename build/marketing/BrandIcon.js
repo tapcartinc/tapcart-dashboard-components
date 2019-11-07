@@ -2304,13 +2304,13 @@ var BrandIcon = function BrandIcon(props) {
       })))))));
 
     case 'ebook':
-      return _react["default"].createElement(BrandBasicIconSVG, {
+      return _react["default"].createElement(BrandBasicIconSVG, _extends({
         width: "20px",
         height: "24px",
         viewBox: "0 0 20 24",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
-      }, _react["default"].createElement("g", {
+      }, props), _react["default"].createElement("g", {
         id: "Resources",
         stroke: "none",
         strokeWidth: "1",
@@ -2352,13 +2352,13 @@ var BrandIcon = function BrandIcon(props) {
       })))))));
 
     case 'infographic':
-      return _react["default"].createElement(BrandBasicIconSVG, {
+      return _react["default"].createElement(BrandBasicIconSVG, _extends({
         width: "22px",
         height: "22px",
         viewBox: "0 0 22 22",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
-      }, _react["default"].createElement("g", {
+      }, props), _react["default"].createElement("g", {
         id: "Resources",
         stroke: "none",
         strokeWidth: "1",
