@@ -28,7 +28,7 @@ var BrandIcon = function BrandIcon(props) {
       fill = props.fill;
 
   switch (type) {
-    case 'many-more':
+    case "many-more":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 66 63",
         version: "1.1",
@@ -107,7 +107,7 @@ var BrandIcon = function BrandIcon(props) {
         r: "3"
       }))))))));
 
-    case 'brand-content':
+    case "brand-content":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 75 72",
         version: "1.1",
@@ -155,7 +155,7 @@ var BrandIcon = function BrandIcon(props) {
         id: "Combined-Shape",
         fill: "#36F4D0",
         style: {
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply"
         }
       }), _react["default"].createElement("path", {
         d: "M9.41469125e-14,35.7042254 C9.96163969e-14,15.9853262 15.9853262,0 35.7042254,0 C36.1640572,0 36.6218587,0.00869268975 37.0774745,0.0259227064 L37.0774648,35.7042254 L9.59232693e-14,35.7042254 Z",
@@ -164,7 +164,7 @@ var BrandIcon = function BrandIcon(props) {
         transform: "translate(18.538737, 17.852113) rotate(-360.000000) translate(-18.538737, -17.852113) "
       }))))))))));
 
-    case 'customer-accounts':
+    case "customer-accounts":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 74 74",
         version: "1.1",
@@ -220,7 +220,7 @@ var BrandIcon = function BrandIcon(props) {
         ry: "11"
       })))))))));
 
-    case 'abstract-design':
+    case "abstract-design":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 73 75",
         version: "1.1",
@@ -279,7 +279,7 @@ var BrandIcon = function BrandIcon(props) {
         fillRule: "nonzero"
       })))))))));
 
-    case 'engagement-push':
+    case "engagement-push":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 75 53",
         version: "1.1",
@@ -339,7 +339,7 @@ var BrandIcon = function BrandIcon(props) {
         r: "11"
       })))))))))));
 
-    case 'abstract-integrations':
+    case "abstract-integrations":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 62 75",
         version: "1.1",
@@ -381,7 +381,7 @@ var BrandIcon = function BrandIcon(props) {
         id: "Combined-Shape-Copy-13",
         fill: "#3951EA",
         style: {
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply"
         }
       }), _react["default"].createElement("g", {
         id: "Group-11-Copy-4"
@@ -391,7 +391,7 @@ var BrandIcon = function BrandIcon(props) {
         id: "Combined-Shape-Copy-17",
         fill: "#36F4D0",
         style: {
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply"
         },
         cx: "30.2966102",
         cy: "12.5",
@@ -401,7 +401,7 @@ var BrandIcon = function BrandIcon(props) {
         id: "Combined-Shape",
         fill: "#FFB8AD",
         style: {
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply"
         }
       }), _react["default"].createElement("path", {
         d: "M18.1180952,15.3328865 C21.9042807,13.6481664 26.0970351,12.7118644 30.5084746,12.7118644 C34.7730014,12.7118644 38.8331663,13.5868421 42.5192382,15.1670666 C41.2986106,20.7928965 36.291469,25.0069464 30.3000834,25.0069464 C24.3677093,25.0069464 19.4002864,20.8754995 18.1180952,15.3328865 Z",
@@ -409,7 +409,7 @@ var BrandIcon = function BrandIcon(props) {
         fill: "#FFFFFF"
       }))))))))))))));
 
-    case 'shoppable-instagram':
+    case "shoppable-instagram":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 75 68",
         version: "1.1",
@@ -468,7 +468,7 @@ var BrandIcon = function BrandIcon(props) {
         fillRule: "nonzero"
       })))))))));
 
-    case '3d-shopping':
+    case "3d-shopping":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 66.9 74.1",
         version: "1.1",
@@ -476,27 +476,27 @@ var BrandIcon = function BrandIcon(props) {
       }), _react["default"].createElement("title", null, "3D Shopping"), _react["default"].createElement("g", null, _react["default"].createElement("polygon", {
         points: "33.8 64.3 33.2 64.6 27.8 61.8 17.9 56.2 33.4 47.2 33.8 47.4 33.8 38 33.6 37.9 33.2 37.7 1.3 56 1.7 56.2 1.5 56.3 15.4 63.9 33.5 74.1 33.8 73.9 33.8 73.5 33.8 64.3",
         style: {
-          fill: '#3ef5d6'
+          fill: "#3ef5d6"
         }
       }), _react["default"].createElement("polygon", {
         points: "48.8 46.6 41.9 42.5 41.8 42.6 41.8 42.6 41.8 52 48.5 55.8 41.8 59.6 41.8 60.4 57.5 51.6 48.8 46.6",
         style: {
-          fill: '#3ef5d6'
+          fill: "#3ef5d6"
         }
       }), _react["default"].createElement("polygon", {
         points: "33.8 38 33.8 38 66.4 18.7 33.6 0 0 19.3 33.2 37.7 33.6 37.9 33.8 38",
         style: {
-          fill: '#ffb8ad'
+          fill: "#ffb8ad"
         }
       }), _react["default"].createElement("path", {
         d: "M67.3,56l-.5-36.8L34.2,38.5h0V74.6ZM42.2,60.1v-17h.1L59,33.1l.3,18.2-1.4.8L42.2,60.9Z",
         transform: "translate(-0.4 -0.5)",
         style: {
-          fill: '#3951ea'
+          fill: "#3951ea"
         }
       }))));
 
-    case 'faster-checkout':
+    case "faster-checkout":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 75 75",
         version: "1.1",
@@ -505,14 +505,14 @@ var BrandIcon = function BrandIcon(props) {
         d: "M0-15H75V60H0Z",
         transform: "translate(0 15)",
         style: {
-          fill: 'none'
+          fill: "none"
         }
       }), _react["default"].createElement("g", null, _react["default"].createElement("path", {
         d: "M52.5,0A22.5,22.5,0,1,1,38,39.7,22.1,22.1,0,0,0,38,5.3,22.5,22.5,0,0,1,52.5,0Z",
         transform: "translate(0 15)",
         style: {
-          fill: '#3951ea',
-          fillRule: 'evenodd'
+          fill: "#3951ea",
+          fillRule: "evenodd"
         }
       }), _react["default"].createElement("ellipse", {
         cx: "23.1",
@@ -520,25 +520,25 @@ var BrandIcon = function BrandIcon(props) {
         rx: "23.1",
         ry: "22.5",
         style: {
-          fill: '#36f4d0'
+          fill: "#36f4d0"
         }
       }), _react["default"].createElement("path", {
         d: "M38,5.3a22.1,22.1,0,0,1,0,34.4,22.5,22.5,0,0,1-.1-34.3Z",
         transform: "translate(0 15)",
         style: {
-          fill: '#ffffff',
-          fillRule: 'evenodd'
+          fill: "#ffffff",
+          fillRule: "evenodd"
         }
       }), _react["default"].createElement("circle", {
         cx: "52",
         cy: "37",
         r: "11",
         style: {
-          fill: '#ffb8ad'
+          fill: "#ffb8ad"
         }
       })))));
 
-    case 'convert-more-customers':
+    case "convert-more-customers":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 73 59",
         version: "1.1",
@@ -579,7 +579,7 @@ var BrandIcon = function BrandIcon(props) {
         id: "Combined-Shape",
         fill: "#3951EA",
         style: {
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply"
         }
       }), _react["default"].createElement("path", {
         d: "M60,59 L14,59 C14,46.2974295 24.2974508,36 37,36 C49.7025492,36 60,46.2974295 60,58.9999881 Z",
@@ -597,7 +597,7 @@ var BrandIcon = function BrandIcon(props) {
         fill: "#FFFFFF"
       })))))))))));
 
-    case 'increase-order-value':
+    case "increase-order-value":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 75 59",
         version: "1.1",
@@ -617,46 +617,46 @@ var BrandIcon = function BrandIcon(props) {
         width: "87",
         height: "50",
         style: {
-          fill: '#ffffff'
+          fill: "#ffffff"
         }
       })))), _react["default"].createElement("title", null, "Increase order value"), _react["default"].createElement("g", null, _react["default"].createElement("rect", {
         width: "75",
         height: "75",
         style: {
-          fill: 'none'
+          fill: "none"
         }
       }), _react["default"].createElement("polygon", {
         points: "61.5 10.3 46 33.7 58.4 33.8 69.9 16 61.5 10.3",
         style: {
-          fill: '#ffb8ad'
+          fill: "#ffb8ad"
         }
       }), _react["default"].createElement("g", {
         style: {
-          mask: 'url(#a)'
+          mask: "url(#a)"
         }
       }, _react["default"].createElement("g", null, _react["default"].createElement("circle", {
         cx: "37.1",
         cy: "58.5",
         r: "15.1",
         style: {
-          fill: '#3349da'
+          fill: "#3349da"
         }
       }), _react["default"].createElement("path", {
         d: "M64,75.8a37.8,37.8,0,0,0,0-53.4,37.2,37.2,0,0,0-53,0,37.8,37.8,0,0,0,0,53.4A37.2,37.2,0,0,0,64,75.8ZM20.8,66a24,24,0,0,1,0-33.8,23.5,23.5,0,0,1,33.4,0,24,24,0,0,1,0,33.8A23.5,23.5,0,0,1,20.8,66Z",
         transform: "translate(0 10)",
         style: {
-          fill: '#3ef5d6'
+          fill: "#3ef5d6"
         }
       }), _react["default"].createElement("path", {
         d: "M52.3,14.3a38.6,38.6,0,0,1,8.8,5.4L41.8,50H29.3Z",
         transform: "translate(0 10)",
         style: {
-          fill: '#ffffff',
-          fillRule: 'evenodd'
+          fill: "#ffffff",
+          fillRule: "evenodd"
         }
       }))))));
 
-    case 'reduce-abandoned-checkouts':
+    case "reduce-abandoned-checkouts":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 75 75",
         version: "1.1",
@@ -701,7 +701,7 @@ var BrandIcon = function BrandIcon(props) {
         id: "Combined-Shape-Copy-5",
         fill: "#FFC0B6",
         style: {
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply"
         },
         cx: "15.0245902",
         cy: "15.0245902",
@@ -722,7 +722,7 @@ var BrandIcon = function BrandIcon(props) {
         fill: "#3951EA"
       })))))))))));
 
-    case 'product-reviews':
+    case "product-reviews":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 75 74",
         version: "1.1",
@@ -773,7 +773,7 @@ var BrandIcon = function BrandIcon(props) {
         points: "15.2777778 0 15.2777778 73.6111111 30.5555556 73.6111111 30.5555556 0"
       })))))))));
 
-    case 'optimized-search':
+    case "optimized-search":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 75 54",
         version: "1.1",
@@ -805,7 +805,7 @@ var BrandIcon = function BrandIcon(props) {
         id: "Combined-Shape-Copy-11",
         fill: "#36F4D0",
         style: {
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply"
         },
         cx: "37.1875",
         cy: "37.1875",
@@ -823,12 +823,12 @@ var BrandIcon = function BrandIcon(props) {
         d: "M-2.7000624e-13,1.42108547e-14 L12.2168,1.42108547e-14 C13.241272,13.6131123 24.0612813,24.324005 37.2580446,24.324005 C50.454808,24.324005 61.2748173,13.6131123 62.2992893,1.68942638e-12 L74.375,1.42108547e-14 C73.1484818,20.1464719 56.967901,36.09375 37.1875,36.09375 C17.407099,36.09375 1.22651821,20.1464719 -2.00665873e-13,4.49307258e-13 Z",
         id: "Combined-Shape-Copy-10",
         style: {
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply"
         },
         transform: "translate(37.187500, 18.046875) rotate(-180.000000) translate(-37.187500, -18.046875) "
       })))))))))));
 
-    case 'optimal-mobile-experience':
+    case "optimal-mobile-experience":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 65 75",
         version: "1.1",
@@ -837,35 +837,35 @@ var BrandIcon = function BrandIcon(props) {
         d: "M28,45V26.2a16.4,16.4,0,0,0-7.5,4.4,16.9,16.9,0,0,0,24,23.8A16.9,16.9,0,0,0,38,26.5V45Z",
         transform: "translate(0 0)",
         style: {
-          fill: 'none'
+          fill: "none"
         }
       }), _react["default"].createElement("path", {
         d: "M55.5,19.5A35.1,35.1,0,0,0,47,13.4a32.6,32.6,0,0,0-9-2.9V26.4h0a16.9,16.9,0,0,1,6.5,27.9,16.9,16.9,0,0,1-24-23.8A16.4,16.4,0,0,1,28,26.2h0V10.3a33.1,33.1,0,0,0-10,3.1,35.1,35.1,0,0,0-8.5,6.1,32.5,32.5,0,1,0,46,0Z",
         transform: "translate(0 0)",
         style: {
-          fill: '#3ef5d6'
+          fill: "#3ef5d6"
         }
       }), _react["default"].createElement("path", {
         d: "M32.5,10a34.1,34.1,0,0,1,5.5.5,32.6,32.6,0,0,1,9,2.9,14.3,14.3,0,0,0-4.2-9.3,14.9,14.9,0,0,0-20.6,0A14.3,14.3,0,0,0,18,13.4a33.1,33.1,0,0,1,10-3.1A34,34,0,0,1,32.5,10Z",
         transform: "translate(0 0)",
         style: {
-          fill: '#3349da'
+          fill: "#3349da"
         }
       }), _react["default"].createElement("path", {
         d: "M28,10.3V26.2h.5a20.1,20.1,0,0,1,4.2-.5H33a17.4,17.4,0,0,1,5,.8V10.5a34.1,34.1,0,0,0-5.5-.5A34,34,0,0,0,28,10.3Z",
         transform: "translate(0 0)",
         style: {
-          fill: '#ffffff'
+          fill: "#ffffff"
         }
       }), _react["default"].createElement("path", {
         d: "M32.7,25.6a20.1,20.1,0,0,0-4.2.5H28V45H38V26.5h0a17.4,17.4,0,0,0-5-.8Z",
         transform: "translate(0 0)",
         style: {
-          fill: '#ffb8ad'
+          fill: "#ffb8ad"
         }
       }))));
 
-    case 'healthy-snacks':
+    case "healthy-snacks":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 61.1 66.4",
         version: "1.1",
@@ -888,7 +888,69 @@ var BrandIcon = function BrandIcon(props) {
         fill: "#ffb8ad"
       }))));
 
-    case 'healthcare':
+    case "abstract-chat":
+      return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
+        viewBox: "0 0 74 61",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Resources",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "8.0_resources_web",
+        transform: "translate(-683.000000, -3660.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Header,-title,-",
+        transform: "translate(269.000000, 3653.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Chat",
+        transform: "translate(414.000000, 0.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "75",
+        height: "75"
+      }), _react["default"].createElement("path", {
+        d: "M54,17.63 C55.6300096,19.4498339 57.0273975,21.4652972 58.16,23.63 C55.4819255,23.3497512 52.7749753,23.6603849 50.23,24.54 C49.7263609,23.8446844 49.185575,23.1770475 48.61,22.54 C44.637119,18.1470137 39.0810497,15.5132824 33.1653588,15.2188107 C27.2496679,14.9243391 21.4595088,16.9932772 17.07,20.97 C11.54,25.97 8.15,38.8 7.81,59.27 C25.98,60.88 38.38,59.45 44.81,55.6 C46.9238995,57.3277067 49.4031104,58.551924 52.06,59.18 L51.75,59.46 L51.75,59.46 C43.65,66.72 26.5966667,68.8166667 0.59,65.75 C0.263333333,39.57 4.15333333,22.83 12.26,15.53 C24.3696957,4.59385922 43.0491025,5.5336473 54,17.63 Z",
+        id: "Combined-Shape",
+        fill: "#FFC0B6",
+        fillRule: "nonzero"
+      }), _react["default"].createElement("path", {
+        d: "M38.3099877,41.59 C38.3042513,46.9129862 40.6547902,51.9655466 44.73,55.39 C49.7344618,52.1871176 53.1870474,47.0527493 54.2654271,41.2097885 C55.3438068,35.3668277 53.9514553,29.3382755 50.42,24.56 C43.1641379,27.0725989 38.3010663,33.9114189 38.3099877,41.59 L38.3099877,41.59 Z",
+        id: "Path",
+        fill: "#3EF5D6"
+      }), _react["default"].createElement("path", {
+        d: "M58.48,23.67 C64.8651788,35.5478438 62.1467237,50.2665742 51.94,59.08 C61.7182015,60.8859711 71.1090289,54.4232015 72.915,44.645 C74.7209711,34.8667985 68.2582015,25.4759711 58.48,23.67 Z",
+        id: "Path",
+        fill: "#3EF5D6"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        fill: "#3951EA",
+        fillRule: "nonzero",
+        cx: "18.8",
+        cy: "39.05",
+        r: "3.8"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        fill: "#3951EA",
+        fillRule: "nonzero",
+        cx: "32.19",
+        cy: "39.05",
+        r: "3.8"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        fill: "#3951EA",
+        fillRule: "nonzero",
+        cx: "45.57",
+        cy: "39.05",
+        r: "3.8"
+      })))))));
+
+    case "healthcare":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 86 86",
         version: "1.1",
@@ -944,7 +1006,7 @@ var BrandIcon = function BrandIcon(props) {
         fill: "#FFB8AD"
       }))))))));
 
-    case 'tahoe':
+    case "tahoe":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 86 73",
         version: "1.1",
@@ -1002,7 +1064,7 @@ var BrandIcon = function BrandIcon(props) {
         transform: "translate(41.850000, 22.848202) rotate(-180.000000) translate(-41.850000, -22.848202) "
       })))))))));
 
-    case 'unlimited-pto':
+    case "unlimited-pto":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 86 67",
         version: "1.1",
@@ -1059,7 +1121,7 @@ var BrandIcon = function BrandIcon(props) {
         fillRule: "nonzero"
       })))))))));
 
-    case 'taco-tuesday':
+    case "taco-tuesday":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 86 50",
         version: "1.1",
@@ -1109,7 +1171,7 @@ var BrandIcon = function BrandIcon(props) {
         fill: "#3EF5D6"
       })))))))));
 
-    case 'equity':
+    case "equity":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 84 85",
         version: "1.1",
@@ -1156,7 +1218,7 @@ var BrandIcon = function BrandIcon(props) {
         transform: "translate(66.304836, 35.961945) rotate(-180.000000) translate(-66.304836, -35.961945) "
       }))))))))));
 
-    case 'work-with-us':
+    case "work-with-us":
       return _react["default"].createElement(BrandAbstractIconWrapper, props, _react["default"].createElement(BrandAbstractIconSVG, _extends({}, props, {
         viewBox: "0 0 85 82",
         version: "1.1",
@@ -1203,7 +1265,7 @@ var BrandIcon = function BrandIcon(props) {
         id: "Combined-Shape",
         fill: "#36F4D0",
         style: {
-          mixBlendMode: 'multiply'
+          mixBlendMode: "multiply"
         }
       }), _react["default"].createElement("path", {
         d: "M9.41469125e-14,40.4885915 C1.19847387e-13,18.1273599 18.1273599,0 40.4885915,0 C41.0100408,0 41.5291877,0.00985751018 42.0458561,0.029396349 L42.0458451,40.4885915 L9.41469125e-14,40.4885915 Z",
@@ -1212,7 +1274,7 @@ var BrandIcon = function BrandIcon(props) {
         transform: "translate(21.022726, 20.244296) rotate(-360.000000) translate(-21.022726, -20.244296) "
       }))))))))));
 
-    case 'home':
+    case "home":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "23px",
@@ -1278,7 +1340,7 @@ var BrandIcon = function BrandIcon(props) {
         r: "1"
       })))))))));
 
-    case 'pricing':
+    case "pricing":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "24px",
@@ -1333,7 +1395,7 @@ var BrandIcon = function BrandIcon(props) {
         stroke: "#1BDFBA"
       }))))))));
 
-    case 'features':
+    case "features":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "24px",
@@ -1385,7 +1447,7 @@ var BrandIcon = function BrandIcon(props) {
         r: "8"
       }))))))));
 
-    case 'team':
+    case "team":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "20px",
@@ -1432,7 +1494,7 @@ var BrandIcon = function BrandIcon(props) {
         stroke: "#373AAF"
       }))))))));
 
-    case 'book-a-demo':
+    case "book-a-demo":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "24px",
@@ -1490,7 +1552,7 @@ var BrandIcon = function BrandIcon(props) {
         points: "12 0 12 10 16 7 22 7 22 0"
       })))))))))));
 
-    case 'engineering':
+    case "engineering":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "22px",
@@ -1552,7 +1614,7 @@ var BrandIcon = function BrandIcon(props) {
         stroke: "#393CB4"
       }))))))));
 
-    case 'design':
+    case "design":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "24px",
@@ -1604,7 +1666,7 @@ var BrandIcon = function BrandIcon(props) {
         r: "8"
       }))))))));
 
-    case 'customer success':
+    case "customer success":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "24px",
@@ -1667,7 +1729,7 @@ var BrandIcon = function BrandIcon(props) {
         r: "2.5"
       }))))))));
 
-    case 'sales':
+    case "sales":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "22px",
@@ -1722,7 +1784,7 @@ var BrandIcon = function BrandIcon(props) {
         stroke: "#1BDFBA"
       }))))))));
 
-    case 'operations':
+    case "operations":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "24px",
@@ -1803,7 +1865,7 @@ var BrandIcon = function BrandIcon(props) {
         r: "3"
       }))))))));
 
-    case 'quote':
+    case "quote":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "22px",
@@ -1863,7 +1925,7 @@ var BrandIcon = function BrandIcon(props) {
         stroke: "#1BDFBA"
       }))))))))));
 
-    case 'chat':
+    case "chat":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "23px",
@@ -1913,7 +1975,7 @@ var BrandIcon = function BrandIcon(props) {
         stroke: "#343398"
       })))))))));
 
-    case 'clock':
+    case "clock":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "25px",
         height: "22px",
@@ -1965,7 +2027,7 @@ var BrandIcon = function BrandIcon(props) {
         points: "1.46232342 9.93103448 2.2925579 14.8270345 7.1885579 13.9968"
       }))))))));
 
-    case 'cart':
+    case "cart":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "26px",
         height: "26px",
@@ -2033,7 +2095,7 @@ var BrandIcon = function BrandIcon(props) {
         points: "4.20923077 5.53846154 23.2615385 5.53846154 21.0461538 16.6153846 5.53846154 16.6153846 3.32307692 0 0 0"
       }))))))));
 
-    case 'dragdrop':
+    case "dragdrop":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "26px",
         height: "26px",
@@ -2091,7 +2153,7 @@ var BrandIcon = function BrandIcon(props) {
         points: "13.8666667 16 16 16 16 13.8666667"
       }))))))));
 
-    case 'customer-success':
+    case "customer-success":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "24px",
@@ -2154,7 +2216,7 @@ var BrandIcon = function BrandIcon(props) {
         r: "2.5"
       }))))))));
 
-    case 'push':
+    case "push":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "24px",
         height: "24px",
@@ -2200,7 +2262,7 @@ var BrandIcon = function BrandIcon(props) {
         strokeLinecap: "round"
       })))))));
 
-    case 'providers':
+    case "providers":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({}, props, {
         width: "25px",
         height: "25px",
@@ -2259,7 +2321,7 @@ var BrandIcon = function BrandIcon(props) {
         stroke: "#1BDFBA"
       }))))))));
 
-    case 'video':
+    case "video":
       return _react["default"].createElement(BrandBasicIconSVG, {
         width: "24px",
         height: "24px",
@@ -2303,7 +2365,7 @@ var BrandIcon = function BrandIcon(props) {
         points: "9 15 9 7 15 11"
       })))))));
 
-    case 'ebook':
+    case "ebook":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({
         width: "20px",
         height: "24px",
@@ -2351,7 +2413,7 @@ var BrandIcon = function BrandIcon(props) {
         stroke: "#393CB4"
       })))))));
 
-    case 'infographic':
+    case "infographic":
       return _react["default"].createElement(BrandBasicIconSVG, _extends({
         width: "22px",
         height: "22px",
@@ -2433,9 +2495,9 @@ var BrandAbstractIconSVG = _styledComponents["default"].svg.withConfig({
   displayName: "BrandIcon__BrandAbstractIconSVG",
   componentId: "sc-4c7rq1-1"
 })(["max-height:75px;margin-left:0px;margin-right:0px;max-width:75px;width:100%;margin-left:", ";margin-right:", ";", ";"], function (props) {
-  return props.iconRight ? '10px' : '0px';
+  return props.iconRight ? "10px" : "0px";
 }, function (props) {
-  return props.iconLeft ? '10px' : '0px';
+  return props.iconLeft ? "10px" : "0px";
 }, function (props) {
   return props.style ? props.style : null;
 });
@@ -2444,9 +2506,9 @@ var BrandBasicIconSVG = _styledComponents["default"].svg.withConfig({
   displayName: "BrandIcon__BrandBasicIconSVG",
   componentId: "sc-4c7rq1-2"
 })(["margin-left:", ";margin-right:", ";", ";"], function (props) {
-  return props.iconRight ? '10px' : '0px';
+  return props.iconRight ? "10px" : "0px";
 }, function (props) {
-  return props.iconLeft ? '10px' : '0px';
+  return props.iconLeft ? "10px" : "0px";
 }, function (props) {
   return props.style ? props.style : null;
 });
