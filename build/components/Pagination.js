@@ -9,9 +9,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _Icon = require("../elements/Icon");
-
-var _Typography = require("../elements/Typography");
+var _lib = require("../../lib");
 
 var _variables = require("../utils/_variables");
 
@@ -58,7 +56,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, _ref) {
   if (currentPage === 1) {
     elements.push(_react["default"].createElement(DisabledPage, _extends({
       key: "prev"
-    }, props), _react["default"].createElement(_Icon.Icon, {
+    }, props), _react["default"].createElement(_lib.Icon, {
       iconLeft: true,
       type: "arrow-left"
     }), "PREV"));
@@ -70,7 +68,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, _ref) {
           onPageClick(currentPage - 1);
         }
       }
-    }, _react["default"].createElement(_Icon.Icon, {
+    }, _react["default"].createElement(_lib.Icon, {
       iconLeft: true,
       type: "arrow-left",
       fill: _variables.colors.grayText
@@ -95,7 +93,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, _ref) {
   if (currentPage === pages.length) {
     elements.push(_react["default"].createElement(DisabledPage, _extends({}, props, {
       key: "next"
-    }), "NEXT", _react["default"].createElement(_Icon.Icon, {
+    }), "NEXT", _react["default"].createElement(_lib.Icon, {
       iconRight: true,
       type: "arrow-right"
     })));
@@ -107,7 +105,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, _ref) {
           onPageClick(currentPage + 1);
         }
       }
-    }, "NEXT", _react["default"].createElement(_Icon.Icon, {
+    }, "NEXT", _react["default"].createElement(_lib.Icon, {
       iconRight: true,
       type: "arrow-right",
       fill: _variables.colors.grayText
@@ -140,7 +138,7 @@ var PaginationContainer = _styledComponents["default"].ul.withConfig({
   componentId: "sc-1h8fjru-0"
 })(["display:flex;flex-direction:row;user-select:none;align-items:center;justify-content:center;"]);
 
-var Page = (0, _styledComponents["default"])(_Typography.Body).withConfig({
+var Page = (0, _styledComponents["default"])(_lib.Body).withConfig({
   displayName: "Pagination__Page",
   componentId: "sc-1h8fjru-1"
 })(["", ";", ";margin-right:10px;margin-left:10px;cursor:pointer;min-width:15px;list-style-type:none;letter-spacing:1px;color:", ";&:hover{cursor:pointer;}transition:400ms all ease-in;"], function (props) {
