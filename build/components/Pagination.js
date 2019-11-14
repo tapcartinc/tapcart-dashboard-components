@@ -9,9 +9,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _Icon = require("../../lib/elements/Icon");
+var _Icon = require("../elements/Icon");
 
-var _Typography = require("../../lib/elements/Typography");
+var _Typography = require("../elements/Typography");
 
 var _variables = require("../utils/_variables");
 
