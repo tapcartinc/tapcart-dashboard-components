@@ -53,8 +53,7 @@ var range = function range(from, to, currentPage) {
     var arr = [];
 
     if (range[currIdx] <= 4) {
-      arr = [1, 2, 3, 4, 5, 6, 7];
-      return arr;
+      return range;
     }
 
     if (range[currIdx] >= range.length - 3) {
