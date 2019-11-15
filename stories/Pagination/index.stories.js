@@ -8,9 +8,9 @@ export default {
   decorators: [withKnobs]
 };
 
-export const pagination = () => (
+export const pagination = props => (
   <Pagination
-    totalRecords={15}
+    totalRecords={150}
     pageNeighbours={5}
     perPage={6}
     onPageChanged={page => {
