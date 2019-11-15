@@ -130,9 +130,9 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
       color: _variables.colors.grayText
     }, "..."), _react["default"].createElement(Page, {
       onClick: function onClick() {
-        return onPageClick(25);
+        return onPageClick(pagRange);
       }
-    }, "25")));
+    }, pagRange)));
   }
 
   if (currentPage === pagRange) {
