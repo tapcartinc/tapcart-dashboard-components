@@ -37,8 +37,8 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
  * Helper method for creating a range of numbers
  * range(1, 5) => [1, 2, 3, 4, 5]
  */
-var range = function range(from, to) {
-  var step = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+var range = function range(from, to, currentPage) {
+  var step = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
   var i = from;
   var range = [];
 
@@ -47,23 +47,46 @@ var range = function range(from, to) {
     i += step;
   }
 
-  return range;
+  var currentIndex = range.indexOf(currentPage);
+
+  var blah = function blah(range, currIdx) {
+    var arr = [];
+
+    if (range[currIdx] <= 4) {
+      arr = [1, 2, 3, 4, 5, 6, 7];
+      return arr;
+    }
+
+    if (range[currIdx] >= range.length - 3) {
+      arr = range.slice(Math.max(range.length - 7, 1));
+      return arr;
+    }
+
+    arr = range.slice(currIdx - 3, currIdx + 4);
+    return arr;
+  };
+
+  return blah(range, currentIndex, to);
 };
 
-var getPages = function getPages(currentPage, pages, onPageClick, _ref) {
+var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, perPage, _ref) {
   var props = _extends({}, _ref);
 
   var elements = [];
+  var pagRange = Math.ceil(totalRecords / perPage);
 
   if (currentPage === 1) {
     elements.push(_react["default"].createElement(DisabledPage, _extends({
       key: "prev"
-    }, props), _react["default"].createElement(_Icon.Icon, {
+    }, props, {
+      pagNav: true
+    }), _react["default"].createElement(_Icon.Icon, {
       iconLeft: true,
       type: "arrow-left"
     }), "PREV"));
   } else {
     elements.push(_react["default"].createElement(Page, {
+      pagNav: true,
       key: "prev",
       onClick: function onClick() {
         if (currentPage !== 1) {
@@ -77,7 +100,17 @@ var getPages = function getPages(currentPage, pages, onPageClick, _ref) {
     }), "PREV"));
   }
 
-  pages.forEach(function (page) {
+  if (currentPage > 4) {
+    elements.push(_react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Page, {
+      onClick: function onClick() {
+        return onPageClick(1);
+      }
+    }, "1"), _react["default"].createElement(_Typography.Body, {
+      color: _variables.colors.grayText
+    }, "...")));
+  }
+
+  pages.length && pages.forEach(function (page) {
     if (currentPage === page) {
       elements.push(_react["default"].createElement(ActivePage, {
         key: page
@@ -92,18 +125,30 @@ var getPages = function getPages(currentPage, pages, onPageClick, _ref) {
     }
   });
 
-  if (currentPage === pages.length) {
+  if (currentPage < pagRange - 3) {
+    elements.push(_react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_Typography.Body, {
+      color: _variables.colors.grayText
+    }, "..."), _react["default"].createElement(Page, {
+      onClick: function onClick() {
+        return onPageClick(25);
+      }
+    }, "25")));
+  }
+
+  if (currentPage === pagRange) {
     elements.push(_react["default"].createElement(DisabledPage, _extends({}, props, {
-      key: "next"
+      key: "next",
+      pagNav: true
     }), "NEXT", _react["default"].createElement(_Icon.Icon, {
       iconRight: true,
       type: "arrow-right"
     })));
   } else {
     elements.push(_react["default"].createElement(Page, {
+      pagNav: true,
       key: "next",
       onClick: function onClick() {
-        if (currentPage !== pages.length) {
+        if (currentPage !== pagRange) {
           onPageClick(currentPage + 1);
         }
       }
@@ -118,6 +163,9 @@ var getPages = function getPages(currentPage, pages, onPageClick, _ref) {
 };
 
 var Pagination = function Pagination(props) {
+  var totalRecords = props.totalRecords,
+      perPage = props.perPage;
+
   var _useState = (0, _react.useState)(1),
       _useState2 = _slicedToArray(_useState, 2),
       currentPage = _useState2[0],
@@ -128,8 +176,8 @@ var Pagination = function Pagination(props) {
     props.onPageChanged(page);
   };
 
-  var pages = range(1, Math.ceil(props.totalRecords / props.perPage));
-  var elements = getPages(currentPage, pages, onPageClick);
+  var pages = range(1, Math.ceil(props.totalRecords / props.perPage), currentPage);
+  var elements = getPages(currentPage, pages, onPageClick, totalRecords, perPage);
   return _react["default"].createElement(PaginationContainer, null, elements);
 };
 
@@ -143,16 +191,19 @@ var PaginationContainer = _styledComponents["default"].ul.withConfig({
 var Page = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "Pagination__Page",
   componentId: "sc-1h8fjru-1"
-})(["", ";", ";margin-right:10px;margin-left:10px;cursor:pointer;min-width:15px;list-style-type:none;letter-spacing:1px;color:", ";&:hover{cursor:pointer;}transition:400ms all ease-in;"], function (props) {
+})(["", ";", ";", ";margin-right:10px;margin-left:10px;cursor:pointer;list-style-type:none;letter-spacing:1px;color:", ";&:hover{cursor:pointer;}transition:400ms all ease-in;"], function (props) {
   return props.disabled && "visibility: hidden; transition: 400ms all ease-in";
 }, function (props) {
   return !props.disabled && "visibility: visible; transition: 400ms all ease-in";
+}, function (props) {
+  return props.pagNav && "width: 100px; text-align: center";
 }, _variables.colors.grayText);
 
 var DisabledPage = function DisabledPage(props) {
   return _react["default"].createElement(Page, {
-    disabled: true
-  }, props.children, props.key);
+    disabled: true,
+    pagNav: props.pagNav
+  }, props.children, props.children[1]);
 };
 
 var ActivePage = (0, _styledComponents["default"])(Page).withConfig({
