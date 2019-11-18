@@ -17,23 +17,11 @@ var _variables = require("../utils/_variables");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _media = _interopRequireDefault(require("../utils/_media"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 14px;\n  margin-right: 5px;\n  margin-left: 5px;\n  "]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -45,27 +33,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 12px;\n    .mobile-hide {\n      display: none;\n    }\n  "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 /**
  * Helper method for creating a range of numbers
  * range(1, 5) => [1, 2, 3, 4, 5]
  */
-var StyledBody = (0, _styledComponents["default"])(_Typography.Body).withConfig({
-  displayName: "Pagination__StyledBody",
-  componentId: "sc-1h8fjru-0"
-})(["", ""], _media["default"].sm(_templateObject()));
-
 var range = function range(from, to, currentPage) {
   var step = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
   var i = from;
@@ -82,15 +53,15 @@ var range = function range(from, to, currentPage) {
     var arr = [];
 
     if (range[currIdx] <= 4) {
-      return range.slice(0, 7);
+      return range.slice(0, 5);
     }
 
     if (range[currIdx] >= range.length - 3) {
-      arr = range.slice(Math.max(range.length - 7, 1));
+      arr = range.slice(Math.max(range.length - 5, 1));
       return arr;
     }
 
-    arr = range.slice(currIdx - 3, currIdx + 4);
+    arr = range.slice(currIdx - 2, currIdx + 3);
     return arr;
   };
 
@@ -108,14 +79,10 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
       key: "prev"
     }, props, {
       pagNav: true
-    }), _react["default"].createElement(StyledBody, {
-      color: _variables.colors.grayText
-    }, _react["default"].createElement(_Icon.Icon, {
+    }), _react["default"].createElement(_Icon.Icon, {
       iconLeft: true,
       type: "arrow-left"
-    }), _react["default"].createElement("p", {
-      className: "mobile-hide"
-    }, "PREV"))));
+    })));
   } else {
     elements.push(_react["default"].createElement(Page, {
       pagNav: true,
@@ -127,15 +94,11 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
 
         cd;
       }
-    }, _react["default"].createElement(StyledBody, {
-      color: _variables.colors.grayText
     }, _react["default"].createElement(_Icon.Icon, {
       iconLeft: true,
       type: "arrow-left",
       fill: _variables.colors.grayText
-    }), _react["default"].createElement("p", {
-      className: "mobile-hide"
-    }, "PREV"))));
+    })));
   }
 
   if (currentPage > 4) {
@@ -143,7 +106,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
       onClick: function onClick() {
         return onPageClick(1);
       }
-    }, "1"), _react["default"].createElement(StyledBody, {
+    }, "1"), _react["default"].createElement(_Typography.Body, {
       color: _variables.colors.grayText
     }, "...")));
   }
@@ -164,7 +127,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
   });
 
   if (currentPage < pagRange - 3) {
-    elements.push(_react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(StyledBody, {
+    elements.push(_react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_Typography.Body, {
       color: _variables.colors.grayText
     }, "..."), _react["default"].createElement(Page, {
       onClick: function onClick() {
@@ -177,14 +140,10 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
     elements.push(_react["default"].createElement(DisabledPage, _extends({}, props, {
       key: "next",
       pagNav: true
-    }), _react["default"].createElement(StyledBody, {
-      color: _variables.colors.grayText
-    }, _react["default"].createElement("p", {
-      className: "mobile-hide"
-    }, "NEXT"), _react["default"].createElement(_Icon.Icon, {
+    }), _react["default"].createElement(_Icon.Icon, {
       iconRight: true,
       type: "arrow-right"
-    }))));
+    })));
   } else {
     elements.push(_react["default"].createElement(Page, {
       pagNav: true,
@@ -194,15 +153,11 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
           onPageClick(currentPage + 1);
         }
       }
-    }, _react["default"].createElement(StyledBody, {
-      color: _variables.colors.grayText
-    }, _react["default"].createElement("p", {
-      className: "mobile-hide"
-    }, "NEXT"), _react["default"].createElement(_Icon.Icon, {
+    }, _react["default"].createElement(_Icon.Icon, {
       iconRight: true,
       type: "arrow-right",
       fill: _variables.colors.grayText
-    }))));
+    })));
   }
 
   return elements;
@@ -231,19 +186,19 @@ exports.Pagination = Pagination;
 
 var PaginationContainer = _styledComponents["default"].ul.withConfig({
   displayName: "Pagination__PaginationContainer",
-  componentId: "sc-1h8fjru-1"
+  componentId: "sc-1h8fjru-0"
 })(["display:flex;flex-direction:row;user-select:none;align-items:center;justify-content:center;"]);
 
-var Page = (0, _styledComponents["default"])(StyledBody).withConfig({
+var Page = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "Pagination__Page",
-  componentId: "sc-1h8fjru-2"
-})(["", ";", ";", ";margin-right:10px;margin-left:10px;cursor:pointer;list-style-type:none;letter-spacing:1px;color:", ";&:hover{cursor:pointer;}transition:400ms all ease-in;", ""], function (props) {
+  componentId: "sc-1h8fjru-1"
+})(["", ";", ";", ";margin-right:10px;margin-left:10px;cursor:pointer;list-style-type:none;letter-spacing:1px;color:", ";&:hover{cursor:pointer;}transition:400ms all ease-in;"], function (props) {
   return props.disabled && "visibility: hidden; transition: 400ms all ease-in";
 }, function (props) {
   return !props.disabled && "visibility: visible; transition: 400ms all ease-in";
 }, function (props) {
-  return props.pagNav && "width: 60px; text-align: center";
-}, _variables.colors.grayText, _media["default"].sm(_templateObject2()));
+  return props.pagNav && "width: 30px; text-align: center";
+}, _variables.colors.grayText);
 
 var DisabledPage = function DisabledPage(props) {
   return _react["default"].createElement(Page, {
@@ -254,7 +209,7 @@ var DisabledPage = function DisabledPage(props) {
 
 var ActivePage = (0, _styledComponents["default"])(Page).withConfig({
   displayName: "Pagination__ActivePage",
-  componentId: "sc-1h8fjru-3"
+  componentId: "sc-1h8fjru-2"
 })(["color:", ";cursor:auto;"], _variables.colors.blue);
 Pagination.propTypes = {
   totalRecords: _propTypes["default"].number.isRequired,
