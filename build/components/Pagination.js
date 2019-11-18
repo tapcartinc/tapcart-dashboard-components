@@ -17,11 +17,33 @@ var _variables = require("../utils/_variables");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _media = _interopRequireDefault(require("../utils/_media"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  margin-right: 7px;\n  margin-left: 7px;\n  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    max-width: 100%;\n  "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
@@ -31,12 +53,35 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    font-size: 16px;\n    ", "\n  "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 /**
  * Helper method for creating a range of numbers
  * range(1, 5) => [1, 2, 3, 4, 5]
  */
+var StyledBody = (0, _styledComponents["default"])(_Typography.Body).withConfig({
+  displayName: "Pagination__StyledBody",
+  componentId: "sc-1h8fjru-0"
+})(["", " ", ""], function (props) {
+  return props.pagNav && "display: flex; flex-direction: row; align-items: center;";
+}, _media["default"].sm(_templateObject(), function (props) {
+  return props.pagNav && "max-width: 20px; p {display:none} svg {width: 20px; margin: 0px;}";
+}));
+
 var range = function range(from, to, currentPage) {
   var step = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
   var i = from;
@@ -82,7 +127,10 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
     }), _react["default"].createElement(_Icon.Icon, {
       iconLeft: true,
       type: "arrow-left"
-    }), "PREV"));
+    }), _react["default"].createElement(StyledBody, {
+      color: _variables.colors.grayText,
+      pagNav: true
+    }, "PREV")));
   } else {
     elements.push(_react["default"].createElement(Page, {
       pagNav: true,
@@ -91,12 +139,17 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
         if (currentPage !== 1) {
           onPageClick(currentPage - 1);
         }
+
+        cd;
       }
     }, _react["default"].createElement(_Icon.Icon, {
       iconLeft: true,
       type: "arrow-left",
       fill: _variables.colors.grayText
-    }), "PREV"));
+    }), _react["default"].createElement(StyledBody, _defineProperty({
+      color: _variables.colors.grayText,
+      pagNav: true
+    }, "pagNav", true), "PREV")));
   }
 
   if (currentPage > 4) {
@@ -104,9 +157,10 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
       onClick: function onClick() {
         return onPageClick(1);
       }
-    }, "1"), _react["default"].createElement(_Typography.Body, {
-      color: _variables.colors.grayText
-    }, "...")));
+    }, "1"), _react["default"].createElement(StyledBody, _defineProperty({
+      color: _variables.colors.grayText,
+      pagNav: true
+    }, "color", _variables.colors.grayText), "...")));
   }
 
   pages.length && pages.forEach(function (page) {
@@ -125,7 +179,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
   });
 
   if (currentPage < pagRange - 3) {
-    elements.push(_react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_Typography.Body, {
+    elements.push(_react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(StyledBody, {
       color: _variables.colors.grayText
     }, "..."), _react["default"].createElement(Page, {
       onClick: function onClick() {
@@ -138,7 +192,10 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
     elements.push(_react["default"].createElement(DisabledPage, _extends({}, props, {
       key: "next",
       pagNav: true
-    }), "NEXT", _react["default"].createElement(_Icon.Icon, {
+    }), _react["default"].createElement(StyledBody, {
+      color: _variables.colors.grayText,
+      pagNavpagNav: true
+    }, "NEXT"), _react["default"].createElement(_Icon.Icon, {
       iconRight: true,
       type: "arrow-right"
     })));
@@ -151,7 +208,10 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
           onPageClick(currentPage + 1);
         }
       }
-    }, "NEXT", _react["default"].createElement(_Icon.Icon, {
+    }, _react["default"].createElement(StyledBody, {
+      color: _variables.colors.grayText,
+      pagNavpagNav: true
+    }, "NEXT"), _react["default"].createElement(_Icon.Icon, {
       iconRight: true,
       type: "arrow-right",
       fill: _variables.colors.grayText
@@ -184,19 +244,19 @@ exports.Pagination = Pagination;
 
 var PaginationContainer = _styledComponents["default"].ul.withConfig({
   displayName: "Pagination__PaginationContainer",
-  componentId: "sc-1h8fjru-0"
-})(["display:flex;flex-direction:row;user-select:none;align-items:center;justify-content:center;"]);
-
-var Page = (0, _styledComponents["default"])(_Typography.Body).withConfig({
-  displayName: "Pagination__Page",
   componentId: "sc-1h8fjru-1"
-})(["", ";", ";", ";margin-right:10px;margin-left:10px;cursor:pointer;list-style-type:none;letter-spacing:1px;color:", ";&:hover{cursor:pointer;}transition:400ms all ease-in;"], function (props) {
+})(["display:flex;flex-direction:row;user-select:none;align-items:center;justify-content:center;", ""], _media["default"].sm(_templateObject2()));
+
+var Page = (0, _styledComponents["default"])(StyledBody).withConfig({
+  displayName: "Pagination__Page",
+  componentId: "sc-1h8fjru-2"
+})(["", ";", ";", ";margin-right:10px;margin-left:10px;cursor:pointer;list-style-type:none;letter-spacing:1px;color:", ";&:hover{cursor:pointer;}transition:400ms all ease-in;", ""], function (props) {
   return props.disabled && "visibility: hidden; transition: 400ms all ease-in";
 }, function (props) {
   return !props.disabled && "visibility: visible; transition: 400ms all ease-in";
 }, function (props) {
-  return props.pagNav && "width: 100px; text-align: center";
-}, _variables.colors.grayText);
+  return props.pagNav && "width: 60px; text-align: center";
+}, _variables.colors.grayText, _media["default"].sm(_templateObject3()));
 
 var DisabledPage = function DisabledPage(props) {
   return _react["default"].createElement(Page, {
@@ -207,7 +267,7 @@ var DisabledPage = function DisabledPage(props) {
 
 var ActivePage = (0, _styledComponents["default"])(Page).withConfig({
   displayName: "Pagination__ActivePage",
-  componentId: "sc-1h8fjru-2"
+  componentId: "sc-1h8fjru-3"
 })(["color:", ";cursor:auto;"], _variables.colors.blue);
 Pagination.propTypes = {
   totalRecords: _propTypes["default"].number.isRequired,
