@@ -434,7 +434,7 @@ Pagination.propTypes = {
 //   cursor: auto;
 // `;
 // const StyledPagDropdown = styled.div`
-//   width: 35px;
+//   width: 45px;
 //   position: absolute;
 //   top: 0;
 //   left: -10px;
@@ -456,8 +456,8 @@ Pagination.propTypes = {
 //   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.05);
 //   height: 100%;
 //   &::-webkit-scrollbar {
-//     width: 5px;
-//     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//     // width: 5px;
+//     // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 //   }
 // `;
 // const StyledPagListItem = styled.li`
