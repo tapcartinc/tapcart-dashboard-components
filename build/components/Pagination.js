@@ -49,11 +49,11 @@ var range = function range(from, to, currentPage) {
 
   var currentIndex = range.indexOf(currentPage);
 
-  var blah = function blah(range, currIdx) {
+  var visibleRange = function visibleRange(range, currIdx) {
     var arr = [];
 
     if (range[currIdx] <= 4) {
-      return range;
+      return range.slice(0, 7);
     }
 
     if (range[currIdx] >= range.length - 3) {
@@ -65,7 +65,7 @@ var range = function range(from, to, currentPage) {
     return arr;
   };
 
-  return blah(range, currentIndex, to);
+  return visibleRange(range, currentIndex, to);
 };
 
 var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, perPage, _ref) {

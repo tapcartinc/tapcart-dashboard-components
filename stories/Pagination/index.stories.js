@@ -10,7 +10,7 @@ export default {
 
 export const pagination = props => (
   <Pagination
-    totalRecords={14}
+    totalRecords={150}
     pageNeighbours={5}
     perPage={6}
     onPageChanged={page => {
