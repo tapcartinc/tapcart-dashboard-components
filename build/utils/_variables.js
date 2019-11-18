@@ -13,109 +13,110 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 // Colors
 /////////
 var colors = {
-  blue: '#373aaf',
-  blue10: '#f6faff',
-  blue15: '#CBCFDD',
-  blue25: '#DBE1EF',
-  blue50: '#BAC4E0',
-  blue75: '#738EDA',
-  lightpurple: '#7574EF',
-  offwhite: '#FCFEFF',
-  bgGray: '#F3F3F7',
-  lightestGray: '#fcfcfc',
-  lightestGrayBorder: '#f4f4f4',
-  gray: '#BDBDBD',
-  gray10: '#F8F7F8',
-  gray25: '#F0F2F5',
-  gray50: '#e9e9e9',
-  gray75: '#D8D8D8',
-  darkgray: '#8A888A',
-  grayText: '#a1a8b9',
-  coolBgGray: '#f9fbfe',
-  green: '#1BDFBA',
-  bluegray: '#a1a8b9',
-  black: '#000000',
-  highlightblue: '#E3EFFD',
-  yellow: '#F6B343',
-  red: '#D94747',
-  gold: '#d5a83e'
+  blue: "#373aaf",
+  blue10: "#f6faff",
+  blue15: "#CBCFDD",
+  blue25: "#DBE1EF",
+  blue50: "#BAC4E0",
+  blue75: "#738EDA",
+  lightpurple: "#7574EF",
+  darkBlue: "#02018C",
+  offwhite: "#FCFEFF",
+  bgGray: "#F3F3F7",
+  lightestGray: "#fcfcfc",
+  lightestGrayBorder: "#f4f4f4",
+  gray: "#BDBDBD",
+  gray10: "#F8F7F8",
+  gray25: "#F0F2F5",
+  gray50: "#e9e9e9",
+  gray75: "#D8D8D8",
+  darkgray: "#8A888A",
+  grayText: "#a1a8b9",
+  coolBgGray: "#f9fbfe",
+  green: "#1BDFBA",
+  bluegray: "#a1a8b9",
+  black: "#000000",
+  highlightblue: "#E3EFFD",
+  yellow: "#F6B343",
+  red: "#D94747",
+  gold: "#d5a83e"
 };
 exports.colors = colors;
 var sofia = {
   sofiaSemiBold: {
-    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
+    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
     fontWeight: 600,
-    fontStyle: 'normal'
+    fontStyle: "normal"
   },
   sofiaMedium: {
-    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
+    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
     fontWeight: 500,
-    fontStyle: 'normal'
+    fontStyle: "normal"
   },
   sofiaRegular: {
-    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
+    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
     fontWeight: 300,
-    fontStyle: 'normal'
+    fontStyle: "normal"
   },
   sofiaLight: {
-    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
+    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
     fontWeight: 200,
-    fontStyle: 'normal'
+    fontStyle: "normal"
   },
   sofiaItalic: {
-    fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
-    fontWeight: 'normal',
-    fontStyle: 'italic'
+    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
+    fontWeight: "normal",
+    fontStyle: "italic"
   }
 };
 exports.sofia = sofia;
 var boxShadow = {
-  boxShadow: '0 2px 20px 0 rgba(0, 0, 0, 0.05)'
+  boxShadow: "0 2px 20px 0 rgba(0, 0, 0, 0.05)"
 };
 exports.boxShadow = boxShadow;
 var margin = {
-  margin: '30px auto'
+  margin: "30px auto"
 };
 exports.margin = margin;
 var borderRadius = {
-  borderRadius: '4px'
+  borderRadius: "4px"
 };
 exports.borderRadius = borderRadius;
 var inputBorder = {
   borderRadius: borderRadius.borderRadius,
   backgroundColor: colors.offwhite,
   borderColor: colors.bluegray,
-  bordeRadius: '3px',
-  borderStyle: 'solid',
-  borderWidth: '1px',
-  outline: '0px !important'
+  bordeRadius: "3px",
+  borderStyle: "solid",
+  borderWidth: "1px",
+  outline: "0px !important"
 };
 exports.inputBorder = inputBorder;
 var circular = {
   circularBook: {
-    fontFamily: 'CircularStd-Book, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    fontFamily: "CircularStd-Book, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
   },
   circularBold: {
-    fontFamily: 'CircularStd-Bold, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    fontFamily: "CircularStd-Bold, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
   },
   circularMedium: {
-    fontFamily: 'CircularStd-Medium, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    fontFamily: "CircularStd-Medium, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
   },
   circularBlack: {
-    fontFamily: 'CircularStd-Black, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    fontFamily: "CircularStd-Black, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
   },
   circularBookItalic: {
-    fontFamily: 'CircularStd-BookItalic, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif'
+    fontFamily: "CircularStd-BookItalic, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
   }
 };
 exports.circular = circular;
 var border = {
   lightblue: {
-    borderRadius: '2px',
+    borderRadius: "2px",
     border: "1px solid ".concat(colors.blue25)
   },
   lightgray: {
-    borderRadius: '3px',
+    borderRadius: "3px",
     border: "1px solid ".concat(colors.gray25)
   },
   divider: {
@@ -128,24 +129,24 @@ var border = {
 exports.border = border;
 var gradientOverlay = {
   leftToRight: (_leftToRight = {
-    background: '-moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(238,238,238,0) 100%)'
-  }, _defineProperty(_leftToRight, "background", '-webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)'), _defineProperty(_leftToRight, "background", 'linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)'), _leftToRight),
+    background: "-moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(238,238,238,0) 100%)"
+  }, _defineProperty(_leftToRight, "background", "-webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)"), _defineProperty(_leftToRight, "background", "linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)"), _leftToRight),
   rightToLeft: (_rightToLeft = {
-    background: '-moz-linear-gradient(left,  rgba(238,238,238,0) 0%, rgba(255,255,255,1) 100%)'
-  }, _defineProperty(_rightToLeft, "background", '-webkit-linear-gradient(left,  rgba(238,238,238,0) 0%,rgba(255,255,255,1) 100%)'), _defineProperty(_rightToLeft, "background", 'linear-gradient(to right,  rgba(238,238,238,0) 0%,rgba(255,255,255,1) 100%)'), _rightToLeft),
+    background: "-moz-linear-gradient(left,  rgba(238,238,238,0) 0%, rgba(255,255,255,1) 100%)"
+  }, _defineProperty(_rightToLeft, "background", "-webkit-linear-gradient(left,  rgba(238,238,238,0) 0%,rgba(255,255,255,1) 100%)"), _defineProperty(_rightToLeft, "background", "linear-gradient(to right,  rgba(238,238,238,0) 0%,rgba(255,255,255,1) 100%)"), _rightToLeft),
   bottomToTop: (_bottomToTop = {
-    background: '-moz-linear-gradient(top,  rgba(238,238,238,0) 0%, rgba(255,255,255,1) 100%)'
-  }, _defineProperty(_bottomToTop, "background", '-webkit-linear-gradient(top,  rgba(238,238,238,0) 0%,rgba(255,255,255,1) 100%)'), _defineProperty(_bottomToTop, "background", 'linear-gradient(to bottom,  rgba(238,238,238,0) 0%,rgba(255,255,255,1) 100%)'), _bottomToTop),
+    background: "-moz-linear-gradient(top,  rgba(238,238,238,0) 0%, rgba(255,255,255,1) 100%)"
+  }, _defineProperty(_bottomToTop, "background", "-webkit-linear-gradient(top,  rgba(238,238,238,0) 0%,rgba(255,255,255,1) 100%)"), _defineProperty(_bottomToTop, "background", "linear-gradient(to bottom,  rgba(238,238,238,0) 0%,rgba(255,255,255,1) 100%)"), _bottomToTop),
   topToBottom: (_topToBottom = {
-    background: ' -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(238,238,238,0) 100%)'
-  }, _defineProperty(_topToBottom, "background", '-webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)'), _defineProperty(_topToBottom, "background", 'linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)'), _topToBottom)
+    background: " -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(238,238,238,0) 100%)"
+  }, _defineProperty(_topToBottom, "background", "-webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)"), _defineProperty(_topToBottom, "background", "linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(238,238,238,0) 100%)"), _topToBottom)
 };
 exports.gradientOverlay = gradientOverlay;
 var marginRight = {
-  marginRight: '10px'
+  marginRight: "10px"
 };
 exports.marginRight = marginRight;
 var marginLeft = {
-  marginLeft: '10px'
+  marginLeft: "10px"
 };
 exports.marginLeft = marginLeft;
