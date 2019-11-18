@@ -26,7 +26,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  margin-right: 7px;\n  margin-left: 7px;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  margin-right: 4px;\n  margin-left: 4px;\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -58,7 +58,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 16px;\n    ", "\n  "]);
+  var data = _taggedTemplateLiteral(["\n    ", "\n    .mobile-hide {\n      display: none;\n    }\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -79,7 +79,7 @@ var StyledBody = (0, _styledComponents["default"])(_Typography.Body).withConfig(
 })(["", " ", ""], function (props) {
   return props.pagNav && "display: flex; flex-direction: row; align-items: center;";
 }, _media["default"].sm(_templateObject(), function (props) {
-  return props.pagNav && "max-width: 20px; p {display:none} svg {width: 20px; margin: 0px;}";
+  return props.pagNav && "display: flex; align-items: center; width: 20px; margin: 0px";
 }));
 
 var range = function range(from, to, currentPage) {
@@ -124,13 +124,15 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
       key: "prev"
     }, props, {
       pagNav: true
-    }), _react["default"].createElement(_Icon.Icon, {
-      iconLeft: true,
-      type: "arrow-left"
     }), _react["default"].createElement(StyledBody, {
       color: _variables.colors.grayText,
       pagNav: true
-    }, "PREV")));
+    }, _react["default"].createElement(_Icon.Icon, {
+      iconLeft: true,
+      type: "arrow-left"
+    }), _react["default"].createElement("p", {
+      className: "mobile-hide"
+    }, " PREV"))));
   } else {
     elements.push(_react["default"].createElement(Page, {
       pagNav: true,
@@ -142,14 +144,16 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
 
         cd;
       }
+    }, _react["default"].createElement(StyledBody, {
+      color: _variables.colors.grayText,
+      pagNav: true
     }, _react["default"].createElement(_Icon.Icon, {
       iconLeft: true,
       type: "arrow-left",
       fill: _variables.colors.grayText
-    }), _react["default"].createElement(StyledBody, _defineProperty({
-      color: _variables.colors.grayText,
-      pagNav: true
-    }, "pagNav", true), "PREV")));
+    }), _react["default"].createElement("p", {
+      className: "mobile-hide"
+    }, "PREV"))));
   }
 
   if (currentPage > 4) {
@@ -158,8 +162,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
         return onPageClick(1);
       }
     }, "1"), _react["default"].createElement(StyledBody, _defineProperty({
-      color: _variables.colors.grayText,
-      pagNav: true
+      color: _variables.colors.grayText
     }, "color", _variables.colors.grayText), "...")));
   }
 
@@ -194,11 +197,13 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
       pagNav: true
     }), _react["default"].createElement(StyledBody, {
       color: _variables.colors.grayText,
-      pagNavpagNav: true
-    }, "NEXT"), _react["default"].createElement(_Icon.Icon, {
+      pagNav: true
+    }, _react["default"].createElement("p", {
+      className: "mobile-hide"
+    }, " NEXT"), _react["default"].createElement(_Icon.Icon, {
       iconRight: true,
       type: "arrow-right"
-    })));
+    }))));
   } else {
     elements.push(_react["default"].createElement(Page, {
       pagNav: true,
@@ -210,12 +215,14 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
       }
     }, _react["default"].createElement(StyledBody, {
       color: _variables.colors.grayText,
-      pagNavpagNav: true
+      pagNav: true
+    }, _react["default"].createElement("p", {
+      className: "mobile-hide"
     }, "NEXT"), _react["default"].createElement(_Icon.Icon, {
       iconRight: true,
       type: "arrow-right",
       fill: _variables.colors.grayText
-    })));
+    }))));
   }
 
   return elements;
