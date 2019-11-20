@@ -15,6 +15,8 @@ var _variables = require("../../../utils/_variables");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _media = _interopRequireDefault(require("../../../utils/_media"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
@@ -23,7 +25,7 @@ var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
       onClick = _ref.onClick,
       active = _ref.active,
       index = _ref.index;
-  return _react["default"].createElement(_react["default"].Fragment, null, index !== 0 ? _react["default"].createElement(_Icon.Icon, {
+  return _react["default"].createElement(StyledCrumb, null, index !== 0 ? _react["default"].createElement(_Icon.Icon, {
     type: "arrow-right",
     iconLeft: true,
     iconRight: true,
@@ -46,7 +48,7 @@ exports.BreadcrumbsItem = BreadcrumbsItem;
 var BreadcrumbsItemStyle = _styledComponents["default"].li.withConfig({
   displayName: "BreadcrumbItem__BreadcrumbsItemStyle",
   componentId: "y4dmfk-0"
-})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:20px;padding-bottom:20px;", ";text-transform:uppercase;", ";line-height:1.6;letter-spacing:1px;font-size:15px;margin-right:0px;margin-left:10px;line-height:34px;color:", ";span{margin-left:-5px;}", " ", ";"], function (props) {
+})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:10px;", ";text-transform:uppercase;", ";line-height:1.6;letter-spacing:1px;font-size:15px;margin-right:0px;margin-left:10px;line-height:34px;color:", ";span{margin-left:-5px;}line-height:25px;", " ", ";"], function (props) {
   return props.active ? _variables.sofia.sofiaMedium : _variables.sofia.sofiaLight;
 }, function (props) {
   return props.active && "transform: translateY(-2px)";
@@ -57,3 +59,8 @@ var BreadcrumbsItemStyle = _styledComponents["default"].li.withConfig({
 }, function (props) {
   return props.style ? props.style : null;
 });
+
+var StyledCrumb = _styledComponents["default"].div.withConfig({
+  displayName: "BreadcrumbItem__StyledCrumb",
+  componentId: "y4dmfk-1"
+})(["align-items:center;display:flex;svg{width:10px;}"]);
