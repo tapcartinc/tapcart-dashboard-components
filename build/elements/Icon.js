@@ -3878,6 +3878,60 @@ function Icon(props) {
         points: "10 10 15 7 20 10 15 13"
       }))))));
 
+    case "ebook":
+      return _react["default"].createElement(SVG, _extends({
+        width: "20px",
+        height: "24px",
+        viewBox: "0 0 20 24",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/SVG"
+      }, props), _react["default"].createElement("g", {
+        id: "Resources",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "8.3_gated_web",
+        transform: "translate(-721.000000, -1001.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Demo-Form",
+        transform: "translate(678.000000, 295.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Form",
+        transform: "translate(41.000000, 362.000000)"
+      }, _react["default"].createElement("g", {
+        id: "ebook",
+        transform: "translate(0.000000, 343.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-ebook",
+        transform: "translate(0.000000, 1.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "book-bookmark",
+        transform: "translate(3.000000, 1.000000)",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("polyline", {
+        id: "Path",
+        stroke: "#1BDFBA",
+        points: "10 0 10 8 7 6 4 8 4 0"
+      }), _react["default"].createElement("path", {
+        d: "M2,0 C0.895,0 0,0.895 0,2 L0,20 C0,18.895 0.895,18 2,18 L16,18 C17.105,18 18,17.105 18,16 L18,2 C18,0.895 17.105,0 16,0 L2,0 Z",
+        id: "Path",
+        stroke: "#393CB4"
+      }), _react["default"].createElement("path", {
+        d: "M16,22 C17.105,22 18,21.105 18,20 L18,18 L18,16 C18,17.105 17.105,18 16,18 L2,18 C0.895,18 0,18.895 0,20 C0,21.105 0.895,22 2,22 L16,22 Z",
+        id: "Path",
+        stroke: "#393CB4"
+      })))))))));
+
     case "guide":
       return _react["default"].createElement(SVG, _extends({
         width: "24px",
