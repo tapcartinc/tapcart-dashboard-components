@@ -175,6 +175,10 @@ var Pagination = function Pagination(props) {
   var onPageClick = function onPageClick(page) {
     setCurrentPage(page);
     props.onPageChanged(page);
+
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
   };
 
   var pages = range(1, Math.ceil(props.totalRecords / props.perPage), currentPage);

@@ -4002,6 +4002,58 @@ function Icon(props) {
         stroke: "#373AAF"
       }))))));
 
+    case "download":
+      return _react["default"].createElement(SVG, _extends({
+        width: "24px",
+        height: "17px",
+        viewBox: "0 0 24 17",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/SVG"
+      }, props), _react["default"].createElement("g", {
+        id: "Resources",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "8.3_gated_web",
+        transform: "translate(-1253.000000, -1005.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Demo-Form",
+        transform: "translate(678.000000, 295.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Form",
+        transform: "translate(41.000000, 362.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Button-Glyph---Large",
+        transform: "translate(374.000000, 333.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-download-cloud",
+        transform: "translate(160.000000, 12.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "cloud-download-95",
+        transform: "translate(1.000000, 3.000000)",
+        stroke: "#FFFFFF",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M11,6.998 L11,14.998",
+        id: "Path"
+      }), _react["default"].createElement("polyline", {
+        id: "Path",
+        points: "14 11.998 11 14.998 8 11.998"
+      }), _react["default"].createElement("path", {
+        d: "M16,16 L18,16 C20.209,16 22,14.207 22,11.998 C22,9.801 20.218,7.985 17.975,8.001 C17.718,4.092 14.474,0.998 10.5,0.998 C6.481,0.998 3.21,4.162 3.018,8.134 C1.287,8.573 0,10.129 0,11.998 C0,14.207 1.791,16 4,16 L6,16",
+        id: "Path"
+      })))))))));
+
     default:
       return null;
   }
