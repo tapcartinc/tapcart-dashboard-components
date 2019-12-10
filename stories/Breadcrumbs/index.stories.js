@@ -26,6 +26,7 @@ export const breadcrumbs = () => (
         crumb: "How To Be a eCommerce Growth Hacker"
       }
     ]}
+    hideOnTabletAndMobile
   >
     Primary
   </Breadcrumbs>
