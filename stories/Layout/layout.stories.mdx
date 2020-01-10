@@ -1,0 +1,71 @@
+
+
+
+<Meta title="Layout/General Layout" />
+
+
+# General Layout for each segment of content
+
+*A segment of content can be considered elements that are grouped together based on specs from design*
+
+In order for each segment of content to be themed and layout out correctly the following components must be in executed in the correct order...
+
+### **Layout Components**
+
+The following components are crucial to the layout/themeing consistency of the marketing website
+
+## [ThemeProvider](/?path=/docs/layout-themeprovider--theme-provider)
+
+This component provides a theme to all React components underneath itself via the context API.
+
+`ThemeProvider` is not necessary for the layout of the content within each `Section` component.
+
+
+## [Section](/?path=/docs/layout-section--section)
+
+Wrapper component containing each segment of content from `Container` to children of `Column` components.
+
+The `Section` component takes props that are crucial to the layout of the currect section and it's children
+
+
+## [Container](/?path=/docs/layout-container--container)
+
+Wrapper component that adds the correct amount of padding around the content from desktop to mobile screens
+
+
+## Row
+
+Component that contains columns as its immediate children
+
+Responsible for much of the responsiveness and breakpoints of the designs
+
+
+## [Column](/?path=/docs/layout-column--column)
+
+The individual sections within each `Row`
+
+
+### **Use**
+
+Layout in most basic format
+
+
+```
+  const example = () => (
+    <ThemeProvider>
+      <Section>
+        <Container>
+          <Row>
+            <Column cols={2}>
+              <Header>Heading</Header>
+              <Subheader>Subheading</Subheader>
+            </Column>
+            <Column cols={2}>
+              <img src="*" alt="*"/>
+            </Column>
+          </Row>
+        </Container>
+      </Section>
+    </ThemeProvider>
+  )
+```

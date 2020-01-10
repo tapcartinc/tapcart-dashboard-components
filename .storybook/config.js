@@ -1,8 +1,7 @@
-import React from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/react';
-import { themes } from '@storybook/theming';
-
-import GlobalStyle from '../lib/utils/_global';
+import React from "react";
+import { configure, addDecorator, addParameters } from "@storybook/react";
+import { themes } from "@storybook/theming";
+import GlobalStyle from "../lib/utils/_global";
 
 addParameters({
   options: {
@@ -19,8 +18,8 @@ addDecorator(story => (
 
 configure(
   [
-    require.context('../stories', true, /\.stories\.mdx$/),
-    require.context('../stories', true, /\.stories\.js$/)
+    require.context("../stories", true, /\.stories\.mdx$/),
+    require.context("../stories", true, /\.stories\.js$/)
   ],
   module
 );
