@@ -43,7 +43,7 @@ var ThemeProvider = function ThemeProvider(props) {
 
 exports.ThemeProvider = ThemeProvider;
 ThemeProvider.propTypes = {
-  theme: _propTypes["default"].oneOf(["base", "invert(base)", "neutral", "offWhite", "gradient(fgColor, bgColor)"]),
+  theme: _propTypes["default"].object,
   children: _propTypes.node.isRequired
 };
 ThemeProvider.defaultProps = {

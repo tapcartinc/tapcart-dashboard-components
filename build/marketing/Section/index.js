@@ -71,10 +71,6 @@ var Section = function Section(props) {
 };
 
 exports.Section = Section;
-var options = {
-  leftAlign: _layout.leftAlign,
-  centered: _layout.centered
-};
 Section.propTypes = {
   /**
    Aligns the content (specifically text) on the page.
