@@ -3,7 +3,14 @@ import { ThemeProvider } from "../../lib/utils/ThemeProvider";
 import { withKnobs, select } from "@storybook/addon-knobs";
 import { Section } from "../../lib/marketing/Section";
 import { Header } from "../../lib/marketing/Typography";
-import { base, invert, neutral, offWhite } from "../../lib/utils/_theme";
+import {
+  base,
+  invert,
+  neutral,
+  offWhite,
+  gradient
+} from "../../lib/utils/_theme";
+import { colors } from "../../lib";
 
 export default {
   component: ThemeProvider,
@@ -20,7 +27,8 @@ const options = {
   InvertBase: invert(base),
   Base: base,
   Neutral: neutral,
-  OffWhite: offWhite
+  OffWhite: offWhite,
+  Gradient: gradient(colors.offwhite, colors.gray10)
 };
 const defaultValue = base;
 const groupId = "GROUP-ID1";
