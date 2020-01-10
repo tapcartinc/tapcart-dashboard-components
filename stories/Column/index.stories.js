@@ -19,8 +19,7 @@ export default {
   component: Column,
   title: "Layout/Column",
   parameters: {
-    componentSubtitle:
-      "Wrapper component containing each segment of content from <Container/> to children of <Column/> components"
+    componentSubtitle: "Use `Column` inside of Rows"
   },
 
   decorators: [withKnobs]
@@ -41,7 +40,7 @@ export const column = () => (
     <Section layout={centered}>
       <Container>
         <Row>
-          <Column cols={1} style={{ border: "1px solid red" }}>
+          <Column cols={1} customWidth={60} style={{ border: "1px solid red" }}>
             <Header>Section Header</Header>
             <Subheader>Section Subheader</Subheader>
           </Column>
@@ -55,12 +54,17 @@ export const twoColumn = () => (
   <ThemeProvider theme={base}>
     <Section layout={centered}>
       <Container>
-        <Row>
-          <Column cols={2} style={{ border: "1px solid red" }}>
+        <Row flushLeft responsiveReverse>
+          <Column cols={2} mobileCols={1} style={{ border: "1px solid red" }}>
             <Header>Section Header</Header>
             <Subheader>Section Subheader</Subheader>
           </Column>
-          <Column cols={2} style={{ border: "1px solid red" }}>
+          <Column
+            cols={2}
+            mobileCols={1}
+            mobileCentered
+            style={{ border: "1px solid pink" }}
+          >
             <Header>Section Header</Header>
             <Subheader>Section Subheader</Subheader>
           </Column>

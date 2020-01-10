@@ -83,3 +83,9 @@ var Container = function Container(props) {
 };
 
 exports.Container = Container;
+Container.propTypes = {
+  overflowHidden: _propTypes["default"].bool
+};
+Container.defaultProps = {
+  overflowHidden: false
+};

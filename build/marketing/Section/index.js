@@ -13,7 +13,7 @@ var _layout = require("../../utils/_layout");
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
 
-var _variables = require("../../utils/_variables");
+var _media = _interopRequireDefault(require("../../utils/_media"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -21,10 +21,22 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n    ", "\n  "]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
 var SectionWrapper = _styledComponents["default"].section.withConfig({
   displayName: "Section__SectionWrapper",
   componentId: "sc-2ymk14-0"
-})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";justify-items:", ";text-align:", ";min-height:", ";align-items:center;background:", ";margin:0px;position:relative;", ";", ";", ";"], function (props) {
+})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";justify-items:", ";text-align:", ";min-height:", ";align-items:center;background:", ";margin:0px;position:relative;", ";", ";", ";", " ", ""], function (props) {
   return props.layout ? props.layout.direction : "row";
 }, function (props) {
   return props.layout ? props.layout.justify : "flex-start";
@@ -42,7 +54,11 @@ var SectionWrapper = _styledComponents["default"].section.withConfig({
   return props.overflowHidden && "overflow: hidden";
 }, function (props) {
   return props.tombstone && "margin-bottom: -375px";
-});
+}, function (props) {
+  return props.aboveFold && "min-height: 500px;\n    height: 70vh;\n    margin-bottom: 30px;";
+}, _media["default"].sm(_templateObject(), function (props) {
+  return props.aboveFold && "min-height: 550px;\n    height: 550px;";
+}));
 /**
  * Use `Section` to contain sections of content in the marketing site.
  *
@@ -55,11 +71,20 @@ var Section = function Section(props) {
 };
 
 exports.Section = Section;
+var options = {
+  leftAlign: _layout.leftAlign,
+  centered: _layout.centered
+};
 Section.propTypes = {
   /**
    Aligns the content (specifically text) on the page.
   */
-  layout: _propTypes["default"].oneOf(["leftAlign", "centered"]),
+  // layout: PropTypes.shape({
+  //   textAlign: PropTypes.string,
+  //   direction: PropTypes.string,
+  //   justify: PropTypes.string
+  // }),
+  layout: _propTypes["default"].object,
 
   /**
    Useful for images / content that bleeds over of the section or off of the layout
@@ -80,6 +105,7 @@ Section.propTypes = {
    Creates overlay effect of content below the current section
   */
   tombstone: _propTypes["default"].bool,
+  aboveFold: _propTypes["default"].bool,
   children: _propTypes.node.isRequired
 };
 Section.defaultProps = {
@@ -87,5 +113,6 @@ Section.defaultProps = {
   overflowHidden: false,
   minHeight: 800,
   contentHeight: false,
-  tombstone: false
+  tombstone: false,
+  aboveFold: false
 };

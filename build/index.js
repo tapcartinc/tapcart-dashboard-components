@@ -58,7 +58,8 @@ var _exportNames = {
   Section: true,
   Row: true,
   Column: true,
-  Container: true
+  Container: true,
+  StyledBlob: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -390,6 +391,12 @@ Object.defineProperty(exports, "Container", {
     return _Container.Container;
   }
 });
+Object.defineProperty(exports, "StyledBlob", {
+  enumerable: true,
+  get: function get() {
+    return _StyledBlob.StyledBlob;
+  }
+});
 
 var _Icon = require("./elements/Icon");
 
@@ -488,5 +495,7 @@ var _Row = require("./marketing/Row");
 var _Column = require("./marketing/Column");
 
 var _Container = require("./marketing/Container");
+
+var _StyledBlob = require("./marketing/StyledBlob");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
