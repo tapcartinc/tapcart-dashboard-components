@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.offWhite = exports.scrollingNav = exports.topNav = exports.neutral = exports.invert = exports.base = void 0;
+exports.gradientBg = exports.offWhite = exports.scrollingNav = exports.topNav = exports.neutral = exports.invert = exports.base = void 0;
 
 var _variables = require("./_variables");
 
@@ -53,6 +53,18 @@ var neutral = {
   body: _variables.colors.blue
 };
 exports.neutral = neutral;
+
+var gradientBg = function gradientBg(gradientFg, _gradientBg) {
+  return {
+    fg: _variables.colors.black,
+    bg: "linear-gradient(184deg, ".concat(_gradientBg, ", ").concat(gradientFg, ")"),
+    header: _variables.colors.black,
+    subtext: _variables.colors.black,
+    body: _variables.colors.blue
+  };
+};
+
+exports.gradientBg = gradientBg;
 var topNav = {
   background: "transparent",
   fg: _variables.colors.white

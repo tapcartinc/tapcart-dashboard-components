@@ -54,7 +54,11 @@ var _exportNames = {
   Subheader: true,
   FooterLink: true,
   MarketingIcon: true,
-  BrandIcon: true
+  BrandIcon: true,
+  Section: true,
+  Row: true,
+  Column: true,
+  Container: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -362,6 +366,30 @@ Object.defineProperty(exports, "BrandIcon", {
     return _BrandIcon.BrandIcon;
   }
 });
+Object.defineProperty(exports, "Section", {
+  enumerable: true,
+  get: function get() {
+    return _Section.Section;
+  }
+});
+Object.defineProperty(exports, "Row", {
+  enumerable: true,
+  get: function get() {
+    return _Row.Row;
+  }
+});
+Object.defineProperty(exports, "Column", {
+  enumerable: true,
+  get: function get() {
+    return _Column.Column;
+  }
+});
+Object.defineProperty(exports, "Container", {
+  enumerable: true,
+  get: function get() {
+    return _Container.Container;
+  }
+});
 
 var _Icon = require("./elements/Icon");
 
@@ -452,5 +480,13 @@ var _Typography2 = require("./marketing/Typography");
 var _MarketingIcon = require("./marketing/MarketingIcon");
 
 var _BrandIcon = require("./marketing/BrandIcon");
+
+var _Section = require("./marketing/Section");
+
+var _Row = require("./marketing/Row");
+
+var _Column = require("./marketing/Column");
+
+var _Container = require("./marketing/Container");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

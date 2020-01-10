@@ -27,6 +27,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 // import GlobalStyle from './_global';
 // <GlobalStyle {...props.global} />
+
+/**
+ * Use `ThemeProvider` to wrap sections of content with specific styling in the marketing site. This component provides a theme to all React components underneath itself via the context API.
+ *
+ * In order to access styles from the ThemeProvider the children must be wrapped in a `Section` component immediately inside of the ThemeProvider component.
+ */
 var ThemeProvider = function ThemeProvider(props) {
   var theme = _objectSpread({}, _theme.base, {}, props.theme);
 
@@ -36,10 +42,10 @@ var ThemeProvider = function ThemeProvider(props) {
 };
 
 exports.ThemeProvider = ThemeProvider;
-Hero.propTypes = {
-  theme: _propTypes["default"].string,
+ThemeProvider.propTypes = {
+  theme: _propTypes["default"].oneOf(["base", "invert(base)", "neutral", "offWhite"]),
   children: _propTypes.node.isRequired
 };
-Hero.defaultProps = {
-  theme: "base"
+ThemeProvider.defaultProps = {
+  theme: _theme.base
 };
