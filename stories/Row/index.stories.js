@@ -10,23 +10,32 @@ import { Column } from "../../lib/marketing/Column";
 import { Container } from "../../lib/marketing/Container";
 
 export default {
-  component: Container,
-  title: "Layout/Container",
+  component: Row,
+  title: "Layout/Row",
   parameters: {
     componentSubtitle:
-      "Wrapper component that adds the correct amount of padding around the content from desktop to mobile screens"
+      "Components that holds the columns and is important for the different breakpoint layouts"
   },
-
   decorators: [withKnobs]
 };
 
 export const container = () => (
   <ThemeProvider theme={base}>
-    <Section layout={centered}>
+    <Section layout={leftAlign} minHeight={300}>
       <Container customPadding={1}>
-        <Row>
-          <Column cols={1}>
-            <Header>Section Header</Header>
+        <Row
+          flushLeft={boolean("flushLeft", false)}
+          mobileCentered={boolean("mobileCentered", false)}
+          responsiveReverse={boolean("responsiveReverse", false)}
+          responsiveReverse={boolean("responsiveReverse", false)}
+          noWrap={boolean("noWrap", false)}
+        >
+          <Column cols={2} mobileCols={1}>
+            <Header>Section one</Header>
+            <Subheader>Section Subheader</Subheader>
+          </Column>
+          <Column cols={2} mobileCols={1}>
+            <Header>Section two</Header>
             <Subheader>Section Subheader</Subheader>
           </Column>
         </Row>

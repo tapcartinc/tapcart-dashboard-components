@@ -64,16 +64,16 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var ColumnWrapper = _styledComponents["default"].section.withConfig({
   displayName: "Column__ColumnWrapper",
   componentId: "qzbrba-0"
-})(["box-sizing:border-box;min-height:1px;position:relative;flex:0 0 ", "%;max-width:", "%;right:auto;left:auto;display:flex;flex-direction:column;align-items:flex-start;", ";", ";", " ", " ", " ", ""], function (props) {
+})(["box-sizing:border-box;min-height:1px;position:relative;flex:0 0 ", "%;max-width:", "%;right:auto;left:auto;", ";", ";", " ", " ", " ", ""], function (props) {
   return 100 / props.cols;
 }, function (props) {
   return 100 / props.cols;
 }, function (props) {
-  return props.customWidth && "max-width: ".concat(props.customWidth, "%");
+  return props.customWidth && "max-width: ".concat(props.customWidth, "%; flex: 0 0 ").concat(props.customWidth, "%");
 }, function (props) {
   return props.flushLeft && "display: flex; flex-direction: column; align-items: flex-start; flex-wrap: wrap";
 }, _media["default"].lg(_templateObject(), function (props) {
-  return props.customWidthLg && "max-width: ".concat(props.customWidthLg, "%");
+  return props.customWidthLg && "max-width: ".concat(props.customWidthLg, "%; flex: 0 0 ").concat(props.customWidthLg, "%");
 }), _media["default"].md(_templateObject2(), function (props) {
   return 100 / props.mobileCols;
 }, function (props) {
@@ -81,13 +81,13 @@ var ColumnWrapper = _styledComponents["default"].section.withConfig({
 }, function (props) {
   return 100 / props.mobileCols;
 }, function (props) {
-  return props.customWidthMd && "max-width: ".concat(props.customWidthMd, "%");
+  return props.customWidthMd && "max-width: ".concat(props.customWidthMd, "%; flex: 0 0 ").concat(props.customWidthMd, "%");
 }, function (props) {
   return props.mobileCentered && "align-items: center; display: flex;";
 }), _media["default"].sm(_templateObject3(), function (props) {
-  return props.customWidthSm && "max-width: ".concat(props.customWidthSm, "%");
+  return props.customWidthSm && "max-width: ".concat(props.customWidthSm, "%; flex: 0 0 ").concat(props.customWidthSm, "%");
 }), _media["default"].xs(_templateObject4(), function (props) {
-  return props.customWidthXs && "max-width: ".concat(props.customWidthXs, "%");
+  return props.customWidthXs && "max-width: ".concat(props.customWidthXs, "%; flex: 0 0 ").concat(props.customWidthXs, "%");
 }));
 /**
  * Allows each `Row` to break responsively
@@ -110,7 +110,6 @@ Column.propTypes = {
    */
   mobileCols: _propTypes["default"].number,
   customWidth: _propTypes["default"].number,
-  customWidthLg: _propTypes["default"].number,
   customWidthMd: _propTypes["default"].number,
   customWidthSm: _propTypes["default"].number,
   customWidthXs: _propTypes["default"].number,

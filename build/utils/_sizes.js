@@ -10,6 +10,7 @@ var sizes = {
   md: 900,
   sm: 700,
   smxs: 590,
-  xs: 480
+  xs: 480,
+  unoCardSmall: 380
 };
 exports.sizes = sizes;
