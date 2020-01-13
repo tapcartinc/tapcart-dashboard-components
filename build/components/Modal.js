@@ -240,7 +240,7 @@ var SliderModal = function SliderModal(props) {
 var StyledModal = (0, _styledComponents["default"])(ReactModalAdapter).withConfig({
   displayName: "Modal__StyledModal",
   componentId: "sc-1fnp8gl-0"
-})(["&__overlay{height:100%;width:100%;position:fixed;overflow-y:scroll;top:0;left:0;z-index:999;background:rgba(0,0,0,0.4);display:flex;flex-direction:column;justify-content:center;align-items:center;}&__content{overflow-y:hidden;border-radius:3px;background:#ffffff;z-index:9999;}"]);
+})(["&__overlay{height:100%;width:100%;position:fixed;overflow-y:scroll;top:0;left:0;z-index:999;background:rgba(0,0,0,0.4);display:flex;flex-direction:column;justify-content:center;align-items:center;}&__content{overflow-y:hidden;border-radius:3px;background:#ffffff;z-index:9999;width:auto !important;max-width:600px;}"]);
 
 var ModalStyle = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalStyle",
