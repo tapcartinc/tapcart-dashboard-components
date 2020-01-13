@@ -81,7 +81,6 @@ function (_Component) {
     _classCallCheck(this, Modal);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Modal).call(this, props));
-    console.log(props);
 
     _reactModal["default"].setAppElement(_this.props.rootElement || "#root");
 
@@ -103,18 +102,24 @@ exports.Modal = Modal;
 function ModalType(props) {
   switch (props.type) {
     case "slider-modal":
-      return _react["default"].createElement(SliderModal, props, props.children);
+      return _react["default"].createElement(SliderModal, _extends({
+        key: "slider-modal"
+      }, props), props.children);
 
     case "custom":
       return _react["default"].createElement(MinimalModalStyle, _extends({
-        key: "".concat(props.type, "-").concat(props.icon, "-").concat(props.title)
+        key: "custom"
       }, props), props.children);
 
     case "full":
-      return _react["default"].createElement(FullscreenModal, props, props.children);
+      return _react["default"].createElement(FullscreenModal, _extends({
+        key: "full"
+      }, props), props.children);
 
     case "modal-with-graphic":
-      return _react["default"].createElement(ModalWithGraphic, props, _react["default"].createElement("div", {
+      return _react["default"].createElement(ModalWithGraphic, _extends({
+        key: "modal-with-graphic"
+      }, props), _react["default"].createElement("div", {
         style: {
           padding: 25
         }
@@ -156,7 +161,9 @@ function ModalType(props) {
       })));
 
     case "alert":
-      return _react["default"].createElement(MinimalModalStyle, props, _react["default"].createElement(ModalHeader, null, _react["default"].createElement(ModalHeaderLeft, null, _react["default"].createElement(_Icon.Icon, {
+      return _react["default"].createElement(MinimalModalStyle, _extends({
+        key: "alert"
+      }, props), _react["default"].createElement(ModalHeader, null, _react["default"].createElement(ModalHeaderLeft, null, _react["default"].createElement(_Icon.Icon, {
         circleIcon: true,
         type: props.icon
       }), _react["default"].createElement(_Typography.H3, {
