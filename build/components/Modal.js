@@ -102,24 +102,16 @@ exports.Modal = Modal;
 function ModalType(props) {
   switch (props.type) {
     case "slider-modal":
-      return _react["default"].createElement(SliderModal, _extends({
-        key: "slider-modal"
-      }, props), props.children);
+      return _react["default"].createElement(SliderModal, props, props.children);
 
     case "custom":
-      return _react["default"].createElement(MinimalModalStyle, _extends({
-        key: "custom"
-      }, props), props.children);
+      return _react["default"].createElement(MinimalModalStyle, props, props.children);
 
     case "full":
-      return _react["default"].createElement(FullscreenModal, _extends({
-        key: "full"
-      }, props), props.children);
+      return _react["default"].createElement(FullscreenModal, props, props.children);
 
     case "modal-with-graphic":
-      return _react["default"].createElement(ModalWithGraphic, _extends({
-        key: "modal-with-graphic"
-      }, props), _react["default"].createElement("div", {
+      return _react["default"].createElement(ModalWithGraphic, props, _react["default"].createElement("div", {
         style: {
           padding: 25
         }
@@ -136,6 +128,7 @@ function ModalType(props) {
         }
       }, props.children), _react["default"].createElement("br", null), _react["default"].createElement("br", null), _react["default"].createElement(ButtonsStyle, null, props.buttons && props.buttons.map(function (button, idx) {
         return _react["default"].createElement("div", {
+          key: "".concat(button.type, "-").concat(button.button, "-").concat(props.title),
           style: idx !== 0 ? {
             marginLeft: 15
           } : null
@@ -161,9 +154,7 @@ function ModalType(props) {
       })));
 
     case "alert":
-      return _react["default"].createElement(MinimalModalStyle, _extends({
-        key: "alert"
-      }, props), _react["default"].createElement(ModalHeader, null, _react["default"].createElement(ModalHeaderLeft, null, _react["default"].createElement(_Icon.Icon, {
+      return _react["default"].createElement(MinimalModalStyle, props, _react["default"].createElement(ModalHeader, null, _react["default"].createElement(ModalHeaderLeft, null, _react["default"].createElement(_Icon.Icon, {
         circleIcon: true,
         type: props.icon
       }), _react["default"].createElement(_Typography.H3, {
@@ -179,6 +170,7 @@ function ModalType(props) {
         }
       }, props.children), _react["default"].createElement(ButtonsStyle, null, props.buttons && props.buttons.map(function (button, idx) {
         return _react["default"].createElement("div", {
+          key: "".concat(button.type, "-").concat(button.button, "-").concat(props.title),
           style: idx !== 0 ? {
             marginLeft: 15
           } : null
