@@ -24,7 +24,7 @@ export const modal = () => {
         isOpen={open}
         title="Deactivate"
         icon="alert"
-        onRequestClose={() => toggleModal(!open)}
+        closeModal={() => toggleModal(!open)}
         buttons={[
           {
             button: "Cancel",

@@ -65,7 +65,7 @@ function ReactModalAdapter(_ref) {
     portalClassName: className,
     className: contentClassName,
     overlayClassName: overlayClassName,
-    onRequestClose: props.onRequestClose,
+    onRequestClose: props.closeModal,
     bodyOpenClassName: bodyOpenClassName
   }, props));
 }
@@ -105,7 +105,9 @@ function ModalType(props) {
       return _react["default"].createElement(SliderModal, props, props.children);
 
     case "custom":
-      return _react["default"].createElement(MinimalModalStyle, props, props.children);
+      return _react["default"].createElement(MinimalModalStyle, _extends({
+        key: "".concat(props.type, "-").concat(props.icon, "-").concat(props.title)
+      }, props), props.children);
 
     case "full":
       return _react["default"].createElement(FullscreenModal, props, props.children);
@@ -146,7 +148,7 @@ function ModalType(props) {
         }
       }), _react["default"].createElement(CloseIcon, {
         type: "small-close",
-        onClick: props.onRequestClose,
+        onClick: props.closeModal,
         style: {
           margin: 20
         }
@@ -162,7 +164,7 @@ function ModalType(props) {
         }
       }, props.title)), _react["default"].createElement(CloseIcon, {
         type: "small-close",
-        onClick: props.onRequestClose
+        onClick: props.closeModal
       })), _react["default"].createElement("div", {
         style: {
           marginLeft: 5
@@ -196,7 +198,7 @@ var SliderModal = function SliderModal(props) {
   }, _react["default"].createElement(CloseIcon, {
     type: "small-close",
     className: "modal-graphic-close-btn",
-    onClick: props.onRequestClose,
+    onClick: props.closeModal,
     style: {
       margin: 20
     }
