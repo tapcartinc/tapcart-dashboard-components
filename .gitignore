@@ -1,4 +1,13 @@
+
+.vscode/
+.vscode
+.vscode*
+
 .DS_Store
 node_modules
 *.log
 .idea
+
+/node_modules
+config.*
+/build
