@@ -65,7 +65,7 @@ function ReactModalAdapter(_ref) {
     portalClassName: className,
     className: contentClassName,
     overlayClassName: overlayClassName,
-    onRequestClose: props.closeModal,
+    onRequestClose: props.onRequestClose,
     bodyOpenClassName: bodyOpenClassName
   }, props));
 }
@@ -146,7 +146,7 @@ function ModalType(props) {
         }
       }), _react["default"].createElement(CloseIcon, {
         type: "small-close",
-        onClick: props.closeModal,
+        onClick: props.onRequestClose,
         style: {
           margin: 20
         }
@@ -196,7 +196,7 @@ var SliderModal = function SliderModal(props) {
   }, _react["default"].createElement(CloseIcon, {
     type: "small-close",
     className: "modal-graphic-close-btn",
-    onClick: props.closeModal,
+    onClick: props.onRequestClose,
     style: {
       margin: 20
     }
