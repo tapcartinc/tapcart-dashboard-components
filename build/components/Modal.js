@@ -81,6 +81,7 @@ function (_Component) {
     _classCallCheck(this, Modal);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Modal).call(this, props));
+    console.log(props);
 
     _reactModal["default"].setAppElement(_this.props.rootElement || "#root");
 
