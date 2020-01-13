@@ -55,10 +55,10 @@ function ReactModalAdapter(_ref) {
 
   var contentClassName = "".concat(className, "__content");
   var overlayClassName = "".concat(className, "__overlay");
-  var bodyOpenClassName = 'ReactModal__Body--open';
+  var bodyOpenClassName = "ReactModal__Body--open";
 
-  if (props.type === 'full') {
-    bodyOpenClassName = 'ReactModal__Body--open-full';
+  if (props.type === "full") {
+    bodyOpenClassName = "ReactModal__Body--open-full";
   }
 
   return _react["default"].createElement(_reactModal["default"], _extends({
@@ -82,7 +82,7 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Modal).call(this, props));
 
-    _reactModal["default"].setAppElement(_this.props.rootElement || '#root');
+    _reactModal["default"].setAppElement(_this.props.rootElement || "#root");
 
     return _this;
   }
@@ -158,11 +158,11 @@ function ModalType(props) {
         type: props.icon
       }), _react["default"].createElement(_Typography.H3, {
         style: {
-          marginLeft: 10
+          marginLeft: 15
         }
       }, props.title)), _react["default"].createElement(CloseIcon, {
         type: "small-close",
-        onClick: props.closeModal
+        onClick: props.onRequestClose
       })), _react["default"].createElement("div", {
         style: {
           marginLeft: 5

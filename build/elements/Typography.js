@@ -17,7 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 // HEADERS
 //////////
 var H1 = _styledComponents["default"].h1.attrs({
-  className: 'h1'
+  className: "h1"
 }).withConfig({
   displayName: "Typography__H1",
   componentId: "sc-1g2eju0-0"
@@ -39,7 +39,7 @@ var H2 = _styledComponents["default"].h2.withConfig({
 exports.H2 = H2;
 
 var H3 = _styledComponents["default"].h3.attrs({
-  className: 'h3'
+  className: "h3"
 }).withConfig({
   displayName: "Typography__H3",
   componentId: "sc-1g2eju0-2"
@@ -71,19 +71,19 @@ var H5 = _styledComponents["default"].h5.withConfig({
 
 exports.H5 = H5;
 var placeholder = {
-  fontSize: '18px',
-  color: '#DBE1EF',
-  fontFamily: 'Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
+  fontSize: "18px",
+  color: "#DBE1EF",
+  fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
   fontWeight: 500,
-  fontStyle: 'normal'
+  fontStyle: "normal"
 };
 exports.placeholder = placeholder;
 var input = {
   color: _variables.colors.black,
-  fontSize: '15px',
-  fontFamily: 'CircularStd-Book, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif',
-  fontWeight: 'normal',
-  fontStyle: 'normal'
+  fontSize: "15px",
+  fontFamily: "CircularStd-Book, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
+  fontWeight: "normal",
+  fontStyle: "normal"
 };
 exports.input = input;
 
@@ -94,10 +94,10 @@ var Body = _styledComponents["default"].p.withConfig({
   if (props.fontSize) {
     return props.fontSize;
   } else {
-    return '16px';
+    return "16px";
   }
 }, function (props) {
-  return props.color ? props.color : '#000000';
+  return props.color ? props.color : "#000000";
 }, _variables.sofia.sofiaRegular, function (props) {
   return props.style ? props.style : null;
 });
