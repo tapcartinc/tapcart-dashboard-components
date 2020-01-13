@@ -23,7 +23,8 @@
   "peerDependencies": {
     "nuka-carousel": "^4.5.9",
     "react-modal": "^3.10.1",
-    "react-select": "^3.0.4"
+    "react-select": "^3.0.4",
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -41,7 +42,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.9.0",
-    "resolve-url-loader": "^3.1.0"
+    "resolve-url-loader": "^3.1.0",
+    "styled-components": "^4.4.0"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^5.2.4",
@@ -54,7 +56,6 @@
     "nuka-carousel": "^4.5.9",
     "react-modal": "^3.10.1",
     "react-select": "^3.0.4",
-    "styled-components": "^4.4.0",
     "styled-jsx": "^3.2.1"
   }
 }
