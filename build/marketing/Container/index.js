@@ -22,7 +22,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  ", "\n  "]);
+  var data = _taggedTemplateLiteral(["\n\n  ", "\n\n    ", ";\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  padding-left: 1em;\n  padding-right: 1em;\n  width: 100%;\n  padding-top: 50px;\n  padding-bottom: 50px;\n\n  ", "\n\n  ", "\n\n    ", ";\n  "]);
+  var data = _taggedTemplateLiteral(["\n  padding-left: 1em;\n  padding-right: 1em;\n  width: 100%;\n  padding-top: 65px;\n  padding-bottom: 65px;\n\n  ", "\n\n  ", "\n\n    ", ";\n    ", ";\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -42,7 +42,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  padding-top: 80px;\n  padding-bottom: 80px;\n  padding-left: 2em;\n  padding-right: 2em;\n  padding-top: 80px;\n  padding-bottom: 80px;\n\n\n  ", "\n\n\n  ", ";\n\n    ", ";\n\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  padding-top: 80px;\n  padding-bottom: 80px;\n  padding-left: 2em;\n  padding-right: 2em;\n  padding-top: 80px;\n  padding-bottom: 80px;\n\n\n  ", "\n\n\n  ", ";\n\n    ", ";\n    ", ";\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -52,7 +52,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 0 auto;\n  padding-left: 3em;\n  padding-right: 3em;\n  padding-top: 100px;\n  padding-bottom: 100px;\n\n  ", "\n\n", "\n\n  ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 0 auto;\n  padding-left: 3em;\n  padding-right: 3em;\n  padding-top: 100px;\n  padding-bottom: 100px;\n\n  ", "\n\n", "\n\n  ", ";\n  ", ";\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -76,7 +76,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var ContainerWrapper = _styledComponents["default"].section.withConfig({
   displayName: "Container__ContainerWrapper",
   componentId: "yhgl5u-0"
-})(["box-sizing:border-box;position:relative;margin-left:auto;margin-right:auto;width:100%;max-width:", "px;padding-left:5em;padding-right:5em;padding-top:100px;padding-bottom:100px;", " z-index:1;", " button{", "}", ";", ";", ";", ";", ";", ""], _sizes.sizes.xl, function (props) {
+})(["box-sizing:border-box;position:relative;margin-left:auto;margin-right:auto;width:100%;max-width:", "px;padding-left:5em;padding-right:5em;padding-top:100px;padding-bottom:100px;", " z-index:1;", " button{", "}", ";", ";", ";", ";", ";", ";", ""], _sizes.sizes.xl, function (props) {
   return props.customPadding && "padding-top: ".concat(props.customPadding[0], "px; padding-bottom: ").concat(props.customPadding[1], "px;");
 }, function (props) {
   return props.customMargins && "margin-top: ".concat(props.customMargins[0], "px; margin-bottom: ").concat(props.customMargins[1], "px;");
@@ -84,6 +84,8 @@ var ContainerWrapper = _styledComponents["default"].section.withConfig({
   return props.centered && "display: block !important; margin: 0 auto;";
 }, function (props) {
   return props.customHeight && "height: ".concat(props.customHeight, "px");
+}, function (props) {
+  return props.tombstone && "margin-top: -350px";
 }, _media["default"].lg(_templateObject(), function (props) {
   return props.customPadding && "padding-top: ".concat(props.customPadding[0], "px; padding-bottom: ").concat(props.customPadding[1], "px;");
 }), _media["default"].md(_templateObject2(), function (props) {
@@ -92,20 +94,28 @@ var ContainerWrapper = _styledComponents["default"].section.withConfig({
   return props.customMarginsMd && "margin-top: ".concat(props.customMarginsMd[0], "px; margin-bottom: ").concat(props.customMarginsMd[1], "px;");
 }, function (props) {
   return props.customHeightMd && "height: ".concat(props.customHeightMd, "px");
+}, function (props) {
+  return props.tombstone && "margin-top: -450px";
 }), _media["default"].sm(_templateObject3(), function (props) {
   return props.customPaddingSm && "padding-top: ".concat(props.customPaddingSm[0], "px; padding-bottom: ").concat(props.customPaddingSm[1], "px;");
 }, function (props) {
   return props.customMarginsSm && "margin-top: ".concat(props.customMarginsSm[0], "px; margin-bottom: ").concat(props.customMarginsSm[1], "px;");
 }, function (props) {
   return props.customHeightSm && "height: ".concat(props.customHeightSm, "px");
+}, function (props) {
+  return props.tombstone && "margin-top: -450px";
 }), _media["default"].xs(_templateObject4(), function (props) {
   return props.customPaddingXs && "padding-top: ".concat(props.customPaddingXs[0], "px; padding-bottom: ").concat(props.customPaddingXs[1], "px;");
 }, function (props) {
   return props.customMarginsXs && "margin-top: ".concat(props.customMarginsXs[0], "px; margin-bottom: ").concat(props.customMarginsXs[1], "px;");
 }, function (props) {
   return props.customHeightXs && "height: ".concat(props.customHeightXs, "px");
+}, function (props) {
+  return props.tombstone && "margin-top: -450px";
 }), _media["default"].unoCardSmall(_templateObject5(), function (props) {
   return props.customMarginsXxs && "margin-top: ".concat(props.customMarginsXxs[0], "px; margin-bottom: ").concat(props.customMarginsXxs[1], "px;");
+}, function (props) {
+  return props.tombstone && "margin-top: -450px";
 }));
 /**
  * Use `Container` as the wrapper component of the `Row` component and all of the children within that component.

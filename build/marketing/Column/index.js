@@ -71,7 +71,7 @@ var ColumnWrapper = _styledComponents["default"].section.withConfig({
 }, function (props) {
   return props.customWidth && "max-width: ".concat(props.customWidth, "%; flex: 0 0 ").concat(props.customWidth, "%");
 }, function (props) {
-  return props.centered && "margin: 0 auto;";
+  return props.centered && "margin: 0 auto";
 }, function (props) {
   return props.flushLeft && "display: flex; flex-direction: column; align-items: flex-start; flex-wrap: wrap";
 }, _media["default"].lg(_templateObject(), function (props) {
@@ -105,7 +105,7 @@ Column.propTypes = {
   /**
    * The amount of columns inside of the current row
    */
-  cols: _propTypes["default"].number.isRequired,
+  cols: _propTypes["default"].number,
 
   /**
    * The amount of columns inside of the mobile row; allows you to tell the column to fill the entire width of the row

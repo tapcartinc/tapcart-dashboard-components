@@ -43,7 +43,7 @@ var RowWrapper = _styledComponents["default"].div.withConfig({
 }, function (props) {
   return props.flushLeft && "align-items: flex-start;";
 }, _media["default"].md(_templateObject(), function (props) {
-  return props.mobileCentered && "align-items: center;";
+  return props.mobileCentered && "align-items: center; flex-direction: column; margin: 0 auto;";
 }, function (props) {
   return props.responsiveReverse && "section:nth-of-type(2) {\n    order: 1;\n  }\n    section:nth-of-type(1) {\n      order: 2;\n      margin-top: 40px;\n    }\n  }";
 }));

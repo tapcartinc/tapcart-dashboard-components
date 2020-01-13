@@ -21,8 +21,18 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    ", "\n  "]);
+  var data = _taggedTemplateLiteral(["\n    ", "\n    ", ";\n    ", ";\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -32,7 +42,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  min-height: ", ";\n  "]);
+  var data = _taggedTemplateLiteral(["\n    min-height: 800px;\n  ", ";\n  ", "\n  ", "\n\n  ", "\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -46,7 +56,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var SectionWrapper = _styledComponents["default"].section.withConfig({
   displayName: "Section__SectionWrapper",
   componentId: "sc-2ymk14-0"
-})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";justify-items:", ";text-align:", ";min-height:", ";align-items:center;background:", ";margin:0px;position:relative;", ";", ";", ";", " ", " ", ""], function (props) {
+})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";justify-items:", ";text-align:", ";min-height:", ";align-items:center;background:", ";margin:0px;position:relative;", ";", ";", " ", " ", " ", " ", ""], function (props) {
   return props.layout ? props.layout.direction : "row";
 }, function (props) {
   return props.layout ? props.layout.justify : "flex-start";
@@ -63,13 +73,25 @@ var SectionWrapper = _styledComponents["default"].section.withConfig({
 }, function (props) {
   return props.overflowHidden && "overflow: hidden";
 }, function (props) {
-  return props.tombstone && "margin-bottom: -375px";
+  return props.tombstone && "padding-left: 20px;\n    padding-right: 20px;\n    h1 {margin-top: -150px;}\n  ";
 }, function (props) {
   return props.aboveFold && "min-height: 500px;\n    height: 70vh;\n    margin-bottom: 30px;";
 }, _media["default"].md(_templateObject(), function (props) {
-  return props.minHeightMd ? "".concat(props.minHeightMd, "px") : "800px";
+  return props.contentHeight && "min-height: 1px";
+}, function (props) {
+  return props.minHeightMd && "min-height: ".concat(props.minHeightMd, "px;");
+}, function (props) {
+  return props.aboveFold && "min-height: 500px;";
+}, function (props) {
+  return props.tombstone && "padding-left: 20px;\n    padding-right: 20px;\n    h1 {margin-top: -250px;}\n  ";
 }), _media["default"].sm(_templateObject2(), function (props) {
   return props.aboveFold && "min-height: 550px;\n    height: 550px;";
+}, function (props) {
+  return props.tombstone && "h1 {margin-top: -325px}";
+}, function (props) {
+  return props.contentHeight && "min-height: 1px";
+}), _media["default"].xs(_templateObject3(), function (props) {
+  return props.tombstone && "h1 {margin-top: -350px}";
 }));
 /**
  * Use `Section` to contain sections of content in the marketing site.
