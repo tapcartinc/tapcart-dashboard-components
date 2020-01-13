@@ -21,8 +21,18 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject() {
+function _templateObject2() {
   var data = _taggedTemplateLiteral(["\n    ", "\n  "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n  min-height: ", ";\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36,7 +46,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var SectionWrapper = _styledComponents["default"].section.withConfig({
   displayName: "Section__SectionWrapper",
   componentId: "sc-2ymk14-0"
-})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";justify-items:", ";text-align:", ";min-height:", ";align-items:center;background:", ";margin:0px;position:relative;", ";", ";", ";", " ", ""], function (props) {
+})(["width:100%;display:flex;flex-direction:", ";justify-content:", ";justify-items:", ";text-align:", ";min-height:", ";align-items:center;background:", ";margin:0px;position:relative;", ";", ";", ";", " ", " ", ""], function (props) {
   return props.layout ? props.layout.direction : "row";
 }, function (props) {
   return props.layout ? props.layout.justify : "flex-start";
@@ -56,7 +66,9 @@ var SectionWrapper = _styledComponents["default"].section.withConfig({
   return props.tombstone && "margin-bottom: -375px";
 }, function (props) {
   return props.aboveFold && "min-height: 500px;\n    height: 70vh;\n    margin-bottom: 30px;";
-}, _media["default"].sm(_templateObject(), function (props) {
+}, _media["default"].md(_templateObject(), function (props) {
+  return props.minHeightMd ? "".concat(props.minHeightMd, "px") : "800px";
+}), _media["default"].sm(_templateObject2(), function (props) {
   return props.aboveFold && "min-height: 550px;\n    height: 550px;";
 }));
 /**
