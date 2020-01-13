@@ -110,7 +110,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  padding-left: 3em;\n  padding-right: 3em;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  padding-left: 3em;\n  padding-right: 3em;\n  padding-top: 40px;\n  padding-bottom: 40px;\n  "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -136,7 +136,7 @@ var QuoteContainer = function QuoteContainer(props) {
     if (!highlighted) {
       return _react["default"].createElement("span", {
         style: {
-          color: 'white'
+          color: "white"
         }
       }, quote);
     }
@@ -159,7 +159,7 @@ var QuoteContainer = function QuoteContainer(props) {
       return _react["default"].createElement("span", {
         key: textSegment,
         style: {
-          color: idx === 1 ? _variables.colors.green : 'white'
+          color: idx === 1 ? _variables.colors.green : "white"
         }
       }, textSegment);
     });
@@ -175,8 +175,8 @@ var QuoteContainer = function QuoteContainer(props) {
   }, _react["default"].createElement("title", null, "top-right"), _react["default"].createElement("g", null, _react["default"].createElement("path", {
     d: "M180,140.3h2.6c18.7-.3,37.5-5.1,55.4-13v-87a243.5,243.5,0,0,1-27.2,60.3A250.5,250.5,0,0,1,180,140.3Z",
     style: {
-      fill: '#02018c',
-      opacity: '.3'
+      fill: "#02018c",
+      opacity: ".3"
     }
   }), _react["default"].createElement("path", {
     d: "M210.8,100.6A243.5,243.5,0,0,0,238,40.3V34.8a243.7,243.7,0,0,1-28.5,65,245.8,245.8,0,0,1-31.6,40.5H180A250.5,250.5,0,0,0,210.8,100.6Z",
@@ -184,14 +184,14 @@ var QuoteContainer = function QuoteContainer(props) {
   })), _react["default"].createElement("g", null, _react["default"].createElement("path", {
     d: "M221.4,0H0C9.9,14.9,20.4,29.5,31.4,43.2a161.8,161.8,0,0,0,65.8,14A162.9,162.9,0,0,0,221.4,0Z",
     style: {
-      fill: '#02018c',
-      opacity: '.3'
+      fill: "#02018c",
+      opacity: ".3"
     }
   }), _react["default"].createElement("path", {
     d: "M223.4,0A164.6,164.6,0,0,1,97.2,58.7a162.2,162.2,0,0,1-63.8-13l3.8,4.7c37.2,45,79.3,80.2,123.2,88.1a114.1,114.1,0,0,0,17.5,1.8,245.8,245.8,0,0,0,31.6-40.5,243.7,243.7,0,0,0,28.5-65V0Z",
     style: {
-      fill: '#02018c',
-      opacity: '.3'
+      fill: "#02018c",
+      opacity: ".3"
     }
   }), _react["default"].createElement("path", {
     d: "M33.4,45.7c1.2,1.6,2.5,3.2,3.8,4.7l-3.8-4.7Z",
@@ -204,7 +204,7 @@ var QuoteContainer = function QuoteContainer(props) {
     height: "280",
     width: "159",
     style: {
-      position: 'absolute'
+      position: "absolute"
     }
   }, _react["default"].createElement("defs", null, _react["default"].createElement("clipPath", {
     id: "a",
@@ -217,7 +217,7 @@ var QuoteContainer = function QuoteContainer(props) {
     fill: "none"
   }))), _react["default"].createElement("title", null, "bottom-left"), _react["default"].createElement("g", {
     style: {
-      clipPath: 'url(#a)'
+      clipPath: "url(#a)"
     }
   }, _react["default"].createElement("g", null, _react["default"].createElement("path", {
     d: "M43.3,108Q109.7,62.4,104.6-.7H-20V190.8Q-3.4,140.1,43.3,108Z",
@@ -228,21 +228,21 @@ var QuoteContainer = function QuoteContainer(props) {
     transform: "translate(20 0.7)",
     fill: "#fff",
     style: {
-      opacity: '0.36'
+      opacity: "0.36"
     }
   }), _react["default"].createElement("path", {
     d: "M45.9,45.2,47,46.6a142.2,142.2,0,0,1,49.1,3l.6-1.4A142.2,142.2,0,0,0,45.9,45.2Z",
     transform: "translate(20 0.7)",
     fill: "#ffffff",
     style: {
-      opacity: '0.36'
+      opacity: "0.36"
     }
   }), _react["default"].createElement("path", {
     d: "M47,46.6l-1.1-1.4A222.2,222.2,0,0,0-1.2-.7H-3.8a217.8,217.8,0,0,1,48,46.1l1.1,1.4A243,243,0,0,1,69.7,86.4a5.7,5.7,0,0,0,1.1-1.1A245.9,245.9,0,0,0,47,46.6Z",
     transform: "translate(20 0.7)",
     fill: "#ffffff",
     style: {
-      opacity: '0.36'
+      opacity: "0.36"
     }
   })))), _react["default"].createElement("svg", {
     className: "right",
@@ -318,7 +318,7 @@ var QuoteContainerWrapper = _styledComponents["default"].div.withConfig({
 var StyledQuoteContainer = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__StyledQuoteContainer",
   componentId: "sc-1jclz2n-2"
-})(["display:flex;padding:40px;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;box-sizing:border-box;position:relative;width:100%;margin-left:auto;margin-right:auto;padding-left:5em;padding-right:5em;max-width:", "px;", " ", " ", " ", ""], _sizes.sizes.xl, _media["default"].lg(_templateObject()), _media["default"].md(_templateObject2()), _media["default"].sm(_templateObject3()), _media["default"].xs(_templateObject4()));
+})(["display:flex;flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;box-sizing:border-box;position:relative;width:100%;margin-left:auto;margin-right:auto;padding-top:60px;padding-bottom:60px;padding-left:5em;padding-right:5em;max-width:", "px;", " ", " ", " ", ""], _sizes.sizes.xl, _media["default"].lg(_templateObject()), _media["default"].md(_templateObject2()), _media["default"].sm(_templateObject3()), _media["default"].xs(_templateObject4()));
 
 var ImageWrapper = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__ImageWrapper",
@@ -372,11 +372,11 @@ QuoteContainer.propTypes = {
   children: _propTypes.node.isRequired
 };
 QuoteContainer.defaultProps = {
-  person: '',
-  position: '',
-  logo: '',
-  image: '',
-  highlighted: ''
+  person: "",
+  position: "",
+  logo: "",
+  image: "",
+  highlighted: ""
 }; // person="Person Sited"
 // position="Person's Position"
 // logo="https://www.zatista.com/sitemap/email-images/logo-placeholder.jpg"

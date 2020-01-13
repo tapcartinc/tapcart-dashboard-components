@@ -14,6 +14,7 @@ import { Header, Subheader } from "../../lib/marketing/Typography";
 import { Row } from "../../lib/marketing/Row";
 import { Column } from "../../lib/marketing/Column";
 import { Container } from "../../lib/marketing/Container";
+import { boxShadow } from "../../lib/utils/_variables";
 
 export default {
   component: Column,
@@ -40,7 +41,12 @@ export const column = () => (
     <Section layout={centered}>
       <Container>
         <Row>
-          <Column cols={1} customWidth={60} style={{ border: "1px solid red" }}>
+          <Column
+            flushLeft
+            cols={1}
+            customWidth={60}
+            style={{ boxShadow: boxShadow.small }}
+          >
             <Header>Section Header</Header>
             <Subheader>Section Subheader</Subheader>
           </Column>
@@ -55,14 +61,19 @@ export const twoColumn = () => (
     <Section layout={centered}>
       <Container>
         <Row flushLeft responsiveReverse>
-          <Column cols={2} mobileCols={1} style={{ border: "1px solid red" }}>
+          <Column
+            flushLeft
+            cols={2}
+            mobileCols={1}
+            style={{ border: "1px solid red" }}
+          >
             <Header>Section Header</Header>
             <Subheader>Section Subheader</Subheader>
           </Column>
           <Column
+            flushLeft
             cols={2}
             mobileCols={1}
-            mobileCentered
             style={{ border: "1px solid pink" }}
           >
             <Header>Section Header</Header>

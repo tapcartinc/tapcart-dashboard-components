@@ -39,13 +39,13 @@ var RowWrapper = _styledComponents["default"].div.withConfig({
 })(["display:flex;flex-wrap:wrap;flex-grow:0;flex-shrink:0;align-items:center;flex-direction:row;justify-content:space-between;", " ", " ", " ", ""], function (props) {
   return props.positionRelative && "position: relative;";
 }, function (props) {
-  return props.noWrap && "flex-wrap: no-wrap;";
+  return props.noWrap && "flex-wrap: nowrap;";
 }, function (props) {
   return props.flushLeft && "align-items: flex-start;";
 }, _media["default"].md(_templateObject(), function (props) {
   return props.mobileCentered && "align-items: center;";
 }, function (props) {
-  return props.responsiveReverse && "section:nth-of-type(2) {\n    order: 1;\n    margin-top: 30px;\n  }\n    section:nth-of-type(1) {\n      order: 2;\n      margin-top: 30px;\n    }\n  }";
+  return props.responsiveReverse && "section:nth-of-type(2) {\n    order: 1;\n  }\n    section:nth-of-type(1) {\n      order: 2;\n      margin-top: 40px;\n    }\n  }";
 }));
 
 var Row = function Row(props) {

@@ -64,12 +64,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var ColumnWrapper = _styledComponents["default"].section.withConfig({
   displayName: "Column__ColumnWrapper",
   componentId: "qzbrba-0"
-})(["box-sizing:border-box;min-height:1px;position:relative;flex:0 0 ", "%;max-width:", "%;right:auto;left:auto;", ";", ";", " ", " ", " ", ""], function (props) {
+})(["box-sizing:border-box;min-height:1px;position:relative;flex:0 0 ", "%;max-width:", "%;right:auto;left:auto;", ";", ";", ";", " ", " ", " ", ""], function (props) {
   return 100 / props.cols;
 }, function (props) {
   return 100 / props.cols;
 }, function (props) {
   return props.customWidth && "max-width: ".concat(props.customWidth, "%; flex: 0 0 ").concat(props.customWidth, "%");
+}, function (props) {
+  return props.centered && "margin: 0 auto;";
 }, function (props) {
   return props.flushLeft && "display: flex; flex-direction: column; align-items: flex-start; flex-wrap: wrap";
 }, _media["default"].lg(_templateObject(), function (props) {
@@ -113,7 +115,8 @@ Column.propTypes = {
   customWidthMd: _propTypes["default"].number,
   customWidthSm: _propTypes["default"].number,
   customWidthXs: _propTypes["default"].number,
-  flushLeft: _propTypes["default"].bool
+  flushLeft: _propTypes["default"].bool,
+  centered: _propTypes["default"].bool
 };
 Column.defaultProps = {
   flushLeft: false

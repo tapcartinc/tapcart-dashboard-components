@@ -22,7 +22,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  "]);
+  var data = _taggedTemplateLiteral(["\n  ", "\n  "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  padding-left: 1em;\n  padding-right: 1em;\n  width: 100%;\n\n  ", ";\n\n  padding-top: ", ";\n  padding-bottom: ", ";\n\n  ", ";\n  "]);
+  var data = _taggedTemplateLiteral(["\n  padding-left: 1em;\n  padding-right: 1em;\n  width: 100%;\n  padding-top: 50px;\n  padding-bottom: 50px;\n\n  ", "\n\n  ", "\n  "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -42,7 +42,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  padding-top: 80px;\n  padding-bottom: 80px;\n  padding-left: 2em;\n  padding-right: 2em;\n\n  ", ";\n\n  padding-top: ", ";\n  padding-bottom: ", ";\n\n  ", ";\n  "]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  padding-top: 80px;\n  padding-bottom: 80px;\n  padding-left: 2em;\n  padding-right: 2em;\n  padding-top: 80px;\n  padding-bottom: 80px;\n\n\n  ", "\n\n\n  ", ";\n  "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -52,7 +52,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 0 auto;\n  padding-left: 3em;\n  padding-right: 3em;\n  ", ";\n\n  padding-top: ", ";\n  padding-bottom: ", ";\n\n", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  margin: 0 auto;\n  padding-left: 3em;\n  padding-right: 3em;\n  padding-top: 100px;\n  padding-bottom: 100px;\n\n  ", "\n\n", "\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -62,7 +62,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  padding-left: 2.5em;\n  padding-right: 2.5em;\n  ", ";\n  padding-top: ", ";\n  padding-bottom: ", ";\n\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  padding-left: 2.5em;\n  padding-right: 2.5em;\n  padding-top: 100px;\n  padding-bottom: 100px;\n\n  ", "\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -76,48 +76,28 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var ContainerWrapper = _styledComponents["default"].section.withConfig({
   displayName: "Container__ContainerWrapper",
   componentId: "yhgl5u-0"
-})(["box-sizing:border-box;position:relative;margin-left:auto;margin-right:auto;width:100%;max-width:", "px;padding-left:5em;padding-right:5em;", ";padding-top:", ";padding-bottom:", ";z-index:1;", ";button{", "}", ";", ";", ";", ";", ""], _sizes.sizes.xl, function (props) {
-  return props.customPadding && "padding: ".concat(props.customPadding, "px 5em");
+})(["box-sizing:border-box;position:relative;margin-left:auto;margin-right:auto;width:100%;max-width:", "px;padding-left:5em;padding-right:5em;padding-top:100px;padding-bottom:100px;", " z-index:1;", " button{", "}", ";", ";", ";", ";", ""], _sizes.sizes.xl, function (props) {
+  return props.customPadding && "padding-top: ".concat(props.customPadding[0], "px; padding-bottom: ").concat(props.customPadding[1], "px;");
 }, function (props) {
-  return props.customPaddingTop ? "".concat(props.customPaddingTop, "px") : "75px";
-}, function (props) {
-  return props.customPaddingBottom ? "".concat(props.customPaddingBottom, "px") : "75px";
-}, function (props) {
-  return props.customMargins && "margin-top: ".concat(props.customMargins[0], "px; margin-bottom: ").concat(props.customMargins[1], "px");
+  return props.customMargins && "margin-top: ".concat(props.customMargins[0], "px; margin-bottom: ").concat(props.customMargins[1], "px;");
 }, function (props) {
   return props.centered && "display: block !important; margin: 0 auto;";
 }, _media["default"].lg(_templateObject(), function (props) {
-  return props.customPadding && "padding: ".concat(props.customPadding, "px 2.5em");
-}, function (props) {
-  return props.customPaddingTop ? "".concat(props.customPaddingTop, "px") : "75px";
-}, function (props) {
-  return props.customPaddingBottom ? "".concat(props.customPaddingBottom, "px") : "75px";
+  return props.customPadding && "padding-top: ".concat(props.customPadding[0], "px; padding-bottom: ").concat(props.customPadding[1], "px;");
 }), _media["default"].md(_templateObject2(), function (props) {
-  return props.customPaddingMd && "padding: ".concat(props.customPaddingMd, "px 3em");
+  return props.customPaddingMd && "padding-top: ".concat(props.customPaddingMd[0], "px; padding-bottom: ").concat(props.customPaddingMd[1], "px;");
 }, function (props) {
-  return props.customPaddingTopMd ? "".concat(props.customPaddingTopMd, "px") : "100px";
-}, function (props) {
-  return props.customPaddingBottomMd ? "".concat(props.customPaddingBottomMd, "px") : "100px";
-}, function (props) {
-  return props.customMarginsMd && "margin-top: ".concat(props.customMarginsMd[0], "px; margin-bottom: ").concat(props.customMarginsMd[1], "px");
+  return props.customMarginsMd && "margin-top: ".concat(props.customMarginsMd[0], "px; margin-bottom: ").concat(props.customMarginsMd[1], "px;");
 }), _media["default"].sm(_templateObject3(), function (props) {
-  return props.customPaddingSm && "padding: ".concat(props.customPaddingSm, "px 2em");
+  return props.customPaddingSm && "padding-top: ".concat(props.customPaddingSm[0], "px; padding-bottom: ").concat(props.customPaddingSm[1], "px;");
 }, function (props) {
-  return props.customPaddingTopSm ? "".concat(props.customPaddingTopSm, "px") : "100px";
-}, function (props) {
-  return props.customPaddingBottomSm ? "".concat(props.customPaddingBottomSm, "px") : "100px";
-}, function (props) {
-  return props.customMarginsSm && "margin-top: ".concat(props.customMarginsSm[0], "px; margin-bottom: ").concat(props.customMarginsSm[1], "px");
+  return props.customMarginsSm && "margin-top: ".concat(props.customMarginsSm[0], "px; margin-bottom: ").concat(props.customMarginsSm[1], "px;");
 }), _media["default"].xs(_templateObject4(), function (props) {
-  return props.customPaddingXs && "padding: ".concat(props.customPaddingXs, "px 1em");
+  return props.customPaddingXs && "padding-top: ".concat(props.customPaddingXs[0], "px; padding-bottom: ").concat(props.customPaddingXs[1], "px;");
 }, function (props) {
-  return props.customPaddingTopXs ? "".concat(props.customPaddingTopXs, "px") : "40px";
-}, function (props) {
-  return props.customPaddingBottomXs ? "".concat(props.customPaddingBottomXs, "px") : "40px";
-}, function (props) {
-  return props.customMarginsXs && "margin-top: ".concat(props.customMarginsXs[0], "px; margin-bottom: ").concat(props.customMarginsXs[1], "px");
+  return props.customMarginsXs && "margin-top: ".concat(props.customMarginsXs[0], "px; margin-bottom: ").concat(props.customMarginsXs[1], "px;");
 }), _media["default"].unoCardSmall(_templateObject5(), function (props) {
-  return props.customMarginsXxs && "margin-top: ".concat(props.customMarginsXxs[0], "px; margin-bottom: ").concat(props.customMarginsXxs[1], "px");
+  return props.customMarginsXxs && "margin-top: ".concat(props.customMarginsXxs[0], "px; margin-bottom: ").concat(props.customMarginsXxs[1], "px;");
 }));
 /**
  * Use `Container` as the wrapper component of the `Row` component and all of the children within that component.
@@ -133,36 +113,35 @@ Container.propTypes = {
   /**
    * Control top and bottom padding of a container
    * Cannont change left and right padding of container for consistency purposes
-   * MUST BE GREATER THAN 0!!!
+   * First index is top padding; second index is bottom padding
    */
-  customPadding: _propTypes["default"].number,
+  customPadding: _propTypes["default"].array,
 
   /**
    * Control top and bottom padding of a container
    * Cannont change left and right padding of container for consistency purposes
-   * MUST BE GREATER THAN 0!!!
+   * First index is top padding; second index is bottom padding
    */
-  customPaddingMd: _propTypes["default"].number,
+  customPaddingMd: _propTypes["default"].array,
 
   /**
    * Control top and bottom padding of a container
    * Cannont change left and right padding of container for consistency purposes
-   * MUST BE GREATER THAN 0!!!
+   * First index is top padding; second index is bottom padding
    */
-  customPaddingSm: _propTypes["default"].number,
+  customPaddingSm: _propTypes["default"].array,
 
   /**
    * Control top and bottom padding of a container
    * Cannont change left and right padding of container for consistency purposes
-   * MUST BE GREATER THAN 0!!!
+   * First index is top padding; second index is bottom padding
    */
-  customPaddingXs: _propTypes["default"].number,
+  customPaddingXs: _propTypes["default"].array,
 
   /**
    * Control top and bottom margins of a container
    * Cannont change left and right margins of container for consistency purposes
    * First index is top margin; second index is bottom margin
-   * MUST BE GREATER THAN 0!!!
    */
   customMargins: _propTypes["default"].array
 };

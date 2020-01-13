@@ -71,7 +71,9 @@ var sofia = {
 };
 exports.sofia = sofia;
 var boxShadow = {
-  boxShadow: "0 2px 20px 0 rgba(0, 0, 0, 0.05)"
+  small: "0 2px 5px 0 rgba(0, 0, 0, 0.05),\n  0 2px 10px 0 rgba(0, 0, 0, 0.025),\n  0 2px 20px 0 rgba(0, 0, 0, 0.025)",
+  medium: "0 2px 10px 0 rgba(0, 0, 0, 0.05),\n  0 2px 20px 0 rgba(0, 0, 0, 0.025),\n  0 2px 30px 0 rgba(0, 0, 0, 0.025)",
+  large: "0 2px 30px 0 rgba(0, 0, 0, 0.05),\n  0 2px 50px 0 rgba(0, 0, 0, 0.025),\n  0 2px 70px 0 rgba(0, 0, 0, 0.025)"
 };
 exports.boxShadow = boxShadow;
 var margin = {

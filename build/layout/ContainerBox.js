@@ -42,14 +42,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var ContainerStyle = _styledComponents["default"].section.withConfig({
   displayName: "ContainerBox__ContainerStyle",
   componentId: "sc-1iq8jc5-0"
-})(["border-radius:3px;box-shadow:", ";background:", ";width:", ";", ";", ";", ""], _variables.boxShadow.boxShadow, function (props) {
-  return props.bg ? (0, _functions.getColors)(props.bg) : 'white';
+})(["border-radius:3px;box-shadow:", ";background:", ";width:", ";", ";", ";", ""], _variables.boxShadow.medium, function (props) {
+  return props.bg ? (0, _functions.getColors)(props.bg) : "white";
 }, function (props) {
-  return props.columns ? "".concat(100 / props.columns - 1.5, "%") : '100%';
+  return props.columns ? "".concat(100 / props.columns - 1.5, "%") : "100%";
 }, _media["default"].md(_templateObject(), function (props) {
-  return props.tablet ? "".concat(100 / props.tablet - 1.5, "%") : '100%';
+  return props.tablet ? "".concat(100 / props.tablet - 1.5, "%") : "100%";
 }), _media["default"].smxs(_templateObject2(), function (props) {
-  return props.mobile ? "".concat(100 / props.mobile, "%") : '100%';
+  return props.mobile ? "".concat(100 / props.mobile, "%") : "100%";
 }), function (props) {
   return props.style ? props.style : null;
 });
