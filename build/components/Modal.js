@@ -17,6 +17,8 @@ var _Button = require("../elements/Button");
 
 var _Icon = require("../elements/Icon");
 
+var _variables = require("../utils/_variables");
+
 var _nukaCarousel = _interopRequireDefault(require("nuka-carousel"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -162,6 +164,7 @@ function ModalType(props) {
           marginLeft: 15
         }
       }, props.title)), _react["default"].createElement(CloseIcon, {
+        fill: _variables.colors.grayText,
         type: "small-close",
         onClick: props.closeModal
       })), _react["default"].createElement("div", {
@@ -260,7 +263,7 @@ var ModalWithGraphic = (0, _styledComponents["default"])(ModalStyle).withConfig(
 var MinimalModalStyle = (0, _styledComponents["default"])(ModalStyle).withConfig({
   displayName: "Modal__MinimalModalStyle",
   componentId: "sc-1fnp8gl-3"
-})(["width:450px;padding:25px;", ""], function (props) {
+})(["width:500px;padding-top:19px;padding-left:19px;padding-bottom:20px;padding-right:20px;", ""], function (props) {
   return props.style ? props.style : null;
 });
 var FullscreenModal = (0, _styledComponents["default"])(ModalStyle).withConfig({
