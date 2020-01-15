@@ -29,13 +29,13 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var options = ["primary", "primary--reversed", "secondary", "transparent--blue", "transparent--green", "transparent--red", "transparent--white", "save", "save--reversed", "delete", "delete--reversed", "inverted", "inverted--reversed", "secondary--green"];
 
-var StyledButton = _styledComponents["default"].button.attrs(function (props) {
+var StyledButtonWrapper = _styledComponents["default"].button.attrs(function (props) {
   var type = options.includes(props.type) ? props.type : "primary";
   return {
     type: type
   };
 }).withConfig({
-  displayName: "Button__StyledButton",
+  displayName: "Button__StyledButtonWrapper",
   componentId: "sc-12aqe4e-0"
 })(["border-radius:3px;flex-direction:row;align-items:center;justify-items:center;font-size:14px;", ";text-transform:uppercase;line-height:1.5;letter-spacing:1px;padding-top:12px;padding-bottom:12px;z-index:3;padding-right:", ";padding-left:", ";outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " a{font-size:14px;", ";", " text-decoration:none;box-shadow:none;}img{margin-right:4px;margin-left:4px;}position:relative;display:flex;justify-content:center;", " ", ";", ""], _variables.sofia.sofiaMedium, function (props) {
   return props.type.includes("transparent") ? "0px" : "20px";
@@ -57,7 +57,7 @@ var Button = function Button(_ref) {
   var label = _ref.label,
       props = _objectWithoutProperties(_ref, ["label"]);
 
-  return _react["default"].createElement(StyledButton, props, props.isLoading && !props.isDisabled ? _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Loader, props), _react["default"].createElement("div", {
+  return _react["default"].createElement(StyledButtonWrapper, props, props.isLoading && !props.isDisabled ? _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Loader, props), _react["default"].createElement("div", {
     style: {
       color: "transparent"
     }

@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 var _exportNames = {
   Icon: true,
   Button: true,
-  Loader: true,
   LinkTag: true,
   IconButton: true,
+  Loader: true,
   H1: true,
   H2: true,
   H3: true,
@@ -74,12 +74,6 @@ Object.defineProperty(exports, "Button", {
     return _Button.Button;
   }
 });
-Object.defineProperty(exports, "Loader", {
-  enumerable: true,
-  get: function get() {
-    return _Loader.Loader;
-  }
-});
 Object.defineProperty(exports, "LinkTag", {
   enumerable: true,
   get: function get() {
@@ -90,6 +84,12 @@ Object.defineProperty(exports, "IconButton", {
   enumerable: true,
   get: function get() {
     return _IconButton.IconButton;
+  }
+});
+Object.defineProperty(exports, "Loader", {
+  enumerable: true,
+  get: function get() {
+    return _Loader.Loader;
   }
 });
 Object.defineProperty(exports, "H1", {
@@ -409,11 +409,11 @@ var _Icon = require("./elements/Icon");
 
 var _Button = require("./elements/Button");
 
-var _Loader = require("./elements/Loader");
-
 var _LinkTag = require("./elements/LinkTag");
 
 var _IconButton = require("./elements/IconButton");
+
+var _Loader = require("./elements/Loader");
 
 var _Typography = require("./elements/Typography");
 
