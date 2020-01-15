@@ -92,6 +92,12 @@ var getColors = function getColors(type) {
         background: "transparent"
       };
 
+    case "transparent--gray":
+      return {
+        color: _variables.colors.grayText,
+        background: "transparent"
+      };
+
     case "secondary--green":
       return {
         color: "white",
