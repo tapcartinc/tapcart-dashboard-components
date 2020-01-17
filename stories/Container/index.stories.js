@@ -23,7 +23,7 @@ export default {
 export const container = () => (
   <ThemeProvider theme={base}>
     <Section layout={centered}>
-      <Container customPadding={1}>
+      <Container customPadding={[1, 1]}>
         <Row>
           <Column cols={1}>
             <Header>Section Header</Header>

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 var _exportNames = {
   Icon: true,
   Button: true,
+  DashIcon: true,
   LinkTag: true,
   IconButton: true,
   Loader: true,
@@ -43,6 +44,9 @@ var _exportNames = {
   sofia: true,
   circular: true,
   boxShadow: true,
+  sofiaPro: true,
+  circularStd: true,
+  colorPicker: true,
   transition: true,
   hover: true,
   onClickTransition: true,
@@ -72,6 +76,12 @@ Object.defineProperty(exports, "Button", {
   enumerable: true,
   get: function get() {
     return _Button.Button;
+  }
+});
+Object.defineProperty(exports, "DashIcon", {
+  enumerable: true,
+  get: function get() {
+    return _DashIcon.DashIcon;
   }
 });
 Object.defineProperty(exports, "LinkTag", {
@@ -296,6 +306,24 @@ Object.defineProperty(exports, "boxShadow", {
     return _variables.boxShadow;
   }
 });
+Object.defineProperty(exports, "sofiaPro", {
+  enumerable: true,
+  get: function get() {
+    return _dashVariables.sofiaPro;
+  }
+});
+Object.defineProperty(exports, "circularStd", {
+  enumerable: true,
+  get: function get() {
+    return _dashVariables.circularStd;
+  }
+});
+Object.defineProperty(exports, "colorPicker", {
+  enumerable: true,
+  get: function get() {
+    return _dashVariables.colorPicker;
+  }
+});
 Object.defineProperty(exports, "transition", {
   enumerable: true,
   get: function get() {
@@ -409,6 +437,8 @@ var _Icon = require("./elements/Icon");
 
 var _Button = require("./elements/Button");
 
+var _DashIcon = require("./elements/DashIcon");
+
 var _LinkTag = require("./elements/LinkTag");
 
 var _IconButton = require("./elements/IconButton");
@@ -454,6 +484,8 @@ var _DottedLineContainer = require("./layout/DottedLineContainer");
 var _ProTip = require("./layout/ProTip");
 
 var _variables = require("./utils/_variables");
+
+var _dashVariables = require("./utils/_dashVariables");
 
 var _animations = require("./utils/_animations");
 

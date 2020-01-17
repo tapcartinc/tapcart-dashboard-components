@@ -17,6 +17,8 @@ var _Icon = require("../elements/Icon");
 
 var _ContainerBox = require("../layout/ContainerBox");
 
+var _dashVariables = require("../utils/_dashVariables");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -79,58 +81,62 @@ function (_Component) {
 
       var SegmentedControlType = function SegmentedControlType(props) {
         switch (props.type) {
-          case 'primary':
+          case "primary":
             return _react["default"].createElement(_ContainerBox.ContainerBox, {
               style: {
                 marginTop: 30,
                 marginBottom: 30
               }
-            }, _react["default"].createElement(SegmentedControlStyle, props, Object.keys(props.items).map(function (key) {
-              return _react["default"].createElement(Tab, _extends({}, props, {
+            }, _react["default"].createElement(SegmentedControlStyle, null, Object.keys(props.items).map(function (key) {
+              return _react["default"].createElement(Tab, {
+                key: key,
+                current: props.current,
                 htmlFor: "".concat(key),
                 style: {
-                  display: 'flex',
-                  flexDirection: 'column'
+                  display: "flex",
+                  flexDirection: "column"
                 }
-              }), props.hasIcons && _react["default"].createElement("div", {
+              }, props.hasIcons && _react["default"].createElement("div", {
                 style: {
                   marginBottom: 3
                 }
               }, _react["default"].createElement(_Icon.Icon, {
                 type: props.icons[key],
-                fill: props.current === key ? 'white' : 'blue'
+                fill: props.current === key ? "white" : "blue"
               })), props.items[key], _react["default"].createElement("input", {
                 type: "radio",
                 value: key,
                 id: "".concat(key),
                 name: props.name,
                 style: {
-                  visibility: 'hidden',
-                  width: '100%',
-                  height: '100%',
-                  border: ' 1px solid #000',
-                  margin: '0',
-                  position: 'absolute'
+                  visibility: "hidden",
+                  width: "100%",
+                  height: "100%",
+                  border: " 1px solid #000",
+                  margin: "0",
+                  position: "absolute"
                 },
                 onClick: props.clickHandler
               }));
             })));
 
-          case 'secondary':
-            return _react["default"].createElement(SecondaryControlStyle, props, _react["default"].createElement(SegmentedControlTabs, _extends({
+          case "secondary":
+            return _react["default"].createElement(SecondaryControlStyle, null, _react["default"].createElement(SegmentedControlTabs, {
               style: {
-                display: 'flex',
-                width: '100%',
+                display: "flex",
+                width: "100%",
                 boxShadow: "inset 0 0 0 1px ".concat(_variables.colors.bluegray),
-                borderRadius: '3px',
+                borderRadius: "3px",
                 sofiaRegular: sofiaRegular
               }
-            }, props), Object.keys(props.items).map(function (key) {
-              return _react["default"].createElement(SecondaryTab, _extends({
-                htmlFor: "".concat(key)
-              }, props), props.hasIcons && _react["default"].createElement("div", null, _react["default"].createElement(_Icon.Icon, {
+            }, Object.keys(props.items).map(function (key) {
+              return _react["default"].createElement(SecondaryTab, {
+                key: key,
+                htmlFor: "".concat(key),
+                current: props.current
+              }, props.hasIcons && _react["default"].createElement("div", null, _react["default"].createElement(_Icon.Icon, {
                 type: props.icons[key],
-                fill: props.current === key ? 'blue' : 'lightblue',
+                fill: props.current === key ? "blue" : "lightblue",
                 style: {
                   marginRight: 10
                 }
@@ -141,12 +147,37 @@ function (_Component) {
                 name: props.name,
                 onClick: props.clickHandler,
                 style: {
-                  visibility: 'hidden',
-                  width: '100%',
-                  height: '100%',
-                  border: ' 1px solid #000',
-                  margin: '0',
-                  position: 'absolute'
+                  visibility: "hidden",
+                  width: "100%",
+                  height: "100%",
+                  border: " 1px solid #000",
+                  margin: "0",
+                  position: "absolute"
+                }
+              }));
+            })));
+
+          case "field":
+            return _react["default"].createElement(FieldSegmentedControl, {
+              style: props.style
+            }, _react["default"].createElement(FieldSegmentedControlTabs, null, Object.keys(props.items).map(function (key) {
+              return _react["default"].createElement(FieldTab, {
+                key: key,
+                htmlFor: "".concat(key),
+                current: props.current
+              }, props.items[key], _react["default"].createElement("input", {
+                type: "radio",
+                value: key,
+                id: "".concat(key),
+                name: props.name,
+                onClick: props.clickHandler,
+                style: {
+                  visibility: "hidden",
+                  width: "100%",
+                  height: "100%",
+                  border: " 1px solid #000",
+                  margin: "0",
+                  position: "absolute"
                 }
               }));
             })));
@@ -156,7 +187,7 @@ function (_Component) {
         }
       };
 
-      var hasIcons = this.props.hasOwnProperty('icons');
+      var hasIcons = this.props.hasOwnProperty("icons");
       return _react["default"].createElement(SegmentedControlType, _extends({}, this.props, {
         hasIcons: hasIcons,
         clickHandler: this.clickHandler
@@ -169,37 +200,54 @@ function (_Component) {
 
 exports.SegmentedControl = SegmentedControl;
 
+var FieldSegmentedControl = _styledComponents["default"].div.withConfig({
+  displayName: "SegmentedControl__FieldSegmentedControl",
+  componentId: "w55qep-0"
+})(["", ";height:38px;border-radius:3px;background:", ";width:100%;overflow:hidden;text-align:center;margin:auto;border:1px solid ", ";font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:300;"], _dashVariables.sofiaPro.light, function (props) {
+  return props.bgColor ? props.bgColor : "transparent";
+}, _variables.colors.blue);
+
+var FieldSegmentedControlTabs = _styledComponents["default"].div.withConfig({
+  displayName: "SegmentedControl__FieldSegmentedControlTabs",
+  componentId: "w55qep-1"
+})(["width:100%;display:flex;flex-direction:row;justify-items:space-between;"]);
+
+var FieldTab = _styledComponents["default"].label.withConfig({
+  displayName: "SegmentedControl__FieldTab",
+  componentId: "w55qep-2"
+})(["flex:1;height:38px;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:400;font-style:normal;font-size:14px;letter-spacing:1px;", ""], function (props) {
+  return props.current === props.htmlFor ? "\n    background: ".concat(_variables.colors.blue, ";\n    color: #fff;\n    border-radius: 2px;\n  ") : "color: ".concat(_variables.colors.blue, ";");
+});
+
 var SegmentedControlTabs = _styledComponents["default"].div.withConfig({
   displayName: "SegmentedControl__SegmentedControlTabs",
-  componentId: "w55qep-0"
+  componentId: "w55qep-3"
 })(["width:100%;display:flex;flex-direction:row;justify-items:space-between;"]);
 
 var SegmentedControlStyle = _styledComponents["default"].div.withConfig({
   displayName: "SegmentedControl__SegmentedControlStyle",
-  componentId: "w55qep-1"
+  componentId: "w55qep-4"
 })(["margin:auto;overflow:hidden;height:100%;display:flex;flex-direction:row;justify-items:space-between;width:100%;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
 var SecondaryControlStyle = _styledComponents["default"].div.withConfig({
   displayName: "SegmentedControl__SecondaryControlStyle",
-  componentId: "w55qep-2"
+  componentId: "w55qep-5"
 })(["margin:0px;max-width:450px;overflow:hidden;display:flex;flex-direction:row;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
 var Tab = _styledComponents["default"].label.withConfig({
   displayName: "SegmentedControl__Tab",
-  componentId: "w55qep-3"
-})(["color:#000;font-size:15px;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-style:normal;padding:20px;letter-spacing:0.5px;", " ", ";&:hover{cursor:pointer;}"], _animations.onClickTransition, function (props) {
+  componentId: "w55qep-6"
+})(["color:#000;font-size:15px;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-style:normal;padding:20px;letter-spacing:0.5px;", ";&:hover{cursor:pointer;}"], function (props) {
   return props.current === props.htmlFor && "background: #3235ab;\n    color: #fff;\n    border-radius: 3px;\n    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);";
 });
 
 var SecondaryTab = _styledComponents["default"].label.withConfig({
   displayName: "SegmentedControl__SecondaryTab",
-  componentId: "w55qep-4"
-})(["flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:normal;font-style:normal;padding:", ";letter-spacing:0.5px;color:#a2a4dd;font-size:14px;width:100%;transition:ease-out 0.2s;border:1px solid transparent;", " &:hover{cursor:pointer;}"], function (props) {
-  return props.hasIcons ? '10px' : '20px';
-}, function (props) {
+  componentId: "w55qep-7"
+})(["flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:normal;font-style:normal;padding:10px;letter-spacing:0.5px;color:#a2a4dd;font-size:14px;width:100%;transition:ease-out 0.2s;border:1px solid transparent;", " &:hover{cursor:pointer;}"], function (props) {
   return props.current === props.htmlFor && "background: #fff;\n    color: #3235ab;\n    border-radius: 3px;\n    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);\n    opacity: 1;\n    border: 1px solid #3235ab;\n    ";
 });

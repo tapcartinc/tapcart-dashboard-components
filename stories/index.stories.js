@@ -8,3 +8,4 @@ export * from "./Section/index.stories";
 export * from "./Container/index.stories";
 export * from "./Row/index.stories";
 export * from "./Modal/index.stories";
+export * from "./SegmentedControl/index.stories";

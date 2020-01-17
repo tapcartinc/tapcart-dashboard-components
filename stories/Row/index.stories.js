@@ -22,7 +22,7 @@ export default {
 export const container = () => (
   <ThemeProvider theme={base}>
     <Section layout={leftAlign} minHeight={300}>
-      <Container customPadding={1}>
+      <Container customPadding={[1, 1]}>
         <Row
           flushLeft={boolean("flushLeft", false)}
           mobileCentered={boolean("mobileCentered", false)}
