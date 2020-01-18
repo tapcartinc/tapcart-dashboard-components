@@ -15,6 +15,12 @@ var getColors = function getColors(type) {
         background: _variables.colors.blue
       };
 
+    case "submit":
+      return {
+        color: "#FFFFFF",
+        background: _variables.colors.blue
+      };
+
     case "primary--reversed":
       return {
         background: "transparent",
@@ -211,6 +217,9 @@ exports.getColors = getColors;
 var getBorder = function getBorder(type) {
   switch (type) {
     case "primary":
+      return "0px";
+
+    case "submit":
       return "0px";
 
     case "secondary":

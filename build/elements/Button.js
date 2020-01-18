@@ -27,7 +27,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var options = ["primary", "primary--reversed", "secondary", "transparent--blue", "transparent--green", "transparent--red", "transparent--white", "save", "save--reversed", "delete", "delete--reversed", "inverted", "inverted--reversed", "secondary--green"];
+var options = ["primary", "primary--reversed", "secondary", "transparent--blue", "transparent--green", "transparent--red", "transparent--white", "save", "save--reversed", "delete", "delete--reversed", "inverted", "inverted--reversed", "secondary--green", "submit"];
 
 var StyledButtonWrapper = _styledComponents["default"].button.attrs(function (props) {
   var type = options.includes(props.type) ? props.type : "primary";
