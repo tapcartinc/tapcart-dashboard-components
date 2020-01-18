@@ -103,7 +103,7 @@ function (_Component) {
 
 var _default = Accordion;
 exports["default"] = _default;
-var accordionIconOptions = 'plus/minus';
+var accordionIconOptions = "plus/minus";
 Accordion.propTypes = {
   boxShadow: _propTypes["default"].bool,
   toggleIcons: _propTypes["default"].oneOfType(accordionIconOptions),

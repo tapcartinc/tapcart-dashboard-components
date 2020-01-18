@@ -51,7 +51,8 @@ Input.propTypes = {
   value: _propTypes["default"].string.isRequired,
   name: _propTypes["default"].string,
   placeholder: _propTypes["default"].string,
-  onChange: _propTypes["default"].func
+  onChange: _propTypes["default"].func,
+  label: _propTypes["default"].string
 };
 Input.defaultProps = {
   error: false,

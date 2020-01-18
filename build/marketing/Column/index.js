@@ -73,7 +73,7 @@ var ColumnWrapper = _styledComponents["default"].section.withConfig({
 }, function (props) {
   return props.centered && "margin: 0 auto";
 }, function (props) {
-  return props.flushLeft && "display: flex; flex-direction: column; align-items: flex-start; flex-wrap: wrap";
+  return props.flushLeft && "text-align: left;  display: flex; flex-direction: column; align-items: flex-start; flex-wrap: wrap";
 }, _media["default"].lg(_templateObject(), function (props) {
   return props.customWidthLg && "max-width: ".concat(props.customWidthLg, "%; flex: 0 0 ").concat(props.customWidthLg, "%");
 }), _media["default"].md(_templateObject2(), function (props) {
@@ -85,7 +85,7 @@ var ColumnWrapper = _styledComponents["default"].section.withConfig({
 }, function (props) {
   return props.customWidthMd && "max-width: ".concat(props.customWidthMd, "%; flex: 0 0 ").concat(props.customWidthMd, "%");
 }, function (props) {
-  return props.mobileCentered && "align-items: center; display: flex;";
+  return props.mobileCentered && "text-align: center; align-items: center; display: flex;";
 }), _media["default"].sm(_templateObject3(), function (props) {
   return props.customWidthSm && "max-width: ".concat(props.customWidthSm, "%; flex: 0 0 ").concat(props.customWidthSm, "%");
 }), _media["default"].xs(_templateObject4(), function (props) {

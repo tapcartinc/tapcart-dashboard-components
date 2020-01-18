@@ -4,7 +4,7 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
 export default {
   component: QuoteContainer,
-  title: "QuoteContainer",
+  title: "Components/QuoteContainer",
   decorators: [withKnobs]
 };
 

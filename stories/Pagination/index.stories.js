@@ -4,38 +4,12 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
 export default {
   component: Pagination,
-  title: "Pagination",
+  title: "Components/Pagination",
   decorators: [withKnobs]
 };
 
 export const pagination = props => (
   <>
-    <br />
-    top
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
     <br />
     <Pagination
       totalRecords={150}

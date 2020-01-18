@@ -42,10 +42,10 @@ export const column = () => (
       <Container>
         <Row>
           <Column
-            flushLeft
-            cols={1}
-            customWidth={60}
-            style={{ boxShadow: boxShadow.small }}
+            flushLeft={boolean("flushLeft", false)}
+            mobileCentered={boolean("mobileCentered", false)}
+            cols={number("number", 1)}
+            style={{ border: `1px solid red` }}
           >
             <Header>Section Header</Header>
             <Subheader>Section Subheader</Subheader>
@@ -62,18 +62,66 @@ export const twoColumn = () => (
       <Container>
         <Row flushLeft responsiveReverse>
           <Column
-            flushLeft
-            cols={2}
-            mobileCols={1}
-            style={{ border: "1px solid red" }}
+            flushLeft={boolean("flushLeft", false)}
+            mobileCentered={boolean("mobileCentered", false)}
+            cols={number("number", 1)}
+            mobileCols={number("number", 1)}
+            customWidth={number("customWidth", 42)}
+            customWidthMd={number("customWidthMd", 100)}
+            customWidthSm={number("customWidthSm", 100)}
+            style={{ border: `1px solid red` }}
           >
             <Header>Section Header</Header>
             <Subheader>Section Subheader</Subheader>
           </Column>
           <Column
-            flushLeft
-            cols={2}
-            mobileCols={1}
+            flushLeft={boolean("flushLeft", false)}
+            mobileCentered={boolean("mobileCentered", false)}
+            cols={number("number", 1)}
+            mobileCols={number("number", 1)}
+            customWidth={number("customWidth", 42)}
+            customWidthMd={number("customWidthMd", 100)}
+            customWidthSm={number("customWidthSm", 100)}
+            style={{ border: "1px solid pink" }}
+          >
+            <Header>Section Header</Header>
+            <Subheader>Section Subheader</Subheader>
+          </Column>
+        </Row>
+      </Container>
+    </Section>
+  </ThemeProvider>
+);
+export const threeColumn = () => (
+  <ThemeProvider theme={base}>
+    <Section layout={centered}>
+      <Container>
+        <Row flushLeft responsiveReverse>
+          <Column
+            flushLeft={boolean("flushLeft", false)}
+            mobileCentered={boolean("mobileCentered", false)}
+            cols={number("number", 3)}
+            mobileCols={number("number", 1)}
+            style={{ border: `1px solid red` }}
+          >
+            <Header>Section Header</Header>
+            <Subheader>Section Subheader</Subheader>
+          </Column>
+          <Column
+            flushLeft={boolean("flushLeft", false)}
+            mobileCentered={boolean("mobileCentered", false)}
+            cols={number("number", 3)}
+            mobileCols={number("number", 1)}
+            style={{ border: "1px solid pink" }}
+          >
+            <Header>Section Header</Header>
+            <Subheader>Section Subheader</Subheader>
+          </Column>
+          <Column
+            flushLeft={boolean("flushLeft", false)}
+            mobileCentered={boolean("mobileCentered", false)}
+            cols={number("number", 3)}
+            mobileCols={number("number", 1)}
             style={{ border: "1px solid pink" }}
           >
             <Header>Section Header</Header>

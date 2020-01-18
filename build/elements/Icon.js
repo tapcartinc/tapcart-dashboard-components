@@ -13,6 +13,8 @@ var _functions = require("../utils/_functions");
 
 var _variables = require("../utils/_variables");
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -4125,3 +4127,18 @@ var SVG = _styledComponents["default"].svg.withConfig({
 }, function (props) {
   return props.style ? props.style : null;
 });
+
+Icon.propTypes = {
+  type: _propTypes["default"].string.isRequired,
+  iconRight: _propTypes["default"].bool,
+  iconLeft: _propTypes["default"].bool,
+  fill: _propTypes["default"].string,
+  circleIcon: _propTypes["default"].bool,
+  backgroundColor: _propTypes["default"].string
+};
+Icon.defaultProps = {
+  iconRight: false,
+  iconLeft: false,
+  circleIcon: false,
+  backgroundColor: _variables.colors.blue25
+};

@@ -5,7 +5,7 @@ import { Breadcrumbs } from "../../lib/components/Breadcrumbs/index";
 
 export default {
   component: Breadcrumbs,
-  title: "Breadcrumbs",
+  title: "Components/Breadcrumbs",
   decorators: [withKnobs]
 };
 

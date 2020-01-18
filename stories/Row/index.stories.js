@@ -19,7 +19,7 @@ export default {
   decorators: [withKnobs]
 };
 
-export const container = () => (
+export const row = () => (
   <ThemeProvider theme={base}>
     <Section layout={leftAlign} minHeight={300}>
       <Container customPadding={[1, 1]}>
@@ -30,7 +30,7 @@ export const container = () => (
           responsiveReverse={boolean("responsiveReverse", false)}
           noWrap={boolean("noWrap", false)}
         >
-          <Column cols={2} mobileCols={1}>
+          <Column mobileCentered cols={2} mobileCols={1}>
             <Header>Section one</Header>
             <Subheader>Section Subheader</Subheader>
           </Column>

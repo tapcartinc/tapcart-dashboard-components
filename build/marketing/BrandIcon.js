@@ -9,20 +9,12 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-// <BrandAbstractIconWrapper {...props}>
-// <BrandAbstractIconSVG
-//   {...props}
-//   viewBox="0 0 75 54"
-//   version="1.1"
-//   xmlns="http://www.w3.org/2000/svg"
-// >
-//   </BrandAbstractIconSVG>
-//   </BrandAbstractIconWrapper>
-//import './.css';
 var BrandIcon = function BrandIcon(props) {
   var type = props.type,
       fill = props.fill;
@@ -2589,3 +2581,15 @@ var BrandBasicIconSVG = _styledComponents["default"].svg.withConfig({
 }, function (props) {
   return props.style ? props.style : null;
 });
+
+BrandIcon.propTypes = {
+  type: _propTypes["default"].string.isRequired,
+  iconRight: _propTypes["default"].bool,
+  iconLeft: _propTypes["default"].bool,
+  fill: _propTypes["default"].string
+};
+BrandIcon.defaultProps = {
+  iconRight: false,
+  iconLeft: false,
+  circleIcon: false
+};
