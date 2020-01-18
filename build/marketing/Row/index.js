@@ -20,7 +20,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  justify-content: center;\n  ", "\n  ", "\n  "]);
+  var data = _taggedTemplateLiteral(["\n  justify-content: center;\n  ", "\n\n  ", "\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43,7 +43,7 @@ var RowWrapper = _styledComponents["default"].div.withConfig({
 }, _media["default"].md(_templateObject(), function (props) {
   return props.mobileCentered && "align-items: center; flex-direction: column; margin: 0 auto;";
 }, function (props) {
-  return props.responsiveReverse && "section:nth-of-type(2) {\n    order: 1;\n  }\n    section:nth-of-type(1) {\n      order: 2;\n      margin-top: 40px;\n    }\n  }";
+  return props.responsiveReverse && "section:nth-of-type(2){order: 1;}section:nth-of-type(1){order: 2;margin-top: 40px;}";
 }));
 
 var Row = function Row(props) {

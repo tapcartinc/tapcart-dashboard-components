@@ -13,6 +13,8 @@ var _Icon = require("../elements/Icon");
 
 var _variables = require("../utils/_variables");
 
+var _propTypes = _interopRequireWildcard(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -122,3 +124,8 @@ var DropdownHeader = _styledComponents["default"].div.withConfig({
 })(["margin-left:10px;&:hover{cursor:pointer;}", ";"], function (props) {
   return props.style ? props.style : null;
 });
+
+ClickDropdown.propTypes = {
+  options: _propTypes["default"].array.isRequired
+};
+ClickDropdown.defaultProps = {};

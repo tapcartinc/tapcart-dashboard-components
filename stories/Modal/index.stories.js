@@ -13,7 +13,7 @@ export default {
   decorators: [withKnobs]
 };
 
-export const modal = () => {
+export const alertModal = () => {
   const [open, toggleModal] = useState(false);
   return (
     <>
@@ -51,43 +51,138 @@ export const modal = () => {
         </Body>
       </Modal>
     </>
-    // <StyledButtonRow>
-    //   <Button
-    //     type="primary"
-    //     isLoading={boolean("Loading", false)}
-    //     onClick={action("clicked")}
-    //   >
-    //     Primary
-    //   </Button>
-    //   <Button type="secondary" onClick={action("clicked")}>
-    //     Secondary
-    //   </Button>
-    //   <Button type="delete" onClick={action("clicked")}>
-    //     Delete
-    //   </Button>
-    //   <Button type="save" onClick={action("clicked")}>
-    //     Save
-    //   </Button>
-    //   <Button
-    //     type="inverted"
-    //     isLoading={boolean("Loading Button", true)}
-    //     onClick={action("clicked")}
-    //   >
-    //     Loading Button
-    //   </Button>
-    //   <Button
-    //     type="primary--reversed"
-    //     isDisabled={boolean("Disabled Button", true)}
-    //     onClick={action("clicked")}
-    //   >
-    //     Disabled
-    //   </Button>
-    //   <Button type="transparent--white" onClick={action("clicked")}>
-    //     {text("Change Button Text", "Change Button Text")}
-    //   </Button>
-    //   <Button type="inverted--reversed" onClick={action("clicked")}>
-    //     Icon Button <Icon type="design" fill="white" iconRight />
-    //   </Button>
-    // </StyledButtonRow>
   );
 };
+
+export const modalWithGraphic = () => {
+  const [graphicModal, toggleGraphicModal] = useState(false);
+  const [catPic, changeCatPicture] = React.useState(
+    "https://media.mnn.com/assets/images/2016/01/manny-selfie-cat-01.jpg.320x0_q80_crop-smart.jpg"
+  );
+  return (
+    <>
+      <Button type="save" onClick={() => toggleGraphicModal(!graphicModal)}>
+        open graphic modal
+      </Button>
+      <Modal
+        isOpen={graphicModal}
+        closeModal={() => toggleGraphicModal(false)}
+        type="modal-with-graphic"
+        icon="design"
+        title="Change the Cat Selfie"
+        buttons={[
+          {
+            button: "Cat 1",
+            onClick: () => {
+              changeCatPicture(
+                "https://media.mnn.com/assets/images/2016/01/manny-selfie-cat-01.jpg.320x0_q80_crop-smart.jpg"
+              );
+            },
+            type: "primary"
+          },
+          {
+            button: "Cat 2",
+            onClick: () => {
+              changeCatPicture(
+                "https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555352727/shape/mentalfloss/46eyrdfh.png"
+              );
+            },
+            type: "secondary"
+          },
+          {
+            button: "Cat 3",
+            onClick: () => {
+              changeCatPicture(
+                "https://freeyork.org/wp-content/uploads/2016/09/manny-selfie-cat-fy-2.jpg"
+              );
+            },
+            type: "delete"
+          }
+        ]}
+        graphic={catPic}
+      >
+        <Body color={colors.black}>Want to change the cat selfie?</Body>
+        <Body color={colors.grayText}>
+          Click on a button below to select the selfie of your preference.
+        </Body>
+      </Modal>
+    </>
+  );
+};
+
+// export const sliderModal = props => {
+//   const [sliderModal, toggleSliderModal] = useState(false);
+//   const slides = [
+//     {
+//       graphic:
+//         "https://storage.googleapis.com/tapcart-150607.appspot.com/9f2daed5959e344241f53e5ace4b597f_bannerjpg.jpeg",
+//       header: "Lorem ipsum dolor sit amet",
+//       subtext:
+//         "Sed ut perspiciatis unde omnis iste natus error sit totam rem aperiam accusantium doloremque laudantium dicta sunt explicabo."
+//     },
+//     {
+//       graphic:
+//         "https://storage.googleapis.com/tapcart-150607.appspot.com/52335604b9ecbbb220d0843ef81a5c2a_bannerjpg.jpeg",
+//       header: "Lorem ipsum dolor sit amet",
+//       subtext:
+//         "Sed ut perspiciatis unde omnis iste natus error sit totam rem aperiam accusantium doloremque laudantium dicta sunt explicabo."
+//     },
+
+//     {
+//       graphic:
+//         "https://storage.googleapis.com/tapcart-150607.appspot.com/309354c5adbc4559ee01e407fbb20223_bannerjpg.jpeg",
+//       header: "Lorem ipsum dolor sit amet",
+//       subtext:
+//         "Sed ut perspiciatis unde omnis iste natus error sit totam rem aperiam accusantium doloremque laudantium dicta sunt explicabo."
+//     }
+//   ];
+//   return (
+//     <>
+//       <Button type="secondary" onClick={() => toggleSliderModal(!sliderModal)}>
+//         open slider modal
+//       </Button>
+//       <Modal
+//         isOpen={sliderModal}
+//         closeModal={() => toggleSliderModal(false)}
+//         type="slider-modal"
+//         slides={slides}
+//         icon="design"
+
+//         // buttons={[
+//         //   {
+//         //     button: "Cat 1",
+//         //     onClick: () => {
+//         //       changeCatPicture(
+//         //         "https://media.mnn.com/assets/images/2016/01/manny-selfie-cat-01.jpg.320x0_q80_crop-smart.jpg"
+//         //       );
+//         //     },
+//         //     type: "primary"
+//         //   },
+//         //   {
+//         //     button: "Cat 2",
+//         //     onClick: () => {
+//         //       changeCatPicture(
+//         //         "https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555352727/shape/mentalfloss/46eyrdfh.png"
+//         //       );
+//         //     },
+//         //     type: "secondary"
+//         //   },
+//         //   {
+//         //     button: "Cat 3",
+//         //     onClick: () => {
+//         //       changeCatPicture(
+//         //         "https://freeyork.org/wp-content/uploads/2016/09/manny-selfie-cat-fy-2.jpg"
+//         //       );
+//         //     },
+//         //     type: "delete"
+//         //   }
+//         // ]}
+//       >
+//         {/* <Body color={colors.black}>Want to change the cat selfie?</Body>
+//         <Body color={colors.grayText}>
+//           Click on a button below to select the selfie of your preference.
+//         </Body> */}
+//       </Modal>
+//     </>
+//   );
+// };

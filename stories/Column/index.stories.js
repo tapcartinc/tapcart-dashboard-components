@@ -26,16 +26,6 @@ export default {
   decorators: [withKnobs]
 };
 
-const label = "layout";
-const options = {
-  LeftAlign: leftAlign,
-  Centered: centered
-};
-const defaultValue = leftAlign;
-const optionsObj = {
-  display: "select"
-};
-
 export const column = () => (
   <ThemeProvider theme={base}>
     <Section layout={centered}>
@@ -96,7 +86,7 @@ export const threeColumn = () => (
   <ThemeProvider theme={base}>
     <Section layout={centered}>
       <Container>
-        <Row flushLeft responsiveReverse>
+        <Row flushLeft>
           <Column
             flushLeft={boolean("flushLeft", false)}
             mobileCentered={boolean("mobileCentered", false)}

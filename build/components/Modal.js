@@ -21,6 +21,8 @@ var _variables = require("../utils/_variables");
 
 var _nukaCarousel = _interopRequireDefault(require("nuka-carousel"));
 
+var _propTypes = _interopRequireWildcard(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -102,6 +104,8 @@ function (_Component) {
 exports.Modal = Modal;
 
 function ModalType(props) {
+  console.log("props", props);
+
   switch (props.type) {
     case "slider-modal":
       return _react["default"].createElement(SliderModal, props, props.children);
@@ -190,6 +194,7 @@ function ModalType(props) {
 }
 
 var SliderModal = function SliderModal(props) {
+  console.log("props", props);
   return _react["default"].createElement("div", {
     style: {
       width: "650px",
@@ -198,7 +203,7 @@ var SliderModal = function SliderModal(props) {
       borderRadius: "4px",
       position: "relative"
     }
-  }, _react["default"].createElement(CloseIcon, {
+  }, _react["default"].createElement(_Icon.Icon, {
     type: "small-close",
     className: "modal-graphic-close-btn",
     onClick: props.closeModal,
@@ -227,19 +232,14 @@ var SliderModal = function SliderModal(props) {
         type: "primary"
       }, "Next");
     }
-  }, props.slides.map(function (slide, idx) {
+  }, props.slides ? props.slides.map(function (slide) {
     return _react["default"].createElement("div", {
-      key: slide.graphic,
+      key: slide.header,
       className: "slider-slide-inside"
-    }, _react["default"].createElement("img", {
+    }, slide.header, " ", _react["default"].createElement("img", {
       src: slide.graphic
-    }), _react["default"].createElement("div", null, _react["default"].createElement(_Typography.H1, null, slide.header), _react["default"].createElement(_Typography.Paragraph, {
-      color: "black",
-      style: {
-        maxWidth: "500px"
-      }
-    }, slide.subtext)));
-  })));
+    }));
+  }) : _react["default"].createElement("div", null, "hi")));
 };
 
 var StyledModal = (0, _styledComponents["default"])(ReactModalAdapter).withConfig({
@@ -299,3 +299,13 @@ var CloseIcon = (0, _styledComponents["default"])(_Icon.Icon).withConfig({
   displayName: "Modal__CloseIcon",
   componentId: "sc-1fnp8gl-9"
 })(["height:15px;width:15px;top:0;right:0;position:absolute;z-index:10;&:hover{cursor:pointer;}"]);
+Modal.propTypes = {
+  type: _propTypes["default"].string.isRequired,
+  buttons: _propTypes["default"].array.isRequired,
+  title: _propTypes["default"].string.isRequired,
+  icon: _propTypes["default"].string.isRequired,
+  closeModal: _propTypes["default"].func.isRequired,
+  isOpen: _propTypes["default"].bool.isRequired,
+  slides: _propTypes["default"].array
+};
+Modal.defaultProps = {};

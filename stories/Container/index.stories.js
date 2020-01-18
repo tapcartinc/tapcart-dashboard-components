@@ -22,8 +22,8 @@ export default {
 
 export const container = () => (
   <ThemeProvider theme={base}>
-    <Section layout={centered}>
-      <Container customPadding={[1, 1]}>
+    <Section layout={centered} minHeight={400}>
+      <Container customPadding={[1, 1]} style={{ border: "1px solid red" }}>
         <Row>
           <Column cols={1}>
             <Header>Section Header</Header>

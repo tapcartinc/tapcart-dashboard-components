@@ -11,6 +11,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _variables = require("../utils/_variables");
 
+var _propTypes = _interopRequireWildcard(require("prop-types"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -78,7 +80,7 @@ exports.HoverDropdown = HoverDropdown;
 var ClickableDropdown = _styledComponents["default"].ul.withConfig({
   displayName: "HoverDropdown__ClickableDropdown",
   componentId: "sc-1a8mo2v-0"
-})(["margin:0px;list-style:none;background:white;width:150px;", ";padding:0px;color:", ";box-shadow:0 0 8px 0 rgba(0,0,0,0.08);position:absolute;z-index:1;", ";"], _variables.sofia.Regular, _variables.colors.blue, function (props) {
+})(["margin:0px;list-style:none;background:white;width:150px;", ";padding:0px;color:", ";box-shadow:0 0 8px 0 rgba(0,0,0,0.08);position:absolute;z-index:1;", ";"], _variables.sofia.sofiaMedium, _variables.colors.blue, function (props) {
   return props.style ? props.style : null;
 });
 
@@ -102,3 +104,9 @@ var DDCircle = _styledComponents["default"].div.withConfig({
 })(["background:transparent;box-shadow:inset 0px 0px 0px 1px ", ";height:10px;width:10px;border-radius:50px;margin-right:15px;", ":hover &{background:", ";box-shadow:none;}", ";"], _variables.colors.blue, ClickableDropdownItem, _variables.colors.blue, function (props) {
   return props.style ? props.style : null;
 });
+
+HoverDropdown.propTypes = {
+  options: _propTypes["default"].array.isRequired,
+  title: _propTypes["default"].string.isRequired
+};
+HoverDropdown.defaultProps = {};
