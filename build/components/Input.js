@@ -38,7 +38,6 @@ var Input = function Input(_ref) {
       placeholder = _ref.placeholder,
       props = _objectWithoutProperties(_ref, ["errors", "label", "value", "name", "placeholder"]);
 
-  console.log("props", props);
   return _react["default"].createElement(_react["default"].Fragment, null, label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
   }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement(InputStyle, _extends({
