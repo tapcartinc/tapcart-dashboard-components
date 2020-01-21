@@ -104,8 +104,6 @@ function (_Component) {
 exports.Modal = Modal;
 
 function ModalType(props) {
-  console.log("props", props);
-
   switch (props.type) {
     case "slider-modal":
       return _react["default"].createElement(SliderModal, props, props.children);
@@ -194,7 +192,6 @@ function ModalType(props) {
 }
 
 var SliderModal = function SliderModal(props) {
-  console.log("props", props);
   return _react["default"].createElement("div", {
     style: {
       width: "650px",

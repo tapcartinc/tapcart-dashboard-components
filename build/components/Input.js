@@ -25,23 +25,28 @@ var InputStyle = _styledComponents["default"].input.withConfig({
   displayName: "Input__InputStyle",
   componentId: "sc-1bkiiiy-0"
 })(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;width:100%;", ";&::placeholder{color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
-  return props.error ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_variables.colors.blue50);
+  return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_variables.colors.blue50);
 }, _variables.colors.offwhite, _variables.sofia.sofiaRegular, _variables.colors.blue25, function (props) {
   return props.style ? props.style : null;
 });
 
 var Input = function Input(_ref) {
-  var label = _ref.label,
+  var errors = _ref.errors,
+      label = _ref.label,
       value = _ref.value,
       name = _ref.name,
       placeholder = _ref.placeholder,
-      props = _objectWithoutProperties(_ref, ["label", "value", "name", "placeholder"]);
+      props = _objectWithoutProperties(_ref, ["errors", "label", "value", "name", "placeholder"]);
 
-  return _react["default"].createElement(_react["default"].Fragment, null, label && _react["default"].createElement(StyledLabel, null, label), _react["default"].createElement(InputStyle, _extends({
+  console.log("props", props);
+  return _react["default"].createElement(_react["default"].Fragment, null, label && _react["default"].createElement(StyledLabel, {
+    errors: errors && errors.length >= 0
+  }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement(InputStyle, _extends({
     value: value,
     name: name,
     onChange: props.onChange,
-    placeholder: placeholder
+    placeholder: placeholder,
+    errors: errors && errors.length >= 0
   }, props)));
 };
 
@@ -62,4 +67,6 @@ Input.defaultProps = {
 var StyledLabel = _styledComponents["default"].p.withConfig({
   displayName: "Input__StyledLabel",
   componentId: "sc-1bkiiiy-1"
-})(["margin-bottom:7px;font-family:\"CircularStd-Book\";src:url(\"/fonts/CircularStd-Book.woff\") format(\"woff\"),url(\"/fonts/CircularStd-Book.woff2\") format(\"woff2\");font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:#000000;"]);
+})(["margin-bottom:7px;font-family:\"CircularStd-Book\";src:url(\"/fonts/CircularStd-Book.woff\") format(\"woff\"),url(\"/fonts/CircularStd-Book.woff2\") format(\"woff2\");font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], function (props) {
+  return props.errors ? _variables.colors.red : "#000000";
+});

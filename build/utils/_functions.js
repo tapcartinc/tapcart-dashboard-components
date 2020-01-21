@@ -111,6 +111,12 @@ var getColors = function getColors(type) {
         boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.green)
       };
 
+    case "#D94747":
+      return _variables.colors.red;
+
+    case "red":
+      return _variables.colors.red;
+
     case "blue":
       return _variables.colors.blue;
 
