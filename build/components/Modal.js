@@ -61,7 +61,7 @@ function ReactModalAdapter(_ref) {
   var overlayClassName = "".concat(className, "__overlay");
   var bodyOpenClassName = "ReactModal__Body--open";
 
-  if (props.type === "full") {
+  if (props.type === "generic") {
     bodyOpenClassName = "ReactModal__Body--open-full";
   }
 
@@ -111,7 +111,7 @@ function ModalType(props) {
     case "custom":
       return _react["default"].createElement(MinimalModalStyle, props, props.children);
 
-    case "full":
+    case "generic":
       return _react["default"].createElement(FullscreenModal, props, props.children);
 
     case "modal-with-graphic":
@@ -266,7 +266,7 @@ var MinimalModalStyle = (0, _styledComponents["default"])(ModalStyle).withConfig
 var FullscreenModal = (0, _styledComponents["default"])(ModalStyle).withConfig({
   displayName: "Modal__FullscreenModal",
   componentId: "sc-1fnp8gl-4"
-})(["position:fixed;width:100%;height:100%;top:0;left:0;", ""], function (props) {
+})(["", ""], function (props) {
   return props.style ? props.style : null;
 });
 

@@ -110,6 +110,30 @@ export const modalWithGraphic = () => {
   );
 };
 
+export const fullModal = () => {
+  const [fullModal, toggleFullModal] = useState(false);
+
+  return (
+    <>
+      <Button type="primary" onClick={() => toggleFullModal(!fullModal)}>
+        open generic modal
+      </Button>
+      <Modal
+        isOpen={fullModal}
+        closeModal={() => toggleFullModal(false)}
+        type="generic"
+        icon="design"
+        title="Change the Cat Selfie"
+      >
+        <Body color={colors.black}>Want to change the cat selfie?</Body>
+        <Body color={colors.grayText}>
+          Click on a button below to select the selfie of your preference.
+        </Body>
+      </Modal>
+    </>
+  );
+};
+
 // export const sliderModal = props => {
 //   const [sliderModal, toggleSliderModal] = useState(false);
 //   const slides = [
