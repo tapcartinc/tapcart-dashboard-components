@@ -14,16 +14,49 @@ export default {
 };
 
 export const segmentedControl = () => {
-  const [toggleState, setToggleState] = React.useState(false);
+  const [toggleState, setToggleState] = React.useState({
+    basic: false,
+    dayNight: false,
+    appleAndroid: false
+  });
 
+  console.log("toggleState.appleAndroid", toggleState.appleAndroid);
   return (
-    <BoxedToggle
-      type="basic"
-      id="toggle"
-      toggleState={toggleState}
-      onChange={() => setToggleState(!toggleState)}
-      // name={props.name}
-    />
+    <>
+      <BoxedToggle
+        type="basic"
+        id="toggle"
+        toggleState={toggleState.basic}
+        onChange={() =>
+          setToggleState(prevState => ({
+            ...prevState,
+            basic: !toggleState.basic
+          }))
+        }
+      />
+      <BoxedToggle
+        type="day/night"
+        id="toggle"
+        toggleState={toggleState.dayNight}
+        onChange={() =>
+          setToggleState(prevState => ({
+            ...prevState,
+            dayNight: !toggleState.dayNight
+          }))
+        }
+      />
+      <BoxedToggle
+        type="apple/android"
+        id="toggle"
+        toggleState={toggleState.appleAndroid}
+        onChange={() =>
+          setToggleState(prevState => ({
+            ...prevState,
+            appleAndroid: !toggleState.appleAndroid
+          }))
+        }
+      />
+    </>
   );
 };
 
