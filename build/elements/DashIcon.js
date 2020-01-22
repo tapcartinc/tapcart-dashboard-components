@@ -488,6 +488,58 @@ var DashIcon = function DashIcon(props) {
         points: "129 13 125 17 121 13"
       }))))))));
 
+    case "preview-your-app":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "22px",
+        height: "24px",
+        viewBox: "0 0 22 24",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Symbols",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Header---Design",
+        transform: "translate(-1370.000000, -101.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Header"
+      }, _react["default"].createElement("g", {
+        id: "Button---Medium",
+        transform: "translate(1199.000000, 93.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-preview-app",
+        transform: "translate(170.000000, 8.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "p-search",
+        transform: "translate(2.000000, 1.000000)",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M8,22 L2,22 C0.8954305,22 0,21.1045695 0,20 L0,2 C0,0.8954305 0.8954305,0 2,0 L14,0 C15.1045695,0 16,0.8954305 16,2 L16,9",
+        id: "Path",
+        stroke: "#FFFFFF"
+      }), _react["default"].createElement("path", {
+        d: "M20,22 L17.121,19.121",
+        id: "Path",
+        stroke: "#1BDFBA"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        stroke: "#1BDFBA",
+        cx: "15",
+        cy: "17",
+        r: "3"
+      }))))))));
+
     default:
       return _react["default"].createElement("span", null);
   }

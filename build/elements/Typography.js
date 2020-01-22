@@ -9,6 +9,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _variables = require("../utils/_variables");
 
+var _dashVariables = require("../utils/_dashVariables");
+
 var _functions = require("../utils/_functions");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -98,7 +100,7 @@ var Body = _styledComponents["default"].p.withConfig({
   }
 }, function (props) {
   return props.color ? props.color : "#000000";
-}, _variables.sofia.sofiaRegular, function (props) {
+}, _dashVariables.sofiaPro.regular, function (props) {
   return props.style ? props.style : null;
 });
 

@@ -13,6 +13,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _variables = require("../utils/_variables");
 
+var _dashVariables = require("../utils/_dashVariables");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -24,9 +26,9 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var InputStyle = _styledComponents["default"].input.withConfig({
   displayName: "Input__InputStyle",
   componentId: "sc-1bkiiiy-0"
-})(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;", ";&::placeholder{color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
+})(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;", ";&::placeholder{", ";color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
   return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_variables.colors.blue50);
-}, _variables.colors.offwhite, _variables.sofia.sofiaRegular, _variables.colors.blue25, function (props) {
+}, _variables.colors.offwhite, _dashVariables.sofiaPro.regular, _dashVariables.sofiaPro.regular, _variables.colors.blue25, function (props) {
   return props.style ? props.style : null;
 });
 
@@ -66,6 +68,6 @@ Input.defaultProps = {
 var StyledLabel = _styledComponents["default"].p.withConfig({
   displayName: "Input__StyledLabel",
   componentId: "sc-1bkiiiy-1"
-})(["margin-bottom:7px;font-family:\"CircularStd-Book\";src:url(\"/fonts/CircularStd-Book.woff\") format(\"woff\"),url(\"/fonts/CircularStd-Book.woff2\") format(\"woff2\");font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], function (props) {
+})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;", ";color:", ";"], _dashVariables.circularStd.medium, function (props) {
   return props.errors ? _variables.colors.red : "#000000";
 });
