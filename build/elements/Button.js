@@ -39,7 +39,7 @@ var StyledButtonWrapper = _styledComponents["default"].button.attrs(function (pr
 }).withConfig({
   displayName: "Button__StyledButtonWrapper",
   componentId: "sc-12aqe4e-0"
-})(["border-radius:3px;flex-direction:row;align-items:center;justify-items:center;font-size:14px;", ";text-transform:uppercase;line-height:1.5;letter-spacing:1px;padding-top:12px;padding-bottom:12px;z-index:3;padding-right:", ";padding-left:", ";outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " a{font-size:14px;", ";", " text-decoration:none;box-shadow:none;}img{margin-right:4px;margin-left:4px;}position:relative;display:flex;justify-content:center;", " ", ";", ";", ""], _dashVariables.sofiaPro.medium, function (props) {
+})(["border-radius:3px;flex-direction:row;align-items:center;justify-items:center;font-size:14px;font-style:normal;font-weight:400;font-family:SofiaPro-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;text-transform:uppercase;line-height:1.5;letter-spacing:1px;padding-top:12px;padding-bottom:12px;z-index:3;padding-right:", ";padding-left:", ";outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " a{font-size:14px;font-family:Sofia Pro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;", ";font-family:SofiaPro-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;", " text-decoration:none;box-shadow:none;}img{margin-right:4px;margin-left:4px;}position:relative;display:flex;justify-content:center;", " ", ";", ";", ""], function (props) {
   return props.type.includes("transparent") ? "0px" : "20px";
 }, function (props) {
   return props.type.includes("transparent") ? "0px" : "20px";

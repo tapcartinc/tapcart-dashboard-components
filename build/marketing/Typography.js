@@ -13,6 +13,8 @@ var _functions = require("../utils/_functions");
 
 var _media = _interopRequireDefault(require("../utils/_media"));
 
+var _dashVariables = require("../utils/_dashVariables");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject2() {
@@ -55,7 +57,7 @@ exports.Header = Header;
 var Subheader = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Subheader",
   componentId: "sc-1bwqgjv-1"
-})(["-webkit-font-smoothing:antialiased;z-index:3;font-size:20px;line-height:30px;margin-bottom:30px;", ";font-weight:400;color:", ";", ";", ""], _variables.sofia.sofiaRegular, function (props) {
+})(["-webkit-font-smoothing:antialiased;z-index:3;font-size:20px;line-height:30px;margin-bottom:30px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";", ";", ""], function (props) {
   if (props.color) {
     return (0, _functions.getColors)(props.color);
   } else {

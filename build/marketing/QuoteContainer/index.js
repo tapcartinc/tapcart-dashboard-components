@@ -338,46 +338,40 @@ var Context = _styledComponents["default"].div.withConfig({
 var StyledPerson = _styledComponents["default"].div.withConfig({
   displayName: "QuoteContainer__StyledPerson",
   componentId: "sc-1jclz2n-6"
-})(["color:white;font-size:18px;display:flex;flex-direction:row;align-items:center;p:nth-of-type(1){font-weight:700;}", ""], _media["default"].md(_templateObject10()));
-
-QuoteContainer.propTypes = {
-  /**
-  The person being quoted in the current QuoteContainer
-  */
-  person: _propTypes["default"].string.isRequired,
-
-  /**
-  The person being quoted's position/role in the current QuoteContainer
-  */
-  position: _propTypes["default"].string.isRequired,
-
-  /**
-  The person being quoted's brand logo in the current QuoteContainer
-  */
-  logo: _propTypes["default"].string.isRequired,
-
-  /**
-   Featured image in the left column of the component
-  */
-  image: _propTypes["default"].string.isRequired,
-
-  /**
-   The portion of the quote that is to be highlighted
-  */
-  highlighted: _propTypes["default"].string.isRequired,
-
-  /**
-   The child rendered inside of the QuoteContainer component is the quote
-  */
-  children: _propTypes.node.isRequired
-};
-QuoteContainer.defaultProps = {
-  person: "",
-  position: "",
-  logo: "",
-  image: "",
-  highlighted: ""
-}; // person="Person Sited"
+})(["color:white;font-size:18px;display:flex;flex-direction:row;align-items:center;p:nth-of-type(1){font-weight:700;}", ""], _media["default"].md(_templateObject10())); // QuoteContainer.propTypes = {
+//   /**
+//   The person being quoted in the current QuoteContainer
+//   */
+//   person: PropTypes.string.isRequired,
+//   /**
+//   The person being quoted's position/role in the current QuoteContainer
+//   */
+//   position: PropTypes.string.isRequired,
+//   /**
+//   The person being quoted's brand logo in the current QuoteContainer
+//   */
+//   logo: PropTypes.string.isRequired,
+//   /**
+//    Featured image in the left column of the component
+//   */
+//   image: PropTypes.string.isRequired,
+//   /**
+//    The portion of the quote that is to be highlighted
+//   */
+//   highlighted: PropTypes.string.isRequired,
+//   /**
+//    The child rendered inside of the QuoteContainer component is the quote
+//   */
+//   children: node.isRequired
+// };
+// QuoteContainer.defaultProps = {
+//   person: "",
+//   position: "",
+//   logo: "",
+//   image: "",
+//   highlighted: ""
+// };
+// person="Person Sited"
 // position="Person's Position"
 // logo="https://www.zatista.com/sitemap/email-images/logo-placeholder.jpg"
 // image="https://www.loxtonia.co.za/wp-content/uploads/2018/08/placeholder-person-man.png"
