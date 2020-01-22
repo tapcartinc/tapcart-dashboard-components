@@ -32,6 +32,7 @@ var _exportNames = {
   Dropdown: true,
   Pagination: true,
   Modal: true,
+  BoxedToggle: true,
   ContainerBox: true,
   Accordion: true,
   Card: true,
@@ -233,6 +234,12 @@ Object.defineProperty(exports, "Modal", {
   enumerable: true,
   get: function get() {
     return _Modal.Modal;
+  }
+});
+Object.defineProperty(exports, "BoxedToggle", {
+  enumerable: true,
+  get: function get() {
+    return _BoxedToggle.BoxedToggle;
   }
 });
 Object.defineProperty(exports, "ContainerBox", {
@@ -481,6 +488,8 @@ var _Dropdown = require("./components/Dropdown");
 var _Pagination = require("./components/Pagination");
 
 var _Modal = require("./components/Modal");
+
+var _BoxedToggle = require("./components/BoxedToggle");
 
 var _ContainerBox = require("./layout/ContainerBox");
 

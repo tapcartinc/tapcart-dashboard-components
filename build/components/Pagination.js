@@ -91,8 +91,6 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
         if (currentPage !== 1) {
           onPageClick(currentPage - 1);
         }
-
-        cd;
       }
     }, _react["default"].createElement(_Icon.Icon, {
       iconLeft: true,

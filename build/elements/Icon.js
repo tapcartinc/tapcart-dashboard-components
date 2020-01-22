@@ -4218,7 +4218,7 @@ function Icon(props) {
         strokeWidth: "2"
       }))))))));
 
-    case "menu":
+    case "menu-icon":
       return _react["default"].createElement(SVG, _extends({
         width: "24px",
         height: "16px",
@@ -4235,7 +4235,7 @@ function Icon(props) {
         id: "Toggle-design-(blocks)",
         transform: "translate(-502.000000, -24.000000)"
       }, _react["default"].createElement("g", {
-        id: "Menu"
+        id: "Menu-icon"
       }, _react["default"].createElement("g", {
         transform: "translate(502.000000, 20.000000)"
       }, _react["default"].createElement("g", {
@@ -4247,7 +4247,7 @@ function Icon(props) {
         width: "24",
         height: "24"
       }), _react["default"].createElement("g", {
-        id: "menu",
+        id: "menu-icon",
         transform: "translate(1.000000, 4.000000)",
         stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
         strokeLinecap: "round",
@@ -4263,6 +4263,45 @@ function Icon(props) {
         d: "M0,15 L11,15",
         id: "Path"
       }))))))));
+
+    case "checkmark-small":
+      return _react["default"].createElement(SVG, _extends({
+        width: "14px",
+        height: "10px",
+        viewBox: "0 0 14 10",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/SVG"
+      }, props), _react["default"].createElement("g", {
+        id: "Style-Guide",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        transform: "translate(-90.000000, -2020.000000)",
+        id: "Toggle-ON"
+      }, _react["default"].createElement("g", {
+        transform: "translate(81.000000, 2009.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-checkmark",
+        transform: "translate(4.000000, 4.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "d-check",
+        transform: "translate(6.000000, 8.000000)",
+        stroke: "#FFFFFF",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("polyline", {
+        id: "Path",
+        points: "0 4 4 8 12 0"
+      })))))));
 
     default:
       return null;

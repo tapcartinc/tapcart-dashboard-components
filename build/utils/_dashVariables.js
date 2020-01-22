@@ -24,8 +24,20 @@ var circularStd = {
 };
 exports.circularStd = circularStd;
 var colorPicker = {
+  gray50: "#d8d8d8",
+  gray25: "#efefef",
+  blue: "#373AAF",
+  grayBlue: "#BAC4E0",
+  lightBlue: "#E3EFFD",
+  offWhite: "#FCFEFF",
+  black: "#000000",
+  gray: "#A1A8B9",
+  warmGray: "#D8D8D8",
+  lightGray: "#F0F2F5",
   green100: "#1BDFBA",
-  green50: "rgba(27, 223, 186, 0.14)",
-  gray50: "#d8d8d8"
+  green50: "#E0FBF6",
+  androidGreen: "#A3C73B",
+  red: "#DF4F4E",
+  yellow: "#F6B343"
 };
 exports.colorPicker = colorPicker;

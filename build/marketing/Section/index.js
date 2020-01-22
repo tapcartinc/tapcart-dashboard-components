@@ -122,6 +122,11 @@ Section.propTypes = {
   overflowHidden: _propTypes["default"].bool,
 
   /**
+  Allows a custom height to be set to the particular segment of content
+  */
+  minHeight: _propTypes["default"].number,
+
+  /**
   Sets the minimum height to 1px allow the content to control the overall height of the section
   */
   contentHeight: _propTypes["default"].bool,
@@ -140,7 +145,4 @@ Section.defaultProps = {
   contentHeight: false,
   tombstone: false,
   aboveFold: false
-}; // /**
-// Allows a custom height to be set to the particular segment of content
-// */
-// minHeight: PropTypes.number,
+};

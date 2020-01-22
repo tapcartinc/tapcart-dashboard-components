@@ -92,7 +92,7 @@ function (_Component) {
                 }
               }, props.icons && _react["default"].createElement("div", null, _react["default"].createElement(_Icon.Icon, {
                 iconLeft: true,
-                type: props.icons[idx],
+                type: props.icons[key],
                 fill: props.current === key ? "white" : "blue"
               })), props.items[key], _react["default"].createElement("input", {
                 type: "radio",
@@ -104,7 +104,7 @@ function (_Component) {
                   width: "100%",
                   height: "100%",
                   border: " 1px solid #000",
-                  // margin: "0",
+                  margin: "0",
                   position: "absolute"
                 },
                 onClick: props.clickHandler
