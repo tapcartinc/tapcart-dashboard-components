@@ -4110,6 +4110,160 @@ function Icon(props) {
         id: "Path"
       })))))))));
 
+    case "blocks":
+      return _react["default"].createElement(SVG, _extends({
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/SVG"
+      }, props), _react["default"].createElement("g", {
+        id: "Symbols",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Toggle-design-(blocks)",
+        transform: "translate(-61.000000, -20.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Blocks"
+      }, _react["default"].createElement("g", {
+        transform: "translate(61.000000, 20.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-blocks"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "divider",
+        transform: "translate(1.000000, 1.000000)",
+        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "3",
+        y: "0",
+        width: "16",
+        height: "7"
+      }), _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "3",
+        y: "15",
+        width: "16",
+        height: "7"
+      }), _react["default"].createElement("path", {
+        d: "M0,11 L22,11",
+        id: "Path"
+      }))))))));
+
+    case "theme":
+      return _react["default"].createElement(SVG, _extends({
+        width: "24px",
+        height: "23px",
+        viewBox: "0 0 24 23",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/SVG"
+      }, props), _react["default"].createElement("g", {
+        id: "Symbols",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Toggle-design-(blocks)",
+        transform: "translate(-281.000000, -21.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Theme"
+      }, _react["default"].createElement("g", {
+        transform: "translate(281.000000, 20.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-theme"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "paint-bucket-40",
+        transform: "translate(1.000000, 0.000000)",
+        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      }, _react["default"].createElement("path", {
+        d: "M2.41,13.017 L13.017,20.795 C13.798,21.576 16.172,20.468 18.32,18.32 C20.468,16.172 21.576,13.798 20.795,13.017 L13.017,2.41",
+        id: "Path",
+        strokeWidth: "2"
+      }), _react["default"].createElement("ellipse", {
+        id: "Oval",
+        strokeWidth: "1.99998082",
+        transform: "translate(7.712725, 7.713400) rotate(-45.000000) translate(-7.712725, -7.713400) ",
+        cx: "7.7127246",
+        cy: "7.7134",
+        rx: "7.49992807",
+        ry: "2.99997123"
+      }), _react["default"].createElement("path", {
+        d: "M0,21 C0,19.895 2,17 2,17 C2,17 4,19.895 4,21 C4,22.105 3.105,23 2,23 C0.895,23 0,22.105 0,21 Z",
+        id: "Path",
+        strokeWidth: "2"
+      }), _react["default"].createElement("path", {
+        d: "M13,12 L17,12 C19.209,12 21,10.209 21,8 C21,5.791 19.209,4 17,4 L14.183,4",
+        id: "Path",
+        strokeWidth: "2"
+      }))))))));
+
+    case "menu":
+      return _react["default"].createElement(SVG, _extends({
+        width: "24px",
+        height: "16px",
+        viewBox: "0 0 24 16",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/SVG"
+      }, props), _react["default"].createElement("g", {
+        id: "Symbols",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Toggle-design-(blocks)",
+        transform: "translate(-502.000000, -24.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Menu"
+      }, _react["default"].createElement("g", {
+        transform: "translate(502.000000, 20.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-menu"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "menu",
+        transform: "translate(1.000000, 4.000000)",
+        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M0,8 L22,8",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M11,1 L22,1",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M0,15 L11,15",
+        id: "Path"
+      }))))))));
+
     default:
       return null;
   }

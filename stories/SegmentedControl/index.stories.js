@@ -27,10 +27,11 @@ export const segmentedControl = () => {
 
   return (
     <SegmentedControl
-      type="field"
-      items={{ cat: "cat", dog: "dog" }}
+      type="primary"
+      items={{ cat: "cat", dog: "dog", mouse: "mouse" }}
       action={changeSection}
       current={state}
+      icons={["blocks", "theme", "menu"]}
     />
   );
 };

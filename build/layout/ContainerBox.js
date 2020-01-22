@@ -24,7 +24,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  padding: ", ";\n  ", ";\n  "]);
+  var data = _taggedTemplateLiteral(["\n  ", ";\n  ", ";\n  "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -38,18 +38,18 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var ContainerStyle = _styledComponents["default"].section.withConfig({
   displayName: "ContainerBox__ContainerStyle",
   componentId: "sc-1iq8jc5-0"
-})(["border-radius:3px;padding:", ";box-shadow:", ";background:", ";height:", ";", ";", ";", ""], function (props) {
-  return props.customPadding ? props.customPadding : "20px";
-}, function (props) {
+})(["border-radius:3px;box-shadow:", ";background:", ";height:", ";", ";", ";", ";", ""], function (props) {
   return props.boxShadow ? props.boxShadow : _variables.boxShadow.medium;
 }, function (props) {
   return props.bg ? props.bg : "white";
 }, function (props) {
   return props.customHeight && "".concat(props.customHeight, "px");
 }, function (props) {
+  return props.padding && "padding: ".concat(props.padding, "px");
+}, function (props) {
   return props.customWidth ? "width: ".concat(props.customWidth, "px;") : props.columns ? "width: ".concat(100 / props.columns - 1.5, "%") : "width: 100%;";
 }, _media["default"].md(_templateObject(), function (props) {
-  return props.customPaddingMd ? props.customPaddingMd : "20px";
+  return props.paddingMd && "padding: ".concat(props.paddingMd, "px");
 }, function (props) {
   return props.customWidthMd ? "width: ".concat(props.customWidthMd, "px;") : props.mobileColumns ? "width: ".concat(100 / props.mobileColumns - 1.5, "%") : "width: 100%;";
 }), function (props) {
@@ -76,8 +76,8 @@ ContainerBox.propTypes = {
    * creates automatic width dependig on the amount of columns there are for tablet and mobile breakpoints
    */
   mobileColumns: _propTypes["default"].number,
-  customPadding: _propTypes["default"].string,
-  customPaddingMd: _propTypes["default"].string,
+  padding: _propTypes["default"].number,
+  paddingMd: _propTypes["default"].number,
   boxShadow: _propTypes["default"].string,
   children: _propTypes["default"].node
 };
