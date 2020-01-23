@@ -1560,9 +1560,9 @@ function Icon(props) {
 
     case "edit":
       return _react["default"].createElement(SVG, _extends({
-        width: "25px",
-        height: "25px",
-        viewBox: "0 0 25 25",
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/SVG"
       }, props), _react["default"].createElement("g", {
@@ -4301,6 +4301,51 @@ function Icon(props) {
       }, _react["default"].createElement("polyline", {
         id: "Path",
         points: "0 4 4 8 12 0"
+      })))))));
+
+    case "add-section":
+      return _react["default"].createElement(SVG, _extends({
+        width: "24px",
+        height: "20px",
+        viewBox: "0 0 24 20",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/SVG"
+      }, props), _react["default"].createElement("g", {
+        id: "Style-Guide",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        "fill-rule": "evenodd"
+      }, _react["default"].createElement("g", {
+        transform: "translate(-553.000000, -1199.000000)",
+        id: "Icons"
+      }, _react["default"].createElement("g", {
+        transform: "translate(81.000000, 1019.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-add-section",
+        transform: "translate(472.000000, 178.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "file-add",
+        transform: "translate(1.000000, 3.000000)",
+        stroke: "#373AAF",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("polyline", {
+        id: "Path",
+        points: "0 12 0 18 22 18 22 12"
+      }), _react["default"].createElement("path", {
+        d: "M11,0 L11,10",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M16,5 L6,5",
+        id: "Path"
       })))))));
 
     default:

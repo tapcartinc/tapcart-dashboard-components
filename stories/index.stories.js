@@ -12,3 +12,4 @@ export * from "./SegmentedControl/index.stories";
 export * from "./ClickDropdown/index.stories";
 export * from "./ContainerBox/index.stories";
 export * from "./HoverDropdown/index.stories";
+export * from "./ToolTip/index.stories";

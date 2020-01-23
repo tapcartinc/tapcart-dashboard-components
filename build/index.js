@@ -33,6 +33,7 @@ var _exportNames = {
   Pagination: true,
   Modal: true,
   BoxedToggle: true,
+  ToolTip: true,
   ContainerBox: true,
   Accordion: true,
   Card: true,
@@ -240,6 +241,12 @@ Object.defineProperty(exports, "BoxedToggle", {
   enumerable: true,
   get: function get() {
     return _BoxedToggle.BoxedToggle;
+  }
+});
+Object.defineProperty(exports, "ToolTip", {
+  enumerable: true,
+  get: function get() {
+    return _ToolTip.ToolTip;
   }
 });
 Object.defineProperty(exports, "ContainerBox", {
@@ -490,6 +497,8 @@ var _Pagination = require("./components/Pagination");
 var _Modal = require("./components/Modal");
 
 var _BoxedToggle = require("./components/BoxedToggle");
+
+var _ToolTip = require("./components/ToolTip");
 
 var _ContainerBox = require("./layout/ContainerBox");
 
