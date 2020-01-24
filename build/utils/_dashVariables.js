@@ -3,7 +3,16 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.colorPicker = exports.circularStd = exports.sofiaPro = void 0;
+exports.DashSubheader = exports.DashHeader = exports.colorPicker = exports.circularStd = exports.sofiaPro = void 0;
+
+var _media = _interopRequireDefault(require("./_media"));
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _variables = require("./_variables");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 var sofiaPro = {
   black: "font-family: \"SofiaPro-Black\";\n\tsrc: url(\"/fonts/SofiaPro-Black.woff2\") format(\"woff2\"), url(\"/fonts/SofiaPro-Black.woff\") format(\"woff\");\n\tfont-weight: 900;\n\tfont-style: normal;\n  font-display: swap;",
   regular: "font-family: \"SofiaPro\";\n\tsrc: url(\"/fonts/SofiaPro-Regular.woff2\") format(\"woff2\"), url(\"/fonts/SofiaPro-Regular.woff\") format(\"woff\");\n\tfont-weight: 400;\n\tfont-style: normal;\n  font-display: swap;",
@@ -30,6 +39,7 @@ var colorPicker = {
   grayBlue: "#BAC4E0",
   lightBlue: "#E3EFFD",
   offWhite: "#FCFEFF",
+  modalBg: "#FBFBFB",
   black: "#000000",
   gray: "#A1A8B9",
   warmGray: "#D8D8D8",
@@ -41,3 +51,25 @@ var colorPicker = {
   yellow: "#F6B343"
 };
 exports.colorPicker = colorPicker;
+
+var DashHeader = _styledComponents["default"].h1.withConfig({
+  displayName: "_dashVariables__DashHeader",
+  componentId: "tteq5l-0"
+})(["font-family:CircularStd-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;-webkit-font-smoothing:antialiased;font-size:25px;line-height:31px;margin-bottom:5px;z-index:3;letter-spacing:0.5px;text-transform:capitalize;-webkit-font-smoothing:antialiased;color:", ";", ""], function (props) {
+  return props.color ? props.color : _variables.colors.blue;
+}, function (props) {
+  return props.style ? props.style : null;
+});
+
+exports.DashHeader = DashHeader;
+
+var DashSubheader = _styledComponents["default"].p.withConfig({
+  displayName: "_dashVariables__DashSubheader",
+  componentId: "tteq5l-1"
+})(["font-family:CircularStd-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;font-size:15px;line-height:21px;letter-spacing:0.25px;z-index:3;-webkit-font-smoothing:antialiased;color:", ";", ""], function (props) {
+  return props.color ? props.color : _variables.colors.grayText;
+}, function (props) {
+  return props.style ? props.style : null;
+});
+
+exports.DashSubheader = DashSubheader;

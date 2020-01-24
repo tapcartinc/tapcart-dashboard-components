@@ -314,6 +314,4 @@ var BoxedToggleLabel = _styledComponents["default"].label.withConfig({
 var BoxedToggleInput = _styledComponents["default"].input.withConfig({
   displayName: "BoxedToggle__BoxedToggleInput",
   componentId: "sc-173bx5f-2"
-})(["opacity:0;z-index:1;width:64px;height:32px;transition:0.2s;&:hover{cursor:pointer;}&:checked{", " transition:0.2s;&::after{content:\"\";display:block;width:32px;height:32px;margin-left:34px;left:0px;transition:0.2s;}}"], function (props) {
-  return console.log("props", props.checked);
-});
+})(["opacity:0;z-index:1;width:64px;height:32px;transition:0.2s;&:hover{cursor:pointer;}&:checked{transition:0.2s;&::after{content:\"\";display:block;width:32px;height:32px;margin-left:34px;left:0px;transition:0.2s;}}"]);

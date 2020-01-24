@@ -50,6 +50,8 @@ var _exportNames = {
   sofiaPro: true,
   circularStd: true,
   colorPicker: true,
+  DashHeader: true,
+  DashSubheader: true,
   transition: true,
   hover: true,
   onClickTransition: true,
@@ -343,6 +345,18 @@ Object.defineProperty(exports, "colorPicker", {
   enumerable: true,
   get: function get() {
     return _dashVariables.colorPicker;
+  }
+});
+Object.defineProperty(exports, "DashHeader", {
+  enumerable: true,
+  get: function get() {
+    return _dashVariables.DashHeader;
+  }
+});
+Object.defineProperty(exports, "DashSubheader", {
+  enumerable: true,
+  get: function get() {
+    return _dashVariables.DashSubheader;
   }
 });
 Object.defineProperty(exports, "transition", {

@@ -23,6 +23,8 @@ var _nukaCarousel = _interopRequireDefault(require("nuka-carousel"));
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
 
+var _dashVariables = require("../utils/_dashVariables");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -113,6 +115,27 @@ function ModalType(props) {
 
     case "generic":
       return _react["default"].createElement(GenericModalStyle, props, props.children);
+
+    case "dash":
+      return _react["default"].createElement(DashModal, props, _react["default"].createElement("div", {
+        onClick: props.closeModal,
+        style: {
+          position: "absolute",
+          right: 16,
+          top: 13,
+          cursor: "pointer"
+        }
+      }, _react["default"].createElement(_Icon.Icon, {
+        fill: _variables.colors.grayText,
+        type: "small-close"
+      })), _react["default"].createElement(StyledDashContent, null, _react["default"].createElement("div", {
+        style: {
+          marginBottom: 25,
+          marginTop: 40
+        }
+      }, _react["default"].createElement(_dashVariables.DashHeader, null, props.title), _react["default"].createElement(_dashVariables.DashSubheader, null, props.description)), _react["default"].createElement(StyledDashModalContent, null, props.children), _react["default"].createElement(_Button.Button, {
+        onClick: props.onClick
+      }, props.buttonText)));
 
     case "full":
       return _react["default"].createElement(FullscreenModal, props, props.children);
@@ -245,7 +268,11 @@ var SliderModal = function SliderModal(props) {
 var StyledModal = (0, _styledComponents["default"])(ReactModalAdapter).withConfig({
   displayName: "Modal__StyledModal",
   componentId: "sc-1fnp8gl-0"
-})(["&__overlay{height:100%;width:100%;position:fixed;overflow-y:scroll;top:0;left:0;z-index:999;background:rgba(0,0,0,0.4);display:flex;flex-direction:column;justify-content:center;align-items:center;}&__content{overflow-y:hidden;border-radius:3px;background:#ffffff;z-index:9999;width:auto !important;max-width:600px;}"]);
+})(["&__overlay{height:100%;width:100%;position:fixed;overflow-y:scroll;top:0;left:0;z-index:999;background:rgba(0,0,0,0.4);display:flex;flex-direction:column;justify-content:center;align-items:center;}&__content{overflow-y:hidden;border-radius:3px;background:#ffffff;z-index:9999;box-shadow:", ";", ";", ";&:focus{outline:0;}}"], _variables.boxShadow.large, function (props) {
+  return props.type !== "dash" && "max-width: 600px; width: auto !important";
+}, function (props) {
+  return props.type === "dash" && "position: relative;padding: .75em 1em; overflow: scroll; background: ".concat(_dashVariables.colorPicker.modalBg, ";");
+});
 
 var ModalStyle = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalStyle",
@@ -254,56 +281,70 @@ var ModalStyle = _styledComponents["default"].div.withConfig({
   return props.style ? props.style : null;
 });
 
+var StyledDashModalContent = _styledComponents["default"].div.withConfig({
+  displayName: "Modal__StyledDashModalContent",
+  componentId: "sc-1fnp8gl-2"
+})(["background:#ffffff;border:1px solid ", ";height:50vh;min-height:400px;margin-bottom:30px;padding:40px 50px;"], _dashVariables.colorPicker.lightGray);
+
+var StyledDashContent = _styledComponents["default"].div.withConfig({
+  displayName: "Modal__StyledDashContent",
+  componentId: "sc-1fnp8gl-3"
+})(["margin-left:0px;text-align:left;padding-left:30px;padding-right:30px;button{margin:0 auto;margin-bottom:10px;}"]);
+
+var DashModal = (0, _styledComponents["default"])(ModalStyle).withConfig({
+  displayName: "Modal__DashModal",
+  componentId: "sc-1fnp8gl-4"
+})(["width:90vw;height:auto;top:0;left:0;padding:0.75em 1em;"]);
 var ModalWithGraphic = (0, _styledComponents["default"])(ModalStyle).withConfig({
   displayName: "Modal__ModalWithGraphic",
-  componentId: "sc-1fnp8gl-2"
+  componentId: "sc-1fnp8gl-5"
 })(["width:600px;display:flex;flex-direction:row;align-items:center;object-fit:cover;height:100%;overflow:hidden;justify-content:space-between;", ""], function (props) {
   return props.style ? props.style : null;
 });
 var MinimalModalStyle = (0, _styledComponents["default"])(ModalStyle).withConfig({
   displayName: "Modal__MinimalModalStyle",
-  componentId: "sc-1fnp8gl-3"
+  componentId: "sc-1fnp8gl-6"
 })(["width:500px;padding-top:19px;padding-left:19px;padding-bottom:20px;padding-right:20px;", ""], function (props) {
   return props.style ? props.style : null;
 });
 var GenericModalStyle = (0, _styledComponents["default"])(ModalStyle).withConfig({
   displayName: "Modal__GenericModalStyle",
-  componentId: "sc-1fnp8gl-4"
+  componentId: "sc-1fnp8gl-7"
 })(["", ""], function (props) {
   return props.style ? props.style : null;
 });
 var FullscreenModal = (0, _styledComponents["default"])(ModalStyle).withConfig({
   displayName: "Modal__FullscreenModal",
-  componentId: "sc-1fnp8gl-5"
+  componentId: "sc-1fnp8gl-8"
 })(["position:fixed;width:100%;height:100%;top:0;left:0;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
 var ButtonsStyle = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ButtonsStyle",
-  componentId: "sc-1fnp8gl-6"
+  componentId: "sc-1fnp8gl-9"
 })(["display:flex;flex-direction:row;align-items:center;justify-content:flex-end;margin-top:25px;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
 var ModalHeader = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalHeader",
-  componentId: "sc-1fnp8gl-7"
+  componentId: "sc-1fnp8gl-10"
 })(["display:flex;flex-direction:row;justify-content:space-between;align-items:center;position:relative;margin-bottom:30px;"]);
 
 var ModalHeaderLeft = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalHeaderLeft",
-  componentId: "sc-1fnp8gl-8"
+  componentId: "sc-1fnp8gl-11"
 })(["display:flex;flex-direction:row;justify-items:flex-start;align-items:center;"]);
 
 var ModalGraphic = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalGraphic",
-  componentId: "sc-1fnp8gl-9"
+  componentId: "sc-1fnp8gl-12"
 })(["position:relative;object-fit:cover;height:100%;width:250px;"]);
 
 var CloseIcon = (0, _styledComponents["default"])(_Icon.Icon).withConfig({
   displayName: "Modal__CloseIcon",
-  componentId: "sc-1fnp8gl-10"
+  componentId: "sc-1fnp8gl-13"
 })(["height:15px;width:15px;top:0;right:0;position:absolute;z-index:10;&:hover{cursor:pointer;}"]);
 Modal.propTypes = {
   type: _propTypes["default"].string,

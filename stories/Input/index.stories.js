@@ -15,6 +15,7 @@ export const input = () => {
       <Input
         onChange={e => setState(e.target.value)}
         value={state}
+        maxLength={50}
         label={text("Label", "Input Label")}
         error={boolean("Throw error", false)}
         placeholder="Input placeholder..."

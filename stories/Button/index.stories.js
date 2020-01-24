@@ -20,6 +20,7 @@ export const allButtons = () => (
     >
       Primary
     </Button>
+    <Button type="transparent--blue">Primary</Button>
     <Button type="secondary" onClick={action("clicked")}>
       Secondary
     </Button>

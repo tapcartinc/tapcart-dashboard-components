@@ -134,6 +134,32 @@ export const fullModal = () => {
   );
 };
 
+export const dashModal = () => {
+  const [dashModal, toggleDashModal] = useState(false);
+
+  return (
+    <>
+      <Button type="primary" onClick={() => toggleDashModal(!dashModal)}>
+        open dash modal
+      </Button>
+      <Modal
+        isOpen={dashModal}
+        closeModal={() => toggleDashModal(false)}
+        type="dash"
+        title="Countdown Timer Block"
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        onClick={() => console.log("hi")}
+        buttonText="SAVE BLOCK"
+      >
+        <Body color={colors.black}>Want to change the cat selfie?</Body>
+        <Body color={colors.grayText}>
+          Click on a button below to select the selfie of your preference.
+        </Body>
+      </Modal>
+    </>
+  );
+};
+
 // export const sliderModal = props => {
 //   const [sliderModal, toggleSliderModal] = useState(false);
 //   const slides = [

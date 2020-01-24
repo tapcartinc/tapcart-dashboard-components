@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Input = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -17,38 +17,67 @@ var _dashVariables = require("../utils/_dashVariables");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-var InputStyle = _styledComponents["default"].input.withConfig({
-  displayName: "Input__InputStyle",
-  componentId: "sc-1bkiiiy-0"
-})(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;", ";&::placeholder{", ";color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
-  return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_variables.colors.blue50);
-}, _variables.colors.offwhite, _dashVariables.sofiaPro.regular, _dashVariables.sofiaPro.regular, _variables.colors.blue25, function (props) {
-  return props.style ? props.style : null;
-});
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-var Input = function Input(_ref) {
-  var errors = _ref.errors,
-      label = _ref.label,
-      value = _ref.value,
-      name = _ref.name,
-      placeholder = _ref.placeholder,
-      props = _objectWithoutProperties(_ref, ["errors", "label", "value", "name", "placeholder"]);
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-  return _react["default"].createElement(_react["default"].Fragment, null, label && _react["default"].createElement(StyledLabel, {
+var Input = function Input(props) {
+  var errors = props.errors,
+      label = props.label,
+      value = props.value,
+      name = props.name,
+      placeholder = props.placeholder,
+      maxLength = props.maxLength;
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      bounce = _useState2[0],
+      setBounce = _useState2[1];
+
+  var bounceFunc = function bounceFunc() {
+    if (value.length === maxLength) {
+      return setBounce(true);
+    }
+  };
+
+  var unbounceFunc = function unbounceFunc() {
+    return setBounce(false);
+  };
+
+  var bounceStyle = {};
+
+  if (bounce) {
+    bounceStyle["top"] = "-3px";
+  }
+
+  return _react["default"].createElement(StyledInputWrapper, null, label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
   }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement(InputStyle, _extends({
     value: value,
     name: name,
+    onKeyPress: bounceFunc,
+    onKeyUp: unbounceFunc,
     onChange: props.onChange,
     placeholder: placeholder,
     errors: errors && errors.length >= 0
-  }, props)));
+  }, props)), maxLength && _react["default"].createElement(StyledCharCount, {
+    charCountHit: props.value.length === props.maxLength,
+    bounce: bounce
+  }, _react["default"].createElement("span", {
+    style: {
+      marginTop: bounce ? "-3px !important" : "0px"
+    }
+  }, props.value ? props.value.length : 0), "/", props.maxLength));
 };
 
 exports.Input = Input;
@@ -65,9 +94,32 @@ Input.defaultProps = {
   name: ""
 };
 
+var StyledInputWrapper = _styledComponents["default"].div.withConfig({
+  displayName: "Input__StyledInputWrapper",
+  componentId: "sc-1bkiiiy-0"
+})(["position:relative;width:100%;"]);
+
+var StyledCharCount = _styledComponents["default"].div.withConfig({
+  displayName: "Input__StyledCharCount",
+  componentId: "sc-1bkiiiy-1"
+})(["position:absolute;text-align:right;right:16px;bottom:16px;color:", ";", " font-size:14px;transition:top 0.1s ease 0s;span{transition:top 0.1s ease 0s;position:absolute;right:20px;", ";}"], _variables.colors.grayText, function (props) {
+  return props.charCountHit && "color: ".concat(_variables.colors.red, ";");
+}, function (props) {
+  return props.bounce ? "top: -3px" : "top: 0px";
+});
+
 var StyledLabel = _styledComponents["default"].p.withConfig({
   displayName: "Input__StyledLabel",
-  componentId: "sc-1bkiiiy-1"
+  componentId: "sc-1bkiiiy-2"
 })(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;", ";color:", ";"], _dashVariables.circularStd.medium, function (props) {
   return props.errors ? _variables.colors.red : "#000000";
+});
+
+var InputStyle = _styledComponents["default"].input.withConfig({
+  displayName: "Input__InputStyle",
+  componentId: "sc-1bkiiiy-3"
+})(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
+  return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
+}, _variables.colors.offwhite, _variables.colors.blue25, function (props) {
+  return props.style ? props.style : null;
 });
