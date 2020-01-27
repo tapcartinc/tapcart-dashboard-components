@@ -155,6 +155,30 @@ export const dashModal = () => {
         <Body color={colors.grayText}>
           Click on a button below to select the selfie of your preference.
         </Body>
+        <Body color={colors.black}>Want to change the cat selfie?</Body>
+        <Body color={colors.grayText}>
+          Click on a button below to select the selfie of your preference.
+        </Body>
+        <Body color={colors.black}>Want to change the cat selfie?</Body>
+        <Body color={colors.grayText}>
+          Click on a button below to select the selfie of your preference.
+        </Body>
+        <Body color={colors.black}>Want to change the cat selfie?</Body>
+        <Body color={colors.grayText}>
+          Click on a button below to select the selfie of your preference.
+        </Body>
+        <Body color={colors.black}>Want to change the cat selfie?</Body>
+        <Body color={colors.grayText}>
+          Click on a button below to select the selfie of your preference.
+        </Body>
+        <Body color={colors.black}>Want to change the cat selfie?</Body>
+        <Body color={colors.grayText}>
+          Click on a button below to select the selfie of your preference.
+        </Body>
+        <Body color={colors.black}>Want to change the cat selfie?</Body>
+        <Body color={colors.grayText}>
+          Click on a button below to select the selfie of your preference.
+        </Body>
       </Modal>
     </>
   );

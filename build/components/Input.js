@@ -31,7 +31,14 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var Input = function Input(props) {
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var Input = function Input(_ref) {
+  var innerRef = _ref.innerRef,
+      props = _objectWithoutProperties(_ref, ["innerRef"]);
+
   var errors = props.errors,
       label = props.label,
       value = props.value,
@@ -62,14 +69,16 @@ var Input = function Input(props) {
 
   return _react["default"].createElement(StyledInputWrapper, null, label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
-  }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement(InputStyle, _extends({
+  }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement("input", _extends({
+    className: "input-style",
+    ref: innerRef,
     value: value,
     name: name,
     onKeyPress: bounceFunc,
     onKeyUp: unbounceFunc,
     onChange: props.onChange,
     placeholder: placeholder,
-    errors: errors && errors.length >= 0
+    errors: errors ? errors.length >= 0 : undefined
   }, props)), maxLength && _react["default"].createElement(StyledCharCount, {
     charCountHit: props.value.length === props.maxLength,
     bounce: bounce
@@ -97,7 +106,11 @@ Input.defaultProps = {
 var StyledInputWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledInputWrapper",
   componentId: "sc-1bkiiiy-0"
-})(["position:relative;width:100%;"]);
+})(["position:relative;width:100%;.input-style{border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";}"], function (props) {
+  return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
+}, _variables.colors.offwhite, _variables.colors.blue25, function (props) {
+  return props.style ? props.style : null;
+});
 
 var StyledCharCount = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledCharCount",
@@ -113,13 +126,4 @@ var StyledLabel = _styledComponents["default"].p.withConfig({
   componentId: "sc-1bkiiiy-2"
 })(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;", ";color:", ";"], _dashVariables.circularStd.medium, function (props) {
   return props.errors ? _variables.colors.red : "#000000";
-});
-
-var InputStyle = _styledComponents["default"].input.withConfig({
-  displayName: "Input__InputStyle",
-  componentId: "sc-1bkiiiy-3"
-})(["border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";"], function (props) {
-  return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
-}, _variables.colors.offwhite, _variables.colors.blue25, function (props) {
-  return props.style ? props.style : null;
 });

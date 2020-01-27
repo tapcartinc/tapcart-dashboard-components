@@ -134,7 +134,7 @@ function ModalType(props) {
           marginTop: 40
         }
       }, _react["default"].createElement(_dashVariables.DashHeader, null, props.title), _react["default"].createElement(_dashVariables.DashSubheader, null, props.description)), _react["default"].createElement(StyledDashModalContent, null, props.children), _react["default"].createElement(_Button.Button, {
-        onClick: props.onClick
+        onClick: props.save
       }, props.buttonText)));
 
     case "full":
@@ -284,7 +284,7 @@ var ModalStyle = _styledComponents["default"].div.withConfig({
 var StyledDashModalContent = _styledComponents["default"].div.withConfig({
   displayName: "Modal__StyledDashModalContent",
   componentId: "sc-1fnp8gl-2"
-})(["background:#ffffff;border:1px solid ", ";height:50vh;min-height:400px;margin-bottom:30px;padding:40px 50px;"], _dashVariables.colorPicker.lightGray);
+})(["background:#ffffff;border:1px solid ", ";height:50vh;min-height:400px;margin-bottom:30px;padding:40px 50px;overflow:scroll;"], _dashVariables.colorPicker.lightGray);
 
 var StyledDashContent = _styledComponents["default"].div.withConfig({
   displayName: "Modal__StyledDashContent",
