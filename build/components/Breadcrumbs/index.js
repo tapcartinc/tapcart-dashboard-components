@@ -58,7 +58,7 @@ exports.Breadcrumbs = Breadcrumbs;
 var BreadcrumbsStyle = _styledComponents["default"].ul.withConfig({
   displayName: "Breadcrumbs__BreadcrumbsStyle",
   componentId: "z4mcfa-0"
-})(["display:flex;align-items:center;flex-direction:row;width:100%;border-bottom:1px solid ", ";border-top:1px solid ", ";padding:0px;margin-top:0px;margin-bottom:0px;padding-left:20px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;", ";", ""], _variables.colors.gray25, _variables.colors.gray25, _media["default"].md(_templateObject(), function (props) {
+})(["display:flex;align-items:center;flex-direction:row;width:100%;border-bottom:1px solid ", ";border-top:1px solid ", ";padding:0px;margin-top:0px;margin-bottom:0px;padding-left:20px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;", ";", ""], _variables.colors.gray25, _variables.colors.gray25, _media["default"].md(_templateObject(), function (props) {
   return props.hideOnTabletAndMobile && "display: none";
 }), function (props) {
   return props.style ? props.style : null;

@@ -44,27 +44,27 @@ var colors = {
 exports.colors = colors;
 var sofia = {
   sofiaSemiBold: {
-    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
+    fontFamily: "SofiaPro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
     fontWeight: 600,
     fontStyle: "normal"
   },
   sofiaMedium: {
-    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
+    fontFamily: "SofiaPro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
     fontWeight: 500,
     fontStyle: "normal"
   },
   sofiaRegular: {
-    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
+    fontFamily: "SofiaPro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
     fontWeight: 300,
     fontStyle: "normal"
   },
   sofiaLight: {
-    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
+    fontFamily: "SofiaPro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
     fontWeight: 200,
     fontStyle: "normal"
   },
   sofiaItalic: {
-    fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
+    fontFamily: "SofiaPro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
     fontWeight: "normal",
     fontStyle: "italic"
   }

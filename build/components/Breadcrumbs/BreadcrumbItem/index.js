@@ -48,9 +48,7 @@ exports.BreadcrumbsItem = BreadcrumbsItem;
 var BreadcrumbsItemStyle = _styledComponents["default"].li.withConfig({
   displayName: "BreadcrumbItem__BreadcrumbsItemStyle",
   componentId: "y4dmfk-0"
-})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:10px;", ";text-transform:uppercase;", ";line-height:1.6;letter-spacing:1px;font-size:15px;margin-right:0px;margin-left:10px;line-height:34px;color:", ";span{margin-left:-5px;height:100%;}", " ", ";"], function (props) {
-  return props.active ? _variables.sofia.sofiaMedium : _variables.sofia.sofiaLight;
-}, function (props) {
+})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:10px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;", ";line-height:1.6;letter-spacing:1px;font-size:15px;margin-right:0px;margin-left:10px;line-height:34px;color:", ";span{margin-left:-5px;height:100%;}", " ", ";"], function (props) {
   return props.active && "transform: translateY(-2px)";
 }, function (props) {
   return props.active ? _variables.colors.blue : _variables.colors.grayText;

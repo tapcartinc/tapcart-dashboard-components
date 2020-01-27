@@ -91,7 +91,6 @@ var Input = function Input(_ref) {
 
 exports.Input = Input;
 Input.propTypes = {
-  error: _propTypes["default"].bool,
   value: _propTypes["default"].string.isRequired,
   name: _propTypes["default"].string,
   placeholder: _propTypes["default"].string,
@@ -99,7 +98,6 @@ Input.propTypes = {
   label: _propTypes["default"].string
 };
 Input.defaultProps = {
-  error: false,
   name: ""
 };
 

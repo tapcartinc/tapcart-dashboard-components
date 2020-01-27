@@ -75,7 +75,7 @@ exports.H5 = H5;
 var placeholder = {
   fontSize: "18px",
   color: "#DBE1EF",
-  fontFamily: "Sofia Pro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
+  fontFamily: "SofiaPro, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif",
   fontWeight: 500,
   fontStyle: "normal"
 };
