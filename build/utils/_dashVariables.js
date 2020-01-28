@@ -55,7 +55,7 @@ exports.colorPicker = colorPicker;
 var DashHeader = _styledComponents["default"].h1.withConfig({
   displayName: "_dashVariables__DashHeader",
   componentId: "tteq5l-0"
-})(["font-family:CircularStd-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;-webkit-font-smoothing:antialiased;font-size:25px;line-height:31px;margin-bottom:5px;z-index:3;letter-spacing:0.5px;text-transform:capitalize;-webkit-font-smoothing:antialiased;color:", ";", ""], function (props) {
+})(["font-family:CircularStd-Book,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;-webkit-font-smoothing:antialiased;font-size:25px;line-height:31px;margin-bottom:5px;z-index:3;letter-spacing:0.5px;text-transform:capitalize;-webkit-font-smoothing:antialiased;color:", ";", ""], function (props) {
   return props.color ? props.color : _variables.colors.blue;
 }, function (props) {
   return props.style ? props.style : null;
@@ -66,7 +66,7 @@ exports.DashHeader = DashHeader;
 var DashSubheader = _styledComponents["default"].p.withConfig({
   displayName: "_dashVariables__DashSubheader",
   componentId: "tteq5l-1"
-})(["font-family:CircularStd-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;font-size:15px;line-height:21px;letter-spacing:0.25px;z-index:3;-webkit-font-smoothing:antialiased;color:", ";", ""], function (props) {
+})(["font-family:CircularStd-Book,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;font-style:normal;font-size:15px;line-height:21px;letter-spacing:0.25px;z-index:3;-webkit-font-smoothing:antialiased;color:", ";", ""], function (props) {
   return props.color ? props.color : _variables.colors.grayText;
 }, function (props) {
   return props.style ? props.style : null;

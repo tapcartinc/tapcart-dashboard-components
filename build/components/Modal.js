@@ -134,6 +134,7 @@ function ModalType(props) {
           marginTop: 40
         }
       }, _react["default"].createElement(_dashVariables.DashHeader, null, props.title), _react["default"].createElement(_dashVariables.DashSubheader, null, props.description)), _react["default"].createElement(StyledDashModalContent, null, props.children), _react["default"].createElement(_Button.Button, {
+        isDisabled: props.saveDisabled,
         onClick: props.save
       }, props.buttonText)));
 
