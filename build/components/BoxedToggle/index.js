@@ -15,8 +15,6 @@ var _dashVariables = require("../../utils/_dashVariables");
 
 var _Icon = require("../../elements/Icon");
 
-var _DashIcon = require("../../elements/DashIcon");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -257,7 +255,7 @@ function BoxedToggle(props) {
         backgroundOn: _dashVariables.colorPicker.black,
         backgroundOff: _dashVariables.colorPicker.androidGreen,
         htmlFor: props.name
-      }, props), _react["default"].createElement(_DashIcon.DashIcon, {
+      }, props), _react["default"].createElement(_Icon.Icon, {
         type: "apple",
         onClick: function onClick() {
           return props.onChange(!props.toggleState);
@@ -272,7 +270,7 @@ function BoxedToggle(props) {
           width: 18,
           height: 18
         }
-      }), _react["default"].createElement(_DashIcon.DashIcon, {
+      }), _react["default"].createElement(_Icon.Icon, {
         type: "android",
         onClick: function onClick() {
           return props.onChange(!props.toggleState);
@@ -295,12 +293,12 @@ function BoxedToggle(props) {
 
 var BoxedToggleWrapper = _styledComponents["default"].div.withConfig({
   displayName: "BoxedToggle__BoxedToggleWrapper",
-  componentId: "sc-173bx5f-0"
+  componentId: "sc-1wzsyt4-0"
 })(["position:relative;display:flex;align-items:center;&:hover{cursor:pointer;}"]);
 
 var BoxedToggleLabel = _styledComponents["default"].label.withConfig({
   displayName: "BoxedToggle__BoxedToggleLabel",
-  componentId: "sc-173bx5f-1"
+  componentId: "sc-1wzsyt4-1"
 })(["position:relative;width:64px;height:32px;cursor:pointer;height:32px;box-shadow:0 0 0 1px ", ";border-radius:3px;background:", ";transition:0.2s;&:hover{cursor:pointer;}&::after{content:\"\";display:block;width:33px;height:34px;border-radius:3px;border:1px solid ", ";background:white;box-shadow:0 2px 10px 0 rgba(0,0,0,0.11);-webkit-transition:0.2s;transition:0.2s;position:absolute;&:hover{cursor:pointer;}", ";}"], function (props) {
   return props.toggleState ? props.backgroundOn : props.border;
 }, function (props) {
@@ -313,5 +311,5 @@ var BoxedToggleLabel = _styledComponents["default"].label.withConfig({
 
 var BoxedToggleInput = _styledComponents["default"].input.withConfig({
   displayName: "BoxedToggle__BoxedToggleInput",
-  componentId: "sc-173bx5f-2"
+  componentId: "sc-1wzsyt4-2"
 })(["opacity:0;z-index:1;width:64px;height:32px;transition:0.2s;&:hover{cursor:pointer;}&:checked{transition:0.2s;&::after{content:\"\";display:block;width:32px;height:32px;margin-left:34px;left:0px;transition:0.2s;}}"]);

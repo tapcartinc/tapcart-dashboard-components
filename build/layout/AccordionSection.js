@@ -21,7 +21,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _templateObject3() {
   var data = _taggedTemplateLiteral(["\n      margin-right: 10px;\n    "]);
@@ -182,14 +182,14 @@ exports["default"] = _default;
 
 var AccordionWrapper = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionWrapper",
-  componentId: "llk5lt-0"
+  componentId: "sc-3gwizr-0"
 })(["", ""], function (props) {
   return props.isOpen ? "\n  max-height: 100rem;\n  transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);\n  transition-duration: 0.5s;\n  transition-property: max-height;\n  " : "\n  max-height: 0;\n  overflow: hidden;\n  text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);\n  transition-duration: 0.5s;\n  transition-property: max-height;\n  z-index: 1;\n  position: relative;";
 });
 
 var AccordionStyledItem = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionStyledItem",
-  componentId: "llk5lt-1"
+  componentId: "sc-3gwizr-1"
 })(["padding:0px 50px;border-radius:3px;background:white;box-shadow:", ";margin-bottom:20px;", " ", ";"], function (props) {
   return props.boxShadow ? "0px 2px 40px 0px rgba(0,0,0,0.05)" : null;
 }, _media["default"].xs(_templateObject()), function (props) {
@@ -198,7 +198,7 @@ var AccordionStyledItem = _styledComponents["default"].div.withConfig({
 
 var AccordionLabel = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionLabel",
-  componentId: "llk5lt-2"
+  componentId: "sc-3gwizr-2"
 })(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-stretch:normal;font-style:normal;font-weight:400;height:75px;font-size:", ";color:", ";", ""], function (props) {
   return !props.className && "26px";
 }, function (props) {
@@ -207,12 +207,12 @@ var AccordionLabel = _styledComponents["default"].div.withConfig({
 
 var AccordionChildren = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__AccordionChildren",
-  componentId: "llk5lt-3"
+  componentId: "sc-3gwizr-3"
 })(["padding-bottom:25px;", ""], function (props) {
   return props.isOpen ? "\n      opacity: 1;\n      transform: translateY(0);\n      transition-delay: 0.2s;\n      transition-timing-function: ease-in-out;\n      transition-duration: 0.2s;\n      transition-property: opacity, transform;\n\n " : "opacity: 0;\n      transform: translateY(-1rem);\n    transition-timing-function: ease-in-out;\n    transition-duration: 0.2s;\n    transition-property: opacity, transform;\n\n ";
 });
 
 var StyledAccordionLabel = _styledComponents["default"].div.withConfig({
   displayName: "AccordionSection__StyledAccordionLabel",
-  componentId: "llk5lt-4"
+  componentId: "sc-3gwizr-4"
 })(["", ";"], _media["default"].xs(_templateObject3()));

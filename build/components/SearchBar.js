@@ -54,7 +54,7 @@ function SearchBar(_ref) {
 
 var SearchContainer = _styledComponents["default"].div.withConfig({
   displayName: "SearchBar__SearchContainer",
-  componentId: "sc-189wnvo-0"
+  componentId: "sc-1a34skd-0"
 })(["display:flex;flex-direction:row;align-items:center;border-bottom:1px solid ", ";position:relative;width:100%;input{font-family:CircularStd-Book,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;font-size:15px;border-radius:3px;border:none;background:transparent;width:100%;padding-top:15px;padding-bottom:15px;padding-left:5px;padding-right:5px;letter-spacing:0.25px;color:", ";&:hover{cursor:auto;}&::placeholder{color:", ";}&:focus{outline:none;}margin-left:10px;", "}", ""], _dashVariables.colorPicker.grayBlue, _dashVariables.colorPicker.black, _dashVariables.colorPicker.grayBlue, function (props) {
   return props.style ? props.style : null;
 }, function (props) {
@@ -63,7 +63,7 @@ var SearchContainer = _styledComponents["default"].div.withConfig({
 
 var StyledForm = _styledComponents["default"].form.withConfig({
   displayName: "SearchBar__StyledForm",
-  componentId: "sc-189wnvo-1"
+  componentId: "sc-1a34skd-1"
 })(["width:420px;", ""], function (props) {
   return props.center ? "margin: 0 auto;" : "margin: 0px;";
 });

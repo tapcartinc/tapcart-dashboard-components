@@ -15,7 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var Box = _styledComponents["default"].div.withConfig({
   displayName: "TestBox__Box",
-  componentId: "i1m1if-0"
+  componentId: "oaoz4f-0"
 })(["background-color:", " ", ";"], _variables.colors.blue, _variables.space);
 
 var TestBox = function TestBox(props) {

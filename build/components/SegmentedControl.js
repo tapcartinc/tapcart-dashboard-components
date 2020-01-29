@@ -23,7 +23,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -193,52 +193,52 @@ exports.SegmentedControl = SegmentedControl;
 
 var FieldSegmentedControl = _styledComponents["default"].div.withConfig({
   displayName: "SegmentedControl__FieldSegmentedControl",
-  componentId: "w55qep-0"
+  componentId: "sc-1lnwhjj-0"
 })(["height:38px;border-radius:3px;background:", ";width:100%;overflow:hidden;text-align:center;margin:auto;border:1px solid ", ";", ";text-transform:uppercase;font-weight:300;"], function (props) {
   return props.bgColor ? props.bgColor : "transparent";
 }, _variables.colors.blue, _dashVariables.sofiaPro.regular);
 
 var FieldSegmentedControlTabs = _styledComponents["default"].div.withConfig({
   displayName: "SegmentedControl__FieldSegmentedControlTabs",
-  componentId: "w55qep-1"
+  componentId: "sc-1lnwhjj-1"
 })(["width:100%;display:flex;flex-direction:row;justify-items:space-between;"]);
 
 var FieldTab = _styledComponents["default"].label.withConfig({
   displayName: "SegmentedControl__FieldTab",
-  componentId: "w55qep-2"
+  componentId: "sc-1lnwhjj-2"
 })(["flex:1;height:38px;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:400;font-style:normal;font-size:14px;letter-spacing:1px;", ";", ""], _dashVariables.sofiaPro.regular, function (props) {
   return props.current === props.htmlFor ? "\n    background: ".concat(_variables.colors.blue, ";\n    color: #fff;\n    border-radius: 2px;\n  ") : "color: ".concat(_variables.colors.blue, ";");
 });
 
 var SegmentedControlTabs = _styledComponents["default"].div.withConfig({
   displayName: "SegmentedControl__SegmentedControlTabs",
-  componentId: "w55qep-3"
+  componentId: "sc-1lnwhjj-3"
 })(["width:100%;display:flex;flex-direction:row;justify-items:space-between;"]);
 
 var SegmentedControlStyle = _styledComponents["default"].div.withConfig({
   displayName: "SegmentedControl__SegmentedControlStyle",
-  componentId: "w55qep-4"
+  componentId: "sc-1lnwhjj-4"
 })(["margin:auto;overflow:hidden;height:100%;display:flex;flex-direction:row;justify-items:space-between;width:100%;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
 var SecondaryControlStyle = _styledComponents["default"].div.withConfig({
   displayName: "SegmentedControl__SecondaryControlStyle",
-  componentId: "w55qep-5"
+  componentId: "sc-1lnwhjj-5"
 })(["margin:0px;max-width:450px;overflow:hidden;display:flex;flex-direction:row;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
 var Tab = _styledComponents["default"].label.withConfig({
   displayName: "SegmentedControl__Tab",
-  componentId: "w55qep-6"
+  componentId: "sc-1lnwhjj-6"
 })(["color:#000;font-size:15px;", ";flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;font-weight:500;font-style:normal;padding:15px 0px;text-transform:uppercase;letter-spacing:0.5px;", ";&:hover{cursor:pointer;}"], _dashVariables.sofiaPro.regular, function (props) {
   return props.current === props.htmlFor && "background: #3235ab;\n    color: #fff;\n    border-radius: 3px;\n    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);";
 });
 
 var SecondaryTab = _styledComponents["default"].label.withConfig({
   displayName: "SegmentedControl__SecondaryTab",
-  componentId: "w55qep-7"
+  componentId: "sc-1lnwhjj-7"
 })(["flex:1;cursor:pointer;display:flex;justify-content:center;align-items:center;position:relative;z-index:1;", ";font-weight:normal;font-style:normal;padding:10px;letter-spacing:0.5px;color:#a2a4dd;font-size:14px;width:100%;transition:ease-out 0.2s;border:1px solid transparent;", " &:hover{cursor:pointer;}"], _dashVariables.sofiaPro.regular, function (props) {
   return props.current === props.htmlFor && "background: #fff;\n    color: #3235ab;\n    border-radius: 3px;\n    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);\n    opacity: 1;\n    border: 1px solid #3235ab;\n    ";
 });

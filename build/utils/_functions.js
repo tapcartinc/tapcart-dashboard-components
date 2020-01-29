@@ -5,6 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getBorder = exports.getColors = void 0;
 
+var _dashVariables = require("./_dashVariables");
+
 var _variables = require("./_variables");
 
 var getColors = function getColors(type) {
@@ -12,58 +14,58 @@ var getColors = function getColors(type) {
     case "primary":
       return {
         color: "#FFFFFF",
-        background: _variables.colors.blue
+        background: _dashVariables.colorPicker.blue
       };
 
     case "submit":
       return {
         color: "#FFFFFF",
-        background: _variables.colors.blue
+        background: _dashVariables.colorPicker.blue
       };
 
     case "primary--reversed":
       return {
         background: "transparent",
-        color: _variables.colors.blue,
-        boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.blue)
+        color: _dashVariables.colorPicker.blue,
+        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.blue)
       };
 
     case "secondary":
       return {
-        color: _variables.colors.black,
+        color: _dashVariables.colorPicker.black,
         background: "transparent",
-        boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.gray25)
+        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.gray)
       };
 
     case "delete":
       return {
         color: "#FFFFFF",
-        background: _variables.colors.red
+        background: _dashVariables.colorPicker.red
       };
 
     case "delete--reversed":
       return {
         background: "transparent",
-        color: _variables.colors.red,
-        boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.red)
+        color: _dashVariables.colorPicker.red,
+        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.red)
       };
 
     case "save":
       return {
         color: "#FFFFFF",
-        background: _variables.colors.green
+        background: _dashVariables.colorPicker.green100
       };
 
     case "save--reversed":
       return {
         background: "transparent",
-        color: _variables.colors.green,
-        boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.green)
+        color: _dashVariables.colorPicker.green100,
+        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.green100)
       };
 
     case "inverted":
       return {
-        color: _variables.colors.blue,
+        color: _dashVariables.colorPicker.blue,
         background: "#FFFFFF"
       };
 
@@ -76,19 +78,19 @@ var getColors = function getColors(type) {
 
     case "transparent--blue":
       return {
-        color: _variables.colors.blue,
+        color: _dashVariables.colorPicker.blue,
         background: "transparent"
       };
 
     case "transparent--green":
       return {
-        color: _variables.colors.green,
+        color: _dashVariables.colorPicker.green100,
         background: "transparent"
       };
 
     case "transparent--red":
       return {
-        color: _variables.colors.red,
+        color: _dashVariables.colorPicker.red,
         background: "transparent"
       };
 
@@ -100,7 +102,7 @@ var getColors = function getColors(type) {
 
     case "transparent--gray":
       return {
-        color: _variables.colors.grayText,
+        color: _dashVariables.colorPicker.gray,
         background: "transparent"
       };
 
@@ -108,7 +110,7 @@ var getColors = function getColors(type) {
       return {
         color: "white",
         background: "transparent",
-        boxShadow: "inset 0px 0px 0px 1px ".concat(_variables.colors.green)
+        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.green100)
       };
 
     case "#D94747":
@@ -229,7 +231,7 @@ var getBorder = function getBorder(type) {
       return "0px";
 
     case "secondary":
-      return "inset 0px 0px 0px 2px ".concat(_variables.colors.gray25);
+      return "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.gray);
 
     case "border":
       return "inset 0px 0px 0px 1px ".concat(_variables.colors.blue);

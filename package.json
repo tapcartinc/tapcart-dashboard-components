@@ -1,7 +1,7 @@
 {
-  "name": "tapcart-library",
-  "version": "0.5.159",
-  "description": "tapcart component kit",
+  "name": "tapcart-dashboard-components",
+  "version": "0.0.00",
+  "description": "tapcart dashboard component kit",
   "main": "build/index.js",
   "scripts": {
     "build-storybook": "build-storybook -c .storybook",
@@ -13,14 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexiastandish/tapcart-ui.git"
+    "url": "git+https://github.com/tapcartinc/tapcart-dashboard-components.git"
   },
   "author": "Alexia",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexiastandish/tapcart-ui/issues"
-  },
-  "homepage": "https://github.com/alexiastandish/tapcart-ui#readme",
   "peerDependencies": {
     "nuka-carousel": "^4.5.9",
     "react-modal": "^3.10.1",
@@ -57,6 +53,7 @@
     "nuka-carousel": "^4.5.9",
     "react-modal": "^3.10.1",
     "react-select": "^3.0.4",
+    "storybook": "^5.3.9",
     "styled-jsx": "^3.2.1"
   }
 }

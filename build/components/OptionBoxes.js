@@ -43,14 +43,14 @@ function OptionBoxes(props) {
 
 var OptionBoxesWrapper = _styledComponents["default"].ul.withConfig({
   displayName: "OptionBoxes__OptionBoxesWrapper",
-  componentId: "sc-78jb7n-0"
+  componentId: "glmpcy-0"
 })(["display:flex;justify-content:flex-start;width:100%;flex-wrap:wrap;font-family:Circular-Book,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-size:15px;text-transform:capitalize;border-radius:4px;", ";"], function (props) {
   return props.style ? props.style : null;
 });
 
 var Option = _styledComponents["default"].li.withConfig({
   displayName: "OptionBoxes__Option",
-  componentId: "sc-78jb7n-1"
+  componentId: "glmpcy-1"
 })(["height:100px;width:", ";font-size:15px;box-shadow:0px 0px 0px 1px ", ";display:flex;flex-direction:column;background:", ";justify-items:center;align-items:center;justify-content:center;color:", ";&:hover{", ";cursor:pointer;}"], function (props) {
   return props.size ? props.size : "33.333%";
 }, _variables.colors.gray25, function (props) {

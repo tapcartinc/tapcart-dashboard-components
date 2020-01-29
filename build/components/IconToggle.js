@@ -59,17 +59,17 @@ function IconToggle(props) {
 
 var IconToggleWrapper = _styledComponents["default"].div.withConfig({
   displayName: "IconToggle__IconToggleWrapper",
-  componentId: "sc-3p3d84-0"
+  componentId: "sc-1gbyxhw-0"
 })(["position:relative;display:flex;align-items:center;&:hover{cursor:pointer;}"]);
 
 var IconToggleLabel = _styledComponents["default"].label.withConfig({
   displayName: "IconToggle__IconToggleLabel",
-  componentId: "sc-3p3d84-1"
+  componentId: "sc-1gbyxhw-1"
 })(["position:relative;top:0;left:0;width:73px;height:38px;border-radius:25px;background:", ";cursor:pointer;border:4px solid ", ";&::after{content:\"\";display:block;border-radius:50%;width:30px;height:30px;transform:scale(1.3);background:", ";border:3px solid #3a3cb4;box-shadow:1px 3px 3px 1px rgba(0,0,0,0.08);-webkit-transition:0.2s;transition:0.2s;position:absolute;}"], function (props) {
   return props.value ? _variables.colors.blue : _variables.colors.gray25;
 }, _variables.colors.gray25, _variables.colors.blue);
 
 var IconToggleInput = _styledComponents["default"].input.withConfig({
   displayName: "IconToggle__IconToggleInput",
-  componentId: "sc-3p3d84-2"
+  componentId: "sc-1gbyxhw-2"
 })(["opacity:0;z-index:1;border-radius:15px;width:50px;height:30px;&:checked + ", "{background-color:", ";&::after{content:\"\";display:block;border-radius:50%;width:30px;height:30px;transform:scale(1.3);border:3px solid ", ";margin-left:34px;transition:0.2s;background-color:", ";}}"], IconToggleLabel, _variables.colors.gray25, _variables.colors.blue, _variables.colors.blue);

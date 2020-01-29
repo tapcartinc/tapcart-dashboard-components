@@ -21,7 +21,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 var CardStyle = _styledComponents["default"].section.withConfig({
   displayName: "Card__CardStyle",
-  componentId: "sc-1sk85c6-0"
+  componentId: "q4rj6f-0"
 })(["border-radius:3px;", " display:flex;flex-direction:column;align-items:center;width:", ";height:", ";", " &:hover{", ";cursor:pointer;}position:relative;max-width:400px;margin:20px;&::before{content:\"\";display:block;border:", ";height:100%;width:100%;position:absolute;border-radius:3px;}", ";"], _variables.boxShadow, function (props) {
   return props.columns ? "".concat(100 / props.columns, "%") : "33.333%";
 }, function (props) {
@@ -34,17 +34,17 @@ var CardStyle = _styledComponents["default"].section.withConfig({
 
 var CardImage = _styledComponents["default"].img.withConfig({
   displayName: "Card__CardImage",
-  componentId: "sc-1sk85c6-1"
+  componentId: "q4rj6f-1"
 })(["width:100%;object-fit:cover;height:75%;border-radius:3px 3px 0px 0px;"]);
 
 var CardContent = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardContent",
-  componentId: "sc-1sk85c6-2"
+  componentId: "q4rj6f-2"
 })(["width:100%;height:25%;display:flex;justify-content:center;align-items:center;border-radius:0px 0px 3px 3px;"]);
 
 var SelectedIcon = _styledComponents["default"].div.withConfig({
   displayName: "Card__SelectedIcon",
-  componentId: "sc-1sk85c6-3"
+  componentId: "q4rj6f-3"
 })(["position:absolute;top:0;transform:translateY(-10px);text-align:center;margin:0 auto;"]);
 
 var Card = function Card(props) {

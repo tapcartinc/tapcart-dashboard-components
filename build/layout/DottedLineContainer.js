@@ -17,7 +17,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 var DottedLineContainerStyle = _styledComponents["default"].section.withConfig({
   displayName: "DottedLineContainer__DottedLineContainerStyle",
-  componentId: "sc-1xke7xa-0"
+  componentId: "sc-1tvbn42-0"
 })(["border-radius:3px;width:100%;border:1px ", " dashed;background:", ";", ""], _variables.colors.blue50, _variables.colors.offwhite, function (props) {
   return props.style ? props.style : null;
 });

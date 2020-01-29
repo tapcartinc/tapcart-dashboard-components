@@ -7,15 +7,11 @@ var _exportNames = {
   Icon: true,
   Button: true,
   Link: true,
-  DashIcon: true,
   LinkTag: true,
   IconButton: true,
   Loader: true,
-  H1: true,
-  H2: true,
-  H3: true,
-  H4: true,
-  H5: true,
+  Header: true,
+  Description: true,
   Body: true,
   placeholder: true,
   input: true,
@@ -50,26 +46,12 @@ var _exportNames = {
   sofiaPro: true,
   circularStd: true,
   colorPicker: true,
-  DashHeader: true,
-  DashSubheader: true,
   transition: true,
   hover: true,
   onClickTransition: true,
   hoverWithBorder: true,
   getColors: true,
-  ThemeProvider: true,
-  Hero: true,
-  QuoteContainer: true,
-  Header: true,
-  Subheader: true,
-  FooterLink: true,
-  MarketingIcon: true,
-  BrandIcon: true,
-  Section: true,
-  Row: true,
-  Column: true,
-  Container: true,
-  StyledBlob: true
+  ThemeProvider: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -87,12 +69,6 @@ Object.defineProperty(exports, "Link", {
   enumerable: true,
   get: function get() {
     return _Link.Link;
-  }
-});
-Object.defineProperty(exports, "DashIcon", {
-  enumerable: true,
-  get: function get() {
-    return _DashIcon.DashIcon;
   }
 });
 Object.defineProperty(exports, "LinkTag", {
@@ -113,34 +89,16 @@ Object.defineProperty(exports, "Loader", {
     return _Loader.Loader;
   }
 });
-Object.defineProperty(exports, "H1", {
+Object.defineProperty(exports, "Header", {
   enumerable: true,
   get: function get() {
-    return _Typography.H1;
+    return _Typography.Header;
   }
 });
-Object.defineProperty(exports, "H2", {
+Object.defineProperty(exports, "Description", {
   enumerable: true,
   get: function get() {
-    return _Typography.H2;
-  }
-});
-Object.defineProperty(exports, "H3", {
-  enumerable: true,
-  get: function get() {
-    return _Typography.H3;
-  }
-});
-Object.defineProperty(exports, "H4", {
-  enumerable: true,
-  get: function get() {
-    return _Typography.H4;
-  }
-});
-Object.defineProperty(exports, "H5", {
-  enumerable: true,
-  get: function get() {
-    return _Typography.H5;
+    return _Typography.Description;
   }
 });
 Object.defineProperty(exports, "Body", {
@@ -347,18 +305,6 @@ Object.defineProperty(exports, "colorPicker", {
     return _dashVariables.colorPicker;
   }
 });
-Object.defineProperty(exports, "DashHeader", {
-  enumerable: true,
-  get: function get() {
-    return _dashVariables.DashHeader;
-  }
-});
-Object.defineProperty(exports, "DashSubheader", {
-  enumerable: true,
-  get: function get() {
-    return _dashVariables.DashSubheader;
-  }
-});
 Object.defineProperty(exports, "transition", {
   enumerable: true,
   get: function get() {
@@ -395,86 +341,12 @@ Object.defineProperty(exports, "ThemeProvider", {
     return _ThemeProvider.ThemeProvider;
   }
 });
-Object.defineProperty(exports, "Hero", {
-  enumerable: true,
-  get: function get() {
-    return _Hero.Hero;
-  }
-});
-Object.defineProperty(exports, "QuoteContainer", {
-  enumerable: true,
-  get: function get() {
-    return _QuoteContainer.QuoteContainer;
-  }
-});
-Object.defineProperty(exports, "Header", {
-  enumerable: true,
-  get: function get() {
-    return _Typography2.Header;
-  }
-});
-Object.defineProperty(exports, "Subheader", {
-  enumerable: true,
-  get: function get() {
-    return _Typography2.Subheader;
-  }
-});
-Object.defineProperty(exports, "FooterLink", {
-  enumerable: true,
-  get: function get() {
-    return _Typography2.FooterLink;
-  }
-});
-Object.defineProperty(exports, "MarketingIcon", {
-  enumerable: true,
-  get: function get() {
-    return _MarketingIcon.MarketingIcon;
-  }
-});
-Object.defineProperty(exports, "BrandIcon", {
-  enumerable: true,
-  get: function get() {
-    return _BrandIcon.BrandIcon;
-  }
-});
-Object.defineProperty(exports, "Section", {
-  enumerable: true,
-  get: function get() {
-    return _Section.Section;
-  }
-});
-Object.defineProperty(exports, "Row", {
-  enumerable: true,
-  get: function get() {
-    return _Row.Row;
-  }
-});
-Object.defineProperty(exports, "Column", {
-  enumerable: true,
-  get: function get() {
-    return _Column.Column;
-  }
-});
-Object.defineProperty(exports, "Container", {
-  enumerable: true,
-  get: function get() {
-    return _Container.Container;
-  }
-});
-Object.defineProperty(exports, "StyledBlob", {
-  enumerable: true,
-  get: function get() {
-    return _StyledBlob.StyledBlob;
-  }
-});
 
 var _Icon = require("./elements/Icon");
 
 var _Button = require("./elements/Button");
 
 var _Link = require("./elements/Link");
-
-var _DashIcon = require("./elements/DashIcon");
 
 var _LinkTag = require("./elements/LinkTag");
 
@@ -559,25 +431,5 @@ Object.keys(_layout).forEach(function (key) {
     }
   });
 });
-
-var _Hero = require("./marketing/Hero");
-
-var _QuoteContainer = require("./marketing/QuoteContainer");
-
-var _Typography2 = require("./marketing/Typography");
-
-var _MarketingIcon = require("./marketing/MarketingIcon");
-
-var _BrandIcon = require("./marketing/BrandIcon");
-
-var _Section = require("./marketing/Section");
-
-var _Row = require("./marketing/Row");
-
-var _Column = require("./marketing/Column");
-
-var _Container = require("./marketing/Container");
-
-var _StyledBlob = require("./marketing/StyledBlob");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

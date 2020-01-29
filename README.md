@@ -1,4 +1,4 @@
-# Tapcart UI Library
+# Tapcart Dashboard Components
 
 ## Table of Contents
 

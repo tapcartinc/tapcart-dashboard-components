@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { action } from "@storybook/addon-actions";
 import { Button } from "../../lib/elements/Button";
 import { Modal } from "../../lib/components/Modal";
 import { Body } from "../../lib/elements/Typography";
-import { Icon } from "../../lib/elements/Icon";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import { colors } from "../../lib";
 

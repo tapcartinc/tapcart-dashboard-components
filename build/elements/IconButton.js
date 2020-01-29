@@ -39,14 +39,14 @@ exports.IconButton = IconButton;
 
 var Button = _styledComponents["default"].button.withConfig({
   displayName: "IconButton__Button",
-  componentId: "qkxag9-0"
+  componentId: "sc-1ungl9q-0"
 })(["border-radius:3px;border:none;font-size:15px;display:flex;flex-direction:row;align-items:center;justify-items:center;outline:none;", " &:hover{cursor:pointer;", "}", ""], _animations.transition, _animations.hover, function (props) {
   return props.style ? props.style : null;
 });
 
 var IconButtonStyle = (0, _styledComponents["default"])(Button).withConfig({
   displayName: "IconButton__IconButtonStyle",
-  componentId: "qkxag9-1"
+  componentId: "sc-1ungl9q-1"
 })(["background:", ";display:flex;align-items:center;padding:5px;height:35px;width:35px;color:#ffffff;", ""], function (props) {
   return props.color ? (0, _functions.getColors)(props.color) : _variables.colors.blue;
 }, function (props) {
