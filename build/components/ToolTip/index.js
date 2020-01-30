@@ -72,6 +72,6 @@ ToolTip.propTypes = {
   /**
    * message inside of the tooltip pop up
    */
-  position: _propTypes["default"].node.isRequired
+  position: _propTypes["default"].node
 };
 ToolTip.defaultProps = {};
