@@ -49,7 +49,7 @@ var Body = _styledComponents["default"].p.attrs({
 }).withConfig({
   displayName: "Typography__Body",
   componentId: "iyq6bj-2"
-})(["", " -webkit-font-smoothing:antialiased;font-size:14px;font-weight:normal;line-height:18px;letter-spacing:normal;color:", ";", ""], _dashVariables.circularStd.book, function (props) {
+})(["", " margin-top:8px;margin-bottom:8px;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;line-height:18px;letter-spacing:normal;color:", ";", ""], _dashVariables.circularStd.book, function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.black;
 }, function (props) {
   return props.style ? props.style : null;

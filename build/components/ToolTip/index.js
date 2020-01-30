@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -13,12 +15,22 @@ var _dashVariables = require("../../utils/_dashVariables");
 
 var _variables = require("../../utils/_variables");
 
+var _propTypes = _interopRequireWildcard(require("prop-types"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 var ToolTip = function ToolTip(props) {
-  return _react["default"].createElement(ToolTipWrapper, null, _react["default"].createElement(ToolTipIcon, _extends({
+  return _react["default"].createElement(ToolTipWrapper, {
+    style: {
+      position: "relative"
+    }
+  }, _react["default"].createElement(ToolTipIcon, _extends({
     width: "14px",
     height: "14px",
     viewBox: "0 0 14 14",
@@ -47,9 +59,19 @@ exports.ToolTip = ToolTip;
 var ToolTipWrapper = _styledComponents["default"].div.withConfig({
   displayName: "ToolTip__ToolTipWrapper",
   componentId: "sc-1tvdsd5-0"
-})(["height:14px;width:14px;position:relative;cursor:pointer;margin:8px;", ";svg{transition:0.3s ease;}&:hover .tooltip{display:block;}.tooltip{padding:10px;position:absolute;width:auto;white-space:nowrap;box-shadow:", ";border-radius:3px;background-color:#fff;top:-80px;left:50%;transform:translate(-50%);transform-style:preserve-3d;z-index:200;display:none;font-size:13px;padding:8px 15px;line-height:1.46;&:after{content:\"\";position:absolute;display:block;width:10px;height:10px;transform-origin:50% 50%;transform:rotate(45deg) translateX(-50%);background-color:#fff;left:50%;bottom:-6px;z-index:400;}&:before{content:\"\";display:block;position:absolute;width:10px;height:10px;transform-origin:50% 50%;transform:rotate(45deg) translateX(-50%) translateZ(-1px);background-color:#fff;left:50%;bottom:-4px;z-index:-1;box-shadow:", ";border:1px solid green;}}"], _dashVariables.sofiaPro.medium, _variables.boxShadow.small, _variables.boxShadow.small);
+})(["height:14px;width:14px;position:relative;cursor:pointer;margin:8px;", ";svg{transition:0.3s ease;}&:hover .tooltip{display:block;}.tooltip{padding:10px;position:absolute;width:auto;white-space:nowrap;box-shadow:", ";border-radius:3px;background-color:#fff;top:-45px;left:50%;transform:translate(-50%);transform-style:preserve-3d;z-index:200;display:none;font-size:13px;padding:8px 15px;line-height:1.46;&:after{content:\"\";position:absolute;display:block;width:10px;height:10px;transform-origin:50% 50%;transform:rotate(45deg) translateX(-50%);background-color:#fff;left:50%;bottom:-6px;z-index:400;}&:before{content:\"\";display:block;position:absolute;width:10px;height:10px;transform-origin:50% 50%;transform:rotate(45deg) translateX(-50%) translateZ(-1px);background-color:#fff;left:50%;bottom:-4px;z-index:-1;box-shadow:", ";border:1px solid green;}}"], _dashVariables.sofiaPro.medium, _variables.boxShadow.small, _variables.boxShadow.small);
 
 var ToolTipIcon = _styledComponents["default"].svg.withConfig({
   displayName: "ToolTip__ToolTipIcon",
   componentId: "sc-1tvdsd5-1"
 })([""]);
+
+ToolTip.propTypes = {
+  color: _propTypes["default"].string,
+
+  /**
+   * message inside of the tooltip pop up
+   */
+  position: _propTypes["default"].node.isRequired
+};
+ToolTip.defaultProps = {};

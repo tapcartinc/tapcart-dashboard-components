@@ -17,6 +17,10 @@ var _variables = require("../utils/_variables");
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
 
+var _Typography = require("../elements/Typography");
+
+var _dashVariables = require("../utils/_dashVariables");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -85,11 +89,21 @@ var ClickDropdown = function ClickDropdown(_ref) {
     style: {
       position: "relative"
     }
-  }, _react["default"].createElement(ClickableDropdown, props, options.map(function (option) {
+  }, _react["default"].createElement(ClickableDropdown, _extends({}, props, {
+    position: position
+  }), options.map(function (option, index) {
     return _react["default"].createElement(ClickableDropdownItem, {
       onClick: option.onClick,
-      key: option.title
-    }, option.title);
+      key: option.title,
+      lastItem: index === options.length - 1
+    }, option.icon && _react["default"].createElement(_Icon.Icon, {
+      iconLeft: true,
+      type: option.icon
+    }), _react["default"].createElement(_Typography.Body, {
+      style: {
+        marginLeft: 8
+      }
+    }, option.title));
   })))));
 };
 
@@ -99,9 +113,9 @@ var DDWrapper = _styledComponents["default"].div.withConfig({
   displayName: "ClickDropdown__DDWrapper",
   componentId: "sc-18q6bvz-0"
 })(["position:relative;", ";", ";z-index:100;", ";"], function (props) {
-  return props.position === "right" && "\n  position: absolute;\n  right: 30px";
+  return props.position === "right" && "\n  position: absolute;\n  right: 10px";
 }, function (props) {
-  return props.position === "left" && "\n  position: absolute;\n  left: 30px";
+  return props.position === "left" && "\n  position: absolute;\n  left: 10px";
 }, function (props) {
   return props.style ? props.style : null;
 });
@@ -109,25 +123,40 @@ var DDWrapper = _styledComponents["default"].div.withConfig({
 var ClickableDropdown = _styledComponents["default"].ul.withConfig({
   displayName: "ClickDropdown__ClickableDropdown",
   componentId: "sc-18q6bvz-1"
-})(["", " margin:0px;list-style:none;width:150px;", ";position:absolute;padding:0px;z-index:1;background:white;", ";"], _variables.inputBorder, _variables.sofia.sofiaRegular, function (props) {
+})(["margin:0px;border-radius:3px;list-style:none;box-shadow:", ";", ";position:absolute;padding:0px;z-index:1;background:white;width:218px;", " ", " ", ";"], _variables.boxShadow.medium, _variables.sofia.sofiaRegular, function (props) {
+  return props.position === "right" && "right: 0;";
+}, function (props) {
+  return props.position === "left" && "left: 0;";
+}, function (props) {
   return props.style ? props.style : null;
 });
 
 var ClickableDropdownItem = _styledComponents["default"].li.withConfig({
   displayName: "ClickDropdown__ClickableDropdownItem",
   componentId: "sc-18q6bvz-2"
-})(["padding:5px;font-size:15px;background:white;&:hover{cursor:pointer;background:", ";}", ";"], _variables.colors.gray10, function (props) {
+})(["font-size:15px;background:white;border-bottom:1px solid ", ";", " display:flex;flex-direction:row;align-items:center;flex-wrap:nowrap;padding:10px 17px;&:hover{cursor:pointer;background:", ";}", ";"], _dashVariables.colorPicker.lightGray, function (props) {
+  return props.lastItem && "border-bottom: none;";
+}, _variables.colors.gray10, function (props) {
   return props.style ? props.style : null;
 });
 
 var DropdownHeader = _styledComponents["default"].div.withConfig({
   displayName: "ClickDropdown__DropdownHeader",
   componentId: "sc-18q6bvz-3"
-})(["margin-left:10px;&:hover{cursor:pointer;}", ";"], function (props) {
+})(["width:22px;&:hover{cursor:pointer;}", ";"], function (props) {
   return props.style ? props.style : null;
 });
 
 ClickDropdown.propTypes = {
-  options: _propTypes["default"].array.isRequired
+  options: _propTypes["default"].arrayOf(_propTypes["default"].shape({
+    title: _propTypes["default"].string.isRequired,
+    onClick: _propTypes["default"].func,
+    icon: _propTypes["default"].string
+  })).isRequired,
+
+  /**
+   * options: "right" | "left"
+   */
+  position: _propTypes["default"].string.isRequired
 };
 ClickDropdown.defaultProps = {};

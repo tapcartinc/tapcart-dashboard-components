@@ -107,9 +107,6 @@ exports.Modal = Modal;
 
 function ModalType(props) {
   switch (props.type) {
-    case "slider-modal":
-      return _react["default"].createElement(SliderModal, props, props.children);
-
     case "custom":
       return _react["default"].createElement(MinimalModalStyle, props, props.children);
 
@@ -208,7 +205,7 @@ function ModalType(props) {
           } : null
         }, _react["default"].createElement(_Button.Button, {
           key: button.type,
-          type: button.type,
+          kind: button.kind,
           onClick: button.onClick
         }, button.button));
       })));
@@ -217,54 +214,6 @@ function ModalType(props) {
       return _react["default"].createElement("div", null);
   }
 }
-
-var SliderModal = function SliderModal(props) {
-  return _react["default"].createElement("div", {
-    style: {
-      width: "650px",
-      boxShadow: "0 0 28px 0 rgba(0, 0, 0, 0.14)",
-      paddingBottom: 50,
-      borderRadius: "4px",
-      position: "relative"
-    }
-  }, _react["default"].createElement(_Icon.Icon, {
-    type: "small-close",
-    className: "modal-graphic-close-btn",
-    onClick: props.closeModal,
-    style: {
-      margin: 20
-    }
-  }), _react["default"].createElement(_nukaCarousel["default"], {
-    slidesToShow: 1,
-    wrapAround: true,
-    afterSlide: props.afterSlide,
-    autoplay: true,
-    style: {
-      height: "100%"
-    },
-    renderCenterLeftControls: function renderCenterLeftControls(_ref2) {
-      var previousSlide = _ref2.previousSlide;
-      return _react["default"].createElement(_Button.Button, {
-        onClick: previousSlide,
-        type: "secondary"
-      }, "Back");
-    },
-    renderCenterRightControls: function renderCenterRightControls(_ref3) {
-      var nextSlide = _ref3.nextSlide;
-      return _react["default"].createElement(_Button.Button, {
-        onClick: nextSlide,
-        type: "primary"
-      }, "Next");
-    }
-  }, props.slides ? props.slides.map(function (slide) {
-    return _react["default"].createElement("div", {
-      key: slide.header,
-      className: "slider-slide-inside"
-    }, slide.header, " ", _react["default"].createElement("img", {
-      src: slide.graphic
-    }));
-  }) : _react["default"].createElement("div", null, "hi")));
-};
 
 var StyledModal = (0, _styledComponents["default"])(ReactModalAdapter).withConfig({
   displayName: "Modal__StyledModal",
@@ -348,12 +297,62 @@ var CloseIcon = (0, _styledComponents["default"])(_Icon.Icon).withConfig({
   componentId: "sc-10ogjb3-13"
 })(["height:15px;width:15px;top:0;right:0;position:absolute;z-index:10;&:hover{cursor:pointer;}"]);
 Modal.propTypes = {
+  /**
+   * options: "alert" | "dash" | "full"
+   */
   type: _propTypes["default"].string,
-  buttons: _propTypes["default"].array,
+  buttons: _propTypes["default"].arrayOf(_propTypes["default"].shape({
+    /**
+     * Button text to be dispalyed; ex: "Save"
+     */
+    button: _propTypes["default"].string,
+
+    /**
+     * Function returned once button is clicked
+     */
+    onClick: _propTypes["default"].func,
+
+    /**
+     * Kind of button styling that should be applies
+     * options: "primary", "secondary", "delete", "etc..."
+     */
+    kind: _propTypes["default"].string
+  })),
+
+  /**
+   * Modal header
+   */
   title: _propTypes["default"].string,
+
+  /**
+   * Text rendered under modal header
+   * ONLY applies to modal of type "dash"
+   */
+  description: _propTypes["default"].string,
+
+  /**
+   * Icon rendered to the left of the modal header
+   * ONLY applies to modal of type "alert"
+   */
   icon: _propTypes["default"].string,
+
+  /**
+   *  Modal close function
+   */
   closeModal: _propTypes["default"].func,
+
+  /**
+   * Button text for the button that saves any functionality shown in the children/content of the modal
+   *
+   * The button rendered at the bottom of the modal on all of the non-alert dashboard modals
+   * ONLY applies to modal of type "dash"
+   */
+  buttonText: _propTypes["default"].string,
   isOpen: _propTypes["default"].bool,
-  slides: _propTypes["default"].array
+
+  /**
+   * Modal content/ body of the modal
+   */
+  children: _propTypes["default"].node
 };
 Modal.defaultProps = {};

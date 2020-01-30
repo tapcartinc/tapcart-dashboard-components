@@ -226,10 +226,6 @@ export const icon = () => {
         product
       </StyledIcon>
       <StyledIcon>
-        <Icon type="video" />
-        video
-      </StyledIcon>
-      <StyledIcon>
         <Icon type="toast" />
         toast
       </StyledIcon>

@@ -25,22 +25,10 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  ", ";\n  ", ";\n  "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 var ContainerStyle = _styledComponents["default"].section.withConfig({
   displayName: "ContainerBox__ContainerStyle",
   componentId: "sc-6gsxbi-0"
-})(["border-radius:3px;box-shadow:", ";background:", ";height:", ";", ";", ";", ";", ""], function (props) {
+})(["border-radius:3px;box-shadow:", ";background:", ";height:", ";", ";", " ", ""], function (props) {
   return props.boxShadow ? props.boxShadow : _variables.boxShadow.medium;
 }, function (props) {
   return props.bg ? props.bg : "white";
@@ -50,11 +38,7 @@ var ContainerStyle = _styledComponents["default"].section.withConfig({
   return props.padding && "padding: ".concat(props.padding, "px");
 }, function (props) {
   return props.customWidth ? "width: ".concat(props.customWidth, "px;") : props.columns ? "width: ".concat(100 / props.columns - 1.5, "%") : "width: 100%;";
-}, _media["default"].md(_templateObject(), function (props) {
-  return props.paddingMd && "padding: ".concat(props.paddingMd, "px");
 }, function (props) {
-  return props.customWidthMd ? "width: ".concat(props.customWidthMd, "px;") : props.mobileColumns ? "width: ".concat(100 / props.mobileColumns - 1.5, "%") : "width: 100%;";
-}), function (props) {
   return props.style ? props.style : null;
 });
 
@@ -67,25 +51,11 @@ ContainerBox.propTypes = {
   bg: _propTypes["default"].string,
   customHeight: _propTypes["default"].number,
   customWidth: _propTypes["default"].number,
-
-  /**
-   * creates automatic width dependig on the amount of columns there are
-   */
   columns: _propTypes["default"].number,
-  customWidthMd: _propTypes["default"].number,
-
-  /**
-   * creates automatic width dependig on the amount of columns there are for tablet and mobile breakpoints
-   */
-  mobileColumns: _propTypes["default"].number,
   padding: _propTypes["default"].number,
-  paddingMd: _propTypes["default"].number,
   boxShadow: _propTypes["default"].string,
   children: _propTypes["default"].node
 };
 ContainerBox.defaultProps = {
-  bg: "white",
-  boxShadow: "0 2px 10px 0 rgba(0, 0, 0, 0.05),\n  0 2px 20px 0 rgba(0, 0, 0, 0.025),\n  0 2px 30px 0 rgba(0, 0, 0, 0.025)"
-}; // ${media.smxs`
-//  ${props => props.mobile && `width: ${100 / props.mobile}%;`}
-// `};
+  bg: "white"
+};

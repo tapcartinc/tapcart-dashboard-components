@@ -86,10 +86,32 @@ var Loader = _styledComponents["default"].span.withConfig({
 });
 
 Button.propTypes = {
-  kind: _propTypes["default"].oneOf(options),
+  /**
+   * options: "primary",
+  "primary--reversed",
+  "secondary",
+  "transparent--blue",
+  "transparent--green",
+  "transparent--red",
+  "transparent--white",
+  "save",
+  "save--reversed",
+  "delete",
+  "delete--reversed",
+  "inverted",
+  "inverted--reversed",
+  "secondary--green",
+  "submit"
+   */
+  kind: _propTypes["default"].string,
   isLoading: _propTypes["default"].bool,
   isDisabled: _propTypes["default"].bool,
   onClick: _propTypes["default"].func,
+
+  /**
+   * Reduces vertical padding of button
+   */
+  thin: _propTypes["default"].bool,
   children: _propTypes.node.isRequired
 };
 Button.defaultProps = {

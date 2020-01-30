@@ -11,6 +11,7 @@ var _exportNames = {
   IconButton: true,
   Loader: true,
   DraftStatus: true,
+  TapcartPlanLogo: true,
   Header: true,
   Description: true,
   Body: true,
@@ -94,6 +95,12 @@ Object.defineProperty(exports, "DraftStatus", {
   enumerable: true,
   get: function get() {
     return _DraftStatus.DraftStatus;
+  }
+});
+Object.defineProperty(exports, "TapcartPlanLogo", {
+  enumerable: true,
+  get: function get() {
+    return _TapcartPlanLogo.TapcartPlanLogo;
   }
 });
 Object.defineProperty(exports, "Header", {
@@ -362,6 +369,8 @@ var _IconButton = require("./elements/IconButton");
 var _Loader = require("./elements/Loader");
 
 var _DraftStatus = require("./elements/DraftStatus");
+
+var _TapcartPlanLogo = require("./elements/TapcartPlanLogo");
 
 var _Typography = require("./elements/Typography");
 

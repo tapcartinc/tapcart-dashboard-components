@@ -15,8 +15,6 @@ var _Icon = require("../elements/Icon");
 
 var _variables = require("../utils/_variables");
 
-var _animations = require("../utils/_animations");
-
 var _propTypes = _interopRequireWildcard(require("prop-types"));
 
 var _dashVariables = require("../utils/_dashVariables");
@@ -44,36 +42,12 @@ var CardStyle = _styledComponents["default"].div.withConfig({
 var CardImage = _styledComponents["default"].img.withConfig({
   displayName: "Card__CardImage",
   componentId: "q4rj6f-2"
-})(["width:100%;object-fit:cover;height:75%;border-radius:3px 3px 0px 0px;"]);
+})(["width:100%;object-fit:cover;height:78%;border-radius:3px 3px 0px 0px;"]);
 
 var CardContent = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardContent",
   componentId: "q4rj6f-3"
-})(["width:100%;height:25%;padding:14px;border-radius:0px 0px 3px 3px;"]);
-
-var SelectedIcon = _styledComponents["default"].div.withConfig({
-  displayName: "Card__SelectedIcon",
-  componentId: "q4rj6f-4"
-})(["position:absolute;top:0;transform:translateY(-10px);text-align:center;margin:0 auto;"]); // const Card = props => {
-//   return (
-//     <CardStyle {...props} onClick={props.onClick}>
-//       {props.currentCard && (
-//         <SelectedIcon>
-//           <Icon
-//             fill="white"
-//             circleIcon
-//             type="checkmark"
-//             backgroundColor="green"
-//             style={{ height: "20px", width: "20px" }}
-//           />
-//         </SelectedIcon>
-//       )}
-//       <CardImage src={props.image}></CardImage>
-//       <CardContent>{props.children}</CardContent>
-//     </CardStyle>
-//   );
-// };
-
+})(["width:100%;height:22%;padding:14px;border-radius:0px 0px 3px 3px;"]);
 
 var Card = function Card(props) {
   return _react["default"].createElement(CardWrapper, _extends({}, props, {

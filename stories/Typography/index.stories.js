@@ -5,11 +5,11 @@ import { colorPicker } from "../../lib/utils/_dashVariables";
 import { Container } from "../../lib/layout/Container";
 
 export default {
-  component: Typography,
+  component: "Typography",
   title: "Design Elements/Typography"
 };
 
-export const Typography = () => (
+export const TypographyStyles = () => (
   <Container>
     <Header>Header</Header>
     <Description>Description</Description>
@@ -29,7 +29,73 @@ const codeStringTwo = `element {
 }
 `;
 
-export const applyingFontStyle = () => {
+const codeStringThree = `element {
+  font-family: "SofiaPro-Medium";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+element {
+  font-family: "SofiaPro-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+element {
+  font-family: "SofiaPro-Light";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+element {
+  font-family: "SofiaPro-SemiBold";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+element {
+  font-family: "SofiaPro";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+`;
+
+const codeStringFour = `element {
+  font-family: "CircularStd-Bold";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+element {
+  font-family: "CircularStd-Medium";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+element {
+  font-family: "CircularStd-Book";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+element {
+  font-family: "CircularStd-MediumItalic";
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+`;
+
+export const ApplyingFontStyle = () => {
   return (
     <Container>
       <Header>Sofia</Header>
@@ -68,6 +134,25 @@ export const applyingFontStyle = () => {
         800
         <br />
       </Description>
+      <br />
+      <br />
+      <br />
+      <Header>Using fonts styles outside of styled components</Header>
+      <Header style={{ marginTop: 20 }} color={colorPicker.green100}>
+        Sofia
+      </Header>
+      <Body color={colorPicker.gray} style={{ marginTop: 20 }}>
+        Example:
+      </Body>
+      <CodeBlock value={codeStringThree} />
+
+      <Header style={{ marginTop: 20 }} color={colorPicker.green100}>
+        CircularStd
+      </Header>
+      <Body color={colorPicker.gray} style={{ marginTop: 20 }}>
+        Example:
+      </Body>
+      <CodeBlock value={codeStringFour} />
     </Container>
   );
 };

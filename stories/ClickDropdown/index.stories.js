@@ -41,15 +41,10 @@ export const clickDropdown = () => {
       onClick: () => setColorState(colors.gold)
     }
   ];
-  console.log("colorState", colorState);
+
   return (
     <>
-      <ContainerBox
-        customHeight={100}
-        customWidth={100}
-        customWidthMd={100}
-        bg={colorState}
-      />
+      <ContainerBox customHeight={100} customWidth={100} bg={colorState} />
       <br />
       <br />
       <ClickDropdown options={colorOptions} />

@@ -25,7 +25,6 @@ var DraftStatus = function DraftStatus(_ref) {
   var status = _ref.status,
       props = _objectWithoutProperties(_ref, ["status"]);
 
-  console.log("status", status);
   return _react["default"].createElement(StyledDraftStatusWrapper, {
     status: status
   }, _react["default"].createElement(StyledStatusCircle, _extends({}, props, {
@@ -34,13 +33,15 @@ var DraftStatus = function DraftStatus(_ref) {
 };
 
 exports.DraftStatus = DraftStatus;
-DraftStatus.propTypes = {// value: PropTypes.string.isRequired,
-  // name: PropTypes.string,
-  // placeholder: PropTypes.string,
-  // onChange: PropTypes.func,
-  // label: PropTypes.string
+DraftStatus.propTypes = {
+  /**
+  options: live, scheduled, or no status prop (defaults to "draft")
+  */
+  status: _propTypes["default"].string
 };
-DraftStatus.defaultProps = {};
+DraftStatus.defaultProps = {
+  status: ""
+};
 
 var StyledDraftStatusWrapper = _styledComponents["default"].div.withConfig({
   displayName: "DraftStatus__StyledDraftStatusWrapper",

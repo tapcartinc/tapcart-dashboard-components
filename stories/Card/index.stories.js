@@ -5,6 +5,9 @@ import { Card } from "../../lib/layout/Card";
 import { Container } from "../../lib/layout/Container";
 import { DraftStatus } from "../../lib/elements/DraftStatus";
 import { ClickDropdown } from "../../lib/components/ClickDropdown";
+import { Body } from "../../lib/elements/Typography";
+import styled from "styled-components";
+import { circularStd, colorPicker } from "../../lib/utils/_dashVariables";
 
 export default {
   component: Card,
@@ -12,11 +15,46 @@ export default {
   decorators: [withKnobs]
 };
 
+const StyledTopRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+`;
+const StyledStatusInfo = styled.div`
+  ${circularStd.medium}
+  font-size: 10px;
+  color: ${colorPicker.gray};
+  margin-left: 5px;
+`;
+
+const options = [
+  {
+    title: "Go Live",
+    onClick: () => console.log("Go Live"),
+    icon: "go-live"
+  },
+  {
+    title: "Edit",
+    onClick: () => console.log("Edit"),
+    icon: "edit"
+  },
+  {
+    title: "Duplicate",
+    onClick: () => console.log("Duplicate"),
+    icon: "duplicate"
+  },
+  {
+    title: "Delete",
+    onClick: () => console.log("Delete"),
+    icon: "trash"
+  }
+];
+
 export const card = () => (
   <Container
     style={{
       width: "1200",
-      border: "1px solid red",
       flexDirection: "row",
       display: "flex",
       flexWrap: "wrap"
@@ -26,8 +64,12 @@ export const card = () => (
       image="https://i.imgur.com/8LA1oBL.png"
       onClick={() => console.log("hi")}
     >
-      <DraftStatus status="live" />
-      <ClickDropdown></ClickDropdown>
+      <StyledTopRow>
+        <DraftStatus status="live" />
+        <StyledStatusInfo>01/28/2020 – 2:30PM</StyledStatusInfo>
+      </StyledTopRow>
+      <ClickDropdown position="right" options={options} />
+      <Body>Swim Resort Drop</Body>
     </Card>
     <Card
       image="https://i.imgur.com/8LA1oBL.png"

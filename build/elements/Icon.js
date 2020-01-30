@@ -15,70 +15,77 @@ var _variables = require("../utils/_variables");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _dashVariables = require("../utils/_dashVariables");
+
+var _addonKnobs = require("@storybook/addon-knobs");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function Icon(props) {
-  var type = props.type,
-      fill = props.fill;
+  var type = props.type;
 
   switch (type) {
     case "trash":
       return _react["default"].createElement(SVG, _extends({
-        width: "24px",
-        height: "24px",
-        viewBox: "0 0 24 24",
+        width: "20px",
+        height: "20px",
+        viewBox: "0 0 20 20",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }, props), _react["default"].createElement("g", {
-        id: "Style-Guide",
+        id: "Drops",
         stroke: "none",
         strokeWidth: "1",
         fill: "none",
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
-        transform: "translate(-612.000000, -1079.000000)",
-        id: "Icons"
+        id: "1.1-Drop-hover-+-click-states",
+        transform: "translate(-683.000000, -719.000000)"
       }, _react["default"].createElement("g", {
-        transform: "translate(81.000000, 1019.000000)"
+        id: "Editor---Drafts-Copy",
+        transform: "translate(667.000000, 579.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Block-editor"
+      }, _react["default"].createElement("g", {
+        id: "Delete",
+        transform: "translate(16.000000, 139.000000)"
       }, _react["default"].createElement("g", {
         id: "Icon-trash",
-        transform: "translate(531.000000, 60.000000)"
+        transform: "translate(0.000000, 1.000000)"
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         x: "0",
         y: "0",
-        width: "24",
-        height: "24"
+        width: "20",
+        height: "20"
       }), _react["default"].createElement("g", {
         id: "trash-simple",
-        transform: "translate(1.000000, 1.000000)",
-        style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
-        },
+        transform: "translate(0.833333, 0.833333)",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        strokeWidth: "2"
+        strokeWidth: "1.5"
       }, _react["default"].createElement("path", {
-        d: "M19,8 L19,20 C19,21.1045695 18.1045695,22 17,22 L5,22 C3.8954305,22 3,21.1045695 3,20 L3,8",
+        d: "M15.8333333,6.66666667 L15.8333333,16.6666667 C15.8333333,17.5871412 15.0871412,18.3333333 14.1666667,18.3333333 L4.16666667,18.3333333 C3.24619208,18.3333333 2.5,17.5871412 2.5,16.6666667 L2.5,6.66666667",
         id: "Path"
       }), _react["default"].createElement("path", {
-        d: "M0,4 L22,4",
+        d: "M0,3.33333333 L18.3333333,3.33333333",
         id: "Path"
       }), _react["default"].createElement("path", {
-        d: "M11,11 L11,17",
+        d: "M9.16666667,9.16666667 L9.16666667,14.1666667",
         id: "Path"
       }), _react["default"].createElement("path", {
-        d: "M7,11 L7,17",
+        d: "M5.83333333,9.16666667 L5.83333333,14.1666667",
         id: "Path"
       }), _react["default"].createElement("path", {
-        d: "M15,11 L15,17",
+        d: "M12.5,9.16666667 L12.5,14.1666667",
         id: "Path"
       }), _react["default"].createElement("polyline", {
         id: "Path",
-        points: "7 4 7 0 15 0 15 4"
-      })))))));
+        points: "5.83333333 3.33333333 5.83333333 0 12.5 0 12.5 3.33333333"
+      })))))))));
 
     case "search":
       return _react["default"].createElement(SVG, {
@@ -98,7 +105,7 @@ function Icon(props) {
       }, _react["default"].createElement("g", {
         id: "Search-bar",
         transform: "translate(1.000000, 1.000000)",
-        stroke: "#373aaf",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         strokeWidth: "2"
       }, _react["default"].createElement("g", {
         id: "zoom-2"
@@ -143,7 +150,7 @@ function Icon(props) {
         id: "arrow-right",
         transform: "translate(2.000000, 5.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -187,7 +194,7 @@ function Icon(props) {
         id: "circle-09",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -224,7 +231,7 @@ function Icon(props) {
         d: "M55.1,51.9,41.6,37.8A23,23,0,1,0,24,46a22.5,22.5,0,0,0,13.2-4.2L50.8,56A3.2,3.2,0,0,0,53,57a3,3,0,0,0,2.1-5.1ZM24,6A17,17,0,1,1,7,23,17,17,0,0,1,24,6Z",
         transform: "translate(-1)",
         style: {
-          fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          fill: props.fill ? props.fill : _variables.colors.blue
         }
       })));
 
@@ -257,7 +264,7 @@ function Icon(props) {
         height: "24"
       }), _react["default"].createElement("g", {
         id: "e-add",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       }, _react["default"].createElement("path", {
         d: "M22.9090909,10.9090909 L13.0909091,10.9090909 L13.0909091,1.09090909 C13.0909091,0.436363636 12.6545455,0 12,0 C11.3454545,0 10.9090909,0.436363636 10.9090909,1.09090909 L10.9090909,10.9090909 L1.09090909,10.9090909 C0.436363636,10.9090909 0,11.3454545 0,12 C0,12.6545455 0.436363636,13.0909091 1.09090909,13.0909091 L10.9090909,13.0909091 L10.9090909,22.9090909 C10.9090909,23.5636364 11.3454545,24 12,24 C12.6545455,24 13.0909091,23.5636364 13.0909091,22.9090909 L13.0909091,13.0909091 L22.9090909,13.0909091 C23.5636364,13.0909091 24,12.6545455 24,12 C24,11.3454545 23.5636364,10.9090909 22.9090909,10.9090909 Z",
@@ -297,13 +304,13 @@ function Icon(props) {
       }, _react["default"].createElement("path", {
         d: "M8.012,16.115 C8.073,17.717 9.383,19 11,19 C12.617,19 13.924,17.717 13.986,16.115 L8.012,16.115 L8.012,16.115 Z",
         id: "Path",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       }), _react["default"].createElement("path", {
         d: "M22,19 C22,17.137 20.969,13.5 18,12 L18,7 C18,3.134 14.866,0 11,0 C7.134,0 4,3.134 4,7 L4,12 C1,13.531 0,17.137 0,19",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -311,7 +318,7 @@ function Icon(props) {
       }), _react["default"].createElement("ellipse", {
         id: "Oval",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -353,7 +360,7 @@ function Icon(props) {
         id: "a-chart",
         transform: "translate(2.000000, 2.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -365,6 +372,62 @@ function Icon(props) {
         d: "M17.9,18.8 C19.2,16.9 20,14.5 20,12 C20,5.4 14.6,0 8,0 L8,12 L17.9,18.8 Z",
         id: "Path"
       })))))));
+
+    case "go-live":
+      return _react["default"].createElement(SVG, _extends({
+        width: "20px",
+        height: "13px",
+        viewBox: "0 0 20 13",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/SVG"
+      }, props), _react["default"].createElement("g", {
+        id: "Symbols",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Editor---Drafts",
+        transform: "translate(-17.000000, -24.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Block-editor"
+      }, _react["default"].createElement("g", {
+        id: "Title",
+        transform: "translate(17.000000, 19.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-live",
+        transform: "translate(0.000000, 1.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "20",
+        height: "20"
+      }), _react["default"].createElement("g", {
+        id: "radio",
+        transform: "translate(0.000000, 4.166667)",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "1.5"
+      }, _react["default"].createElement("path", {
+        d: "M14.5833333,8.75 C16.25,7.08333333 16.25,4.5 14.5833333,2.83333333",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M17,11.1666667 C19.9166667,8.25 19.9166667,3.5 17,0.583333333",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M5.41666667,8.75 C3.75,7.08333333 3.75,4.5 5.41666667,2.83333333",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M3,11.1666667 C0.0833333333,8.25 0.0833333333,3.5 3,0.583333333",
+        id: "Path"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "10",
+        cy: "5.83333333",
+        r: "1.66666667"
+      }))))))));
 
     case "apple-dev":
       return _react["default"].createElement(SVG, _extends({
@@ -400,7 +463,7 @@ function Icon(props) {
         d: "M18,17.423 C17.508,18.513 17.273,18.999 16.639,19.963 C15.756,21.308 14.51,22.983 12.966,22.997 C11.594,23.01 11.242,22.105 9.38,22.115 C7.519,22.125 7.13,23.013 5.758,23.0001414 C4.214,22.986 3.035,21.474 2.15,20.128 C-0.32,16.366 -0.578,11.952 0.946,9.606 C2.029,7.938 3.738,6.963 5.345,6.963 C6.981,6.963 8.009,7.86 9.362,7.86 C10.674,7.86 11.474,6.962 13.365,6.962 C14.795,6.962 16.309,7.74 17.389,9.085 C13.853,11.023 14.427,16.072 18,17.423 L18,17.423 Z",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -408,7 +471,7 @@ function Icon(props) {
       }), _react["default"].createElement("path", {
         d: "M12.1,3.45 C12.75,2.616 13.243,1.439 13.064,0.236 C12.002,0.309 10.762,0.984 10.037,1.864 C9.379,2.663 8.836,3.847 9.047,4.999 C10.205,5.035 11.404,4.343 12.1,3.45 L12.1,3.45 Z",
         id: "Path",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       })))))));
 
@@ -446,7 +509,7 @@ function Icon(props) {
         d: "M1,9 L1,16",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -455,7 +518,7 @@ function Icon(props) {
         d: "M23,9 L23,16",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -464,7 +527,7 @@ function Icon(props) {
         d: "M7,3 L4,0",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -473,7 +536,7 @@ function Icon(props) {
         d: "M17,3 L20,0",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -482,7 +545,7 @@ function Icon(props) {
         d: "M8,19 L8,22",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -491,7 +554,7 @@ function Icon(props) {
         d: "M16,19 L16,22",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -500,21 +563,21 @@ function Icon(props) {
         d: "M12,1 C8.134,1 5,4.134 5,8 L5,19 L19,19 L19,8 C19,4.134 15.866,1 12,1 Z",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "9",
         cy: "6",
         r: "1"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "15",
         cy: "6",
@@ -523,7 +586,7 @@ function Icon(props) {
         d: "M5,9 L19,9",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -561,7 +624,7 @@ function Icon(props) {
         id: "small-down",
         transform: "translate(8.000000, 10.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -603,7 +666,7 @@ function Icon(props) {
         id: "small-up",
         transform: "translate(8.000000, 10.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -644,7 +707,7 @@ function Icon(props) {
         id: "small-down",
         transform: "translate(10.000000, 8.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -686,7 +749,7 @@ function Icon(props) {
         id: "small-down",
         transform: "translate(10.000000, 8.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -728,7 +791,7 @@ function Icon(props) {
         id: "attach",
         transform: "translate(2.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -769,7 +832,7 @@ function Icon(props) {
         id: "shopping-bag",
         transform: "translate(2.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -813,7 +876,7 @@ function Icon(props) {
         id: "calendar-event-2",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -872,7 +935,7 @@ function Icon(props) {
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -883,7 +946,7 @@ function Icon(props) {
         height: "14"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "11",
         cy: "20",
@@ -891,7 +954,7 @@ function Icon(props) {
       }), _react["default"].createElement("circle", {
         id: "Oval",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -902,7 +965,7 @@ function Icon(props) {
       }), _react["default"].createElement("circle", {
         id: "Oval",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -944,14 +1007,14 @@ function Icon(props) {
         transform: "translate(1.000000, 2.000000)"
       }, _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "5",
         cy: "20",
         r: "1"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "19",
         cy: "20",
@@ -959,7 +1022,7 @@ function Icon(props) {
       }), _react["default"].createElement("circle", {
         id: "Oval",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -970,7 +1033,7 @@ function Icon(props) {
       }), _react["default"].createElement("circle", {
         id: "Oval",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -981,7 +1044,7 @@ function Icon(props) {
       }), _react["default"].createElement("polyline", {
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -1020,7 +1083,7 @@ function Icon(props) {
         id: "single-copies",
         transform: "translate(2.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1070,7 +1133,7 @@ function Icon(props) {
         id: "e-remove",
         transform: "translate(1.500000, 2.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1114,7 +1177,7 @@ function Icon(props) {
         id: "i-remove",
         transform: "translate(8.000000, 8.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1158,7 +1221,7 @@ function Icon(props) {
         id: "d-check",
         transform: "translate(6.000000, 8.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1199,7 +1262,7 @@ function Icon(props) {
         id: "path-exclude",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1240,7 +1303,7 @@ function Icon(props) {
         transform: "translate(-86.000000, -1206.000000)",
         id: "Icons",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2"
       }, _react["default"].createElement("g", {
@@ -1304,7 +1367,7 @@ function Icon(props) {
         id: "cloud-download-95",
         transform: "translate(1.000000, 3.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1400,7 +1463,7 @@ function Icon(props) {
         id: "corner-bottom-right",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1454,7 +1517,7 @@ function Icon(props) {
         id: "tag-line",
         transform: "translate(2.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1480,46 +1543,49 @@ function Icon(props) {
 
     case "edit":
       return _react["default"].createElement(SVG, _extends({
-        width: "24px",
-        height: "24px",
-        viewBox: "0 0 24 24",
+        width: "21px",
+        height: "21px",
+        viewBox: "0 0 21 21",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/SVG"
       }, props), _react["default"].createElement("g", {
-        id: "Style-Guide",
+        id: "Drops",
         stroke: "none",
         strokeWidth: "1",
         fill: "none",
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
-        transform: "translate(-200.000000, -1139.000000)",
-        id: "Icons"
+        id: "1.1-Drop-hover-+-click-states",
+        transform: "translate(-681.000000, -599.000000)"
       }, _react["default"].createElement("g", {
-        transform: "translate(81.000000, 1019.000000)"
+        id: "Editor---Drafts-Copy",
+        transform: "translate(667.000000, 579.000000)"
       }, _react["default"].createElement("g", {
-        id: "Icon-edit-content",
-        transform: "translate(120.000000, 121.000000)"
+        id: "Block-editor"
+      }, _react["default"].createElement("g", {
+        id: "Edit-title",
+        transform: "translate(15.000000, 21.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-edit-content"
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         x: "0",
         y: "0",
-        width: "24",
-        height: "24"
+        width: "20",
+        height: "20"
       }), _react["default"].createElement("g", {
         id: "pen",
-        style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
-        },
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        strokeWidth: "2"
+        strokeWidth: "1.5"
       }, _react["default"].createElement("path", {
-        d: "M13.8,4.6 L18.4,9.2",
+        d: "M11.5,3.83333333 L15.3333333,7.66666667",
         id: "Path"
       }), _react["default"].createElement("polygon", {
         id: "Path",
-        points: "5.75 21.85 0 23 1.15 17.25 18.4 0 23 4.6"
-      })))))));
+        points: "4.79166667 18.2083333 0 19.1666667 0.958333333 14.375 15.3333333 0 19.1666667 3.83333333"
+      })))))))));
 
     case "edit-content":
       return _react["default"].createElement(SVG, _extends({
@@ -1552,7 +1618,7 @@ function Icon(props) {
         id: "rotate-22",
         transform: "translate(2.000000, 2.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1595,7 +1661,7 @@ function Icon(props) {
       }, _react["default"].createElement("g", {
         id: "Icon",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2"
       }, _react["default"].createElement("path", {
@@ -1648,7 +1714,7 @@ function Icon(props) {
         id: "f-chat",
         transform: "translate(1.000000, 2.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1695,7 +1761,7 @@ function Icon(props) {
         id: "customer-support",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1742,7 +1808,7 @@ function Icon(props) {
         id: "send",
         transform: "translate(2.000000, 2.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1786,7 +1852,7 @@ function Icon(props) {
         id: "property-app",
         transform: "translate(4.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1842,21 +1908,21 @@ function Icon(props) {
         d: "M2,0 L14,0 C15.1045695,0 16,0.8954305 16,2 L16,20 C16,21.1045695 15.1045695,22 14,22 L2,22 C0.8954305,22 0,21.1045695 0,20 L0,2 C0,0.8954305 0.8954305,0 2,0 Z",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "8",
         cy: "18",
         r: "1"
       }), _react["default"].createElement("rect", {
         id: "Rectangle",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         x: "2",
         y: "2",
         width: "12",
@@ -1895,7 +1961,7 @@ function Icon(props) {
         id: "menu-34",
         transform: "translate(1.000000, 4.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1942,7 +2008,7 @@ function Icon(props) {
         id: "ctrl-right",
         transform: "translate(8.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -1983,7 +2049,7 @@ function Icon(props) {
         id: "ctrl-right",
         transform: "translate(8.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2024,7 +2090,7 @@ function Icon(props) {
         id: "camera-flash",
         transform: "translate(4.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2068,7 +2134,7 @@ function Icon(props) {
         d: "M10.493,13.389 L12.855,19.252 C13.2660836,20.2759264 12.7702913,21.439338 11.747,21.852 L11.747,21.852 C10.7230736,22.2630836 9.55966202,21.7672913 9.147,20.744 L5.511,11.8",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -2077,7 +2143,7 @@ function Icon(props) {
         d: "M18.309,0.119 L3,5 C1.69762761,5.38755178 0.856827643,6.64875173 1,8 C0.856827643,9.35124827 1.69762761,10.6124482 3,11 L18.309,15.881",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -2085,7 +2151,7 @@ function Icon(props) {
       }), _react["default"].createElement("ellipse", {
         id: "Oval",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -2097,7 +2163,7 @@ function Icon(props) {
       }), _react["default"].createElement("path", {
         d: "M20,8 C19.9971969,6.47924884 18.8533501,5.20285703 17.342,5.034 C17.1104226,6.00554249 16.9956109,7.00124896 17,8 C16.9956109,8.99875104 17.1104226,9.99445751 17.342,10.966 C18.8533501,10.797143 19.9971969,9.52075116 20,8 Z",
         id: "Path",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       })))))));
 
@@ -2132,7 +2198,7 @@ function Icon(props) {
         id: "user",
         transform: "translate(3.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2151,50 +2217,6 @@ function Icon(props) {
       }), _react["default"].createElement("path", {
         d: "M9,12 C6.23857625,12 4,14.2385763 4,17 L14,17 C14,14.2385763 11.7614237,12 9,12 L9,12 Z",
         id: "Path"
-      })))))));
-
-    case "video":
-      return _react["default"].createElement(SVG, _extends({
-        width: "24px",
-        height: "24px",
-        viewBox: "0 0 24 24",
-        version: "1.1",
-        xmlns: "http://www.w3.org/2000/SVG"
-      }, props), _react["default"].createElement("g", {
-        id: "Landing-Page",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        id: "1.0-Landing-Page",
-        transform: "translate(-100.000000, -935.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Button-Full---Large",
-        transform: "translate(100.000000, 935.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Icon-play"
-      }, _react["default"].createElement("rect", {
-        id: "Rectangle",
-        x: "0",
-        y: "0",
-        width: "24",
-        height: "24"
-      }), _react["default"].createElement("g", {
-        id: "frame-c-caret-right",
-        transform: "translate(1.000000, 1.000000)",
-        stroke: "#373AAF",
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeWidth: "2"
-      }, _react["default"].createElement("circle", {
-        id: "Oval",
-        cx: "11",
-        cy: "11",
-        r: "11"
-      }), _react["default"].createElement("polygon", {
-        id: "Path",
-        points: "9 15 9 7 15 11"
       })))))));
 
     case "toast":
@@ -2231,21 +2253,21 @@ function Icon(props) {
         d: "M2,0 L14,0 C15.1045695,0 16,0.8954305 16,2 L16,20 C16,21.1045695 15.1045695,22 14,22 L2,22 C0.8954305,22 0,21.1045695 0,20 L0,2 C0,0.8954305 0.8954305,0 2,0 Z",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "8",
         cy: "18",
         r: "1"
       }), _react["default"].createElement("rect", {
         id: "Rectangle",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         x: "2",
         y: "2",
         width: "12",
@@ -2284,7 +2306,7 @@ function Icon(props) {
         id: "preferences-circle",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2355,7 +2377,7 @@ function Icon(props) {
         id: "folder-search",
         transform: "translate(1.000000, 2.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2406,7 +2428,7 @@ function Icon(props) {
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -2419,7 +2441,7 @@ function Icon(props) {
         d: "M5,1 L17,1",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -2427,7 +2449,7 @@ function Icon(props) {
       }), _react["default"].createElement("polygon", {
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -2435,7 +2457,7 @@ function Icon(props) {
         points: "5 19 14 11 18 19"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "6",
         cy: "10",
@@ -2473,7 +2495,7 @@ function Icon(props) {
         id: "window-paragraph",
         transform: "translate(1.000000, 2.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2535,7 +2557,7 @@ function Icon(props) {
         id: "corner-bottom-right",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2589,7 +2611,7 @@ function Icon(props) {
         id: "edit",
         transform: "translate(2.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2624,7 +2646,7 @@ function Icon(props) {
         transform: "translate(-1083.000000, -1081.000000)",
         id: "Icons",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2"
       }, _react["default"].createElement("g", {
@@ -2676,7 +2698,7 @@ function Icon(props) {
       }, _react["default"].createElement("circle", {
         id: "Oval",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -2688,14 +2710,14 @@ function Icon(props) {
         d: "M11,6 L11,12",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "11",
         cy: "16",
@@ -2733,7 +2755,7 @@ function Icon(props) {
         id: "box-3d-50",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2783,7 +2805,7 @@ function Icon(props) {
         id: "property-app",
         transform: "translate(4.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -2834,7 +2856,7 @@ function Icon(props) {
         height: "24"
       }), _react["default"].createElement("g", {
         id: "add-notification",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       }, _react["default"].createElement("path", {
         d: "M17.7391304,0 C14.2813477,0 11.4782609,2.80308678 11.4782609,6.26086957 C11.4782609,9.71865235 14.2813477,12.5217391 17.7391304,12.5217391 C21.1969132,12.5217391 24,9.71865235 24,6.26086957 C24,4.60038372 23.3403746,3.00790704 22.1662338,1.83376624 C20.992093,0.659625435 19.3996163,0 17.7391304,0 Z M20.8695652,7.30434783 L18.7826087,7.30434783 L18.7826087,9.39130435 L16.6956522,9.39130435 L16.6956522,7.30434783 L14.6086957,7.30434783 L14.6086957,5.2173913 L16.6956522,5.2173913 L16.6956522,3.13043478 L18.7826087,3.13043478 L18.7826087,5.2173913 L20.8695652,5.2173913 L20.8695652,7.30434783 Z",
@@ -2877,7 +2899,7 @@ function Icon(props) {
       }, _react["default"].createElement("rect", {
         id: "Rectangle",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -2889,7 +2911,7 @@ function Icon(props) {
       }), _react["default"].createElement("polygon", {
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -2898,7 +2920,7 @@ function Icon(props) {
       }), _react["default"].createElement("circle", {
         id: "Oval",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         fill: "#FFFFFF",
@@ -2907,7 +2929,7 @@ function Icon(props) {
         r: "5.5"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "6",
         cy: "5",
@@ -2916,7 +2938,7 @@ function Icon(props) {
         d: "M19,16.5 L24,16.5",
         id: "Line-2",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round"
@@ -2953,7 +2975,7 @@ function Icon(props) {
         id: "p-search",
         transform: "translate(2.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -3002,7 +3024,7 @@ function Icon(props) {
         id: "p-system-update",
         transform: "translate(3.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -3048,7 +3070,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "corner-bottom-right",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -3096,7 +3118,7 @@ function Icon(props) {
         d: "M14.935,2.093 L20.882,8.04",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -3105,7 +3127,7 @@ function Icon(props) {
         d: "M12.603,3.387 C9.682,2.129 6.164,2.693 3.779,5.079 C3.29,5.568 2.886,6.109 2.55,6.679 L5.978,10.107",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -3114,7 +3136,7 @@ function Icon(props) {
         d: "M19.597,10.345 C20.887,13.277 20.322,16.82 17.921,19.221 C17.432,19.71 16.891,20.114 16.321,20.45 L12.879,17.008",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
@@ -3123,14 +3145,14 @@ function Icon(props) {
         d: "M10.143,18.514 L4.486,12.857 C4.486,12.857 9.318,0.836 22.871,0.129 C22.104,13.623 10.143,18.514 10.143,18.514 Z",
         id: "Path",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         transform: "translate(13.999800, 9.000000) rotate(-45.000000) translate(-13.999800, -9.000000) ",
         cx: "13.9998",
@@ -3139,7 +3161,7 @@ function Icon(props) {
       }), _react["default"].createElement("path", {
         d: "M1.113,17.844 C2.224,16.733 4.024,16.733 5.135,17.844 C6.246,18.955 6.246,20.755 5.135,21.866 C4.024,22.977 0,23 0,23 C0,23 0.002,18.954 1.113,17.844 Z",
         id: "Path",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       })))))));
 
@@ -3174,7 +3196,7 @@ function Icon(props) {
         id: "phone-call",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -3221,7 +3243,7 @@ function Icon(props) {
         id: "progress",
         transform: "translate(2.000000, 2.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -3268,7 +3290,7 @@ function Icon(props) {
         id: "add-29",
         transform: "translate(1.000000, 1.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -3318,7 +3340,7 @@ function Icon(props) {
         id: "award",
         transform: "translate(5.000000, 2.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -3364,7 +3386,7 @@ function Icon(props) {
         id: "i-add",
         transform: "translate(7.000000, 7.000000)",
         style: {
-          stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue
+          stroke: props.fill ? props.fill : _variables.colors.blue
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -3392,7 +3414,7 @@ function Icon(props) {
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
         transform: "translate(-184.000000, -1220.000000)",
-        fill: "#1BDFBA",
+        fill: props.fill ? props.fill : _dashVariables.colorPicker.lightGray,
         fillRule: "nonzero",
         id: "Shape"
       }, _react["default"].createElement("path", {
@@ -3414,7 +3436,7 @@ function Icon(props) {
         fillRule: "evenodd"
       }, _react["default"].createElement("g", {
         transform: "translate(-262.000000, -1676.000000)",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue // style={{ fill: props.fill ? getColors(fill) : colors.blue }}
+        fill: props.fill ? props.fill : _variables.colors.blue // style={{ fill: props.fill ? props.fill: colors.blue }}
         ,
         fillRule: "nonzero",
         id: "Buttons"
@@ -3464,7 +3486,7 @@ function Icon(props) {
         }
       }, _react["default"].createElement("g", {
         transform: "translate(-219.000000, -1675.000000)",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         id: "Buttons"
       }, _react["default"].createElement("g", {
@@ -3513,7 +3535,7 @@ function Icon(props) {
         height: "24"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "19",
         cy: "5.5",
@@ -3521,7 +3543,7 @@ function Icon(props) {
       }), _react["default"].createElement("path", {
         d: "M9.91782847,5.5 L7,5.5 C3.6862915,5.5 1,8.1862915 1,11.5 L1,16.5 C1,19.8137085 3.6862915,22.5 7,22.5 L13,22.5 C16.3137085,22.5 19,19.8137085 19,16.5 L19,14.1359286",
         id: "Path-3",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round"
       }))))));
@@ -3559,62 +3581,62 @@ function Icon(props) {
       }, _react["default"].createElement("path", {
         d: "M1,9 L1,16",
         id: "Path",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("path", {
         d: "M23,9 L23,16",
         id: "Path",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("path", {
         d: "M7,3 L4,0",
         id: "Path",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("path", {
         d: "M17,3 L20,0",
         id: "Path",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("path", {
         d: "M8,19 L8,22",
         id: "Path",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("path", {
         d: "M16,19 L16,22",
         id: "Path",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("path", {
         d: "M12,1 C8.134,1 5,4.134 5,8 L5,19 L19,19 L19,8 C19,4.134 15.866,1 12,1 Z",
         id: "Path",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "9",
         cy: "6",
         r: "1"
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero",
         cx: "15",
         cy: "6",
@@ -3622,7 +3644,7 @@ function Icon(props) {
       }), _react["default"].createElement("path", {
         d: "M5,9 L19,9",
         id: "Path",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
@@ -3661,14 +3683,14 @@ function Icon(props) {
       }, _react["default"].createElement("path", {
         d: "M18,17.423 C17.508,18.513 17.273,18.999 16.639,19.963 C15.756,21.308 14.51,22.983 12.966,22.997 C11.594,23.01 11.242,22.105 9.38,22.115 C7.519,22.125 7.13,23.013 5.758,23.0001414 C4.214,22.986 3.035,21.474 2.15,20.128 C-0.32,16.366 -0.578,11.952 0.946,9.606 C2.029,7.938 3.738,6.963 5.345,6.963 C6.981,6.963 8.009,7.86 9.362,7.86 C10.674,7.86 11.474,6.962 13.365,6.962 C14.795,6.962 16.309,7.74 17.389,9.085 C13.853,11.023 14.427,16.072 18,17.423 L18,17.423 Z",
         id: "Path",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }), _react["default"].createElement("path", {
         d: "M12.1,3.45 C12.75,2.616 13.243,1.439 13.064,0.236 C12.002,0.309 10.762,0.984 10.037,1.864 C9.379,2.663 8.836,3.847 9.047,4.999 C10.205,5.035 11.404,4.343 12.1,3.45 L12.1,3.45 Z",
         id: "Path",
-        fill: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       })))))));
 
@@ -3690,7 +3712,7 @@ function Icon(props) {
       }, _react["default"].createElement("g", {
         id: "subtract",
         transform: "translate(1.000000, 0.000000)",
-        stroke: "#343398",
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeWidth: "2"
       }, _react["default"].createElement("path", {
         d: "M10,1 L0,1",
@@ -3728,7 +3750,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "camera-flash",
         transform: "translate(4.000000, 1.000000)",
-        stroke: "#A1A8B9",
+        stroke: rops.props.fill ? props.fill : _variables.colors.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4015,7 +4037,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "cloud-download-95",
         transform: "translate(1.000000, 3.000000)",
-        stroke: "#FFFFFF",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4061,7 +4083,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "divider",
         transform: "translate(1.000000, 1.000000)",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4113,7 +4135,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "paint-bucket-40",
         transform: "translate(1.000000, 0.000000)",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }, _react["default"].createElement("path", {
@@ -4169,7 +4191,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "menu-icon",
         transform: "translate(1.000000, 4.000000)",
-        stroke: props.fill ? (0, _functions.getColors)(fill) : _variables.colors.blue,
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4214,7 +4236,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "d-check",
         transform: "translate(6.000000, 8.000000)",
-        stroke: "#FFFFFF",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4253,7 +4275,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "file-add",
         transform: "translate(1.000000, 3.000000)",
-        stroke: "#373AAF",
+        stroke: props.fill ? props.fill : _variables.colors.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4327,7 +4349,7 @@ function Icon(props) {
       }, _react["default"].createElement("g", {
         id: "Header---Design",
         transform: "translate(-397.000000, -113.000000)",
-        fill: fill ? fill : colorPicker.green100,
+        fill: props.fill ? props.fill : _dashVariables.colorPicker.green100,
         fillRule: "nonzero"
       }, _react["default"].createElement("g", {
         id: "Header"
@@ -4370,13 +4392,13 @@ function Icon(props) {
         d: "M45.35,31.51c-.38.32-.73.6-1.05.9A5.22,5.22,0,0,0,42.7,35a5.77,5.77,0,0,0,1.62,6,10.52,10.52,0,0,0,1.39,1c.33.22.34.2.21.58a15.81,15.81,0,0,1-3.35,5.52A3.57,3.57,0,0,1,41,49.14a3.44,3.44,0,0,1-2.22,0c-.51-.18-1-.42-1.52-.59a5.2,5.2,0,0,0-3.76.17,11.29,11.29,0,0,1-1.78.6,2.76,2.76,0,0,1-2.39-.64,11.3,11.3,0,0,1-2.07-2.35A17,17,0,0,1,24.32,39a10.83,10.83,0,0,1,.34-5.24,6.82,6.82,0,0,1,4.25-4.44,5.46,5.46,0,0,1,3.94.05l1.53.58a2.41,2.41,0,0,0,1.79,0c.67-.26,1.35-.5,2-.74a6.44,6.44,0,0,1,6.39,1.46C44.86,30.92,45.09,31.22,45.35,31.51Z",
         transform: "translate(-24.15 -22.36)",
         style: {
-          fill: fill ? fill : colorPicker.green100
+          fill: props.fill ? props.fill : _dashVariables.colorPicker.green100
         }
       }), _react["default"].createElement("path", {
         d: "M40.46,22.36a5,5,0,0,1-.19,2.05A6,6,0,0,1,37.42,28a4.28,4.28,0,0,1-2.1.56c-.19,0-.25-.06-.26-.25a5.41,5.41,0,0,1,1.22-3.63,6,6,0,0,1,4.09-2.35Z",
         transform: "translate(-24.15 -22.36)",
         style: {
-          fill: fill ? fill : colorPicker.green100
+          fill: props.fill ? props.fill : _dashVariables.colorPicker.green100
         }
       }));
 
@@ -4418,7 +4440,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "path-exclude",
         transform: "translate(1.000000, 1.000000)",
-        stroke: fill ? fill : colorPicker.gray50,
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.gray50,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4475,7 +4497,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "f-chat",
         transform: "translate(1.000000, 2.000000)",
-        stroke: fill ? fill : colorPicker.green100,
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.green100,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4527,7 +4549,7 @@ function Icon(props) {
         height: "24"
       }), _react["default"].createElement("g", {
         transform: "translate(2.000000, 0.000000)",
-        stroke: fill ? fill : colorPicker.green100,
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         strokeWidth: "2"
       }, _react["default"].createElement("g", {
         id: "app",
@@ -4612,7 +4634,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "a-chart",
         transform: "translate(2.000000, 2.000000)",
-        stroke: fill ? fill : colorPicker.green100,
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.green100,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4660,7 +4682,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "camera-flash",
         transform: "translate(4.000000, 1.000000)",
-        stroke: fill ? fill : colorPicker.green100,
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.green100,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4705,7 +4727,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "preferences-circle",
         transform: "translate(1.000000, 1.000000)",
-        stroke: fill ? fill : colorPicker.green100,
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.green100,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "2"
@@ -4762,7 +4784,7 @@ function Icon(props) {
       }, _react["default"].createElement("g", {
         id: "Header---Drops",
         transform: "translate(-186.000000, -216.000000)",
-        stroke: fill ? fill : colorPicker.gray50,
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.gray50,
         strokeWidth: "2"
       }, _react["default"].createElement("g", {
         id: "Header"
@@ -4818,18 +4840,147 @@ function Icon(props) {
       }, _react["default"].createElement("path", {
         d: "M8,22 L2,22 C0.8954305,22 0,21.1045695 0,20 L0,2 C0,0.8954305 0.8954305,0 2,0 L14,0 C15.1045695,0 16,0.8954305 16,2 L16,9",
         id: "Path",
-        stroke: "#FFFFFF"
+        stroke: props.fill ? props.fill : "white"
       }), _react["default"].createElement("path", {
         d: "M20,22 L17.121,19.121",
         id: "Path",
-        stroke: "#1BDFBA"
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.green100
       }), _react["default"].createElement("circle", {
         id: "Oval",
-        stroke: "#1BDFBA",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.green100,
         cx: "15",
         cy: "17",
         r: "3"
       }))))))));
+
+    case "duplicate":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "22px",
+        height: "22px",
+        viewBox: "0 0 22 22",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Drops",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd",
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      }, _react["default"].createElement("g", {
+        id: "1.1-Drop-hover-+-click-states",
+        transform: "translate(-682.000000, -658.000000)",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
+        strokeWidth: "1.5"
+      }, _react["default"].createElement("g", {
+        id: "Editor---Drafts-Copy",
+        transform: "translate(667.000000, 579.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Block-editor"
+      }, _react["default"].createElement("g", {
+        id: "Delete",
+        transform: "translate(16.000000, 80.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-Duplicate"
+      }, _react["default"].createElement("path", {
+        d: "M7.89454545,18.15 C10.7669461,20.7220559 15.1485569,20.6012914 17.8749241,17.8749241 C20.6012914,15.1485569 20.7220559,10.7669461 18.15,7.89454545",
+        id: "Path"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "7.27272727",
+        cy: "7.27272727",
+        r: "7.27272727"
+      }))))))));
+
+    case "blank-draft":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "18px",
+        height: "20px",
+        viewBox: "0 0 18 20",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Drops",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd",
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      }, _react["default"].createElement("g", {
+        id: "1.1-Drop-hover-+-click-states",
+        transform: "translate(-219.000000, -416.000000)",
+        stroke: "#373AAF",
+        strokeWidth: "2"
+      }, _react["default"].createElement("g", {
+        id: "All-drafts",
+        transform: "translate(145.000000, 300.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Create-new-draft"
+      }, _react["default"].createElement("g", {
+        id: "Start-from-blank-layout"
+      }, _react["default"].createElement("g", {
+        id: "Blank-Layout",
+        transform: "translate(30.000000, 117.000000)"
+      }, _react["default"].createElement("g", {
+        id: "layout-grid",
+        transform: "translate(45.000000, 0.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "16",
+        height: "18"
+      })))))))));
+
+    case "current-draft":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "18px",
+        height: "20px",
+        viewBox: "0 0 18 20",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Drops",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd",
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      }, _react["default"].createElement("g", {
+        id: "1.1-Drop-hover-+-click-states",
+        transform: "translate(-404.000000, -416.000000)",
+        stroke: "#373AAF",
+        strokeWidth: "2"
+      }, _react["default"].createElement("g", {
+        id: "All-drafts",
+        transform: "translate(145.000000, 300.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Create-new-draft"
+      }, _react["default"].createElement("g", {
+        id: "Start-from-current-layout",
+        transform: "translate(185.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Current-App-Layout",
+        transform: "translate(25.000000, 117.000000)"
+      }, _react["default"].createElement("g", {
+        id: "layout-grid-copy",
+        transform: "translate(50.000000, 0.000000)"
+      }, _react["default"].createElement("path", {
+        d: "M0,6 L16,6",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M0,12 L16,12",
+        id: "Path"
+      }), _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "16",
+        height: "18"
+      })))))))));
 
     default:
       return _react["default"].createElement("span", null);
@@ -4864,8 +5015,20 @@ var DashIconWrapper = _styledComponents["default"].svg.withConfig({
 
 Icon.propTypes = {
   type: _propTypes["default"].string.isRequired,
+
+  /**
+   * margin creating separation to the left of the icon
+   */
   iconRight: _propTypes["default"].bool,
+
+  /**
+   * margin creating separation to the right of the icon
+   */
   iconLeft: _propTypes["default"].bool,
+
+  /**
+   * icon color
+   */
   fill: _propTypes["default"].string,
   circleIcon: _propTypes["default"].bool,
   backgroundColor: _propTypes["default"].string

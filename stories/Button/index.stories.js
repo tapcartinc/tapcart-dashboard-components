@@ -50,6 +50,10 @@ export const allButtons = () => (
     <Button kind="inverted--reversed" onClick={action("clicked")}>
       Icon Button <Icon kind="design" fill="white" iconRight />
     </Button>
+
+    <Button kind="primary--reversed" onClick={action("clicked")}>
+      Go&nbsp;Live
+    </Button>
   </StyledButtonRow>
 );
 

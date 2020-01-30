@@ -13,14 +13,13 @@ export default {
   decorators: [withKnobs]
 };
 
-export const segmentedControl = () => {
+export const boxedToggle = () => {
   const [toggleState, setToggleState] = React.useState({
     basic: false,
     dayNight: false,
     appleAndroid: false
   });
 
-  console.log("toggleState.appleAndroid", toggleState.appleAndroid);
   return (
     <>
       <BoxedToggle
@@ -58,15 +57,4 @@ export const segmentedControl = () => {
       />
     </>
   );
-};
-
-BoxedToggle.propTypes = {
-  type: PropTypes.string,
-  items: PropTypes.object,
-  action: PropTypes.func,
-  current: PropTypes.string
-};
-
-BoxedToggle.defaultProps = {
-  type: "primary"
 };
