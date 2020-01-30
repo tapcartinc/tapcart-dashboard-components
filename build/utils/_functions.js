@@ -27,14 +27,14 @@ var getColors = function getColors(type) {
       return {
         background: "transparent",
         color: _dashVariables.colorPicker.blue,
-        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.blue)
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.blue)
       };
 
     case "secondary":
       return {
         color: _dashVariables.colorPicker.black,
         background: "transparent",
-        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.gray)
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.gray)
       };
 
     case "delete":
@@ -47,7 +47,7 @@ var getColors = function getColors(type) {
       return {
         background: "transparent",
         color: _dashVariables.colorPicker.red,
-        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.red)
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.red)
       };
 
     case "save":
@@ -60,7 +60,7 @@ var getColors = function getColors(type) {
       return {
         background: "transparent",
         color: _dashVariables.colorPicker.green100,
-        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.green100)
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.green100)
       };
 
     case "inverted":
@@ -73,7 +73,7 @@ var getColors = function getColors(type) {
       return {
         background: "transparent",
         color: "#FFFFFF",
-        boxShadow: "inset 0px 0px 0px 1px #FFFFFF"
+        boxShadow: "inset 0px 0px 0px 2px #FFFFFF"
       };
 
     case "transparent--blue":
@@ -234,7 +234,7 @@ var getBorder = function getBorder(type) {
       return "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.gray);
 
     case "border":
-      return "inset 0px 0px 0px 1px ".concat(_variables.colors.blue);
+      return "inset 0px 0px 0px 2px ".concat(_variables.colors.blue);
 
     default:
       break;

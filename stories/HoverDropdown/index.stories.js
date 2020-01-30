@@ -7,7 +7,6 @@ import {
   optionsKnob
 } from "@storybook/addon-knobs";
 import { HoverDropdown } from "../../lib/components/HoverDropdown";
-import { Container } from "../../lib/marketing/Container";
 import { ContainerBox } from "../../lib/layout/ContainerBox";
 import { colors } from "../../lib/utils/_variables";
 
@@ -43,7 +42,7 @@ export const hoverDropdown = () => {
     }
   ];
   return (
-    <Container>
+    <>
       <ContainerBox
         customHeight={100}
         customWidth={100}
@@ -53,6 +52,6 @@ export const hoverDropdown = () => {
       <br />
       <br />
       <HoverDropdown title="colors" options={colorOptions} />
-    </Container>
+    </>
   );
 };

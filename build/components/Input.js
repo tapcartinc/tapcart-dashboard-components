@@ -15,6 +15,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _variables = require("../utils/_variables");
 
+var _Typography = require("../elements/Typography");
+
 var _dashVariables = require("../utils/_dashVariables");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -121,9 +123,9 @@ var StyledCharCount = _styledComponents["default"].div.withConfig({
   return props.bounce ? "top: -3px" : "top: 0px";
 });
 
-var StyledLabel = _styledComponents["default"].p.withConfig({
+var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "Input__StyledLabel",
   componentId: "l316i3-2"
-})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;", ";color:", ";"], _dashVariables.circularStd.medium, function (props) {
+})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], function (props) {
   return props.errors ? _variables.colors.red : "#000000";
 });

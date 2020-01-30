@@ -6,10 +6,9 @@ import {
   boolean,
   optionsKnob
 } from "@storybook/addon-knobs";
-import { Header, Subheader } from "../../lib/marketing/Typography";
+
+import { Header } from "../../lib/elements/Typography";
 import { ContainerBox } from "../../lib/layout/ContainerBox";
-import { Row } from "../../lib/marketing/Row";
-import { Container } from "../../lib/marketing/Container";
 import { boxShadow } from "../../lib/utils/_variables";
 
 export default {
@@ -31,34 +30,21 @@ const options = {
 const defaultValue = boxShadow.medium;
 
 export const containerBox = () => (
-  <Container>
-    <ContainerBox>
-      <Header>Container box</Header>
-    </ContainerBox>
-  </Container>
+  <ContainerBox>
+    <Header>Container box</Header>
+  </ContainerBox>
 );
 
 export const containerBoxColumns = () => (
-  <Container>
-    <Row>
-      <ContainerBox
-        columns={3}
-        boxShadow={select(label, options, defaultValue)}
-      >
-        <Header>Container one</Header>
-      </ContainerBox>
-      <ContainerBox
-        columns={3}
-        boxShadow={select(label, options, defaultValue)}
-      >
-        <Header>Container two</Header>
-      </ContainerBox>
-      <ContainerBox
-        columns={3}
-        boxShadow={select(label, options, defaultValue)}
-      >
-        <Header>Container three</Header>
-      </ContainerBox>
-    </Row>
-  </Container>
+  <>
+    <ContainerBox columns={3} boxShadow={select(label, options, defaultValue)}>
+      <Header>Container one</Header>
+    </ContainerBox>
+    <ContainerBox columns={3} boxShadow={select(label, options, defaultValue)}>
+      <Header>Container two</Header>
+    </ContainerBox>
+    <ContainerBox columns={3} boxShadow={select(label, options, defaultValue)}>
+      <Header>Container three</Header>
+    </ContainerBox>
+  </>
 );

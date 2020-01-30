@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -15,53 +17,92 @@ var _variables = require("../utils/_variables");
 
 var _animations = require("../utils/_animations");
 
+var _propTypes = _interopRequireWildcard(require("prop-types"));
+
+var _dashVariables = require("../utils/_dashVariables");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-var CardStyle = _styledComponents["default"].section.withConfig({
-  displayName: "Card__CardStyle",
+var CardWrapper = _styledComponents["default"].div.withConfig({
+  displayName: "Card__CardWrapper",
   componentId: "q4rj6f-0"
-})(["border-radius:3px;", " display:flex;flex-direction:column;align-items:center;width:", ";height:", ";", " &:hover{", ";cursor:pointer;}position:relative;max-width:400px;margin:20px;&::before{content:\"\";display:block;border:", ";height:100%;width:100%;position:absolute;border-radius:3px;}", ";"], _variables.boxShadow, function (props) {
-  return props.columns ? "".concat(100 / props.columns, "%") : "33.333%";
-}, function (props) {
-  return props.height ? props.height : "300px";
-}, _animations.transition, _animations.hover, function (props) {
-  return props.selectedCard ? "2px solid ".concat(_variables.colors.blue) : "2px solid transparent";
-}, function (props) {
+})(["box-shadow:", ";position:relative;margin:20px;height:300px;width:350px;"], _variables.boxShadow.medium);
+
+var CardStyle = _styledComponents["default"].div.withConfig({
+  displayName: "Card__CardStyle",
+  componentId: "q4rj6f-1"
+})(["border-radius:3px;display:flex;flex-direction:column;align-items:center;position:relative;height:100%;width:100%;transition:0.2s ease all;&:hover{box-shadow:0 0 0 2px ", ";cursor:pointer;}position:relative;", ";"], _dashVariables.colorPicker.green100, function (props) {
   return props.style ? props.style : null;
 });
 
 var CardImage = _styledComponents["default"].img.withConfig({
   displayName: "Card__CardImage",
-  componentId: "q4rj6f-1"
+  componentId: "q4rj6f-2"
 })(["width:100%;object-fit:cover;height:75%;border-radius:3px 3px 0px 0px;"]);
 
 var CardContent = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardContent",
-  componentId: "q4rj6f-2"
-})(["width:100%;height:25%;display:flex;justify-content:center;align-items:center;border-radius:0px 0px 3px 3px;"]);
+  componentId: "q4rj6f-3"
+})(["width:100%;height:25%;padding:14px;border-radius:0px 0px 3px 3px;"]);
 
 var SelectedIcon = _styledComponents["default"].div.withConfig({
   displayName: "Card__SelectedIcon",
-  componentId: "q4rj6f-3"
-})(["position:absolute;top:0;transform:translateY(-10px);text-align:center;margin:0 auto;"]);
+  componentId: "q4rj6f-4"
+})(["position:absolute;top:0;transform:translateY(-10px);text-align:center;margin:0 auto;"]); // const Card = props => {
+//   return (
+//     <CardStyle {...props} onClick={props.onClick}>
+//       {props.currentCard && (
+//         <SelectedIcon>
+//           <Icon
+//             fill="white"
+//             circleIcon
+//             type="checkmark"
+//             backgroundColor="green"
+//             style={{ height: "20px", width: "20px" }}
+//           />
+//         </SelectedIcon>
+//       )}
+//       <CardImage src={props.image}></CardImage>
+//       <CardContent>{props.children}</CardContent>
+//     </CardStyle>
+//   );
+// };
+
 
 var Card = function Card(props) {
-  return _react["default"].createElement(CardStyle, _extends({}, props, {
+  return _react["default"].createElement(CardWrapper, _extends({}, props, {
     onClick: props.onClick
-  }), props.selectedCard && _react["default"].createElement(SelectedIcon, null, _react["default"].createElement(_Icon.Icon, {
-    fill: "white",
-    circleIcon: true,
-    type: "checkmark",
-    backgroundColor: "green",
-    style: {
-      height: "20px",
-      width: "20px"
-    }
-  })), _react["default"].createElement(CardImage, {
+  }), _react["default"].createElement(CardStyle, props, _react["default"].createElement(CardImage, {
     src: props.image
-  }), _react["default"].createElement(CardContent, null, props.children));
+  }), _react["default"].createElement(CardContent, null, props.children)));
 };
 
 exports.Card = Card;
+Card.propTypes = {
+  /**
+  The path to the image that fills the top / focus of the card
+  */
+  image: _propTypes["default"].string,
+
+  /**
+  Function being called when the card is clicked on
+  */
+  onClick: _propTypes["default"].func,
+
+  /**
+  The content in the bottom portion of the card
+  */
+  children: _propTypes["default"].node
+};
+Card.defaultProps = {}; //   /**
+// The conditional to de
+// */
+// currentCard: PropTypes.bool,
+// border: ${props =>
+//   props.currentCard ? `2px solid ${colors.blue}` : "2px solid transparent"};

@@ -1,8 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "../../lib/utils/ThemeProvider";
 import { withKnobs, select } from "@storybook/addon-knobs";
-import { Section } from "../../lib/marketing/Section";
-import { Header } from "../../lib/marketing/Typography";
+import { Header } from "../../lib/elements/Typography";
 import {
   base,
   invert,
@@ -35,9 +34,7 @@ const groupId = "GROUP-ID1";
 
 export const themeProvider = () => (
   <ThemeProvider theme={select(label, options, defaultValue, groupId)}>
-    <Section>
-      <Header>ThemeProvider children</Header>
-    </Section>
+    <Header>ThemeProvider children</Header>
   </ThemeProvider>
 );
 

@@ -23,9 +23,9 @@ var Header = _styledComponents["default"].h1.attrs({
 }).withConfig({
   displayName: "Typography__Header",
   componentId: "iyq6bj-0"
-})(["font-size:25px;color:", ";font-weight:500;font-style:normal;font-family:CircularStd-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ""], function (props) {
+})(["font-size:25px;color:", ";font-weight:500;font-style:normal;", " -webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ""], function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.blue;
-}, function (props) {
+}, _dashVariables.circularStd.medium, function (props) {
   return props.style ? props.style : null;
 });
 
@@ -36,7 +36,7 @@ var Description = _styledComponents["default"].p.attrs({
 }).withConfig({
   displayName: "Typography__Description",
   componentId: "iyq6bj-1"
-})(["font-family:CircularStd-Book,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:normal;font-style:normal;line-height:18px;letter-spacing:normal;color:", ";", ""], function (props) {
+})(["", " -webkit-font-smoothing:antialiased;font-size:14px;font-weight:normal;font-style:normal;line-height:18px;letter-spacing:normal;color:", ";", ""], _dashVariables.circularStd.book, function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.gray;
 }, function (props) {
   return props.style ? props.style : null;
@@ -49,7 +49,7 @@ var Body = _styledComponents["default"].p.attrs({
 }).withConfig({
   displayName: "Typography__Body",
   componentId: "iyq6bj-2"
-})(["font-family:CircularStd-Book,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:normal;line-height:18px;letter-spacing:normal;color:", ";", ""], function (props) {
+})(["", " -webkit-font-smoothing:antialiased;font-size:14px;font-weight:normal;line-height:18px;letter-spacing:normal;color:", ";", ""], _dashVariables.circularStd.book, function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.black;
 }, function (props) {
   return props.style ? props.style : null;

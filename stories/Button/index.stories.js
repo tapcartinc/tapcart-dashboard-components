@@ -14,81 +14,81 @@ export default {
 export const allButtons = () => (
   <StyledButtonRow>
     <Button
-      type="primary"
+      kind="primary"
       isLoading={boolean("Loading", false)}
       onClick={action("clicked")}
     >
       Primary
     </Button>
-    <Button type="transparent--blue">Primary</Button>
-    <Button type="secondary" onClick={action("clicked")}>
+    <Button kind="transparent--blue">Primary</Button>
+    <Button kind="secondary" onClick={action("clicked")}>
       Secondary
     </Button>
-    <Button type="delete" onClick={action("clicked")}>
+    <Button kind="delete" onClick={action("clicked")}>
       Delete
     </Button>
-    <Button type="save" onClick={action("clicked")}>
+    <Button kind="save" onClick={action("clicked")}>
       Save
     </Button>
     <Button
-      type="inverted"
+      kind="inverted"
       isLoading={boolean("Loading Button", true)}
       onClick={action("clicked")}
     >
       Loading Button
     </Button>
     <Button
-      type="primary--reversed"
+      kind="primary--reversed"
       isDisabled={boolean("Disabled Button", true)}
       onClick={action("clicked")}
     >
       Disabled
     </Button>
-    <Button type="transparent--white" onClick={action("clicked")}>
+    <Button kind="transparent--white" onClick={action("clicked")}>
       {text("Change Button Text", "Change Button Text")}
     </Button>
-    <Button type="inverted--reversed" onClick={action("clicked")}>
-      Icon Button <Icon type="design" fill="white" iconRight />
+    <Button kind="inverted--reversed" onClick={action("clicked")}>
+      Icon Button <Icon kind="design" fill="white" iconRight />
     </Button>
   </StyledButtonRow>
 );
 
 export const loading = () => (
   <StyledButtonRow>
-    <Button onClick={action("clicked")} isLoading={true} type="primary">
+    <Button onClick={action("clicked")} isLoading={true} kind="primary">
       Loading
     </Button>
     <Button
       onClick={action("clicked")}
       isLoading={true}
-      type="primary--reversed"
+      kind="primary--reversed"
     >
       Loading
     </Button>
-    <Button onClick={action("clicked")} isLoading={true} type="secondary">
+    <Button onClick={action("clicked")} isLoading={true} kind="secondary">
       Loading
     </Button>
     <Button
       onClick={action("clicked")}
       isLoading={true}
-      type="transparent--blue"
+      kind="transparent--blue"
     >
       Loading
     </Button>
-    <Button onClick={action("clicked")} isLoading={true} type="save">
+    <Button onClick={action("clicked")} isLoading={true} kind="save">
       Loading
     </Button>
     <Button
       onClick={action("clicked")}
       isLoading={true}
-      type="delete--reversed"
+      kind="delete--reversed"
     >
       Loading
     </Button>
     <Button
       onClick={action("clicked")}
       isLoading={true}
-      type="secondary--green"
+      kind="secondary--green"
     >
       Loading
     </Button>
@@ -96,7 +96,7 @@ export const loading = () => (
 );
 
 export const disabled = () => (
-  <Button type="primary" isDisabled={true}>
+  <Button kind="primary" isDisabled={true}>
     Disabled
   </Button>
 );

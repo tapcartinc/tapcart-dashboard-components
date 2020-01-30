@@ -7,7 +7,6 @@ import {
   optionsKnob
 } from "@storybook/addon-knobs";
 import { ClickDropdown } from "../../lib/components/ClickDropdown";
-import { Container } from "../../lib/marketing/Container";
 import { colors } from "../../lib/utils/_variables";
 import { ContainerBox } from "../../lib/layout/ContainerBox";
 
@@ -44,7 +43,7 @@ export const clickDropdown = () => {
   ];
   console.log("colorState", colorState);
   return (
-    <Container customPadding={[50, 150]}>
+    <>
       <ContainerBox
         customHeight={100}
         customWidth={100}
@@ -54,6 +53,6 @@ export const clickDropdown = () => {
       <br />
       <br />
       <ClickDropdown options={colorOptions} />
-    </Container>
+    </>
   );
 };

@@ -7,9 +7,9 @@ import {
   optionsKnob
 } from "@storybook/addon-knobs";
 import { ToolTip } from "../../lib/components/ToolTip";
-import { Container } from "../../lib/marketing/Container";
 import { colors } from "../../lib/utils/_variables";
 import { colorPicker } from "../../lib/utils/_dashVariables";
+import { Container } from "../../lib/layout/Container";
 
 export default {
   component: ToolTip,

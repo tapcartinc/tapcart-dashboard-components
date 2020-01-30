@@ -10,6 +10,7 @@ var _exportNames = {
   LinkTag: true,
   IconButton: true,
   Loader: true,
+  DraftStatus: true,
   Header: true,
   Description: true,
   Body: true,
@@ -87,6 +88,12 @@ Object.defineProperty(exports, "Loader", {
   enumerable: true,
   get: function get() {
     return _Loader.Loader;
+  }
+});
+Object.defineProperty(exports, "DraftStatus", {
+  enumerable: true,
+  get: function get() {
+    return _DraftStatus.DraftStatus;
   }
 });
 Object.defineProperty(exports, "Header", {
@@ -353,6 +360,8 @@ var _LinkTag = require("./elements/LinkTag");
 var _IconButton = require("./elements/IconButton");
 
 var _Loader = require("./elements/Loader");
+
+var _DraftStatus = require("./elements/DraftStatus");
 
 var _Typography = require("./elements/Typography");
 
