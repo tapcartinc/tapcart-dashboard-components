@@ -361,6 +361,22 @@ export const icon = () => {
         <Icon type="download" />
         download
       </StyledIcon>
+      <StyledIcon>
+        <Icon type="current-draft" />
+        current-draft
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="blank-draft" />
+        blank-draft
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="duplicate" />
+        duplicate
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="go-live" />
+        go-live
+      </StyledIcon>
     </StyledIcons>
   );
 };

@@ -20,7 +20,8 @@ export const allButtons = () => (
     >
       Primary
     </Button>
-    <Button kind="transparent--blue">Primary</Button>
+    <Button kind="transparent--blue">transparent--blue</Button>
+    <Button kind="inverted">inverted</Button>
     <Button kind="secondary" onClick={action("clicked")}>
       Secondary
     </Button>

@@ -31,7 +31,6 @@ export const segmentedControl = () => {
       items={{ cat: "cat", dog: "dog", mouse: "mouse" }}
       action={changeSection}
       current={state}
-      icons={["blocks", "theme", "menu-icon"]}
       icons={{ cat: "blocks", dog: "theme", mouse: "menu-icon" }}
     />
   );
