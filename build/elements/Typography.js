@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -13,6 +15,12 @@ var _dashVariables = require("../utils/_dashVariables");
 
 var _functions = require("../utils/_functions");
 
+var _propTypes = _interopRequireWildcard(require("prop-types"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 //////////
@@ -23,9 +31,13 @@ var Header = _styledComponents["default"].h1.attrs({
 }).withConfig({
   displayName: "Typography__Header",
   componentId: "iyq6bj-0"
-})(["font-size:25px;color:", ";font-weight:500;font-style:normal;", " -webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ""], function (props) {
+})(["font-size:25px;color:", ";font-weight:500;font-style:normal;", " -webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ";", ";", ""], function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.blue;
 }, _dashVariables.circularStd.medium, function (props) {
+  return props.align === "center" && "text-align: center";
+}, function (props) {
+  return props.align === "left" && "text-align: left";
+}, function (props) {
   return props.style ? props.style : null;
 });
 
@@ -36,8 +48,12 @@ var Description = _styledComponents["default"].p.attrs({
 }).withConfig({
   displayName: "Typography__Description",
   componentId: "iyq6bj-1"
-})(["", " -webkit-font-smoothing:antialiased;font-size:14px;font-weight:normal;font-style:normal;line-height:18px;letter-spacing:normal;color:", ";", ""], _dashVariables.circularStd.book, function (props) {
+})(["", " -webkit-font-smoothing:antialiased;font-size:14px;font-weight:normal;font-style:normal;line-height:18px;letter-spacing:normal;color:", ";", ";", ";", ""], _dashVariables.circularStd.book, function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.gray;
+}, function (props) {
+  return props.align === "center" && "text-align: center";
+}, function (props) {
+  return props.align === "left" && "text-align: left";
 }, function (props) {
   return props.style ? props.style : null;
 });
@@ -49,8 +65,12 @@ var Body = _styledComponents["default"].p.attrs({
 }).withConfig({
   displayName: "Typography__Body",
   componentId: "iyq6bj-2"
-})(["", " margin-top:8px;margin-bottom:8px;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;line-height:18px;letter-spacing:normal;color:", ";", ""], _dashVariables.circularStd.book, function (props) {
+})(["", " margin-top:8px;margin-bottom:8px;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;line-height:18px;letter-spacing:normal;color:", ";", ";", ";", ""], _dashVariables.circularStd.book, function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.black;
+}, function (props) {
+  return props.align === "center" && "text-align: center";
+}, function (props) {
+  return props.align === "left" && "text-align: left";
 }, function (props) {
   return props.style ? props.style : null;
 });

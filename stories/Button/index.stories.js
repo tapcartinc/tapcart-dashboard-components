@@ -48,7 +48,7 @@ export const allButtons = () => (
       {text("Change Button Text", "Change Button Text")}
     </Button>
     <Button kind="inverted--reversed" onClick={action("clicked")}>
-      Icon Button <Icon kind="design" fill="white" iconRight />
+      Icon Button <Icon type="design" fill="white" iconRight />
     </Button>
 
     <Button kind="primary--reversed" onClick={action("clicked")}>

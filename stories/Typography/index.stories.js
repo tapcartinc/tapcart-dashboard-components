@@ -6,7 +6,12 @@ import { Container } from "../../lib/layout/Container";
 
 export default {
   component: "Typography",
-  title: "Design Elements/Typography"
+  title: "Design Elements/Typography",
+  parameters: {
+    componentSubtitle:
+      '<Header/>, <Description/>, and <Body/> all can receive color as a prop to change the default settings seen above. They also can receive "align" as a prop with the options of "center" and "left" to adjust text-alignment. If no "align" prop is provided the default alignment is that of the parent component.'
+    // docs: { storyDescription: "4 sizes are supported." }
+  }
 };
 
 export const TypographyStyles = () => (
@@ -14,8 +19,24 @@ export const TypographyStyles = () => (
     <Header>Header</Header>
     <Description>Description</Description>
     <Body>Body</Body>
+    <br />
+    <br />
+    <br />
+    <Header align="center" color={colorPicker.black}>
+      Header: Custom color and alignment example
+    </Header>
+    <Description color={colorPicker.red}>
+      Description: Custom color example
+    </Description>
+    <Body color={colorPicker.gray}>Body: Custom color example</Body>
   </Container>
 );
+
+TypographyStyles.story = {
+  parameters: {
+    notes: "A small component"
+  }
+};
 
 const codeString = `element {
   \$\{sofiaPro.regular}\
