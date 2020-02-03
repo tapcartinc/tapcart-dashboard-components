@@ -13,17 +13,17 @@ export const breadcrumbs = () => (
   <Breadcrumbs
     crumbs={[
       {
-        crumb: "crumb 1",
+        crumb: "Integrations",
         icon: "integrations",
         onClick: () => console.log("hi")
       },
+      // {
+      //   crumb: "crumb 2",
+      //   active: true,
+      //   onClick: () => console.log("hi2")
+      // },
       {
-        crumb: "crumb 2",
-        active: true,
-        onClick: () => console.log("hi2")
-      },
-      {
-        crumb: "How To Be a eCommerce Growth Hacker"
+        crumb: "YOTPO"
       }
     ]}
   ></Breadcrumbs>

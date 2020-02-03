@@ -38,7 +38,12 @@ var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
   }, icon ? _react["default"].createElement(_Icon.Icon, {
     type: icon,
     iconLeft: true,
-    fill: _dashVariables.colorPicker.blue
+    fill: _dashVariables.colorPicker.blue,
+    style: {
+      height: 18,
+      marginRight: 15,
+      marginTop: 2
+    }
   }) : null, _react["default"].createElement("span", null, crumb)));
 };
 
@@ -47,12 +52,10 @@ exports.BreadcrumbsItem = BreadcrumbsItem;
 var BreadcrumbsItemStyle = _styledComponents["default"].li.withConfig({
   displayName: "BreadcrumbItem__BreadcrumbsItemStyle",
   componentId: "nuqiaq-0"
-})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:10px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;", ";line-height:1.6;letter-spacing:1px;font-size:15px;margin-right:0px;margin-left:10px;line-height:34px;color:", ";span{margin-left:-5px;height:100%;}", " ", ";"], function (props) {
-  return props.active && "transform: translateY(-2px)";
+})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:10px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.6;letter-spacing:1px;font-size:14px;margin-right:0px;margin-left:10px;line-height:34px;color:", ";span{margin-left:-5px;height:100%;}transition:all 0.2s ease-in-out;", " ", ";"], function (props) {
+  return props.active ? _dashVariables.colorPicker.gray : _dashVariables.colorPicker.blue;
 }, function (props) {
-  return props.active ? _variables.colors.blue : _variables.colors.grayText;
-}, function (props) {
-  return !props.active && "  &:hover {\n  color: ".concat(_variables.colors.gray75, ";\n  transition: all 0.2s ease;\n  cursor: pointer;\n}");
+  return !props.active && "  &:hover {\n  transform: translateY(-2px);\n  transition: all 0.2s ease-in-out;\n  cursor: pointer;\n}";
 }, function (props) {
   return props.style ? props.style : null;
 });
@@ -60,4 +63,4 @@ var BreadcrumbsItemStyle = _styledComponents["default"].li.withConfig({
 var StyledCrumb = _styledComponents["default"].div.withConfig({
   displayName: "BreadcrumbItem__StyledCrumb",
   componentId: "nuqiaq-1"
-})(["align-items:center;display:flex;svg{width:10px;margin-top:-3px;}"]);
+})(["align-items:center;display:flex;"]);
