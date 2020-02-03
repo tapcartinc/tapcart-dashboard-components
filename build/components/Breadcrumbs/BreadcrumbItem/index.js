@@ -17,6 +17,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _media = _interopRequireDefault(require("../../../utils/_media"));
 
+var _dashVariables = require("../../../utils/_dashVariables");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
@@ -29,17 +31,14 @@ var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
     type: "arrow-right",
     iconLeft: true,
     iconRight: true,
-    fill: active ? _variables.colors.blue : _variables.colors.grayText
+    fill: active ? _dashVariables.colorPicker.gray : _dashVariables.colorPicker.blue
   }) : null, _react["default"].createElement(BreadcrumbsItemStyle, {
     onClick: onClick,
     active: active
   }, icon ? _react["default"].createElement(_Icon.Icon, {
     type: icon,
-    style: {
-      height: 20
-    },
     iconLeft: true,
-    fill: _variables.colors.grayText
+    fill: _dashVariables.colorPicker.blue
   }) : null, _react["default"].createElement("span", null, crumb)));
 };
 
