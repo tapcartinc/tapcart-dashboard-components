@@ -9,8 +9,8 @@ var _dashVariables = require("./_dashVariables");
 
 var _variables = require("./_variables");
 
-var getColors = function getColors(type) {
-  switch (type) {
+var getColors = function getColors(kind) {
+  switch (kind) {
     case "primary":
       return {
         color: "#FFFFFF",
@@ -23,11 +23,24 @@ var getColors = function getColors(type) {
         background: _dashVariables.colorPicker.blue
       };
 
+    case "gray":
+      return {
+        color: "#FFFFFF",
+        background: _dashVariables.colorPicker.gray
+      };
+
     case "primary--reversed":
       return {
         background: "transparent",
         color: _dashVariables.colorPicker.blue,
         boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.blue)
+      };
+
+    case "gray--reversed":
+      return {
+        background: "transparent",
+        color: _dashVariables.colorPicker.gray,
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.gray)
       };
 
     case "secondary":
@@ -222,8 +235,8 @@ var getColors = function getColors(type) {
 
 exports.getColors = getColors;
 
-var getBorder = function getBorder(type) {
-  switch (type) {
+var getBorder = function getBorder(kind) {
+  switch (kind) {
     case "primary":
       return "0px";
 

@@ -32,6 +32,8 @@ var _exportNames = {
   Modal: true,
   BoxedToggle: true,
   ToolTip: true,
+  EditContainerDropdown: true,
+  SearchableContent: true,
   ContainerBox: true,
   Accordion: true,
   Card: true,
@@ -223,6 +225,18 @@ Object.defineProperty(exports, "ToolTip", {
     return _ToolTip.ToolTip;
   }
 });
+Object.defineProperty(exports, "EditContainerDropdown", {
+  enumerable: true,
+  get: function get() {
+    return _EditContainerDropdown.EditContainerDropdown;
+  }
+});
+Object.defineProperty(exports, "SearchableContent", {
+  enumerable: true,
+  get: function get() {
+    return _SearchableContent.SearchableContent;
+  }
+});
 Object.defineProperty(exports, "ContainerBox", {
   enumerable: true,
   get: function get() {
@@ -403,6 +417,10 @@ var _Modal = require("./components/Modal");
 var _BoxedToggle = require("./components/BoxedToggle");
 
 var _ToolTip = require("./components/ToolTip");
+
+var _EditContainerDropdown = require("./components/EditContainerDropdown");
+
+var _SearchableContent = require("./components/SearchableContent");
 
 var _ContainerBox = require("./layout/ContainerBox");
 

@@ -127,10 +127,10 @@ function ModalType(props) {
         type: "small-close"
       })), _react["default"].createElement(StyledDashContent, null, _react["default"].createElement("div", {
         style: {
-          marginBottom: 25,
-          marginTop: 40
+          marginBottom: 20,
+          marginTop: 20
         }
-      }, _react["default"].createElement(_Typography.Header, null, props.title), _react["default"].createElement(_Typography.Description, null, props.description)), _react["default"].createElement(StyledDashModalContent, null, props.children), _react["default"].createElement(_Button.Button, {
+      }, _react["default"].createElement(_Typography.Header, null, props.title), props.description && _react["default"].createElement(_Typography.Description, null, props.description)), _react["default"].createElement(StyledDashModalContent, null, props.children), props.buttonText && _react["default"].createElement(_Button.Button, {
         isDisabled: props.saveDisabled,
         onClick: props.save
       }, props.buttonText)));
@@ -234,7 +234,7 @@ var ModalStyle = _styledComponents["default"].div.withConfig({
 var StyledDashModalContent = _styledComponents["default"].div.withConfig({
   displayName: "Modal__StyledDashModalContent",
   componentId: "sc-10ogjb3-2"
-})(["background:#ffffff;border:1px solid ", ";height:50vh;min-height:400px;margin-bottom:30px;padding:40px 50px;overflow:scroll;"], _dashVariables.colorPicker.lightGray);
+})(["background:#ffffff;border:1px solid ", ";height:60vh;min-height:400px;margin-bottom:30px;padding:30px 50px;overflow:scroll;"], _dashVariables.colorPicker.lightGray);
 
 var StyledDashContent = _styledComponents["default"].div.withConfig({
   displayName: "Modal__StyledDashContent",

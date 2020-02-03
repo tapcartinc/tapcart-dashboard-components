@@ -31,7 +31,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var options = ["primary", "primary--reversed", "secondary", "transparent--blue", "transparent--green", "transparent--red", "transparent--white", "save", "save--reversed", "delete", "delete--reversed", "inverted", "inverted--reversed", "secondary--green", "submit"];
+var options = ["primary", "primary--reversed", "secondary", "transparent--blue", "transparent--green", "transparent--red", "transparent--white", "transparent--gray", "save", "save--reversed", "delete", "delete--reversed", "inverted", "inverted--reversed", "secondary--green", "submit", "gray--reversed", "gray"];
 
 var StyledButtonWrapper = _styledComponents["default"].button.attrs(function (props) {
   var kind = options.includes(props.kind) ? props.kind : "primary";
@@ -41,18 +41,18 @@ var StyledButtonWrapper = _styledComponents["default"].button.attrs(function (pr
 }).withConfig({
   displayName: "Button__StyledButtonWrapper",
   componentId: "mktk3o-0"
-})(["border-radius:3px;flex-direction:row;align-items:center;justify-items:center;font-size:14px;font-style:normal;font-weight:400;font-family:SofiaPro-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;text-transform:uppercase;line-height:1.5;letter-spacing:1px;padding-top:12px;padding-bottom:12px;z-index:3;padding-right:", ";padding-left:", ";outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " ", " a{font-size:14px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;", ";font-family:SofiaPro-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;", " text-decoration:none;box-shadow:none;}img{margin-right:4px;margin-left:4px;}position:relative;display:flex;justify-content:center;", " ", ";", ";", ""], function (props) {
-  return props.kind.includes("transparent") ? "0px" : "20px";
-}, function (props) {
-  return props.kind.includes("transparent") ? "0px" : "20px";
-}, _animations.transition, _animations.hover, function (props) {
+})(["border-radius:3px;flex-direction:row;align-items:center;justify-items:center;font-size:14px;font-style:normal;font-weight:400;font-family:SofiaPro-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;text-transform:uppercase;line-height:1.5;letter-spacing:1px;padding-top:12px;padding-bottom:12px;z-index:3;outline:none;border:none;", " &:hover{", ";cursor:pointer;}", " ", " a{font-size:14px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;font-style:normal;", ";font-family:SofiaPro-Medium,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:500;", " text-decoration:none;box-shadow:none;}img{margin-right:4px;margin-left:4px;}position:relative;display:flex;justify-content:center;", " padding-right:", ";padding-left:", ";", ";", ";", ""], _animations.transition, _animations.hover, function (props) {
   return (0, _functions.getColors)(props.kind);
 }, function (props) {
   return props.stacked && "flex-direction: column; align-items: center; text-transform: none;";
 }, _dashVariables.sofiaPro.medium, function (props) {
   return (0, _functions.getColors)(props.kind);
 }, function (props) {
-  return props.isDisabled && "background: ".concat(_variables.colors.darkgray, "; color: ").concat(_variables.colors.gray, "; border: none; box-shadow: none;\n    &:hover{\n      cursor: default;\n      transform: translateY(0px)\n    }\n    ");
+  return props.isDisabled && "background: ".concat(_dashVariables.colorPicker.gray, "; color: ").concat(_dashVariables.colorPicker.lightGray, "; border: none; box-shadow: none;\n    &:hover{\n      cursor: default;\n      transform: translateY(0px)\n    }\n    ");
+}, function (props) {
+  return props.kind.includes("transparent") ? "0px" : "16px";
+}, function (props) {
+  return props.kind.includes("transparent") ? "0px" : "16px";
 }, function (props) {
   return props.thin && "padding: 8px 16px";
 }, function (props) {
@@ -94,6 +94,7 @@ Button.propTypes = {
   "transparent--green",
   "transparent--red",
   "transparent--white",
+  "transparent--gray",
   "save",
   "save--reversed",
   "delete",
@@ -101,7 +102,9 @@ Button.propTypes = {
   "inverted",
   "inverted--reversed",
   "secondary--green",
-  "submit"
+  "submit",
+  "gray--reversed",
+  "gray"
    */
   kind: _propTypes["default"].string,
   isLoading: _propTypes["default"].bool,

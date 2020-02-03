@@ -61,6 +61,7 @@ export const card = () => (
     }}
   >
     <Card
+      columns={3}
       image="https://i.imgur.com/8LA1oBL.png"
       onClick={() => console.log("hi")}
     >
@@ -72,12 +73,14 @@ export const card = () => (
       <Body>Swim Resort Drop</Body>
     </Card>
     <Card
+      columns={3}
       image="https://i.imgur.com/8LA1oBL.png"
       onClick={() => console.log("hi")}
     >
       <DraftStatus status="scheduled" />
     </Card>
     <Card
+      columns={3}
       image="https://i.imgur.com/8LA1oBL.png"
       onClick={() => console.log("hi")}
     >

@@ -93,7 +93,7 @@ function (_Component) {
               }, props.icons && _react["default"].createElement("div", null, _react["default"].createElement(_Icon.Icon, {
                 iconLeft: true,
                 type: props.icons[key],
-                fill: props.current === key ? "white" : colorPicker.blue
+                fill: props.current === key ? "white" : _dashVariables.colorPicker.blue
               })), props.items[key], _react["default"].createElement("input", {
                 type: "radio",
                 value: key,
