@@ -31,6 +31,9 @@ var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
     type: "arrow-right",
     iconLeft: true,
     iconRight: true,
+    style: {
+      marginRight: 15
+    },
     fill: active ? _dashVariables.colorPicker.gray : _dashVariables.colorPicker.blue
   }) : null, _react["default"].createElement(BreadcrumbsItemStyle, {
     onClick: onClick,
@@ -38,7 +41,7 @@ var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
   }, icon ? _react["default"].createElement(_Icon.Icon, {
     type: icon,
     iconLeft: true,
-    fill: _dashVariables.colorPicker.blue,
+    fill: _dashVariables.colorPicker.gray,
     style: {
       height: 18,
       marginRight: 15,
@@ -52,8 +55,8 @@ exports.BreadcrumbsItem = BreadcrumbsItem;
 var BreadcrumbsItemStyle = _styledComponents["default"].li.withConfig({
   displayName: "BreadcrumbItem__BreadcrumbsItemStyle",
   componentId: "nuqiaq-0"
-})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:10px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.6;letter-spacing:1px;font-size:14px;margin-right:0px;margin-left:10px;line-height:34px;color:", ";span{margin-left:-5px;height:100%;}transition:all 0.2s ease-in-out;", " ", ";"], function (props) {
-  return props.active ? _dashVariables.colorPicker.gray : _dashVariables.colorPicker.blue;
+})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:7px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.6;letter-spacing:1px;font-size:14px;margin-right:0px;margin-left:10px;line-height:34px;color:", ";span{margin-left:-5px;height:100%;}transition:all 0.2s ease-in-out;", " ", ";"], function (props) {
+  return props.active ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray;
 }, function (props) {
   return !props.active && "  &:hover {\n  transform: translateY(-2px);\n  transition: all 0.2s ease-in-out;\n  cursor: pointer;\n}";
 }, function (props) {
