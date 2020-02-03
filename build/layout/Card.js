@@ -30,8 +30,12 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var CardWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardWrapper",
   componentId: "q4rj6f-0"
-})(["box-shadow:", ";position:relative;margin:10px;height:300px;width:350px;", ";"], _variables.boxShadow.medium, function (props) {
+})(["box-shadow:", ";position:relative;margin:10px;height:300px;width:350px;", ";", ";", ";"], _variables.boxShadow.medium, function (props) {
   return props.columns && "\n  width: ".concat(100 / props.columns - 1.9, "%\n  ");
+}, function (props) {
+  return props.customWidth && "width: ".concat(customWidth);
+}, function (props) {
+  return props.customHeight && "width: ".concat(customHeight);
 });
 
 var CardStyle = _styledComponents["default"].div.withConfig({
