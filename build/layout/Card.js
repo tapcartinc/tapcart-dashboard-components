@@ -30,7 +30,9 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var CardWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardWrapper",
   componentId: "q4rj6f-0"
-})(["box-shadow:", ";position:relative;margin:20px;height:300px;width:350px;"], _variables.boxShadow.medium);
+})(["box-shadow:", ";position:relative;margin:10px;height:300px;width:350px;", ";"], _variables.boxShadow.medium, function (props) {
+  return props.columns && "\n  width: ".concat(100 / props.columns - 1.9, "%\n  ");
+});
 
 var CardStyle = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardStyle",

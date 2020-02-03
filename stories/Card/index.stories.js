@@ -28,25 +28,35 @@ const StyledStatusInfo = styled.div`
   margin-left: 5px;
 `;
 
+const handleClick = (e, option) => {
+  e.stopPropagation();
+  console.log("option", option);
+};
+
+const handleCardClick = (e, card) => {
+  e.stopPropagation();
+  console.log("card", card);
+};
+
 const options = [
   {
     title: "Go Live",
-    onClick: () => console.log("Go Live"),
+    onClick: e => handleClick(e, "go-live"),
     icon: "go-live"
   },
   {
     title: "Edit",
-    onClick: () => console.log("Edit"),
+    onClick: e => handleClick(e, "edit"),
     icon: "edit"
   },
   {
     title: "Duplicate",
-    onClick: () => console.log("Duplicate"),
+    onClick: e => handleClick(e, "duplicate"),
     icon: "duplicate"
   },
   {
     title: "Delete",
-    onClick: () => console.log("Delete"),
+    onClick: e => handleClick(e, "delete"),
     icon: "trash"
   }
 ];
@@ -63,7 +73,7 @@ export const card = () => (
     <Card
       columns={3}
       image="https://i.imgur.com/8LA1oBL.png"
-      onClick={() => console.log("hi")}
+      onClick={e => handleCardClick(e, "one")}
     >
       <StyledTopRow>
         <DraftStatus status="live" />
@@ -75,14 +85,14 @@ export const card = () => (
     <Card
       columns={3}
       image="https://i.imgur.com/8LA1oBL.png"
-      onClick={() => console.log("hi")}
+      onClick={e => handleCardClick(e, "two")}
     >
       <DraftStatus status="scheduled" />
     </Card>
     <Card
       columns={3}
       image="https://i.imgur.com/8LA1oBL.png"
-      onClick={() => console.log("hi")}
+      onClick={e => handleCardClick(e, "three")}
     >
       <DraftStatus />
     </Card>

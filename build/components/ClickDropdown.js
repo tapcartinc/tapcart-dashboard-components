@@ -63,6 +63,11 @@ var ClickDropdown = function ClickDropdown(_ref) {
     setOpen(false);
   };
 
+  var handleOpen = function handleOpen(e) {
+    e.stopPropagation();
+    return setOpen(!open);
+  };
+
   for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     props[_key - 1] = arguments[_key];
   }
@@ -76,13 +81,15 @@ var ClickDropdown = function ClickDropdown(_ref) {
       position: "relative"
     }
   }, _react["default"].createElement(DropdownHeader, _extends({}, props, {
-    onClick: function onClick() {
-      return setOpen(!open);
+    onClick: function onClick(e) {
+      return handleOpen(e);
     }
   }), _react["default"].createElement(_Icon.Icon, {
     type: "dot-dot-dot",
     style: {
-      transform: "rotate(90deg)"
+      transform: "rotate(90deg)",
+      zIndex: 100,
+      marginLeft: 14
     },
     fill: "darkgray"
   })), open && _react["default"].createElement("div", {
@@ -112,7 +119,7 @@ exports.ClickDropdown = ClickDropdown;
 var DDWrapper = _styledComponents["default"].div.withConfig({
   displayName: "ClickDropdown__DDWrapper",
   componentId: "sc-18q6bvz-0"
-})(["position:relative;", ";", ";z-index:100;", ";"], function (props) {
+})(["position:relative;z-index:100;", ";", ";z-index:100;", ";"], function (props) {
   return props.position === "right" && "\n  position: absolute;\n  right: 10px";
 }, function (props) {
   return props.position === "left" && "\n  position: absolute;\n  left: 10px";
@@ -143,7 +150,7 @@ var ClickableDropdownItem = _styledComponents["default"].li.withConfig({
 var DropdownHeader = _styledComponents["default"].div.withConfig({
   displayName: "ClickDropdown__DropdownHeader",
   componentId: "sc-18q6bvz-3"
-})(["width:22px;&:hover{cursor:pointer;}", ";"], function (props) {
+})(["width:37px;height:100%;background:white;z-index:100;&:hover{cursor:pointer;}", ";"], function (props) {
   return props.style ? props.style : null;
 });
 
