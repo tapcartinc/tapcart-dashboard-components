@@ -71,7 +71,7 @@ var Input = function Input(_ref) {
     bounceStyle["top"] = "-3px";
   }
 
-  return _react["default"].createElement(StyledInputWrapper, null, label && _react["default"].createElement(StyledLabel, {
+  return _react["default"].createElement(StyledInputWrapper, props, label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
   }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement("input", _extends({
     className: "input-style",
@@ -108,11 +108,11 @@ Input.defaultProps = {
 var StyledInputWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledInputWrapper",
   componentId: "l316i3-0"
-})(["position:relative;width:100%;.input-style{border-radius:3px;", ";background-color:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", " !important;}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";}input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,textarea:-webkit-autofill,textarea:-webkit-autofill:hover,textarea:-webkit-autofill:focus,select:-webkit-autofill,select:-webkit-autofill:hover,select:-webkit-autofill:focus{border:1px solid ", ";-webkit-text-fill-color:#000000;-webkit-box-shadow:0 0 0px 0px transparent inset;transition:background-color 5000s ease-in-out 0s;}"], function (props) {
-  return props.errors ? "border: 1px solid ".concat(_variables.colors.red, " ") : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue, " ");
+})(["position:relative;width:100%;.input-style{border-radius:3px;", ";background-color:", " !important;padding:10px 20px;letter-spacing:0.25px;color:#000000 !important;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif !important;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif !important;font-weight:400;color:", " !important;}&:focus{outline:none;}font-size:14px !important;font-weight:400;transition:border 200ms ease;", ";}"], function (props) {
+  return props.errors ? "border: 1px solid ".concat(_variables.colors.red, " !important") : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue, " !important");
 }, _dashVariables.colorPicker.offwhite, _variables.colors.blue25, function (props) {
   return props.style ? props.style : null;
-}, _dashVariables.colorPicker.grayBlue);
+});
 
 var StyledCharCount = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledCharCount",
@@ -126,6 +126,6 @@ var StyledCharCount = _styledComponents["default"].div.withConfig({
 var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "Input__StyledLabel",
   componentId: "l316i3-2"
-})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], function (props) {
+})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;tex-transform:capitalize;color:", ";"], function (props) {
   return props.errors ? _variables.colors.red : "#000000";
 });
