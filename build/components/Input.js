@@ -71,7 +71,7 @@ var Input = function Input(_ref) {
     bounceStyle["top"] = "-3px";
   }
 
-  return _react["default"].createElement(StyledInputWrapper, props, label && _react["default"].createElement(StyledLabel, {
+  return _react["default"].createElement(StyledInputWrapper, null, label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
   }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement("input", _extends({
     className: "input-style",
@@ -108,16 +108,16 @@ Input.defaultProps = {
 var StyledInputWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledInputWrapper",
   componentId: "l316i3-0"
-})(["position:relative;width:100%;.input-style{border-radius:3px;", ";background-color:", " !important;padding:10px 20px;letter-spacing:0.25px;color:#000000 !important;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif !important;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif !important;font-weight:400;color:", " !important;}&:focus{outline:none;}font-size:14px !important;font-weight:400;transition:border 200ms ease;", ";}"], function (props) {
-  return props.errors ? "border: 1px solid ".concat(_variables.colors.red, " !important") : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue, " !important");
-}, _dashVariables.colorPicker.offwhite, _variables.colors.blue25, function (props) {
+})(["position:relative;width:100%;.input-style{border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";}"], function (props) {
+  return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
+}, _variables.colors.offwhite, _variables.colors.blue25, function (props) {
   return props.style ? props.style : null;
 });
 
 var StyledCharCount = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledCharCount",
   componentId: "l316i3-1"
-})(["position:absolute;text-align:right;right:16px;bottom:14px;color:", ";", " ", " font-size:13px;transition:top 0.1s ease 0s;span{transition:top 0.1s ease 0s;position:absolute;right:23px;", ";}"], _variables.colors.grayText, _dashVariables.sofiaPro.regular, function (props) {
+})(["position:absolute;text-align:right;right:16px;bottom:16px;color:", ";", " font-size:14px;transition:top 0.1s ease 0s;span{transition:top 0.1s ease 0s;position:absolute;right:20px;", ";}"], _variables.colors.grayText, function (props) {
   return props.charCountHit && "color: ".concat(_variables.colors.red, ";");
 }, function (props) {
   return props.bounce ? "top: -3px" : "top: 0px";
@@ -126,6 +126,6 @@ var StyledCharCount = _styledComponents["default"].div.withConfig({
 var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "Input__StyledLabel",
   componentId: "l316i3-2"
-})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;tex-transform:capitalize;color:", ";"], function (props) {
+})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], function (props) {
   return props.errors ? _variables.colors.red : "#000000";
 });

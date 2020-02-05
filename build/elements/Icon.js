@@ -5386,6 +5386,91 @@ function Icon(props) {
         points: "8 0 20 0 20 14"
       })))))))))));
 
+    case "toast-checkmark":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "37px",
+        height: "37px",
+        viewBox: "0 0 37 37",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Toast-Notifications",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Toast",
+        transform: "translate(-114.000000, -78.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Toast-1",
+        transform: "translate(86.000000, 66.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Group-Copy-3",
+        transform: "translate(30.000000, 14.000000)"
+      }, _react["default"].createElement("g", {
+        id: "check-small",
+        transform: "translate(7.200000, 10.080000)",
+        fill: "#FFFFFF",
+        fillRule: "nonzero"
+      }, _react["default"].createElement("path", {
+        d: "M7.2,14.4 C6.768,14.4 6.48,14.256 6.192,13.968 L0.432,8.208 C-0.144,7.632 -0.144,6.768 0.432,6.192 C1.008,5.616 1.872,5.616 2.448,6.192 L7.2,10.944 L17.712,0.432 C18.288,-0.144 19.152,-0.144 19.728,0.432 C20.304,1.008 20.304,1.872 19.728,2.448 L8.208,13.968 C7.92,14.256 7.632,14.4 7.2,14.4 Z",
+        id: "Shape"
+      })), _react["default"].createElement("circle", {
+        id: "Oval",
+        stroke: "#FFFFFF",
+        strokeWidth: "2.88",
+        cx: "16.56",
+        cy: "16.56",
+        r: "16.56"
+      }))))));
+
+    case "toast-alert":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "37px",
+        height: "37px",
+        viewBox: "0 0 37 37",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Toast-Notifications",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Toast",
+        transform: "translate(-114.000000, -162.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Toast-2",
+        transform: "translate(86.000000, 150.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Group-3-Copy-6",
+        transform: "translate(30.000000, 14.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Group-2",
+        transform: "translate(14.976000, 8.640000)"
+      }, _react["default"].createElement("path", {
+        d: "M1.8,0 L1.8,11.52",
+        id: "Line",
+        stroke: "#FFFFFF",
+        strokeWidth: "2.88",
+        "stroke-linecap": "round"
+      }), _react["default"].createElement("circle", {
+        id: "Oval-2",
+        fill: "#FFFFFF",
+        cx: "1.8",
+        cy: "15.84",
+        r: "1.44"
+      })), _react["default"].createElement("circle", {
+        id: "Oval",
+        stroke: "#FFFFFF",
+        strokeWidth: "2.88",
+        cx: "16.56",
+        cy: "16.56",
+        r: "16.56"
+      }))))));
+
     default:
       return _react["default"].createElement("span", null);
   }
