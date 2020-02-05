@@ -5455,7 +5455,7 @@ function Icon(props) {
         id: "Line",
         stroke: "#FFFFFF",
         strokeWidth: "2.88",
-        "stroke-linecap": "round"
+        strokeLinecap: "round"
       }), _react["default"].createElement("circle", {
         id: "Oval-2",
         fill: "#FFFFFF",
