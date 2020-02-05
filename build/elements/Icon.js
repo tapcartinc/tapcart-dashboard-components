@@ -1179,7 +1179,7 @@ function Icon(props) {
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        strokeWidth: "1.75"
+        strokeWidth: "2"
       }, _react["default"].createElement("path", {
         d: "M8,0 L0,8",
         id: "Path"
@@ -4514,7 +4514,7 @@ function Icon(props) {
         stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        strokeWidth: "1.75"
+        strokeWidth: "2"
       }, _react["default"].createElement("polyline", {
         id: "Path",
         points: "0 4 4 8 12 0"

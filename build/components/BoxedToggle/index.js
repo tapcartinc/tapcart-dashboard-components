@@ -163,12 +163,12 @@ function BoxedToggle(props) {
         onClick: function onClick() {
           return props.onChange(!props.toggleState);
         },
-        fill: props.toggleState ? "transparent" : "white",
+        fill: props.toggleState ? "white" : "transparent",
         style: {
           position: "absolute",
           zIndex: 1,
           left: 10,
-          marginTop: 11
+          marginTop: 12
         }
       }), _react["default"].createElement(_Icon.Icon, {
         type: "small-close",
@@ -179,8 +179,8 @@ function BoxedToggle(props) {
         style: {
           position: "absolute",
           zIndex: 1,
-          right: 10,
-          marginTop: 11
+          right: 11,
+          marginTop: 12
         }
       })));
 
