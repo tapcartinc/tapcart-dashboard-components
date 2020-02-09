@@ -1223,7 +1223,7 @@ function Icon(props) {
         },
         strokeLinecap: "round",
         strokeLinejoin: "round",
-        strokeWidth: "1.75"
+        strokeWidth: "2"
       }, _react["default"].createElement("polyline", {
         id: "Path",
         points: "0 4 4 8 12 0"

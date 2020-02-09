@@ -21,6 +21,8 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -69,7 +71,9 @@ var HoverDropdown = function HoverDropdown(_ref) {
       width: 150,
       position: "relative"
     }
-  }, _react["default"].createElement(DropdownHeader, props, title), open && _react["default"].createElement(ClickableDropdown, props, options.map(function (option) {
+  }, _react["default"].createElement(DropdownHeader, props, title), _react["default"].createElement(ClickableDropdown, _extends({}, props, {
+    open: open
+  }), options.map(function (option) {
     return _react["default"].createElement(ClickableDropdownItem, {
       onClick: option.onClick,
       key: option.title
@@ -82,7 +86,9 @@ exports.HoverDropdown = HoverDropdown;
 var ClickableDropdown = _styledComponents["default"].ul.withConfig({
   displayName: "HoverDropdown__ClickableDropdown",
   componentId: "bxg8ff-0"
-})(["margin:0px;list-style:none;background:white;width:150px;", ";padding:0px;color:", ";box-shadow:0 0 8px 0 rgba(0,0,0,0.08);position:absolute;z-index:1;", ";"], _variables.sofia.sofiaMedium, _variables.colors.blue, function (props) {
+})(["margin:0px;list-style:none;background:white;width:150px;", ";padding:0px;color:", ";box-shadow:0 0 8px 0 rgba(0,0,0,0.08);position:absolute;z-index:1;visibility:hidden;margin-top:-20px;opacity:0;transition:all 0.2s ease-in-out;", " ", ";"], _variables.sofia.sofiaMedium, _variables.colors.blue, function (props) {
+  return props.open && "visibility: visible; opacity: 1; margin-top: 0px;";
+}, function (props) {
   return props.style ? props.style : null;
 });
 
