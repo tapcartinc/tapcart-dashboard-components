@@ -2096,7 +2096,7 @@ function Icon(props) {
         points: "11.5789474 0 3.47368421 0 0 12.7368421 6.94736842 12.7368421 4.63157895 22 16.2105263 8.10526316 9.26315789 8.10526316"
       })))))));
 
-    case "popup":
+    case "megaphone":
       return _react["default"].createElement(SVG, _extends({
         width: "24px",
         height: "24px",
@@ -2924,78 +2924,6 @@ function Icon(props) {
         fillRule: "nonzero",
         cx: "5",
         cy: "8.33333333",
-        r: "1.66666667"
-      }))))))));
-
-    case "remove-image":
-      return _react["default"].createElement(SVG, _extends({
-        width: "23px",
-        height: "20px",
-        viewBox: "0 0 23 20",
-        version: "1.1",
-        xmlns: "http://www.w3.org/2000/SVG"
-      }, props), _react["default"].createElement("g", {
-        id: "Symbols",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        id: "Editor---collections",
-        transform: "translate(-16.000000, -204.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Block-editor"
-      }, _react["default"].createElement("g", {
-        id: "Remove-banner-image",
-        transform: "translate(16.000000, 204.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Icon-images"
-      }, _react["default"].createElement("rect", {
-        id: "Rectangle",
-        x: "0",
-        y: "1",
-        width: "20",
-        height: "20"
-      }), _react["default"].createElement("g", {
-        id: "img-stack",
-        transform: "translate(0.833333, 0.500000)"
-      }, _react["default"].createElement("rect", {
-        id: "Rectangle",
-        stroke: props.fill ? props.fill : _variables.colors.blue,
-        strokeWidth: "1.75",
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        x: "0",
-        y: "3",
-        width: "18.3333333",
-        height: "15"
-      }), _react["default"].createElement("circle", {
-        id: "Oval",
-        stroke: props.fill ? props.fill : _variables.colors.blue,
-        strokeWidth: "1.75",
-        fill: "#FFFFFF",
-        cx: "17.6666667",
-        cy: "4",
-        r: "3.5"
-      }), _react["default"].createElement("path", {
-        d: "M16.1666667,4 L19.1666667,4",
-        id: "Line",
-        stroke: props.fill ? props.fill : _variables.colors.blue,
-        strokeWidth: "1.75",
-        strokeLinecap: "round"
-      }), _react["default"].createElement("polygon", {
-        id: "Path",
-        stroke: props.fill ? props.fill : _variables.colors.blue,
-        strokeWidth: "1.75",
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        points: "4.16666667 14.6666667 11.6666667 8 15 14.6666667"
-      }), _react["default"].createElement("circle", {
-        id: "Oval",
-        fill: props.fill ? props.fill : _variables.colors.blue,
-        fillRule: "nonzero",
-        cx: "5",
-        cy: "7.16666667",
         r: "1.66666667"
       }))))))));
 
@@ -5081,7 +5009,7 @@ function Icon(props) {
         points: "129 13 125 17 121 13"
       }))))))));
 
-    case "preview-your-app":
+    case "preview-app-multicolored":
       return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "22px",
         height: "24px",
@@ -5411,14 +5339,14 @@ function Icon(props) {
       }, _react["default"].createElement("g", {
         id: "check-small",
         transform: "translate(7.200000, 10.080000)",
-        fill: "#FFFFFF",
+        fill: props.fill ? props.fill : "#FFFFFF",
         fillRule: "nonzero"
       }, _react["default"].createElement("path", {
         d: "M7.2,14.4 C6.768,14.4 6.48,14.256 6.192,13.968 L0.432,8.208 C-0.144,7.632 -0.144,6.768 0.432,6.192 C1.008,5.616 1.872,5.616 2.448,6.192 L7.2,10.944 L17.712,0.432 C18.288,-0.144 19.152,-0.144 19.728,0.432 C20.304,1.008 20.304,1.872 19.728,2.448 L8.208,13.968 C7.92,14.256 7.632,14.4 7.2,14.4 Z",
         id: "Shape"
       })), _react["default"].createElement("circle", {
         id: "Oval",
-        stroke: "#FFFFFF",
+        stroke: props.fill ? props.fill : "#FFFFFF",
         strokeWidth: "2.88",
         cx: "16.56",
         cy: "16.56",
@@ -5453,23 +5381,184 @@ function Icon(props) {
       }, _react["default"].createElement("path", {
         d: "M1.8,0 L1.8,11.52",
         id: "Line",
-        stroke: "#FFFFFF",
+        stroke: props.fill ? props.fill : "#FFFFFF",
         strokeWidth: "2.88",
         strokeLinecap: "round"
       }), _react["default"].createElement("circle", {
         id: "Oval-2",
-        fill: "#FFFFFF",
+        fill: props.fill ? props.fill : "#FFFFFF",
         cx: "1.8",
         cy: "15.84",
         r: "1.44"
       })), _react["default"].createElement("circle", {
         id: "Oval",
-        stroke: "#FFFFFF",
+        stroke: props.fill ? props.fill : "#FFFFFF",
         strokeWidth: "2.88",
         cx: "16.56",
         cy: "16.56",
         r: "16.56"
       }))))));
+
+    case "popup":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "23px",
+        height: "23px",
+        viewBox: "0 0 23 23",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "Symbols",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Engage-Segmented-Control---Send-Push",
+        transform: "translate(-506.000000, -21.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Toggle-design-(blocks)"
+      }, _react["default"].createElement("g", {
+        id: "Pop-ups",
+        transform: "translate(506.000000, 20.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-popup"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "party",
+        transform: "translate(1.000000, 2.000000)",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("polygon", {
+        id: "Path",
+        points: "0 21 5 6 15 16"
+      }), _react["default"].createElement("path", {
+        d: "M8,4 L9,1",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M17,13 L20,12",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M15,4 C13.8954305,4 13,3.1045695 13,2 C13,0.8954305 13.8954305,0 15,0 C16.1045695,0 17,0.8954305 17,2 C17,2.53043298 16.7892863,3.03914081 16.4142136,3.41421356 C16.0391408,3.78928632 15.530433,4 15,4 Z",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M21,2 C21,5.3137085 18.3137085,8 15,8",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M2.762,12.714 L4.972,19.343",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M5.786,6.786 L9.471,17.843",
+        id: "Path"
+      }))))))));
+
+    case "small-drag":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "7px",
+        height: "10px",
+        viewBox: "0 0 7 10",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Design-/-Menu",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.1-Edit-menu-item",
+        transform: "translate(-39.000000, -1007.000000)",
+        fill: props.fill ? props.fill : _dashVariables.colorPicker.blue
+      }, _react["default"].createElement("g", {
+        id: "Collections",
+        transform: "translate(38.000000, 1000.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-drag",
+        transform: "translate(0.000000, 7.000000)"
+      }, _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "1.97959184",
+        cy: "1",
+        r: "1"
+      }), _react["default"].createElement("circle", {
+        id: "Oval-Copy",
+        cx: "6.55102041",
+        cy: "1",
+        r: "1"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "1.97959184",
+        cy: "5",
+        r: "1"
+      }), _react["default"].createElement("circle", {
+        id: "Oval-Copy",
+        cx: "6.55102041",
+        cy: "5",
+        r: "1"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "1.97959184",
+        cy: "9",
+        r: "1"
+      }), _react["default"].createElement("circle", {
+        id: "Oval-Copy",
+        cx: "6.55102041",
+        cy: "9",
+        r: "1"
+      }))))));
+
+    case "video":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "24px",
+        height: "22px",
+        viewBox: "0 0 24 22",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Engage-/-Send-push",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.2-Design-Product-Selected",
+        transform: "translate(-1023.000000, -534.000000)"
+      }, _react["default"].createElement("g", {
+        id: "1-Design-your-push",
+        transform: "translate(551.000000, 400.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Type",
+        transform: "translate(61.000000, 69.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Video",
+        transform: "translate(363.000000, 30.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-video",
+        transform: "translate(48.000000, 34.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "video-player",
+        transform: "translate(1.000000, 2.000000)",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M20,0 C21.1045695,0 22,0.8954305 22,2 L22,18 C22,19.1045695 21.1045695,20 20,20 L2,20 C0.8954305,20 0,19.1045695 0,18 L0,2 C0,0.8954305 0.8954305,0 2,0 L20,0 Z",
+        id: "Path"
+      }), _react["default"].createElement("polygon", {
+        id: "Path",
+        points: "9 6 15 10 9 14"
+      })))))))));
 
     default:
       return _react["default"].createElement("span", null);
@@ -5480,7 +5569,7 @@ var SVG = _styledComponents["default"].svg.withConfig({
   displayName: "Icon__SVG",
   componentId: "sc-1x2dwva-0"
 })(["", " margin-left:", ";margin-right:", ";", ";"], function (props) {
-  return props.circleIcon && "background: ".concat(props.backgroundColor ? (0, _functions.getColors)(props.backgroundColor) : _variables.colors.blue25, "\n    border-radius: 50%;\n    padding: 5px;\n    overflow: visible;\n    -webkit-transform: scale(1.5);\n    -ms-transform: scale(1.5);\n    transform: scale(1.5);\n    margin: 0 auto;\n    height: 25px;\n    width: 25px;");
+  return props.circleIcon && "background: ".concat(_dashVariables.colorPicker.dullBlue, ";\n  border-radius: 50%;\n  padding: 5px;\n  overflow: visible;\n  -webkit-transform: scale(1.5);\n  -ms-transform: scale(1.5);\n  transform: scale(1.5);\n  margin: 0 auto;\n  height: 25px;\n  width: 25px;");
 }, function (props) {
   return props.iconRight ? "10px" : "0px";
 }, function (props) {

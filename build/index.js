@@ -56,7 +56,8 @@ var _exportNames = {
   onClickTransition: true,
   hoverWithBorder: true,
   getColors: true,
-  ThemeProvider: true
+  ThemeProvider: true,
+  useWindowSize: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -376,6 +377,12 @@ Object.defineProperty(exports, "ThemeProvider", {
     return _ThemeProvider.ThemeProvider;
   }
 });
+Object.defineProperty(exports, "useWindowSize", {
+  enumerable: true,
+  get: function get() {
+    return _useWindowSize.useWindowSize;
+  }
+});
 
 var _Icon = require("./elements/Icon");
 
@@ -476,5 +483,7 @@ Object.keys(_layout).forEach(function (key) {
     }
   });
 });
+
+var _useWindowSize = require("./hooks/useWindowSize");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

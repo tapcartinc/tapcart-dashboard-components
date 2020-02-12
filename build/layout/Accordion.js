@@ -75,24 +75,35 @@ function (_Component) {
           children = _this$props.children,
           toggleIcons = _this$props.toggleIcons,
           boxShadow = _this$props.boxShadow,
-          circleIcons = _this$props.circleIcons,
           className = _this$props.className,
           style = _this$props.style,
           steps = _this$props.steps,
+          type = _this$props.type,
+          header = _this$props.header,
+          numerical = _this$props.numerical,
+          stateValues = _this$props.stateValues,
           openSections = this.state.openSections;
-      return _react["default"].createElement("div", null, children.map(function (child, index) {
+      return _react["default"].createElement("div", {
+        style: {
+          marginTop: 60
+        }
+      }, children.map(function (child, index) {
         return _react["default"].createElement(_AccordionSection["default"], {
+          numerical: numerical,
           key: child.props.label,
           isOpen: !!openSections[child.props.label],
           label: child.props.label,
+          stepComplete: child.props.stepComplete,
           index: index,
-          circleIcons: circleIcons,
           onClick: onClick,
           toggleIcons: toggleIcons,
           boxShadow: boxShadow,
           className: className,
           style: style,
-          steps: steps
+          steps: steps,
+          type: type,
+          header: header,
+          stateValues: stateValues
         }, child.props.children);
       }));
     }

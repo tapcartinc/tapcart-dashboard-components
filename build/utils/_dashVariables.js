@@ -40,6 +40,7 @@ var colorPicker = {
   androidGreen: "#A3C73B",
   red: "#DF4F4E",
   yellow: "#F6B343",
-  gold: "#d5a83e"
+  gold: "#d5a83e",
+  dullBlue: "#d0ddec"
 };
 exports.colorPicker = colorPicker;

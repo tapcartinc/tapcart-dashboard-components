@@ -46,7 +46,7 @@ DraftStatus.defaultProps = {
 var StyledDraftStatusWrapper = _styledComponents["default"].div.withConfig({
   displayName: "DraftStatus__StyledDraftStatusWrapper",
   componentId: "td0u63-0"
-})(["display:flex;flex-direction:row;color:", ";align-content:center;justify-content:flex-start;", " ", ""], _dashVariables.colorPicker.gray, function (props) {
+})(["display:flex;flex-direction:row;color:", ";align-content:center;justify-content:flex-start;align-items:center;", " ", ""], _dashVariables.colorPicker.gray, function (props) {
   return props.status === "live" && "color: ".concat(_dashVariables.colorPicker.green100, ";");
 }, function (props) {
   return props.status === "scheduled" && "color: ".concat(_dashVariables.colorPicker.yellow, ";");
@@ -55,7 +55,7 @@ var StyledDraftStatusWrapper = _styledComponents["default"].div.withConfig({
 var StyledStatusCircle = _styledComponents["default"].div.withConfig({
   displayName: "DraftStatus__StyledStatusCircle",
   componentId: "td0u63-1"
-})(["background:", ";height:7px;width:7px;border-radius:50px;margin-right:8px;", " ", " ", ";"], _dashVariables.colorPicker.gray, function (props) {
+})(["background:", ";height:8px;width:8px;border-radius:50px;margin-right:8px;", " ", " ", ";"], _dashVariables.colorPicker.gray, function (props) {
   return props.status === "live" && "background: ".concat(_dashVariables.colorPicker.green100, ";");
 }, function (props) {
   return props.status === "scheduled" && "background: ".concat(_dashVariables.colorPicker.yellow, ";");
@@ -66,4 +66,4 @@ var StyledStatusCircle = _styledComponents["default"].div.withConfig({
 var StyledStatusText = _styledComponents["default"].span.withConfig({
   displayName: "DraftStatus__StyledStatusText",
   componentId: "td0u63-2"
-})(["font-size:10px;text-transform:uppercase;letter-spacing:0.83px;", ""], _dashVariables.circularStd.medium);
+})(["font-size:11px;text-transform:uppercase;letter-spacing:0.83px;line-height:.8;", ""], _dashVariables.circularStd.medium);

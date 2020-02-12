@@ -30,7 +30,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var CardWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardWrapper",
   componentId: "q4rj6f-0"
-})(["box-shadow:", ";position:relative;margin:10px;height:300px;width:350px;", ";", ";", ";"], _variables.boxShadow.medium, function (props) {
+})(["box-shadow:", ";position:relative;height:300px;width:100%;margin:15px 0;", ";", ";", ";"], _variables.boxShadow.medium, function (props) {
   return props.columns && "\n  width: ".concat(100 / props.columns - 1.9, "%\n  ");
 }, function (props) {
   return props.customWidth && "width: ".concat(customWidth);
@@ -41,14 +41,14 @@ var CardWrapper = _styledComponents["default"].div.withConfig({
 var CardStyle = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardStyle",
   componentId: "q4rj6f-1"
-})(["border-radius:3px;display:flex;flex-direction:column;align-items:center;position:relative;height:100%;width:100%;transition:0.2s ease all;&:hover{box-shadow:0 0 0 2px ", ";cursor:pointer;}position:relative;", ";"], _dashVariables.colorPicker.green100, function (props) {
+})(["border-radius:3px;display:flex;flex-direction:column;align-items:center;position:relative;height:100%;width:100%;transition:0.2s ease all;cursor:pointer;&:hover{}", ";"], function (props) {
   return props.style ? props.style : null;
 });
 
 var CardImage = _styledComponents["default"].img.withConfig({
   displayName: "Card__CardImage",
   componentId: "q4rj6f-2"
-})(["width:100%;object-fit:cover;height:78%;border-radius:3px 3px 0px 0px;"]);
+})(["width:100%;object-fit:cover;object-position:top;height:78%;border-radius:3px 3px 0px 0px;"]);
 
 var CardContent = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardContent",

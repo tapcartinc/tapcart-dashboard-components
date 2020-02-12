@@ -3,6 +3,7 @@ import { Icon } from "../../lib/elements/Icon";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import styled from "styled-components";
 import { sofia } from "../../lib/utils/_variables";
+import { colorPicker } from "../../lib";
 
 const StyledIcons = styled.ul`
   display: flex;
@@ -14,11 +15,14 @@ const StyledIcon = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60px;
+  width: 65px;
   margin: 25px;
   text-align: center;
   line-height: 14px;
   font-size: 12px;
+  ${props =>
+    props.whiteIcon &&
+    `background: ${colorPicker.blue}; border-radius: 3px; color: white; padding: 10px;`}
 
   svg {
     margin-bottom: 10px;
@@ -376,6 +380,94 @@ export const icon = () => {
       <StyledIcon>
         <Icon type="go-live" />
         go-live
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="megaphone" />
+        megaphone
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="image-fit" />
+        image-fit
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="clock" />
+        clock
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="blocks" />
+        blocks
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="theme" />
+        theme
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="menu-icon" />
+        menu-icon
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="checkmark-small" />
+        checkmark-small
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="add-section" />
+        add-section
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="double-dot-dot-dot" />
+        double-dot-dot-dot
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="stats" />
+        stats
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="dropdown-arrow" />
+        dropdown-arrow
+      </StyledIcon>
+      <StyledIcon whiteIcon>
+        <Icon type="preview-app-multicolored" />
+        preview-app-multicolored
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="duplicate" />
+        duplicate
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="blank-draft" />
+        blank-draft
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="current-draft" />
+        current-draft
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="upload-image" />
+        upload-image
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="collections-icon" />
+        collections-icon
+      </StyledIcon>
+      <StyledIcon whiteIcon>
+        <Icon type="toast-checkmark" />
+        toast-checkmark
+      </StyledIcon>
+      <StyledIcon whiteIcon>
+        <Icon type="toast-alert" />
+        toast-alert
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="small-drag" />
+        small-drag
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="video" />
+        video
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="text-icon" />
+        text-icon
       </StyledIcon>
     </StyledIcons>
   );
