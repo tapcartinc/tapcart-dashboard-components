@@ -25,8 +25,10 @@ function OptionBoxes(props) {
   var options = props.options,
       clickOption = props.clickOption,
       selectedOption = props.selectedOption;
-  return _react["default"].createElement(OptionBoxesWrapper, props, options.map(function (option) {
+  return _react["default"].createElement(OptionBoxesWrapper, props, options.map(function (option, index) {
     return _react["default"].createElement(Option, _extends({}, props, {
+      first: index === 0,
+      last: index === options.length - 1,
       selectedOption: selectedOption,
       currentOption: option.value,
       key: option.value,
@@ -53,8 +55,12 @@ var OptionBoxesWrapper = _styledComponents["default"].ul.withConfig({
 var Option = _styledComponents["default"].li.withConfig({
   displayName: "OptionBoxes__Option",
   componentId: "glmpcy-1"
-})(["height:100px;width:", ";font-size:15px;box-shadow:0px 0px 0px 1px ", ";display:flex;flex-direction:column;background:", ";justify-items:center;align-items:center;justify-content:center;color:", ";&:hover{cursor:pointer;}"], function (props) {
+})(["height:100px;width:", ";font-size:15px;margin-right:-1px;border:1px solid ", ";display:flex;flex-direction:column;background:", ";justify-items:center;align-items:center;justify-content:center;color:", ";", ";", ";&:hover{cursor:pointer;}"], function (props) {
   return props.size ? props.size : "33.333%";
-}, _variables.colors.gray25, function (props) {
-  return props.selectedOption && props.selectedOption.value === props.currentOption ? _dashVariables.colorPicker.lightBlue : "transparent";
-}, _variables.colors.black);
+}, _dashVariables.colorPicker.grayBlue, function (props) {
+  return props.selectedOption && props.selectedOption.value === props.currentOption ? _dashVariables.colorPicker.lightBlue : "white";
+}, _variables.colors.black, function (props) {
+  return props.first && "border-radius: 3px 0px 0px 3px";
+}, function (props) {
+  return props.last && "border-radius: 0px 3px 3px 0px";
+});
