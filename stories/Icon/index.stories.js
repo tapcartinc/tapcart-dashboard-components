@@ -469,6 +469,10 @@ export const icon = () => {
         <Icon type="text-icon" />
         text-icon
       </StyledIcon>
+      <StyledIcon>
+        <Icon type="users" />
+        users
+      </StyledIcon>
     </StyledIcons>
   );
 };
