@@ -704,9 +704,7 @@ function Icon(props) {
       }), _react["default"].createElement("g", {
         id: "small-down",
         transform: "translate(10.000000, 8.000000)",
-        style: {
-          stroke: props.fill ? props.fill : _variables.colors.blue
-        },
+        stroke: props.active ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray50,
         strokeLinecap: "round",
         strokeLinejoin: "round",
         strokeWidth: "1.75"
@@ -5606,6 +5604,288 @@ function Icon(props) {
         d: "M7.5,10.8333333 L7.5,10.8333333 C5.19916667,10.8333333 3.33333333,8.9675 3.33333333,6.66666667 L3.33333333,5 C3.33333333,2.69916667 5.19916667,0.833333333 7.5,0.833333333 L7.5,0.833333333 C9.80083333,0.833333333 11.6666667,2.69916667 11.6666667,5 L11.6666667,6.66666667 C11.6666667,8.9675 9.80083333,10.8333333 7.5,10.8333333 Z",
         id: "Path"
       })))))));
+
+    case "app-settings":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Settings",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-29.000000, -293.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Menu",
+        transform: "translate(1.000000, 276.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Menu-app-settings-(selected)"
+      }, _react["default"].createElement("g", {
+        id: "App-settings",
+        transform: "translate(28.000000, 17.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-app-settings"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "p-settings",
+        transform: "translate(1.000000, 1.000000)",
+        stroke: props.active ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray50,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M9,22 L2,22 C0.8954305,22 0,21.1045695 0,20 L0,2 C0,0.8954305 0.8954305,0 2,0 L14,0 C15.1045695,0 16,0.8954305 16,2 L16,7",
+        id: "Path"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "17",
+        cy: "17",
+        r: "3"
+      }), _react["default"].createElement("path", {
+        d: "M17,14 L17,12",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M19.121,14.879 L20.536,13.464",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M20,17 L22,17",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M19.121,19.121 L20.536,20.536",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M17,20 L17,22",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M14.879,19.121 L13.464,20.536",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M14,17 L12,17",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M14.879,14.879 L13.464,13.464",
+        id: "Path"
+      })))))))));
+
+    case "customizations":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "24px",
+        height: "23px",
+        viewBox: "0 0 24 23",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Settings",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-29.000000, -374.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Menu",
+        transform: "translate(1.000000, 276.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Customizations",
+        transform: "translate(28.000000, 97.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-customizations"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle-Copy-4",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "palette",
+        transform: "translate(1.000000, 2.000000)",
+        stroke: props.active ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray50,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M0,10 C0,6.3 1.8,3 4.7,1 C5.7,0.3 7.4,0.1 8,1 C9,2.2 7.2,4 8,5 C10,7.4 14.1,2.7 19,5 C22.5,6.8 22,11.3 21.6,13 C20.3,17.6 16,21 11,21 C4.9,21 0,16.1 0,10 Z",
+        id: "Path"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "16",
+        cy: "10",
+        r: "2"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "4",
+        cy: "10",
+        r: "1"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "6.5",
+        cy: "15",
+        r: "1"
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "12",
+        cy: "17",
+        r: "1"
+      }))))))));
+
+    case "account-settings":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "22px",
+        height: "24px",
+        viewBox: "0 0 22 24",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Settings",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-30.000000, -453.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Menu",
+        transform: "translate(1.000000, 276.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Account-settings",
+        transform: "translate(28.000000, 177.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-account-billing"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle-Copy-5",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "single-05",
+        transform: "translate(2.000000, 1.000000)",
+        stroke: props.active ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray50,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M6.677,13.997 L0.971,17.418 C0.369,17.779 0,18.43 0,19.132 L0,22 L20,22 L20,19.132 C20,18.429 19.631,17.778 19.029,17.417 L13.323,13.996",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M10,15 L10,15 C6.686,15 4,12.314 4,9 L4,6 C4,2.686 6.686,0 10,0 L10,0 C13.314,0 16,2.686 16,6 L16,9 C16,12.314 13.314,15 10,15 Z",
+        id: "Path"
+      }))))))));
+
+    case "listing":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Settings",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-29.000000, -533.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Menu",
+        transform: "translate(1.000000, 276.000000)"
+      }, _react["default"].createElement("g", {
+        id: "App-store-listing",
+        transform: "translate(28.000000, 257.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-app-listing"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle-Copy-6",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "cheque-3",
+        transform: "translate(1.000000, 1.000000)",
+        stroke: props.active ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray50,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M0,19 L0,22 L12,22 L12,19.417 C12,18.036 13.119,17 14.5,17 L2,17 C0.895,17 0,17.895 0,19 Z",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M14.5,17 C15.794,17 17,17.924 17,19.5 C17,20.881 18.119,22 19.5,22 L19.5,22 C20.881,22 22,20.881 22,19.5 L22,0 L6,0 L6,17",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M11,6 L17,6",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M11,11 L17,11",
+        id: "Path"
+      }))))))));
+
+    case "upload-cloud":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "24px",
+        height: "17px",
+        viewBox: "0 0 24 17",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Settings",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.1-Customizations",
+        transform: "translate(-590.000000, -490.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Popups-customizations",
+        transform: "translate(410.000000, 287.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Push",
+        transform: "translate(0.000000, 34.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Media",
+        transform: "translate(24.000000, 77.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Group",
+        transform: "translate(67.000000, 89.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-download-cloud",
+        transform: "translate(89.000000, 0.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "cloud-download-95",
+        transform: "translate(1.000000, 3.000000)",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M11,6.998 L11,14.998",
+        id: "Path"
+      }), _react["default"].createElement("polyline", {
+        id: "Path",
+        transform: "translate(11.000000, 7.498000) scale(1, -1) translate(-11.000000, -7.498000) ",
+        points: "14 5.998 11 8.998 8 5.998"
+      }), _react["default"].createElement("path", {
+        d: "M16,16 L18,16 C20.209,16 22,14.207 22,11.998 C22,9.801 20.218,7.985 17.975,8.001 C17.718,4.092 14.474,0.998 10.5,0.998 C6.481,0.998 3.21,4.162 3.018,8.134 C1.287,8.573 0,10.129 0,11.998 C0,14.207 1.791,16 4,16 L6,16",
+        id: "Path"
+      }))))))))));
 
     default:
       return _react["default"].createElement("span", null);

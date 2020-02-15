@@ -473,6 +473,26 @@ export const icon = () => {
         <Icon type="users" />
         users
       </StyledIcon>
+      <StyledIcon>
+        <Icon type="app-settings" />
+        app-settings
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="customizations" />
+        customizations
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="listing" />
+        listing
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="account-settings" />
+        account-settings
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="upload-cloud" />
+        upload-cloud
+      </StyledIcon>
     </StyledIcons>
   );
 };

@@ -115,9 +115,10 @@ function (_Component) {
             return _react["default"].createElement(SecondaryControlStyle, null, _react["default"].createElement(SegmentedControlTabs, {
               style: {
                 display: "flex",
-                width: "100%",
+                width: props.width ? props.width : "100%",
                 boxShadow: "inset 0 0 0 1px ".concat(_variables.colors.bluegray),
                 borderRadius: "3px",
+                minHeight: 42,
                 sofiaRegular: sofiaRegular
               }
             }, Object.keys(props.items).map(function (key) {
@@ -127,7 +128,7 @@ function (_Component) {
                 current: props.current
               }, props.hasIcons && _react["default"].createElement("div", null, _react["default"].createElement(_Icon.Icon, {
                 type: props.icons[key],
-                fill: props.current === key ? "blue" : "lightblue",
+                fill: props.current === key ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.grayBlue,
                 style: {
                   marginRight: 10
                 }
