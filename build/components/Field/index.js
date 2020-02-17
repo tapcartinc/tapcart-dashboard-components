@@ -50,6 +50,7 @@ var Field = function Field(props) {
     toggleState: toggleState,
     onChange: setToggleState
   })), _react["default"].createElement(StyledChildren, {
+    toggleState: toggleState,
     hasToggle: hasToggle,
     fieldFlow: fieldFlow
   }, props.children));
@@ -71,10 +72,16 @@ var StyledField = _styledComponents["default"].div.withConfig({
 var StyledChildren = _styledComponents["default"].div.withConfig({
   displayName: "Field__StyledChildren",
   componentId: "sc-1c9u2up-1"
-})(["padding:19px 24px;display:flex;", " ", ""], function (props) {
-  return props.fieldFlow === "vertical" && "width: 100%; padding: 0px 24px 19px 24px;";
+})(["padding:19px 24px;", ";", ";", ";", ";", ";"], function (props) {
+  return props.fieldFlow === "vertical" && "width: 100%; padding: 0px 24px 19px 24px";
 }, function (props) {
-  return props.hasToggle && "width: 100%;";
+  return props.hasToggle && "width: 100%; padding-top: 0px";
+}, function (props) {
+  return !props.hasToggle && "   display: flex";
+}, function (props) {
+  return props.hasToggle && !props.toggleState && " display: none";
+}, function (props) {
+  return props.hasToggle && props.toggleState && "   display: flex";
 });
 
 var StyledFieldInfo = _styledComponents["default"].div.withConfig({

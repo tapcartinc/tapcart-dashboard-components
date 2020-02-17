@@ -186,6 +186,7 @@ export const fields = props => {
       <Fields sectionHeader="Product Detail Page">
         <Field
           hasToggle
+          lastField
           toggleState={state.toggleState}
           setToggleState={() =>
             setState(prevState => ({
