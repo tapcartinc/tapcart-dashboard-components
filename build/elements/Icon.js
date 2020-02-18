@@ -5887,6 +5887,100 @@ function Icon(props) {
         id: "Path"
       }))))))))));
 
+    case "google":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Settings",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-1050.000000, -1738.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Checkout-settings",
+        transform: "translate(408.000000, 1072.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Payment-methods",
+        transform: "translate(0.000000, 612.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Payment-method-selector"
+      }, _react["default"].createElement("g", {
+        transform: "translate(472.000000, 20.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-google",
+        transform: "translate(170.000000, 34.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("path", {
+        d: "M23.5150634,9.8181494 L12.0600634,9.8181494 L12.0600634,14.7271494 L18.5520634,14.7271494 C17.5150634,18.0001494 14.9520634,19.0911494 12.0080634,19.0911494 C8.8734916,19.0949505 6.10832926,17.04023 5.20755788,14.03787 C4.30678651,11.03551 5.48415236,7.79794782 8.10311408,6.07556741 C10.7220758,4.35318701 14.1611735,4.55469625 16.5610634,6.5711494 L20.1280634,3.1711494 C16.1765806,-0.466163685 10.2894583,-1.03498549 5.71468961,1.77850953 C1.13992095,4.59200456 -1.00833863,10.1026078 0.455130455,15.270056 C1.91859954,20.4375042 6.63737883,24.0032986 12.0080634,24.0001515 C18.6250634,24.0001515 24.6080634,19.6361494 23.5150634,9.8181494 Z",
+        id: "Path",
+        fill: "#393CB4",
+        fillRule: "nonzero"
+      })))))))));
+
+    case "paypal":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "22px",
+        height: "24px",
+        viewBox: "0 0 22 24",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Settings",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-1293.000000, -1738.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Checkout-settings",
+        transform: "translate(408.000000, 1072.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Payment-methods",
+        transform: "translate(0.000000, 612.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Payment-method-selector"
+      }, _react["default"].createElement("g", {
+        transform: "translate(472.000000, 20.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-paypal",
+        transform: "translate(409.000000, 34.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "logo-paypal",
+        transform: "translate(4.000000, 0.000000)",
+        fill: "#393CB4",
+        fillRule: "nonzero"
+      }, _react["default"].createElement("path", {
+        d: "M19.16475,6.06777 C19.16329,6.07766 19.16293,6.07993 19.16029,6.09759 C19.16029,6.09759 19.16244,6.08321 19.16475,6.06777 Z",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M19.16475,6.06777 C19.1716,6.02194 19.1688,6.04054 19.16475,6.06777 L19.16475,6.06777 Z",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M18.14857,1.80966 C17.03726,0.54304 15.0284,0 12.45856,0 L5.00006,0 C4.47429,0 4.02748,0.38238 3.94519,0.90086 L0.83961,20.59705 C0.7779,20.98538 1.07863,21.33725 1.47227,21.33725 L6.07685,21.33725 L7.2333,14.00221 L7.19744,14.23191 C7.27977,13.71343 7.72321,13.33105 8.24834,13.33105 L10.43645,13.33105 C14.73495,13.33105 18.10075,11.58508 19.08394,6.53438 C19.11311,6.38503 19.16028,6.09758 19.16028,6.09758 C19.43915,4.22865 19.15831,2.96016 18.14857,1.80966 Z",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M20.32578,7.05404 C19.25664,12.02654 15.84648,14.65853 10.4365,14.65853 L8.47408,14.65853 L7.0107,24 L10.19359,24 C10.65299,24 11.044,23.66543 11.11568,23.21198 L11.15352,23.01417 L11.88509,18.37774 L11.93225,18.1215 C12.00393,17.66805 12.39494,17.33349 12.85434,17.33349 L13.43522,17.33349 C17.19535,17.33349 20.13958,15.80592 20.99996,11.38793 C21.34476,9.61549 21.17952,8.12845 20.32578,7.05404 Z",
+        id: "Path"
+      }))))))))));
+
     default:
       return _react["default"].createElement("span", null);
   }

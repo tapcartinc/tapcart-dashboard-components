@@ -21,6 +21,7 @@ var _exportNames = {
   SegmentedControl: true,
   SearchBar: true,
   Input: true,
+  Textarea: true,
   OptionBoxes: true,
   ClickDropdown: true,
   HoverDropdown: true,
@@ -162,6 +163,12 @@ Object.defineProperty(exports, "Input", {
   enumerable: true,
   get: function get() {
     return _Input.Input;
+  }
+});
+Object.defineProperty(exports, "Textarea", {
+  enumerable: true,
+  get: function get() {
+    return _Textarea.Textarea;
   }
 });
 Object.defineProperty(exports, "OptionBoxes", {
@@ -430,6 +437,8 @@ var _SegmentedControl = require("./components/SegmentedControl");
 var _SearchBar = require("./components/SearchBar");
 
 var _Input = require("./components/Input");
+
+var _Textarea = require("./components/Textarea");
 
 var _OptionBoxes = require("./components/OptionBoxes");
 

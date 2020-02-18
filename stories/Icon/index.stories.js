@@ -493,6 +493,10 @@ export const icon = () => {
         <Icon type="upload-cloud" />
         upload-cloud
       </StyledIcon>
+      <StyledIcon>
+        <Icon type="google" />
+        google
+      </StyledIcon>
     </StyledIcons>
   );
 };

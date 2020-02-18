@@ -34,13 +34,23 @@ var Field = function Field(props) {
       fieldFlow = props.fieldFlow,
       hasToggle = props.hasToggle,
       toggleState = props.toggleState,
-      setToggleState = props.setToggleState;
+      setToggleState = props.setToggleState,
+      errors = props.errors;
   return _react["default"].createElement(StyledField, _extends({
     lastField: lastField,
-    fieldFlow: fieldFlow
+    fieldFlow: fieldFlow,
+    hasChildren: props.children
   }, props, {
     hasToggle: hasToggle
-  }), label && _react["default"].createElement(StyledFieldInfo, null, _react["default"].createElement(StyledLabel, null, label), _react["default"].createElement(StyledDescription, null, description)), hasToggle && _react["default"].createElement("div", {
+  }), label && _react["default"].createElement(StyledFieldInfo, null, _react["default"].createElement(StyledLabel, null, label), _react["default"].createElement(StyledDescription, {
+    errors: errors
+  }, description), errors && errors.length > 0 && _react["default"].createElement(StyledErrors, {
+    errors: errors
+  }, errors.map(function (error) {
+    return _react["default"].createElement("span", {
+      key: error
+    }, error);
+  }))), hasToggle && _react["default"].createElement("div", {
     style: {
       padding: "19px 24px"
     }
@@ -49,7 +59,7 @@ var Field = function Field(props) {
     id: "toggle",
     toggleState: toggleState,
     onChange: setToggleState
-  })), _react["default"].createElement(StyledChildren, {
+  })), props.children && _react["default"].createElement(StyledChildren, {
     toggleState: toggleState,
     hasToggle: hasToggle,
     fieldFlow: fieldFlow
@@ -61,10 +71,12 @@ exports.Field = Field;
 var StyledField = _styledComponents["default"].div.withConfig({
   displayName: "Field__StyledField",
   componentId: "sc-1c9u2up-0"
-})(["background:white;min-height:78px;display:flex;", ";", " ", ""], function (props) {
+})(["background:white;min-height:78px;display:flex;", ";", " ", " ", ""], function (props) {
   return !props.lastField && "border-bottom: 1px solid ".concat(_dashVariables.colorPicker.gray25);
 }, function (props) {
   return props.fieldFlow === "horizontal" && "flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap;";
+}, function (props) {
+  return !props.hasChildren && "flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap;";
 }, function (props) {
   return props.fieldFlow === "vertical" && "flex-direction: column; align-items: flex-start; justify-content: flex-start;";
 });
@@ -72,16 +84,16 @@ var StyledField = _styledComponents["default"].div.withConfig({
 var StyledChildren = _styledComponents["default"].div.withConfig({
   displayName: "Field__StyledChildren",
   componentId: "sc-1c9u2up-1"
-})(["padding:19px 24px;", ";", ";", ";", ";", ";"], function (props) {
+})(["padding:19px 24px;padding-left:5px;", ";", ";", ";", ";", ";"], function (props) {
   return props.fieldFlow === "vertical" && "width: 100%; padding: 0px 24px 19px 24px";
 }, function (props) {
-  return props.hasToggle && "width: 100%; padding-top: 0px";
+  return props.hasToggle && "padding-left: 19px; width: 100%; padding-top: 0px";
 }, function (props) {
-  return !props.hasToggle && "   display: flex";
+  return !props.hasToggle && "display: flex";
 }, function (props) {
-  return props.hasToggle && !props.toggleState && " display: none";
+  return props.hasToggle && !props.toggleState && "display: none";
 }, function (props) {
-  return props.hasToggle && props.toggleState && "   display: flex";
+  return props.hasToggle && props.toggleState && "display: flex";
 });
 
 var StyledFieldInfo = _styledComponents["default"].div.withConfig({
@@ -94,7 +106,14 @@ var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig
   componentId: "sc-1c9u2up-3"
 })(["line-height:20px;margin-top:0px;margin-bottom:0px;"]);
 
-var StyledDescription = _styledComponents["default"].p.withConfig({
+var StyledDescription = _styledComponents["default"].div.withConfig({
   displayName: "Field__StyledDescription",
   componentId: "sc-1c9u2up-4"
-})(["color:", ";font-size:13px;line-height:18px;", ""], _dashVariables.colorPicker.gray, _dashVariables.sofiaPro.regular);
+})(["color:", ";font-size:13px;line-height:18px;", " ", ";"], _dashVariables.colorPicker.gray, _dashVariables.sofiaPro.regular, function (props) {
+  return props.errors && props.errors.length > 0 && "display: none";
+});
+
+var StyledErrors = _styledComponents["default"].div.withConfig({
+  displayName: "Field__StyledErrors",
+  componentId: "sc-1c9u2up-5"
+})(["color:", ";font-size:13px;line-height:18px;", " span{display:block;}"], _dashVariables.colorPicker.red, _dashVariables.sofiaPro.regular);

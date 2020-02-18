@@ -54,12 +54,20 @@ export const fields = props => {
     <div style={{ padding: 20 }}>
       <Fields sectionHeader="Popups Customization">
         <Field
-          fieldFlow="horizontal"
+          hasToggle
+          setToggleState={() =>
+            setState(prevState => ({
+              ...prevState,
+              toggleState: !state.toggleState
+            }))
+          }
+          toggleState={state.toggleState}
+          // fieldFlow="horizontal"
           label="Display sold out products"
           description="This will hide or show sold out products in your mobile app"
           {...props}
         >
-          <BoxedToggle
+          {/* <BoxedToggle
             type="basic"
             id="toggle"
             toggleState={state.toggleState}
@@ -69,7 +77,7 @@ export const fields = props => {
                 toggleState: !state.toggleState
               }))
             }
-          />
+          /> */}
         </Field>
         <Field
           fieldFlow="horizontal"
@@ -129,7 +137,7 @@ export const fields = props => {
               optional: "optional",
               required: "mouse"
             }}
-            width="330px"
+            width="270px"
             action={changeSection}
             current={state.currentSelection}
             // icons={{ cat: "blocks", dog: "theme", mouse: "menu-icon" }}

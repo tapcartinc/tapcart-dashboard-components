@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Input } from "../../lib/components/Input";
+import { Textarea } from "../../lib/components/Textarea";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
 export default {
-  component: Input,
-  title: "Components/Input",
+  component: Textarea,
+  title: "Components/Textarea",
   decorators: [withKnobs]
 };
 
-export const input = () => {
+export const textarea = () => {
   const [state, setState] = useState("");
   const inputRef = useRef();
 
@@ -20,7 +20,7 @@ export const input = () => {
 
   return (
     <>
-      <Input
+      <Textarea
         onChange={e => setState(e.target.value)}
         value={state}
         innerRef={inputRef}

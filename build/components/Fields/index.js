@@ -32,7 +32,7 @@ exports.Fields = Fields;
 var StyledFieldsWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Fields__StyledFieldsWrapper",
   componentId: "g2n3ju-0"
-})(["display:flex;flex-direction:column;width:720px;margin:0 auto;margin-bottom:10px;align-items:flex-start;"]);
+})(["display:flex;flex-direction:column;width:620px;margin:0 auto;margin-bottom:10px;align-items:flex-start;"]);
 
 var StyledFields = _styledComponents["default"].div.withConfig({
   displayName: "Fields__StyledFields",
