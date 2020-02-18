@@ -69,6 +69,10 @@ var Input = function Input(_ref) {
 
   if (bounce) {
     bounceStyle["top"] = "-3px";
+    bounceStyle["color"] = _dashVariables.colorPicker.red;
+    bounceStyle["position"] = "relative";
+    bounceStyle["margin-left"] = "-17px";
+    bounceStyle["transition"] = "transform 1s ease 0s";
   }
 
   return _react["default"].createElement(StyledInputWrapper, {
@@ -89,9 +93,7 @@ var Input = function Input(_ref) {
     charCountHit: props.value.length === props.maxLength,
     bounce: bounce
   }, _react["default"].createElement("span", {
-    style: {
-      marginTop: bounce ? "-3px !important" : "0px"
-    }
+    style: bounceStyle
   }, props.value ? props.value.length : 0), "/", props.maxLength));
 };
 

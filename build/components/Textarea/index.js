@@ -69,11 +69,15 @@ var Textarea = function Textarea(_ref) {
 
   if (bounce) {
     bounceStyle["top"] = "-3px";
+    bounceStyle["color"] = _dashVariables.colorPicker.red;
+    bounceStyle["position"] = "relative";
+    bounceStyle["margin-left"] = "-17px";
+    bounceStyle["transition"] = "transform 1s ease 0s";
   }
 
-  return _react["default"].createElement(StyledTextareaWrapper, {
+  return _react["default"].createElement(StyledTextareaWrapper, _extends({
     errors: errors
-  }, label && _react["default"].createElement(StyledLabel, {
+  }, props), label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
   }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement("div", {
     style: {
@@ -93,9 +97,7 @@ var Textarea = function Textarea(_ref) {
     charCountHit: props.value.length === props.maxLength,
     bounce: bounce
   }, _react["default"].createElement("span", {
-    style: {
-      marginTop: bounce ? "-3px !important" : "0px"
-    }
+    style: bounceStyle
   }, props.value ? props.value.length : 0), "/", props.maxLength)));
 };
 
@@ -114,7 +116,7 @@ Textarea.defaultProps = {
 var StyledTextareaWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Textarea__StyledTextareaWrapper",
   componentId: "eqovuw-0"
-})(["position:relative;width:100%;.input-style{border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;height:170px;overflow-y:scroll;resize:none;", ";}"], function (props) {
+})(["position:relative;width:100%;.input-style{border-radius:3px;", ";background:", ";padding:10px;margin-bottom:40px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;height:170px;overflow-y:scroll;resize:none;}", ";"], function (props) {
   return props.errors ? "border: 1px solid ".concat(_dashVariables.colorPicker.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
 }, _dashVariables.colorPicker.offwhite, _variables.colors.blue25, function (props) {
   return props.style ? props.style : null;
@@ -123,10 +125,8 @@ var StyledTextareaWrapper = _styledComponents["default"].div.withConfig({
 var StyledCharCount = _styledComponents["default"].div.withConfig({
   displayName: "Textarea__StyledCharCount",
   componentId: "eqovuw-1"
-})(["position:absolute;text-align:right;right:16px;top:16px;color:", ";", " font-size:14px;transition:top 0.1s ease 0s;span{transition:top 0.1s ease 0s;position:absolute;right:20px;", ";}"], _variables.colors.grayText, function (props) {
+})(["position:absolute;text-align:right;right:16px;bottom:16px;color:", ";", " font-size:14px;transition:top 0.1s ease 0s;"], _variables.colors.grayText, function (props) {
   return props.charCountHit && "color: ".concat(_variables.colors.red, ";");
-}, function (props) {
-  return props.bounce ? "top: -3px" : "top: 0px";
 });
 
 var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({

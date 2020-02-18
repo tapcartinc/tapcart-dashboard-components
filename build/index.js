@@ -39,6 +39,7 @@ var _exportNames = {
   Fields: true,
   Field: true,
   ImageUploader: true,
+  EditContainer: true,
   ContainerBox: true,
   Accordion: true,
   Card: true,
@@ -273,6 +274,12 @@ Object.defineProperty(exports, "ImageUploader", {
     return _ImageUploader.ImageUploader;
   }
 });
+Object.defineProperty(exports, "EditContainer", {
+  enumerable: true,
+  get: function get() {
+    return _EditContainer.EditContainer;
+  }
+});
 Object.defineProperty(exports, "ContainerBox", {
   enumerable: true,
   get: function get() {
@@ -473,6 +480,8 @@ var _Fields = require("./components/Fields");
 var _Field = require("./components/Field");
 
 var _ImageUploader = require("./components/ImageUploader");
+
+var _EditContainer = require("./components/EditContainer");
 
 var _ContainerBox = require("./layout/ContainerBox");
 

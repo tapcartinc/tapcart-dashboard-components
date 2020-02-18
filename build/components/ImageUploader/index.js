@@ -32,24 +32,22 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
 var ImageUploader = function ImageUploader(props) {
-  var onDropHandler = function onDropHandler(files) {
-    return props.handleImageUpload(files);
-  };
-
   var className = props.className,
       placeholder = props.placeholder,
       value = props.value,
       label = props.label,
       handleImageUpload = props.handleImageUpload,
-      dropzoneProps = _objectWithoutProperties(props, ["className", "placeholder", "value", "label", "handleImageUpload"]);
+      name = props.name,
+      dropzoneProps = _objectWithoutProperties(props, ["className", "placeholder", "value", "label", "handleImageUpload", "name"]);
 
   return _react["default"].createElement(StyledImageInputWrapper, props, label && _react["default"].createElement(StyledLabel, null, label), _react["default"].createElement(StyledImageInput, null, _react["default"].createElement(_reactDropzone["default"], _extends({
-    onDrop: onDropHandler
+    onDrop: function onDrop(files) {
+      return handleImageUpload(files, name);
+    }
   }, dropzoneProps), function (_ref) {
     var getRootProps = _ref.getRootProps,
         getInputProps = _ref.getInputProps,
         isDragActive = _ref.isDragActive;
-    console.log("getInputProps", getInputProps);
     return _react["default"].createElement(StyledImageInputHolder, getRootProps(), _react["default"].createElement("input", getInputProps()), value ? _react["default"].createElement(StyledImage, {
       src: value
     }) : _react["default"].createElement(StyledImagePlaceholder, null, _react["default"].createElement(_Icon.Icon, {
@@ -63,7 +61,7 @@ exports.ImageUploader = ImageUploader;
 var StyledImageInputWrapper = _styledComponents["default"].div.withConfig({
   displayName: "ImageUploader__StyledImageInputWrapper",
   componentId: "sc-14ahekh-0"
-})(["display:flex;flex-direction:column;align-items:flex-start;font-size:13px;padding-right:15px;", ""], _dashVariables.sofiaPro.regular);
+})(["display:flex;flex-direction:column;align-items:flex-start;font-size:13px;padding-right:5px;", ""], _dashVariables.sofiaPro.regular);
 
 var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "ImageUploader__StyledLabel",
@@ -78,7 +76,7 @@ var StyledImageInputHolder = _styledComponents["default"].div.withConfig({
 var StyledImageInput = _styledComponents["default"].div.withConfig({
   displayName: "ImageUploader__StyledImageInput",
   componentId: "sc-14ahekh-3"
-})(["width:320px;height:170px;border-radius:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px dashed ", ";"], _dashVariables.colorPicker.grayBlue);
+})(["width:320px;min-height:170px;height:auto;border-radius:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px dashed ", ";"], _dashVariables.colorPicker.grayBlue);
 
 var StyledImage = _styledComponents["default"].img.withConfig({
   displayName: "ImageUploader__StyledImage",
