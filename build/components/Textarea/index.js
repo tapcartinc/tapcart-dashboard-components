@@ -71,7 +71,9 @@ var Textarea = function Textarea(_ref) {
     bounceStyle["top"] = "-3px";
   }
 
-  return _react["default"].createElement(StyledTextareaWrapper, null, label && _react["default"].createElement(StyledLabel, {
+  return _react["default"].createElement(StyledTextareaWrapper, {
+    errors: errors
+  }, label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
   }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement("div", {
     style: {
