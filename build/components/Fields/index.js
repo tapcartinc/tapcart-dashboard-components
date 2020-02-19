@@ -32,12 +32,12 @@ exports.Fields = Fields;
 var StyledFieldsWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Fields__StyledFieldsWrapper",
   componentId: "g2n3ju-0"
-})(["display:flex;flex-direction:column;width:620px;margin:0 auto;margin-bottom:10px;align-items:flex-start;"]);
+})(["display:flex;flex-direction:column;max-width:800px;margin:0 auto;margin-bottom:10px;align-items:flex-start;"]);
 
 var StyledFields = _styledComponents["default"].div.withConfig({
   displayName: "Fields__StyledFields",
   componentId: "g2n3ju-1"
-})(["border-radius:3px;width:100%;border:1px solid ", ";overflow:hidden;"], _dashVariables.colorPicker.gray25);
+})(["border-radius:3px;width:100%;border:1px solid ", ";"], _dashVariables.colorPicker.gray25);
 
 var SectionHeader = _styledComponents["default"].h3.withConfig({
   displayName: "Fields__SectionHeader",

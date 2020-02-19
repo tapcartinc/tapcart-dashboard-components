@@ -35,14 +35,16 @@ var Field = function Field(props) {
       hasToggle = props.hasToggle,
       toggleState = props.toggleState,
       setToggleState = props.setToggleState,
-      errors = props.errors;
+      errors = props.errors,
+      flexWrap = props.flexWrap,
+      justifyContent = props.justifyContent;
   return _react["default"].createElement(StyledField, _extends({
     lastField: lastField,
     fieldFlow: fieldFlow,
     hasChildren: props.children
   }, props, {
     hasToggle: hasToggle
-  }), label && _react["default"].createElement(StyledFieldInfo, null, _react["default"].createElement(StyledLabel, null, label), _react["default"].createElement(StyledDescription, {
+  }), label && _react["default"].createElement(StyledFieldInfo, props, _react["default"].createElement(StyledLabel, null, label), _react["default"].createElement(StyledDescription, {
     errors: errors
   }, description), errors && errors.length > 0 && _react["default"].createElement(StyledErrors, {
     errors: errors
@@ -60,6 +62,8 @@ var Field = function Field(props) {
     toggleState: toggleState,
     onChange: setToggleState
   })), props.children && _react["default"].createElement(StyledChildren, {
+    justifyContent: justifyContent,
+    flexWrap: flexWrap,
     toggleState: toggleState,
     hasToggle: hasToggle,
     fieldFlow: fieldFlow
@@ -71,21 +75,21 @@ exports.Field = Field;
 var StyledField = _styledComponents["default"].div.withConfig({
   displayName: "Field__StyledField",
   componentId: "sc-1c9u2up-0"
-})(["background:white;min-height:78px;display:flex;", ";", " ", " ", ""], function (props) {
+})(["background:white;min-height:78px;display:flex;", ";", " ", " ", ";"], function (props) {
   return !props.lastField && "border-bottom: 1px solid ".concat(_dashVariables.colorPicker.gray25);
 }, function (props) {
   return props.fieldFlow === "horizontal" && "flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap;";
 }, function (props) {
   return !props.hasChildren && "flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap;";
 }, function (props) {
-  return props.fieldFlow === "vertical" && "flex-direction: column; align-items: flex-start; justify-content: flex-start;";
+  return props.fieldFlow === "vertical" && "flex-direction: column; align-items: flex-start; justify-content: flex-start; flex-wrap: wrap";
 });
 
 var StyledChildren = _styledComponents["default"].div.withConfig({
   displayName: "Field__StyledChildren",
   componentId: "sc-1c9u2up-1"
-})(["padding:19px 24px;padding-left:5px;", ";", ";", ";", ";", ";"], function (props) {
-  return props.fieldFlow === "vertical" && "width: 100%; padding: 0px 24px 19px 24px";
+})(["padding:19px 24px;padding-left:5px;", ";", ";", ";", ";", ";", ";", ";"], function (props) {
+  return props.fieldFlow === "vertical" && "width: 100%; padding: 0px 24px 19px 24px;";
 }, function (props) {
   return props.hasToggle && "padding-left: 19px; width: 100%; padding-top: 0px";
 }, function (props) {
@@ -94,17 +98,23 @@ var StyledChildren = _styledComponents["default"].div.withConfig({
   return props.hasToggle && !props.toggleState && "display: none";
 }, function (props) {
   return props.hasToggle && props.toggleState && "display: flex";
+}, function (props) {
+  return props.flexWrap && "flex-wrap: wrap";
+}, function (props) {
+  return props.justifyContent && "justify-content: space-between";
 });
 
 var StyledFieldInfo = _styledComponents["default"].div.withConfig({
   displayName: "Field__StyledFieldInfo",
   componentId: "sc-1c9u2up-2"
-})(["padding:19px 24px;"]);
+})(["padding:19px 24px;", ""], function (props) {
+  return props.style ? props.style : null;
+});
 
 var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "Field__StyledLabel",
   componentId: "sc-1c9u2up-3"
-})(["line-height:20px;margin-top:0px;margin-bottom:0px;"]);
+})(["line-height:20px;margin-top:0px;margin-bottom:3px;"]);
 
 var StyledDescription = _styledComponents["default"].div.withConfig({
   displayName: "Field__StyledDescription",

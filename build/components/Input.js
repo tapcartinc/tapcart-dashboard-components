@@ -48,7 +48,9 @@ var Input = function Input(_ref) {
       value = props.value,
       name = props.name,
       placeholder = props.placeholder,
-      maxLength = props.maxLength;
+      maxLength = props.maxLength,
+      disabled = props.disabled,
+      width = props.width;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -76,6 +78,8 @@ var Input = function Input(_ref) {
   }
 
   return _react["default"].createElement(StyledInputWrapper, {
+    width: width,
+    disabled: disabled,
     errors: errors
   }, label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
@@ -88,6 +92,7 @@ var Input = function Input(_ref) {
     onKeyUp: unbounceFunc,
     onChange: props.onChange,
     placeholder: placeholder,
+    disabled: disabled,
     errors: errors ? errors.length >= 0 : undefined
   }, props)), maxLength && _react["default"].createElement(StyledCharCount, {
     charCountHit: props.value.length === props.maxLength,
@@ -112,19 +117,21 @@ Input.defaultProps = {
 var StyledInputWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledInputWrapper",
   componentId: "l316i3-0"
-})(["position:relative;width:100%;.input-style{border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";}"], function (props) {
+})(["position:relative;width:100%;", ";.input-style{border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";", ";}"], function (props) {
+  return props.width && "width: ".concat(props.width);
+}, function (props) {
   return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
 }, _variables.colors.offwhite, _variables.colors.blue25, function (props) {
+  return props.disabled && "color: ".concat(_dashVariables.colorPicker.grayBlue);
+}, function (props) {
   return props.style ? props.style : null;
 });
 
 var StyledCharCount = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledCharCount",
   componentId: "l316i3-1"
-})(["position:absolute;text-align:right;right:16px;bottom:16px;color:", ";", " font-size:14px;transition:top 0.1s ease 0s;span{transition:top 0.1s ease 0s;position:absolute;right:20px;", ";}"], _variables.colors.grayText, function (props) {
+})(["position:absolute;text-align:right;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;right:14px;bottom:14px;color:", ";", " font-size:14px;transition:top 0.1s ease 0s;"], _variables.colors.blue, function (props) {
   return props.charCountHit && "color: ".concat(_variables.colors.red, ";");
-}, function (props) {
-  return props.bounce ? "top: -3px" : "top: 0px";
 });
 
 var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({

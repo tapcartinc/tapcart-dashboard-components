@@ -18,6 +18,7 @@ var _exportNames = {
   Body: true,
   placeholder: true,
   input: true,
+  Label: true,
   SegmentedControl: true,
   SearchBar: true,
   Input: true,
@@ -146,6 +147,12 @@ Object.defineProperty(exports, "input", {
   enumerable: true,
   get: function get() {
     return _Typography.input;
+  }
+});
+Object.defineProperty(exports, "Label", {
+  enumerable: true,
+  get: function get() {
+    return _Typography.Label;
   }
 });
 Object.defineProperty(exports, "SegmentedControl", {

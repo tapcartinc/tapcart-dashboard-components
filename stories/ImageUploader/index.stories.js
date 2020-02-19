@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { createRef, useEffect, useRef, useState } from "react";
 import { ImageUploader } from "../../lib/components/ImageUploader";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 
@@ -10,7 +10,8 @@ export default {
 
 export const imageUploader = () => {
   const [state, setState] = useState({
-    image: null
+    image: null,
+    childRef: null
   });
 
   const handleImageUpload = files => {
@@ -19,7 +20,24 @@ export const imageUploader = () => {
     setState({ image: selectedImage });
   };
 
+  const handleRef = ref => {
+    setState({
+      childRef: ref
+    });
+  };
+
+  const handleClick = () => {
+    state.childRef.current.open();
+  };
+
   return (
-    <ImageUploader value={state.image} handleImageUpload={handleImageUpload} />
+    <>
+      <button onClick={handleClick}>hi</button>
+      <ImageUploader
+        handleRef={handleRef}
+        value={state.image}
+        handleImageUpload={handleImageUpload}
+      />
+    </>
   );
 };

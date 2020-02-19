@@ -5,7 +5,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.input = exports.placeholder = exports.Body = exports.Description = exports.Header = void 0;
+exports.Label = exports.input = exports.placeholder = exports.Body = exports.Description = exports.Header = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -76,6 +76,17 @@ var Body = _styledComponents["default"].p.attrs({
 });
 
 exports.Body = Body;
+
+var Label = _styledComponents["default"].p.withConfig({
+  displayName: "Typography__Label",
+  componentId: "iyq6bj-3"
+})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";", ""], function (props) {
+  return props.errors ? _variables.colors.red : "#000000";
+}, function (props) {
+  return props.style ? props.style : null;
+});
+
+exports.Label = Label;
 var placeholder = {
   fontSize: "18px",
   color: "#DBE1EF",

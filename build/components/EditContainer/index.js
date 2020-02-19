@@ -68,18 +68,20 @@ var EditContainer = function EditContainer(props) {
     open: open
   }), props.children), _react["default"].createElement(ClickableDropdown, _extends({}, props, {
     open: open,
-    top: props.top
+    top: props.top,
+    disabled: props.disabled
   }), _react["default"].createElement("ul", null, props.items.length && props.items.map(function (item, idx) {
     switch (item.type) {
       case "button":
         return _react["default"].createElement(StyledListItem, {
           lastIndex: idx === props.items.length - 1,
-          key: "".concat(props.id, "-").concat(item.text) // className={`edit-block ${item.className}`}
-          ,
+          key: "".concat(props.id, "-").concat(item.text),
           onClick: item.typeOptions.handler
         }, _react["default"].createElement(_Icon.Icon, {
           type: item.icon,
-          iconLeft: true,
+          style: {
+            marginRight: 14
+          },
           iconRight: true
         }), _react["default"].createElement("span", null, item.text));
 
@@ -96,9 +98,11 @@ var EditContainer = function EditContainer(props) {
           }
         }, _react["default"].createElement(_Icon.Icon, {
           type: item.icon,
-          iconLeft: true,
+          style: {
+            marginRight: 14
+          },
           iconRight: true
-        }), _react["default"].createElement("span", null, "Show", " ", _react["default"].createElement("span", {
+        }), _react["default"].createElement("span", null, "Show", _react["default"].createElement("span", {
           className: "range-value"
         }, item.typeOptions.value, " Products"))), _react["default"].createElement("input", {
           style: {
@@ -192,18 +196,20 @@ var DropDownSection = _styledComponents["default"].div.withConfig({
 var ClickableDropdown = _styledComponents["default"].div.withConfig({
   displayName: "EditContainer__ClickableDropdown",
   componentId: "sc-1mizre-1"
-})(["margin:0px;list-style:none;width:200px;", " padding:0px;color:", ";box-shadow:0 0 8px 0 rgba(0,0,0,0.08);position:absolute;z-index:1;visibility:hidden;top:", ";right:0;opacity:0;transition:all 0.2s ease-in-out;", " ", ";ul{background:white;width:200px;margin-left:5px;border-radius:3px;overflow:hidden;}"], _variables.sofia.sofiaMedium, _variables.colors.blue, function (props) {
+})(["margin:0px;list-style:none;width:200px;", " padding:0px;color:", ";box-shadow:", ";position:absolute;z-index:1;visibility:hidden;top:", ";right:0;opacity:0;transition:all 0.2s ease-in-out;", " ", ";", ";ul{background:white;width:200px;margin-left:5px;border-radius:3px;overflow:hidden;}"], _variables.sofia.sofiaMedium, _variables.colors.blue, _variables.boxShadow.medium, function (props) {
   return props.top ? props.top : "0";
 }, function (props) {
   return props.open && "visibility: visible; opacity: 1; right: -200px;";
 }, function (props) {
   return props.style ? props.style : null;
+}, function (props) {
+  return props.disabled && "display: none";
 });
 
 var StyledListItem = _styledComponents["default"].li.withConfig({
   displayName: "EditContainer__StyledListItem",
   componentId: "sc-1mizre-2"
-})(["padding:12px 5px;display:flex;align-items:center;border-bottom:1px solid ", ";&:hover{cursor:pointer;}", ";"], _dashVariables.colorPicker.lightGray, function (props) {
+})(["padding:12px 5px;display:flex;align-items:center;border-bottom:1px solid ", ";font-size:14px;color:", ";", " &:hover{cursor:pointer;}", ";"], _dashVariables.colorPicker.lightGray, _dashVariables.colorPicker.black, _dashVariables.sofiaPro.medium, function (props) {
   return props.lastIndex && "border-bottom: 0px";
 });
 
