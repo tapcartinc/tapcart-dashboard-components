@@ -21,10 +21,15 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 var Fields = function Fields(props) {
   var sectionHeader = props.sectionHeader,
+      width = props.width,
       children = props.children;
-  return _react["default"].createElement(StyledFieldsWrapper, null, sectionHeader && _react["default"].createElement(SectionHeader, null, sectionHeader), _react["default"].createElement(StyledFields, null, children));
+  return _react["default"].createElement(StyledFieldsWrapper, _extends({
+    width: width
+  }, props), sectionHeader && _react["default"].createElement(SectionHeader, null, sectionHeader), _react["default"].createElement(StyledFields, null, children));
 };
 
 exports.Fields = Fields;
@@ -32,7 +37,15 @@ exports.Fields = Fields;
 var StyledFieldsWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Fields__StyledFieldsWrapper",
   componentId: "g2n3ju-0"
-})(["display:flex;flex-direction:column;max-width:800px;margin:0 auto;margin-bottom:10px;align-items:flex-start;"]);
+})(["display:flex;flex-direction:column;max-width:800px;margin:0 auto;margin-bottom:10px;align-items:flex-start;", ";", ";", ";", ";"], function (props) {
+  return props.maxWidth && "max-width: ".concat(props.maxWidth);
+}, function (props) {
+  return props.padding && "padding: ".concat(props.padding);
+}, function (props) {
+  return props.width && "width: ".concat(props.width);
+}, function (props) {
+  return props.style ? props.style : null;
+});
 
 var StyledFields = _styledComponents["default"].div.withConfig({
   displayName: "Fields__StyledFields",
