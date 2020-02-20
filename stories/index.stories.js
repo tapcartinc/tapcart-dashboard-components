@@ -13,3 +13,4 @@ export * from "./DraftStatus/index.stories";
 export * from "./TapcartPlanLogo/index.stories";
 export * from "./BoxShadow/index.stories";
 export * from "./Textarea/index.stories";
+export * from "./PageHeader/index.stories";

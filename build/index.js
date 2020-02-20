@@ -46,6 +46,7 @@ var _exportNames = {
   Card: true,
   DottedLineContainer: true,
   ProTip: true,
+  PageHeader: true,
   colors: true,
   gradientOverlay: true,
   border: true,
@@ -317,6 +318,12 @@ Object.defineProperty(exports, "ProTip", {
     return _ProTip.ProTip;
   }
 });
+Object.defineProperty(exports, "PageHeader", {
+  enumerable: true,
+  get: function get() {
+    return _PageHeader.PageHeader;
+  }
+});
 Object.defineProperty(exports, "colors", {
   enumerable: true,
   get: function get() {
@@ -499,6 +506,8 @@ var _Card = require("./layout/Card");
 var _DottedLineContainer = require("./layout/DottedLineContainer");
 
 var _ProTip = require("./layout/ProTip");
+
+var _PageHeader = require("./layout/PageHeader");
 
 var _variables = require("./utils/_variables");
 
