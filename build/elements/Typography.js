@@ -48,13 +48,13 @@ var Description = _styledComponents["default"].p.attrs({
 }).withConfig({
   displayName: "Typography__Description",
   componentId: "iyq6bj-1"
-})(["", " -webkit-font-smoothing:antialiased;font-size:14px;font-weight:normal;font-style:normal;line-height:18px;letter-spacing:normal;color:", ";", ";", ";", ""], _dashVariables.circularStd.book, function (props) {
+})(["-webkit-font-smoothing:antialiased;font-size:13px;font-weight:normal;font-style:normal;line-height:18px;letter-spacing:normal;color:", ";", ";", ";", " ", ""], function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.gray;
 }, function (props) {
   return props.align === "center" && "text-align: center";
 }, function (props) {
   return props.align === "left" && "text-align: left";
-}, function (props) {
+}, _dashVariables.sofiaPro.regular, function (props) {
   return props.style ? props.style : null;
 });
 
@@ -65,7 +65,7 @@ var Body = _styledComponents["default"].p.attrs({
 }).withConfig({
   displayName: "Typography__Body",
   componentId: "iyq6bj-2"
-})(["", " margin-top:8px;margin-bottom:8px;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;line-height:18px;letter-spacing:normal;color:", ";", ";", ";", ""], _dashVariables.circularStd.book, function (props) {
+})(["", " margin-top:8px;margin-bottom:8px;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;line-height:1.5;letter-spacing:normal;color:", ";", ";", ";", ""], _dashVariables.circularStd.book, function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.black;
 }, function (props) {
   return props.align === "center" && "text-align: center";

@@ -41,6 +41,8 @@ var _exportNames = {
   Field: true,
   ImageUploader: true,
   EditContainer: true,
+  EaseIn: true,
+  Container: true,
   ContainerBox: true,
   Accordion: true,
   Card: true,
@@ -64,7 +66,8 @@ var _exportNames = {
   hoverWithBorder: true,
   getColors: true,
   ThemeProvider: true,
-  useWindowSize: true
+  useWindowSize: true,
+  useEaseIn: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -288,6 +291,18 @@ Object.defineProperty(exports, "EditContainer", {
     return _EditContainer.EditContainer;
   }
 });
+Object.defineProperty(exports, "EaseIn", {
+  enumerable: true,
+  get: function get() {
+    return _EaseIn.EaseIn;
+  }
+});
+Object.defineProperty(exports, "Container", {
+  enumerable: true,
+  get: function get() {
+    return _Container.Container;
+  }
+});
 Object.defineProperty(exports, "ContainerBox", {
   enumerable: true,
   get: function get() {
@@ -432,6 +447,12 @@ Object.defineProperty(exports, "useWindowSize", {
     return _useWindowSize.useWindowSize;
   }
 });
+Object.defineProperty(exports, "useEaseIn", {
+  enumerable: true,
+  get: function get() {
+    return _useEaseIn.useEaseIn;
+  }
+});
 
 var _Icon = require("./elements/Icon");
 
@@ -497,6 +518,10 @@ var _ImageUploader = require("./components/ImageUploader");
 
 var _EditContainer = require("./components/EditContainer");
 
+var _EaseIn = require("./components/EaseIn");
+
+var _Container = require("./layout/Container");
+
 var _ContainerBox = require("./layout/ContainerBox");
 
 var _Accordion = _interopRequireDefault(require("./layout/Accordion"));
@@ -546,5 +571,7 @@ Object.keys(_layout).forEach(function (key) {
 });
 
 var _useWindowSize = require("./hooks/useWindowSize");
+
+var _useEaseIn = require("./hooks/useEaseIn");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

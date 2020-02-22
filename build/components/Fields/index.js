@@ -37,7 +37,7 @@ exports.Fields = Fields;
 var StyledFieldsWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Fields__StyledFieldsWrapper",
   componentId: "g2n3ju-0"
-})(["display:flex;flex-direction:column;max-width:800px;margin:0 auto;margin-bottom:10px;align-items:flex-start;", ";", ";", ";", ";"], function (props) {
+})(["display:flex;flex-direction:column;max-width:800px;margin:0 auto;width:100%;margin-bottom:10px;align-items:flex-start;", ";", ";", ";", ";"], function (props) {
   return props.maxWidth && "max-width: ".concat(props.maxWidth);
 }, function (props) {
   return props.padding && "padding: ".concat(props.padding);

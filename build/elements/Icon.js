@@ -5007,6 +5007,53 @@ function Icon(props) {
         points: "129 13 125 17 121 13"
       }))))))));
 
+    case "chat-multicolored":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }), _react["default"].createElement("g", {
+        id: "App-Listing",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "2.0-App-submission-page",
+        transform: "translate(-1312.000000, -812.000000)"
+      }, _react["default"].createElement("g", {
+        id: "demo-team-pic",
+        transform: "translate(47.000000, 751.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Button-Glyph---Medium",
+        transform: "translate(1143.000000, 53.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-chat",
+        transform: "translate(122.000000, 8.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "b-comment",
+        transform: "translate(1.000000, 1.500000)",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M6.799,15.601 C8.092,17.61 10.826,19 14,19 C14.59,19 15.163,18.949 15.716,18.858 L20,21 L20,16.96 C21.241,15.903 22,14.52 22,13 C22,11.448 21.208,10.039 19.919,8.973",
+        id: "Path",
+        stroke: _dashVariables.colorPicker.green100
+      }), _react["default"].createElement("path", {
+        d: "M10,0 C4.477,0 0,3.582 0,8 C0,9.797 0.75,11.45 2,12.785 L2,18 L6.833,15.584 C7.829,15.85 8.892,16 10,16 C15.523,16 20,12.418 20,8 C20,3.582 15.523,0 10,0 Z",
+        id: "Path",
+        stroke: _dashVariables.colorPicker.blue
+      }))))))));
+
     case "preview-app-multicolored":
       return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "22px",
@@ -5353,9 +5400,9 @@ function Icon(props) {
 
     case "toast-alert":
       return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
-        width: "37px",
-        height: "37px",
-        viewBox: "0 0 37 37",
+        width: "35px",
+        height: "35px",
+        viewBox: "0 0 35 35",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), _react["default"].createElement("g", {
@@ -5924,7 +5971,7 @@ function Icon(props) {
       }), _react["default"].createElement("path", {
         d: "M23.5150634,9.8181494 L12.0600634,9.8181494 L12.0600634,14.7271494 L18.5520634,14.7271494 C17.5150634,18.0001494 14.9520634,19.0911494 12.0080634,19.0911494 C8.8734916,19.0949505 6.10832926,17.04023 5.20755788,14.03787 C4.30678651,11.03551 5.48415236,7.79794782 8.10311408,6.07556741 C10.7220758,4.35318701 14.1611735,4.55469625 16.5610634,6.5711494 L20.1280634,3.1711494 C16.1765806,-0.466163685 10.2894583,-1.03498549 5.71468961,1.77850953 C1.13992095,4.59200456 -1.00833863,10.1026078 0.455130455,15.270056 C1.91859954,20.4375042 6.63737883,24.0032986 12.0080634,24.0001515 C18.6250634,24.0001515 24.6080634,19.6361494 23.5150634,9.8181494 Z",
         id: "Path",
-        fill: "#393CB4",
+        fill: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         fillRule: "nonzero"
       })))))))));
 
@@ -5980,6 +6027,57 @@ function Icon(props) {
         d: "M20.32578,7.05404 C19.25664,12.02654 15.84648,14.65853 10.4365,14.65853 L8.47408,14.65853 L7.0107,24 L10.19359,24 C10.65299,24 11.044,23.66543 11.11568,23.21198 L11.15352,23.01417 L11.88509,18.37774 L11.93225,18.1215 C12.00393,17.66805 12.39494,17.33349 12.85434,17.33349 L13.43522,17.33349 C17.19535,17.33349 20.13958,15.80592 20.99996,11.38793 C21.34476,9.61549 21.17952,8.12845 20.32578,7.05404 Z",
         id: "Path"
       }))))))))));
+
+    case "phone-with-border":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "35px",
+        height: "35px",
+        viewBox: "0 0 35 35",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "App-Listing",
+        stroke: "none",
+        strokeWidth: "2",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "4.0-Connect-accounts-(apple)",
+        transform: "translate(-209.000000, -924.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Apple-Dev-Instructions",
+        transform: "translate(210.000000, 548.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Verification",
+        transform: "translate(0.000000, 377.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Phone"
+      }, _react["default"].createElement("circle", {
+        id: "Oval",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
+        fill: "transparent",
+        cx: "16.5",
+        cy: "16.5",
+        r: "16.5",
+        strokeWidth: "2"
+      }), _react["default"].createElement("g", {
+        id: "Icon-mini-phone",
+        transform: "translate(8.000000, 7.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "18",
+        height: "18"
+      }), _react["default"].createElement("g", {
+        id: "phone-2",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M13.7142857,11.1428571 L11.1428571,13.7142857 L4.28571429,6.85714286 L6.85714286,4.28571429 L2.57142857,0 L0,2.57142857 C0,11.0922857 6.90771429,18 15.4285714,18 L18,15.4285714 L13.7142857,11.1428571 Z",
+        id: "Path"
+      })))))))));
 
     default:
       return _react["default"].createElement("span", null);

@@ -55,7 +55,7 @@ exports.BreadcrumbsItem = BreadcrumbsItem;
 var BreadcrumbsItemStyle = _styledComponents["default"].li.withConfig({
   displayName: "BreadcrumbItem__BreadcrumbsItemStyle",
   componentId: "nuqiaq-0"
-})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:7px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.6;letter-spacing:1px;font-size:14px;margin-right:0px;margin-left:10px;line-height:34px;color:", ";span{margin-left:-5px;height:100%;}transition:all 0.2s ease-in-out;", " ", ";"], function (props) {
+})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:7px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.6;letter-spacing:1px;font-size:14px;margin-right:0px;margin-left:0px;line-height:34px;color:", ";span{margin-left:-5px;height:100%;}transition:all 0.2s ease-in-out;", " ", ";"], function (props) {
   return props.active ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray;
 }, function (props) {
   return !props.active && "  &:hover {\n  transform: translateY(-2px);\n  transition: all 0.2s ease-in-out;\n  cursor: pointer;\n}";

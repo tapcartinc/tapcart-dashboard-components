@@ -77,12 +77,16 @@ function (_Component) {
   _createClass(SegmentedControl, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var sofiaRegular = _variables.sofia.sofiaRegular;
 
       var SegmentedControlType = function SegmentedControlType(props) {
         switch (props.type) {
           case "primary":
-            return _react["default"].createElement(_ContainerBox.ContainerBox, null, _react["default"].createElement(SegmentedControlStyle, null, Object.keys(props.items).map(function (key, idx) {
+            return _react["default"].createElement(_ContainerBox.ContainerBox, null, _react["default"].createElement(SegmentedControlStyle, {
+              width: _this2.props.width
+            }, Object.keys(props.items).map(function (key, idx) {
               return _react["default"].createElement(Tab, {
                 key: key,
                 current: props.current,
@@ -219,7 +223,9 @@ var SegmentedControlTabs = _styledComponents["default"].div.withConfig({
 var SegmentedControlStyle = _styledComponents["default"].div.withConfig({
   displayName: "SegmentedControl__SegmentedControlStyle",
   componentId: "sc-1lnwhjj-4"
-})(["margin:auto;overflow:hidden;height:100%;display:flex;flex-direction:row;justify-items:space-between;width:100%;", ""], function (props) {
+})(["margin:auto;overflow:hidden;height:100%;display:flex;flex-direction:row;justify-items:space-between;width:100%;", ";", ""], function (props) {
+  return props.width && "width: ".concat(props.width);
+}, function (props) {
   return props.style ? props.style : null;
 });
 

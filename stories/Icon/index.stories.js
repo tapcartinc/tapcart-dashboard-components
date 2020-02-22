@@ -497,6 +497,14 @@ export const icon = () => {
         <Icon type="google" />
         google
       </StyledIcon>
+      <StyledIcon>
+        <Icon type="chat-multicolored" />
+        chat-multicolored
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="phone-with-border" />
+        phone-with-border
+      </StyledIcon>
     </StyledIcons>
   );
 };
