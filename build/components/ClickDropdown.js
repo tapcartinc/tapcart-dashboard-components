@@ -68,6 +68,11 @@ var ClickDropdown = function ClickDropdown(_ref) {
     return setOpen(!open);
   };
 
+  var handleItemClick = function handleItemClick(e, onClick) {
+    e.stopPropagation();
+    return onClick();
+  };
+
   for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     props[_key - 1] = arguments[_key];
   }
@@ -100,7 +105,9 @@ var ClickDropdown = function ClickDropdown(_ref) {
     position: position
   }), options.map(function (option, index) {
     return _react["default"].createElement(ClickableDropdownItem, {
-      onClick: option.onClick,
+      onClick: function onClick(e) {
+        return handleItemClick(e, option.onClick);
+      },
       key: option.title,
       lastItem: index === options.length - 1
     }, option.icon && _react["default"].createElement(_Icon.Icon, {
