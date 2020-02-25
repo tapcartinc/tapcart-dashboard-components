@@ -1227,59 +1227,6 @@ function Icon(props) {
         points: "0 4 4 8 12 0"
       })))))));
 
-    case "design":
-      return _react["default"].createElement(SVG, _extends({
-        width: "24px",
-        height: "24px",
-        viewBox: "0 0 24 24",
-        version: "1.1",
-        xmlns: "http://www.w3.org/2000/SVG"
-      }, props), _react["default"].createElement("g", {
-        id: "Style-Guide",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        transform: "translate(-81.000000, -1079.000000)",
-        id: "Icons"
-      }, _react["default"].createElement("g", {
-        transform: "translate(81.000000, 1019.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Icon-design",
-        transform: "translate(0.000000, 60.000000)"
-      }, _react["default"].createElement("rect", {
-        id: "Rectangle",
-        x: "0",
-        y: "0",
-        width: "24",
-        height: "24"
-      }), _react["default"].createElement("g", {
-        id: "path-exclude",
-        transform: "translate(1.000000, 1.000000)",
-        style: {
-          stroke: props.fill ? props.fill : _variables.colors.blue
-        },
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeWidth: "1.75"
-      }, _react["default"].createElement("polygon", {
-        id: "Path",
-        points: "22 0 7 0 7 7 0 7 0 22 15 22 15 15 22 15"
-      }), _react["default"].createElement("polyline", {
-        id: "Path",
-        points: "15 9 15 7 13 7"
-      }), _react["default"].createElement("polyline", {
-        id: "Path",
-        points: "7 13 7 15 9 15"
-      }), _react["default"].createElement("polyline", {
-        id: "Path",
-        points: "7 9 7 7 9 7"
-      }), _react["default"].createElement("polyline", {
-        id: "Path",
-        points: "13 15 15 15 15 13"
-      })))))));
-
     case "drag-and-drop":
       return _react["default"].createElement(SVG, _extends({
         width: "47px",
@@ -3884,46 +3831,6 @@ function Icon(props) {
         id: "Path"
       }))));
 
-    case "integrations":
-      return _react["default"].createElement(SVG, _extends({
-        width: "19px",
-        height: "24px",
-        viewBox: "0 0 19 24",
-        version: "1.1",
-        xmlns: "http://www.w3.org/2000/SVG"
-      }, props), _react["default"].createElement("g", {
-        id: "Integrations",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        id: "6.1-Specific-integration",
-        transform: "translate(-63.000000, -185.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Breadcrumbs",
-        transform: "translate(-7.000000, 157.000000)"
-      }, _react["default"].createElement("g", {
-        transform: "translate(67.000000, 28.000000)",
-        id: "Icon-integrations"
-      }, _react["default"].createElement("g", null, _react["default"].createElement("rect", {
-        id: "Rectangle-Copy-9",
-        x: "0",
-        y: "0",
-        width: "24",
-        height: "24"
-      }), _react["default"].createElement("g", {
-        id: "camera-flash",
-        transform: "translate(4.000000, 1.000000)",
-        stroke: rops.props.fill ? props.fill : _variables.colors.blue,
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeWidth: "1.75"
-      }, _react["default"].createElement("polygon", {
-        id: "Path",
-        points: "11.5789474 0 3.47368421 0 0 12.7368421 6.94736842 12.7368421 4.63157895 22 16.2105263 8.10526316 9.26315789 8.10526316"
-      }))))))));
-
     case "infographic":
       return _react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -4850,51 +4757,6 @@ function Icon(props) {
       }), _react["default"].createElement("path", {
         d: "M17.9,18.8 C19.2,16.9 20,14.5 20,12 C20,5.4 14.6,0 8,0 L8,12 L17.9,18.8 Z",
         id: "Path"
-      })))))))));
-
-    case "integrations":
-      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
-        width: "19px",
-        height: "24px",
-        viewBox: "0 0 19 24",
-        version: "1.1",
-        xmlns: "http://www.w3.org/2000/svg"
-      }), _react["default"].createElement("g", {
-        id: "Symbols",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        id: "Header---Settings",
-        transform: "translate(-741.000000, -206.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Header"
-      }, _react["default"].createElement("g", {
-        id: "Navigation",
-        transform: "translate(66.000000, 203.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Tab-integrations",
-        transform: "translate(672.000000, 1.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Icon-integrations",
-        transform: "translate(0.000000, 2.000000)"
-      }, _react["default"].createElement("rect", {
-        id: "Rectangle-Copy-9",
-        x: "0",
-        y: "0",
-        width: "24",
-        height: "24"
-      }), _react["default"].createElement("g", {
-        id: "camera-flash",
-        transform: "translate(4.000000, 1.000000)",
-        stroke: props.fill ? props.fill : _dashVariables.colorPicker.green100,
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeWidth: "1.75"
-      }, _react["default"].createElement("polygon", {
-        id: "Path",
-        points: "11.5789474 0 3.47368421 0 0 12.7368421 6.94736842 12.7368421 4.63157895 22 16.2105263 8.10526316 9.26315789 8.10526316"
       })))))))));
 
     case "settings":
@@ -6076,6 +5938,110 @@ function Icon(props) {
         strokeWidth: "2"
       }, _react["default"].createElement("path", {
         d: "M13.7142857,11.1428571 L11.1428571,13.7142857 L4.28571429,6.85714286 L6.85714286,4.28571429 L2.57142857,0 L0,2.57142857 C0,11.0922857 6.90771429,18 15.4285714,18 L18,15.4285714 L13.7142857,11.1428571 Z",
+        id: "Path"
+      })))))))));
+
+    case "automation":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "23px",
+        height: "23px",
+        viewBox: "0 0 23 23",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Symbols",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Header---Stats",
+        transform: "translate(-371.000000, -211.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Header"
+      }, _react["default"].createElement("g", {
+        id: "Navigation",
+        transform: "translate(55.000000, 210.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Tap-drops",
+        transform: "translate(315.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-integrations"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle-Copy-9",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("polygon", {
+        id: "Path",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.gray50,
+        strokeWidth: "1.75",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        points: "13.6666667 2 2 14.8333333 12.5 14.8333333 11.3333333 23 23 10.1666667 12.5 10.1666667"
+      }))))))));
+
+    case "integrations-header":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "22px",
+        height: "22px",
+        viewBox: "0 0 22 22",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Symbols",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "Header---Stats",
+        transform: "translate(-715.000000, -211.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Header"
+      }, _react["default"].createElement("g", {
+        id: "Navigation",
+        transform: "translate(55.000000, 210.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Tab-integrations",
+        transform: "translate(659.000000, 0.000000)"
+      }, _react["default"].createElement("g", {
+        id: "Icon-integrations"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "edit-brightness",
+        transform: "translate(2.000000, 2.000000)",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.gray50,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "1.5"
+      }, _react["default"].createElement("path", {
+        d: "M10,15 C12.7614237,15 15,12.7614237 15,10 C15,12.7614237 17.2385763,15 20,15",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M10,15 C12.7614237,15 15,17.2385763 15,20 C15,17.2385763 17.2385763,15 20,15",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M0,5 C2.76142375,5 5,2.76142375 5,8.8817842e-16 C5,2.76142375 7.23857625,5 10,5",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M0,5 C2.76142375,5 5,7.23857625 5,10 C5,7.23857625 7.23857625,5 10,5",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M1,17 L5,17",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M3,15 L3,19",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M15,3 L19,3",
+        id: "Path"
+      }), _react["default"].createElement("path", {
+        d: "M17,1 L17,5",
         id: "Path"
       })))))))));
 

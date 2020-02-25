@@ -505,6 +505,22 @@ export const icon = () => {
         <Icon type="phone-with-border" />
         phone-with-border
       </StyledIcon>
+      <StyledIcon>
+        <Icon type="automation" />
+        automation
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="integrations-header" />
+        integrations-header
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="engage" />
+        engage
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="push" />
+        push
+      </StyledIcon>
     </StyledIcons>
   );
 };
