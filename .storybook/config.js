@@ -19,7 +19,8 @@ addDecorator(story => (
 configure(
   [
     require.context("../stories", true, /\.stories\.mdx$/),
-    require.context("../stories", true, /\.stories\.js$/)
+    require.context("../stories", true, /\.stories\.js$/),
+    require.context("../lib", true, /\.stories\.js$/)
   ],
   module
 );

@@ -15,3 +15,4 @@ export * from "./BoxShadow/index.stories";
 export * from "./Textarea/index.stories";
 export * from "./PageHeader/index.stories";
 export * from "./UseEaseIn/index.stories";
+export * from "../lib/stats/StatsIcon/index.stories";

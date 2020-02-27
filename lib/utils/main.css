@@ -1,0 +1,51 @@
+@font-face {
+  font-family: sofiaMedium;
+  src: url("../../fonts/SofiaPro-Medium.woff"),
+    url("../../fonts/SofiaPro-Medium.woff2");
+}
+@font-face {
+  font-family: sofiaRegular;
+  src: url("../../fonts/SofiaPro-Regular.woff"),
+    url("../../fonts/SofiaPro-Regular.woff2");
+}
+
+:root {
+  --main-gray: #a1a8b9;
+  --border-gray: #d8d8d8;
+}
+
+body {
+  font-family: SofiaPro-Medium, -apple-system, BlinkMacSystemFont, Helvetica,
+    Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 25px;
+  text-align: center;
+  /* --color-background: #22272b;
+  --color-on-background: #fff;
+  --color-layer-transparent: rgba(0, 5, 11, 0.9);
+  --color-surface: #2c343a;
+  --color-primary: #67c2e4;
+  --color-on-primary: #fff; */
+}
+
+* {
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  font-family: sofiaRegular;
+  stroke-dasharray: 0 0 !important;
+}
+
+line {
+  stroke: var(--border-gray);
+  stroke-width: 0.5px;
+}
+
+text {
+  fill: var(--main-gray);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

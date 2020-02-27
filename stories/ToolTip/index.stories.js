@@ -39,7 +39,7 @@ export const toolTip = () => {
       <br />
       <br />
       <br />
-      <ToolTip color={colorPicker.gray}>blah blah blah</ToolTip>
+      <ToolTip color={colorPicker.grayBlue}>blah blah blah</ToolTip>
       <ToolTip>blah blah blah</ToolTip>
     </Container>
   );
