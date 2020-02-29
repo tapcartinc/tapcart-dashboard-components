@@ -67,7 +67,8 @@ var _exportNames = {
   getColors: true,
   ThemeProvider: true,
   useWindowSize: true,
-  useEaseIn: true
+  useEaseIn: true,
+  StatsIcon: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -453,6 +454,12 @@ Object.defineProperty(exports, "useEaseIn", {
     return _useEaseIn.useEaseIn;
   }
 });
+Object.defineProperty(exports, "StatsIcon", {
+  enumerable: true,
+  get: function get() {
+    return _StatsIcon.StatsIcon;
+  }
+});
 
 var _Icon = require("./elements/Icon");
 
@@ -573,5 +580,7 @@ Object.keys(_layout).forEach(function (key) {
 var _useWindowSize = require("./hooks/useWindowSize");
 
 var _useEaseIn = require("./hooks/useEaseIn");
+
+var _StatsIcon = require("./stats/StatsIcon");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

@@ -12,11 +12,9 @@ import { Input } from "../../lib/components/Input";
 import { OptionBoxes } from "../../lib/components/OptionBoxes";
 
 const SectionOne = ({ state, setState, key, ...props }) => {
-  console.log("state", state);
   const handleInput = e => {
     e.preventDefault();
     const value = e.target.value;
-    console.log("value", value);
     return setState(prevState => ({
       ...prevState,
       input: value

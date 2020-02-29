@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.colorPicker = exports.circularStd = exports.sofiaPro = void 0;
+exports.defaultGraphColors = exports.colorPicker = exports.circularStd = exports.sofiaPro = void 0;
 var sofiaPro = {
   black: "font-family: \"SofiaPro-Black\";\n\tfont-weight: 900;\n\tfont-style: normal;\n  font-display: swap;",
   regular: "font-family: \"SofiaPro\";\n\tfont-weight: 400;\n\tfont-style: normal;\n  font-display: swap;",
@@ -44,3 +44,5 @@ var colorPicker = {
   dullBlue: "#d0ddec"
 };
 exports.colorPicker = colorPicker;
+var defaultGraphColors = [colorPicker.blue, colorPicker.grayBlue, colorPicker.green100, colorPicker.lightBlue, colorPicker.dullBlue];
+exports.defaultGraphColors = defaultGraphColors;

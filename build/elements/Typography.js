@@ -5,7 +5,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Label = exports.input = exports.placeholder = exports.Body = exports.Description = exports.Header = void 0;
+exports.Circular = exports.Sofia = exports.Label = exports.input = exports.placeholder = exports.Body = exports.Description = exports.Header = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -87,6 +87,48 @@ var Label = _styledComponents["default"].p.withConfig({
 });
 
 exports.Label = Label;
+
+var Sofia = _styledComponents["default"].p.withConfig({
+  displayName: "Typography__Sofia",
+  componentId: "iyq6bj-4"
+})(["-webkit-font-smoothing:antialiased;letter-spacing:normal;font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+  return props.fontSize ? props.fontSize : "13px";
+}, function (props) {
+  return props.lineHeight ? props.lineHeight : "normal";
+}, function (props) {
+  return props.color ? props.color : _dashVariables.colorPicker.gray;
+}, function (props) {
+  return props.light ? _dashVariables.sofiaPro.light : props.regular ? _dashVariables.sofiaPro.regular : props.medium ? _dashVariables.sofiaPro.medium : props.bold ? _dashVariables.sofiaPro.bold : _dashVariables.sofiaPro.regular;
+}, function (props) {
+  return props.align === "center" && "text-align: center";
+}, function (props) {
+  return props.align === "left" && "text-align: left";
+}, function (props) {
+  return props.style ? props.style : null;
+});
+
+exports.Sofia = Sofia;
+
+var Circular = _styledComponents["default"].p.withConfig({
+  displayName: "Typography__Circular",
+  componentId: "iyq6bj-5"
+})(["-webkit-font-smoothing:antialiased;letter-spacing:normal;font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+  return props.fontSize ? props.fontSize : "13px";
+}, function (props) {
+  return props.lineHeight ? props.lineHeight : "normal";
+}, function (props) {
+  return props.color ? props.color : _dashVariables.colorPicker.gray;
+}, function (props) {
+  return props.book ? _dashVariables.circularStd.book : props.medium ? _dashVariables.circularStd.medium : props.bold ? _dashVariables.circularStd.bold : _dashVariables.circularStd.book;
+}, function (props) {
+  return props.align === "center" && "text-align: center";
+}, function (props) {
+  return props.align === "left" && "text-align: left";
+}, function (props) {
+  return props.style ? props.style : null;
+});
+
+exports.Circular = Circular;
 var placeholder = {
   fontSize: "18px",
   color: "#DBE1EF",

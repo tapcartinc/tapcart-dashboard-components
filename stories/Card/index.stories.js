@@ -30,12 +30,10 @@ const StyledStatusInfo = styled.div`
 
 const handleClick = (e, option) => {
   e.stopPropagation();
-  console.log("option", option);
 };
 
 const handleCardClick = (e, card) => {
   e.stopPropagation();
-  console.log("card", card);
 };
 
 const options = [

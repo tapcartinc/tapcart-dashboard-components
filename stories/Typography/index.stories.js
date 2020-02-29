@@ -1,5 +1,11 @@
 import React from "react";
-import { Header, Description, Body } from "../../lib/elements/Typography";
+import {
+  Header,
+  Description,
+  Body,
+  Sofia,
+  Circular
+} from "../../lib/elements/Typography";
 import CodeBlock from "../CodeBlock";
 import { colorPicker } from "../../lib/utils/_dashVariables";
 import { Container } from "../../lib/layout/Container";
@@ -19,6 +25,8 @@ export const TypographyStyles = () => (
     <Header>Header</Header>
     <Description>Description</Description>
     <Body>Body</Body>
+    <Sofia>Sofia</Sofia>
+    <Circular>Circular</Circular>
     <br />
     <br />
     <br />
@@ -28,6 +36,7 @@ export const TypographyStyles = () => (
     <Description color={colorPicker.red}>
       Description: Custom color example
     </Description>
+    <Body color={colorPicker.gray}>Body: Custom color example</Body>
     <Body color={colorPicker.gray}>Body: Custom color example</Body>
   </Container>
 );
@@ -174,6 +183,22 @@ export const ApplyingFontStyle = () => {
         Example:
       </Body>
       <CodeBlock value={codeStringFour} />
+    </Container>
+  );
+};
+
+export const FontComponents = () => {
+  return (
+    <Container>
+      <Header align="left">Sofia</Header>
+      <Sofia align="left" color={colorPicker.gray} style={{ marginTop: 20 }}>
+        props: fontSize, lineHeight, color, light, regular, medium, bold, align:
+        ['left' or 'right']
+      </Sofia>
+      <Circular align="left" color={colorPicker.gray} style={{ marginTop: 20 }}>
+        props: fontSize, lineHeight, color, book, medium, bold, align: ['left'
+        or 'right']
+      </Circular>
     </Container>
   );
 };
