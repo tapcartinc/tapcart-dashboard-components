@@ -66,8 +66,7 @@ var HoverDropdown = function HoverDropdown(_ref) {
     ref: hoverNode,
     onMouseLeave: function onMouseLeave() {
       return setOpen(false);
-    } // style={{ width: 150, position: "relative" }}
-
+    }
   }, _react["default"].createElement(DropdownHeader, props, children), _react["default"].createElement(ClickableDropdownWrapper, _extends({}, props, {
     open: open
   }), _react["default"].createElement(ClickableDropdown, _extends({}, props, {
@@ -99,7 +98,7 @@ var ClickableDropdownWrapper = _styledComponents["default"].div.withConfig({
 var ClickableDropdown = _styledComponents["default"].ul.withConfig({
   displayName: "HoverDropdown__ClickableDropdown",
   componentId: "bxg8ff-1"
-})(["margin:0px;list-style:none;width:100%;padding:0px;background:white;margin-top:10px;box-shadow:0 0 8px 0 rgba(0,0,0,0.08);", " ", ";"], _dashVariables.sofiaPro.medium, function (props) {
+})(["margin:0px;list-style:none;width:100%;padding:0px;background:white;margin-top:8px;box-shadow:0 0 8px 0 rgba(0,0,0,0.08);", " ", ";"], _dashVariables.sofiaPro.medium, function (props) {
   return props.style ? props.style : null;
 });
 
