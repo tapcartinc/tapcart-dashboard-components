@@ -11,7 +11,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _variables = require("../utils/_variables");
+var _dashVariables = require("../utils/_dashVariables");
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
 
@@ -33,12 +33,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var HoverDropdown = function HoverDropdown(_ref) {
   var options = _ref.options,
-      title = _ref.title;
-
-  for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-    props[_key - 1] = arguments[_key];
-  }
-
+      title = _ref.title,
+      children = _ref.children;
   var hoverNode = (0, _react.useRef)();
 
   var _useState = (0, _react.useState)(false),
@@ -59,6 +55,10 @@ var HoverDropdown = function HoverDropdown(_ref) {
     }
   };
 
+  for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    props[_key - 1] = arguments[_key];
+  }
+
   return _react["default"].createElement("div", {
     onMouseEnter: function onMouseEnter() {
       return setOpen(true);
@@ -66,55 +66,78 @@ var HoverDropdown = function HoverDropdown(_ref) {
     ref: hoverNode,
     onMouseLeave: function onMouseLeave() {
       return setOpen(false);
-    },
-    style: {
-      width: 150,
-      position: "relative"
-    }
-  }, _react["default"].createElement(DropdownHeader, props, title), _react["default"].createElement(ClickableDropdown, _extends({}, props, {
+    } // style={{ width: 150, position: "relative" }}
+
+  }, _react["default"].createElement(DropdownHeader, props, children), _react["default"].createElement(ClickableDropdownWrapper, _extends({}, props, {
     open: open
-  }), options.map(function (option) {
+  }), _react["default"].createElement(ClickableDropdown, _extends({}, props, {
+    open: open
+  }), options.map(function (option, index) {
     return _react["default"].createElement(ClickableDropdownItem, {
+      active: option.active,
       onClick: option.onClick,
-      key: option.title
-    }, _react["default"].createElement(DDCircle, props), option.title);
-  })));
+      key: option.title,
+      lastOption: index === options.length - 1,
+      firstOption: index === 0
+    }, option.title);
+  }))));
 };
 
 exports.HoverDropdown = HoverDropdown;
 
+var ClickableDropdownWrapper = _styledComponents["default"].div.withConfig({
+  displayName: "HoverDropdown__ClickableDropdownWrapper",
+  componentId: "bxg8ff-0"
+})(["margin:0px;list-style:none;width:150px;padding:0px;position:absolute;z-index:1;visibility:hidden;margin-top:-20px;opacity:0;transition:all 0.2s ease-in-out;", ";", " ", " ", ";"], function (props) {
+  return props.width && "width: ".concat(props.width);
+}, function (props) {
+  return props.open && "visibility: visible; opacity: 1; margin-top: 0px;";
+}, _dashVariables.sofiaPro.medium, function (props) {
+  return props.style ? props.style : null;
+});
+
 var ClickableDropdown = _styledComponents["default"].ul.withConfig({
   displayName: "HoverDropdown__ClickableDropdown",
-  componentId: "bxg8ff-0"
-})(["margin:0px;list-style:none;background:white;width:150px;", ";padding:0px;color:", ";box-shadow:0 0 8px 0 rgba(0,0,0,0.08);position:absolute;z-index:1;visibility:hidden;margin-top:-20px;opacity:0;transition:all 0.2s ease-in-out;", " ", ";"], _variables.sofia.sofiaMedium, _variables.colors.blue, function (props) {
-  return props.open && "visibility: visible; opacity: 1; margin-top: 0px;";
-}, function (props) {
+  componentId: "bxg8ff-1"
+})(["margin:0px;list-style:none;width:100%;padding:0px;background:white;margin-top:10px;box-shadow:0 0 8px 0 rgba(0,0,0,0.08);", " ", ";"], _dashVariables.sofiaPro.medium, function (props) {
   return props.style ? props.style : null;
 });
 
 var ClickableDropdownItem = _styledComponents["default"].li.withConfig({
   displayName: "HoverDropdown__ClickableDropdownItem",
-  componentId: "bxg8ff-1"
-})(["padding:10px;font-size:18px;text-transform:uppercase;&:hover{cursor:pointer;}display:flex;flex-direction:row;align-items:center;max-width:150px;", ";"], function (props) {
+  componentId: "bxg8ff-2"
+})(["font-size:13px;background:white;display:flex;flex-direction:row;align-items:center;width:100% max-width:150px;padding:15px 17px;&:hover{cursor:pointer;}", ";", ";", ";", ";"], function (props) {
+  return props.firstOption && "margin-top: 10px";
+}, function (props) {
+  return props.active ? "color: ".concat(_dashVariables.colorPicker.blue) : "color: ".concat(_dashVariables.colorPicker.gray);
+}, function (props) {
+  return props.lastOption ? "border-bottom: 1px solid transparent" : "border-bottom: 1px solid ".concat(_dashVariables.colorPicker.gray25);
+}, function (props) {
   return props.style ? props.style : null;
 });
 
 var DropdownHeader = _styledComponents["default"].div.withConfig({
   displayName: "HoverDropdown__DropdownHeader",
-  componentId: "bxg8ff-2"
-})(["padding:10px;width:100px;", ";font-size:20px;color:", ";&:hover{cursor:pointer;}text-transform:uppercase;", ";"], _variables.sofia.sofiaMedium, _variables.colors.blue, function (props) {
-  return props.style ? props.style : null;
-});
-
-var DDCircle = _styledComponents["default"].div.withConfig({
-  displayName: "HoverDropdown__DDCircle",
   componentId: "bxg8ff-3"
-})(["background:transparent;box-shadow:inset 0px 0px 0px 1px ", ";height:10px;width:10px;border-radius:50px;margin-right:15px;", ":hover &{background:", ";box-shadow:none;}", ";"], _variables.colors.blue, ClickableDropdownItem, _variables.colors.blue, function (props) {
+})(["&:hover{cursor:pointer;}", ";"], function (props) {
   return props.style ? props.style : null;
-});
+}); // const DDCircle = styled.div`
+//   background: transparent;
+//   box-shadow: inset 0px 0px 0px 1px ${colorPicker.blue};
+//   height: 10px;
+//   width: 10px;
+//   border-radius: 50px;
+//   margin-right: 15px;
+//   ${ClickableDropdownItem}:hover & {
+//     background: ${colors.blue};
+//     box-shadow: none;
+//   }
+//   ${props => (props.style ? props.style : null)};
+// `;
+
 
 HoverDropdown.propTypes = {
   options: _propTypes["default"].array.isRequired,
-  title: _propTypes["default"].string.isRequired
+  title: _propTypes["default"].string
 };
 HoverDropdown.defaultProps = {};

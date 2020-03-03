@@ -97,7 +97,8 @@ var Input = function Input(_ref) {
     errors: errors ? errors.length >= 0 : undefined
   }, props)), maxLength && _react["default"].createElement(StyledCharCount, {
     charCountHit: props.value.length === props.maxLength,
-    bounce: bounce
+    bounce: bounce,
+    hasInput: value && value.length >= 1
   }, _react["default"].createElement("span", {
     style: bounceStyle
   }, props.value ? props.value.length : 0), "/", props.maxLength));
@@ -124,7 +125,7 @@ var StyledInputWrapper = _styledComponents["default"].div.withConfig({
   return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
 }, function (props) {
   return props.hasInput ? "#ffffff" : _dashVariables.colorPicker.offWhite;
-}, _variables.colors.blue25, function (props) {
+}, _dashVariables.colorPicker.textEmpty, function (props) {
   return props.disabled && "color: ".concat(_dashVariables.colorPicker.grayBlue);
 }, function (props) {
   return props.style ? props.style : null;
@@ -133,8 +134,10 @@ var StyledInputWrapper = _styledComponents["default"].div.withConfig({
 var StyledCharCount = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledCharCount",
   componentId: "l316i3-1"
-})(["position:absolute;text-align:right;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;right:14px;bottom:14px;color:", ";", " font-size:14px;transition:top 0.1s ease 0s;"], _variables.colors.blue, function (props) {
-  return props.charCountHit && "color: ".concat(_variables.colors.red, ";");
+})(["position:absolute;text-align:right;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;right:10px;bottom:13px;color:", ";", " font-size:14px;transition:top 0.1s ease 0s;"], function (props) {
+  return props.hasInput ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray;
+}, function (props) {
+  return props.charCountHit && "color: ".concat(_dashVariables.colorPicker.red, ";");
 });
 
 var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({

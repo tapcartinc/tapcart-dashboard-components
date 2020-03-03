@@ -8,6 +8,7 @@ import {
 } from "@storybook/addon-knobs";
 import { HoverDropdown } from "../../lib/components/HoverDropdown";
 import { ContainerBox } from "../../lib/layout/ContainerBox";
+import { Icon } from "../../lib/elements/Icon";
 import { colors } from "../../lib/utils/_variables";
 
 export default {
@@ -51,7 +52,36 @@ export const hoverDropdown = () => {
       />
       <br />
       <br />
-      <HoverDropdown title="colors" options={colorOptions} />
+      <HoverDropdown
+        title="colors"
+        options={[
+          {
+            title: "Blue",
+            active: false,
+            onClick: () => setColorState(colors.blue)
+          },
+          {
+            title: "Green",
+            active: true,
+            onClick: () => setColorState(colors.green)
+          },
+          {
+            title: "Red",
+            active: false,
+            onClick: () => setColorState(colors.red)
+          },
+          {
+            title: "Yellow",
+            active: false,
+            onClick: () => setColorState(colors.gold)
+          }
+        ]}
+      >
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <Icon iconLeft type="design" dropdown />
+          Dropdown
+        </div>
+      </HoverDropdown>
     </>
   );
 };

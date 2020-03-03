@@ -43,7 +43,8 @@ var colorPicker = {
   yellow: "#F6B343",
   gold: "#d5a83e",
   dullBlue: "#d0ddec",
-  dropdownHover: "#f8fafd"
+  dropdownHover: "#f8fafd",
+  textEmpty: "#dbe1ef"
 };
 exports.colorPicker = colorPicker;
 var defaultGraphColors = [colorPicker.blue, colorPicker.grayBlue, colorPicker.green100, colorPicker.lightBlue, colorPicker.dullBlue];
