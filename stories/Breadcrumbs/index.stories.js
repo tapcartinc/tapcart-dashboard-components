@@ -14,8 +14,7 @@ export const breadcrumbs = () => (
     crumbs={[
       {
         crumb: "Integrations",
-        icon: "integrations",
-        onClick: () => console.log("hi")
+        icon: "integrations"
       },
       // {
       //   crumb: "crumb 2",

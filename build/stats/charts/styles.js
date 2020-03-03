@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledHeatmapTooltip = exports.StyledDifference = exports.StyledStatHeader = exports.StyledDescText = exports.StyledTitle = exports.StyledHeaderChildren = exports.StyledTitleSection = exports.StyledCardHeader = exports.StyledGraphCard = void 0;
+exports.StyledHeatmapTip = exports.StyledHeatmapTooltip = exports.StyledDifference = exports.StyledStatHeader = exports.StyledDescText = exports.StyledTitle = exports.StyledHeaderChildren = exports.StyledTitleSection = exports.StyledCardHeader = exports.StyledGraphCard = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -82,12 +82,14 @@ exports.StyledDifference = StyledDifference;
 var StyledTooltip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledTooltip",
   componentId: "uezup0-8"
-})(["position:relative;background:white;width:70px;padding:15px 10px;text-align:center;transform:translateY(12px);box-shadow:0 0 30px 0 rgba(0,0,0,0.3);&::after{content:\"\";position:absolute;top:100%;left:calc(42%);background:white;width:12px;height:8px;clip-path:polygon(0 0,100% 0,50% 100%);}"]);
+})(["position:relative;background:white;width:70px;padding:3px 8px;border-radius:3px;text-align:center;transform:translateY(12px);box-shadow:0 0 30px 0 rgba(0,0,0,0.3);&::after{content:\"\";position:absolute;top:100%;left:calc(42%);background:white;width:12px;height:8px;clip-path:polygon(0 0,100% 0,50% 100%);}"]);
 
 var StyledHeatmapTip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledHeatmapTip",
   componentId: "uezup0-9"
-})([""]);
+})(["display:flex;flex-direction:column;align-items:flex-start;"]);
+
+exports.StyledHeatmapTip = StyledHeatmapTip;
 
 var StyledHeatmapTooltip = function StyledHeatmapTooltip(props) {
   return _react["default"].createElement(StyledTooltip, props, props.children);

@@ -27,6 +27,8 @@ var _dashVariables = require("../../../utils/_dashVariables");
 
 var _ToolTip = require("../../../components/ToolTip");
 
+var _Typography = require("../../../elements/Typography");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -77,17 +79,12 @@ var HeatMapGraph = function HeatMapGraph(props) {
     return legendDetails;
   };
 
-  var getTimes = function getTimes() {
-    var times = [];
-    var start = 1;
+  var getRange = function getRange(d) {
+    return ">= ".concat(JSON.stringify(d.y).split("")[0], "00");
+  }; // `${formatValue(d.data.metadata.date)} ∙ ${formatValue(
+  //   d.data.value
+  // )}`
 
-    while (start <= 24) {
-      times.push(start);
-      start = start + 1;
-    }
-
-    return times;
-  };
 
   var stacked = props.stacked,
       currency = props.currency,
@@ -122,12 +119,13 @@ var HeatMapGraph = function HeatMapGraph(props) {
         ry: 1,
         tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
           content: function content(d) {
-            console.log("d", d);
-            return _react["default"].createElement(_styles.StyledHeatmapTooltip, null, d.y);
-          } // `${formatValue(d.data.metadata.date)} ∙ ${formatValue(
-          //   d.data.value
-          // )}`
-
+            return _react["default"].createElement(_styles.StyledHeatmapTooltip, null, _react["default"].createElement(_styles.StyledHeatmapTip, null, _react["default"].createElement(_Typography.Sofia, {
+              fontSize: "11px",
+              color: _dashVariables.colorPicker.black
+            }, getRange(d)), _react["default"].createElement(_Typography.Sofia, {
+              color: _dashVariables.colorPicker.blue
+            }, d.y)));
+          }
         })
       }),
       colorScheme: _colors.heatmapColors

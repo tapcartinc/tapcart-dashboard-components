@@ -80,7 +80,8 @@ var Input = function Input(_ref) {
   return _react["default"].createElement(StyledInputWrapper, {
     width: width,
     disabled: disabled,
-    errors: errors
+    errors: errors,
+    hasInput: value && value.length >= 1
   }, label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
   }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement("input", _extends({
@@ -117,11 +118,13 @@ Input.defaultProps = {
 var StyledInputWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledInputWrapper",
   componentId: "l316i3-0"
-})(["position:relative;width:100%;", ";.input-style{border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;", ";", ";}"], function (props) {
+})(["position:relative;width:100%;", ";.input-style{border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:all 0.2s ease-in;", ";", ";}"], function (props) {
   return props.width && "width: ".concat(props.width);
 }, function (props) {
   return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
-}, _variables.colors.offwhite, _variables.colors.blue25, function (props) {
+}, function (props) {
+  return props.hasInput ? "#ffffff" : _dashVariables.colorPicker.offWhite;
+}, _variables.colors.blue25, function (props) {
   return props.disabled && "color: ".concat(_dashVariables.colorPicker.grayBlue);
 }, function (props) {
   return props.style ? props.style : null;

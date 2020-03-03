@@ -153,7 +153,9 @@ function BoxedToggle(props) {
         style: {
           position: "absolute"
         }
-      }, props)), _react["default"].createElement(BoxedToggleLabel, _extends({
+      }, props, {
+        autoComplete: "new-password"
+      })), _react["default"].createElement(BoxedToggleLabel, _extends({
         border: _dashVariables.colorPicker.grayBlue,
         backgroundOn: _dashVariables.colorPicker.green100,
         backgroundOff: _dashVariables.colorPicker.offWhite,
@@ -205,7 +207,8 @@ function BoxedToggle(props) {
         backgroundOff: _dashVariables.colorPicker.blue,
         style: {
           position: "absolute"
-        }
+        },
+        autoComplete: "new-password"
       }, props)), _react["default"].createElement(BoxedToggleLabel, _extends({
         border: _dashVariables.colorPicker.blue,
         backgroundOn: _dashVariables.colorPicker.yellow,
@@ -257,7 +260,8 @@ function BoxedToggle(props) {
         backgroundOff: _dashVariables.colorPicker.androidGreen,
         style: {
           position: "absolute"
-        }
+        },
+        autoComplete: "new-password"
       }, props)), _react["default"].createElement(BoxedToggleLabel, _extends({
         border: _dashVariables.colorPicker.androidGreen,
         backgroundOn: _dashVariables.colorPicker.black,

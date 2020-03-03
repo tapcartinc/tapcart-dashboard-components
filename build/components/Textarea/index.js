@@ -77,7 +77,9 @@ var Textarea = function Textarea(_ref) {
 
   return _react["default"].createElement(StyledTextareaWrapper, _extends({
     errors: errors
-  }, props), label && _react["default"].createElement(StyledLabel, {
+  }, props, {
+    hasInput: value && value.length >= 1
+  }), label && _react["default"].createElement(StyledLabel, {
     errors: errors
   }, errors ? errors[0] : label), _react["default"].createElement("div", {
     style: {
@@ -118,7 +120,9 @@ var StyledTextareaWrapper = _styledComponents["default"].div.withConfig({
   componentId: "eqovuw-0"
 })(["position:relative;width:100%;.input-style{border-radius:3px;", ";background:", ";padding:15px 17px;margin-bottom:40px;line-height:18px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;min-height:125px;overflow-y:scroll;resize:none;", ";}", ";"], function (props) {
   return props.errors ? "border: 1px solid ".concat(_dashVariables.colorPicker.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
-}, _dashVariables.colorPicker.offwhite, _variables.colors.blue25, function (props) {
+}, function (props) {
+  return props.hasInput ? "#ffffff" : _dashVariables.colorPicker.offWhite;
+}, _variables.colors.blue25, function (props) {
   return props.height && "height: ".concat(props.height);
 }, function (props) {
   return props.style ? props.style : null;

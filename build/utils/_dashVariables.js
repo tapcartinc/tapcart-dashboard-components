@@ -26,6 +26,7 @@ exports.circularStd = circularStd;
 var colorPicker = {
   gray50: "#d8d8d8",
   gray25: "#efefef",
+  border2: "#f0f2f5",
   blue: "#373AAF",
   grayBlue: "#BAC4E0",
   lightBlue: "#E3EFFD",
@@ -41,7 +42,8 @@ var colorPicker = {
   red: "#DF4F4E",
   yellow: "#F6B343",
   gold: "#d5a83e",
-  dullBlue: "#d0ddec"
+  dullBlue: "#d0ddec",
+  dropdownHover: "#f8fafd"
 };
 exports.colorPicker = colorPicker;
 var defaultGraphColors = [colorPicker.blue, colorPicker.grayBlue, colorPicker.green100, colorPicker.lightBlue, colorPicker.dullBlue];

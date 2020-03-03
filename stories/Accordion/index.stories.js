@@ -28,7 +28,6 @@ const SectionOne = ({ state, setState, key, ...props }) => {
 };
 const SectionTwo = ({ state, setState, key, ...props }) => {
   const clickOption = option => {
-    console.log("option", option);
     return setState(prevState => ({
       ...prevState,
       currentOption: option

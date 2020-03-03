@@ -91,14 +91,18 @@ exports.Label = Label;
 var Sofia = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Sofia",
   componentId: "iyq6bj-4"
-})(["-webkit-font-smoothing:antialiased;letter-spacing:normal;font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+})(["-webkit-font-smoothing:antialiased;letter-spacing:normal;margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+  return props.marginBottom ? props.marginBottom : "5px";
+}, function (props) {
+  return props.marginTop ? props.marginTop : "5px";
+}, function (props) {
   return props.fontSize ? props.fontSize : "13px";
 }, function (props) {
   return props.lineHeight ? props.lineHeight : "normal";
 }, function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.gray;
 }, function (props) {
-  return props.light ? _dashVariables.sofiaPro.light : props.regular ? _dashVariables.sofiaPro.regular : props.medium ? _dashVariables.sofiaPro.medium : props.bold ? _dashVariables.sofiaPro.bold : _dashVariables.sofiaPro.regular;
+  return props.light ? _dashVariables.sofiaPro.light : props.regular ? _dashVariables.sofiaPro.regular : props.medium ? _dashVariables.sofiaPro.medium : props.bold ? _dashVariables.sofiaPro.bold : _dashVariables.sofiaPro.medium;
 }, function (props) {
   return props.align === "center" && "text-align: center";
 }, function (props) {
@@ -112,7 +116,11 @@ exports.Sofia = Sofia;
 var Circular = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Circular",
   componentId: "iyq6bj-5"
-})(["-webkit-font-smoothing:antialiased;letter-spacing:normal;font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+})(["-webkit-font-smoothing:antialiased;letter-spacing:normal;margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+  return props.marginBottom ? props.marginBottom : "5px";
+}, function (props) {
+  return props.marginTop ? props.marginTop : "5px";
+}, function (props) {
   return props.fontSize ? props.fontSize : "13px";
 }, function (props) {
   return props.lineHeight ? props.lineHeight : "normal";

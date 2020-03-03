@@ -47,7 +47,7 @@ var getColors = function getColors(kind) {
       return {
         color: _dashVariables.colorPicker.black,
         background: "transparent",
-        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.gray)
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.border2)
       };
 
     case "delete":

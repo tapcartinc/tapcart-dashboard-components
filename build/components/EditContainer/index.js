@@ -56,7 +56,8 @@ var EditContainer = function EditContainer(props) {
     }
   };
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(DropDownSection, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(DropDownSection, _extends({}, props, {
+    disabled: props.disabled,
     onMouseEnter: function onMouseEnter() {
       return setOpen(true);
     },
@@ -64,8 +65,9 @@ var EditContainer = function EditContainer(props) {
     onMouseLeave: function onMouseLeave() {
       return setOpen(false);
     }
-  }, _react["default"].createElement(DropdownHeader, _extends({}, props, {
-    open: open
+  }), _react["default"].createElement(DropdownHeader, _extends({}, props, {
+    open: open,
+    disabled: props.disabled
   }), props.children), _react["default"].createElement(ClickableDropdown, _extends({}, props, {
     open: open,
     top: props.top,
@@ -191,12 +193,16 @@ exports.EditContainer = EditContainer;
 var DropDownSection = _styledComponents["default"].div.withConfig({
   displayName: "EditContainer__DropDownSection",
   componentId: "sc-1mizre-0"
-})(["position:relative;display:inline-block;overflow:visible;width:auto;"]);
+})(["", ";position:relative;display:inline-block;overflow:visible;width:auto;", ""], function (props) {
+  return props.disabled && "display: none;";
+}, function (props) {
+  return props.style ? props.style : null;
+});
 
 var ClickableDropdown = _styledComponents["default"].div.withConfig({
   displayName: "EditContainer__ClickableDropdown",
   componentId: "sc-1mizre-1"
-})(["margin:0px;list-style:none;width:200px;", " padding:0px;color:", ";box-shadow:", ";position:absolute;z-index:1;visibility:hidden;top:", ";right:0;opacity:0;transition:all 0.2s ease-in-out;", " ", ";", ";ul{background:white;width:200px;margin-left:5px;border-radius:3px;overflow:hidden;}"], _variables.sofia.sofiaMedium, _variables.colors.blue, _variables.boxShadow.medium, function (props) {
+})(["margin:0px;list-style:none;width:200px;", " padding:0px;color:", ";position:absolute;z-index:1;visibility:hidden;top:", ";right:0;opacity:0;transition:all 0.2s ease-in-out;", " ", ";", ";ul{background:white;width:195px;margin-left:5px;border-radius:3px;overflow:hidden;box-shadow:", ";}"], _variables.sofia.sofiaMedium, _variables.colors.blue, function (props) {
   return props.top ? props.top : "0";
 }, function (props) {
   return props.open && "visibility: visible; opacity: 1; right: -200px;";
@@ -204,7 +210,7 @@ var ClickableDropdown = _styledComponents["default"].div.withConfig({
   return props.style ? props.style : null;
 }, function (props) {
   return props.disabled && "display: none";
-});
+}, _variables.boxShadow.medium);
 
 var StyledListItem = _styledComponents["default"].li.withConfig({
   displayName: "EditContainer__StyledListItem",
@@ -216,7 +222,9 @@ var StyledListItem = _styledComponents["default"].li.withConfig({
 var DropdownHeader = _styledComponents["default"].div.withConfig({
   displayName: "EditContainer__DropdownHeader",
   componentId: "sc-1mizre-3"
-})(["position:relative;z-index:5;&:hover{cursor:pointer;}", ";"], function (props) {
+})(["position:relative;z-index:5;&:hover{cursor:pointer;", ";}", ";"], function (props) {
+  return props.disabled && "cursor: default";
+}, function (props) {
   return props.style ? props.style : null;
 });
 

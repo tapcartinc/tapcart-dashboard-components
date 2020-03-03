@@ -33,7 +33,8 @@ function Toggle(props) {
     id: "toggle",
     checked: props.value,
     onChange: props.onToggle,
-    name: props.name
+    name: props.name,
+    autoComplete: "off"
   }), _react["default"].createElement(ToggleLabel, _extends({
     htmlFor: "toggle"
   }, props)));
