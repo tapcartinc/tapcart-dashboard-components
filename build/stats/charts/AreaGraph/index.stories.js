@@ -49,18 +49,18 @@ var areaGraph = function areaGraph() {
     data: _stackedData["default"],
     statValues: statInfo,
     currency: "$",
-    title: "Sales over Time" // percentageDifference={}
-
+    title: "Sales over Time",
+    gradient: true
   }), _react["default"].createElement(_index.AreaGraph, {
     tooltip: {
       text: "tooltip text",
       color: _dashVariables.colorPicker.grayBlue
     },
-    colors: [_dashVariables.colorPicker.green100],
-    stacked: false,
-    data: _singularData["default"],
-    currency: "$",
-    title: "Sales over Time"
+    colors: ["#4cb7c5", "#02018c"],
+    stacked: true,
+    data: _stackedData["default"],
+    title: "Sessions by New vs. Returning",
+    fillColors: true
   }), _react["default"].createElement(_index2.HeatMapGraph, {
     tooltip: {
       text: "tooltip text",

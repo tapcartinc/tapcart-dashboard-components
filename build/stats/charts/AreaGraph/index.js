@@ -13,6 +13,8 @@ var _reaviz = require("reaviz");
 
 var _styles = require("../styles");
 
+var _Typography = require("../../../elements/Typography");
+
 var _ToolTip = require("../../../components/ToolTip");
 
 var _moment = _interopRequireDefault(require("moment"));
@@ -104,7 +106,9 @@ var AreaGraph = function AreaGraph(props) {
       colors = props.colors,
       tooltip = props.tooltip,
       statValues = props.statValues,
-      title = props.title;
+      title = props.title,
+      gradient = props.gradient,
+      fillColors = props.fillColors;
 
   var setRange = function setRange() {
     state.data.map(function (dataSet, index) {
@@ -157,9 +161,13 @@ var AreaGraph = function AreaGraph(props) {
   }, "\u2191"), statValues.currentPeriodTotal < statValues.previousPeriodTotal && _react["default"].createElement("span", {
     className: "arrow"
   }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statValues.previousPeriodTotal).toLocaleString(), " (", statValues.percentageDifference, "%)"))), _react["default"].createElement(GraphDetails, {
+    currency: currency,
     stacked: stacked,
     data: state.data,
-    getColorScheme: getColorScheme
+    gradient: gradient,
+    fillColors: fillColors,
+    getColorScheme: getColorScheme,
+    colors: colors
   }));
 };
 
@@ -167,8 +175,13 @@ exports.AreaGraph = AreaGraph;
 
 var GraphDetails = function GraphDetails(_ref) {
   var data = _ref.data,
+      currency = _ref.currency,
       getColorScheme = _ref.getColorScheme,
-      stacked = _ref.stacked;
+      stacked = _ref.stacked,
+      gradient = _ref.gradient,
+      fillColors = _ref.fillColors,
+      colors = _ref.colors;
+  console.log("fillColors", fillColors);
 
   if (data && data.length) {
     switch (stacked) {
@@ -212,41 +225,60 @@ var GraphDetails = function GraphDetails(_ref) {
             interpolation: "linear",
             colorScheme: getColorScheme(),
             tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
+              placement: "top",
               tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
+                placement: "top",
                 followCursor: true,
-                modifiers: {
-                  offset: "5px, 5px"
-                },
-                content: function content(data, color) {
-                  return _react["default"].createElement(_reaviz.TooltipTemplate, {
-                    color: color // value={{
-                    //   x: formatValue(data.x),
-                    //   y: `${formatValue(Math.abs(data.data[0].y))}`
-                    // }}
-
-                  });
+                content: function content(d) {
+                  console.log("d", d);
+                  return _react["default"].createElement(_styles.StyledTooltip, {
+                    width: "130px"
+                  }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, {
+                    marginBottom: "2px",
+                    marginTop: "5px",
+                    fontSize: "11px",
+                    color: _dashVariables.colorPicker.black
+                  }, (0, _moment["default"])(d.x).format("MMM D")), _react["default"].createElement(_Typography.Sofia, _defineProperty({
+                    marginBottom: "5px",
+                    marginTop: "0px",
+                    fontSize: "11px",
+                    color: _dashVariables.colorPicker.blue
+                  }, "fontSize", "13px"), currency && _react["default"].createElement("span", null, currency), d.data[0].value.toLocaleString())), _react["default"].createElement(_styles.StyledRightTooltip, {
+                    upShift: d.data[0].value >= d.data[1].value
+                  }, _react["default"].createElement(_Typography.Sofia, {
+                    marginBottom: "0px",
+                    color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
+                  }, d.data[0].value > d.data[1].value && _react["default"].createElement("span", null, "\u2191"), d.data[0].value < d.data[1].value && _react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(d.data[0].value) - Number(d.data[1].value)) / ((Number(d.data[0].value) + Number(d.data[1].value)) / 2) * 100).toFixed(2)), "%"), _react["default"].createElement(_Typography.Sofia, {
+                    marginTop: "0px",
+                    fontSize: "10px",
+                    color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
+                  }, "prev period"))));
                 }
               })
             }, "helllo"),
             area: _react["default"].createElement(_reaviz.Area, {
-              style: function style(data) {
+              style: function style(data, idx) {
                 return data && data.length && data[0] && data[0].key === "Current Period" ? {
-                  opacity: 0.7
+                  opacity: fillColors ? 1 : 0.7,
+                  fill: getColorScheme()[0]
                 } : {
-                  opacity: 0
+                  opacity: fillColors ? 1 : 0,
+                  fill: getColorScheme()[0]
                 };
               },
-              gradient: _react["default"].createElement(_reaviz.Gradient, {
+              mask: !fillColors ? _react["default"].createElement(_reaviz.Gradient, {
                 stops: [_react["default"].createElement(_reaviz.GradientStop, {
-                  offset: "0%",
+                  offset: "10%",
+                  color: getColorScheme()[0],
                   stopOpacity: 0,
-                  key: "stop"
-                }), _react["default"].createElement(_reaviz.GradientStop, {
-                  offset: "90%",
-                  stopOpacity: 0.3,
                   key: "start"
+                }), _react["default"].createElement(_reaviz.GradientStop, {
+                  offset: "80%",
+                  color: getColorScheme()[0],
+                  stopOpacity: gradient ? 1 : 0,
+                  key: "stop"
                 })]
-              })
+              }) : null
             }),
             line: _react["default"].createElement(_reaviz.Line, {
               strokeWidth: 3
@@ -289,7 +321,10 @@ var GraphDetails = function GraphDetails(_ref) {
             })
           }),
           series: _react["default"].createElement(_reaviz.LineSeries, {
-            colorScheme: getColorScheme()
+            colorScheme: getColorScheme(),
+            symbols: _react["default"].createElement(_reaviz.PointSeries, {
+              show: "hover"
+            })
           }),
           data: data
         });

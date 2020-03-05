@@ -92,7 +92,7 @@ function ModalType(props) {
           marginBottom: 20,
           marginTop: 20
         }
-      }, _react["default"].createElement(_Typography.Header, null, props.title), props.description && _react["default"].createElement(_Typography.Description, null, props.description)), _react["default"].createElement(StyledDashModalContent, null, props.children), props.buttonText && _react["default"].createElement(_Button.Button, {
+      }, _react["default"].createElement(_Typography.Header, null, props.header), props.description && _react["default"].createElement(_Typography.Description, null, props.description)), _react["default"].createElement(StyledDashModalContent, null, props.children), props.buttonText && _react["default"].createElement(_Button.Button, {
         isDisabled: props.saveDisabled,
         onClick: props.save
       }, props.buttonText)));
@@ -112,13 +112,13 @@ function ModalType(props) {
         style: {
           marginLeft: 10
         }
-      }, props.title))), _react["default"].createElement("div", {
+      }, props.header))), _react["default"].createElement("div", {
         style: {
           marginLeft: 5
         }
       }, props.children), _react["default"].createElement("br", null), _react["default"].createElement("br", null), _react["default"].createElement(ButtonsStyle, null, props.buttons && props.buttons.map(function (button, idx) {
         return _react["default"].createElement("div", {
-          key: "".concat(button.type, "-").concat(button.button, "-").concat(props.title),
+          key: "".concat(button.type, "-").concat(button.button, "-").concat(props.header),
           style: idx !== 0 ? {
             marginLeft: 15
           } : null
@@ -151,7 +151,7 @@ function ModalType(props) {
         style: {
           marginLeft: 15
         }
-      }, props.title)), _react["default"].createElement(CloseIcon, {
+      }, props.header)), _react["default"].createElement(CloseIcon, {
         fill: _variables.colors.grayText,
         type: "small-close",
         onClick: props.closeModal
@@ -161,7 +161,7 @@ function ModalType(props) {
         }
       }, props.children), _react["default"].createElement(ButtonsStyle, null, props.buttons && props.buttons.map(function (button, idx) {
         return _react["default"].createElement("div", {
-          key: "".concat(button.type, "-").concat(button.button, "-").concat(props.title),
+          key: "".concat(button.type, "-").concat(button.button, "-").concat(props.header),
           style: idx !== 0 ? {
             marginLeft: 15
           } : null
@@ -284,7 +284,7 @@ Modal.propTypes = {
   /**
    * Modal header
    */
-  title: _propTypes["default"].string,
+  header: _propTypes["default"].string,
 
   /**
    * Text rendered under modal header

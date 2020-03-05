@@ -22,7 +22,7 @@ export const alertModal = () => {
         type="alert"
         isOpen={open}
         confetti
-        title="Deactivate"
+        header="Deactivate"
         success={open}
         size={useWindowSize()}
         icon="alert"
@@ -71,7 +71,7 @@ export const alertModal = () => {
 //         closeModal={() => toggleGraphicModal(false)}
 //         type="modal-with-graphic"
 //         icon="design"
-//         title="Change the Cat Selfie"
+//         header="Change the Cat Selfie"
 //         buttons={[
 //           {
 //             button: "Cat 1",
@@ -125,7 +125,7 @@ export const alertModal = () => {
 //         closeModal={() => toggleFullModal(false)}
 //         type="generic"
 //         icon="design"
-//         title="Change the Cat Selfie"
+//         header="Change the Cat Selfie"
 //       >
 //         <Body color={colors.black}>Want to change the cat selfie?</Body>
 //         <Body color={colors.grayText}>
@@ -148,7 +148,7 @@ export const alertModal = () => {
 //         isOpen={dashModal}
 //         closeModal={() => toggleDashModal(false)}
 //         type="dash"
-//         title="Countdown Timer Block"
+//         header="Countdown Timer Block"
 //         description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
 //         onClick={() => console.log("hi")}
 //         buttonText="SAVE BLOCK"

@@ -40,6 +40,7 @@ var colorPicker = {
   green50: "#E0FBF6",
   androidGreen: "#A3C73B",
   red: "#DF4F4E",
+  redTint: "#f4c9c9",
   yellow: "#F6B343",
   gold: "#d5a83e",
   dullBlue: "#d0ddec",

@@ -69,7 +69,7 @@ var HeatMapGraph = function HeatMapGraph(props) {
 
     while (start <= 800) {
       var details = {};
-      details["key"] = ">= ".concat(start);
+      details["key"] = "\u2265 ".concat(start);
       details["color"] = _colors.heatmapColors[index];
       legendDetails.push(details);
       start = start + 100;
@@ -109,17 +109,19 @@ var HeatMapGraph = function HeatMapGraph(props) {
   }, "\u2191"), statValues.currentPeriodTotal < statValues.previousPeriodTotal && _react["default"].createElement("span", {
     className: "arrow"
   }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statValues.previousPeriodTotal).toLocaleString(), " (", statValues.percentageDifference, "%)"))), _react["default"].createElement(_reaviz.Heatmap, {
-    height: 185,
+    height: 195,
     width: 515,
     data: state.dataToo,
     series: _react["default"].createElement(_reaviz.HeatmapSeries, {
-      padding: 0.13,
+      padding: 0.14,
       cell: _react["default"].createElement(_reaviz.HeatmapCell, {
         rx: 1,
         ry: 1,
         tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
           content: function content(d) {
-            return _react["default"].createElement(_styles.StyledHeatmapTooltip, null, _react["default"].createElement(_styles.StyledHeatmapTip, null, _react["default"].createElement(_Typography.Sofia, {
+            return _react["default"].createElement(_styles.StyledTooltip, {
+              width: "70px"
+            }, _react["default"].createElement(_styles.StyledHeatmapTip, null, _react["default"].createElement(_Typography.Sofia, {
               fontSize: "11px",
               color: _dashVariables.colorPicker.black
             }, getRange(d)), _react["default"].createElement(_Typography.Sofia, {
@@ -142,26 +144,12 @@ var HeatMapGraph = function HeatMapGraph(props) {
       tickSeries: _react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
         line: null,
         label: _react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
-          padding: 5
+          padding: 10
         })
       })
     })
-  }), sequentialData() && _react["default"].createElement(_reaviz.DiscreteLegend, {
-    orientation: "horizontal",
-    entries: sequentialData().map(function (entry) {
-      return _react["default"].createElement(_reaviz.DiscreteLegendEntry, {
-        key: entry.key,
-        label: "".concat(entry.key),
-        color: entry.color,
-        orientation: "horizontal",
-        symbol: _react["default"].createElement(Icon, {
-          fill: entry.color
-        })
-      });
-    }),
-    style: {
-      height: "35px"
-    }
+  }), _react["default"].createElement(_styles.StyledCustomLegend, {
+    data: sequentialData()
   }));
 };
 
