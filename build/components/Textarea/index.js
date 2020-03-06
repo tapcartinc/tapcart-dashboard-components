@@ -123,7 +123,7 @@ var StyledTextareaWrapper = _styledComponents["default"].div.withConfig({
   return props.errors ? "border: 1px solid ".concat(_dashVariables.colorPicker.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
 }, function (props) {
   return props.hasInput ? "#ffffff" : _dashVariables.colorPicker.offWhite;
-}, _dashVariables.colorPicker.textEmpty, function (props) {
+}, _dashVariables.colorPicker.gray, function (props) {
   return props.height && "height: ".concat(props.height);
 }, function (props) {
   return props.style ? props.style : null;

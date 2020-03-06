@@ -181,8 +181,8 @@ var GraphDetails = function GraphDetails(_ref) {
       gradient = _ref.gradient,
       fillColors = _ref.fillColors,
       colors = _ref.colors;
-  console.log("fillColors", fillColors);
 
+  // console.log("fillColors", fillColors);
   if (data && data.length) {
     switch (stacked) {
       case true:
@@ -222,15 +222,14 @@ var GraphDetails = function GraphDetails(_ref) {
           }),
           series: _react["default"].createElement(_reaviz.StackedAreaSeries, {
             type: "grouped",
-            interpolation: "linear",
+            interpolation: "smooth",
             colorScheme: getColorScheme(),
             tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
               placement: "top",
               tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
                 placement: "top",
                 followCursor: true,
-                content: function content(d) {
-                  console.log("d", d);
+                content: function content(d, ab, b) {
                   return _react["default"].createElement(_styles.StyledTooltip, {
                     width: "130px"
                   }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, {

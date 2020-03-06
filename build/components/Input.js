@@ -125,7 +125,7 @@ var StyledInputWrapper = _styledComponents["default"].div.withConfig({
   return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
 }, function (props) {
   return props.hasInput ? "#ffffff" : _dashVariables.colorPicker.offWhite;
-}, _dashVariables.colorPicker.textEmpty, function (props) {
+}, _dashVariables.colorPicker.gray, function (props) {
   return props.disabled && "color: ".concat(_dashVariables.colorPicker.grayBlue);
 }, function (props) {
   return props.style ? props.style : null;

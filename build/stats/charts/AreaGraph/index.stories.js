@@ -44,6 +44,19 @@ var areaGraph = function areaGraph() {
     title: "Total Sales"
   });
 
+  var cats = [{
+    key: new Date("11/29/2019"),
+    data: 10
+  }, {
+    key: new Date("11/30/2019"),
+    data: 14
+  }, {
+    key: new Date("12/01/2019"),
+    data: 5
+  }, {
+    key: new Date("12/02/2019"),
+    data: 18
+  }];
   return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_index.AreaGraph, {
     stacked: true,
     data: _stackedData["default"],
@@ -57,10 +70,10 @@ var areaGraph = function areaGraph() {
       color: _dashVariables.colorPicker.grayBlue
     },
     colors: ["#4cb7c5", "#02018c"],
-    stacked: true,
-    data: _stackedData["default"],
-    title: "Sessions by New vs. Returning",
-    fillColors: true
+    stacked: false,
+    data: cats,
+    title: "Sessions by New vs. Returning" // fillColors
+
   }), _react["default"].createElement(_index2.HeatMapGraph, {
     tooltip: {
       text: "tooltip text",
