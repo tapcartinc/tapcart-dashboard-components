@@ -33,9 +33,16 @@ function SearchBar(_ref) {
       placeholder = _ref.placeholder,
       props = _objectWithoutProperties(_ref, ["innerRef", "center", "value", "name", "placeholder"]);
 
+  var checkEnter = function checkEnter(e) {
+    if (e.which === 13) {
+      e.preventDefault();
+    }
+  };
+
   return _react["default"].createElement(StyledForm, _extends({
     onSubmit: props.onChange,
-    center: center
+    center: center,
+    onKeyPress: checkEnter
   }, props), _react["default"].createElement(SearchContainer, props, _react["default"].createElement(_Icon.Icon, {
     type: "search",
     style: {
