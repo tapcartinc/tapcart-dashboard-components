@@ -101,7 +101,7 @@ var Accordion = function Accordion(props) {
   }, children.map(function (child, index) {
     var newErrors = {};
     content && state.errors && content[index].requiredValues.map(function (requiredValue) {
-      if (state.errors.hasOwnProperty(Object.keys(requiredValue))) {
+      if (state.errors && requiredValue && state.errors.hasOwnProperty(Object.keys(requiredValue))) {
         newErrors[Object.keys(requiredValue)] = state.errors[Object.keys(requiredValue)];
       }
     });
