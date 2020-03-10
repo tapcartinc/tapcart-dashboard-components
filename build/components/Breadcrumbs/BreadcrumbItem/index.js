@@ -32,7 +32,8 @@ var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
     iconLeft: true,
     iconRight: true,
     style: {
-      marginRight: 15
+      marginRight: 25,
+      marginTop: 3
     },
     fill: active ? _dashVariables.colorPicker.gray : _dashVariables.colorPicker.blue
   }) : null, _react["default"].createElement(BreadcrumbsItemStyle, {
