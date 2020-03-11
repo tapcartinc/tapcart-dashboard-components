@@ -27,13 +27,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 var CardWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardWrapper",
   componentId: "q4rj6f-0"
-})(["box-shadow:", ";position:relative;height:300px;width:100%;margin:15px 0;", ";", ";", ";", ";"], _variables.boxShadow.medium, function (props) {
+})(["box-shadow:", ";position:relative;height:300px;width:100%;margin:15px 0;", ";", ";", ";"], _variables.boxShadow.medium, function (props) {
   return props.columns && "\n  width: ".concat(100 / props.columns - 1.9, "%\n  ");
-}, function (props) {
-  return props.bgColor && "background: ".concat(props.bgColor);
 }, function (props) {
   return props.customWidth && "width: ".concat(customWidth);
 }, function (props) {
@@ -43,7 +45,9 @@ var CardWrapper = _styledComponents["default"].div.withConfig({
 var CardStyle = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardStyle",
   componentId: "q4rj6f-1"
-})(["border-radius:3px;display:flex;flex-direction:column;align-items:center;position:relative;height:100%;width:100%;transition:0.2s ease all;cursor:pointer;&:hover{}", ";"], function (props) {
+})(["border-radius:3px;display:flex;flex-direction:column;align-items:center;position:relative;height:100%;width:100%;transition:0.2s ease all;cursor:pointer;", ";", ";"], function (props) {
+  return props.bgColor && "background: ".concat(props.bgColor);
+}, function (props) {
   return props.style ? props.style : null;
 });
 
@@ -58,9 +62,12 @@ var CardContent = _styledComponents["default"].div.withConfig({
 })(["width:100%;height:22%;padding:14px;border-radius:0px 0px 3px 3px;"]);
 
 var Card = function Card(props) {
-  return _react["default"].createElement(CardWrapper, _extends({}, props, {
-    onClick: props.onClick
-  }), _react["default"].createElement(CardStyle, props, _react["default"].createElement(CardImage, {
+  var onClick = props.onClick,
+      rest = _objectWithoutProperties(props, ["onClick"]);
+
+  return _react["default"].createElement(CardWrapper, _extends({}, rest, {
+    onClick: onClick
+  }), _react["default"].createElement(CardStyle, rest, _react["default"].createElement(CardImage, {
     src: props.image
   }), _react["default"].createElement(CardContent, null, props.children)));
 };

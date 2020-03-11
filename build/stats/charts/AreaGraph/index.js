@@ -180,6 +180,7 @@ var GraphDetails = function GraphDetails(_ref) {
       stacked = _ref.stacked,
       gradient = _ref.gradient,
       fillColors = _ref.fillColors,
+      strokes = _ref.strokes,
       colors = _ref.colors;
 
   // console.log("fillColors", fillColors);
@@ -221,7 +222,7 @@ var GraphDetails = function GraphDetails(_ref) {
             })
           }),
           series: _react["default"].createElement(_reaviz.StackedAreaSeries, {
-            type: "grouped",
+            type: "stacked",
             interpolation: "smooth",
             colorScheme: getColorScheme(),
             tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
@@ -258,13 +259,11 @@ var GraphDetails = function GraphDetails(_ref) {
             area: _react["default"].createElement(_reaviz.Area, {
               style: function style(data, idx) {
                 return data && data.length && data[0] && data[0].key === "Current Period" ? {
-                  opacity: fillColors ? 1 : 0.7,
-                  fill: getColorScheme()[1],
-                  zIndex: -1
+                  opacity: fillColors ? 1 : 0.9,
+                  fill: getColorScheme()[1]
                 } : {
                   opacity: fillColors ? 1 : 0,
-                  fill: getColorScheme()[0],
-                  zIndex: 10
+                  fill: getColorScheme()[0]
                 };
               },
               mask: !fillColors ? _react["default"].createElement(_reaviz.Gradient, {
@@ -282,7 +281,10 @@ var GraphDetails = function GraphDetails(_ref) {
               }) : null
             }),
             line: _react["default"].createElement(_reaviz.Line, {
-              strokeWidth: 3
+              strokeWidth: 3,
+              style: fillColors ? {
+                stroke: "transparent"
+              } : null
             })
           })
         });

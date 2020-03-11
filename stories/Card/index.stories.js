@@ -39,7 +39,7 @@ const handleCardClick = (e, card) => {
 const options = [
   {
     title: "Go Live",
-    onClick: e => handleClick(e, "go-live"),
+    onClick: e => console.log("hey"),
     icon: "go-live"
   },
   {
@@ -71,7 +71,7 @@ export const card = () => (
     <Card
       columns={3}
       image="https://i.imgur.com/8LA1oBL.png"
-      onClick={e => handleCardClick(e, "one")}
+      onClick={e => console.log("hi")}
     >
       <StyledTopRow>
         <DraftStatus status="live" />
@@ -83,7 +83,7 @@ export const card = () => (
     <Card
       columns={3}
       image="https://i.imgur.com/8LA1oBL.png"
-      onClick={e => handleCardClick(e, "two")}
+      onClick={e => console.log("hi")}
     >
       <DraftStatus status="scheduled" />
     </Card>

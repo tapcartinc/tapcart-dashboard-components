@@ -157,7 +157,7 @@ var ClickableDropdownItem = _styledComponents["default"].li.withConfig({
 var DropdownHeader = _styledComponents["default"].div.withConfig({
   displayName: "ClickDropdown__DropdownHeader",
   componentId: "sc-18q6bvz-3"
-})(["width:37px;height:100%;background:white;z-index:100;&:hover{cursor:pointer;}", ";"], function (props) {
+})(["width:37px;height:100%;z-index:100;&:hover{cursor:pointer;}", ";"], function (props) {
   return props.style ? props.style : null;
 });
 
