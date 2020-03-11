@@ -70,10 +70,10 @@ var areaGraph = function areaGraph() {
       color: _dashVariables.colorPicker.grayBlue
     },
     colors: ["#4cb7c5", "#02018c"],
-    stacked: false,
-    data: cats,
-    title: "Sessions by New vs. Returning" // fillColors
-
+    stacked: true,
+    data: _stackedData["default"],
+    title: "Sessions by New vs. Returning",
+    fillColors: true
   }), _react["default"].createElement(_index2.HeatMapGraph, {
     tooltip: {
       text: "tooltip text",

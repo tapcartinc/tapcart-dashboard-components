@@ -30,8 +30,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var CardWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Card__CardWrapper",
   componentId: "q4rj6f-0"
-})(["box-shadow:", ";position:relative;height:300px;width:100%;margin:15px 0;", ";", ";", ";"], _variables.boxShadow.medium, function (props) {
+})(["box-shadow:", ";position:relative;height:300px;width:100%;margin:15px 0;", ";", ";", ";", ";"], _variables.boxShadow.medium, function (props) {
   return props.columns && "\n  width: ".concat(100 / props.columns - 1.9, "%\n  ");
+}, function (props) {
+  return props.bgColor && "background: ".concat(props.bgColor);
 }, function (props) {
   return props.customWidth && "width: ".concat(customWidth);
 }, function (props) {
@@ -74,6 +76,11 @@ Card.propTypes = {
   Function being called when the card is clicked on
   */
   onClick: _propTypes["default"].func,
+
+  /**
+  Adding background color to the card; default renders transparently
+  */
+  bgColor: _propTypes["default"].string,
 
   /**
   The content in the bottom portion of the card

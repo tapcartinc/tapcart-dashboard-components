@@ -259,10 +259,12 @@ var GraphDetails = function GraphDetails(_ref) {
               style: function style(data, idx) {
                 return data && data.length && data[0] && data[0].key === "Current Period" ? {
                   opacity: fillColors ? 1 : 0.7,
-                  fill: getColorScheme()[0]
+                  fill: getColorScheme()[1],
+                  zIndex: -1
                 } : {
                   opacity: fillColors ? 1 : 0,
-                  fill: getColorScheme()[0]
+                  fill: getColorScheme()[0],
+                  zIndex: 10
                 };
               },
               mask: !fillColors ? _react["default"].createElement(_reaviz.Gradient, {
