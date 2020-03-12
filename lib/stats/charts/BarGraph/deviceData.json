@@ -1,10 +1,12 @@
 [
   {
-    "key": "Android Sessions",
-    "data": 3000000
+    "key": "Android",
+    "data": 770000,
+    "id": 0
   },
   {
-    "key": "iOS Sessions",
-    "data": 11100000
+    "key": "iOS",
+    "data": 1320000,
+    "id": 1
   }
 ]
