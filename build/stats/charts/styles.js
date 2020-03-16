@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledRightTooltip = exports.StyledLeftTooltip = exports.StyledAreaMapTooltip = exports.StyledCustomLegend = exports.StyledHeatmapTip = exports.StyledTooltip = exports.StyledDifference = exports.StyledStatHeader = exports.StyledDescText = exports.StyledTitle = exports.StyledHeaderChildren = exports.StyledTitleSection = exports.StyledCardHeader = exports.StyledGraphCard = void 0;
+exports.StyledLevelSquare = exports.StyledRightTooltip = exports.StyledLeftTooltip = exports.StyledAreaMapTooltip = exports.StyledCustomLegend = exports.StyledHeatmapTip = exports.StyledTooltip = exports.StyledDifference = exports.StyledStatHeader = exports.StyledDescText = exports.StyledTitle = exports.StyledHeaderChildren = exports.StyledTitleSection = exports.StyledCardHeader = exports.StyledGraphCard = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -22,17 +22,19 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var StyledGraphCard = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledGraphCard",
   componentId: "uezup0-0"
-})(["background:white;border:1px solid ", ";width:550px;height:350px;border-radius:3px;padding:10px 20px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding-bottom:23px;"], _dashVariables.colorPicker.gray25);
+})(["background:white;border:1px solid ", ";width:550px;height:350px;border-radius:3px;padding:10px 20px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding-bottom:23px;position:relative;"], _dashVariables.colorPicker.gray25);
 
 exports.StyledGraphCard = StyledGraphCard;
 
 var StyledCardHeaderWrapper = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledCardHeaderWrapper",
   componentId: "uezup0-1"
-})(["display:flex;justify-content:space-between;width:100%;"]);
+})(["display:flex;justify-content:space-between;width:100%;", ""], function (props) {
+  return props.style ? props.style : null;
+});
 
 var StyledCardHeader = function StyledCardHeader(props) {
-  return _react["default"].createElement(StyledCardHeaderWrapper, null, props.children);
+  return _react["default"].createElement(StyledCardHeaderWrapper, props, props.children);
 };
 
 exports.StyledCardHeader = StyledCardHeader;
@@ -84,7 +86,7 @@ exports.StyledDifference = StyledDifference;
 var StyledTip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledTip",
   componentId: "uezup0-8"
-})(["position:relative;background:white;width:100%;padding:3px 8px;border-radius:3px;text-align:center;transform:translateY(12px);box-shadow:0 0 20px 0 rgba(0,0,0,0.2);&::after{content:\"\";position:absolute;top:100%;left:calc(42%);background:white;width:12px;height:8px;clip-path:polygon(0 0,100% 0,50% 100%);}", ""], function (props) {
+})(["position:relative;background:white;width:100%;padding:3px 8px;border-radius:3px;text-align:left;transform:translateY(12px);box-shadow:0 0 20px 0 rgba(0,0,0,0.2);&::after{content:\"\";position:absolute;top:100%;left:calc(42%);background:white;width:12px;height:8px;clip-path:polygon(0 0,100% 0,50% 100%);}", ""], function (props) {
   return props.width && "width: ".concat(props.width, ";");
 });
 
@@ -118,14 +120,16 @@ var StyledCustomLegendWrapper = _styledComponents["default"].ul.withConfig({
 var StyledLevelSquare = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledLevelSquare",
   componentId: "uezup0-12"
-})(["height:14px;width:14px;border-radius:2px;margin-right:8px;background:", ";"], function (props) {
+})(["height:14px;width:14px;border-radius:2px;margin-right:0px;background:", ";"], function (props) {
   return props.color;
 });
+
+exports.StyledLevelSquare = StyledLevelSquare;
 
 var StyledLevel = _styledComponents["default"].li.withConfig({
   displayName: "styles__StyledLevel",
   componentId: "uezup0-13"
-})(["display:flex;align-items:center;span{display:inline-block;}"]);
+})(["display:flex;align-items:center;span{display:inline-block;margin-left:8px;}"]);
 
 var StyledCustomLegend = function StyledCustomLegend(props) {
   var data = props.data;
@@ -143,14 +147,14 @@ exports.StyledCustomLegend = StyledCustomLegend;
 var StyledLeftTooltip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledLeftTooltip",
   componentId: "uezup0-14"
-})(["display:flex;flex-direction:column;width:45%;padding-left:5px;align-items:flex-start;justify-content:center;"]);
+})(["display:flex;flex-direction:column;width:45%;padding-left:5px;align-items:flex-start;text-align:center;justify-content:center;"]);
 
 exports.StyledLeftTooltip = StyledLeftTooltip;
 
 var StyledRightTooltip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledRightTooltip",
   componentId: "uezup0-15"
-})(["width:55%;min-height:35px;background:", ";height:100%;border-radius:3px;span{margin-right:3px;}"], function (props) {
+})(["width:55%;min-height:35px;text-align:center;background:", ";height:100%;border-radius:3px;span{margin-right:3px;}"], function (props) {
   return props.upShift ? _dashVariables.colorPicker.green50 : _dashVariables.colorPicker.redTint;
 });
 

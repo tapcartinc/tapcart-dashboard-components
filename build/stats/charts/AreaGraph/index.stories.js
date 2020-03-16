@@ -70,8 +70,71 @@ var areaGraph = function areaGraph() {
       color: _dashVariables.colorPicker.grayBlue
     },
     colors: ["#4cb7c5", "#02018c"],
-    stacked: true,
-    data: _stackedData["default"],
+    stacked: true // data={stackedData}
+    ,
+    data: [{
+      key: "Current",
+      data: [{
+        key: "2020-02-01T07:00:00.000Z",
+        id: "0",
+        data: 485
+      }, {
+        key: "2020-02-02T08:00:00.000Z",
+        id: "1",
+        data: 892
+      }, {
+        key: "2020-02-03T09:00:00.000Z",
+        id: "2",
+        data: 995
+      }, {
+        key: "2020-02-04T10:00:00.000Z",
+        id: "3",
+        data: 791
+      }, {
+        key: "2020-02-05T07:00:00.000Z",
+        id: "4",
+        data: 1163
+      }, {
+        key: "2020-02-06T08:00:00.000Z",
+        id: "5",
+        data: 1261
+      }, {
+        key: "2020-02-07T09:00:00.000Z",
+        id: "6",
+        data: 1592
+      }]
+    }, {
+      key: "Previous",
+      data: [{
+        key: "2020-02-01T07:00:00.000Z",
+        id: "0",
+        data: 321
+      }, {
+        key: "2020-02-02T08:00:00.000Z",
+        id: "1",
+        data: 232
+      }, {
+        key: "2020-02-03T09:00:00.000Z",
+        id: "2",
+        data: 483
+      }, {
+        key: "2020-02-04T10:00:00.000Z",
+        id: "3",
+        data: 229
+      }, {
+        key: "2020-02-05T07:00:00.000Z",
+        id: "4",
+        data: 552
+      }, {
+        key: "2020-02-06T08:00:00.000Z",
+        id: "5",
+        data: 443
+      }, {
+        key: "2020-02-07T09:00:00.000Z",
+        id: "6",
+        data: 1019
+      }]
+    }],
     title: "Sessions by New vs. Returning",
     fillColors: true
   }), _react["default"].createElement(_index2.HeatMapGraph, {

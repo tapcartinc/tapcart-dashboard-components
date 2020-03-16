@@ -16,18 +16,27 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var generateRandomData = function generateRandomData() {
-  var data = [];
-  var start = 0;
-  var end = 24;
-
-  while (start <= end) {
-    var dataSet = {};
-    dataSet["key"] = start;
-    dataSet["data"] = (Math.random() * (1000 - 10) + 10).toFixed(2);
-    data.push(dataSet);
-    start = start + 1;
-  }
-
+  // const data = [];
+  // let start = 0;
+  // const end = 24;
+  // while (start <= end) {
+  //   const dataSet = {};
+  //   dataSet["key"] = start;
+  //   dataSet["data"] = (Math.random() * (1000 - 10) + 10).toFixed(2);
+  //   data.push(dataSet);
+  //   start = start + 1;
+  // }
+  // console.log("data", data);
+  var data = [{
+    key: "Direct",
+    data: (Math.random() * (1000 - 10) + 10).toFixed(2)
+  }, {
+    key: "Push",
+    data: (Math.random() * (1000 - 10) + 10).toFixed(2)
+  }, {
+    key: "Deeplink",
+    data: (Math.random() * (1000 - 10) + 10).toFixed(2)
+  }];
   return data;
 };
 
@@ -69,7 +78,7 @@ var generateDates = function generateDates(rangeStart, rangeFinish) {
   while (start <= end) {
     var dataSet = {};
     dataSet["date"] = start;
-    dataSet["key"] = getDay(start);
+    dataSet["key"] = (0, _moment["default"])(start).format("MMM D");
     dataSet["data"] = generateRandomData();
     heatMapData.push(dataSet);
     start = (0, _moment["default"])(start).add(1, "days");
@@ -153,6 +162,7 @@ var generateDataToo = function generateDataToo() {
   }
 
   return heatMapData;
-};
+}; // console.log("generateDataToo", generateDates());
+
 
 exports.generateDataToo = generateDataToo;

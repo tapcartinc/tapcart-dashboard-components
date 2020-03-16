@@ -168,6 +168,9 @@ var AreaGraph = function AreaGraph(props) {
     fillColors: fillColors,
     getColorScheme: getColorScheme,
     colors: colors
+  }), _react["default"].createElement(Legend, {
+    colors: getColorScheme(),
+    data: state.data
   }));
 };
 
@@ -183,7 +186,20 @@ var GraphDetails = function GraphDetails(_ref) {
       strokes = _ref.strokes,
       colors = _ref.colors;
 
-  // console.log("fillColors", fillColors);
+  var _useState3 = (0, _react.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      keys = _useState4[0],
+      setKeys = _useState4[1];
+
+  (0, _react.useEffect)(function () {
+    var updatedKeys = _toConsumableArray(keys);
+
+    data.map(function (dataSet) {
+      return updatedKeys.push(dataSet.key);
+    });
+    return setKeys(updatedKeys);
+  }, [data]);
+
   if (data && data.length) {
     switch (stacked) {
       case true:
@@ -216,7 +232,7 @@ var GraphDetails = function GraphDetails(_ref) {
               label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
                 padding: 5,
                 format: function format(d) {
-                  return (0, _moment["default"])(d).format("ddd");
+                  return (0, _moment["default"])(d).format("MMM D");
                 }
               })
             })
@@ -255,10 +271,10 @@ var GraphDetails = function GraphDetails(_ref) {
                   }, "prev period"))));
                 }
               })
-            }, "helllo"),
+            }),
             area: _react["default"].createElement(_reaviz.Area, {
               style: function style(data, idx) {
-                return data && data.length && data[0] && data[0].key === "Current Period" ? {
+                return data && data.length && data[0] && data[0].key === keys[0] ? {
                   opacity: fillColors ? 1 : 0.9,
                   fill: getColorScheme()[1]
                 } : {
@@ -338,4 +354,22 @@ var GraphDetails = function GraphDetails(_ref) {
   } else {
     return _react["default"].createElement("div", null, "loading");
   }
+};
+
+var Legend = function Legend(_ref2) {
+  var colors = _ref2.colors,
+      data = _ref2.data;
+  return _react["default"].createElement(_reaviz.DiscreteLegend, {
+    orientation: "horizontal",
+    style: {
+      margin: "0 auto"
+    },
+    entries: data.map(function (dataSet, index) {
+      return _react["default"].createElement(_reaviz.DiscreteLegendEntry, {
+        label: dataSet.key,
+        color: colors[index],
+        symbol: _react["default"].createElement(_styles.StyledLevelSquare, null)
+      });
+    })
+  });
 };

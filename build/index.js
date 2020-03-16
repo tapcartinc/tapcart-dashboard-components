@@ -68,7 +68,9 @@ var _exportNames = {
   ThemeProvider: true,
   useWindowSize: true,
   useEaseIn: true,
-  StatsIcon: true
+  StatsIcon: true,
+  AreaGraph: true,
+  BarGraph: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -460,6 +462,18 @@ Object.defineProperty(exports, "StatsIcon", {
     return _StatsIcon.StatsIcon;
   }
 });
+Object.defineProperty(exports, "AreaGraph", {
+  enumerable: true,
+  get: function get() {
+    return _AreaGraph.AreaGraph;
+  }
+});
+Object.defineProperty(exports, "BarGraph", {
+  enumerable: true,
+  get: function get() {
+    return _BarGraph.BarGraph;
+  }
+});
 
 var _Icon = require("./elements/Icon");
 
@@ -582,5 +596,9 @@ var _useWindowSize = require("./hooks/useWindowSize");
 var _useEaseIn = require("./hooks/useEaseIn");
 
 var _StatsIcon = require("./stats/StatsIcon");
+
+var _AreaGraph = require("./stats/charts/AreaGraph");
+
+var _BarGraph = require("./stats/charts/BarGraph");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
