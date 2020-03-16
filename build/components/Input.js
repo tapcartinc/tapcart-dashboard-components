@@ -112,7 +112,8 @@ Input.propTypes = {
   name: _propTypes["default"].string,
   placeholder: _propTypes["default"].string,
   onChange: _propTypes["default"].func,
-  label: _propTypes["default"].string
+  label: _propTypes["default"].string,
+  type: _propTypes["default"].string
 };
 Input.defaultProps = {
   name: ""
