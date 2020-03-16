@@ -50,7 +50,8 @@ var Input = function Input(_ref) {
       placeholder = props.placeholder,
       maxLength = props.maxLength,
       disabled = props.disabled,
-      width = props.width;
+      width = props.width,
+      type = props.type;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -88,6 +89,7 @@ var Input = function Input(_ref) {
     className: "input-style",
     ref: innerRef,
     value: value,
+    type: type,
     name: name,
     onKeyPress: bounceFunc,
     onKeyUp: unbounceFunc,
