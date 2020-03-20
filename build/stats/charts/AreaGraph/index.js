@@ -55,6 +55,7 @@ function convert(d) {
 }
 
 var convertData = function convertData(data) {
+  console.log("data", data);
   return data && data.reduce(function (acc, dataSet, index) {
     console.log("dataSet", dataSet);
     console.log("acc", acc);
