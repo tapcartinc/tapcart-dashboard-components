@@ -73,7 +73,7 @@ var areaGraph = function areaGraph() {
     stacked: true // data={stackedData}
     ,
     data: [{
-      key: "Current",
+      key: "New",
       data: [{
         key: "2020-02-01T07:00:00.000Z",
         id: "0",
@@ -104,7 +104,7 @@ var areaGraph = function areaGraph() {
         data: 1592
       }]
     }, {
-      key: "Previous",
+      key: "Returning",
       data: [{
         key: "2020-02-01T07:00:00.000Z",
         id: "0",

@@ -30,6 +30,7 @@ var SummaryCard = function SummaryCard(props) {
       data = props.data,
       currency = props.currency;
   var currentColor = currentScore > prevPeriodScore ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red;
+  console.log("data", data);
   return _react["default"].createElement(StyledSummaryCardWrapper, {
     upShift: currentScore > prevPeriodScore
   }, _react["default"].createElement(StyledBorderTop, {

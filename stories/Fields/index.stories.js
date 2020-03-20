@@ -5,6 +5,7 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import { Input } from "../../lib/components/Input";
 import { Fields } from "../../lib/components/Fields";
 import { Field } from "../../lib/components/Field";
+import { Button } from "../../lib/elements/Button";
 import { ImageUploader, SegmentedControl } from "../../lib";
 
 export default {
@@ -213,6 +214,38 @@ export const fields = props => {
             label="Popup Custom Text"
             placeholder="Enter Popup Text"
           />
+        </Field>
+      </Fields>
+
+      <Fields sectionHeader="Mobile web banners">
+        <Field
+          lastField
+          toggleState={state.toggleState}
+          setToggleState={() =>
+            setState(prevState => ({
+              ...prevState,
+              toggleState: !state.toggleState
+            }))
+          }
+          fieldFlow="vertical"
+          label="Mobile web banner"
+          description="Set the marketing copy for your Mobile Web Banner"
+          {...props}
+        >
+          <Input
+            onChange={setInput}
+            value={state.test || ""}
+            label="Popup Custom Text"
+            placeholder="Enter Popup Text"
+          />
+          <Input
+            onChange={setInput}
+            value={state.test || ""}
+            label="Popup Custom Text"
+            placeholder="Enter Popup Text"
+          />
+
+          <Button>Generate</Button>
         </Field>
       </Fields>
     </div>
