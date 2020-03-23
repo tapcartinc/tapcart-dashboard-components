@@ -111,7 +111,8 @@ var AreaGraph = function AreaGraph(props) {
       gradient = props.gradient,
       fillColors = props.fillColors,
       info = props.info,
-      body = props.body;
+      body = props.body,
+      removeCard = props.removeCard;
 
   var setRange = function setRange() {
     state.data.map(function (dataSet, index) {
@@ -147,11 +148,31 @@ var AreaGraph = function AreaGraph(props) {
     }
   };
 
-  return _react["default"].createElement(_styles.StyledGraphCard, null, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
+  return _react["default"].createElement(_styles.StyledGraphCard, {
+    onClick: function onClick() {
+      return removeCard(info.id);
+    }
+  }, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
     className: "title"
   }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(_ToolTip.ToolTip, {
     color: _dashVariables.colorPicker.grayBlue
-  }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY")))), _react["default"].createElement(GraphDetails, {
+  }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
+    return _react["default"].createElement(_styles.StyledHeaderChildren, {
+      key: statInfo.title
+    }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
+      sm: true
+    }, currency && _react["default"].createElement("span", {
+      style: {
+        marginRight: "-4px"
+      }
+    }, currency, " "), Number(statInfo.total).toLocaleString()), _react["default"].createElement(_styles.StyledDifference, {
+      upShift: statInfo.total > statInfo.previousTotal
+    }, statInfo.total > statInfo.previousTotal && _react["default"].createElement("span", {
+      className: "arrow"
+    }, "\u2191"), statInfo.total < statInfo.previousTotal && _react["default"].createElement("span", {
+      className: "arrow"
+    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)"));
+  })), _react["default"].createElement(GraphDetails, {
     currency: currency,
     stacked: stacked,
     data: state.data,
