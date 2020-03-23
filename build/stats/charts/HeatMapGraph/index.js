@@ -81,12 +81,12 @@ var HeatMapGraph = function HeatMapGraph(props) {
   // )}`
 
 
-  var stacked = props.stacked,
-      currency = props.currency,
+  var currency = props.currency,
       colors = props.colors,
       tooltip = props.tooltip,
-      statValues = props.statValues,
-      title = props.title;
+      range = props.range,
+      info = props.info,
+      body = props.body;
   return _react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
