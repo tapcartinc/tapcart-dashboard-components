@@ -11,8 +11,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Icon = require("../../../elements/Icon");
 
-var _generateDates = require("./generateDates");
-
 var _colors = require("../../utils/_colors");
 
 var _d3Time = require("d3-time");
@@ -45,19 +43,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var HeatMapGraph = function HeatMapGraph(props) {
   var _useState = (0, _react.useState)({
-    data: [],
-    dataToo: []
+    data: []
   }),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
       setState = _useState2[1];
 
   (0, _react.useEffect)(function () {
-    var updatedData = (0, _generateDates.generateDates)("2019-01-01T00:00:00", "2019-01-07T00:00:00");
     setState(function () {
       return {
-        data: updatedData,
-        dataToo: (0, _generateDates.generateDataToo)()
+        data: props.data
       };
     });
   }, []);
@@ -92,26 +87,34 @@ var HeatMapGraph = function HeatMapGraph(props) {
       tooltip = props.tooltip,
       statValues = props.statValues,
       title = props.title;
-  return _react["default"].createElement(_styles.StyledGraphCard, null, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
-    className: "title"
-  }, _react["default"].createElement(_styles.StyledTitle, null, title), tooltip && _react["default"].createElement(_ToolTip.ToolTip, {
-    color: _dashVariables.colorPicker.grayBlue
-  }, tooltip && tooltip.text)), _react["default"].createElement(_styles.StyledDescText, null, "Beep Bop Boop - Boop Bop")), statValues && _react["default"].createElement(_styles.StyledHeaderChildren, null, _react["default"].createElement(_styles.StyledDescText, null, statValues.title), _react["default"].createElement(_styles.StyledStatHeader, {
-    sm: true
-  }, currency && _react["default"].createElement("span", {
-    style: {
-      marginRight: "-4px"
+  return _react["default"].createElement(_styles.StyledGraphCard, {
+    onClick: function onClick() {
+      return removeCard(info);
     }
-  }, currency, " "), Number(statValues.currentPeriodTotal).toLocaleString()), statValues && _react["default"].createElement(_styles.StyledDifference, {
-    upShift: statValues.currentPeriodTotal > statValues.previousPeriodTotal
-  }, statValues.currentPeriodTotal > statValues.previousPeriodTotal && _react["default"].createElement("span", {
-    className: "arrow"
-  }, "\u2191"), statValues.currentPeriodTotal < statValues.previousPeriodTotal && _react["default"].createElement("span", {
-    className: "arrow"
-  }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statValues.previousPeriodTotal).toLocaleString(), " (", statValues.percentageDifference, "%)"))), _react["default"].createElement(_reaviz.Heatmap, {
+  }, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
+    className: "title"
+  }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(_ToolTip.ToolTip, {
+    color: _dashVariables.colorPicker.grayBlue
+  }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
+    return _react["default"].createElement(_styles.StyledHeaderChildren, {
+      key: statInfo.title
+    }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
+      sm: true
+    }, currency && _react["default"].createElement("span", {
+      style: {
+        marginRight: "-4px"
+      }
+    }, currency, " "), Number(statInfo.total).toLocaleString()), _react["default"].createElement(_styles.StyledDifference, {
+      upShift: statInfo.total > statInfo.previousTotal
+    }, statInfo.total > statInfo.previousTotal && _react["default"].createElement("span", {
+      className: "arrow"
+    }, "\u2191"), statInfo.total < statInfo.previousTotal && _react["default"].createElement("span", {
+      className: "arrow"
+    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)"));
+  })), _react["default"].createElement(_reaviz.Heatmap, {
     height: 195,
     width: 515,
-    data: state.dataToo,
+    data: state.data,
     series: _react["default"].createElement(_reaviz.HeatmapSeries, {
       padding: 0.14,
       cell: _react["default"].createElement(_reaviz.HeatmapCell, {

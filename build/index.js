@@ -70,7 +70,8 @@ var _exportNames = {
   useEaseIn: true,
   StatsIcon: true,
   AreaGraph: true,
-  BarGraph: true
+  BarGraph: true,
+  HeatMapGraph: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -474,6 +475,12 @@ Object.defineProperty(exports, "BarGraph", {
     return _BarGraph.BarGraph;
   }
 });
+Object.defineProperty(exports, "HeatMapGraph", {
+  enumerable: true,
+  get: function get() {
+    return _HeatMapGraph.HeatMapGraph;
+  }
+});
 
 var _Icon = require("./elements/Icon");
 
@@ -600,5 +607,7 @@ var _StatsIcon = require("./stats/StatsIcon");
 var _AreaGraph = require("./stats/charts/AreaGraph");
 
 var _BarGraph = require("./stats/charts/BarGraph");
+
+var _HeatMapGraph = require("./stats/charts/HeatMapGraph");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

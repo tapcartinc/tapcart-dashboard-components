@@ -101,7 +101,6 @@ var AreaGraph = function AreaGraph(props) {
     }
   }, [props.data, state.data]);
   var previousData = currentData.current;
-  console.log("props", props);
   var stacked = props.stacked,
       currency = props.currency,
       colors = props.colors,
@@ -201,9 +200,9 @@ var GraphDetails = function GraphDetails(_ref) {
   var _useState3 = (0, _react.useState)([]),
       _useState4 = _slicedToArray(_useState3, 2),
       keys = _useState4[0],
-      setKeys = _useState4[1];
+      setKeys = _useState4[1]; // console.log("data", data);
 
-  console.log("data", data);
+
   (0, _react.useEffect)(function () {
     var updatedKeys = _toConsumableArray(keys);
 
