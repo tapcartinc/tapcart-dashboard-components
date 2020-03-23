@@ -167,7 +167,7 @@ var AreaGraph = function AreaGraph(props) {
     colors: colors
   }), _react["default"].createElement(Legend, {
     colors: getColorScheme(),
-    data: updatedData.data
+    data: updatedData
   }));
 };
 
