@@ -107,7 +107,7 @@ var AreaGraph = function AreaGraph(props) {
       colors = props.colors,
       tooltip = props.tooltip,
       statValues = props.statValues,
-      title = props.title,
+      range = props.range,
       gradient = props.gradient,
       fillColors = props.fillColors,
       info = props.info,
@@ -147,7 +147,11 @@ var AreaGraph = function AreaGraph(props) {
     }
   };
 
-  return _react["default"].createElement(_styles.StyledGraphCard, null, _react["default"].createElement(GraphDetails, {
+  return _react["default"].createElement(_styles.StyledGraphCard, null, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
+    className: "title"
+  }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(_ToolTip.ToolTip, {
+    color: _dashVariables.colorPicker.grayBlue
+  }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY")))), _react["default"].createElement(GraphDetails, {
     currency: currency,
     stacked: stacked,
     data: state.data,
