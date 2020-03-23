@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -47,20 +49,13 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 function convert(d) {
   var date = (0, _moment["default"])(d).toDate();
-  console.log("HERE", date);
-  console.log("typeof", _typeof(date));
   return date;
 }
 
 var convertData = function convertData(data) {
-  // console.log("data", data);
   return data && data.reduce(function (acc, dataSet, index) {
-    // console.log("dataSet", dataSet);
-    // console.log("acc", acc);
     if (dataSet.data.length) {
       return [].concat(_toConsumableArray(acc), [{
         key: dataSet.key,
@@ -89,7 +84,6 @@ var AreaGraph = function AreaGraph(props) {
       state = _useState2[0],
       setState = _useState2[1];
 
-  console.log("state.data && state.data", state.data && state.data);
   var currentData = (0, _react.useRef)();
   (0, _react.useEffect)(function () {
     currentData.current = state.data;
@@ -107,6 +101,7 @@ var AreaGraph = function AreaGraph(props) {
     }
   }, [props.data, state.data]);
   var previousData = currentData.current;
+  console.log("props", props);
   var stacked = props.stacked,
       currency = props.currency,
       colors = props.colors,
@@ -114,7 +109,9 @@ var AreaGraph = function AreaGraph(props) {
       statValues = props.statValues,
       title = props.title,
       gradient = props.gradient,
-      fillColors = props.fillColors;
+      fillColors = props.fillColors,
+      info = props.info,
+      body = props.body;
 
   var setRange = function setRange() {
     state.data.map(function (dataSet, index) {
