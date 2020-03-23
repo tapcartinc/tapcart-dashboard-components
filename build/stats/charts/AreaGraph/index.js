@@ -51,12 +51,10 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 function convert(d) {
   var date = (0, _moment["default"])(d).toDate();
-  console.log("HERE", date);
   return date;
 }
 
 var convertData = function convertData(data) {
-  // console.log("data", data);
   return data && data.reduce(function (acc, dataSet, index) {
     if (dataSet.data.length) {
       return [].concat(_toConsumableArray(acc), [{
@@ -225,7 +223,7 @@ var GraphDetails = function GraphDetails(_ref) {
             })
           }),
           series: _react["default"].createElement(_reaviz.StackedAreaSeries, {
-            type: "stacked",
+            type: "grouped",
             interpolation: "smooth",
             colorScheme: getColorScheme(),
             tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
@@ -261,14 +259,42 @@ var GraphDetails = function GraphDetails(_ref) {
             }),
             area: _react["default"].createElement(_reaviz.Area, {
               style: function style(data, idx) {
-                return data && data.length && data[0] && data[0].key === keys[0] ? {
-                  opacity: fillColors ? 1 : 0.9,
+                return data && data.length && data[0] && data[0].key === keys[0] ? // ? {
+                //     opacity: fillColors ? 1 : 0.9,
+                //     fill: getColorScheme()[1]
+                //   }
+                // : {
+                //     opacity: fillColors ? 1 : 0,
+                //     fill: getColorScheme()[0]
+                //   }
+                {
+                  opacity: 0.9,
                   fill: getColorScheme()[1]
                 } : {
-                  opacity: fillColors ? 1 : 0,
+                  opacity: 0,
                   fill: getColorScheme()[0]
                 };
-              },
+              } // mask={
+              //   !fillColors ? (
+              //     <Gradient
+              //       stops={[
+              //         <GradientStop
+              //           offset="10%"
+              //           color={getColorScheme()[0]}
+              //           stopOpacity={0}
+              //           key="start"
+              //         />,
+              //         <GradientStop
+              //           offset="80%"
+              //           color={getColorScheme()[0]}
+              //           stopOpacity={gradient ? 1 : 0}
+              //           key="stop"
+              //         />
+              //       ]}
+              //     />
+              //   ) : null
+              // }
+              ,
               mask: !fillColors ? _react["default"].createElement(_reaviz.Gradient, {
                 stops: [_react["default"].createElement(_reaviz.GradientStop, {
                   offset: "10%",
