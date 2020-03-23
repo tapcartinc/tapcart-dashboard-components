@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -39,8 +41,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -60,8 +60,6 @@ var convertData = function convertData(data) {
       return [].concat(_toConsumableArray(acc), [{
         key: dataSet.key,
         data: dataSet.data.map(function (key, index) {
-          console.log("key.key", key.key);
-          console.log("key.key", _typeof(key.key));
           return key[index] = _objectSpread({}, key, {
             key: convert(key.key)
           });
@@ -201,14 +199,13 @@ var GraphDetails = function GraphDetails(_ref) {
           }),
           yAxis: _react["default"].createElement(_reaviz.LinearYAxis, {
             type: "value",
-            axisLine: null,
-            tickSeries: _react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
-              line: null,
-              label: _react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
-                padding: 10,
-                label: null
-              })
-            })
+            axisLine: null // tickSeries={
+            //   <LinearYAxisTickSeries
+            //     line={null}
+            //     label={<LinearYAxisTickLabel padding={10} label={null} />}
+            //   />
+            // }
+
           }),
           xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
             type: "time",
