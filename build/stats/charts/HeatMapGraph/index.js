@@ -142,7 +142,7 @@ var HeatMapGraph = function HeatMapGraph(props) {
       })
     }),
     yAxis: _react["default"].createElement(_reaviz.LinearYAxis, {
-      type: "category",
+      type: "time",
       axisLine: null,
       tickSeries: _react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
         line: null,

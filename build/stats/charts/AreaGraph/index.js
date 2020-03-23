@@ -196,21 +196,16 @@ var GraphDetails = function GraphDetails(_ref) {
       fillColors = _ref.fillColors,
       strokes = _ref.strokes,
       colors = _ref.colors;
+  console.log("data", data); // const [keys, setKeys] = useState();
 
-  var _useState3 = (0, _react.useState)([]),
-      _useState4 = _slicedToArray(_useState3, 2),
-      keys = _useState4[0],
-      setKeys = _useState4[1]; // console.log("data", data);
-
-
-  (0, _react.useEffect)(function () {
-    var updatedKeys = _toConsumableArray(keys);
-
-    data.map(function (dataSet) {
-      return updatedKeys.push(dataSet.key);
-    });
-    return setKeys(updatedKeys);
-  }, [data]);
+  var keys = [];
+  data && data.map(function (dataSet) {
+    return keys.push(dataSet.key);
+  }); // useEffect(() => {
+  //   let updatedKeys = [...keys];
+  //   data.map(dataSet => updatedKeys.push(dataSet.key));
+  //   return setKeys(updatedKeys);
+  // }, [data, data.]);
 
   if (data && data.length) {
     switch (stacked) {
