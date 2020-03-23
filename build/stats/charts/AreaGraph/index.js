@@ -180,6 +180,9 @@ var AreaGraph = function AreaGraph(props) {
     fillColors: fillColors,
     getColorScheme: getColorScheme,
     colors: colors
+  }), _react["default"].createElement(Legend, {
+    colors: getColorScheme(),
+    data: state.data
   }));
 };
 
@@ -251,8 +254,8 @@ var GraphDetails = function GraphDetails(_ref) {
             type: "grouped",
             interpolation: "smooth",
             colorScheme: getColorScheme(),
-            tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
-              placement: "top",
+            tooltip: _react["default"].createElement(_reaviz.TooltipArea // placement="top"
+            , {
               tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
                 placement: "top",
                 followCursor: true,
