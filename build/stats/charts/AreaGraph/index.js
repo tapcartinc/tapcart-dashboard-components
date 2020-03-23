@@ -150,7 +150,7 @@ var AreaGraph = function AreaGraph(props) {
 
   return _react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
-      return removeCard(info.id);
+      return removeCard(info);
     }
   }, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
     className: "title"
