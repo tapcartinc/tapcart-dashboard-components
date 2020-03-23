@@ -55,11 +55,10 @@ function convert(d) {
 }
 
 var convertData = function convertData(data) {
-  console.log("data", data);
+  // console.log("data", data);
   return data && data.reduce(function (acc, dataSet, index) {
-    console.log("dataSet", dataSet);
-    console.log("acc", acc);
-
+    // console.log("dataSet", dataSet);
+    // console.log("acc", acc);
     if (dataSet.data.length) {
       return [].concat(_toConsumableArray(acc), [{
         key: dataSet.key,
@@ -177,6 +176,7 @@ var GraphDetails = function GraphDetails(_ref) {
       keys = _useState4[0],
       setKeys = _useState4[1];
 
+  console.log("data", data);
   (0, _react.useEffect)(function () {
     var updatedKeys = _toConsumableArray(keys);
 
