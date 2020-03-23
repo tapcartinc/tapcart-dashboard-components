@@ -74,6 +74,8 @@ var convertData = function convertData(data) {
 };
 
 var AreaGraph = function AreaGraph(props) {
+  console.log("props", props);
+
   var _useState = (0, _react.useState)({
     data: [],
     dimmension: "",
