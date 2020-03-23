@@ -33,30 +33,15 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 var HeatMapGraph = function HeatMapGraph(props) {
-  var _useState = (0, _react.useState)({
-    data: []
-  }),
-      _useState2 = _slicedToArray(_useState, 2),
-      state = _useState2[0],
-      setState = _useState2[1];
-
-  (0, _react.useEffect)(function () {
-    setState(function () {
-      return {
-        data: props.data
-      };
-    });
-  }, []);
-
+  // const [state, setState] = useState({
+  //   data: []
+  // });
+  // useEffect(() => {
+  //   setState(() => ({
+  //     data: props.data
+  //   }));
+  // }, []);
   var sequentialData = function sequentialData() {
     var start = 100;
     var index = 0;
@@ -86,7 +71,8 @@ var HeatMapGraph = function HeatMapGraph(props) {
       tooltip = props.tooltip,
       range = props.range,
       info = props.info,
-      body = props.body;
+      body = props.body,
+      data = props.data;
   return _react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
@@ -96,7 +82,7 @@ var HeatMapGraph = function HeatMapGraph(props) {
   }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(_ToolTip.ToolTip, {
     color: _dashVariables.colorPicker.grayBlue
   }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
-    return _react["default"].createElement(_styles.StyledHeaderChildren, {
+    statInfo && _react["default"].createElement(_styles.StyledHeaderChildren, {
       key: statInfo.title
     }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
       sm: true
@@ -114,7 +100,7 @@ var HeatMapGraph = function HeatMapGraph(props) {
   })), _react["default"].createElement(_reaviz.Heatmap, {
     height: 195,
     width: 515,
-    data: state.data,
+    data: data,
     series: _react["default"].createElement(_reaviz.HeatmapSeries, {
       padding: 0.14,
       cell: _react["default"].createElement(_reaviz.HeatmapCell, {
