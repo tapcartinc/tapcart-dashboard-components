@@ -1,7 +1,5 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -41,6 +39,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -51,18 +51,19 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 function convert(d) {
   var date = (0, _moment["default"])(d).toDate();
+  console.log("HERE", date);
   return date;
 }
 
 var convertData = function convertData(data) {
   // console.log("data", data);
   return data && data.reduce(function (acc, dataSet, index) {
-    // console.log("dataSet", dataSet);
-    // console.log("acc", acc);
     if (dataSet.data.length) {
       return [].concat(_toConsumableArray(acc), [{
         key: dataSet.key,
         data: dataSet.data.map(function (key, index) {
+          console.log("key.key", key.key);
+          console.log("key.key", _typeof(key.key));
           return key[index] = _objectSpread({}, key, {
             key: convert(key.key)
           });
@@ -226,87 +227,38 @@ var GraphDetails = function GraphDetails(_ref) {
           series: _react["default"].createElement(_reaviz.StackedAreaSeries, {
             type: "stacked",
             interpolation: "smooth",
-            colorScheme: getColorScheme() // tooltip={
-            //   <TooltipArea
-            //     placement="top"
-            //     tooltip={
-            //       <ChartTooltip
-            //         placement="top"
-            //         followCursor={true}
-            //         content={(d, ab, b) => {
-            //           return (
-            //             <StyledTooltip width="130px">
-            //               <StyledAreaMapTooltip>
-            //                 <StyledLeftTooltip>
-            //                   <Sofia
-            //                     marginBottom="2px"
-            //                     marginTop="5px"
-            //                     fontSize="11px"
-            //                     color={colorPicker.black}
-            //                   >
-            //                     {moment(d.x).format("MMM D")}
-            //                   </Sofia>
-            //                   <Sofia
-            //                     marginBottom="5px"
-            //                     marginTop="0px"
-            //                     fontSize="11px"
-            //                     color={colorPicker.blue}
-            //                     fontSize="13px"
-            //                   >
-            //                     {currency && <span>{currency}</span>}
-            //                     {d.data[0].value.toLocaleString()}
-            //                   </Sofia>
-            //                 </StyledLeftTooltip>
-            //                 <StyledRightTooltip
-            //                   upShift={d.data[0].value >= d.data[1].value}
-            //                 >
-            //                   <Sofia
-            //                     marginBottom="0px"
-            //                     color={
-            //                       d.data[0].value >= d.data[1].value
-            //                         ? colorPicker.green100
-            //                         : colorPicker.red
-            //                     }
-            //                   >
-            //                     {d.data[0].value > d.data[1].value && (
-            //                       <span>&uarr;</span>
-            //                     )}
-            //                     {d.data[0].value < d.data[1].value && (
-            //                       <span>&darr;</span>
-            //                     )}
-            //                     {Number(
-            //                       parseFloat(
-            //                         ((Number(d.data[0].value) -
-            //                           Number(d.data[1].value)) /
-            //                           ((Number(d.data[0].value) +
-            //                             Number(d.data[1].value)) /
-            //                             2)) *
-            //                           100
-            //                       ).toFixed(2)
-            //                     )}
-            //                     %
-            //                   </Sofia>
-            //                   <Sofia
-            //                     marginTop="0px"
-            //                     fontSize="10px"
-            //                     color={
-            //                       d.data[0].value >= d.data[1].value
-            //                         ? colorPicker.green100
-            //                         : colorPicker.red
-            //                     }
-            //                   >
-            //                     prev period
-            //                   </Sofia>
-            //                 </StyledRightTooltip>
-            //               </StyledAreaMapTooltip>
-            //             </StyledTooltip>
-            //           );
-            //         }}
-            //       />
-            //     }
-            //   ></TooltipArea>
-            // }
-            ,
+            colorScheme: getColorScheme(),
+            tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
+              placement: "top",
+              tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
+                placement: "top",
+                followCursor: true,
+                content: function content(d, ab, b) {
+                  return _react["default"].createElement(_styles.StyledTooltip, {
+                    width: "130px"
+                  }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, {
+                    marginBottom: "2px",
+                    marginTop: "5px",
+                    fontSize: "11px",
+                    color: _dashVariables.colorPicker.black
+                  }, (0, _moment["default"])(d.x).format("MMM D")), _react["default"].createElement(_Typography.Sofia, _defineProperty({
+                    marginBottom: "5px",
+                    marginTop: "0px",
+                    fontSize: "11px",
+                    color: _dashVariables.colorPicker.blue
+                  }, "fontSize", "13px"), currency && _react["default"].createElement("span", null, currency), d.data[0].value.toLocaleString())), _react["default"].createElement(_styles.StyledRightTooltip, {
+                    upShift: d.data[0].value >= d.data[1].value
+                  }, _react["default"].createElement(_Typography.Sofia, {
+                    marginBottom: "0px",
+                    color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
+                  }, d.data[0].value > d.data[1].value && _react["default"].createElement("span", null, "\u2191"), d.data[0].value < d.data[1].value && _react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(d.data[0].value) - Number(d.data[1].value)) / ((Number(d.data[0].value) + Number(d.data[1].value)) / 2) * 100).toFixed(2)), "%"), _react["default"].createElement(_Typography.Sofia, {
+                    marginTop: "0px",
+                    fontSize: "10px",
+                    color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
+                  }, "prev period"))));
+                }
+              })
+            }),
             area: _react["default"].createElement(_reaviz.Area, {
               style: function style(data, idx) {
                 return data && data.length && data[0] && data[0].key === keys[0] ? {
