@@ -123,7 +123,7 @@ var AreaGraph = function AreaGraph(props) {
       var _colors = [];
 
       _dashVariables.defaultGraphColors.map(function (color, index) {
-        if (index <= state.data.length) {
+        if (index <= updatedData.length) {
           _colors.push(color);
         }
       });
@@ -167,7 +167,7 @@ var AreaGraph = function AreaGraph(props) {
     colors: colors
   }), _react["default"].createElement(Legend, {
     colors: getColorScheme(),
-    data: state.data
+    data: updatedData.data
   }));
 };
 
