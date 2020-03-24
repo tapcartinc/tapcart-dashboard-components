@@ -26,7 +26,8 @@ var CardHeading = function CardHeading(props) {
   }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(ToolTip, {
     color: _dashVariables.colorPicker.grayBlue
   }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
-    statInfo && _react["default"].createElement(_styles.StyledHeaderChildren, {
+    console.log("statInfo", statInfo);
+    statInfo.title ? _react["default"].createElement(_styles.StyledHeaderChildren, {
       key: statInfo.title
     }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
       sm: true
@@ -40,7 +41,7 @@ var CardHeading = function CardHeading(props) {
       className: "arrow"
     }, "\u2191"), statInfo.total < statInfo.previousTotal && _react["default"].createElement("span", {
       className: "arrow"
-    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)"));
+    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)")) : null;
   }));
 };
 
