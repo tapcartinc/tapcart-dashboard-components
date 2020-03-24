@@ -80,7 +80,7 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
       })
     }),
     xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
-      type: "time",
+      type: "category",
       tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
         line: null,
         label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
