@@ -36,10 +36,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
   var data = props.data,
       colors = props.colors,
-      title = props.title,
+      tooltip = props.tooltip,
       info = props.info,
       body = props.body,
-      statValues = props.statValues,
       currency = props.currency,
       range = props.range,
       keys = props.keys,
