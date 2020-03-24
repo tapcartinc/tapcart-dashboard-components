@@ -54,6 +54,7 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
     range: range,
     info: info,
     body: body,
+    tooltip: tooltip,
     currency: currency
   }), _react["default"].createElement(_reaviz.StackedBarChart, {
     width: 500,
