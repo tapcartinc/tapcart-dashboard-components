@@ -29,6 +29,7 @@ var SummaryCard = function SummaryCard(props) {
       percentageDifference = props.percentageDifference,
       prevPeriodScore = props.prevPeriodScore,
       data = props.data,
+      removeCard = props.removeCard,
       currency = props.currency;
   var currentColor = currentScore > prevPeriodScore ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red;
   return _react["default"].createElement(StyledSummaryCardWrapper, {
