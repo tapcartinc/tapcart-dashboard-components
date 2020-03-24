@@ -40,6 +40,7 @@ var BarGraph = function BarGraph(props) {
       removeCard = props.removeCard;
 
   var formatNumber = function formatNumber(num) {
+    console.log("num", num);
     var number = Number(num);
 
     if (number > 999999) {
@@ -78,27 +79,7 @@ var BarGraph = function BarGraph(props) {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
-    className: "title"
-  }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(_ToolTip.ToolTip, {
-    color: _dashVariables.colorPicker.grayBlue
-  }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
-    statInfo && _react["default"].createElement(_styles.StyledHeaderChildren, {
-      key: statInfo.title
-    }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
-      sm: true
-    }, currency && _react["default"].createElement("span", {
-      style: {
-        marginRight: "-4px"
-      }
-    }, currency, " "), Number(statInfo.total).toLocaleString()), _react["default"].createElement(_styles.StyledDifference, {
-      upShift: statInfo.total > statInfo.previousTotal
-    }, statInfo.total > statInfo.previousTotal && _react["default"].createElement("span", {
-      className: "arrow"
-    }, "\u2191"), statInfo.total < statInfo.previousTotal && _react["default"].createElement("span", {
-      className: "arrow"
-    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)"));
-  })), _react["default"].createElement(_Icon.Icon, {
+  }, _react["default"].createElement(_Icon.Icon, {
     type: "apple",
     fill: "white",
     style: {
@@ -128,12 +109,12 @@ var BarGraph = function BarGraph(props) {
       })
     }),
     xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
-      type: "value",
-      tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
-        label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
-          format: formatNumber
-        })
-      })
+      type: "value" // tickSeries={
+      //   <LinearXAxisTickSeries
+      //     label={<LinearXAxisTickLabel format={formatNumber} />}
+      //   />
+      // }
+
     }),
     series: _react["default"].createElement(_reaviz.BarSeries, {
       colorScheme: getColorScheme(),
