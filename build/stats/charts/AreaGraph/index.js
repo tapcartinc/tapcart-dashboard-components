@@ -69,7 +69,6 @@ var convertData = function convertData(data) {
 
 var AreaGraph = function AreaGraph(props) {
   var updatedData = props.data && convertData(props.data);
-  var currentData = (0, _react.useRef)();
   var stacked = props.stacked,
       currency = props.currency,
       colors = props.colors,

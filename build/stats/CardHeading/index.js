@@ -26,6 +26,7 @@ var CardHeading = function CardHeading(props) {
       currency = props.currency,
       tooltip = props.tooltip;
   console.log("range", range);
+  console.log("info", info);
   return _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
     className: "title"
   }, _react["default"].createElement(_styles.StyledTitle, null, info.name), info.description && _react["default"].createElement(_ToolTip.ToolTip, {
