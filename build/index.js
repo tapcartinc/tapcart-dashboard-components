@@ -68,6 +68,7 @@ var _exportNames = {
   ThemeProvider: true,
   useWindowSize: true,
   useEaseIn: true,
+  SummaryCard: true,
   StatsIcon: true,
   AreaGraph: true,
   BarGraph: true,
@@ -459,6 +460,12 @@ Object.defineProperty(exports, "useEaseIn", {
     return _useEaseIn.useEaseIn;
   }
 });
+Object.defineProperty(exports, "SummaryCard", {
+  enumerable: true,
+  get: function get() {
+    return _SummaryCard.SummaryCard;
+  }
+});
 Object.defineProperty(exports, "StatsIcon", {
   enumerable: true,
   get: function get() {
@@ -615,6 +622,8 @@ Object.keys(_layout).forEach(function (key) {
 var _useWindowSize = require("./hooks/useWindowSize");
 
 var _useEaseIn = require("./hooks/useEaseIn");
+
+var _SummaryCard = require("./stats/SummaryCard");
 
 var _StatsIcon = require("./stats/StatsIcon");
 
