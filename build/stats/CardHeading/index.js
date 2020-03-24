@@ -21,13 +21,14 @@ var CardHeading = function CardHeading(props) {
       body = props.body,
       currency = props.currency,
       tooltip = props.tooltip;
+  console.log("body", body);
+  console.log("body.length", body.length);
   return _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
     className: "title"
   }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(ToolTip, {
     color: _dashVariables.colorPicker.grayBlue
   }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
-    console.log("statInfo", statInfo);
-    statInfo.title ? _react["default"].createElement(_styles.StyledHeaderChildren, {
+    return _react["default"].createElement(_styles.StyledHeaderChildren, {
       key: statInfo.title
     }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
       sm: true
@@ -41,7 +42,7 @@ var CardHeading = function CardHeading(props) {
       className: "arrow"
     }, "\u2191"), statInfo.total < statInfo.previousTotal && _react["default"].createElement("span", {
       className: "arrow"
-    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)")) : null;
+    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)"));
   }));
 };
 
