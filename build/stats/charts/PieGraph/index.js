@@ -26,29 +26,13 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 // import { Icon } from "../../../elements/Icon";
 var PieGraph = function PieGraph(props) {
   var data = props.data,
+      tooltip = props.tooltip,
       colors = props.colors,
-      title = props.title,
+      info = props.info,
+      body = props.body,
       currency = props.currency,
-      statValues = props.statValues;
-  return _react["default"].createElement(_styles.StyledGraphCard, null, _react["default"].createElement(_styles.StyledCardHeader, {
-    style: {
-      marginBottom: "-30px !important"
-    }
-  }, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
-    className: "title"
-  }, _react["default"].createElement(_styles.StyledTitle, null, title)), _react["default"].createElement(_styles.StyledDescText, null, "1 Nov \u2013 24 Nov 2019")), statValues && statValues.sectionInfo.map(function (section) {
-    return _react["default"].createElement(_styles.StyledHeaderChildren, {
-      key: section.title
-    }, _react["default"].createElement(_styles.StyledDescText, null, section.title), _react["default"].createElement(_styles.StyledStatHeader, {
-      sm: true
-    }, currency && _react["default"].createElement("span", {
-      style: {
-        marginRight: "-4px"
-      }
-    }, currency, " "), (0, _useFormattedNumber.useFormattedNumber)(section.currentTotal)), statValues && _react["default"].createElement(_styles.StyledDifference, {
-      upShift: section.currentTotal >= section.prevTotal
-    }, currency && _react["default"].createElement("span", null, currency, " "), section.difference));
-  })), _react["default"].createElement("div", {
+      range = props.range;
+  return _react["default"].createElement(_styles.StyledGraphCard, null, _react["default"].createElement("div", {
     style: {
       paddingLeft: "40px"
     }

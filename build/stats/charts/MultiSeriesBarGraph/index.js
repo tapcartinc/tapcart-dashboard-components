@@ -42,11 +42,11 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
       currency = props.currency,
       range = props.range,
       keys = props.keys,
-      _removeCard = props.removeCard;
+      removeCard = props.removeCard;
   var colorScheme = (0, _useColorScheme.useColorScheme)(colors);
   return _react["default"].createElement(_styles.StyledGraphCard, {
-    removeCard: function removeCard() {
-      return _removeCard(info);
+    onClick: function onClick() {
+      return removeCard(info);
     }
   }, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
     className: "title"
