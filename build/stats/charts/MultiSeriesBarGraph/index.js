@@ -37,12 +37,39 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
   var data = props.data,
       colors = props.colors,
       title = props.title,
+      info = props.info,
+      body = props.body,
       statValues = props.statValues,
       currency = props.currency,
       range = props.range,
-      keys = props.keys;
+      keys = props.keys,
+      _removeCard = props.removeCard;
   var colorScheme = (0, _useColorScheme.useColorScheme)(colors);
-  return _react["default"].createElement(_styles.StyledGraphCard, null, _react["default"].createElement(_reaviz.StackedBarChart, {
+  return _react["default"].createElement(_styles.StyledGraphCard, {
+    removeCard: function removeCard() {
+      return _removeCard(info);
+    }
+  }, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
+    className: "title"
+  }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(ToolTip, {
+    color: _dashVariables.colorPicker.grayBlue
+  }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
+    return _react["default"].createElement(_styles.StyledHeaderChildren, {
+      key: statInfo.title
+    }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
+      sm: true
+    }, currency && _react["default"].createElement("span", {
+      style: {
+        marginRight: "-4px"
+      }
+    }, currency, " "), Number(statInfo.total).toLocaleString()), _react["default"].createElement(_styles.StyledDifference, {
+      upShift: statInfo.total > statInfo.previousTotal
+    }, statInfo.total > statInfo.previousTotal && _react["default"].createElement("span", {
+      className: "arrow"
+    }, "\u2191"), statInfo.total < statInfo.previousTotal && _react["default"].createElement("span", {
+      className: "arrow"
+    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)"));
+  })), _react["default"].createElement(_reaviz.StackedBarChart, {
     width: 500,
     height: 220,
     data: data,
