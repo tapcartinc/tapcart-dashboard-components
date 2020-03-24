@@ -74,7 +74,7 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
         label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
           padding: 5,
           format: function format(d) {
-            return (0, _moment["default"])(d).format("MMM D");
+            return console.log("d", d);
           }
         })
       })
