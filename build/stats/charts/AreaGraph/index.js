@@ -149,7 +149,10 @@ var GraphDetails = function GraphDetails(_ref) {
             line: _react["default"].createElement(_reaviz.Gridline, {
               direction: "y",
               strokeColor: _dashVariables.colorPicker.gray25,
-              strokeDasharray: "0 0"
+              strokeDasharray: "0 0",
+              style: {
+                strokeDasharray: "0 0"
+              }
             })
           }),
           yAxis: _react["default"].createElement(_reaviz.LinearYAxis, {
@@ -169,8 +172,10 @@ var GraphDetails = function GraphDetails(_ref) {
               line: null,
               label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
                 padding: 5,
+                line: null // format={d => moment(d).format("MMM D")}
+                ,
                 format: function format(d) {
-                  return (0, _moment["default"])(d).format("MMM D");
+                  return console.log("d", d);
                 }
               })
             })
