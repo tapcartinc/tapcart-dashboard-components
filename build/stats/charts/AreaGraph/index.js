@@ -66,28 +66,8 @@ var convertData = function convertData(data) {
 };
 
 var AreaGraph = function AreaGraph(props) {
-  console.log("props", props); // const [state, setState] = useState({
-  //   data: convertData(props.data),
-  //   dimmension: "",
-  //   prevData: [],
-  //   range: []
-  // });
-
   var updatedData = props.data && convertData(props.data);
-  var currentData = (0, _react.useRef)(); // useEffect(() => {
-  //   currentData.current = state.data;
-  //   if (!previousData && props.data) {
-  //     return setState(prevState => ({
-  //       ...prevState,
-  //       data: convertData(props.data)
-  //     }));
-  //   }
-  //   // if (state.range.length <= 0 && state.data.length > 0) {
-  //   //   setRange();
-  //   // }
-  // }, [props.data, state.data]);
-
-  var previousData = currentData.current;
+  var currentData = (0, _react.useRef)();
   var stacked = props.stacked,
       currency = props.currency,
       colors = props.colors,
@@ -97,24 +77,7 @@ var AreaGraph = function AreaGraph(props) {
       fillColors = props.fillColors,
       info = props.info,
       body = props.body,
-      removeCard = props.removeCard; // const setRange = () => {
-  //   state.data.map((dataSet, index) => {
-  //     if (dataSet.data.length) {
-  //       return setState(prevState => ({
-  //         ...prevState,
-  //         range: [
-  //           dataSet.data[0].key,
-  //           dataSet.data[dataSet.data.length - 1].key
-  //         ]
-  //       }));
-  //     } else {
-  //       return setState(prevState => ({
-  //         ...prevState,
-  //         range: [state.data[0], state.data[state.data.length - 1]]
-  //       }));
-  //     }
-  //   });
-  // };
+      removeCard = props.removeCard;
 
   var getColorScheme = function getColorScheme() {
     if (colors) {

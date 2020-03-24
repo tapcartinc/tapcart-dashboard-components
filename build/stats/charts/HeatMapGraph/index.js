@@ -34,14 +34,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var HeatMapGraph = function HeatMapGraph(props) {
-  // const [state, setState] = useState({
-  //   data: []
-  // });
-  // useEffect(() => {
-  //   setState(() => ({
-  //     data: props.data
-  //   }));
-  // }, []);
   var sequentialData = function sequentialData() {
     var start = 100;
     var index = 0;
@@ -61,13 +53,10 @@ var HeatMapGraph = function HeatMapGraph(props) {
 
   var getRange = function getRange(d) {
     return ">= ".concat(JSON.stringify(d.y).split("")[0], "00");
-  }; // `${formatValue(d.data.metadata.date)} ∙ ${formatValue(
-  //   d.data.value
-  // )}`
-
+  };
 
   var currency = props.currency,
-      colors = props.colors,
+      removeCard = props.removeCard,
       tooltip = props.tooltip,
       range = props.range,
       info = props.info,

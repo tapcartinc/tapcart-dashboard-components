@@ -17,7 +17,13 @@ var _dashVariables = require("../../../utils/_dashVariables");
 
 var _Icon = require("../../../elements/Icon");
 
+var _ToolTip = require("../../../components/ToolTip");
+
 var _styles = require("../styles");
+
+var _moment = _interopRequireDefault(require("moment"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -25,11 +31,12 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 var BarGraph = function BarGraph(props) {
   var data = props.data,
-      title = props.title,
-      currency = props.currency,
-      statValues = props.statValues,
+      body = props.body,
+      info = props.info,
+      range = props.range,
       tooltip = props.tooltip,
-      colors = props.colors;
+      colors = props.colors,
+      removeCard = props.removeCard;
 
   var formatNumber = function formatNumber(num) {
     var number = Number(num);
@@ -58,7 +65,7 @@ var BarGraph = function BarGraph(props) {
     } else {
       var _colors = [];
       defaultGraphColors.map(function (color, index) {
-        if (index <= state.data.length) {
+        if (index <= data.length) {
           _colors.push(color);
         }
       });
@@ -66,22 +73,30 @@ var BarGraph = function BarGraph(props) {
     }
   };
 
-  return _react["default"].createElement(_styles.StyledGraphCard, null, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
+  return _react["default"].createElement(_styles.StyledGraphCard, {
+    onClick: function onClick() {
+      return removeCard(info);
+    }
+  }, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
     className: "title"
-  }, _react["default"].createElement(_styles.StyledTitle, null, title), tooltip && _react["default"].createElement(ToolTip, {
+  }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(_ToolTip.ToolTip, {
     color: _dashVariables.colorPicker.grayBlue
-  }, tooltip && tooltip.text)), _react["default"].createElement(_styles.StyledDescText, null, "1 Nov \u2013 24 Nov 2019")), statValues && statValues.sectionInfo.map(function (section) {
-    return _react["default"].createElement(_styles.StyledHeaderChildren, {
-      key: section.title
-    }, _react["default"].createElement(_styles.StyledDescText, null, section.title), _react["default"].createElement(_styles.StyledStatHeader, {
+  }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
+    statInfo && _react["default"].createElement(_styles.StyledHeaderChildren, {
+      key: statInfo.title
+    }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
       sm: true
     }, currency && _react["default"].createElement("span", {
       style: {
         marginRight: "-4px"
       }
-    }, currency, " "), formatNumber(section.currentTotal)), statValues && _react["default"].createElement(_styles.StyledDifference, {
-      upShift: section.currentTotal >= section.prevTotal
-    }, currency && _react["default"].createElement("span", null, currency, " "), section.difference));
+    }, currency, " "), Number(statInfo.total).toLocaleString()), _react["default"].createElement(_styles.StyledDifference, {
+      upShift: statInfo.total > statInfo.previousTotal
+    }, statInfo.total > statInfo.previousTotal && _react["default"].createElement("span", {
+      className: "arrow"
+    }, "\u2191"), statInfo.total < statInfo.previousTotal && _react["default"].createElement("span", {
+      className: "arrow"
+    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)"));
   })), _react["default"].createElement(_Icon.Icon, {
     type: "apple",
     fill: "white",
