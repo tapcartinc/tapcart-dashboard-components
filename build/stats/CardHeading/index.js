@@ -38,7 +38,7 @@ var CardHeading = function CardHeading(props) {
       style: {
         marginRight: "-4px"
       }
-    }, currency, " "), (0, _useFormattedNumber.useFormattedNumber)(Number(statInfo.total).toLocaleString())), _react["default"].createElement(_styles.StyledDifference, {
+    }, currency, " "), statInfo.total), _react["default"].createElement(_styles.StyledDifference, {
       upShift: statInfo.total > statInfo.previousTotal
     }, statInfo.total > statInfo.previousTotal && _react["default"].createElement("span", {
       className: "arrow"
