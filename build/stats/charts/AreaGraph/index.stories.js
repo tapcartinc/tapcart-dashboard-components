@@ -100,11 +100,11 @@ var areaGraph = function areaGraph() {
       id: 0
     }, {
       key: "2020-03-18T12:59:59.000Z",
-      data: 156034021,
+      data: 1564021,
       id: 1
     }, {
       key: "2020-03-19T12:59:59.000Z",
-      data: 156313187,
+      data: 1313187,
       id: 2
     }, {
       key: "2020-03-20T12:59:59.000Z",
@@ -112,7 +112,7 @@ var areaGraph = function areaGraph() {
       id: 3
     }, {
       key: "2020-03-21T12:59:59.000Z",
-      data: 156116638,
+      data: 1516638,
       id: 4
     }, {
       key: "2020-03-22T12:59:59.000Z",
@@ -151,7 +151,7 @@ var areaGraph = function areaGraph() {
       id: "_jmafzy9ik",
       type: "card",
       name: "Sales over Time",
-      description: _react["default"].createElement("div", null, _react["default"].createElement("div", null, "Allows you to view your sales over a period, graphed as an "), _react["default"].createElement("div", null, "area line chart compared with the previous period."))
+      description: "Allows you to view your sessions over the \n last 30 days, graphed as a heatmap."
     }
   }));
 };
