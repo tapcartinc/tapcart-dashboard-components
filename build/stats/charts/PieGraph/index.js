@@ -26,13 +26,18 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 // import { Icon } from "../../../elements/Icon";
 var PieGraph = function PieGraph(props) {
   var data = props.data,
+      removeCard = props.removeCard,
       tooltip = props.tooltip,
       colors = props.colors,
       info = props.info,
       body = props.body,
       currency = props.currency,
       range = props.range;
-  return _react["default"].createElement(_styles.StyledGraphCard, null, _react["default"].createElement("div", {
+  return _react["default"].createElement(_styles.StyledGraphCard, {
+    onClick: function onClick() {
+      return removeCard(info);
+    }
+  }, _react["default"].createElement("div", {
     style: {
       paddingLeft: "40px"
     }

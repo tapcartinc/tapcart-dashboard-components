@@ -23,6 +23,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var SummaryCard = function SummaryCard(props) {
   var title = props.title,
+      info = props.info,
       icon = props.icon,
       currentScore = props.currentScore,
       percentageDifference = props.percentageDifference,
@@ -30,9 +31,11 @@ var SummaryCard = function SummaryCard(props) {
       data = props.data,
       currency = props.currency;
   var currentColor = currentScore > prevPeriodScore ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red;
-  console.log("data", data);
   return _react["default"].createElement(StyledSummaryCardWrapper, {
-    upShift: currentScore > prevPeriodScore
+    upShift: currentScore > prevPeriodScore,
+    onClick: function onClick() {
+      return removeCard(info);
+    }
   }, _react["default"].createElement(StyledBorderTop, {
     upShift: currentScore > prevPeriodScore
   }), _react["default"].createElement(StyledCardLeft, null, _react["default"].createElement("div", {
