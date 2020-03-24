@@ -44,7 +44,7 @@ var CardHeading = function CardHeading(props) {
       className: "arrow"
     }, "\u2191"), statInfo.total < statInfo.previousTotal && _react["default"].createElement("span", {
       className: "arrow"
-    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), statInfo.previousTotal, " (", statInfo.percentChange, "%)"));
+    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), statInfo.previousTotal, statInfo.percentChange && _react["default"].createElement(_react["default"].Fragment, null, "(", statInfo.percentChange, "%)")));
   }));
 };
 
