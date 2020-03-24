@@ -99,27 +99,7 @@ var AreaGraph = function AreaGraph(props) {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_styles.StyledCardHeader, null, _react["default"].createElement(_styles.StyledTitleSection, null, _react["default"].createElement("span", {
-    className: "title"
-  }, _react["default"].createElement(_styles.StyledTitle, null, info.name), tooltip && _react["default"].createElement(_ToolTip.ToolTip, {
-    color: _dashVariables.colorPicker.grayBlue
-  }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
-    return _react["default"].createElement(_styles.StyledHeaderChildren, {
-      key: statInfo.title
-    }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
-      sm: true
-    }, currency && _react["default"].createElement("span", {
-      style: {
-        marginRight: "-4px"
-      }
-    }, currency, " "), Number(statInfo.total).toLocaleString()), _react["default"].createElement(_styles.StyledDifference, {
-      upShift: statInfo.total > statInfo.previousTotal
-    }, statInfo.total > statInfo.previousTotal && _react["default"].createElement("span", {
-      className: "arrow"
-    }, "\u2191"), statInfo.total < statInfo.previousTotal && _react["default"].createElement("span", {
-      className: "arrow"
-    }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), Number(statInfo.previousTotal).toLocaleString(), " (", statInfo.percentChange, "%)"));
-  })), _react["default"].createElement(GraphDetails, {
+  }, _react["default"].createElement(GraphDetails, {
     data: updatedData,
     currency: currency,
     stacked: stacked // data={state.data}
@@ -145,16 +125,11 @@ var GraphDetails = function GraphDetails(_ref) {
       fillColors = _ref.fillColors,
       strokes = _ref.strokes,
       colors = _ref.colors;
-  console.log("data", data); // const [keys, setKeys] = useState();
-
+  // const [keys, setKeys] = useState();
   var keys = [];
   data && data.map(function (dataSet) {
     return keys.push(dataSet.key);
-  }); // useEffect(() => {
-  //   let updatedKeys = [...keys];
-  //   data.map(dataSet => updatedKeys.push(dataSet.key));
-  //   return setKeys(updatedKeys);
-  // }, [data, data.]);
+  });
 
   if (data && data.length) {
     switch (stacked) {
