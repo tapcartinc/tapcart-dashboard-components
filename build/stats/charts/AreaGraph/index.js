@@ -21,6 +21,8 @@ var _moment = _interopRequireDefault(require("moment"));
 
 var _dashVariables = require("../../../utils/_dashVariables");
 
+var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -99,11 +101,16 @@ var AreaGraph = function AreaGraph(props) {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(GraphDetails, {
+  }, _react["default"].createElement(_CardHeading["default"], {
+    range: range,
+    info: info,
+    body: body,
+    tooltip: tooltip,
+    currency: currency
+  }), _react["default"].createElement(GraphDetails, {
     data: updatedData,
     currency: currency,
-    stacked: stacked // data={state.data}
-    ,
+    stacked: stacked,
     gradient: gradient,
     fillColors: fillColors,
     getColorScheme: getColorScheme,

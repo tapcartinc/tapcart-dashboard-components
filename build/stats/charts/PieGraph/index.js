@@ -19,11 +19,14 @@ var _dashVariables = require("../../../utils/_dashVariables");
 
 var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
 
+var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-// import { Icon } from "../../../elements/Icon";
 var PieGraph = function PieGraph(props) {
   var data = props.data,
       removeCard = props.removeCard,
@@ -37,7 +40,13 @@ var PieGraph = function PieGraph(props) {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement("div", {
+  }, _react["default"].createElement(_CardHeading["default"], {
+    range: range,
+    info: info,
+    body: body,
+    tooltip: tooltip,
+    currency: currency
+  }), _react["default"].createElement("div", {
     style: {
       paddingLeft: "40px"
     }
@@ -61,7 +70,6 @@ var PieGraph = function PieGraph(props) {
           placement: "top",
           followCursor: true,
           content: function content(d) {
-            console.log("d", d);
             return _react["default"].createElement(_styles.StyledTooltip, {
               width: "70px"
             }, _react["default"].createElement(_Typography.Sofia, {
