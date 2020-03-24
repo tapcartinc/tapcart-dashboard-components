@@ -48,7 +48,8 @@ var PieGraph = function PieGraph(props) {
     currency: currency
   }), _react["default"].createElement("div", {
     style: {
-      paddingLeft: "40px"
+      paddingLeft: "40px",
+      marginTop: "-50px"
     }
   }, _react["default"].createElement(_reaviz.PieChart, {
     height: 325,
