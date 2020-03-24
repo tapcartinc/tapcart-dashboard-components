@@ -39,11 +39,14 @@ var ToolTip = function ToolTip(props) {
       open = _useState2[0],
       toggleTooltip = _useState2[1];
 
+  var toggle = function toggle(e) {
+    e.stopPropagation();
+    toggleTooltip(true);
+  };
+
   return _react["default"].createElement(ToolTipWrapper, {
     open: open,
-    onClick: function onClick() {
-      return toggleTooltip(true);
-    },
+    onClick: toggle,
     onMouseLeave: function onMouseLeave() {
       return toggleTooltip(false);
     },

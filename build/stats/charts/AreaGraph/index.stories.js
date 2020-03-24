@@ -151,7 +151,7 @@ var areaGraph = function areaGraph() {
       id: "_jmafzy9ik",
       type: "card",
       name: "Sales over Time",
-      description: _react["default"].createElement(_react["default"].Fragment, null, "Allows you to view your sales over a period, graphed as an ", _react["default"].createElement("br", null), " ", "area line chart compared with the previous period.")
+      description: _react["default"].createElement("div", null, _react["default"].createElement("div", null, "Allows you to view your sales over a period, graphed as an "), _react["default"].createElement("div", null, "area line chart compared with the previous period."))
     }
   }));
 };
