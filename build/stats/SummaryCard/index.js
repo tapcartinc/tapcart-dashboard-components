@@ -116,12 +116,12 @@ var StyledBorderTop = _styledComponents["default"].div.withConfig({
 var StyledCardLeft = _styledComponents["default"].div.withConfig({
   displayName: "SummaryCard__StyledCardLeft",
   componentId: "sc-144rjke-2"
-})(["width:54%;display:flex;flex-direction:column;.header{display:flex;align-items:center;}"]);
+})(["width:auto;display:flex;flex-direction:column;.header{display:flex;align-items:center;}"]);
 
 var StyledCardRight = _styledComponents["default"].div.withConfig({
   displayName: "SummaryCard__StyledCardRight",
   componentId: "sc-144rjke-3"
-})(["width:46%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:flex-end;height:77px;"]);
+})(["width:46%;position:absolute;right:display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:flex-end;height:77px;right:10px;"]);
 
 var StyledBody = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "SummaryCard__StyledBody",
