@@ -11,6 +11,8 @@ var _styles = require("../charts/styles");
 
 var _moment = _interopRequireDefault(require("moment"));
 
+var _useFormattedNumber = require("../../hooks/useFormattedNumber");
+
 var _dashVariables = require("../../utils/_dashVariables");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -36,7 +38,7 @@ var CardHeading = function CardHeading(props) {
       style: {
         marginRight: "-4px"
       }
-    }, currency, " "), Number(statInfo.total).toLocaleString()), _react["default"].createElement(_styles.StyledDifference, {
+    }, currency, " "), (0, _useFormattedNumber.useFormattedNumber)(Number(statInfo.total).toLocaleString())), _react["default"].createElement(_styles.StyledDifference, {
       upShift: statInfo.total > statInfo.previousTotal
     }, statInfo.total > statInfo.previousTotal && _react["default"].createElement("span", {
       className: "arrow"
