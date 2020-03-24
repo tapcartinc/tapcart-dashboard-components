@@ -21,9 +21,9 @@ var _ToolTip = require("../../../components/ToolTip");
 
 var _styles = require("../styles");
 
-var _moment = _interopRequireDefault(require("moment"));
-
 var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
+
+var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -59,7 +59,7 @@ var BarGraph = function BarGraph(props) {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(CardHeading, {
+  }, _react["default"].createElement(_CardHeading["default"], {
     range: range,
     info: info,
     body: body,
