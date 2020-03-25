@@ -68,14 +68,13 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
       })
     }),
     xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
-      type: "time",
+      type: "category",
       tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
         line: null,
         label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
           padding: 5,
           format: function format(d) {
-            // console.log("d", d);
-            return d;
+            return (0, _moment["default"])(d).format("MMM D");
           }
         })
       })
