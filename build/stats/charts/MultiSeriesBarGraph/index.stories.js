@@ -19,6 +19,8 @@ var _useGetDifference = require("../../../hooks/useGetDifference");
 
 var _generateDates = require("../HeatMapGraph/generateDates");
 
+var _moment = _interopRequireDefault(require("moment"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -49,29 +51,29 @@ var multiSeriesBarGraph = function multiSeriesBarGraph() {
   var dataSet = [{
     date: "2020-03-17T23:59:59.000Z",
     key: "2020-03-17T23:59:59.000Z",
-    data: [{
+    data: [_defineProperty({
       key: "Direct",
       data: 4409
-    }, {
+    }, "key", "2020-03-17T23:59:59.000Z"), _defineProperty({
       key: "Push",
       data: 4410
-    }, {
+    }, "key", "2020-03-17T23:59:59.000Z"), _defineProperty({
       key: "Deeplink",
       data: 4276
-    }]
+    }, "key", "2020-03-17T23:59:59.000Z")]
   }, {
     date: "2020-03-18T12:59:59.000Z",
     key: "2020-03-18T12:59:59.000Z",
-    data: [{
+    data: [_defineProperty({
       key: "Direct",
       data: 103736
-    }, {
+    }, "key", "2020-03-18T12:59:59.000Z"), _defineProperty({
       key: "Push",
       data: 103396
-    }, {
+    }, "key", "2020-03-18T12:59:59.000Z"), _defineProperty({
       key: "Deeplink",
       data: 103306
-    }]
+    }, "key", "2020-03-18T12:59:59.000Z")]
   }, {
     date: "2020-03-19T12:59:59.000Z",
     key: "2020-03-19T12:59:59.000Z",
@@ -153,8 +155,6 @@ var multiSeriesBarGraph = function multiSeriesBarGraph() {
   }];
   return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_index.MultiSeriesBarGraph, {
     data: dataSet,
-    keys: ["Direct", "Push", "Deeplink"],
-    colors: ["#01006f", "#373aaf", "#738eda"],
     body: [{
       title: "Active Sessions",
       total: "2.18M",
@@ -171,7 +171,8 @@ var multiSeriesBarGraph = function multiSeriesBarGraph() {
       start: "2020-03-17T22:01:48.442Z",
       end: "2020-03-24T22:01:48.442Z"
     },
-    title: "App Sessions by Device"
+    keys: ["Direct", "Push", "Deeplink"],
+    colors: ["#01006f", "#373aaf", "#738eda"]
   }));
 };
 
