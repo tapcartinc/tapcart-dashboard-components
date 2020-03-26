@@ -171,10 +171,9 @@ var GraphDetails = function GraphDetails(_ref) {
               line: null,
               label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
                 padding: 5,
-                line: null // format={d => moment(d).format("MMM D")}
-                ,
+                line: null,
                 format: function format(d) {
-                  return console.log("d", d);
+                  return (0, _moment["default"])(d).format("MMM D");
                 }
               })
             })

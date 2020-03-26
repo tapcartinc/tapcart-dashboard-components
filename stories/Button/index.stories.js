@@ -20,6 +20,13 @@ export const allButtons = () => (
     >
       Primary
     </Button>
+    <Button kind="primary--reversed" onClick={action("clicked")}>
+      Select&nbsp;a&nbsp;plan
+    </Button>
+    <Button kind="primary">
+      Preview&nbsp;your&nbsp;app{" "}
+      {/* <Icon iconRight type="preview-app-multicolored" /> */}
+    </Button>
     <Button kind="transparent--blue">transparent--blue</Button>
     <Button kind="inverted">inverted</Button>
     <Button kind="secondary" onClick={action("clicked")}>
