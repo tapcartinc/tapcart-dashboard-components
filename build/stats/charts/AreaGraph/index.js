@@ -23,6 +23,8 @@ var _dashVariables = require("../../../utils/_dashVariables");
 
 var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
 
+var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -123,6 +125,8 @@ var AreaGraph = function AreaGraph(props) {
 exports.AreaGraph = AreaGraph;
 
 var GraphDetails = function GraphDetails(_ref) {
+  var _React$createElement2;
+
   var data = _ref.data,
       currency = _ref.currency,
       getColorScheme = _ref.getColorScheme,
@@ -140,10 +144,13 @@ var GraphDetails = function GraphDetails(_ref) {
   if (data && data.length) {
     switch (stacked) {
       case true:
-        return _react["default"].createElement(_reaviz.StackedAreaChart, {
+        return _react["default"].createElement(_reaviz.AreaChart, (_React$createElement2 = {
           width: 470,
           height: 220,
-          data: data,
+          series: _react["default"].createElement(_reaviz.AreaSeries, {
+            type: "grouped",
+            colorScheme: getColorScheme()
+          }),
           gridlines: _react["default"].createElement(_reaviz.GridlineSeries, {
             line: _react["default"].createElement(_reaviz.Gridline, {
               direction: "y",
@@ -160,8 +167,11 @@ var GraphDetails = function GraphDetails(_ref) {
             tickSeries: _react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
               line: null,
               label: _react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
-                padding: 10,
-                label: null
+                padding: 5,
+                rotation: false,
+                format: function format(data) {
+                  return (0, _useFormattedNumber.useFormattedNumber)(data).toLocaleString();
+                }
               })
             })
           }),
@@ -170,81 +180,252 @@ var GraphDetails = function GraphDetails(_ref) {
             tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
               line: null,
               label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
-                padding: 5,
-                line: null,
                 format: function format(d) {
                   return (0, _moment["default"])(d).format("MMM D");
                 }
               })
             })
-          }),
-          series: _react["default"].createElement(_reaviz.StackedAreaSeries, {
-            type: "grouped",
-            interpolation: "smooth",
-            colorScheme: getColorScheme(),
-            tooltip: _react["default"].createElement(_reaviz.TooltipArea // placement="top"
-            , {
-              tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
-                placement: "top",
-                followCursor: true,
-                content: function content(d, ab, b) {
-                  return _react["default"].createElement(_styles.StyledTooltip, {
-                    width: "130px"
-                  }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, {
-                    marginBottom: "2px",
-                    marginTop: "5px",
-                    fontSize: "11px",
-                    color: _dashVariables.colorPicker.black
-                  }, (0, _moment["default"])(d.x).format("MMM D")), _react["default"].createElement(_Typography.Sofia, _defineProperty({
-                    marginBottom: "5px",
-                    marginTop: "0px",
-                    fontSize: "11px",
-                    color: _dashVariables.colorPicker.blue
-                  }, "fontSize", "13px"), currency && _react["default"].createElement("span", null, currency), d.data[0].value.toLocaleString())), _react["default"].createElement(_styles.StyledRightTooltip, {
-                    upShift: d.data[0].value >= d.data[1].value
-                  }, _react["default"].createElement(_Typography.Sofia, {
-                    marginBottom: "0px",
-                    color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                  }, d.data[0].value > d.data[1].value && _react["default"].createElement("span", null, "\u2191"), d.data[0].value < d.data[1].value && _react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(d.data[0].value) - Number(d.data[1].value)) / ((Number(d.data[0].value) + Number(d.data[1].value)) / 2) * 100).toFixed(2)), "%"), _react["default"].createElement(_Typography.Sofia, {
-                    marginTop: "0px",
-                    fontSize: "10px",
-                    color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                  }, "prev period"))));
-                }
-              })
-            }),
-            area: _react["default"].createElement(_reaviz.Area, {
-              style: function style(data, idx) {
-                return data && data.length && data[0] && data[0].key === keys[0] ? {
-                  opacity: fillColors ? 1 : 0.9,
-                  fill: getColorScheme()[1]
-                } : {
-                  opacity: fillColors ? 1 : 0,
-                  fill: getColorScheme()[0]
-                };
-              },
-              mask: !fillColors ? _react["default"].createElement(_reaviz.Gradient, {
-                stops: [_react["default"].createElement(_reaviz.GradientStop, {
-                  offset: "10%",
-                  color: getColorScheme()[0],
-                  stopOpacity: 0,
-                  key: "start"
-                }), _react["default"].createElement(_reaviz.GradientStop, {
-                  offset: "80%",
-                  color: getColorScheme()[0],
-                  stopOpacity: gradient ? 1 : 0,
-                  key: "stop"
-                })]
-              }) : null
-            }),
-            line: _react["default"].createElement(_reaviz.Line, {
-              strokeWidth: 3,
-              style: fillColors ? {
-                stroke: "transparent"
-              } : null
-            })
           })
-        });
+        }, _defineProperty(_React$createElement2, "series", _react["default"].createElement(_reaviz.StackedAreaSeries, {
+          type: "grouped",
+          interpolation: "smooth",
+          colorScheme: getColorScheme(),
+          tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
+            placement: "top",
+            tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
+              placement: "top",
+              followCursor: true,
+              content: function content(d) {
+                return _react["default"].createElement(_styles.StyledTooltip, {
+                  width: "130px"
+                }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, {
+                  marginBottom: "2px",
+                  marginTop: "5px",
+                  fontSize: "11px",
+                  color: _dashVariables.colorPicker.black
+                }, (0, _moment["default"])(d.x).format("MMM D")), _react["default"].createElement(_Typography.Sofia, _defineProperty({
+                  marginBottom: "5px",
+                  marginTop: "0px",
+                  fontSize: "11px",
+                  color: _dashVariables.colorPicker.blue
+                }, "fontSize", "13px"), currency && _react["default"].createElement("span", null, currency), d.data[0].value.toLocaleString())), _react["default"].createElement(_styles.StyledRightTooltip, {
+                  upShift: d.data[0].value >= d.data[1].value
+                }, _react["default"].createElement(_Typography.Sofia, {
+                  marginBottom: "0px",
+                  color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
+                }, d.data[0].value > d.data[1].value && _react["default"].createElement("span", null, "\u2191"), d.data[0].value < d.data[1].value && _react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(d.data[0].value) - Number(d.data[1].value)) / ((Number(d.data[0].value) + Number(d.data[1].value)) / 2) * 100).toFixed(2)), "%"), _react["default"].createElement(_Typography.Sofia, {
+                  marginTop: "0px",
+                  fontSize: "10px",
+                  color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
+                }, "prev period"))));
+              }
+            })
+          }),
+          area: _react["default"].createElement(_reaviz.Area, {
+            style: function style(data, idx) {
+              return data && data.length && data[0] && data[0].key === keys[0] ? {
+                opacity: fillColors ? 1 : 0.9,
+                fill: getColorScheme()[1]
+              } : {
+                opacity: fillColors ? 1 : 0,
+                fill: getColorScheme()[0]
+              };
+            },
+            mask: !fillColors ? _react["default"].createElement(_reaviz.Gradient, {
+              stops: [_react["default"].createElement(_reaviz.GradientStop, {
+                offset: "10%",
+                color: getColorScheme()[0],
+                stopOpacity: 0,
+                key: "start"
+              }), _react["default"].createElement(_reaviz.GradientStop, {
+                offset: "80%",
+                color: getColorScheme()[0],
+                stopOpacity: gradient ? 1 : 0,
+                key: "stop"
+              })]
+            }) : null
+          }),
+          line: _react["default"].createElement(_reaviz.Line, {
+            strokeWidth: 3,
+            style: fillColors ? {
+              stroke: "transparent"
+            } : null
+          })
+        })), _defineProperty(_React$createElement2, "data", data), _React$createElement2)) // <StackedAreaChart
+        //   width={470}
+        //   height={220}
+        //   data={data}
+        //   gridlines={
+        //     <GridlineSeries
+        //       line={
+        //         <Gridline
+        //           direction="y"
+        //           strokeColor={colorPicker.gray25}
+        //           strokeDasharray="0 0"
+        //           style={{ strokeDasharray: "0 0" }}
+        //         />
+        //       }
+        //     />
+        //   }
+        //   yAxis={
+        //     <LinearYAxis
+        //       type="value"
+        //       axisLine={null}
+        //       tickSeries={
+        //         <LinearYAxisTickSeries
+        //           line={null}
+        //           label={<LinearYAxisTickLabel padding={10} label={null} />}
+        //         />
+        //       }
+        //     />
+        //   }
+        //   xAxis={
+        //     <LinearXAxis
+        //       type="time"
+        //       tickSeries={
+        //         <LinearXAxisTickSeries
+        //           line={null}
+        //           label={
+        //             <LinearXAxisTickLabel
+        //               padding={5}
+        //               line={null}
+        //               format={d => moment(d).format("MMM D")}
+        //             />
+        //           }
+        //         />
+        //       }
+        //     />
+        //   }
+        //   series={
+        //     <StackedAreaSeries
+        //       type="grouped"
+        //       interpolation="smooth"
+        //       colorScheme={getColorScheme()}
+        //       tooltip={
+        //         <TooltipArea
+        //           // placement="top"
+        //           tooltip={
+        //             <ChartTooltip
+        //               placement="top"
+        //               followCursor={true}
+        //               content={(d, ab, b) => {
+        //                 return (
+        //                   <StyledTooltip width="130px">
+        //                     <StyledAreaMapTooltip>
+        //                       <StyledLeftTooltip>
+        //                         <Sofia
+        //                           marginBottom="2px"
+        //                           marginTop="5px"
+        //                           fontSize="11px"
+        //                           color={colorPicker.black}
+        //                         >
+        //                           {moment(d.x).format("MMM D")}
+        //                         </Sofia>
+        //                         <Sofia
+        //                           marginBottom="5px"
+        //                           marginTop="0px"
+        //                           fontSize="11px"
+        //                           color={colorPicker.blue}
+        //                           fontSize="13px"
+        //                         >
+        //                           {currency && <span>{currency}</span>}
+        //                           {d.data[0].value.toLocaleString()}
+        //                         </Sofia>
+        //                       </StyledLeftTooltip>
+        //                       <StyledRightTooltip
+        //                         upShift={d.data[0].value >= d.data[1].value}
+        //                       >
+        //                         <Sofia
+        //                           marginBottom="0px"
+        //                           color={
+        //                             d.data[0].value >= d.data[1].value
+        //                               ? colorPicker.green100
+        //                               : colorPicker.red
+        //                           }
+        //                         >
+        //                           {d.data[0].value > d.data[1].value && (
+        //                             <span>&uarr;</span>
+        //                           )}
+        //                           {d.data[0].value < d.data[1].value && (
+        //                             <span>&darr;</span>
+        //                           )}
+        //                           {Number(
+        //                             parseFloat(
+        //                               ((Number(d.data[0].value) -
+        //                                 Number(d.data[1].value)) /
+        //                                 ((Number(d.data[0].value) +
+        //                                   Number(d.data[1].value)) /
+        //                                   2)) *
+        //                                 100
+        //                             ).toFixed(2)
+        //                           )}
+        //                           %
+        //                         </Sofia>
+        //                         <Sofia
+        //                           marginTop="0px"
+        //                           fontSize="10px"
+        //                           color={
+        //                             d.data[0].value >= d.data[1].value
+        //                               ? colorPicker.green100
+        //                               : colorPicker.red
+        //                           }
+        //                         >
+        //                           prev period
+        //                         </Sofia>
+        //                       </StyledRightTooltip>
+        //                     </StyledAreaMapTooltip>
+        //                   </StyledTooltip>
+        //                 );
+        //               }}
+        //             />
+        //           }
+        //         ></TooltipArea>
+        //       }
+        //       area={
+        //         <Area
+        //           style={(data, idx) =>
+        //             data && data.length && data[0] && data[0].key === keys[0]
+        //               ? {
+        //                   opacity: fillColors ? 1 : 0.9,
+        //                   fill: getColorScheme()[1]
+        //                 }
+        //               : {
+        //                   opacity: fillColors ? 1 : 0,
+        //                   fill: getColorScheme()[0]
+        //                 }
+        //           }
+        //           mask={
+        //             !fillColors ? (
+        //               <Gradient
+        //                 stops={[
+        //                   <GradientStop
+        //                     offset="10%"
+        //                     color={getColorScheme()[0]}
+        //                     stopOpacity={0}
+        //                     key="start"
+        //                   />,
+        //                   <GradientStop
+        //                     offset="80%"
+        //                     color={getColorScheme()[0]}
+        //                     stopOpacity={gradient ? 1 : 0}
+        //                     key="stop"
+        //                   />
+        //                 ]}
+        //               />
+        //             ) : null
+        //           }
+        //         />
+        //       }
+        //       line={
+        //         <Line
+        //           strokeWidth={3}
+        //           style={fillColors ? { stroke: "transparent" } : null}
+        //         />
+        //       }
+        //     />
+        //   }
+        // />
+        ;
 
       case false:
         return _react["default"].createElement(_reaviz.AreaChart, {
