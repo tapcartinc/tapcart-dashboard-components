@@ -4917,13 +4917,14 @@ function Icon(props) {
       }))))))));
 
     case "preview-app-multicolored":
-      return _react["default"].createElement("svg", _extends({
-        width: "20",
-        height: "20",
-        viewBox: "0 0 20 20",
-        fill: "none",
-        xmlns: "http://www.w3.org/2000/svg"
-      }, props), _react["default"].createElement("path", {
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "20px",
+        height: "20px",
+        viewBox: "0 0 24 24",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg",
+        fill: "none"
+      }), _react["default"].createElement("path", {
         d: "M10 23H4C2.89543 23 2 22.1046 2 21V3C2 1.89543 2.89543 1 4 1H16C17.1046 1 18 1.89543 18 3V10",
         stroke: "white",
         strokeWidth: "2",
