@@ -66,4 +66,4 @@ var StyledStatusCircle = _styledComponents["default"].div.withConfig({
 var StyledStatusText = _styledComponents["default"].span.withConfig({
   displayName: "DraftStatus__StyledStatusText",
   componentId: "td0u63-2"
-})(["font-size:11px;text-transform:uppercase;letter-spacing:0.83px;line-height:.8;", ""], _dashVariables.circularStd.medium);
+})(["font-size:11px;text-transform:uppercase;letter-spacing:0.83px;line-height:0.8;", ""], _dashVariables.circularStd.medium);
