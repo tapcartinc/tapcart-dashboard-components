@@ -4918,55 +4918,25 @@ function Icon(props) {
 
     case "preview-app-multicolored":
       return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
-        width: "22px",
-        height: "24px",
-        viewBox: "0 0 22 24",
+        width: "20px",
+        height: "20px",
+        viewBox: "0 0 24 24",
         version: "1.1",
-        xmlns: "http://www.w3.org/2000/svg"
-      }), _react["default"].createElement("g", {
-        id: "Symbols",
-        stroke: "none",
-        strokeWidth: "1",
-        fill: "none",
-        fillRule: "evenodd"
-      }, _react["default"].createElement("g", {
-        id: "Header---Design",
-        transform: "translate(-1370.000000, -101.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Header"
-      }, _react["default"].createElement("g", {
-        id: "Button---Medium",
-        transform: "translate(1199.000000, 93.000000)"
-      }, _react["default"].createElement("g", {
-        id: "Icon-preview-app",
-        transform: "translate(170.000000, 8.000000)"
-      }, _react["default"].createElement("rect", {
-        id: "Rectangle",
-        x: "0",
-        y: "0",
-        width: "24",
-        height: "24"
-      }), _react["default"].createElement("g", {
-        id: "p-search",
-        transform: "translate(2.000000, 1.000000)",
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        strokeWidth: "1.75"
-      }, _react["default"].createElement("path", {
-        d: "M8,22 L2,22 C0.8954305,22 0,21.1045695 0,20 L0,2 C0,0.8954305 0.8954305,0 2,0 L14,0 C15.1045695,0 16,0.8954305 16,2 L16,9",
-        id: "Path",
-        stroke: props.fill ? props.fill : "white"
+        xmlns: "http://www.w3.org/2000/svg",
+        fill: "none"
       }), _react["default"].createElement("path", {
-        d: "M20,22 L17.121,19.121",
-        id: "Path",
-        stroke: props.fill ? props.fill : _dashVariables.colorPicker.green100
-      }), _react["default"].createElement("circle", {
-        id: "Oval",
-        stroke: props.fill ? props.fill : _dashVariables.colorPicker.green100,
-        cx: "15",
-        cy: "17",
-        r: "3"
-      }))))))));
+        d: "M10 23H4C2.89543 23 2 22.1046 2 21V3C2 1.89543 2.89543 1 4 1H16C17.1046 1 18 1.89543 18 3V10",
+        stroke: "white",
+        strokeWidth: "2",
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      }), _react["default"].createElement("path", {
+        d: "M22 23L19.121 20.121M17 21C18.6569 21 20 19.6569 20 18C20 16.3431 18.6569 15 17 15C15.3431 15 14 16.3431 14 18C14 19.6569 15.3431 21 17 21Z",
+        stroke: "#1BDFBA",
+        strokeWidth: "2",
+        strokeLinecap: "round",
+        strokeLinejoin: "round"
+      }));
 
     case "duplicate":
       return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
