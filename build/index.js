@@ -75,7 +75,9 @@ var _exportNames = {
   BarGraph: true,
   HeatMapGraph: true,
   MultiSeriesBarGraph: true,
-  PieGraph: true
+  PieGraph: true,
+  heatmapColors: true,
+  statsColors: true
 };
 Object.defineProperty(exports, "Icon", {
   enumerable: true,
@@ -509,6 +511,18 @@ Object.defineProperty(exports, "PieGraph", {
     return _PieGraph.PieGraph;
   }
 });
+Object.defineProperty(exports, "heatmapColors", {
+  enumerable: true,
+  get: function get() {
+    return _colors.heatmapColors;
+  }
+});
+Object.defineProperty(exports, "statsColors", {
+  enumerable: true,
+  get: function get() {
+    return _colors.statsColors;
+  }
+});
 
 var _Icon = require("./elements/Icon");
 
@@ -645,5 +659,7 @@ var _HeatMapGraph = require("./stats/charts/HeatMapGraph");
 var _MultiSeriesBarGraph = require("./stats/charts/MultiSeriesBarGraph");
 
 var _PieGraph = require("./stats/charts/PieGraph");
+
+var _colors = require("./stats/utils/_colors");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
