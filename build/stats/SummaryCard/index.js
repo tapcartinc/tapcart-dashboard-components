@@ -40,7 +40,7 @@ var SummaryCard = function SummaryCard(props) {
   }, _react["default"].createElement(StyledBorderTop, {
     upShift: currentScore > prevPeriodScore
   }), _react["default"].createElement(StyledCardLeft, null, _react["default"].createElement("div", {
-    className: "header"
+    className: "summary-card-header"
   }, _react["default"].createElement(_StatsIcon.StatsIcon, {
     type: icon,
     iconLeft: true
@@ -115,7 +115,7 @@ var StyledBorderTop = _styledComponents["default"].div.withConfig({
 var StyledCardLeft = _styledComponents["default"].div.withConfig({
   displayName: "SummaryCard__StyledCardLeft",
   componentId: "sc-144rjke-2"
-})(["width:auto;display:flex;flex-direction:column;.header{display:flex;align-items:center;}"]);
+})(["width:auto;display:flex;flex-direction:column;.summary-card-header{display:flex;align-items:center;}"]);
 
 var StyledCardRight = _styledComponents["default"].div.withConfig({
   displayName: "SummaryCard__StyledCardRight",
