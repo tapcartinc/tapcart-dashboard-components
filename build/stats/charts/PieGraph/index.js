@@ -36,6 +36,7 @@ var PieGraph = function PieGraph(props) {
       body = props.body,
       currency = props.currency,
       range = props.range;
+  console.log("data", data);
   return _react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
@@ -57,15 +58,15 @@ var PieGraph = function PieGraph(props) {
     data: data,
     series: _react["default"].createElement(_reaviz.PieArcSeries, {
       doughnut: true,
-      colorScheme: colors,
-      label: _react["default"].createElement(_reaviz.PieArcLabel, {
-        style: {
-          width: "400px !important"
-        },
-        format: function format(d) {
-          return _react["default"].createElement(Key, null, d.key);
-        }
-      }),
+      colorScheme: colors // label={
+      //   <PieArcLabel
+      //     style={{ width: "400px !important" }}
+      //     // format={d => {
+      //     //   return <Key>{d.key}</Key>;
+      //     // }}
+      //   />
+      // }
+      ,
       arc: _react["default"].createElement(_reaviz.PieArc, {
         tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
           placement: "top",

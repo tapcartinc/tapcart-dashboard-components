@@ -39,13 +39,53 @@ var pieGraph = function pieGraph() {
       prevTotal: "1220000",
       difference: "↑ 2,103 (30.2%)"
     }]
-  });
+  }); // data={dataSet}
+  // body={[
+  //   {
+  //     title: "Active Sessions",
+  //     total: "2.18M",
+  //     previousTotal: "2.18M",
+  //     percentChange: -0.05
+  //   }
+  // ]}
+  // info={{
+  //   id: "_5f11jhwk1",
+  //   type: "card",
+  //   name: "App Sessions per Source",
+  //   description:
+  //     'Allows you to view your sessions across different source types. \nSource types are divided into "Push", "Direct", or "Deeplink".'
+  // }}
+  // range={{
+  //   start: "2020-03-17T22:01:48.442Z",
+  //   end: "2020-03-24T22:01:48.442Z"
+  // }}
+  // keys={["Direct", "Push", "Deeplink"]}
+  // colors={["#01006f", "#373aaf", "#738eda"]}
+
 
   return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_index.PieGraph, {
-    data: _pushSubscribersData["default"],
-    colors: ["#02018c", "#4cb7c5"],
-    statValues: statInfo,
-    title: "Push Subscribers by Device"
+    info: {
+      id: "_falzewu1g",
+      type: "card",
+      name: "Push Subscribers by Device",
+      description: "Allows you to view your push subscribers by the users device."
+    },
+    range: {
+      start: "2020-03-17T22:01:48.442Z",
+      end: "2020-03-24T22:01:48.442Z"
+    },
+    body: [{
+      title: "Total Subscribers",
+      total: 393
+    }],
+    data: [{
+      key: "iOS",
+      data: 220
+    }, {
+      key: "Android",
+      data: 173
+    }],
+    colors: ["#02018c", "#4cb7c5"]
   }));
 };
 

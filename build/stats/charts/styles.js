@@ -20,7 +20,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var StyledGraphCard = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledGraphCard",
   componentId: "uezup0-0"
-})(["background:white;border:1px solid ", ";width:550px;height:380px;border-radius:3px;padding:10px 20px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding-bottom:23px;position:relative;margin-top:16px;margin-bottom:16px;overflow-y:scroll;stroke-dasharray:0 0 !important;line{stroke:", ";stroke-width:0.5px;stroke-dasharray:0 0 !important;}text{fill:", ";", "}"], _dashVariables.colorPicker.gray25, _dashVariables.colorPicker.textEmpty, _dashVariables.colorPicker.gray, _dashVariables.sofiaPro.regular);
+})(["background:white;border:1px solid ", ";width:550px;height:380px;border-radius:3px;padding:10px 20px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding-bottom:23px;position:relative;margin-top:16px;margin-bottom:16px;stroke-dasharray:0 0 !important;line{stroke:", ";stroke-width:0.5px;stroke-dasharray:0 0 !important;}text{fill:", ";", "}"], _dashVariables.colorPicker.gray25, _dashVariables.colorPicker.textEmpty, _dashVariables.colorPicker.gray, _dashVariables.sofiaPro.regular);
 
 exports.StyledGraphCard = StyledGraphCard;
 
