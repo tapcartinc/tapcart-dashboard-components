@@ -42,9 +42,8 @@ var SummaryCard = function SummaryCard(props) {
   }), _react["default"].createElement(StyledCardLeft, null, _react["default"].createElement("div", {
     className: "summary-card-header"
   }, _react["default"].createElement(_StatsIcon.StatsIcon, {
-    type: icon,
-    iconLeft: true
-  }), _react["default"].createElement(StyledBody, null, " ", title)), _react["default"].createElement(StyledStatHeader, {
+    type: icon
+  }), _react["default"].createElement(StyledBody, null, title)), _react["default"].createElement(StyledStatHeader, {
     lg: true
   }, currency && _react["default"].createElement("span", null, currency), currentScore), _react["default"].createElement(StyledDifference, {
     unShift: currentScore > prevPeriodScore
@@ -54,7 +53,7 @@ var SummaryCard = function SummaryCard(props) {
     className: "arrow"
   }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), prevPeriodScore, " (", percentageDifference, "%)")), _react["default"].createElement(StyledCardRight, null, data.length > 0 && _react["default"].createElement(_reaviz.AreaSparklineChart, {
     width: 113,
-    height: 67,
+    height: 80,
     data: data,
     series: _react["default"].createElement(_reaviz.AreaSeries, {
       tooltip: null,
@@ -103,7 +102,7 @@ exports.SummaryCard = SummaryCard;
 var StyledSummaryCardWrapper = _styledComponents["default"].div.withConfig({
   displayName: "SummaryCard__StyledSummaryCardWrapper",
   componentId: "sc-144rjke-0"
-})(["width:270px;height:118px;border:1px solid ", ";border-radius:3px;position:relative;overflow:hidden;padding:24px 5px 20px 14px;display:flex;align-items:center;justify-content:space-between;"], _dashVariables.colorPicker.gray25);
+})(["width:323px;height:130px;border:1px solid ", ";border-radius:3px;position:relative;overflow:hidden;padding:24px 23px 20px 20px;display:flex;align-items:center;margin-right:15px;justify-content:space-between;"], _dashVariables.colorPicker.gray25);
 
 var StyledBorderTop = _styledComponents["default"].div.withConfig({
   displayName: "SummaryCard__StyledBorderTop",
@@ -120,17 +119,17 @@ var StyledCardLeft = _styledComponents["default"].div.withConfig({
 var StyledCardRight = _styledComponents["default"].div.withConfig({
   displayName: "SummaryCard__StyledCardRight",
   componentId: "sc-144rjke-3"
-})(["width:46%;position:absolute;right:display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:flex-end;height:77px;right:10px;"]);
+})(["margin-top:5px;"]);
 
 var StyledBody = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "SummaryCard__StyledBody",
   componentId: "sc-144rjke-4"
-})(["font-size:13px;font-weight:500;margin-left:-2px;width:100%;font- ", ""], _dashVariables.circularStd.medium);
+})(["font-size:14px;font-weight:500;width:100%;margin-left:7px;", ""], _dashVariables.circularStd.medium);
 
 var StyledStatHeader = _styledComponents["default"].div.withConfig({
   displayName: "SummaryCard__StyledStatHeader",
   componentId: "sc-144rjke-5"
-})(["-webkit-font-smoothing:antialiased;font-weight:normal;font-style:normal;letter-spacing:normal;font-weight:300;color:", ";", ";", ";", ""], _dashVariables.colorPicker.blue, function (props) {
+})(["text-align:left;-webkit-font-smoothing:antialiased;font-weight:normal;font-style:normal;letter-spacing:normal;font-weight:300;color:", ";", ";", ";", ""], _dashVariables.colorPicker.blue, function (props) {
   return props.lg && "font-size: 30px";
 }, function (props) {
   return props.sm && "font-size: 27px";

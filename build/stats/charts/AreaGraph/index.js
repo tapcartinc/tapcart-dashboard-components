@@ -125,7 +125,7 @@ var AreaGraph = function AreaGraph(props) {
 exports.AreaGraph = AreaGraph;
 
 var GraphDetails = function GraphDetails(_ref) {
-  var _React$createElement2;
+  var _React$createElement;
 
   var data = _ref.data,
       currency = _ref.currency,
@@ -144,7 +144,7 @@ var GraphDetails = function GraphDetails(_ref) {
   if (data && data.length) {
     switch (stacked) {
       case true:
-        return _react["default"].createElement(_reaviz.AreaChart, (_React$createElement2 = {
+        return _react["default"].createElement(_reaviz.AreaChart, (_React$createElement = {
           width: 470,
           height: 220,
           series: _react["default"].createElement(_reaviz.AreaSeries, {
@@ -186,41 +186,105 @@ var GraphDetails = function GraphDetails(_ref) {
               })
             })
           })
-        }, _defineProperty(_React$createElement2, "series", _react["default"].createElement(_reaviz.StackedAreaSeries, {
+        }, _defineProperty(_React$createElement, "series", _react["default"].createElement(_reaviz.StackedAreaSeries, {
           type: "grouped",
           interpolation: "smooth",
           colorScheme: getColorScheme(),
           tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
             placement: "top",
             tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
-              placement: "top",
-              followCursor: true,
               content: function content(d) {
                 return _react["default"].createElement(_styles.StyledTooltip, {
-                  width: "130px"
-                }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, {
-                  marginBottom: "2px",
-                  marginTop: "5px",
-                  fontSize: "11px",
-                  color: _dashVariables.colorPicker.black
-                }, (0, _moment["default"])(d.x).format("MMM D")), _react["default"].createElement(_Typography.Sofia, _defineProperty({
-                  marginBottom: "5px",
-                  marginTop: "0px",
-                  fontSize: "11px",
-                  color: _dashVariables.colorPicker.blue
-                }, "fontSize", "13px"), currency && _react["default"].createElement("span", null, currency), d.data[0].value.toLocaleString())), _react["default"].createElement(_styles.StyledRightTooltip, {
-                  upShift: d.data[0].value >= d.data[1].value
-                }, _react["default"].createElement(_Typography.Sofia, {
-                  marginBottom: "0px",
-                  color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                }, d.data[0].value > d.data[1].value && _react["default"].createElement("span", null, "\u2191"), d.data[0].value < d.data[1].value && _react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(d.data[0].value) - Number(d.data[1].value)) / ((Number(d.data[0].value) + Number(d.data[1].value)) / 2) * 100).toFixed(2)), "%"), _react["default"].createElement(_Typography.Sofia, {
-                  marginTop: "0px",
-                  fontSize: "10px",
-                  color: d.data[0].value >= d.data[1].value ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                }, "prev period"))));
+                  style: {
+                    background: "white",
+                    padding: 10
+                  }
+                }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, "".concat((0, _moment["default"])(d.x).format("MMM D"))), _react["default"].createElement(_styles.StyledRightTooltip, null, "".concat((0, _moment["default"])(d.x).format("MMM D")))));
               }
             })
-          }),
+          }) // tooltip={
+          //   <TooltipArea
+          //     placement="top"
+          //     tooltip={
+          //       <ChartTooltip
+          //         followCursor={true}
+          //         modifiers={{
+          //           offset: "5px, 5px"
+          //         }}
+          //         content={d => {
+          //           return (
+          //             <StyledTooltip width="130px">
+          //               <StyledAreaMapTooltip>
+          //                 <StyledLeftTooltip>
+          //                   <Sofia
+          //                     marginBottom="2px"
+          //                     marginTop="5px"
+          //                     fontSize="11px"
+          //                     color={colorPicker.black}
+          //                   >
+          //                     {moment(d.x).format("MMM D")}
+          //                   </Sofia>
+          //                   <Sofia
+          //                     marginBottom="5px"
+          //                     marginTop="0px"
+          //                     fontSize="11px"
+          //                     color={colorPicker.blue}
+          //                     fontSize="13px"
+          //                   >
+          //                     {currency && <span>{currency}</span>}
+          //                     {d.data[0].value.toLocaleString()}
+          //                   </Sofia>
+          //                 </StyledLeftTooltip>
+          //                 <StyledRightTooltip
+          //                   upShift={d.data[0].value >= d.data[1].value}
+          //                 >
+          //                   <Sofia
+          //                     marginBottom="0px"
+          //                     color={
+          //                       d.data[0].value >= d.data[1].value
+          //                         ? colorPicker.green100
+          //                         : colorPicker.red
+          //                     }
+          //                   >
+          //                     {d.data[0].value > d.data[1].value && (
+          //                       <span>&uarr;</span>
+          //                     )}
+          //                     {d.data[0].value < d.data[1].value && (
+          //                       <span>&darr;</span>
+          //                     )}
+          //                     {Number(
+          //                       parseFloat(
+          //                         ((Number(d.data[0].value) -
+          //                           Number(d.data[1].value)) /
+          //                           ((Number(d.data[0].value) +
+          //                             Number(d.data[1].value)) /
+          //                             2)) *
+          //                           100
+          //                       ).toFixed(2)
+          //                     )}
+          //                     %
+          //                   </Sofia>
+          //                   <Sofia
+          //                     marginTop="0px"
+          //                     fontSize="10px"
+          //                     color={
+          //                       d.data[0].value >= d.data[1].value
+          //                         ? colorPicker.green100
+          //                         : colorPicker.red
+          //                     }
+          //                   >
+          //                     prev period
+          //                   </Sofia>
+          //                 </StyledRightTooltip>
+          //               </StyledAreaMapTooltip>
+          //             </StyledTooltip>
+          //           );
+          //         }}
+          //       />
+          //     }
+          //   ></TooltipArea>
+          // }
+          ,
           area: _react["default"].createElement(_reaviz.Area, {
             style: function style(data, idx) {
               return data && data.length && data[0] && data[0].key === keys[0] ? {
@@ -251,7 +315,7 @@ var GraphDetails = function GraphDetails(_ref) {
               stroke: "transparent"
             } : null
           })
-        })), _defineProperty(_React$createElement2, "data", data), _React$createElement2)) // <StackedAreaChart
+        })), _defineProperty(_React$createElement, "data", data), _React$createElement)) // <StackedAreaChart
         //   width={470}
         //   height={220}
         //   data={data}

@@ -13,8 +13,6 @@ var _dashVariables = require("../../utils/_dashVariables");
 
 var _Typography = require("../../elements/Typography");
 
-var _variables = require("../../utils/_variables");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -22,14 +20,14 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var StyledGraphCard = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledGraphCard",
   componentId: "uezup0-0"
-})(["background:white;border:1px solid ", ";width:550px;height:350px;border-radius:3px;padding:10px 20px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding-bottom:23px;position:relative;"], _dashVariables.colorPicker.gray25);
+})(["background:white;border:1px solid ", ";width:550px;height:380px;border-radius:3px;padding:10px 20px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding-bottom:23px;position:relative;margin-top:16px;margin-bottom:16px;overflow-y:scroll;stroke-dasharray:0 0 !important;line{stroke:", ";stroke-width:0.5px;stroke-dasharray:0 0 !important;}text{fill:", ";", "}"], _dashVariables.colorPicker.gray25, _dashVariables.colorPicker.textEmpty, _dashVariables.colorPicker.gray, _dashVariables.sofiaPro.regular);
 
 exports.StyledGraphCard = StyledGraphCard;
 
 var StyledCardHeaderWrapper = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledCardHeaderWrapper",
   componentId: "uezup0-1"
-})(["display:flex;justify-content:space-between;width:100%;", ""], function (props) {
+})(["display:flex;justify-content:space-between;width:100%;margin-bottom:10px;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
@@ -77,7 +75,7 @@ exports.StyledStatHeader = StyledStatHeader;
 var StyledDifference = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledDifference",
   componentId: "uezup0-7"
-})(["margin-top:4px;-webkit-font-smoothing:antialiased;font-size:15px;font-weight:normal;font-style:normal;font-weight:400;display:flex;align-items:center;", " .arrow{margin-right:3px;margin-top:2px;}", ""], _dashVariables.sofiaPro.regular, function (props) {
+})(["margin-top:4px;-webkit-font-smoothing:antialiased;font-size:15px;font-weight:normal;font-style:normal;font-weight:400;align-items:center;", " .arrow{margin-right:3px;margin-top:2px;}", ""], _dashVariables.sofiaPro.regular, function (props) {
   return props.upShift ? "color: ".concat(_dashVariables.colorPicker.green100) : "color: ".concat(_dashVariables.colorPicker.red);
 });
 
@@ -86,7 +84,7 @@ exports.StyledDifference = StyledDifference;
 var StyledTip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledTip",
   componentId: "uezup0-8"
-})(["position:relative;background:white;width:100%;padding:3px 8px;border-radius:3px;text-align:left;transform:translateY(12px);box-shadow:0 0 20px 0 rgba(0,0,0,0.2);&::after{content:\"\";position:absolute;top:100%;left:calc(42%);background:white;width:12px;height:8px;clip-path:polygon(0 0,100% 0,50% 100%);}", ""], function (props) {
+})(["position:relative;background:white;width:100%;padding:10px;border-radius:3px;text-align:left;transform:translateY(12px);box-shadow:0 0 20px 0 rgba(0,0,0,0.2);&::after{content:\"\";position:absolute;top:100%;left:calc(42%);background:white;width:12px;height:8px;clip-path:polygon(0 0,100% 0,50% 100%);}", ""], function (props) {
   return props.width && "width: ".concat(props.width, ";");
 });
 
