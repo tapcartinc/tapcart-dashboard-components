@@ -36,7 +36,6 @@ var PieGraph = function PieGraph(props) {
       body = props.body,
       currency = props.currency,
       range = props.range;
-  console.log("data", data);
   return _react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
