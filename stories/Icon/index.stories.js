@@ -521,6 +521,10 @@ export const icon = () => {
         <Icon type="push" />
         push
       </StyledIcon>
+      <StyledIcon>
+        <Icon type="copy" />
+        copy
+      </StyledIcon>
     </StyledIcons>
   );
 };
