@@ -23,8 +23,6 @@ var _moment = _interopRequireDefault(require("moment"));
 
 var _dashVariables = require("../../../utils/_dashVariables");
 
-var _ToolTip = require("../../../components/ToolTip");
-
 var _Typography = require("../../../elements/Typography");
 
 var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
@@ -35,26 +33,105 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var HeatMapGraph = function HeatMapGraph(props) {
-  var sequentialData = function sequentialData() {
-    var start = 100;
-    var index = 0;
-    var legendDetails = [];
+  var _useState = (0, _react.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      legendKeys = _useState2[0],
+      setLegendKeys = _useState2[1];
 
-    while (start <= 800) {
-      var details = {};
-      details["key"] = "\u2265 ".concat(start);
-      details["color"] = _colors.heatmapColors[index];
-      legendDetails.push(details);
-      start = start + 100;
-      index = index + 1;
+  var _useState3 = (0, _react.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      cells = _useState4[0],
+      setCells = _useState4[1];
+
+  var _useState5 = (0, _react.useState)(0),
+      _useState6 = _slicedToArray(_useState5, 2),
+      totalSessions = _useState6[0],
+      setTotalSessions = _useState6[1];
+
+  (0, _react.useEffect)(function () {
+    var totalSessions = props.data.reduce(function (acc, currDataSet) {
+      var total = currDataSet.data.reduce(function (insideAcc, insideDataSet) {
+        insideAcc = insideAcc + insideDataSet.data;
+        return insideAcc;
+      }, 0);
+      acc = acc + total;
+      return acc;
+    }, 0);
+    setTotalSessions(totalSessions);
+    var legendData = props.data.reduce(function (acc, currData) {
+      currData.data.map(function (dataSet) {
+        acc = [].concat(_toConsumableArray(acc), [dataSet.data]);
+      });
+      return acc;
+    }, []);
+
+    if (totalSessions) {
+      getCells();
+      getLegendKeys(legendData);
     }
+  }, [props.data, totalSessions]);
 
-    return legendDetails;
+  var getCells = function getCells() {
+    var boop = [];
+    var dataCopy = props.data.slice(0);
+    dataCopy.map(function (dataSet, index) {
+      var cat = _objectSpread({}, dataSet);
+
+      cat.data.map(function (day, index) {
+        day["total"] = day.data;
+        var booper = Number((day.total / totalSessions * 100).toFixed(4));
+        day["metadata"] = booper;
+      });
+      boop.push(cat);
+    });
+    setCells(boop);
   };
 
-  var getRange = function getRange(d) {
-    return ">= ".concat(JSON.stringify(d.y).split("")[0], "00");
+  var getLegendKeys = function getLegendKeys(array) {
+    var maxInt = Math.max.apply(null, array);
+    var minInt = Math.min.apply(null, array);
+    var lastKey = Number((maxInt / totalSessions * 100).toFixed(4));
+    var firstKey = Number((minInt / totalSessions * 100).toFixed(4));
+    var range = parseFloat((lastKey - firstKey).toFixed(4));
+    var step = 1 * range / 8;
+    var arrayStart = firstKey;
+    var count = 0;
+    var steps = [];
+
+    while (lastKey > arrayStart && count < 8) {
+      steps.push({
+        key: parseFloat(arrayStart.toFixed(2)),
+        total: arrayStart,
+        color: _colors.heatmapColors[count]
+      });
+      arrayStart = arrayStart + step;
+      count = count + 1;
+    }
+
+    return setLegendKeys(steps);
   };
 
   var currency = props.currency,
@@ -63,7 +140,7 @@ var HeatMapGraph = function HeatMapGraph(props) {
       range = props.range,
       info = props.info,
       body = props.body,
-      data = props.data;
+      colors = props.colors;
   return _react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
@@ -77,7 +154,7 @@ var HeatMapGraph = function HeatMapGraph(props) {
   }), _react["default"].createElement(_reaviz.Heatmap, {
     height: 195,
     width: 515,
-    data: data,
+    data: cells,
     series: _react["default"].createElement(_reaviz.HeatmapSeries, {
       padding: 0.14,
       cell: _react["default"].createElement(_reaviz.HeatmapCell, {
@@ -88,20 +165,26 @@ var HeatMapGraph = function HeatMapGraph(props) {
             return _react["default"].createElement(_styles.StyledTooltip, {
               width: "70px"
             }, _react["default"].createElement(_styles.StyledHeatmapTip, null, _react["default"].createElement(_Typography.Sofia, {
-              fontSize: "11px",
-              color: _dashVariables.colorPicker.black
-            }, getRange(d)), _react["default"].createElement(_Typography.Sofia, {
               color: _dashVariables.colorPicker.blue
-            }, d.y)));
+            }, d.y), _react["default"].createElement(_Typography.Sofia, {
+              color: _dashVariables.colorPicker.black
+            }, d.data.metadata, "%")));
           }
         })
       }),
-      colorScheme: _colors.heatmapColors
+      colorScheme: colors
     }),
     xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
       type: "time",
       tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
-        interval: _d3Time.timeDay
+        interval: _d3Time.timeDay,
+        line: null,
+        label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
+          padding: 5,
+          format: function format(d) {
+            return (0, _moment["default"])(d, "HH:mm").format("h a");
+          }
+        })
       })
     }),
     yAxis: _react["default"].createElement(_reaviz.LinearYAxis, {
@@ -114,24 +197,9 @@ var HeatMapGraph = function HeatMapGraph(props) {
         })
       })
     })
-  }), _react["default"].createElement(_styles.StyledCustomLegend, {
-    data: sequentialData()
+  }), legendKeys && _react["default"].createElement(_styles.StyledCustomLegend, {
+    data: legendKeys
   }));
 };
 
 exports.HeatMapGraph = HeatMapGraph;
-
-var Icon = function Icon(_ref) {
-  var fill = _ref.fill;
-  return _react["default"].createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 30 30",
-    width: "30",
-    height: "30",
-    fill: fill
-  }, _react["default"].createElement("rect", {
-    width: "30",
-    height: "30",
-    rx: "4"
-  }));
-};

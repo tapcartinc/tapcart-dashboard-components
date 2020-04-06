@@ -31,6 +31,14 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -70,7 +78,24 @@ var convertData = function convertData(data) {
 };
 
 var AreaGraph = function AreaGraph(props) {
-  var updatedData = props.data && convertData(props.data);
+  var updatedData = props.data && props.unit !== "DAYS" ? props.data : convertData(props.data);
+
+  var _useState = (0, _react.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      currUnit = _useState2[0],
+      setCurrUnit = _useState2[1];
+
+  var unitRef = (0, _react.useRef)();
+  (0, _react.useEffect)(function () {
+    if (props.unit !== currUnit && previousUnit !== props.unit) {
+      return setCurrUnit(props.unit);
+    }
+
+    if (!currUnit && props.unit) {
+      return setCurrUnit(props.unit);
+    }
+  }, [props.unit]);
+  var previousUnit = unitRef.current;
   var stacked = props.stacked,
       currency = props.currency,
       colors = props.colors,
@@ -80,7 +105,8 @@ var AreaGraph = function AreaGraph(props) {
       fillColors = props.fillColors,
       info = props.info,
       body = props.body,
-      removeCard = props.removeCard;
+      removeCard = props.removeCard,
+      unit = props.unit;
 
   var getColorScheme = function getColorScheme() {
     if (colors) {
@@ -109,13 +135,15 @@ var AreaGraph = function AreaGraph(props) {
     tooltip: tooltip,
     currency: currency
   }), _react["default"].createElement(GraphDetails, {
+    info: info,
     data: updatedData,
     currency: currency,
     stacked: stacked,
     gradient: gradient,
     fillColors: fillColors,
     getColorScheme: getColorScheme,
-    colors: colors
+    colors: colors,
+    unit: currUnit
   }), _react["default"].createElement(Legend, {
     colors: getColorScheme(),
     data: updatedData
@@ -125,7 +153,7 @@ var AreaGraph = function AreaGraph(props) {
 exports.AreaGraph = AreaGraph;
 
 var GraphDetails = function GraphDetails(_ref) {
-  var _React$createElement;
+  var _React$createElement2;
 
   var data = _ref.data,
       currency = _ref.currency,
@@ -134,8 +162,30 @@ var GraphDetails = function GraphDetails(_ref) {
       gradient = _ref.gradient,
       fillColors = _ref.fillColors,
       strokes = _ref.strokes,
-      colors = _ref.colors;
-  // const [keys, setKeys] = useState();
+      colors = _ref.colors,
+      info = _ref.info,
+      unit = _ref.unit;
+
+  var getFormat = function getFormat(d) {
+    if (unit === "DAYS") {
+      return (0, _moment["default"])(d).format("MMM D");
+    }
+
+    if (unit === "HOURS") {
+      return (0, _moment["default"])("".concat(d, ":00:00"), "HH:mm:ss").format("h A");
+    }
+  };
+
+  var getTooltipFormat = function getTooltipFormat(value) {
+    if (unit === "DAYS") {
+      return (0, _moment["default"])(value).format("MMM D");
+    }
+
+    if (unit === "HOURS") {
+      return (0, _moment["default"])("".concat(value, ":00:00"), "HH:mm:ss").format("h A");
+    }
+  };
+
   var keys = [];
   data && data.map(function (dataSet) {
     return keys.push(dataSet.key);
@@ -144,11 +194,11 @@ var GraphDetails = function GraphDetails(_ref) {
   if (data && data.length) {
     switch (stacked) {
       case true:
-        return _react["default"].createElement(_reaviz.AreaChart, (_React$createElement = {
+        return _react["default"].createElement(_reaviz.AreaChart, (_React$createElement2 = {
           width: 470,
           height: 220,
           series: _react["default"].createElement(_reaviz.AreaSeries, {
-            type: "grouped",
+            type: "stacked",
             colorScheme: getColorScheme()
           }),
           gridlines: _react["default"].createElement(_reaviz.GridlineSeries, {
@@ -175,116 +225,60 @@ var GraphDetails = function GraphDetails(_ref) {
               })
             })
           }),
-          xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
-            type: "time",
+          xAxis: _react["default"].createElement(_reaviz.LinearXAxis // type="time"
+          , {
+            type: unit === "DAYS" ? "time" : "value",
             tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
               line: null,
               label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
+                padding: 5,
                 format: function format(d) {
-                  return (0, _moment["default"])(d).format("MMM D");
+                  return getFormat(d);
                 }
               })
             })
           })
-        }, _defineProperty(_React$createElement, "series", _react["default"].createElement(_reaviz.StackedAreaSeries, {
-          type: "grouped",
+        }, _defineProperty(_React$createElement2, "series", _react["default"].createElement(_reaviz.StackedAreaSeries, {
+          type: "stacked",
           interpolation: "smooth",
           colorScheme: getColorScheme(),
           tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
             placement: "top",
             tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
+              followCursor: true,
               content: function content(d) {
+                var currentTotal = d && d.data && d.data.length && d.data[0] && d.data[0].value;
+                var previousTotal = d && d.data && d.data.length && d.data[1] && d.data[1].value;
+                var totalFormatted = (0, _useFormattedNumber.useFormattedNumber)(d && d.data && d.data.length && d.data[0] && d.data[0].value);
                 return _react["default"].createElement(_styles.StyledTooltip, {
+                  tipAlign: "bottom",
                   style: {
                     background: "white",
                     padding: 10
                   }
-                }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, "".concat((0, _moment["default"])(d.x).format("MMM D"))), _react["default"].createElement(_styles.StyledRightTooltip, null, "".concat((0, _moment["default"])(d.x).format("MMM D")))));
+                }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, {
+                  marginBottom: "2px",
+                  marginTop: "5px",
+                  fontSize: "11px",
+                  color: _dashVariables.colorPicker.black
+                }, getTooltipFormat(d.x)), _react["default"].createElement(_Typography.Sofia, _defineProperty({
+                  marginBottom: "5px",
+                  marginTop: "0px",
+                  fontSize: "11px",
+                  color: _dashVariables.colorPicker.blue
+                }, "fontSize", "13px"), currency && _react["default"].createElement("span", null, currency), totalFormatted.toLocaleString())), _react["default"].createElement(_styles.StyledRightTooltip, {
+                  upShift: currentTotal >= previousTotal
+                }, _react["default"].createElement(_Typography.Sofia, {
+                  marginBottom: "0px",
+                  color: currentTotal >= previousTotal ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
+                }, currentTotal > previousTotal && _react["default"].createElement("span", null, "\u2191"), currentTotal < previousTotal && _react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(currentTotal) - Number(previousTotal)) / ((Number(currentTotal) + Number(previousTotal)) / 2) * 100).toFixed(2)), "%"), _react["default"].createElement(_Typography.Sofia, {
+                  marginTop: "0px",
+                  fontSize: "10px",
+                  color: currentTotal >= previousTotal ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
+                }, "prev period"))));
               }
             })
-          }) // tooltip={
-          //   <TooltipArea
-          //     placement="top"
-          //     tooltip={
-          //       <ChartTooltip
-          //         followCursor={true}
-          //         modifiers={{
-          //           offset: "5px, 5px"
-          //         }}
-          //         content={d => {
-          //           return (
-          //             <StyledTooltip width="130px">
-          //               <StyledAreaMapTooltip>
-          //                 <StyledLeftTooltip>
-          //                   <Sofia
-          //                     marginBottom="2px"
-          //                     marginTop="5px"
-          //                     fontSize="11px"
-          //                     color={colorPicker.black}
-          //                   >
-          //                     {moment(d.x).format("MMM D")}
-          //                   </Sofia>
-          //                   <Sofia
-          //                     marginBottom="5px"
-          //                     marginTop="0px"
-          //                     fontSize="11px"
-          //                     color={colorPicker.blue}
-          //                     fontSize="13px"
-          //                   >
-          //                     {currency && <span>{currency}</span>}
-          //                     {d.data[0].value.toLocaleString()}
-          //                   </Sofia>
-          //                 </StyledLeftTooltip>
-          //                 <StyledRightTooltip
-          //                   upShift={d.data[0].value >= d.data[1].value}
-          //                 >
-          //                   <Sofia
-          //                     marginBottom="0px"
-          //                     color={
-          //                       d.data[0].value >= d.data[1].value
-          //                         ? colorPicker.green100
-          //                         : colorPicker.red
-          //                     }
-          //                   >
-          //                     {d.data[0].value > d.data[1].value && (
-          //                       <span>&uarr;</span>
-          //                     )}
-          //                     {d.data[0].value < d.data[1].value && (
-          //                       <span>&darr;</span>
-          //                     )}
-          //                     {Number(
-          //                       parseFloat(
-          //                         ((Number(d.data[0].value) -
-          //                           Number(d.data[1].value)) /
-          //                           ((Number(d.data[0].value) +
-          //                             Number(d.data[1].value)) /
-          //                             2)) *
-          //                           100
-          //                       ).toFixed(2)
-          //                     )}
-          //                     %
-          //                   </Sofia>
-          //                   <Sofia
-          //                     marginTop="0px"
-          //                     fontSize="10px"
-          //                     color={
-          //                       d.data[0].value >= d.data[1].value
-          //                         ? colorPicker.green100
-          //                         : colorPicker.red
-          //                     }
-          //                   >
-          //                     prev period
-          //                   </Sofia>
-          //                 </StyledRightTooltip>
-          //               </StyledAreaMapTooltip>
-          //             </StyledTooltip>
-          //           );
-          //         }}
-          //       />
-          //     }
-          //   ></TooltipArea>
-          // }
-          ,
+          }),
           area: _react["default"].createElement(_reaviz.Area, {
             style: function style(data, idx) {
               return data && data.length && data[0] && data[0].key === keys[0] ? {
@@ -315,181 +309,7 @@ var GraphDetails = function GraphDetails(_ref) {
               stroke: "transparent"
             } : null
           })
-        })), _defineProperty(_React$createElement, "data", data), _React$createElement)) // <StackedAreaChart
-        //   width={470}
-        //   height={220}
-        //   data={data}
-        //   gridlines={
-        //     <GridlineSeries
-        //       line={
-        //         <Gridline
-        //           direction="y"
-        //           strokeColor={colorPicker.gray25}
-        //           strokeDasharray="0 0"
-        //           style={{ strokeDasharray: "0 0" }}
-        //         />
-        //       }
-        //     />
-        //   }
-        //   yAxis={
-        //     <LinearYAxis
-        //       type="value"
-        //       axisLine={null}
-        //       tickSeries={
-        //         <LinearYAxisTickSeries
-        //           line={null}
-        //           label={<LinearYAxisTickLabel padding={10} label={null} />}
-        //         />
-        //       }
-        //     />
-        //   }
-        //   xAxis={
-        //     <LinearXAxis
-        //       type="time"
-        //       tickSeries={
-        //         <LinearXAxisTickSeries
-        //           line={null}
-        //           label={
-        //             <LinearXAxisTickLabel
-        //               padding={5}
-        //               line={null}
-        //               format={d => moment(d).format("MMM D")}
-        //             />
-        //           }
-        //         />
-        //       }
-        //     />
-        //   }
-        //   series={
-        //     <StackedAreaSeries
-        //       type="grouped"
-        //       interpolation="smooth"
-        //       colorScheme={getColorScheme()}
-        //       tooltip={
-        //         <TooltipArea
-        //           // placement="top"
-        //           tooltip={
-        //             <ChartTooltip
-        //               placement="top"
-        //               followCursor={true}
-        //               content={(d, ab, b) => {
-        //                 return (
-        //                   <StyledTooltip width="130px">
-        //                     <StyledAreaMapTooltip>
-        //                       <StyledLeftTooltip>
-        //                         <Sofia
-        //                           marginBottom="2px"
-        //                           marginTop="5px"
-        //                           fontSize="11px"
-        //                           color={colorPicker.black}
-        //                         >
-        //                           {moment(d.x).format("MMM D")}
-        //                         </Sofia>
-        //                         <Sofia
-        //                           marginBottom="5px"
-        //                           marginTop="0px"
-        //                           fontSize="11px"
-        //                           color={colorPicker.blue}
-        //                           fontSize="13px"
-        //                         >
-        //                           {currency && <span>{currency}</span>}
-        //                           {d.data[0].value.toLocaleString()}
-        //                         </Sofia>
-        //                       </StyledLeftTooltip>
-        //                       <StyledRightTooltip
-        //                         upShift={d.data[0].value >= d.data[1].value}
-        //                       >
-        //                         <Sofia
-        //                           marginBottom="0px"
-        //                           color={
-        //                             d.data[0].value >= d.data[1].value
-        //                               ? colorPicker.green100
-        //                               : colorPicker.red
-        //                           }
-        //                         >
-        //                           {d.data[0].value > d.data[1].value && (
-        //                             <span>&uarr;</span>
-        //                           )}
-        //                           {d.data[0].value < d.data[1].value && (
-        //                             <span>&darr;</span>
-        //                           )}
-        //                           {Number(
-        //                             parseFloat(
-        //                               ((Number(d.data[0].value) -
-        //                                 Number(d.data[1].value)) /
-        //                                 ((Number(d.data[0].value) +
-        //                                   Number(d.data[1].value)) /
-        //                                   2)) *
-        //                                 100
-        //                             ).toFixed(2)
-        //                           )}
-        //                           %
-        //                         </Sofia>
-        //                         <Sofia
-        //                           marginTop="0px"
-        //                           fontSize="10px"
-        //                           color={
-        //                             d.data[0].value >= d.data[1].value
-        //                               ? colorPicker.green100
-        //                               : colorPicker.red
-        //                           }
-        //                         >
-        //                           prev period
-        //                         </Sofia>
-        //                       </StyledRightTooltip>
-        //                     </StyledAreaMapTooltip>
-        //                   </StyledTooltip>
-        //                 );
-        //               }}
-        //             />
-        //           }
-        //         ></TooltipArea>
-        //       }
-        //       area={
-        //         <Area
-        //           style={(data, idx) =>
-        //             data && data.length && data[0] && data[0].key === keys[0]
-        //               ? {
-        //                   opacity: fillColors ? 1 : 0.9,
-        //                   fill: getColorScheme()[1]
-        //                 }
-        //               : {
-        //                   opacity: fillColors ? 1 : 0,
-        //                   fill: getColorScheme()[0]
-        //                 }
-        //           }
-        //           mask={
-        //             !fillColors ? (
-        //               <Gradient
-        //                 stops={[
-        //                   <GradientStop
-        //                     offset="10%"
-        //                     color={getColorScheme()[0]}
-        //                     stopOpacity={0}
-        //                     key="start"
-        //                   />,
-        //                   <GradientStop
-        //                     offset="80%"
-        //                     color={getColorScheme()[0]}
-        //                     stopOpacity={gradient ? 1 : 0}
-        //                     key="stop"
-        //                   />
-        //                 ]}
-        //               />
-        //             ) : null
-        //           }
-        //         />
-        //       }
-        //       line={
-        //         <Line
-        //           strokeWidth={3}
-        //           style={fillColors ? { stroke: "transparent" } : null}
-        //         />
-        //       }
-        //     />
-        //   }
-        // />
-        ;
+        })), _defineProperty(_React$createElement2, "data", data), _React$createElement2));
 
       case false:
         return _react["default"].createElement(_reaviz.AreaChart, {
@@ -518,7 +338,7 @@ var GraphDetails = function GraphDetails(_ref) {
             tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
               line: null,
               label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
-                padding: 5,
+                padding: 10,
                 format: function format(d) {
                   return (0, _moment["default"])(d).format("ddd");
                 }

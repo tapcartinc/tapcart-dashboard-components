@@ -84,19 +84,22 @@ exports.StyledDifference = StyledDifference;
 var StyledTip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledTip",
   componentId: "uezup0-8"
-})(["position:relative;background:white;width:100%;padding:10px;border-radius:3px;text-align:left;transform:translateY(12px);box-shadow:0 0 20px 0 rgba(0,0,0,0.2);&::after{content:\"\";position:absolute;top:100%;left:calc(42%);background:white;width:12px;height:8px;clip-path:polygon(0 0,100% 0,50% 100%);}", ""], function (props) {
+})(["position:relative;background:white;width:100%;padding:5px;border-radius:3px;text-align:left;transform:translateY(12px);box-shadow:0 0 20px 0 rgba(0,0,0,0.2);", " ", ""], function (props) {
+  return props.tipAlign === "left" ? "\n  &::after {\n    content: \"\";\n    position: absolute;\n    top: calc(45%);\n    right: 98%;\n    background: white;\n    width: 12px;\n    height: 8px;\n    transform: rotate(90deg);\n    clip-path: polygon(0 0, 100% 0, 50% 100%);\n  }\n  " : props.tipAlign === "top" ? "\n  &::after {\n    content: \"\";\n    position: absolute;\n    bottom: 100%;\n    left: calc(40%);\n    background: white;\n    width: 12px;\n    transform: rotate(180deg);\n    height: 8px;\n    clip-path: polygon(0 0, 100% 0, 50% 100%);\n  }\n  " : "&::after {\n    content: \"\";\n    position: absolute;\n    top: 100%;\n    left: calc(42%);\n    background: white;\n    width: 12px;\n    height: 8px;\n    clip-path: polygon(0 0, 100% 0, 50% 100%);\n  }";
+}, function (props) {
   return props.width && "width: ".concat(props.width, ";");
 });
 
 var StyledHeatmapTip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledHeatmapTip",
   componentId: "uezup0-9"
-})(["display:flex;flex-direction:column;align-items:flex-start;"]);
+})(["display:flex;text-align:center;flex-direction:column;align-items:center;"]);
 
 exports.StyledHeatmapTip = StyledHeatmapTip;
 
 var StyledTooltip = function StyledTooltip(props) {
   return _react["default"].createElement(StyledTip, _extends({}, props, {
+    tipAlign: props.tipAlign,
     width: props.width
   }), props.children);
 };
@@ -118,7 +121,7 @@ var StyledCustomLegendWrapper = _styledComponents["default"].ul.withConfig({
 var StyledLevelSquare = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledLevelSquare",
   componentId: "uezup0-12"
-})(["height:14px;width:14px;border-radius:2px;margin-right:0px;background:", ";"], function (props) {
+})(["height:12px;width:12px;border-radius:2px;margin-right:0px;margin-top:3px;background:", ";"], function (props) {
   return props.color;
 });
 
@@ -127,16 +130,16 @@ exports.StyledLevelSquare = StyledLevelSquare;
 var StyledLevel = _styledComponents["default"].li.withConfig({
   displayName: "styles__StyledLevel",
   componentId: "uezup0-13"
-})(["display:flex;align-items:center;span{display:inline-block;margin-left:8px;}"]);
+})(["display:flex;align-items:center;span{display:inline-block;margin-left:5px;}"]);
 
 var StyledCustomLegend = function StyledCustomLegend(props) {
   var data = props.data;
-  return _react["default"].createElement(StyledCustomLegendWrapper, props, data.map(function (dataLevel) {
+  return _react["default"].createElement(StyledCustomLegendWrapper, props, data.map(function (dataLevel, index) {
     return _react["default"].createElement(StyledLevel, {
-      key: dataLevel.key
+      key: dataLevel.total
     }, _react["default"].createElement(StyledLevelSquare, {
       color: dataLevel.color
-    }), _react["default"].createElement("span", null, dataLevel.key));
+    }), _react["default"].createElement("span", null, dataLevel.key, "%"));
   }));
 };
 
@@ -145,7 +148,7 @@ exports.StyledCustomLegend = StyledCustomLegend;
 var StyledLeftTooltip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledLeftTooltip",
   componentId: "uezup0-14"
-})(["display:flex;flex-direction:column;width:45%;padding-left:5px;align-items:flex-start;text-align:center;justify-content:center;"]);
+})(["display:flex;flex-direction:column;width:45%;padding-left:5px;align-items:flex-start;text-align:center;justify-content:center;margin-right:8px;"]);
 
 exports.StyledLeftTooltip = StyledLeftTooltip;
 

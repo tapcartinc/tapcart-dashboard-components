@@ -21,6 +21,12 @@ var _Typography = require("../../elements/Typography");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var SummaryCard = function SummaryCard(props) {
   var title = props.title,
       info = props.info,
@@ -32,6 +38,11 @@ var SummaryCard = function SummaryCard(props) {
       removeCard = props.removeCard,
       currency = props.currency;
   var currentColor = currentScore > prevPeriodScore ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red;
+  var updatedDataDates = data.map(function (dataSet) {
+    return _objectSpread({}, dataSet, {
+      key: (0, _moment["default"])(dataSet.key)
+    });
+  });
   return _react["default"].createElement(StyledSummaryCardWrapper, {
     upShift: currentScore > prevPeriodScore,
     onClick: function onClick() {
@@ -54,7 +65,7 @@ var SummaryCard = function SummaryCard(props) {
   }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), prevPeriodScore, " (", percentageDifference, "%)")), _react["default"].createElement(StyledCardRight, null, data.length > 0 && _react["default"].createElement(_reaviz.AreaSparklineChart, {
     width: 113,
     height: 80,
-    data: data,
+    data: updatedDataDates,
     series: _react["default"].createElement(_reaviz.AreaSeries, {
       tooltip: null,
       colorScheme: [currentColor],

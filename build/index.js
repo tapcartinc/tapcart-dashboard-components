@@ -60,6 +60,7 @@ var _exportNames = {
   sofiaPro: true,
   circularStd: true,
   colorPicker: true,
+  defaultGraphColors: true,
   transition: true,
   hover: true,
   onClickTransition: true,
@@ -412,6 +413,12 @@ Object.defineProperty(exports, "colorPicker", {
   enumerable: true,
   get: function get() {
     return _dashVariables.colorPicker;
+  }
+});
+Object.defineProperty(exports, "defaultGraphColors", {
+  enumerable: true,
+  get: function get() {
+    return _dashVariables.defaultGraphColors;
   }
 });
 Object.defineProperty(exports, "transition", {

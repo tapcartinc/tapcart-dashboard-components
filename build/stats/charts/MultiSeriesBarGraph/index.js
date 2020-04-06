@@ -35,7 +35,31 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
+  var _useState = (0, _react.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      currUnit = _useState2[0],
+      setCurrUnit = _useState2[1];
+
+  var unitRef = (0, _react.useRef)();
+  (0, _react.useEffect)(function () {
+    if (props.unit !== currUnit && previousUnit !== props.unit) {
+      return setCurrUnit(props.unit);
+    }
+
+    if (!currUnit && props.unit) {
+      return setCurrUnit(props.unit);
+    }
+  }, [props.unit]);
+  var previousUnit = unitRef.current;
   var data = props.data,
       colors = props.colors,
       tooltip = props.tooltip,
@@ -44,8 +68,31 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
       currency = props.currency,
       range = props.range,
       keys = props.keys,
-      removeCard = props.removeCard;
+      removeCard = props.removeCard,
+      unit = props.unit;
   var colorScheme = (0, _useColorScheme.useColorScheme)(colors);
+
+  var getFormat = function getFormat(d) {
+    if (unit === "DAYS") {
+      return (0, _moment["default"])(d).format("MMM D");
+    }
+
+    if (unit === "HOURS") {
+      return (0, _moment["default"])("".concat(d, ":00:00"), "HH:mm:ss").format("h A");
+    }
+  }; // moment(d.key).format("MMM D")
+
+
+  var getTooltipFormat = function getTooltipFormat(value) {
+    if (unit === "DAYS") {
+      return (0, _moment["default"])(value.key).format("MMM D");
+    }
+
+    if (unit === "HOURS") {
+      return (0, _moment["default"])("".concat(value.key, ":00:00"), "HH:mm:ss").format("h A");
+    }
+  };
+
   return _react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
@@ -74,8 +121,9 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
         label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
           padding: 5,
           format: function format(d) {
-            return (0, _moment["default"])(d).format("MMM D");
-          }
+            return getFormat(d);
+          } // format={d => moment(d).format("MMM D")}
+
         })
       })
     }),
@@ -92,25 +140,29 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
     }),
     series: _react["default"].createElement(_reaviz.StackedBarSeries, {
       tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
-        placement: "top",
         tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
-          placement: "top",
           followCursor: true,
           content: function content(d) {
+            var tooltipHeader = getTooltipFormat(d);
             return _react["default"].createElement(_styles.StyledTooltip, {
-              width: "130px"
-            }, d.data.map(function (dataSet, index) {
+              width: "130px",
+              tipAlign: "left"
+            }, _react["default"].createElement(_Typography.Sofia, {
+              marginBottom: "2px",
+              fontSize: "11px",
+              color: _dashVariables.colorPicker.gray
+            }, tooltipHeader), d.data.map(function (dataSet, index) {
               return _react["default"].createElement(_styles.StyledAreaMapTooltip, {
                 key: dataSet.key
               }, _react["default"].createElement(_Typography.Sofia, {
                 marginBottom: "2px",
                 marginTop: "5px",
-                fontSize: "11px",
+                fontSize: "13px",
                 color: _dashVariables.colorPicker.black
               }, dataSet.key), _react["default"].createElement(_Typography.Sofia, {
                 marginBottom: "2px",
                 marginTop: "5px",
-                fontSize: "11px",
+                fontSize: "13px",
                 color: colorScheme[index]
               }, dataSet.y));
             }));

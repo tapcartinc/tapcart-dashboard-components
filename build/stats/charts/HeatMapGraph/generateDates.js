@@ -26,7 +26,6 @@ var generateRandomData = function generateRandomData() {
   //   data.push(dataSet);
   //   start = start + 1;
   // }
-  // console.log("data", data);
   var data = [{
     key: "Direct",
     data: (Math.random() * (1000 - 10) + 10).toFixed(2)
