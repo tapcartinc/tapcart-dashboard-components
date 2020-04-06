@@ -4932,7 +4932,7 @@ function Icon(props) {
         strokeLinejoin: "round"
       }), _react["default"].createElement("path", {
         d: "M22 23L19.121 20.121M17 21C18.6569 21 20 19.6569 20 18C20 16.3431 18.6569 15 17 15C15.3431 15 14 16.3431 14 18C14 19.6569 15.3431 21 17 21Z",
-        stroke: "#1BDFBA",
+        stroke: _dashVariables.colorPicker.green100,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round"
@@ -6014,6 +6014,83 @@ function Icon(props) {
         d: "M17,1 L17,5",
         id: "Path"
       })))))))));
+
+    case "empty-chart-icon":
+      return _react["default"].createElement(DashIconWrapper, _extends({}, props, {
+        width: "24px",
+        height: "22px",
+        viewBox: "0 0 24 22",
+        version: "1.1"
+      }), _react["default"].createElement("g", {
+        id: "Analytics-/-Stats",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, _react["default"].createElement("g", {
+        id: "1.3-Stats-No-Data-v4",
+        transform: "translate(-365.000000, -627.000000)"
+      }, _react["default"].createElement("g", {
+        id: "CARD---Sales-Over-Time",
+        transform: "translate(44.000000, 459.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Mask",
+        fill: "#FFFFFF",
+        x: "-0.5",
+        y: "-0.5",
+        width: "667.970724",
+        height: "406",
+        rx: "3"
+      }), _react["default"].createElement("g", {
+        id: "Graph-lines-+-numbers",
+        opacity: "0.2",
+        transform: "translate(20.000000, 102.000000)"
+      })), _react["default"].createElement("g", {
+        id: "Tooltips",
+        transform: "translate(173.000000, 477.000000)"
+      }), _react["default"].createElement("g", {
+        id: "Group-Copy",
+        transform: "translate(250.000000, 596.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "255",
+        height: "131",
+        rx: "6"
+      }), _react["default"].createElement("g", {
+        id: "No-data-icon",
+        transform: "translate(115.000000, 30.000000)"
+      }, _react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), _react["default"].createElement("g", {
+        id: "folder-no-access",
+        transform: "translate(1.000000, 2.000000)",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, _react["default"].createElement("path", {
+        d: "M4,20 L2,20 C0.8954305,20 0,19.1045695 0,18 L0,0 L8,0 L11,4 L22,4 L22,18 C22,19.1045695 21.1045695,20 20,20 L18,20",
+        id: "Path",
+        stroke: _dashVariables.colorPicker.blue
+      }), _react["default"].createElement("line", {
+        x1: "7.464",
+        y1: "18.536",
+        x2: "14.535",
+        y2: "11.465",
+        id: "Path",
+        stroke: _dashVariables.colorPicker.green100
+      }), _react["default"].createElement("circle", {
+        id: "Oval",
+        stroke: _dashVariables.colorPicker.green100,
+        cx: "11",
+        cy: "15",
+        r: "5"
+      })))))));
 
     default:
       return _react["default"].createElement("span", null);

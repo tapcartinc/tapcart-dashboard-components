@@ -19,6 +19,7 @@ var _exportNames = {
   placeholder: true,
   input: true,
   Label: true,
+  Sofia: true,
   SegmentedControl: true,
   SearchBar: true,
   Input: true,
@@ -167,6 +168,12 @@ Object.defineProperty(exports, "Label", {
   enumerable: true,
   get: function get() {
     return _Typography.Label;
+  }
+});
+Object.defineProperty(exports, "Sofia", {
+  enumerable: true,
+  get: function get() {
+    return _Typography.Sofia;
   }
 });
 Object.defineProperty(exports, "SegmentedControl", {
