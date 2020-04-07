@@ -48,47 +48,54 @@ var PieGraph = function PieGraph(props) {
     currency: currency
   }), _react["default"].createElement("div", {
     style: {
-      paddingLeft: "40px",
-      marginTop: "-50px"
+      paddingLeft: "50px"
     }
   }, _react["default"].createElement(_reaviz.PieChart, {
-    height: 325,
+    height: 245,
     width: 400,
     data: data,
     series: _react["default"].createElement(_reaviz.PieArcSeries, {
       doughnut: true,
+      label: null,
       colorScheme: colors,
-      label: _react["default"].createElement(_reaviz.PieArcLabel, {
-        style: {
-          width: "400px !important"
-        },
-        format: function format(d) {
-          return _react["default"].createElement(Key, null, d.key);
-        }
-      }),
       arc: _react["default"].createElement(_reaviz.PieArc, {
         tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
-          placement: "top",
-          followCursor: true,
           content: function content(d) {
             return _react["default"].createElement(_styles.StyledTooltip, {
               width: "70px"
             }, _react["default"].createElement(_Typography.Sofia, {
+              style: {
+                textAlign: "center"
+              },
               fontSize: "11px",
-              color: _dashVariables.colorPicker.black
-            }, d.key), _react["default"].createElement(_Typography.Sofia, {
               color: _dashVariables.colorPicker.blue
-            }, d.y.toLocaleString()));
+            }, d.y));
           }
         })
       })
     })
-  })));
+  })), _react["default"].createElement(Legend, {
+    colors: colors,
+    data: data
+  }));
 };
 
 exports.PieGraph = PieGraph;
 
-var Key = function Key(_ref) {
-  var children = _ref.children;
-  return _react["default"].createElement(_react.Fragment, null, children);
+var Legend = function Legend(_ref) {
+  var colors = _ref.colors,
+      data = _ref.data;
+  return _react["default"].createElement(_reaviz.DiscreteLegend, {
+    orientation: "horizontal",
+    style: {
+      margin: "0 auto"
+    },
+    entries: data.map(function (dataSet, index) {
+      return _react["default"].createElement(_reaviz.DiscreteLegendEntry, {
+        label: dataSet.key,
+        color: colors[index],
+        symbol: _react["default"].createElement(_styles.StyledLevelSquare, null)
+      });
+    })
+  });
 };

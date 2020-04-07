@@ -38,11 +38,6 @@ body {
   stroke-dasharray: 0 0 !important;
 }
 
-line {
-  stroke: var(--border-gray);
-  stroke-width: 0.5px;
-}
-
 text {
   fill: var(--main-gray);
   font-weight: 400;

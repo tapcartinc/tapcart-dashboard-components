@@ -71,7 +71,6 @@ var Textarea = function Textarea(_ref) {
     bounceStyle["top"] = "-3px";
     bounceStyle["color"] = _dashVariables.colorPicker.red;
     bounceStyle["position"] = "relative";
-    bounceStyle["margin-left"] = "-17px";
     bounceStyle["transition"] = "top 0.1s ease 0s";
   }
 

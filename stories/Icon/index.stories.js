@@ -522,8 +522,8 @@ export const icon = () => {
         push
       </StyledIcon>
       <StyledIcon>
-        <Icon type="copy" />
-        copy
+        <Icon type="empty-chart-icon" />
+        empty-chart-icon
       </StyledIcon>
     </StyledIcons>
   );

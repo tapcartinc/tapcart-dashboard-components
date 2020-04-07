@@ -19,6 +19,7 @@ var _exportNames = {
   placeholder: true,
   input: true,
   Label: true,
+  Sofia: true,
   SegmentedControl: true,
   SearchBar: true,
   Input: true,
@@ -60,6 +61,7 @@ var _exportNames = {
   sofiaPro: true,
   circularStd: true,
   colorPicker: true,
+  defaultGraphColors: true,
   transition: true,
   hover: true,
   onClickTransition: true,
@@ -166,6 +168,12 @@ Object.defineProperty(exports, "Label", {
   enumerable: true,
   get: function get() {
     return _Typography.Label;
+  }
+});
+Object.defineProperty(exports, "Sofia", {
+  enumerable: true,
+  get: function get() {
+    return _Typography.Sofia;
   }
 });
 Object.defineProperty(exports, "SegmentedControl", {
@@ -412,6 +420,12 @@ Object.defineProperty(exports, "colorPicker", {
   enumerable: true,
   get: function get() {
     return _dashVariables.colorPicker;
+  }
+});
+Object.defineProperty(exports, "defaultGraphColors", {
+  enumerable: true,
+  get: function get() {
+    return _dashVariables.defaultGraphColors;
   }
 });
 Object.defineProperty(exports, "transition", {

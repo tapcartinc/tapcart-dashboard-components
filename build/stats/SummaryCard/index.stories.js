@@ -19,6 +19,10 @@ var _Typography = require("../../elements/Typography");
 
 var _data = require("./data");
 
+var _moment = _interopRequireDefault(require("moment"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -114,7 +118,39 @@ var summaryCard = function summaryCard() {
   }, "month"), _react["default"].createElement(_index.SummaryCard, {
     title: "Total App Sales",
     icon: "orders",
-    data: data,
+    data: [{
+      key: "26-Mar-2020",
+      data: 258737,
+      id: 0
+    }, {
+      key: "27-Mar-2020",
+      data: 313230,
+      id: 1
+    }, {
+      key: "28-Mar-2020",
+      data: 311361,
+      id: 2
+    }, {
+      key: "29-Mar-2020",
+      data: 312364,
+      id: 3
+    }, {
+      key: "30-Mar-2020",
+      data: 310981,
+      id: 4
+    }, {
+      key: "31-Mar-2020",
+      data: 313639,
+      id: 5
+    }, {
+      key: "01-Apr-2020",
+      data: 309506,
+      id: 6
+    }, {
+      key: "02-Apr-2020",
+      data: 51612,
+      id: 7
+    }],
     currentScore: currentPeriodAvg,
     prevPeriodScore: previousPeriodAvg,
     currency: "$",

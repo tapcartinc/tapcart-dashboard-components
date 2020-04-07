@@ -13,8 +13,6 @@ var _dashVariables = require("../../utils/_dashVariables");
 
 var _Typography = require("../../elements/Typography");
 
-var _variables = require("../../utils/_variables");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -22,14 +20,14 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var StyledGraphCard = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledGraphCard",
   componentId: "uezup0-0"
-})(["background:white;border:1px solid ", ";width:550px;height:350px;border-radius:3px;padding:10px 20px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding-bottom:23px;position:relative;"], _dashVariables.colorPicker.gray25);
+})(["background:white;border:1px solid ", ";width:550px;height:380px;border-radius:3px;padding:10px 20px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding-bottom:23px;position:relative;margin-top:16px;margin-bottom:16px;stroke-dasharray:0 0 !important;line{stroke:", ";stroke-width:0.5px;stroke-dasharray:0 0 !important;}text{fill:", ";", "}"], _dashVariables.colorPicker.gray25, _dashVariables.colorPicker.textEmpty, _dashVariables.colorPicker.gray, _dashVariables.sofiaPro.regular);
 
 exports.StyledGraphCard = StyledGraphCard;
 
 var StyledCardHeaderWrapper = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledCardHeaderWrapper",
   componentId: "uezup0-1"
-})(["display:flex;justify-content:space-between;width:100%;", ""], function (props) {
+})(["display:flex;justify-content:space-between;width:100%;margin-bottom:10px;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
@@ -77,7 +75,7 @@ exports.StyledStatHeader = StyledStatHeader;
 var StyledDifference = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledDifference",
   componentId: "uezup0-7"
-})(["margin-top:4px;-webkit-font-smoothing:antialiased;font-size:15px;font-weight:normal;font-style:normal;font-weight:400;display:flex;align-items:center;", " .arrow{margin-right:3px;margin-top:2px;}", ""], _dashVariables.sofiaPro.regular, function (props) {
+})(["margin-top:4px;-webkit-font-smoothing:antialiased;font-size:15px;font-weight:normal;font-style:normal;font-weight:400;align-items:center;", " .arrow{margin-right:3px;margin-top:2px;}", ""], _dashVariables.sofiaPro.regular, function (props) {
   return props.upShift ? "color: ".concat(_dashVariables.colorPicker.green100) : "color: ".concat(_dashVariables.colorPicker.red);
 });
 
@@ -86,19 +84,22 @@ exports.StyledDifference = StyledDifference;
 var StyledTip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledTip",
   componentId: "uezup0-8"
-})(["position:relative;background:white;width:100%;padding:3px 8px;border-radius:3px;text-align:left;transform:translateY(12px);box-shadow:0 0 20px 0 rgba(0,0,0,0.2);&::after{content:\"\";position:absolute;top:100%;left:calc(42%);background:white;width:12px;height:8px;clip-path:polygon(0 0,100% 0,50% 100%);}", ""], function (props) {
+})(["position:relative;background:white;width:100%;padding:5px;border-radius:3px;text-align:left;transform:translateY(12px);box-shadow:0 0 20px 0 rgba(0,0,0,0.2);", " ", ""], function (props) {
+  return props.tipAlign === "left" ? "\n  &::after {\n    content: \"\";\n    position: absolute;\n    top: calc(45%);\n    right: 98%;\n    background: white;\n    width: 12px;\n    height: 8px;\n    transform: rotate(90deg);\n    clip-path: polygon(0 0, 100% 0, 50% 100%);\n  }\n  " : props.tipAlign === "top" ? "\n  &::after {\n    content: \"\";\n    position: absolute;\n    bottom: 100%;\n    left: calc(40%);\n    background: white;\n    width: 12px;\n    transform: rotate(180deg);\n    height: 8px;\n    clip-path: polygon(0 0, 100% 0, 50% 100%);\n  }\n  " : "&::after {\n    content: \"\";\n    position: absolute;\n    top: 100%;\n    left: calc(42%);\n    background: white;\n    width: 12px;\n    height: 8px;\n    clip-path: polygon(0 0, 100% 0, 50% 100%);\n  }";
+}, function (props) {
   return props.width && "width: ".concat(props.width, ";");
 });
 
 var StyledHeatmapTip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledHeatmapTip",
   componentId: "uezup0-9"
-})(["display:flex;flex-direction:column;align-items:flex-start;"]);
+})(["display:flex;text-align:center;flex-direction:column;align-items:center;"]);
 
 exports.StyledHeatmapTip = StyledHeatmapTip;
 
 var StyledTooltip = function StyledTooltip(props) {
   return _react["default"].createElement(StyledTip, _extends({}, props, {
+    tipAlign: props.tipAlign,
     width: props.width
   }), props.children);
 };
@@ -120,7 +121,7 @@ var StyledCustomLegendWrapper = _styledComponents["default"].ul.withConfig({
 var StyledLevelSquare = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledLevelSquare",
   componentId: "uezup0-12"
-})(["height:14px;width:14px;border-radius:2px;margin-right:0px;background:", ";"], function (props) {
+})(["height:12px;width:12px;border-radius:2px;margin-right:0px;margin-top:3px;background:", ";"], function (props) {
   return props.color;
 });
 
@@ -129,16 +130,16 @@ exports.StyledLevelSquare = StyledLevelSquare;
 var StyledLevel = _styledComponents["default"].li.withConfig({
   displayName: "styles__StyledLevel",
   componentId: "uezup0-13"
-})(["display:flex;align-items:center;span{display:inline-block;margin-left:8px;}"]);
+})(["display:flex;align-items:center;span{display:inline-block;margin-left:5px;}"]);
 
 var StyledCustomLegend = function StyledCustomLegend(props) {
   var data = props.data;
-  return _react["default"].createElement(StyledCustomLegendWrapper, props, data.map(function (dataLevel) {
+  return _react["default"].createElement(StyledCustomLegendWrapper, props, data.map(function (dataLevel, index) {
     return _react["default"].createElement(StyledLevel, {
-      key: dataLevel.key
+      key: dataLevel.total
     }, _react["default"].createElement(StyledLevelSquare, {
       color: dataLevel.color
-    }), _react["default"].createElement("span", null, dataLevel.key));
+    }), _react["default"].createElement("span", null, dataLevel.key, "%"));
   }));
 };
 
@@ -147,7 +148,7 @@ exports.StyledCustomLegend = StyledCustomLegend;
 var StyledLeftTooltip = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledLeftTooltip",
   componentId: "uezup0-14"
-})(["display:flex;flex-direction:column;width:45%;padding-left:5px;align-items:flex-start;text-align:center;justify-content:center;"]);
+})(["display:flex;flex-direction:column;width:45%;padding-left:5px;align-items:flex-start;text-align:center;justify-content:center;margin-right:8px;"]);
 
 exports.StyledLeftTooltip = StyledLeftTooltip;
 

@@ -72,7 +72,7 @@ var BarGraph = function BarGraph(props) {
       overflow: "visible",
       position: "absolute",
       right: 435,
-      top: 120
+      top: 137
     }
   }), _react["default"].createElement(_Icon.Icon, {
     type: "android",
@@ -81,7 +81,7 @@ var BarGraph = function BarGraph(props) {
       overflow: "visible",
       position: "absolute",
       right: 437,
-      top: 208
+      top: 225
     }
   }), _react["default"].createElement(_reaviz.BarChart, {
     height: 220,

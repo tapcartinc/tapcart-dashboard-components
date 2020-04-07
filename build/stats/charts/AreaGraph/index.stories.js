@@ -15,21 +15,7 @@ var _chromaJs = _interopRequireDefault(require("chroma-js"));
 
 var _index = require("./index");
 
-var _index2 = require("../HeatMapGraph/index");
-
-var _stackedData = _interopRequireDefault(require("./stackedData.json"));
-
-var _singularData = _interopRequireDefault(require("./singularData.json"));
-
-var _useGetDifference = require("../../../hooks/useGetDifference");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var _default = {
   component: _index.AreaGraph,
@@ -38,104 +24,550 @@ var _default = {
 exports["default"] = _default;
 
 var areaGraph = function areaGraph() {
-  var statValues = (0, _useGetDifference.useGetDifference)(_stackedData["default"][0].data, _stackedData["default"][1].data);
-
-  var statInfo = _objectSpread({}, statValues, {
-    title: "Total Sales"
-  });
-
-  var cats = [{
-    key: new Date("11/29/2019"),
-    data: 10
-  }, {
-    key: new Date("11/30/2019"),
-    data: 14
-  }, {
-    key: new Date("12/01/2019"),
-    data: 5
-  }, {
-    key: new Date("12/02/2019"),
-    data: 18
-  }];
-  var dataTest = [{
+  var dayDataSales = [{
     key: "Current",
     data: [{
-      key: "2020-03-17T22:59:59.000Z",
-      data: 19423167,
+      key: "2020-03-29T19:59:59.000Z",
+      data: 156216888,
       id: 0
     }, {
-      key: "2020-03-18T12:59:59.000Z",
-      data: 155528908,
+      key: "2020-03-30T19:59:59.000Z",
+      data: 155696295,
       id: 1
     }, {
-      key: "2020-03-19T12:59:59.000Z",
-      data: 156040425,
+      key: "2020-03-31T19:59:59.000Z",
+      data: 156633117,
       id: 2
     }, {
-      key: "2020-03-20T12:59:59.000Z",
-      data: 156315891,
+      key: "2020-04-01T19:59:59.000Z",
+      data: 155869120,
       id: 3
     }, {
-      key: "2020-03-21T12:59:59.000Z",
-      data: 156397840,
+      key: "2020-04-02T19:59:59.000Z",
+      data: 155868079,
       id: 4
     }, {
-      key: "2020-03-22T12:59:59.000Z",
-      data: 155833793,
+      key: "2020-04-03T19:59:59.000Z",
+      data: 139684959,
       id: 5
     }, {
-      key: "2020-03-23T12:59:59.000Z",
-      data: 155792609,
+      key: "2020-04-04T19:59:59.000Z",
+      data: 130352320,
       id: 6
     }, {
-      key: "2020-03-24T10:59:59.000Z",
-      data: 136082742,
+      key: "2020-04-05T15:59:59.000Z",
+      data: 72494594,
       id: 7
     }]
   }, {
     key: "Previous",
     data: [{
-      key: "2020-03-17T22:59:59.000Z",
-      data: 19276739,
+      key: "2020-03-29T19:59:59.000Z",
+      data: 155752079,
       id: 0
     }, {
-      key: "2020-03-18T12:59:59.000Z",
-      data: 1564021,
+      key: "2020-03-30T19:59:59.000Z",
+      data: 155980982,
       id: 1
     }, {
-      key: "2020-03-19T12:59:59.000Z",
-      data: 1313187,
+      key: "2020-03-31T19:59:59.000Z",
+      data: 156208379,
       id: 2
     }, {
-      key: "2020-03-20T12:59:59.000Z",
-      data: 155755396,
+      key: "2020-04-01T19:59:59.000Z",
+      data: 155762202,
       id: 3
     }, {
-      key: "2020-03-21T12:59:59.000Z",
-      data: 1516638,
+      key: "2020-04-02T19:59:59.000Z",
+      data: 155822188,
       id: 4
     }, {
-      key: "2020-03-22T12:59:59.000Z",
-      data: 155676796,
+      key: "2020-04-03T19:59:59.000Z",
+      data: 155451814,
       id: 5
     }, {
-      key: "2020-03-23T12:59:59.000Z",
-      data: 155919436,
+      key: "2020-04-04T19:59:59.000Z",
+      data: 155485583,
       id: 6
     }, {
-      key: "2020-03-24T10:59:59.000Z",
-      data: 135976086,
+      key: "2020-04-05T19:59:59.000Z",
+      data: 155971653,
       id: 7
     }]
   }];
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_index.AreaGraph, {
-    tooltip: {
-      text: "tooltip text",
-      color: _dashVariables.colorPicker.grayBlue
-    } // colors={["#4cb7c5", "#02018c"]}
-    ,
+  var hourDataSales = [{
+    key: "Current",
+    data: [{
+      key: 0,
+      data: 43356659,
+      id: 0
+    }, {
+      key: 1,
+      data: 43073921,
+      id: 1
+    }, {
+      key: 2,
+      data: 43169696,
+      id: 2
+    }, {
+      key: 3,
+      data: 43396284,
+      id: 3
+    }, {
+      key: 4,
+      data: 43339505,
+      id: 4
+    }, {
+      key: 5,
+      data: 43482808,
+      id: 5
+    }, {
+      key: 6,
+      data: 43359681,
+      id: 6
+    }, {
+      key: 7,
+      data: 43411220,
+      id: 7
+    }, {
+      key: 8,
+      data: 43133584,
+      id: 8
+    }, {
+      key: 9,
+      data: 42239141,
+      id: 9
+    }, {
+      key: 10,
+      data: 41732694,
+      id: 10
+    }, {
+      key: 11,
+      data: 42524396,
+      id: 11
+    }, {
+      key: 12,
+      data: 42268008,
+      id: 12
+    }, {
+      key: 13,
+      data: 38915209,
+      id: 13
+    }, {
+      key: 14,
+      data: 36877829,
+      id: 14
+    }, {
+      key: 15,
+      data: 43484057,
+      id: 15
+    }, {
+      key: 16,
+      data: 43521019,
+      id: 16
+    }, {
+      key: 17,
+      data: 43470625,
+      id: 17
+    }, {
+      key: 18,
+      data: 43740399,
+      id: 18
+    }, {
+      key: 19,
+      data: 43277665,
+      id: 19
+    }, {
+      key: 20,
+      data: 43234154,
+      id: 20
+    }, {
+      key: 21,
+      data: 43614115,
+      id: 21
+    }, {
+      key: 22,
+      data: 43125061,
+      id: 22
+    }, {
+      key: 23,
+      data: 43023124,
+      id: 23
+    }]
+  }, {
+    key: "Previous",
+    data: [{
+      key: 0,
+      data: 45462851,
+      id: 0
+    }, {
+      key: 1,
+      data: 45846553,
+      id: 1
+    }, {
+      key: 2,
+      data: 45459417,
+      id: 2
+    }, {
+      key: 3,
+      data: 45356194,
+      id: 3
+    }, {
+      key: 4,
+      data: 45513979,
+      id: 4
+    }, {
+      key: 5,
+      data: 45514559,
+      id: 5
+    }, {
+      key: 6,
+      data: 45762460,
+      id: 6
+    }, {
+      key: 7,
+      data: 45275554,
+      id: 7
+    }, {
+      key: 8,
+      data: 45091063,
+      id: 8
+    }, {
+      key: 9,
+      data: 45493023,
+      id: 9
+    }, {
+      key: 10,
+      data: 45472766,
+      id: 10
+    }, {
+      key: 11,
+      data: 45386551,
+      id: 11
+    }, {
+      key: 12,
+      data: 45692031,
+      id: 12
+    }, {
+      key: 13,
+      data: 45253298,
+      id: 13
+    }, {
+      key: 14,
+      data: 45467362,
+      id: 14
+    }, {
+      key: 15,
+      data: 45777511,
+      id: 15
+    }, {
+      key: 16,
+      data: 45209441,
+      id: 16
+    }, {
+      key: 17,
+      data: 45138224,
+      id: 17
+    }, {
+      key: 18,
+      data: 45070252,
+      id: 18
+    }, {
+      key: 19,
+      data: 45543548,
+      id: 19
+    }, {
+      key: 20,
+      data: 45376842,
+      id: 20
+    }, {
+      key: 21,
+      data: 45608068,
+      id: 21
+    }, {
+      key: 22,
+      data: 45555145,
+      id: 22
+    }, {
+      key: 23,
+      data: 45502306,
+      id: 23
+    }]
+  }];
+  var dayDataSessions = [{
+    key: "New",
+    data: [{
+      key: "2020-03-29T23:59:59.000Z",
+      id: 0,
+      data: 13154
+    }, {
+      key: "2020-03-30T12:59:59.000Z",
+      id: 1,
+      data: 155644
+    }, {
+      key: "2020-03-31T12:59:59.000Z",
+      id: 2,
+      data: 156713
+    }, {
+      key: "2020-04-01T12:59:59.000Z",
+      id: 3,
+      data: 154233
+    }, {
+      key: "2020-04-02T12:59:59.000Z",
+      id: 4,
+      data: 156218
+    }, {
+      key: "2020-04-03T12:59:59.000Z",
+      id: 5,
+      data: 146928
+    }, {
+      key: "2020-04-04T12:59:59.000Z",
+      id: 6,
+      data: 130956
+    }, {
+      key: "2020-04-05T11:59:59.000Z",
+      id: 7,
+      data: 111110
+    }]
+  }, {
+    key: "Returning",
+    data: [{
+      key: "2020-03-29T23:59:59.000Z",
+      id: 0,
+      data: 12903
+    }, {
+      key: "2020-03-30T12:59:59.000Z",
+      id: 1,
+      data: 155337
+    }, {
+      key: "2020-03-31T12:59:59.000Z",
+      id: 2,
+      data: 156926
+    }, {
+      key: "2020-04-01T12:59:59.000Z",
+      id: 3,
+      data: 155273
+    }, {
+      key: "2020-04-02T12:59:59.000Z",
+      id: 4,
+      data: 156177
+    }, {
+      key: "2020-04-03T12:59:59.000Z",
+      id: 5,
+      data: 147063
+    }, {
+      key: "2020-04-04T12:59:59.000Z",
+      id: 6,
+      data: 130201
+    }, {
+      key: "2020-04-05T11:59:59.000Z",
+      id: 7,
+      data: 111130
+    }]
+  }];
+  var hourDataSessions = [{
+    key: "New",
+    data: [{
+      key: 0,
+      data: 43309,
+      id: 0
+    }, {
+      key: 1,
+      data: 43379,
+      id: 1
+    }, {
+      key: 2,
+      data: 43042,
+      id: 2
+    }, {
+      key: 3,
+      data: 43290,
+      id: 3
+    }, {
+      key: 4,
+      data: 43215,
+      id: 4
+    }, {
+      key: 5,
+      data: 43341,
+      id: 5
+    }, {
+      key: 6,
+      data: 43598,
+      id: 6
+    }, {
+      key: 7,
+      data: 43533,
+      id: 7
+    }, {
+      key: 8,
+      data: 43551,
+      id: 8
+    }, {
+      key: 9,
+      data: 42227,
+      id: 9
+    }, {
+      key: 10,
+      data: 41667,
+      id: 10
+    }, {
+      key: 11,
+      data: 42138,
+      id: 11
+    }, {
+      key: 12,
+      data: 42107,
+      id: 12
+    }, {
+      key: 13,
+      data: 39145,
+      id: 13
+    }, {
+      key: 14,
+      data: 37030,
+      id: 14
+    }, {
+      key: 15,
+      data: 43332,
+      id: 15
+    }, {
+      key: 16,
+      data: 43751,
+      id: 16
+    }, {
+      key: 17,
+      data: 43172,
+      id: 17
+    }, {
+      key: 18,
+      data: 43131,
+      id: 18
+    }, {
+      key: 19,
+      data: 43647,
+      id: 19
+    }, {
+      key: 20,
+      data: 43426,
+      id: 20
+    }, {
+      key: 21,
+      data: 43137,
+      id: 21
+    }, {
+      key: 22,
+      data: 43502,
+      id: 22
+    }, {
+      key: 23,
+      data: 43286,
+      id: 23
+    }]
+  }, {
+    key: "Returning",
+    data: [{
+      key: 0,
+      data: 43397,
+      id: 0
+    }, {
+      key: 1,
+      data: 43377,
+      id: 1
+    }, {
+      key: 2,
+      data: 42978,
+      id: 2
+    }, {
+      key: 3,
+      data: 43184,
+      id: 3
+    }, {
+      key: 4,
+      data: 43138,
+      id: 4
+    }, {
+      key: 5,
+      data: 43292,
+      id: 5
+    }, {
+      key: 6,
+      data: 43594,
+      id: 6
+    }, {
+      key: 7,
+      data: 43702,
+      id: 7
+    }, {
+      key: 8,
+      data: 43382,
+      id: 8
+    }, {
+      key: 9,
+      data: 42159,
+      id: 9
+    }, {
+      key: 10,
+      data: 41645,
+      id: 10
+    }, {
+      key: 11,
+      data: 42155,
+      id: 11
+    }, {
+      key: 12,
+      data: 42136,
+      id: 12
+    }, {
+      key: 13,
+      data: 39415,
+      id: 13
+    }, {
+      key: 14,
+      data: 36940,
+      id: 14
+    }, {
+      key: 15,
+      data: 43202,
+      id: 15
+    }, {
+      key: 16,
+      data: 43630,
+      id: 16
+    }, {
+      key: 17,
+      data: 43165,
+      id: 17
+    }, {
+      key: 18,
+      data: 43222,
+      id: 18
+    }, {
+      key: 19,
+      data: 43612,
+      id: 19
+    }, {
+      key: 20,
+      data: 43383,
+      id: 20
+    }, {
+      key: 21,
+      data: 43177,
+      id: 21
+    }, {
+      key: 22,
+      data: 43483,
+      id: 22
+    }, {
+      key: 23,
+      data: 43165,
+      id: 23
+    }]
+  }];
+  return _react["default"].createElement(_index.AreaGraph, {
     stacked: true,
-    data: dataTest,
+    data: dayDataSales,
+    gradient: true,
     title: "Sessions by New vs. Returning",
     body: [{
       title: "Total Sales",
@@ -143,9 +575,10 @@ var areaGraph = function areaGraph() {
       previousTotal: "1091.1M",
       percentChange: 0.04
     }],
+    unit: "DAYS",
     range: {
-      start: "2020-03-17T22:01:48.442Z",
-      end: "2020-03-24T22:01:48.442Z"
+      start: "2020-03-29T00:00:00.000-07:00",
+      end: "2020-04-05T23:59:59.999-07:00"
     },
     info: {
       id: "_jmafzy9ik",
@@ -153,7 +586,16 @@ var areaGraph = function areaGraph() {
       name: "Sales over Time",
       description: "Allows you to view your sessions over the \n last 30 days, graphed as a heatmap."
     }
-  }));
-};
+  });
+}; // key={card.info.id}
+// data={card.data}
+// stacked={true}
+// gradient
+// body={body}
+// info={card.info}
+// range={range}
+// removeCard={removeCard}
+// unit={unit}
+
 
 exports.areaGraph = areaGraph;
