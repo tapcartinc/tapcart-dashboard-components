@@ -6092,6 +6092,17 @@ function Icon(props) {
         r: "5"
       })))))));
 
+    case "copy":
+      return _react["default"].createElement(SVG, _extends({
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "19",
+        height: "22",
+        viewBox: "0 0 19 22"
+      }, props), _react["default"].createElement("path", {
+        fill: props.fill ? props.fill : _dashVariables.colorPicker.blue,
+        d: "M13 0H2C.9 0 0 .9 0 2v13c0 .552.448 1 1 1s1-.448 1-1V2h11c.552 0 1-.448 1-1s-.448-1-1-1zm4 4H6c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H6V6h11v14z"
+      }));
+
     default:
       return _react["default"].createElement("span", null);
   }
