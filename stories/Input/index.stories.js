@@ -29,6 +29,7 @@ export const input = () => {
         // label={text("Label", "Input Label")}
         error={boolean("Throw error", false)}
         placeholder="Input placeholder..."
+        minHeight={"48px"}
       />
     </>
   );
