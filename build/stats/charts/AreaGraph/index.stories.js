@@ -9,10 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 require("../../../utils/main.css");
 
-var _dashVariables = require("../../../utils/_dashVariables");
-
-var _chromaJs = _interopRequireDefault(require("chroma-js"));
-
 var _index = require("./index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -563,10 +559,26 @@ var areaGraph = function areaGraph() {
       data: 43165,
       id: 23
     }]
+  }]; // { key: "2020-03-29T19:59:59.000Z", data: 156216888, id: 0 },
+
+  var weekDataSales = [{
+    key: "Current",
+    data: [{
+      key: "2020-03-23T19:59:59.000Z",
+      data: 156216888,
+      id: 0
+    }]
+  }, {
+    key: "Previous",
+    data: [{
+      key: "2020-03-23T19:59:59.000Z",
+      data: 155752079,
+      id: 0
+    }]
   }];
   return _react["default"].createElement(_index.AreaGraph, {
     stacked: true,
-    data: dayDataSales,
+    data: weekDataSales,
     gradient: true,
     title: "Sessions by New vs. Returning",
     body: [{
@@ -577,8 +589,8 @@ var areaGraph = function areaGraph() {
     }],
     unit: "DAYS",
     range: {
-      start: "2020-03-29T00:00:00.000-07:00",
-      end: "2020-04-05T23:59:59.999-07:00"
+      start: "2020-03-23T00:00:00.000-07:00",
+      end: "2020-03-23T23:59:59.999-07:00"
     },
     info: {
       id: "_jmafzy9ik",

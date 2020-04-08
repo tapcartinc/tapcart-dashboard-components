@@ -21,6 +21,8 @@ var _generateDates = require("../HeatMapGraph/generateDates");
 
 var _moment = _interopRequireDefault(require("moment"));
 
+var _colors = require("../../utils/_colors");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -510,7 +512,7 @@ var multiSeriesBarGraph = function multiSeriesBarGraph() {
       end: "2020-03-24T22:01:48.442Z"
     },
     keys: ["Direct", "Push", "Deeplink"],
-    colors: ["#01006f", "#373aaf", "#738eda"]
+    colors: [_colors.statsColors.deepBlue, _colors.statsColors.matisee, _colors.statsColors.cornflowerBlue]
   }));
 };
 
