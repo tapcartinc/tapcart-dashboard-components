@@ -53,32 +53,51 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-function convert(d) {
-  var date = (0, _moment["default"])(d).toDate();
+function convert(d, unit) {
+  var date;
+
+  if (unit === "WEEKS") {
+    // const startDate = moment()
+    //   .week(d)
+    //   .startOf("isoWeek")
+    //   .format("YYYY-MM-DD");
+    // const endDate = moment()
+    //   .week(d)
+    //   .endOf("isoWeek")
+    //   .format("YYYY-MM-DD");
+    // date = `${startDate} - ${endDate}`;
+    // console.log("startDate", startDate);
+    // date = startDate;
+    return (0, _moment["default"])().week(d).toDate();
+  } else {
+    date = (0, _moment["default"])(d).toDate();
+  }
+
   return date;
 }
 
-var convertData = function convertData(data) {
+var convertData = function convertData(data, unit) {
   return data && data.reduce(function (acc, dataSet, index) {
     if (dataSet.data.length) {
       return [].concat(_toConsumableArray(acc), [{
         key: dataSet.key,
         data: dataSet.data.map(function (key, index) {
           return key[index] = _objectSpread({}, key, {
-            key: convert(key.key)
+            key: convert(key.key, unit)
           });
         })
       }]);
     } else {
       return [].concat(_toConsumableArray(acc), [_objectSpread({}, dataSet, {
-        key: convert(dataSet.key)
+        key: convert(dataSet.key, unit)
       })]);
     }
   }, []);
 };
 
 var AreaGraph = function AreaGraph(props) {
-  var updatedData = props.data && props.unit !== "DAYS" ? props.data : convertData(props.data);
+  // const updatedData = props.data && convertData(props.data);
+  var updatedData = props.data && props.unit === "WEEKS" ? convertData(props.data[0], props.unit) : convertData(props.data, props.unit);
 
   var _useState = (0, _react.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -167,16 +186,14 @@ var GraphDetails = function GraphDetails(_ref) {
       unit = _ref.unit;
 
   var getFormat = function getFormat(d) {
-    if (unit === "DAYS") {
-      return (0, _moment["default"])(d).format("MMM D");
-    }
-
-    if (unit === "HOURS") {
-      return (0, _moment["default"])("".concat(d, ":00:00"), "HH:mm:ss").format("h A");
-    }
+    return (0, _moment["default"])(d).format("MMM D YY");
   };
 
   var getTooltipFormat = function getTooltipFormat(value) {
+    if (unit === "WEEKS") {
+      return (0, _moment["default"])(value).format("MMM D");
+    }
+
     if (unit === "DAYS") {
       return (0, _moment["default"])(value).format("MMM D");
     }
@@ -227,13 +244,14 @@ var GraphDetails = function GraphDetails(_ref) {
           }),
           xAxis: _react["default"].createElement(_reaviz.LinearXAxis // type="time"
           , {
-            type: unit === "DAYS" ? "time" : "value",
+            type: unit === "DAYS" ? "time" : unit === "WEEKS" ? "value" : "value",
             tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
               line: null,
               label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
                 padding: 5,
                 format: function format(d) {
-                  return getFormat(d);
+                  var cat = getFormat(d);
+                  return cat;
                 }
               })
             })
