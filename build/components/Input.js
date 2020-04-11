@@ -75,7 +75,7 @@ var Input = function Input(_ref) {
     bounceStyle["top"] = "-3px";
     bounceStyle["color"] = _dashVariables.colorPicker.red;
     bounceStyle["position"] = "relative";
-    bounceStyle["margin-left"] = "-17px";
+    bounceStyle["marginLeft"] = "-17px";
     bounceStyle["transition"] = "transform 1s ease 0s";
   }
 
