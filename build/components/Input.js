@@ -51,7 +51,8 @@ var Input = function Input(_ref) {
       maxLength = props.maxLength,
       disabled = props.disabled,
       width = props.width,
-      type = props.type;
+      type = props.type,
+      minHeight = props.minHeight;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -82,7 +83,8 @@ var Input = function Input(_ref) {
     width: width,
     disabled: disabled,
     errors: errors,
-    hasInput: value && value.length >= 1
+    hasInput: value && value.length >= 1,
+    minHeight: minHeight
   }, label && _react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
   }, errors && errors.length >= 0 ? errors[0] : label), _react["default"].createElement("input", _extends({
@@ -100,7 +102,8 @@ var Input = function Input(_ref) {
   }, props)), maxLength && _react["default"].createElement(StyledCharCount, {
     charCountHit: props.value.length === props.maxLength,
     bounce: bounce,
-    hasInput: value && value.length >= 1
+    hasInput: value && value.length >= 1,
+    minHeight: minHeight
   }, _react["default"].createElement("span", {
     style: bounceStyle
   }, props.value ? props.value.length : 0), "/", props.maxLength));
@@ -113,7 +116,8 @@ Input.propTypes = {
   placeholder: _propTypes["default"].string,
   onChange: _propTypes["default"].func,
   label: _propTypes["default"].string,
-  type: _propTypes["default"].string
+  type: _propTypes["default"].string,
+  minHeight: _propTypes["default"].string
 };
 Input.defaultProps = {
   name: ""
@@ -122,13 +126,15 @@ Input.defaultProps = {
 var StyledInputWrapper = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledInputWrapper",
   componentId: "l316i3-0"
-})(["position:relative;width:100%;", ";.input-style{border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:all 0.2s ease-in;", ";", ";}"], function (props) {
+})(["position:relative;width:100%;", ";.input-style{border-radius:3px;", ";background:", ";padding:10px 20px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:all 0.2s ease-in;", ";", ";", ";}"], function (props) {
   return props.width && "width: ".concat(props.width);
 }, function (props) {
   return props.errors ? "border: 1px solid ".concat(_variables.colors.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
 }, function (props) {
   return props.hasInput ? "#ffffff" : _dashVariables.colorPicker.offWhite;
 }, _dashVariables.colorPicker.gray, function (props) {
+  return props.minHeight && "min-height: ".concat(props.minHeight);
+}, function (props) {
   return props.disabled && "color: ".concat(_dashVariables.colorPicker.grayBlue);
 }, function (props) {
   return props.style ? props.style : null;
@@ -137,7 +143,9 @@ var StyledInputWrapper = _styledComponents["default"].div.withConfig({
 var StyledCharCount = _styledComponents["default"].div.withConfig({
   displayName: "Input__StyledCharCount",
   componentId: "l316i3-1"
-})(["position:absolute;text-align:right;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;right:10px;bottom:13px;color:", ";", " font-size:14px;transition:top 0.1s ease 0s;"], function (props) {
+})(["position:absolute;text-align:right;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;right:10px;bottom:", ";color:", ";", " font-size:14px;transition:top 0.1s ease 0s;"], function (props) {
+  return props.minHeight ? "calc((" + props.minHeight + "* .5) - 7px)" : "13px";
+}, function (props) {
   return props.hasInput ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray;
 }, function (props) {
   return props.charCountHit && "color: ".concat(_dashVariables.colorPicker.red, ";");
