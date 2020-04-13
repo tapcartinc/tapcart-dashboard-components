@@ -43,6 +43,23 @@ var SummaryCard = function SummaryCard(props) {
       key: (0, _moment["default"])(dataSet.key)
     });
   });
+
+  var getIcon = function getIcon(name) {
+    switch (name) {
+      case "Total App Sales":
+        return "orders";
+
+      case "App Sessions":
+        return "session";
+
+      case "Conversion Rate":
+        return "conversion";
+
+      default:
+        break;
+    }
+  };
+
   return _react["default"].createElement(StyledSummaryCardWrapper, {
     upShift: currentScore > prevPeriodScore,
     onClick: function onClick() {
@@ -53,7 +70,7 @@ var SummaryCard = function SummaryCard(props) {
   }), _react["default"].createElement(StyledCardLeft, null, _react["default"].createElement("div", {
     className: "summary-card-header"
   }, _react["default"].createElement(_StatsIcon.StatsIcon, {
-    type: icon
+    type: getIcon(title)
   }), _react["default"].createElement(StyledBody, null, title)), _react["default"].createElement(StyledStatHeader, {
     lg: true
   }, currency && _react["default"].createElement("span", null, currency), currentScore), _react["default"].createElement(StyledDifference, {
