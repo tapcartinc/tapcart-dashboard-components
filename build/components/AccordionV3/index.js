@@ -5,15 +5,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.AccordionContext = exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _AccordionSection = _interopRequireDefault(require("./AccordionSection"));
-
-var _propTypes = _interopRequireWildcard(require("prop-types"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _styles = require("./styles");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -33,111 +29,91 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-var Accordion = function Accordion(props) {
+var AccordionContext = _react["default"].createContext({
+  parent: "AccordionV3"
+});
+
+exports.AccordionContext = AccordionContext;
+
+var AccordionV3 = function AccordionV3(_ref) {
+  var children = _ref.children,
+      onePanelOpen = _ref.onePanelOpen,
+      steps = _ref.steps,
+      includeBorder = _ref.includeBorder,
+      spacing = _ref.spacing,
+      panelHeight = _ref.panelHeight,
+      includeArrows = _ref.includeArrows;
+
   var _useState = (0, _react.useState)({
-    openSections: {},
-    errors: null
+    open: null
   }),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
       setState = _useState2[1];
 
-  var currentErrors = (0, _react.useRef)();
-  (0, _react.useEffect)(function () {
-    currentErrors.current = props.errors ? props.errors : null;
+  var onClickPanel = function onClickPanel(panel) {
+    if (onePanelOpen) {
+      if (state.open && Number(Object.keys(state.open)[0]) === panel) {
+        if (state.open[panel]) {
+          return setState(function (prevState) {
+            return _objectSpread({}, prevState, {
+              open: null
+            });
+          });
+        }
+      }
 
-    if (state.errors && props.errors && Object.keys(state.errors).length !== Object.keys(props.errors).length) {
-      return setState(function (prevState) {
-        return _objectSpread({}, prevState, {
-          errors: props.errors
+      if (state.open && Object.keys(state.open) !== panel) {
+        return setState(function (prevState) {
+          return _objectSpread({}, prevState, {
+            open: _defineProperty({}, panel, true)
+          });
         });
-      });
-    }
+      }
 
-    if (!previousErrors && props.errors) {
-      setState(function (prevState) {
-        return _objectSpread({}, prevState, {
-          errors: props.errors
+      if (!state.open) {
+        return setState(function (prevState) {
+          return _objectSpread({}, prevState, {
+            open: _defineProperty({}, panel, true)
+          });
         });
-      });
-    }
-
-    if (previousErrors && !props.errors && state.errors) {
-      setState(function (prevState) {
-        return _objectSpread({}, prevState, {
-          errors: null
+      }
+    } else {
+      if (state.open && state.open[panel]) {
+        setState(function (prevState) {
+          return _objectSpread({}, prevState, {
+            open: _objectSpread({}, prevState.open, _defineProperty({}, panel, !prevState.open[panel]))
+          });
         });
-      });
-    }
-  }, [props.errors]);
-  var previousErrors = currentErrors.current;
+      } else {
+        var newOpenState = _objectSpread({}, state.open);
 
-  var onClick = function onClick(label) {
-    var openSections = state.openSections;
-    var isOpen = !!openSections[label];
-    setState(function (prevState) {
-      return _objectSpread({}, prevState, {
-        openSections: _defineProperty({}, label, !isOpen)
-      });
-    });
+        newOpenState[panel] = true;
+        setState(function (prevState) {
+          return _objectSpread({}, prevState, {
+            open: newOpenState
+          });
+        });
+      }
+    }
   };
 
-  var children = props.children,
-      toggleIcons = props.toggleIcons,
-      boxShadow = props.boxShadow,
-      className = props.className,
-      style = props.style,
-      steps = props.steps,
-      type = props.type,
-      header = props.header,
-      numerical = props.numerical,
-      stateValues = props.stateValues,
-      content = props.content;
-  var openSections = state.openSections;
-  return _react["default"].createElement("div", {
-    style: {
-      marginTop: 60
+  return _react["default"].createElement(_styles.StyledAccordionWrapper, null, _react["default"].createElement(AccordionContext.Provider, {
+    value: {
+      open: state.open,
+      onClickPanel: onClickPanel
     }
   }, children.map(function (child, index) {
-    var newErrors = {};
-    content && state.errors && content[index].requiredValues.map(function (requiredValue) {
-      if (state.errors && requiredValue && state.errors.hasOwnProperty(Object.keys(requiredValue))) {
-        newErrors[Object.keys(requiredValue)] = state.errors[Object.keys(requiredValue)];
-      }
-    });
-    return _react["default"].createElement(_AccordionSection["default"], {
-      numerical: numerical,
-      key: child.props.label,
-      isOpen: !!openSections[child.props.label],
-      label: child.props.label,
-      stepComplete: child.props.stepComplete,
+    return _react["default"].cloneElement(child, {
       index: index,
-      onClick: onClick,
-      toggleIcons: toggleIcons,
-      boxShadow: boxShadow,
-      className: className,
-      style: style,
+      key: child.props.children[0].props.children,
       steps: steps,
-      type: type,
-      header: header,
-      requiredContent: content ? content[index].requiredValues : null,
-      errors: newErrors,
-      stateValues: stateValues
-    }, child.props.children);
-  }));
+      includeBorder: includeBorder,
+      spacing: spacing,
+      panelHeight: panelHeight,
+      includeArrows: includeArrows
+    });
+  })));
 };
 
-var _default = Accordion;
-exports["default"] = _default;
-Accordion.propTypes = {
-  boxShadow: _propTypes["default"].bool,
-
-  /**
-   * option: "plus/minus"
-   */
-  toggleIcons: _propTypes["default"].string,
-  children: _propTypes.node.isRequired
-};
-Accordion.defaultProps = {
-  boxShadow: false
-};
+exports["default"] = AccordionV3;

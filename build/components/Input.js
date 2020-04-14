@@ -60,12 +60,15 @@ var Input = function Input(_ref) {
       setBounce = _useState2[1];
 
   var bounceFunc = function bounceFunc() {
+    if (!maxLength) return;
+
     if (value.length === maxLength) {
       return setBounce(true);
     }
   };
 
   var unbounceFunc = function unbounceFunc() {
+    if (!maxLength) return;
     return setBounce(false);
   };
 

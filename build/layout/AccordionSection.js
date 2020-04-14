@@ -51,13 +51,13 @@ var AccordionSection = function AccordionSection(props) {
       requiredContent = props.requiredContent;
   var currentErrorsRef = (0, _react.useRef)();
   (0, _react.useEffect)(function () {
-    currentErrorsRef.current = props.errors;
+    currentErrorsRef.current = props.errors ? props.errors : null;
 
     if (!previousErrors && props.errors && requiredContent && requiredContent.length > 0) {
       return throwErrors(props.errors);
     }
 
-    if (props.errors && previousErrors && requiredContent.length > 0 && Object.keys(previousErrors).length !== Object.keys(props.errors).length) {
+    if (props.errors && previousErrors && requiredContent && requiredContent.length > 0 && Object.keys(previousErrors).length !== Object.keys(props.errors).length) {
       return throwErrors(props.errors);
     }
 
@@ -87,13 +87,13 @@ var AccordionSection = function AccordionSection(props) {
     boxShadow: boxShadow,
     style: style,
     isOpen: isOpen,
-    error: errors.length > 0
+    error: errors && errors.length > 0
   }, _react["default"].createElement(AccordionLabel, {
     steps: steps,
     onClick: onClick,
     isOpen: isOpen,
     className: className,
-    error: errors.length > 0
+    error: errors && errors.length > 0
   }, _react["default"].createElement("div", {
     style: {
       display: "flex",
@@ -102,7 +102,7 @@ var AccordionSection = function AccordionSection(props) {
     }
   }, steps && _react["default"].createElement(StyledStep, {
     stepComplete: stateValues[index],
-    error: errors.length > 0
+    error: errors && errors.length > 0
   }, numerical && !stateValues[index] && _react["default"].createElement(_react["default"].Fragment, null, index + 1), steps && stateValues[index] && _react["default"].createElement(_Icon.Icon, {
     type: "checkmark",
     fill: "#ffffff"
@@ -111,7 +111,7 @@ var AccordionSection = function AccordionSection(props) {
     style: {
       marginRight: 8
     }
-  }), errors.length > 0 && errors[0][1], !errors.length && label), _react["default"].createElement("div", {
+  }), errors && errors.length > 0 && errors[0][1], !errors.length && label), _react["default"].createElement("div", {
     style: {
       "float": "right"
     }
