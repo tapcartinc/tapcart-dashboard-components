@@ -85,15 +85,17 @@ exports.PieGraph = PieGraph;
 var Legend = function Legend(_ref) {
   var colors = _ref.colors,
       data = _ref.data;
+  var sortData = data.slice(0).reverse();
+  var sortcolors = colors.slice(0).reverse();
   return _react["default"].createElement(_reaviz.DiscreteLegend, {
     orientation: "horizontal",
     style: {
       margin: "0 auto"
     },
-    entries: data.map(function (dataSet, index) {
+    entries: sortData.map(function (dataSet, index) {
       return _react["default"].createElement(_reaviz.DiscreteLegendEntry, {
         label: dataSet.key,
-        color: colors[index],
+        color: sortcolors[index],
         symbol: _react["default"].createElement(_styles.StyledLevelSquare, null)
       });
     })

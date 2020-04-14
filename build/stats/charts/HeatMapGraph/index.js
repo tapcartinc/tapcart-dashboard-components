@@ -163,12 +163,12 @@ var HeatMapGraph = function HeatMapGraph(props) {
         tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
           content: function content(d) {
             return _react["default"].createElement(_styles.StyledTooltip, {
-              width: "70px"
+              width: "80px"
             }, _react["default"].createElement(_styles.StyledHeatmapTip, null, _react["default"].createElement(_Typography.Sofia, {
-              color: _dashVariables.colorPicker.blue
-            }, d.y), _react["default"].createElement(_Typography.Sofia, {
               color: _dashVariables.colorPicker.black
-            }, d.data.metadata, "%")));
+            }, d.data.metadata, "%"), _react["default"].createElement(_Typography.Sofia, {
+              color: _dashVariables.colorPicker.blue
+            }, d.y, " users")));
           }
         })
       }),
