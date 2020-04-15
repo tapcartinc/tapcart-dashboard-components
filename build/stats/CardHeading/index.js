@@ -17,6 +17,8 @@ var _dashVariables = require("../../utils/_dashVariables");
 
 var _ToolTip = require("../../components/ToolTip");
 
+var _Typography = require("../../elements/Typography");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var CardHeading = function CardHeading(props) {
@@ -28,7 +30,9 @@ var CardHeading = function CardHeading(props) {
     className: "title"
   }, _react["default"].createElement(_styles.StyledTitle, null, info.name), info.description && _react["default"].createElement(_ToolTip.ToolTip, {
     color: _dashVariables.colorPicker.grayBlue
-  }, info.description)), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
+  }, _react["default"].createElement(_Typography.Sofia, {
+    color: _dashVariables.colorPicker.blue
+  }, info.description))), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
     return _react["default"].createElement(_styles.StyledHeaderChildren, {
       key: statInfo.title
     }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {

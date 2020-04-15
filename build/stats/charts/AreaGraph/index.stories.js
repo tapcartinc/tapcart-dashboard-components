@@ -1978,15 +1978,6 @@ var areaGraph = function areaGraph() {
       description: "Allows you to view your sessions over the \n last 30 days, graphed as a heatmap."
     }
   });
-}; // key={card.info.id}
-// data={card.data}
-// stacked={true}
-// gradient
-// body={body}
-// info={card.info}
-// range={range}
-// removeCard={removeCard}
-// unit={unit}
-
+};
 
 exports.areaGraph = areaGraph;
