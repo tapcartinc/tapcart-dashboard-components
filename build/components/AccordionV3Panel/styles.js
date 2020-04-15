@@ -14,12 +14,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var StyledPanelWrapper = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledPanelWrapper",
   componentId: "sc-1ew6v6b-0"
-})(["padding:0px 30px 0px 15px;border-radius:3px;background:white;", ";", ";", ";", ";"], function (props) {
-  return props.spacing ? "margin-bottom: ".concat(props.spacing, "px") : "margin-bottom: 8px";
+})(["padding:0px 30px 0px 15px;border-radius:3px;background:white;", ";", ";", ";", ";", ";"], function (props) {
+  return props.spacing ? "margin-bottom: ".concat(props.spacing, "px") : "margin-bottom: 0px";
 }, function (props) {
   return props.includeBorder && props.isOpen ? "border: 2px solid ".concat(_dashVariables.colorPicker.blue) : "border: 2px solid ".concat(_dashVariables.colorPicker.textEmpty);
 }, function (props) {
   return props.includeBorder && props.error && "border: 2px solid ".concat(_dashVariables.colorPicker.red);
+}, function (props) {
+  return !props.includeBorder && "border: none";
 }, function (props) {
   return props.style ? props.style : null;
 });
@@ -58,7 +60,7 @@ exports.StyledPanelInnerChildren = StyledPanelInnerChildren;
 var StyledStep = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledStep",
   componentId: "sc-1ew6v6b-4"
-})(["transition:0.2s all ease-in-out;background:", ";height:26px;width:26px;border-radius:50px;color:white;font-size:14px;display:flex;align-items:center;justify-content:center;margin-right:15px;", ""], function (props) {
+})(["transition:0.2s all ease-in-out;background:", ";height:26px;width:26px;min-width:26px;border-radius:50px;color:white;font-size:14px;display:flex;align-items:center;justify-content:center;margin-right:15px;", ""], function (props) {
   return props.stepComplete ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.blue;
 }, function (props) {
   return props.error && "background: ".concat(_dashVariables.colorPicker.red, ";");

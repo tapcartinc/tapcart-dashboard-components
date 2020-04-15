@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -91,7 +91,9 @@ exports.Label = Label;
 var Sofia = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Sofia",
   componentId: "iyq6bj-4"
-})(["-webkit-font-smoothing:antialiased;letter-spacing:normal;margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+})(["-webkit-font-smoothing:antialiased;letter-spacing:", ";margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+  return props.letterSpacing ? props.letterSpacing : "normal";
+}, function (props) {
   return props.marginBottom ? props.marginBottom : "5px";
 }, function (props) {
   return props.marginTop ? props.marginTop : "5px";
@@ -116,7 +118,9 @@ exports.Sofia = Sofia;
 var Circular = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Circular",
   componentId: "iyq6bj-5"
-})(["-webkit-font-smoothing:antialiased;letter-spacing:normal;margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+})(["-webkit-font-smoothing:antialiased;letter-spacing:", ";margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+  return props.letterSpacing ? props.letterSpacing : "normal";
+}, function (props) {
   return props.marginBottom ? props.marginBottom : "5px";
 }, function (props) {
   return props.marginTop ? props.marginTop : "5px";

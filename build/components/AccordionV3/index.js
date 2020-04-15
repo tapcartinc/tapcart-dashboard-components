@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -9,7 +9,7 @@ exports.AccordionContext = exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styles = require("./styles");
+var _propTypes = _interopRequireWildcard(require("prop-types"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -21,11 +21,15 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -98,22 +102,58 @@ var AccordionV3 = function AccordionV3(_ref) {
     }
   };
 
-  return _react["default"].createElement(_styles.StyledAccordionWrapper, null, _react["default"].createElement(AccordionContext.Provider, {
+  return /*#__PURE__*/_react["default"].createElement(AccordionContext.Provider, {
     value: {
       open: state.open,
-      onClickPanel: onClickPanel
-    }
-  }, children.map(function (child, index) {
-    return _react["default"].cloneElement(child, {
-      index: index,
-      key: child.props.children[0].props.children,
+      onClickPanel: onClickPanel,
       steps: steps,
       includeBorder: includeBorder,
+      includeArrows: includeArrows,
       spacing: spacing,
-      panelHeight: panelHeight,
-      includeArrows: includeArrows
-    });
-  })));
+      panelHeight: panelHeight
+    }
+  }, children);
 };
 
 exports["default"] = AccordionV3;
+AccordionV3.propTypes = {
+  /**
+   * Controls whether more than one panel can be opened at a time in the accordion
+   */
+  onePanelOpen: _propTypes["default"].bool,
+
+  /**
+   * Adds designed and label steps in each panel that update with panel completion and panel errors
+   * Functionality for panel completion and errors are handled on a panel by panel basis
+   */
+  steps: _propTypes["default"].bool,
+
+  /**
+   * Adds border style and border style functionality to wrap each pannel for focused panel, errors on panel, etc
+   */
+  includeBorder: _propTypes["default"].bool,
+
+  /**
+   * Adds spacing (in pixels) between panels
+   */
+  spacing: _propTypes["default"].number,
+
+  /**
+   * Panel height
+   */
+  panelHeight: _propTypes["default"].number,
+
+  /**
+   * Includes interactive, generic dropdown arrow on right side of panel
+   */
+  includeArrows: _propTypes["default"].bool,
+  children: _propTypes["default"].node.isRequired
+};
+AccordionV3.defaultProps = {
+  onePanelOpen: false,
+  steps: false,
+  includeBorder: false,
+  spacing: 0,
+  panelHeight: 35,
+  includeArrows: false
+};

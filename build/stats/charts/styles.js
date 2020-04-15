@@ -32,7 +32,7 @@ var StyledCardHeaderWrapper = _styledComponents["default"].div.withConfig({
 });
 
 var StyledCardHeader = function StyledCardHeader(props) {
-  return _react["default"].createElement(StyledCardHeaderWrapper, props, props.children);
+  return /*#__PURE__*/_react["default"].createElement(StyledCardHeaderWrapper, props, props.children);
 };
 
 exports.StyledCardHeader = StyledCardHeader;
@@ -98,7 +98,7 @@ var StyledHeatmapTip = _styledComponents["default"].div.withConfig({
 exports.StyledHeatmapTip = StyledHeatmapTip;
 
 var StyledTooltip = function StyledTooltip(props) {
-  return _react["default"].createElement(StyledTip, _extends({}, props, {
+  return /*#__PURE__*/_react["default"].createElement(StyledTip, _extends({}, props, {
     tipAlign: props.tipAlign,
     width: props.width
   }), props.children);
@@ -134,12 +134,12 @@ var StyledLevel = _styledComponents["default"].li.withConfig({
 
 var StyledCustomLegend = function StyledCustomLegend(props) {
   var data = props.data;
-  return _react["default"].createElement(StyledCustomLegendWrapper, props, data.map(function (dataLevel, index) {
-    return _react["default"].createElement(StyledLevel, {
+  return /*#__PURE__*/_react["default"].createElement(StyledCustomLegendWrapper, props, data.map(function (dataLevel, index) {
+    return /*#__PURE__*/_react["default"].createElement(StyledLevel, {
       key: dataLevel.total
-    }, _react["default"].createElement(StyledLevelSquare, {
+    }, /*#__PURE__*/_react["default"].createElement(StyledLevelSquare, {
       color: dataLevel.color
-    }), _react["default"].createElement("span", null, dataLevel.key, "%"));
+    }), /*#__PURE__*/_react["default"].createElement("span", null, dataLevel.key, "%"));
   }));
 };
 

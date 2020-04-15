@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -38,9 +38,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var ThemeProvider = function ThemeProvider(props) {
   var theme = _objectSpread({}, _theme.base, {}, props.theme);
 
-  return _react["default"].createElement(_styledComponents.ThemeProvider, {
+  return /*#__PURE__*/_react["default"].createElement(_styledComponents.ThemeProvider, {
     theme: theme
-  }, _react["default"].createElement(_react["default"].Fragment, null, props.children));
+  }, /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, props.children));
 };
 
 exports.ThemeProvider = ThemeProvider;

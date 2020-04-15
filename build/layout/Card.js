@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -11,13 +11,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _Icon = require("../elements/Icon");
-
 var _variables = require("../utils/_variables");
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
-
-var _dashVariables = require("../utils/_dashVariables");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -65,11 +61,11 @@ var Card = function Card(props) {
   var onClick = props.onClick,
       rest = _objectWithoutProperties(props, ["onClick"]);
 
-  return _react["default"].createElement(CardWrapper, _extends({}, rest, {
+  return /*#__PURE__*/_react["default"].createElement(CardWrapper, _extends({}, rest, {
     onClick: onClick
-  }), _react["default"].createElement(CardStyle, rest, _react["default"].createElement(CardImage, {
+  }), /*#__PURE__*/_react["default"].createElement(CardStyle, rest, /*#__PURE__*/_react["default"].createElement(CardImage, {
     src: props.image
-  }), _react["default"].createElement(CardContent, null, props.children)));
+  }), /*#__PURE__*/_react["default"].createElement(CardContent, null, props.children)));
 };
 
 exports.Card = Card;

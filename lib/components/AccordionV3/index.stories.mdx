@@ -1,0 +1,60 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  AccordionV3 from './index';
+import AccordionV3Panel from '../AccordionV3Panel';
+import {AccordionPanelBody} from '../AccordionPanelBody';
+import {AccordionLabel} from '../AccordionLabel';
+
+
+<Meta title="Docs|Components/AccordionV3" />
+
+# AccordionV3
+
+---
+<br />
+<Story id="examples-components-accordionv3--push" />
+<br />
+
+An Accordion component consists of a parent container with a label and body for each AccordionPanel.
+This component can take it's own design, style entirely or follow the reusable step-by-step pattern from the push form.
+There are a variety of prop options that enhance the functionality of the Accordion.
+
+Examples of where this is used in the Merchant Dashboard:
+* Push form
+* Menu builder
+
+<br />
+
+## Quick Start
+To create an Accordion, use import the `AccordionV3` component; this component must include child panels that accept an AccordionLabel
+and an AccordionBody. Each AccordionV3Panel must be given an id prop in the order of where it is in the parent componet (Accordion).
+
+```jsx
+const MyAccordion = () => (
+  <AccordionV3 steps includeBorder spacing={20} panelHeight={65} includeArrows>
+    <AccordionV3Panel id={1}>
+      <AccordionLabel>
+        label one
+      </AccordionLabel>
+    <AccordionPanelBody>
+        body one
+    </AccordionPanelBody>
+    </AccordionV3Panel>
+    <AccordionV3Panel id={2}>
+      <AccordionLabel>
+        label two
+      </AccordionLabel>
+    <AccordionPanelBody>
+        body two
+    </AccordionPanelBody>
+    </AccordionV3Panel>
+  </AccordionV3>
+);
+```
+
+## API
+### [AccordionV3](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/AccordionV3.js)
+<Props of={AccordionV3} />
+
+### [AccordionV3Panel](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/AccordionV3Panel.js)
+<Props of={AccordionV3Panel} />
+

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BoxedToggle } from "../../lib/components/BoxedToggle";
+import Toggle from "../../lib/components/Toggle";
 import PropTypes, { node } from "prop-types";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import { Input } from "../../lib/components/Input";
@@ -68,7 +68,7 @@ export const fields = props => {
           description="This will hide or show sold out products in your mobile app"
           {...props}
         >
-          {/* <BoxedToggle
+          {/* <Toggle
             type="basic"
             id="toggle"
             toggleState={state.toggleState}
@@ -86,7 +86,7 @@ export const fields = props => {
           description="This will hide or show sold out products in your mobile app"
           {...props}
         >
-          <BoxedToggle
+          <Toggle
             type="basic"
             id="toggle"
             toggleState={state.toggleState}
@@ -105,7 +105,7 @@ export const fields = props => {
           description="This will hide or show sold out products in your mobile app"
           {...props}
         >
-          <BoxedToggle
+          <Toggle
             type="basic"
             id="toggle"
             toggleState={state.toggleState}

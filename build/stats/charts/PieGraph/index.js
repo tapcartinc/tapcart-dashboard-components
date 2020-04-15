@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -36,34 +36,34 @@ var PieGraph = function PieGraph(props) {
       body = props.body,
       currency = props.currency,
       range = props.range;
-  return _react["default"].createElement(_styles.StyledGraphCard, {
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_CardHeading["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_CardHeading["default"], {
     range: range,
     info: info,
     body: body,
     tooltip: tooltip,
     currency: currency
-  }), _react["default"].createElement("div", {
+  }), /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       paddingLeft: "50px"
     }
-  }, _react["default"].createElement(_reaviz.PieChart, {
+  }, /*#__PURE__*/_react["default"].createElement(_reaviz.PieChart, {
     height: 245,
     width: 400,
     data: data,
-    series: _react["default"].createElement(_reaviz.PieArcSeries, {
+    series: /*#__PURE__*/_react["default"].createElement(_reaviz.PieArcSeries, {
       doughnut: true,
       label: null,
       colorScheme: colors,
-      arc: _react["default"].createElement(_reaviz.PieArc, {
-        tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
+      arc: /*#__PURE__*/_react["default"].createElement(_reaviz.PieArc, {
+        tooltip: /*#__PURE__*/_react["default"].createElement(_reaviz.ChartTooltip, {
           content: function content(d) {
-            return _react["default"].createElement(_styles.StyledTooltip, {
+            return /*#__PURE__*/_react["default"].createElement(_styles.StyledTooltip, {
               width: "70px"
-            }, _react["default"].createElement(_Typography.Sofia, {
+            }, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
               style: {
                 textAlign: "center"
               },
@@ -74,7 +74,7 @@ var PieGraph = function PieGraph(props) {
         })
       })
     })
-  })), _react["default"].createElement(Legend, {
+  })), /*#__PURE__*/_react["default"].createElement(Legend, {
     colors: colors,
     data: data
   }));
@@ -85,16 +85,16 @@ exports.PieGraph = PieGraph;
 var Legend = function Legend(_ref) {
   var colors = _ref.colors,
       data = _ref.data;
-  return _react["default"].createElement(_reaviz.DiscreteLegend, {
+  return /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegend, {
     orientation: "horizontal",
     style: {
       margin: "0 auto"
     },
     entries: data.map(function (dataSet, index) {
-      return _react["default"].createElement(_reaviz.DiscreteLegendEntry, {
+      return /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegendEntry, {
         label: dataSet.key,
         color: colors[index],
-        symbol: _react["default"].createElement(_styles.StyledLevelSquare, null)
+        symbol: /*#__PURE__*/_react["default"].createElement(_styles.StyledLevelSquare, null)
       });
     })
   });

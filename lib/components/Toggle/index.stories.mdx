@@ -1,0 +1,42 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import Toggle from './index';
+
+
+<Meta title="Docs|Components/Toggle" />
+
+# Toggle
+
+---
+<br />
+<Story id="examples-components-toggle--basic" />
+<br />
+
+This component is a custom, reusable toggle switch. The Toggle component is most commonly used to reflect
+some specific state value as a bool inside of a form.
+
+Examples of where this is used in the Merchant Dashboard:
+* Settings
+* Multi-Page support block
+
+<br />
+
+## Quick Start
+To create a Toggle switch, use import the `Toggle`; this component must include child panels that accept an AccordionLabel
+and an AccordionBody. Each AccordionV3Panel must be given an id prop in the order of where it is in the parent componet (Accordion).
+
+```jsx
+const MyToggle = () => (
+  <Toggle
+    type="basic"
+    id="toggle"
+    toggleState={toggle}
+    onChange={setToggle(!toggle)}
+  />
+);
+```
+
+## API
+### [Toggle](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/Toggle)
+<Props of={Toggle} />
+
+

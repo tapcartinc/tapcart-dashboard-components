@@ -12,8 +12,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var AccordionPanelBody = function AccordionPanelBody(props) {
-  // console.log("BOD", props);
-  return _react["default"].createElement(StyledPanelChildrenWrapper, {
+  return /*#__PURE__*/_react["default"].createElement(StyledPanelChildrenWrapper, {
     isOpen: props.isOpen
   }, props.children);
 };

@@ -19,7 +19,7 @@ var Box = _styledComponents["default"].div.withConfig({
 })(["background-color:", " ", ";"], _variables.colors.blue, _variables.space);
 
 var TestBox = function TestBox(props) {
-  return _react["default"].createElement(Box, {
+  return /*#__PURE__*/_react["default"].createElement(Box, {
     width: [1, // 100% below the smallest breakpoint (all viewports)
     1 / 2, // 50% from the next breakpoint and up
     1 / 4 // 25% from the next breakpoint and up

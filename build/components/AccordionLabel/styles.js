@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var StyledAccordionLabel = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledAccordionLabel",
   componentId: "drvdwy-0"
-})(["cursor:pointer;font-size:14px;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;", " height:65px;text-transform:uppercase;color:", ";letter-spacing:1px;"], _dashVariables.circularStd.book, function (props) {
+})(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;text-transform:uppercase;color:", ";"], function (props) {
   return props.steps ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.black;
 });
 

@@ -20,6 +20,7 @@ var _exportNames = {
   input: true,
   Label: true,
   Sofia: true,
+  Circular: true,
   SegmentedControl: true,
   SearchBar: true,
   Input: true,
@@ -28,13 +29,13 @@ var _exportNames = {
   ClickDropdown: true,
   HoverDropdown: true,
   Breadcrumbs: true,
+  BreadcrumbsV2: true,
   SelectDropdown: true,
-  Toggle: true,
   IconToggle: true,
   Dropdown: true,
   Pagination: true,
   Modal: true,
-  BoxedToggle: true,
+  Toggle: true,
   ToolTip: true,
   EditContainerDropdown: true,
   SearchableContent: true,
@@ -176,6 +177,12 @@ Object.defineProperty(exports, "Sofia", {
     return _Typography.Sofia;
   }
 });
+Object.defineProperty(exports, "Circular", {
+  enumerable: true,
+  get: function get() {
+    return _Typography.Circular;
+  }
+});
 Object.defineProperty(exports, "SegmentedControl", {
   enumerable: true,
   get: function get() {
@@ -224,16 +231,16 @@ Object.defineProperty(exports, "Breadcrumbs", {
     return _Breadcrumbs.Breadcrumbs;
   }
 });
+Object.defineProperty(exports, "BreadcrumbsV2", {
+  enumerable: true,
+  get: function get() {
+    return _BreadcrumbsV.BreadcrumbsV2;
+  }
+});
 Object.defineProperty(exports, "SelectDropdown", {
   enumerable: true,
   get: function get() {
     return _SelectDropdown.SelectDropdown;
-  }
-});
-Object.defineProperty(exports, "Toggle", {
-  enumerable: true,
-  get: function get() {
-    return _Toggle.Toggle;
   }
 });
 Object.defineProperty(exports, "IconToggle", {
@@ -260,10 +267,10 @@ Object.defineProperty(exports, "Modal", {
     return _Modal.Modal;
   }
 });
-Object.defineProperty(exports, "BoxedToggle", {
+Object.defineProperty(exports, "Toggle", {
   enumerable: true,
   get: function get() {
-    return _BoxedToggle.BoxedToggle;
+    return _Toggle.Toggle;
   }
 });
 Object.defineProperty(exports, "ToolTip", {
@@ -567,9 +574,9 @@ var _HoverDropdown = require("./components/HoverDropdown");
 
 var _Breadcrumbs = require("./components/Breadcrumbs");
 
-var _SelectDropdown = require("./components/SelectDropdown");
+var _BreadcrumbsV = require("./components/BreadcrumbsV2");
 
-var _Toggle = require("./components/Toggle");
+var _SelectDropdown = require("./components/SelectDropdown");
 
 var _IconToggle = require("./components/IconToggle");
 
@@ -579,7 +586,7 @@ var _Pagination = require("./components/Pagination");
 
 var _Modal = require("./components/Modal");
 
-var _BoxedToggle = require("./components/BoxedToggle");
+var _Toggle = require("./components/Toggle");
 
 var _ToolTip = require("./components/ToolTip");
 
