@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -7,11 +9,17 @@ exports["default"] = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Link = _interopRequireDefault(require("../Link"));
-
 var _styles = require("./styles");
 
+var _propTypes = _interopRequireWildcard(require("prop-types"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -25,17 +33,33 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var BreadcrumbItemV2 = function BreadcrumbItemV2(_ref) {
   var children = _ref.children,
-      href = _ref.href,
-      rest = _objectWithoutProperties(_ref, ["children", "href"]);
+      className = _ref.className,
+      active = _ref.active,
+      rest = _objectWithoutProperties(_ref, ["children", "className", "active"]);
 
-  var isALink = typeof children === "string" && href;
-  console.log("isALink", isALink);
-  return isALink ? /*#__PURE__*/_react["default"].createElement("div", rest, /*#__PURE__*/_react["default"].createElement(_Link["default"], {
-    href: href
-  }, children)) : /*#__PURE__*/_react["default"].createElement(_styles.StyledBreadcrumb, rest, _react["default"].cloneElement(children, _objectSpread({
+  var href = children.props && children.props.href;
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledBreadcrumb, _extends({
+    className: className,
+    active: active
+  }, rest), _react["default"].cloneElement(children, _objectSpread({
     href: href
   }, rest)));
 };
 
 var _default = BreadcrumbItemV2;
 exports["default"] = _default;
+BreadcrumbItemV2.propTypes = {
+  /**
+   * Controls whether more than one panel can be opened at a time in the accordion
+   */
+  active: _propTypes["default"].bool,
+
+  /**
+   * Classname that can be added for css to the individual crumb item
+   */
+  className: _propTypes["default"].string,
+  children: _propTypes["default"].node
+};
+BreadcrumbItemV2.defaultProps = {
+  active: false
+};

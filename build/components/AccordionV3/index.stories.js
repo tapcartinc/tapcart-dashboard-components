@@ -30,6 +30,8 @@ var _Icon = require("../../elements/Icon");
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+require("./story-styles.scss");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -54,9 +56,7 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-(0, _react2.storiesOf)("Examples|Components/AccordionV3", module).addParameters({
-  component: _index["default"]
-}).add("Push", function () {
+(0, _react2.storiesOf)("Examples|Components/AccordionV3", module).add("Push", function () {
   var _useState = (0, _react.useState)({
     values: {
       one: "",
@@ -192,9 +192,7 @@ var StyledMenuExampleLabel = _styledComponents["default"].div.withConfig({
   componentId: "bdvj15-0"
 })(["display:flex;align-items:center;height:100%;width:100%;"]);
 
-(0, _react2.storiesOf)("Examples|Components/AccordionV3", module).addParameters({
-  component: _index["default"]
-}).add("Menu", function () {
+(0, _react2.storiesOf)("Examples|Components/AccordionV3", module).add("Menu", function () {
   var extraPanelStyles = {
     borderBottom: "1px solid ".concat(_dashVariables.colorPicker.gray25),
     borderRadius: "0px",
@@ -237,6 +235,58 @@ var StyledMenuExampleLabel = _styledComponents["default"].div.withConfig({
     color: _dashVariables.colorPicker.black
   }, "COLLECTIONS"))), /*#__PURE__*/_react["default"].createElement(_AccordionPanelBody.AccordionPanelBody, null, "COLLECTIONS BODY")), /*#__PURE__*/_react["default"].createElement(_AccordionV3Panel["default"], {
     style: extraPanelStyles,
+    id: 3
+  }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, null, /*#__PURE__*/_react["default"].createElement(StyledMenuExampleLabel, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+    style: {
+      height: "10px"
+    },
+    type: "double-dot-dot-dot",
+    fill: _dashVariables.colorPicker.blue,
+    iconLeft: true
+  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+    letterSpacing: "1px",
+    fontSize: "14px",
+    color: _dashVariables.colorPicker.black
+  }, "ORDERS"))), /*#__PURE__*/_react["default"].createElement(_AccordionPanelBody.AccordionPanelBody, null, "ORDERS BODY"))));
+});
+(0, _react2.storiesOf)("Examples|Components/AccordionV3", module).add("with class props", function () {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_index["default"], {
+    spacing: 0,
+    panelHeight: 50,
+    includeArrows: true,
+    className: "accordion-with-classname"
+  }, /*#__PURE__*/_react["default"].createElement(_AccordionV3Panel["default"], {
+    id: 1,
+    className: "accordion-with-classname__panel-one"
+  }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, {
+    labelClassName: "accordion-with-classname__label"
+  }, /*#__PURE__*/_react["default"].createElement(StyledMenuExampleLabel, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+    style: {
+      height: "10px"
+    },
+    type: "double-dot-dot-dot",
+    fill: "#FFFFFF",
+    iconLeft: true
+  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+    letterSpacing: "1px",
+    fontSize: "14px",
+    color: "#FFFFFF"
+  }, "FEATURED"))), /*#__PURE__*/_react["default"].createElement(_AccordionPanelBody.AccordionPanelBody, {
+    bodyClassName: "accordion-with-classname__body"
+  }, "FEATURED BODY")), /*#__PURE__*/_react["default"].createElement(_AccordionV3Panel["default"], {
+    id: 2
+  }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, null, /*#__PURE__*/_react["default"].createElement(StyledMenuExampleLabel, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+    style: {
+      height: "10px"
+    },
+    type: "double-dot-dot-dot",
+    fill: _dashVariables.colorPicker.blue,
+    iconLeft: true
+  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+    letterSpacing: "1px",
+    fontSize: "14px",
+    color: _dashVariables.colorPicker.black
+  }, "COLLECTIONS"))), /*#__PURE__*/_react["default"].createElement(_AccordionPanelBody.AccordionPanelBody, null, "COLLECTIONS BODY")), /*#__PURE__*/_react["default"].createElement(_AccordionV3Panel["default"], {
     id: 3
   }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, null, /*#__PURE__*/_react["default"].createElement(StyledMenuExampleLabel, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     style: {

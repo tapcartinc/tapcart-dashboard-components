@@ -11,7 +11,11 @@ var _dashVariables = require("../../utils/_dashVariables");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var StyledPanelWrapper = _styledComponents["default"].div.withConfig({
+var StyledPanelWrapper = _styledComponents["default"].div.attrs(function (props) {
+  return {
+    className: props.className
+  };
+}).withConfig({
   displayName: "styles__StyledPanelWrapper",
   componentId: "sc-1ew6v6b-0"
 })(["padding:0px 30px 0px 15px;border-radius:3px;background:white;", ";", ";", ";", ";", ";"], function (props) {
@@ -48,7 +52,11 @@ var StyledPanelChildrenWrapper = _styledComponents["default"].div.withConfig({
 
 exports.StyledPanelChildrenWrapper = StyledPanelChildrenWrapper;
 
-var StyledPanelInnerChildren = _styledComponents["default"].div.withConfig({
+var StyledPanelInnerChildren = _styledComponents["default"].div.attrs(function (props) {
+  return {
+    className: props.bodyClassName
+  };
+}).withConfig({
   displayName: "styles__StyledPanelInnerChildren",
   componentId: "sc-1ew6v6b-3"
 })(["padding-bottom:25px;", ""], function (props) {

@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -9,19 +11,28 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _styles = require("./styles");
+
+var _propTypes = _interopRequireWildcard(require("prop-types"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var AccordionPanelBody = function AccordionPanelBody(props) {
-  return /*#__PURE__*/_react["default"].createElement(StyledPanelChildrenWrapper, {
-    isOpen: props.isOpen
+  console.log("props", props);
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledPanelChildrenWrapper, {
+    isOpen: props.isOpen,
+    className: props.bodyClassName
   }, props.children);
 };
 
 exports.AccordionPanelBody = AccordionPanelBody;
-
-var StyledPanelChildrenWrapper = _styledComponents["default"].div.withConfig({
-  displayName: "AccordionPanelBody__StyledPanelChildrenWrapper",
-  componentId: "sc-1sat9ez-0"
-})(["", ""], function (props) {
-  return props.isOpen ? "\n      max-height: 100rem;\n      transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);\n      transition-duration: 0.5s;\n      transition-property: max-height;\n" : "max-height: 0;\n      overflow: hidden;\n      text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);\n      transition-duration: 0.5s;\n      transition-property: max-height;\n      z-index: 1;\n      position: relative;\n  ";
-});
+AccordionPanelBody.propTypes = {
+  /**
+   * Classname that can be added for css to panel children
+   */
+  bodyClassName: _propTypes["default"].string
+};

@@ -5,13 +5,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.AccordionLabel = void 0;
+exports.FieldHeader = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _styles = require("./styles");
-
 var _propTypes = _interopRequireWildcard(require("prop-types"));
+
+var _styles = require("./styles");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -23,21 +23,28 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var AccordionLabel = function AccordionLabel(_ref) {
+var FieldHeader = function FieldHeader(_ref) {
   var labelClassName = _ref.labelClassName,
       children = _ref.children,
-      rest = _objectWithoutProperties(_ref, ["labelClassName", "children"]);
+      stretch = _ref.stretch,
+      rest = _objectWithoutProperties(_ref, ["labelClassName", "children", "stretch"]);
 
-  return /*#__PURE__*/_react["default"].createElement(_styles.StyledAccordionLabel, {
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledFieldHeader, {
+    stretch: stretch,
     className: labelClassName
   }, children);
 };
 
-exports.AccordionLabel = AccordionLabel;
-AccordionLabel.propTypes = {
+exports.FieldHeader = FieldHeader;
+FieldHeader.propTypes = {
   /**
-   * Classname that can be added for css to panel label
+   * Classname that can be added for css to field label
    */
   labelClassName: _propTypes["default"].string,
+
+  /**
+   * Prop that controls weather the label and description stretch across the top layer of the field, wrapping the field children to the next row
+   */
+  stretch: _propTypes["default"].bool,
   children: _propTypes["default"].node
 };

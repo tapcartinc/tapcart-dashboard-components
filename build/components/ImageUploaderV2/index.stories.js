@@ -4,15 +4,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _ = _interopRequireDefault(require("."));
-
 var _react2 = require("@storybook/react");
 
-var _Icon = require("../../elements/Icon");
-
-var _addonKnobs = require("@storybook/addon-knobs");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _index = require("./index");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -30,46 +24,31 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-(0, _react2.storiesOf)("Examples|Components/Toggle", module).add("Basic", function () {
-  var _React$useState = _react["default"].useState(false),
-      _React$useState2 = _slicedToArray(_React$useState, 2),
-      toggle = _React$useState2[0],
-      setToggle = _React$useState2[1];
+(0, _react2.storiesOf)("Examples|Components/ImageUploaderV2", module).add("Basic", function (props) {
+  var _useState = (0, _react.useState)({
+    image: null,
+    childRef: null
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      state = _useState2[0],
+      setState = _useState2[1];
 
-  return /*#__PURE__*/_react["default"].createElement(_["default"], {
-    type: "basic",
-    id: "toggle",
-    toggleState: toggle,
-    onChange: function onChange() {
-      return setToggle(!toggle);
-    }
-  });
-}).add("TimeOfDay", function () {
-  var _React$useState3 = _react["default"].useState(false),
-      _React$useState4 = _slicedToArray(_React$useState3, 2),
-      timeOfDayToggle = _React$useState4[0],
-      setTimeOfDayToggle = _React$useState4[1];
+  var handleImageUpload = function handleImageUpload(files) {
+    var selectedImage = "https://66.media.tumblr.com/tumblr_macbbpcagJ1rwpp3eo1_400.png";
+    setState({
+      image: selectedImage
+    });
+  };
 
-  return /*#__PURE__*/_react["default"].createElement(_["default"], {
-    type: "timeOfDay",
-    id: "timeOfDayToggle",
-    toggleState: timeOfDayToggle,
-    onChange: function onChange() {
-      return setTimeOfDayToggle(!timeOfDayToggle);
-    }
-  });
-}).add("Platforms", function () {
-  var _React$useState5 = _react["default"].useState(false),
-      _React$useState6 = _slicedToArray(_React$useState5, 2),
-      platformToggle = _React$useState6[0],
-      setPlatformToggle = _React$useState6[1];
+  var handleRef = function handleRef(ref) {
+    setState({
+      childRef: ref
+    });
+  };
 
-  return /*#__PURE__*/_react["default"].createElement(_["default"], {
-    type: "platforms",
-    id: "platformToggle",
-    toggleState: platformToggle,
-    onChange: function onChange() {
-      return setPlatformToggle(!platformToggle);
-    }
-  });
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_index.ImageUploaderV2, {
+    handleRef: handleRef,
+    value: state.image,
+    handleImageUpload: handleImageUpload
+  }));
 });

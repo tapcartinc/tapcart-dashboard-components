@@ -11,6 +11,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
 
+var _styles = require("./styles");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -46,7 +48,8 @@ var AccordionV3 = function AccordionV3(_ref) {
       includeBorder = _ref.includeBorder,
       spacing = _ref.spacing,
       panelHeight = _ref.panelHeight,
-      includeArrows = _ref.includeArrows;
+      includeArrows = _ref.includeArrows,
+      className = _ref.className;
 
   var _useState = (0, _react.useState)({
     open: null
@@ -102,7 +105,9 @@ var AccordionV3 = function AccordionV3(_ref) {
     }
   };
 
-  return /*#__PURE__*/_react["default"].createElement(AccordionContext.Provider, {
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledAccordionWrapper, {
+    className: className
+  }, /*#__PURE__*/_react["default"].createElement(AccordionContext.Provider, {
     value: {
       open: state.open,
       onClickPanel: onClickPanel,
@@ -112,7 +117,7 @@ var AccordionV3 = function AccordionV3(_ref) {
       spacing: spacing,
       panelHeight: panelHeight
     }
-  }, children);
+  }, children));
 };
 
 exports["default"] = AccordionV3;
@@ -147,6 +152,11 @@ AccordionV3.propTypes = {
    * Includes interactive, generic dropdown arrow on right side of panel
    */
   includeArrows: _propTypes["default"].bool,
+
+  /**
+   * Classname that can be added for css to entire accordion wrapper
+   */
+  className: _propTypes["default"].string,
   children: _propTypes["default"].node.isRequired
 };
 AccordionV3.defaultProps = {

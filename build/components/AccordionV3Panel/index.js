@@ -11,6 +11,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
 
+var _AccordionLabel = require("../AccordionLabel");
+
 var _styles = require("./styles");
 
 var _AccordionV = require("../AccordionV3");
@@ -18,6 +20,8 @@ var _AccordionV = require("../AccordionV3");
 var _Icon = require("../../elements/Icon");
 
 var _dashVariables = require("../../utils/_dashVariables");
+
+var _AccordionPanelBody = require("../AccordionPanelBody");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -28,7 +32,9 @@ var AccordionV3Panel = function AccordionV3Panel(_ref) {
       children = _ref.children,
       complete = _ref.complete,
       errors = _ref.errors,
-      style = _ref.style;
+      style = _ref.style,
+      className = _ref.className,
+      bodyClassName = _ref.bodyClassName;
 
   var _useContext = (0, _react.useContext)(_AccordionV.AccordionContext),
       open = _useContext.open,
@@ -44,7 +50,8 @@ var AccordionV3Panel = function AccordionV3Panel(_ref) {
     error: errors && errors.length > 0 && !complete,
     isOpen: open && open[id],
     includeBorder: includeBorder,
-    style: style
+    style: style,
+    className: className
   }, /*#__PURE__*/_react["default"].createElement(_styles.StyledPanelLabel, {
     onClick: function onClick() {
       return onClickPanel(id);
@@ -56,7 +63,10 @@ var AccordionV3Panel = function AccordionV3Panel(_ref) {
   }, !complete && /*#__PURE__*/_react["default"].createElement("span", null, id), complete && /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "checkmark",
     fill: "#ffffff"
-  })), /*#__PURE__*/_react["default"].createElement(_styles.StyledLabelChildren, null, children[0].props.children, includeArrows && /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+  })), /*#__PURE__*/_react["default"].createElement(_styles.StyledLabelChildren, null, _react["default"].cloneElement( /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, {
+    children: children[0].props.children,
+    labelClassName: children[0].props.labelClassName
+  })), includeArrows && /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "arrow-down",
     fill: _dashVariables.colorPicker.blue,
     style: open && open[id] ? {
@@ -70,7 +80,11 @@ var AccordionV3Panel = function AccordionV3Panel(_ref) {
     isOpen: open && open[id]
   }, /*#__PURE__*/_react["default"].createElement(_styles.StyledPanelInnerChildren, {
     isOpen: open && open[id]
-  }, children[1].props.children)));
+  }, _react["default"].cloneElement( /*#__PURE__*/_react["default"].createElement(_AccordionPanelBody.AccordionPanelBody, {
+    children: children[1].props.children,
+    isOpen: open && open[id],
+    bodyClassName: children[1].props.bodyClassName
+  })))));
 };
 
 var _default = AccordionV3Panel;
@@ -97,7 +111,12 @@ AccordionV3Panel.propTypes = {
   style: _propTypes["default"].object,
 
   /**
-   * Must include AccordionLabel and AccordionBody
+   * Classname that can be added for css to entire panel component
+   */
+  className: _propTypes["default"].string,
+
+  /**
+   * Classname that can be added for css to panel label
    */
   children: _propTypes["default"].node.isRequired
 };

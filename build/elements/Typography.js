@@ -49,7 +49,7 @@ var Description = _styledComponents["default"].p.attrs({
   displayName: "Typography__Description",
   componentId: "iyq6bj-1"
 })(["-webkit-font-smoothing:antialiased;font-size:13px;font-weight:normal;font-style:normal;line-height:18px;letter-spacing:normal;color:", ";", ";", ";", " ", ""], function (props) {
-  return props.color ? props.color : _dashVariables.colorPicker.gray;
+  return props.color;
 }, function (props) {
   return props.align === "center" && "text-align: center";
 }, function (props) {
@@ -66,7 +66,7 @@ var Body = _styledComponents["default"].p.attrs({
   displayName: "Typography__Body",
   componentId: "iyq6bj-2"
 })(["", " margin-top:8px;margin-bottom:8px;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;line-height:1.5;letter-spacing:normal;color:", ";", ";", ";", ""], _dashVariables.circularStd.book, function (props) {
-  return props.color ? props.color : _dashVariables.colorPicker.black;
+  return props.color;
 }, function (props) {
   return props.align === "center" && "text-align: center";
 }, function (props) {
@@ -91,7 +91,7 @@ exports.Label = Label;
 var Sofia = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Sofia",
   componentId: "iyq6bj-4"
-})(["-webkit-font-smoothing:antialiased;letter-spacing:", ";margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+})(["-webkit-font-smoothing:antialiased;letter-spacing:", ";margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";text-transform:", ";color:", ";", ";", ";", ";", ""], function (props) {
   return props.letterSpacing ? props.letterSpacing : "normal";
 }, function (props) {
   return props.marginBottom ? props.marginBottom : "5px";
@@ -101,6 +101,8 @@ var Sofia = _styledComponents["default"].p.withConfig({
   return props.fontSize ? props.fontSize : "13px";
 }, function (props) {
   return props.lineHeight ? props.lineHeight : "normal";
+}, function (props) {
+  return props.textTransform;
 }, function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.gray;
 }, function (props) {
@@ -118,7 +120,7 @@ exports.Sofia = Sofia;
 var Circular = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Circular",
   componentId: "iyq6bj-5"
-})(["-webkit-font-smoothing:antialiased;letter-spacing:", ";margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";color:", ";", ";", ";", ";", ""], function (props) {
+})(["-webkit-font-smoothing:antialiased;letter-spacing:", ";margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";text-transform:", ";color:", ";", ";", ";", ";", ""], function (props) {
   return props.letterSpacing ? props.letterSpacing : "normal";
 }, function (props) {
   return props.marginBottom ? props.marginBottom : "5px";
@@ -128,6 +130,8 @@ var Circular = _styledComponents["default"].p.withConfig({
   return props.fontSize ? props.fontSize : "13px";
 }, function (props) {
   return props.lineHeight ? props.lineHeight : "normal";
+}, function (props) {
+  return props.textTransform;
 }, function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.gray;
 }, function (props) {

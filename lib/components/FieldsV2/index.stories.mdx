@@ -1,0 +1,63 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {FieldsV2} from './index';
+import {FieldV2} from '../FieldV2';
+import {AccordionPanelBody} from '../AccordionPanelBody';
+import {AccordionLabel} from '../AccordionLabel';
+
+
+<Meta title="Docs|Components/AccordionV3" />
+
+# AccordionV3
+
+---
+<br />
+<Story id="examples-components-fieldv2--basic" />
+<br />
+
+The <pre>Fields</pre> component consists of a parent container within a form with a list of <pre>Fields</pre> as children.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Settings/AccountSettings
+* -Most of Settings...
+
+<br />
+
+## Quick Start
+To create an Fields component, import the <pre>`Fields`</pre> component and the <pre>`Field`</pre> component as the parent component, Fields, children.
+Fields component must have children but they don't necessarily have to be a <pre>Field</pre> component (reference Submission Steps page on Merchant dashboard).
+
+
+## Fields Example:
+
+```jsx
+const MyAccordion = () => (
+  <AccordionV3 steps includeBorder spacing={20} panelHeight={65} includeArrows>
+    <AccordionV3Panel id={1}>
+      <AccordionLabel>
+        label one
+      </AccordionLabel>
+    <AccordionPanelBody>
+        body one
+    </AccordionPanelBody>
+    </AccordionV3Panel>
+    <AccordionV3Panel id={2}>
+      <AccordionLabel>
+        label two
+      </AccordionLabel>
+    <AccordionPanelBody>
+        body two
+    </AccordionPanelBody>
+    </AccordionV3Panel>
+  </AccordionV3>
+);
+```
+
+## API
+### [FieldsV2](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/FieldsV2.js)
+<Props of={FieldsV2} />
+
+### [FieldV2](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/FieldV2.js)
+<Props of={FieldV2} />
+
+

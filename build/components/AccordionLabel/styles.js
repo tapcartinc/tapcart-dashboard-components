@@ -11,7 +11,11 @@ var _dashVariables = require("../../utils/_dashVariables");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var StyledAccordionLabel = _styledComponents["default"].div.withConfig({
+var StyledAccordionLabel = _styledComponents["default"].div.attrs(function (props) {
+  return {
+    className: props.className
+  };
+}).withConfig({
   displayName: "styles__StyledAccordionLabel",
   componentId: "drvdwy-0"
 })(["cursor:pointer;transition:0.5s;display:flex;justify-content:space-between;align-items:center;text-align:left;text-transform:uppercase;color:", ";"], function (props) {

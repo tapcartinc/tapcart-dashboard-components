@@ -28,7 +28,7 @@ var Link = function Link(_ref) {
   var Tag = disabled ? "p" : "a";
   return /*#__PURE__*/_react["default"].createElement(Tag, _extends({
     href: disabled ? null : href,
-    className: classNames
+    className: className
   }, other), children);
 };
 
@@ -51,12 +51,7 @@ Link.propTypes = {
   /**
    * Specify if the control should be disabled, or not
    */
-  disabled: _propTypes["default"].bool,
-
-  /**
-   * Specify whether you want the inline version of this control
-   */
-  inline: _propTypes["default"].bool
+  disabled: _propTypes["default"].bool
 };
 var _default = Link;
 exports["default"] = _default;
