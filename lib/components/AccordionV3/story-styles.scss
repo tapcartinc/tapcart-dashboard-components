@@ -1,0 +1,17 @@
+.accordion-with-classname {
+  border: 2px solid var(--main-gray);
+  border-radius: 3px;
+
+  &__label {
+    color: #ffffff;
+    text-transform: lowercase;
+  }
+
+  &__panel-one {
+    background: var(--blue);
+  }
+
+  &__body {
+    color: #ffffff;
+  }
+}

@@ -1,5 +1,6 @@
 import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
 import  BreadcrumbsV2 from './index';
+import BreadcrumbItemV2 from '../BreadcrumbItemV2';
 
 
 <Meta title="Docs|Components/BreadcrumbsV2" />
@@ -11,42 +12,45 @@ import  BreadcrumbsV2 from './index';
 <Story id="examples-components-breadcrumbsv2--basic" />
 <br />
 
-An Accordion component consists of a parent container with a label and body for each AccordionPanel.
-This component can take it's own design, style entirely or follow the reusable step-by-step pattern from the push form.
-There are a variety of prop options that enhance the functionality of the Accordion.
+The Breadcrumb component is a parent container that wraps a list of BreadcrumbItem components.
+This component and the BreadcrumbItem child can receive it's own designs, classNames, style in the outside application.
 
-Examples of where this is used in the Merchant Dashboard:
-* Push form
-* Menu builder
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Integrations details page
+* -Submit steps page
 
 <br />
 
 ## Quick Start
-To create an Accordion, use import the `AccordionV3` component; this component must include child panels that accept an AccordionLabel
-and an AccordionBody. Each AccordionV3Panel must be given an id prop in the order of where it is in the parent componet (Accordion).
+To use the Breadcrumbs component, use import the `Breadcrumbs` component; this component must include BreadcrumbItem components.
+Each BreadcrumbItem handles its own state for whether the current crub is active or not active.
+
+## BreadcrumbsV2 Example:
 
 ```jsx
 const MyAccordion = () => (
-  <AccordionV3 steps includeBorder spacing={20} panelHeight={65} includeArrows>
-    <AccordionV3Panel id={1}>
-      <AccordionLabel>
-        label one
-      </AccordionLabel>
-    <AccordionPanelBody>
-        body one
-    </AccordionPanelBody>
-    </AccordionV3Panel>
-    <AccordionV3Panel id={2}>
-      <AccordionLabel>
-        label two
-      </AccordionLabel>
-    <AccordionPanelBody>
-        body two
-    </AccordionPanelBody>
-    </AccordionV3Panel>
-  </AccordionV3>
+  <BreadcrumbsV2>
+    <BreadcrumbItemV2>
+      <a href="/#">
+        <Icon type="design" iconLeft />
+      </a>
+    </BreadcrumbItemV2>
+    <BreadcrumbItemV2>
+      <a href="/#">crumbies</a>
+    </BreadcrumbItemV2>
+    <BreadcrumbItemV2>
+      <a href="/#">crumbies</a>
+    </BreadcrumbItemV2>
+  </BreadcrumbsV2>
 );
 ```
 
 
+## API
+### [BreadcrumbsV2](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/BreadcrumbsV2.js)
+<Props of={BreadcrumbsV2} />
+
+### [BreadcrumbItemV2](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/BreadcrumbItemV2.js)
+<Props of={BreadcrumbItemV2} />
 

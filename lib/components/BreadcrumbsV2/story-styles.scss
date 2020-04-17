@@ -1,0 +1,13 @@
+.breadcrumbs {
+  background: var(--blue);
+  border-radius: 3px;
+  padding: 5px 8px;
+
+  &__crumb {
+    border-bottom: 1px solid hotpink;
+  }
+
+  .active {
+    border: 1px solid hotpink;
+  }
+}

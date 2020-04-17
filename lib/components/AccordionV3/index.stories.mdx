@@ -18,15 +18,19 @@ An Accordion component consists of a parent container with a label and body for 
 This component can take it's own design, style entirely or follow the reusable step-by-step pattern from the push form.
 There are a variety of prop options that enhance the functionality of the Accordion.
 
-Examples of where this is used in the Merchant Dashboard:
-* Push form
-* Menu builder
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Push form
+* -Menu builder
 
 <br />
 
 ## Quick Start
-To create an Accordion, use import the `AccordionV3` component; this component must include child panels that accept an AccordionLabel
+To create an Accordion, use import the <pre>`AccordionV3`</pre> component; this component must include child panels that accept an AccordionLabel
 and an AccordionBody. Each AccordionV3Panel must be given an id prop in the order of where it is in the parent componet (Accordion).
+
+
+## Accordion Example:
 
 ```jsx
 const MyAccordion = () => (
@@ -57,4 +61,10 @@ const MyAccordion = () => (
 
 ### [AccordionV3Panel](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/AccordionV3Panel.js)
 <Props of={AccordionV3Panel} />
+
+### [AccordionLabel](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/AccordionLabel.js)
+<Props of={AccordionLabel} />
+
+### [AccordionPanelBody](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/AccordionPanelBody.js)
+<Props of={AccordionPanelBody} />
 

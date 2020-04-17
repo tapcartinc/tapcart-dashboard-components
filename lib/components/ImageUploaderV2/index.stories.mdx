@@ -1,0 +1,73 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {ImageUploaderV2} from './index';
+
+
+
+<Meta title="Docs|Components/ImageUploaderV2" />
+
+# ImageUploaderV2
+
+---
+<br />
+<Story id="examples-components-imageuploaderv2--basic" />
+<br />
+
+An ImageUploaderV2 component consists uses the react-dropzone library and Dropzone component in order to handle image uploading.
+The handleRef function is required in order for the Dropzone component to access the innerRef.
+
+<em>An example on how to write handleRef in your application:</em>
+
+```jsx
+	const [state, setState] = useState({
+		childRef: null
+	});
+
+	const handleRef = (ref) => {
+		return setState({
+			childRef: ref
+		});
+	};
+  ```
+
+This component is already styled on brand with the Tapcart styleguide. Please ask questions if design presents an ImageUploader outside of the brand design specs.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+<br/>
+
+* -Settings/Customizations
+* -Settings/App listing
+* -Design --> Theme --> App Icon, Menu Background, etc.
+
+<br />
+
+## Quick Start
+To create an ImageUploaderV2, use import the `ImageUploaderV2` component, write your handleRef function, and make sure the function that sets the state of the image inside of your component is using the Parse promise function being used throughout the dashboard to convert and save files in our database as seen below:
+
+<em>Example parse promise:</em>
+
+```jsx
+		const selectedImage = new Parse.File(files[0].name.replace(/\W/g, ""), files[0]);
+		selectedImage.save().then((result) => {
+					return this.setField("giftCardBackground", result.url());
+		});
+```
+
+
+## ImageUploaderV2 Example:
+
+```jsx
+const  = () => (
+ <ImageUploaderV2
+   handleRef={handleRef}
+   value={state.image}
+   handleImageUpload={handleImageUpload}
+ />
+);
+```
+
+## API
+### [ImageUploaderV2](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/ImageUploaderV2.js)
+<Props of={ImageUploaderV2} />
+
+
+
