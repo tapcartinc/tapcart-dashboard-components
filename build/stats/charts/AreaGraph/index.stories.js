@@ -1956,9 +1956,9 @@ var areaGraph = function areaGraph() {
       data: 468198532
     }]
   }]];
-  return _react["default"].createElement(_index.AreaGraph, {
+  return /*#__PURE__*/_react["default"].createElement(_index.AreaGraph, {
     stacked: true,
-    data: weekDataSales,
+    data: dayDataSales,
     gradient: true,
     body: [{
       title: "Total Sales",
@@ -1966,7 +1966,7 @@ var areaGraph = function areaGraph() {
       previousTotal: "1091.1M",
       percentChange: 0.04
     }],
-    unit: "WEEKS",
+    unit: "DAYS",
     range: {
       start: "2020-04-02T00:00:00.000-07:00",
       end: "2020-04-09T23:59:59.999-07:00"

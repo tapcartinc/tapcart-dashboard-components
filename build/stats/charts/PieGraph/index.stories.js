@@ -41,7 +41,7 @@ var pieGraph = function pieGraph() {
     }]
   });
 
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_index.PieGraph, {
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_index.PieGraph, {
     info: {
       id: "_falzewu1g",
       type: "card",

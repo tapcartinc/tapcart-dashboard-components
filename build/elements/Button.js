@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -65,7 +65,7 @@ var Button = function Button(_ref) {
   var label = _ref.label,
       props = _objectWithoutProperties(_ref, ["label"]);
 
-  return _react["default"].createElement(StyledButtonWrapper, props, props.isLoading && !props.isDisabled ? _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(Loader, props), _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement(StyledButtonWrapper, props, props.isLoading && !props.isDisabled ? /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(Loader, props), /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       color: "transparent"
     }

@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -49,7 +49,7 @@ function ReactModalAdapter(_ref) {
     bodyOpenClassName = "ReactModal__Body--open-full";
   }
 
-  return _react["default"].createElement(_reactModal["default"], _extends({
+  return /*#__PURE__*/_react["default"].createElement(_reactModal["default"], _extends({
     portalClassName: className,
     className: contentClassName,
     overlayClassName: overlayClassName,
@@ -62,7 +62,7 @@ var Modal = function Modal(props) {
   (0, _react.useEffect)(function () {
     _reactModal["default"].setAppElement(props.rootElement || "#root");
   }, []);
-  return _react["default"].createElement(StyledModal, props, _react["default"].createElement(ModalType, props, props.children));
+  return /*#__PURE__*/_react["default"].createElement(StyledModal, props, /*#__PURE__*/_react["default"].createElement(ModalType, props, props.children));
 };
 
 exports.Modal = Modal;
@@ -70,13 +70,13 @@ exports.Modal = Modal;
 function ModalType(props) {
   switch (props.type) {
     case "custom":
-      return _react["default"].createElement(MinimalModalStyle, props, props.children);
+      return /*#__PURE__*/_react["default"].createElement(MinimalModalStyle, props, props.children);
 
     case "generic":
-      return _react["default"].createElement(GenericModalStyle, props, props.children);
+      return /*#__PURE__*/_react["default"].createElement(GenericModalStyle, props, props.children);
 
     case "dash":
-      return _react["default"].createElement(DashModal, props, _react["default"].createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement(DashModal, props, /*#__PURE__*/_react["default"].createElement("div", {
         onClick: props.closeModal,
         style: {
           position: "absolute",
@@ -84,58 +84,58 @@ function ModalType(props) {
           top: 13,
           cursor: "pointer"
         }
-      }, _react["default"].createElement(_Icon.Icon, {
+      }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
         fill: _variables.colors.grayText,
         type: "small-close"
-      })), _react["default"].createElement(StyledDashContent, null, _react["default"].createElement("div", {
+      })), /*#__PURE__*/_react["default"].createElement(StyledDashContent, null, /*#__PURE__*/_react["default"].createElement("div", {
         style: {
           marginBottom: 20,
           marginTop: 20
         }
-      }, _react["default"].createElement(_Typography.Header, null, props.header), props.description && _react["default"].createElement(_Typography.Description, null, props.description)), _react["default"].createElement(StyledDashModalContent, null, props.children), props.buttonText && _react["default"].createElement(_Button.Button, {
+      }, /*#__PURE__*/_react["default"].createElement(_Typography.Header, null, props.header), props.description && /*#__PURE__*/_react["default"].createElement(_Typography.Description, null, props.description)), /*#__PURE__*/_react["default"].createElement(StyledDashModalContent, null, props.children), props.buttonText && /*#__PURE__*/_react["default"].createElement(_Button.Button, {
         isDisabled: props.saveDisabled,
         onClick: props.save
       }, props.buttonText)));
 
     case "full":
-      return _react["default"].createElement(FullscreenModal, props, props.children);
+      return /*#__PURE__*/_react["default"].createElement(FullscreenModal, props, props.children);
 
     case "modal-with-graphic":
-      return _react["default"].createElement(ModalWithGraphic, props, _react["default"].createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement(ModalWithGraphic, props, /*#__PURE__*/_react["default"].createElement("div", {
         style: {
           padding: 25
         }
-      }, _react["default"].createElement(ModalHeader, null, _react["default"].createElement(ModalHeaderLeft, null, _react["default"].createElement(_Icon.Icon, {
+      }, /*#__PURE__*/_react["default"].createElement(ModalHeader, null, /*#__PURE__*/_react["default"].createElement(ModalHeaderLeft, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
         circleIcon: true,
         type: props.icon
-      }), _react["default"].createElement(_Typography.Header, {
+      }), /*#__PURE__*/_react["default"].createElement(_Typography.Header, {
         style: {
           marginLeft: 10
         }
-      }, props.header))), _react["default"].createElement("div", {
+      }, props.header))), /*#__PURE__*/_react["default"].createElement("div", {
         style: {
           marginLeft: 5
         }
-      }, props.children), _react["default"].createElement("br", null), _react["default"].createElement("br", null), _react["default"].createElement(ButtonsStyle, null, props.buttons && props.buttons.map(function (button, idx) {
-        return _react["default"].createElement("div", {
+      }, props.children), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement(ButtonsStyle, null, props.buttons && props.buttons.map(function (button, idx) {
+        return /*#__PURE__*/_react["default"].createElement("div", {
           key: "".concat(button.type, "-").concat(button.button, "-").concat(props.header),
           style: idx !== 0 ? {
             marginLeft: 15
           } : null
-        }, _react["default"].createElement(_Button.Button, {
+        }, /*#__PURE__*/_react["default"].createElement(_Button.Button, {
           key: button.button,
           type: button.type,
           onClick: button.onClick,
           isLoading: button.isLoading
         }, button.button));
-      }))), _react["default"].createElement(ModalGraphic, null, _react["default"].createElement("img", {
+      }))), /*#__PURE__*/_react["default"].createElement(ModalGraphic, null, /*#__PURE__*/_react["default"].createElement("img", {
         src: props.graphic,
         style: {
           width: "250px",
           height: "100%",
           objectFit: "cover"
         }
-      }), _react["default"].createElement(CloseIcon, {
+      }), /*#__PURE__*/_react["default"].createElement(CloseIcon, {
         type: "small-close",
         onClick: props.closeModal,
         style: {
@@ -144,28 +144,28 @@ function ModalType(props) {
       })));
 
     case "alert":
-      return _react["default"].createElement(MinimalModalStyle, props, _react["default"].createElement(ModalHeader, null, _react["default"].createElement(ModalHeaderLeft, null, _react["default"].createElement(_Icon.Icon, {
+      return /*#__PURE__*/_react["default"].createElement(MinimalModalStyle, props, /*#__PURE__*/_react["default"].createElement(ModalHeader, null, /*#__PURE__*/_react["default"].createElement(ModalHeaderLeft, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
         circleIcon: true,
         type: props.icon
-      }), _react["default"].createElement(_Typography.Header, {
+      }), /*#__PURE__*/_react["default"].createElement(_Typography.Header, {
         style: {
           marginLeft: 15
         }
-      }, props.header)), _react["default"].createElement(CloseIcon, {
+      }, props.header)), /*#__PURE__*/_react["default"].createElement(CloseIcon, {
         fill: _variables.colors.grayText,
         type: "small-close",
         onClick: props.closeModal
-      })), _react["default"].createElement("div", {
+      })), /*#__PURE__*/_react["default"].createElement("div", {
         style: {
           marginLeft: 5
         }
-      }, props.children), _react["default"].createElement(ButtonsStyle, null, props.buttons && props.buttons.map(function (button, idx) {
-        return _react["default"].createElement("div", {
+      }, props.children), /*#__PURE__*/_react["default"].createElement(ButtonsStyle, null, props.buttons && props.buttons.map(function (button, idx) {
+        return /*#__PURE__*/_react["default"].createElement("div", {
           key: "".concat(button.type, "-").concat(button.button, "-").concat(props.header),
           style: idx !== 0 ? {
             marginLeft: 15
           } : null
-        }, _react["default"].createElement(_Button.Button, {
+        }, /*#__PURE__*/_react["default"].createElement(_Button.Button, {
           key: button.type,
           kind: button.kind,
           onClick: button.onClick
@@ -173,7 +173,7 @@ function ModalType(props) {
       })));
 
     default:
-      return _react["default"].createElement("div", null);
+      return /*#__PURE__*/_react["default"].createElement("div", null);
   }
 }
 

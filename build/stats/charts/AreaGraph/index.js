@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -21,7 +21,7 @@ var _moment = _interopRequireDefault(require("moment"));
 
 var _dashVariables = require("../../../utils/_dashVariables");
 
-var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
+var _CardHeading = require("../../CardHeading");
 
 var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
 
@@ -31,11 +31,11 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -45,13 +45,17 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function convert(d, unit) {
   var date;
@@ -143,17 +147,17 @@ var AreaGraph = function AreaGraph(props) {
     }
   };
 
-  return _react["default"].createElement(_styles.StyledGraphCard, {
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_CardHeading["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_CardHeading.CardHeading, {
     range: range,
     info: info,
     body: body,
     tooltip: tooltip,
     currency: currency
-  }), _react["default"].createElement(GraphDetails, {
+  }), /*#__PURE__*/_react["default"].createElement(GraphDetails, {
     info: info,
     data: updatedData,
     currency: currency,
@@ -163,7 +167,7 @@ var AreaGraph = function AreaGraph(props) {
     getColorScheme: getColorScheme,
     colors: colors,
     unit: currUnit
-  }), _react["default"].createElement(Legend, {
+  }), /*#__PURE__*/_react["default"].createElement(Legend, {
     colors: getColorScheme(),
     data: updatedData
   }));
@@ -186,20 +190,24 @@ var GraphDetails = function GraphDetails(_ref) {
       unit = _ref.unit;
 
   var getFormat = function getFormat(d) {
-    return (0, _moment["default"])(d).format("MMM D YY");
+    if (unit === "HOURS") {
+      return (0, _moment["default"])(d).format("MMM D, h A");
+    }
+
+    return (0, _moment["default"])(d).format("MMM D, YY");
   };
 
   var getTooltipFormat = function getTooltipFormat(value) {
     if (unit === "WEEKS") {
-      return (0, _moment["default"])(value).format("MMM D");
+      return (0, _moment["default"])(value).format("MMM D, YY");
     }
 
     if (unit === "DAYS") {
-      return (0, _moment["default"])(value).format("MMM D");
+      return (0, _moment["default"])(value).format("MMM D, YY");
     }
 
     if (unit === "HOURS") {
-      return (0, _moment["default"])("".concat(value, ":00:00"), "HH:mm:ss").format("h A");
+      return (0, _moment["default"])(value).format("MMM D, h A");
     }
   };
 
@@ -211,15 +219,15 @@ var GraphDetails = function GraphDetails(_ref) {
   if (data && data.length) {
     switch (stacked) {
       case true:
-        return _react["default"].createElement(_reaviz.AreaChart, (_React$createElement2 = {
+        return /*#__PURE__*/_react["default"].createElement(_reaviz.AreaChart, (_React$createElement2 = {
           width: 470,
           height: 220,
-          series: _react["default"].createElement(_reaviz.AreaSeries, {
+          series: /*#__PURE__*/_react["default"].createElement(_reaviz.AreaSeries, {
             type: "stacked",
             colorScheme: getColorScheme()
           }),
-          gridlines: _react["default"].createElement(_reaviz.GridlineSeries, {
-            line: _react["default"].createElement(_reaviz.Gridline, {
+          gridlines: /*#__PURE__*/_react["default"].createElement(_reaviz.GridlineSeries, {
+            line: /*#__PURE__*/_react["default"].createElement(_reaviz.Gridline, {
               direction: "y",
               strokeColor: _dashVariables.colorPicker.gray25,
               strokeDasharray: "0 0",
@@ -228,27 +236,29 @@ var GraphDetails = function GraphDetails(_ref) {
               }
             })
           }),
-          yAxis: _react["default"].createElement(_reaviz.LinearYAxis, {
+          yAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxis, {
             type: "value",
             axisLine: null,
-            tickSeries: _react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
+            tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
               line: null,
-              label: _react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
+              label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
                 padding: 5,
-                rotation: false,
-                format: function format(data) {
-                  return (0, _useFormattedNumber.useFormattedNumber)(data).toLocaleString();
-                }
+                rotation: false // format={(data) =>
+                //   // useFormattedNumber(data).toLocaleString()
+                //   data
+                // }
+
               })
             })
           }),
-          xAxis: _react["default"].createElement(_reaviz.LinearXAxis // type="time"
+          xAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxis // type="time"
           , {
             type: unit === "DAYS" ? "time" : unit === "WEEKS" ? "value" : "value",
-            tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
+            tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
               line: null,
-              label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
+              label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
                 padding: 5,
+                rotation: -45,
                 format: function format(d) {
                   var cat = getFormat(d);
                   return cat;
@@ -256,48 +266,46 @@ var GraphDetails = function GraphDetails(_ref) {
               })
             })
           })
-        }, _defineProperty(_React$createElement2, "series", _react["default"].createElement(_reaviz.StackedAreaSeries, {
+        }, _defineProperty(_React$createElement2, "series", /*#__PURE__*/_react["default"].createElement(_reaviz.StackedAreaSeries, {
           type: "stacked",
           interpolation: "smooth",
           colorScheme: getColorScheme(),
-          tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
+          tooltip: /*#__PURE__*/_react["default"].createElement(_reaviz.TooltipArea, {
             placement: "top",
-            tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
+            tooltip: /*#__PURE__*/_react["default"].createElement(_reaviz.ChartTooltip, {
               followCursor: true,
               content: function content(d) {
                 var currentTotal = d && d.data && d.data.length && d.data[0] && d.data[0].value;
                 var previousTotal = d && d.data && d.data.length && d.data[1] && d.data[1].value;
                 var totalFormatted = (0, _useFormattedNumber.useFormattedNumber)(d && d.data && d.data.length && d.data[0] && d.data[0].value);
-                return _react["default"].createElement(_styles.StyledTooltip, {
+                return /*#__PURE__*/_react["default"].createElement(_styles.StyledTooltip, {
                   tipAlign: "bottom",
                   style: {
                     background: "white",
-                    padding: 10
+                    padding: 10,
+                    minWidth: 200
                   }
-                }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, {
+                }, /*#__PURE__*/_react["default"].createElement(_styles.StyledAreaMapTooltip, null, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
                   marginBottom: "2px",
                   marginTop: "5px",
                   fontSize: "11px",
                   color: _dashVariables.colorPicker.black
-                }, getTooltipFormat(d.x)), _react["default"].createElement(_Typography.Sofia, _defineProperty({
+                }, getTooltipFormat(d.x)), /*#__PURE__*/_react["default"].createElement(_styles.StyledLeftTooltip, null, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, _defineProperty({
                   marginBottom: "5px",
                   marginTop: "0px",
                   fontSize: "11px",
                   color: _dashVariables.colorPicker.blue
-                }, "fontSize", "13px"), currency && _react["default"].createElement("span", null, currency), totalFormatted.toLocaleString())), _react["default"].createElement(_styles.StyledRightTooltip, {
+                }, "fontSize", "13px"), keys[0], /*#__PURE__*/_react["default"].createElement("br", null), currency && /*#__PURE__*/_react["default"].createElement("span", null, currency), totalFormatted.toLocaleString())), /*#__PURE__*/_react["default"].createElement(_styles.StyledRightTooltip, {
                   upShift: currentTotal >= previousTotal
-                }, _react["default"].createElement(_Typography.Sofia, {
+                }, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+                  fontSize: "11px",
                   marginBottom: "0px",
                   color: currentTotal >= previousTotal ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                }, currentTotal > previousTotal && _react["default"].createElement("span", null, "\u2191"), currentTotal < previousTotal && _react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(currentTotal) - Number(previousTotal)) / ((Number(currentTotal) + Number(previousTotal)) / 2) * 100).toFixed(2)), "%"), _react["default"].createElement(_Typography.Sofia, {
-                  marginTop: "0px",
-                  fontSize: "10px",
-                  color: currentTotal >= previousTotal ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                }, "prev period"))));
+                }, keys[1], /*#__PURE__*/_react["default"].createElement("br", null), previousTotal))));
               }
             })
           }),
-          area: _react["default"].createElement(_reaviz.Area, {
+          area: /*#__PURE__*/_react["default"].createElement(_reaviz.Area, {
             style: function style(data, idx) {
               return data && data.length && data[0] && data[0].key === keys[0] ? {
                 opacity: fillColors ? 1 : 0.9,
@@ -307,13 +315,13 @@ var GraphDetails = function GraphDetails(_ref) {
                 fill: getColorScheme()[0]
               };
             },
-            mask: !fillColors ? _react["default"].createElement(_reaviz.Gradient, {
-              stops: [_react["default"].createElement(_reaviz.GradientStop, {
+            mask: !fillColors ? /*#__PURE__*/_react["default"].createElement(_reaviz.Gradient, {
+              stops: [/*#__PURE__*/_react["default"].createElement(_reaviz.GradientStop, {
                 offset: "10%",
                 color: getColorScheme()[0],
                 stopOpacity: 0,
                 key: "start"
-              }), _react["default"].createElement(_reaviz.GradientStop, {
+              }), /*#__PURE__*/_react["default"].createElement(_reaviz.GradientStop, {
                 offset: "80%",
                 color: getColorScheme()[0],
                 stopOpacity: gradient ? 1 : 0,
@@ -321,7 +329,7 @@ var GraphDetails = function GraphDetails(_ref) {
               })]
             }) : null
           }),
-          line: _react["default"].createElement(_reaviz.Line, {
+          line: /*#__PURE__*/_react["default"].createElement(_reaviz.Line, {
             strokeWidth: 3,
             style: fillColors ? {
               stroke: "transparent"
@@ -330,32 +338,32 @@ var GraphDetails = function GraphDetails(_ref) {
         })), _defineProperty(_React$createElement2, "data", data), _React$createElement2));
 
       case false:
-        return _react["default"].createElement(_reaviz.AreaChart, {
+        return /*#__PURE__*/_react["default"].createElement(_reaviz.AreaChart, {
           width: 470,
           height: 220,
-          gridlines: _react["default"].createElement(_reaviz.GridlineSeries, {
-            line: _react["default"].createElement(_reaviz.Gridline, {
+          gridlines: /*#__PURE__*/_react["default"].createElement(_reaviz.GridlineSeries, {
+            line: /*#__PURE__*/_react["default"].createElement(_reaviz.Gridline, {
               direction: "y",
               strokeColor: _dashVariables.colorPicker.gray25,
               strokeDasharray: "0 0"
             })
           }),
-          yAxis: _react["default"].createElement(_reaviz.LinearYAxis, {
+          yAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxis, {
             type: "value",
             axisLine: null,
-            tickSeries: _react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
+            tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
               line: null,
-              label: _react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
+              label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
                 padding: 10,
                 label: null
               })
             })
           }),
-          xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
+          xAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxis, {
             type: "time",
-            tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
+            tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
               line: null,
-              label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
+              label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
                 padding: 10,
                 format: function format(d) {
                   return (0, _moment["default"])(d).format("ddd");
@@ -363,9 +371,9 @@ var GraphDetails = function GraphDetails(_ref) {
               })
             })
           }),
-          series: _react["default"].createElement(_reaviz.LineSeries, {
+          series: /*#__PURE__*/_react["default"].createElement(_reaviz.LineSeries, {
             colorScheme: getColorScheme(),
-            symbols: _react["default"].createElement(_reaviz.PointSeries, {
+            symbols: /*#__PURE__*/_react["default"].createElement(_reaviz.PointSeries, {
               show: "hover"
             })
           }),
@@ -373,26 +381,26 @@ var GraphDetails = function GraphDetails(_ref) {
         });
 
       default:
-        return _react["default"].createElement("div", null, "loading");
+        return /*#__PURE__*/_react["default"].createElement("div", null, "loading");
     }
   } else {
-    return _react["default"].createElement("div", null, "loading");
+    return /*#__PURE__*/_react["default"].createElement("div", null, "loading");
   }
 };
 
 var Legend = function Legend(_ref2) {
   var colors = _ref2.colors,
       data = _ref2.data;
-  return _react["default"].createElement(_reaviz.DiscreteLegend, {
+  return /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegend, {
     orientation: "horizontal",
     style: {
       margin: "0 auto"
     },
     entries: data.map(function (dataSet, index) {
-      return _react["default"].createElement(_reaviz.DiscreteLegendEntry, {
+      return /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegendEntry, {
         label: dataSet.key,
         color: colors[index],
-        symbol: _react["default"].createElement(_styles.StyledLevelSquare, null)
+        symbol: /*#__PURE__*/_react["default"].createElement(_styles.StyledLevelSquare, null)
       });
     })
   });

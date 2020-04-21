@@ -27,7 +27,7 @@ var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
       onClick = _ref.onClick,
       active = _ref.active,
       index = _ref.index;
-  return _react["default"].createElement(StyledCrumb, null, index !== 0 ? _react["default"].createElement(_Icon.Icon, {
+  return /*#__PURE__*/_react["default"].createElement(StyledCrumb, null, index !== 0 ? /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "arrow-right",
     iconLeft: true,
     iconRight: true,
@@ -36,10 +36,10 @@ var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
       marginTop: 3
     },
     fill: active ? _dashVariables.colorPicker.gray : _dashVariables.colorPicker.blue
-  }) : null, _react["default"].createElement(BreadcrumbsItemStyle, {
+  }) : null, /*#__PURE__*/_react["default"].createElement(BreadcrumbsItemStyle, {
     onClick: onClick,
     active: active
-  }, icon ? _react["default"].createElement(_Icon.Icon, {
+  }, icon ? /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: icon,
     iconLeft: true,
     fill: _dashVariables.colorPicker.gray,
@@ -48,7 +48,7 @@ var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
       marginRight: 15,
       marginTop: 2
     }
-  }) : null, _react["default"].createElement("span", null, crumb)));
+  }) : null, /*#__PURE__*/_react["default"].createElement("span", null, crumb)));
 };
 
 exports.BreadcrumbsItem = BreadcrumbsItem;

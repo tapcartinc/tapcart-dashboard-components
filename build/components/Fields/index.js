@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -27,9 +27,9 @@ var Fields = function Fields(props) {
   var sectionHeader = props.sectionHeader,
       width = props.width,
       children = props.children;
-  return _react["default"].createElement(StyledFieldsWrapper, _extends({
+  return /*#__PURE__*/_react["default"].createElement(StyledFieldsWrapper, _extends({
     width: width
-  }, props), sectionHeader && _react["default"].createElement(SectionHeader, null, sectionHeader), _react["default"].createElement(StyledFields, null, children));
+  }, props), sectionHeader && /*#__PURE__*/_react["default"].createElement(SectionHeader, null, sectionHeader), /*#__PURE__*/_react["default"].createElement(StyledFields, null, children));
 };
 
 exports.Fields = Fields;

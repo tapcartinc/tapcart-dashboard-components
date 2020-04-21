@@ -21,7 +21,7 @@ var StyledSearchableContentWrapper = _styledComponents["default"].div.withConfig
 })(["width:420px;overflow:scroll;max-height:220px;box-shadow:", ";border:1px solid ", ";position:absolute;z-index:100;margin-top:10px;background:#ffffff;border-radius:3px;"], _variables.boxShadow.medium, _dashVariables.colorPicker.grayBlue);
 
 var SearchableContent = function SearchableContent(props) {
-  return _react["default"].createElement(StyledSearchableContentWrapper, {
+  return /*#__PURE__*/_react["default"].createElement(StyledSearchableContentWrapper, {
     props: props
   }, props.children);
 };

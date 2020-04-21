@@ -20,6 +20,7 @@ var _exportNames = {
   input: true,
   Label: true,
   Sofia: true,
+  Circular: true,
   SegmentedControl: true,
   SearchBar: true,
   Input: true,
@@ -77,6 +78,7 @@ var _exportNames = {
   HeatMapGraph: true,
   MultiSeriesBarGraph: true,
   PieGraph: true,
+  CardHeading: true,
   heatmapColors: true,
   statsColors: true
 };
@@ -174,6 +176,12 @@ Object.defineProperty(exports, "Sofia", {
   enumerable: true,
   get: function get() {
     return _Typography.Sofia;
+  }
+});
+Object.defineProperty(exports, "Circular", {
+  enumerable: true,
+  get: function get() {
+    return _Typography.Circular;
   }
 });
 Object.defineProperty(exports, "SegmentedControl", {
@@ -518,6 +526,12 @@ Object.defineProperty(exports, "PieGraph", {
     return _PieGraph.PieGraph;
   }
 });
+Object.defineProperty(exports, "CardHeading", {
+  enumerable: true,
+  get: function get() {
+    return _CardHeading.CardHeading;
+  }
+});
 Object.defineProperty(exports, "heatmapColors", {
   enumerable: true,
   get: function get() {
@@ -664,6 +678,8 @@ var _HeatMapGraph = require("./stats/charts/HeatMapGraph");
 var _MultiSeriesBarGraph = require("./stats/charts/MultiSeriesBarGraph");
 
 var _PieGraph = require("./stats/charts/PieGraph");
+
+var _CardHeading = require("./stats/CardHeading");
 
 var _colors = require("./stats/utils/_colors");
 

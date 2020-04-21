@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledLevelSquare = exports.StyledRightTooltip = exports.StyledLeftTooltip = exports.StyledAreaMapTooltip = exports.StyledCustomLegend = exports.StyledHeatmapTip = exports.StyledTooltip = exports.StyledDifference = exports.StyledStatHeader = exports.StyledDescText = exports.StyledTitle = exports.StyledHeaderChildren = exports.StyledTitleSection = exports.StyledCardHeader = exports.StyledGraphCard = void 0;
+exports.StyledToolltipText = exports.StyledLevelSquare = exports.StyledRightTooltip = exports.StyledLeftTooltip = exports.StyledAreaMapTooltip = exports.StyledCustomLegend = exports.StyledHeatmapTip = exports.StyledTooltip = exports.StyledDifference = exports.StyledStatHeader = exports.StyledDescText = exports.StyledTitle = exports.StyledHeaderChildren = exports.StyledTitleSection = exports.StyledCardHeader = exports.StyledGraphCard = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -32,7 +32,7 @@ var StyledCardHeaderWrapper = _styledComponents["default"].div.withConfig({
 });
 
 var StyledCardHeader = function StyledCardHeader(props) {
-  return _react["default"].createElement(StyledCardHeaderWrapper, props, props.children);
+  return /*#__PURE__*/_react["default"].createElement(StyledCardHeaderWrapper, props, props.children);
 };
 
 exports.StyledCardHeader = StyledCardHeader;
@@ -98,7 +98,7 @@ var StyledHeatmapTip = _styledComponents["default"].div.withConfig({
 exports.StyledHeatmapTip = StyledHeatmapTip;
 
 var StyledTooltip = function StyledTooltip(props) {
-  return _react["default"].createElement(StyledTip, _extends({}, props, {
+  return /*#__PURE__*/_react["default"].createElement(StyledTip, _extends({}, props, {
     tipAlign: props.tipAlign,
     width: props.width
   }), props.children);
@@ -134,12 +134,12 @@ var StyledLevel = _styledComponents["default"].li.withConfig({
 
 var StyledCustomLegend = function StyledCustomLegend(props) {
   var data = props.data;
-  return _react["default"].createElement(StyledCustomLegendWrapper, props, data.map(function (dataLevel, index) {
-    return _react["default"].createElement(StyledLevel, {
+  return /*#__PURE__*/_react["default"].createElement(StyledCustomLegendWrapper, props, data.map(function (dataLevel, index) {
+    return /*#__PURE__*/_react["default"].createElement(StyledLevel, {
       key: dataLevel.total
-    }, _react["default"].createElement(StyledLevelSquare, {
+    }, /*#__PURE__*/_react["default"].createElement(StyledLevelSquare, {
       color: dataLevel.color
-    }), _react["default"].createElement("span", null, dataLevel.key, "%"));
+    }), /*#__PURE__*/_react["default"].createElement("span", null, dataLevel.key, "%"));
   }));
 };
 
@@ -160,3 +160,10 @@ var StyledRightTooltip = _styledComponents["default"].div.withConfig({
 });
 
 exports.StyledRightTooltip = StyledRightTooltip;
+
+var StyledToolltipText = _styledComponents["default"].div.withConfig({
+  displayName: "styles__StyledToolltipText",
+  componentId: "uezup0-16"
+})(["color:", ";", ""], _dashVariables.colorPicker.blue, _dashVariables.sofiaPro.regular);
+
+exports.StyledToolltipText = StyledToolltipText;
