@@ -5,14 +5,15 @@ import {AccordionPanelBody} from '../AccordionPanelBody';
 import {AccordionLabel} from '../AccordionLabel';
 
 
-<Meta title="Docs|Components/AccordionV3" />
+<Meta title="Docs|Components/FieldsV2" />
 
 # AccordionV3
 
 ---
 <br />
-<Story id="examples-components-fieldv2--basic" />
+<Story id="examples-components-fieldsv2--basic" />
 <br />
+
 
 The <pre>Fields</pre> component consists of a parent container within a form with a list of <pre>Fields</pre> as children.
 
@@ -31,26 +32,73 @@ Fields component must have children but they don't necessarily have to be a <pre
 ## Fields Example:
 
 ```jsx
-const MyAccordion = () => (
-  <AccordionV3 steps includeBorder spacing={20} panelHeight={65} includeArrows>
-    <AccordionV3Panel id={1}>
-      <AccordionLabel>
-        label one
-      </AccordionLabel>
-    <AccordionPanelBody>
-        body one
-    </AccordionPanelBody>
-    </AccordionV3Panel>
-    <AccordionV3Panel id={2}>
-      <AccordionLabel>
-        label two
-      </AccordionLabel>
-    <AccordionPanelBody>
-        body two
-    </AccordionPanelBody>
-    </AccordionV3Panel>
-  </AccordionV3>
-);
+  <FieldsV2 sectionHeader="Section Header">
+        <FieldV2>
+          <FieldHeader stretch={false}>
+            <FieldLabel>Label here</FieldLabel>
+            <FieldDescription>Description here</FieldDescription>
+          </FieldHeader>
+
+          <Toggle
+            className="flex-end"
+            type="basic"
+            id="toggle"
+            toggleState={state.toggleState}
+            onChange={() =>
+              setState((prevState) => ({
+                ...prevState,
+                toggleState: !state.toggleState,
+              }))
+            }
+          />
+
+          <Input
+            onChange={setInput}
+            value={state.test || ""}
+            placeholder="Enter Popup Text"
+          />
+        </FieldV2>
+        <FieldV2>
+          <FieldHeader stretch={false}>
+            <FieldLabel>Label here</FieldLabel>
+            <FieldDescription>Description here</FieldDescription>
+          </FieldHeader>
+
+          <SegmentedControl
+            type="secondary"
+            items={{
+              disabled: "disabled",
+              optional: "optional",
+              required: "mouse",
+            }}
+            action={changeSection}
+            current={state.currentSelection}
+          />
+        </FieldV2>
+
+        <FieldV2
+          {...props}
+          fieldFlow="vertical"
+          label="Display sold out products"
+          description="This will hide or show sold out products in your mobile app"
+        >
+          <FieldHeader stretch={true}>
+            <FieldLabel>Label here</FieldLabel>
+            <FieldDescription>Description here</FieldDescription>
+          </FieldHeader>
+          <ImageUploaderV2
+            label="Image"
+            value={state.image || ""}
+            handleImageUpload={handleImageUpload}
+          />
+          <Textarea
+            onChange={setInput}
+            value={state.test || ""}
+            label="Popup Custom Text"
+            placeholder="Enter Popup Text"
+          />
+        </FieldV2>
+      </FieldsV2>
 ```
 
 ## API

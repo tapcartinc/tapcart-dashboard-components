@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Toggle from "../../lib/components/Toggle";
+import { Toggle } from "../../lib/components/Toggle";
 import PropTypes, { node } from "prop-types";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import { Input } from "../../lib/components/Input";
@@ -11,43 +11,43 @@ import { ImageUploader, SegmentedControl } from "../../lib";
 export default {
   component: Fields,
   title: "Components/Fields",
-  decorators: [withKnobs]
+  decorators: [withKnobs],
 };
 
-export const fields = props => {
+export const fields = (props) => {
   const [state, setState] = React.useState({
     test: "",
     toggleState: false,
     image: null,
-    currentSelection: "disabled"
+    currentSelection: "disabled",
   });
 
-  const setInput = e => {
+  const setInput = (e) => {
     e.persist();
-    setState(prevState => ({
+    setState((prevState) => ({
       ...prevState,
-      test: e.target.value
+      test: e.target.value,
     }));
   };
 
-  const handleImageUpload = files => {
+  const handleImageUpload = (files) => {
     const selectedImage =
       "https://66.media.tumblr.com/tumblr_macbbpcagJ1rwpp3eo1_400.png";
 
-    setState(prevState => ({
+    setState((prevState) => ({
       ...prevState,
-      image: selectedImage
+      image: selectedImage,
     }));
   };
 
-  const changeSection = selectedTab => {
+  const changeSection = (selectedTab) => {
     if (state.currentSelection === selectedTab) {
       return;
     }
 
-    setState(prevState => ({
+    setState((prevState) => ({
       ...prevState,
-      currentSelection: selectedTab
+      currentSelection: selectedTab,
     }));
   };
 
@@ -57,9 +57,9 @@ export const fields = props => {
         <Field
           hasToggle
           setToggleState={() =>
-            setState(prevState => ({
+            setState((prevState) => ({
               ...prevState,
-              toggleState: !state.toggleState
+              toggleState: !state.toggleState,
             }))
           }
           toggleState={state.toggleState}
@@ -91,9 +91,9 @@ export const fields = props => {
             id="toggle"
             toggleState={state.toggleState}
             onChange={() =>
-              setState(prevState => ({
+              setState((prevState) => ({
                 ...prevState,
-                toggleState: !state.toggleState
+                toggleState: !state.toggleState,
               }))
             }
           />
@@ -110,9 +110,9 @@ export const fields = props => {
             id="toggle"
             toggleState={state.toggleState}
             onChange={() =>
-              setState(prevState => ({
+              setState((prevState) => ({
                 ...prevState,
-                toggleState: !state.toggleState
+                toggleState: !state.toggleState,
               }))
             }
           />
@@ -136,7 +136,7 @@ export const fields = props => {
             items={{
               disabled: "disabled",
               optional: "optional",
-              required: "mouse"
+              required: "mouse",
             }}
             width="270px"
             action={changeSection}
@@ -161,7 +161,7 @@ export const fields = props => {
             items={{
               disabled: "disabled",
               optional: "optional",
-              required: "mouse"
+              required: "mouse",
             }}
             width="330px"
             action={changeSection}
@@ -198,9 +198,9 @@ export const fields = props => {
           lastField
           toggleState={state.toggleState}
           setToggleState={() =>
-            setState(prevState => ({
+            setState((prevState) => ({
               ...prevState,
-              toggleState: !state.toggleState
+              toggleState: !state.toggleState,
             }))
           }
           {...props}
@@ -222,9 +222,9 @@ export const fields = props => {
           lastField
           toggleState={state.toggleState}
           setToggleState={() =>
-            setState(prevState => ({
+            setState((prevState) => ({
               ...prevState,
-              toggleState: !state.toggleState
+              toggleState: !state.toggleState,
             }))
           }
           fieldFlow="vertical"

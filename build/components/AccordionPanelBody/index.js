@@ -22,7 +22,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var AccordionPanelBody = function AccordionPanelBody(props) {
-  console.log("props", props);
   return /*#__PURE__*/_react["default"].createElement(_styles.StyledPanelChildrenWrapper, {
     isOpen: props.isOpen,
     className: props.bodyClassName

@@ -4,7 +4,7 @@ import {
   select,
   number,
   boolean,
-  optionsKnob
+  optionsKnob,
 } from "@storybook/addon-knobs";
 import { EditContainer } from "../../lib/components/EditContainer";
 import { ContainerBox } from "../../lib/layout/ContainerBox";
@@ -14,13 +14,13 @@ export default {
   component: EditContainer,
   title: "Components/EditContainer",
   parameters: {
-    componentSubtitle: "EditContainer subtitle placeholder"
+    componentSubtitle: "EditContainer subtitle placeholder",
   },
 
-  decorators: [withKnobs]
+  decorators: [withKnobs],
 };
 
-export const editContainer = props => {
+export const editContainer = (props) => {
   const [colorState, setColorState] = useState(colors.blue);
   const editContainerOptions = [
     {
@@ -29,8 +29,8 @@ export const editContainer = props => {
       icon: "edit-content",
       type: "button",
       typeOptions: {
-        handler: () => console.log("hi")
-      }
+        handler: () => console.log("hi"),
+      },
     },
     {
       className: "remove",
@@ -38,9 +38,9 @@ export const editContainer = props => {
       icon: "trash",
       type: "button",
       typeOptions: {
-        handler: () => console.log("hi")
-      }
-    }
+        handler: () => console.log("hi"),
+      },
+    },
   ];
 
   return (

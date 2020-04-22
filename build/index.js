@@ -270,7 +270,7 @@ Object.defineProperty(exports, "Modal", {
 Object.defineProperty(exports, "Toggle", {
   enumerable: true,
   get: function get() {
-    return _Toggle.Toggle;
+    return _index.Toggle;
   }
 });
 Object.defineProperty(exports, "ToolTip", {
@@ -586,7 +586,7 @@ var _Pagination = require("./components/Pagination");
 
 var _Modal = require("./components/Modal");
 
-var _Toggle = require("./components/Toggle");
+var _index = require("./components/Toggle/index");
 
 var _ToolTip = require("./components/ToolTip");
 

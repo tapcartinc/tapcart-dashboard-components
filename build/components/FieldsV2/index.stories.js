@@ -4,7 +4,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _Toggle = _interopRequireDefault(require("../Toggle"));
+var _Toggle = require("../Toggle");
 
 var _addonKnobs = require("@storybook/addon-knobs");
 
@@ -31,8 +31,6 @@ var _Button = require("../../elements/Button");
 var _ImageUploaderV = require("../ImageUploaderV2");
 
 var _SegmentedControl = require("../SegmentedControl");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -103,7 +101,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     sectionHeader: "Section Header"
   }, /*#__PURE__*/_react["default"].createElement(_FieldV.FieldV2, null, /*#__PURE__*/_react["default"].createElement(_FieldHeader.FieldHeader, {
     stretch: false
-  }, /*#__PURE__*/_react["default"].createElement(_FieldLabel.FieldLabel, null, "Label here"), /*#__PURE__*/_react["default"].createElement(_FieldDescription.FieldDescription, null, "Description here")), /*#__PURE__*/_react["default"].createElement(_Toggle["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_FieldLabel.FieldLabel, null, "Label here"), /*#__PURE__*/_react["default"].createElement(_FieldDescription.FieldDescription, null, "Description here")), /*#__PURE__*/_react["default"].createElement(_Toggle.Toggle, {
     className: "flex-end",
     type: "basic",
     id: "toggle",

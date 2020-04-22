@@ -27,7 +27,7 @@ exports.StyledToggleLabel = StyledToggleLabel;
 var StyledToggleWrapper = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledToggleWrapper",
   componentId: "sc-1j3i9xu-1"
-})(["position:relative;display:flex;align-items:center;margin:5px;&:hover{cursor:pointer;}"]);
+})(["position:relative;display:flex;align-items:center;&:hover{cursor:pointer;}"]);
 
 exports.StyledToggleWrapper = StyledToggleWrapper;
 

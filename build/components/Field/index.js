@@ -15,7 +15,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _Typography = require("../../elements/Typography");
 
-var _Toggle = _interopRequireDefault(require("../../components/Toggle"));
+var _Toggle = require("../../components/Toggle");
 
 var _dashVariables = require("../../utils/_dashVariables");
 
@@ -56,7 +56,7 @@ var Field = function Field(props) {
     style: {
       padding: "19px 24px"
     }
-  }, /*#__PURE__*/_react["default"].createElement(_Toggle["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_Toggle.Toggle, {
     type: "basic",
     id: "toggle",
     toggleState: toggleState,

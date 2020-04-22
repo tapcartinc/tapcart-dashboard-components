@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.Toggle = Toggle;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -167,8 +167,6 @@ function Toggle(props) {
   }
 }
 
-var _default = Toggle;
-exports["default"] = _default;
 Toggle.propTypes = {
   /**
    * options: "basic" | "timeOfDay" | "platforms"
