@@ -1,0 +1,44 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {EditContainerDropdownV2} from './index';
+
+<Meta title="Docs|Components/EditContainerDropdownV2" />
+
+# EditContainerDropdownV2
+
+---
+<br />
+<Story id="examples-components-editcontainerdropdown--basic" />
+<br />
+
+The `EditContainerDropdownV2` component consists of a a list of clickable options that dropdown when the user hovers over the child item being wrapped
+by the `EditContainerDropdownV2` component. This component has built in designs; these designs should not be customizable in order to keep this component
+on brand throughout all platforms.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Add Collections Modal
+* -Add Product Modal
+
+<br />
+
+## Quick Start
+To create an EditContainerDropdownV2, import the <pre>`EditContainerDropdownV2`</pre> component and pass the component a list of options. Each option is an object
+that should contain a label property and an onClick handler. Both the label and onClick handler are required for this component to work as expected.
+
+
+## EditContainerDropdownV2 Example:
+
+```jsx
+  <EditContainerDropdown options={options}>
+    <ItemToBeHoveredOver>
+      ...
+    </ItemToBeHoveredOver>
+  </EditContainerDropdown>
+```
+
+## API
+### [EditContainerDropdownV2](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/EditContainerDropdownV2.js)
+<Props of={EditContainerDropdownV2} />
+
+
+

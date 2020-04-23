@@ -31,9 +31,9 @@ var Header = _styledComponents["default"].h1.attrs({
 }).withConfig({
   displayName: "Typography__Header",
   componentId: "iyq6bj-0"
-})(["font-size:25px;color:", ";font-weight:500;font-style:normal;", " -webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ";", ";", ""], function (props) {
+})(["font-size:25px;color:", ";font-weight:500;font-style:normal;-webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ";", ";", ""], function (props) {
   return props.color ? props.color : _dashVariables.colorPicker.blue;
-}, _dashVariables.circularStd.medium, function (props) {
+}, function (props) {
   return props.align === "center" && "text-align: center";
 }, function (props) {
   return props.align === "left" && "text-align: left";

@@ -1,0 +1,52 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import {OptionBoxesV2} from './index';
+import {OptionBox} from './OptionBox';
+
+
+<Meta title="Docs|Components/OptionBoxesV2" />
+
+# OptionBoxesV2
+
+---
+<br />
+<Story id="examples-components-optionboxesv2--basic" />
+<br />
+
+The `OptionBoxesV2` component needs children of `OptionBox`. The functionality for allowing multiple option selection vs one selection at a time is to be handled outside of these components but both options are doable.
+Reference the storybook file for this component to see an example of setting the `selectionOptions` for an OptionBoxesV2 component (both multi option selection and one option selection).
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Engage page
+* -Menu dropdown somewhere
+
+<br />
+
+## Quick Start
+To create a OptionBoxesV2 component, import the `OptionBoxesV2` and `OptionBox` components.
+
+
+## PopoutContainerV2 Example:
+
+```jsx
+    <OptionBoxesV2 selectedOptions={state.selectedOptions}>
+      <OptionBox value="product" onClick={clickOption} id={1}>
+        <Icon type="product" />
+        <Sofia>Product</Sofia>
+      </OptionBox>
+      <OptionBox value="push" onClick={clickOption} id={2}>
+        <Icon type="push" />
+        <Sofia>Push</Sofia>
+      </OptionBox>
+    </OptionBoxesV2>
+```
+
+## API
+### [OptionBoxesV2](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/OptionBoxesV2)
+<Props of={OptionBoxesV2} />
+
+
+### [OptionBox](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/OptionBox)
+<Props of={OptionBox} />
+
+

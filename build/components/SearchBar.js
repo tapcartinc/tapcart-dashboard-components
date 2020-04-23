@@ -13,8 +13,6 @@ var _Icon = require("../elements/Icon");
 
 var _variables = require("../utils/_variables");
 
-var _Typography = require("../elements/Typography");
-
 var _dashVariables = require("../utils/_dashVariables");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -62,7 +60,7 @@ function SearchBar(_ref) {
 var SearchContainer = _styledComponents["default"].div.withConfig({
   displayName: "SearchBar__SearchContainer",
   componentId: "sc-1a34skd-0"
-})(["display:flex;flex-direction:row;align-items:center;border-bottom:1px solid ", ";position:relative;width:100%;input{font-weight:400;font-size:15px;border-radius:3px;border:none;background:transparent;width:100%;padding-top:15px;padding-bottom:15px;padding-left:5px;padding-right:5px;letter-spacing:0.25px;color:", ";&:hover{cursor:auto;}&::placeholder{color:", ";}&:focus{outline:none;}", " margin-left:10px;", "}", ""], _dashVariables.colorPicker.grayBlue, _dashVariables.colorPicker.black, _dashVariables.colorPicker.grayBlue, _dashVariables.sofiaPro.medium, function (props) {
+})(["display:flex;flex-direction:row;align-items:center;border-bottom:1px solid ", ";position:relative;width:100%;", " input{font-weight:400;font-size:15px;border-radius:3px;border:none;background:transparent;width:100%;padding-top:15px;padding-bottom:15px;padding-left:5px;padding-right:5px;letter-spacing:0.25px;color:", ";&:hover{cursor:auto;}&::placeholder{color:", ";}&:focus{outline:none;}margin-left:10px;", "}", ""], _dashVariables.colorPicker.grayBlue, _dashVariables.sofiaPro.medium, _dashVariables.colorPicker.black, _dashVariables.colorPicker.grayBlue, function (props) {
   return props.style ? props.style : null;
 }, function (props) {
   return props.style ? props.style : null;

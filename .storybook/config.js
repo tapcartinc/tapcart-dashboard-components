@@ -20,9 +20,11 @@ addParameters({
     showPanel: false,
     panelPosition: "right",
     storySort: (a, b) => {
-      console.log("a", a);
       if (a[0].includes("intro-")) {
         return -1;
+      }
+      if (a[0].includes("docs-")) {
+        return 0;
       }
 
       return 1;

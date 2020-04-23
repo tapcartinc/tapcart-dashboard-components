@@ -5,8 +5,9 @@ const TapcartLogoSVG = (props) => {
   return (
     <div
       style={{
-        width: "600px",
-        transform: "scale(1.5)",
+        transform: "scale(1.4)",
+        marginBottom: "-5px",
+        marginLeft: "20px",
       }}
     >
       <img src={logo} />

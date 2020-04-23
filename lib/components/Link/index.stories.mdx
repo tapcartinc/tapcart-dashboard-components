@@ -1,0 +1,51 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {Link} from './index';
+
+<Meta title="Docs|Components/Link" />
+
+# Link
+
+---
+<br />
+<Story id="examples-components-link--basic" />
+<br />
+
+The `Link` component is a custom component that allows for supporting rendering elements other than `a` in our markup (ex: Next Link, React router Link).
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Add Collections Modal
+* -Add Product Modal
+
+<br />
+
+## Quick Start
+To create an Link, import the <pre>`Link`</pre> component and pass the component an element type and and className if extra styling is necessary.
+
+## Link Example:
+
+```jsx
+ <Link element="a" href="#">
+   Link
+ </Link>
+```
+
+## Example for Link in Next as Button:
+
+```jsx
+import {Link as NextLink} from 'next'
+  <Button type="inverted">
+    <NextLink href="/demo">
+      <Link element="a">Book a demo</a>
+    </NextLink>
+    <BrandIcon type="book-a-demo" iconRight />
+  </Button>
+
+```
+
+## API
+### [Link](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/Link.js)
+<Props of={Link} />
+
+
+

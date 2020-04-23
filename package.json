@@ -87,6 +87,7 @@
     "react-hot-loader": "^4.12.20",
     "react-markdown": "^4.3.1",
     "react-modal": "^3.10.1",
+    "react-router-dom": "^5.1.2",
     "react-select": "^3.0.4",
     "react-syntax-highlighter": "^12.2.1",
     "reaviz": "^8.0.9",
