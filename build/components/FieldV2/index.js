@@ -30,7 +30,6 @@ var FieldV2 = function FieldV2(props) {
       justifyContent = props.justifyContent,
       stretch = props.stretch,
       children = props.children;
-  console.log("children", children);
   return /*#__PURE__*/_react["default"].createElement(_styles.StyledField, {
     lastField: lastField
   }, children.map(function (child, index) {

@@ -7,3 +7,4 @@ import "storybook-addon-jsx/register";
 import "@storybook/addon-links/register";
 import "@storybook/addon-docs/register";
 import "@storybook/addon-docs/blocks";
+import "./TitleAddon";
