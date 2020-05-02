@@ -4,7 +4,8 @@ import {
   Description,
   Body,
   Sofia,
-  Circular
+  Circular,
+  Label,
 } from "../../lib/elements/Typography";
 import CodeBlock from "../CodeBlock";
 import { colorPicker } from "../../lib/utils/_dashVariables";
@@ -15,9 +16,9 @@ export default {
   title: "Design Elements/Typography",
   parameters: {
     componentSubtitle:
-      '<Header/>, <Description/>, and <Body/> all can receive color as a prop to change the default settings seen above. They also can receive "align" as a prop with the options of "center" and "left" to adjust text-alignment. If no "align" prop is provided the default alignment is that of the parent component.'
+      '<Header/>, <Description/>, and <Body/> all can receive color as a prop to change the default settings seen above. They also can receive "align" as a prop with the options of "center" and "left" to adjust text-alignment. If no "align" prop is provided the default alignment is that of the parent component.',
     // docs: { storyDescription: "4 sizes are supported." }
-  }
+  },
 };
 
 export const TypographyStyles = () => (
@@ -43,8 +44,8 @@ export const TypographyStyles = () => (
 
 TypographyStyles.story = {
   parameters: {
-    notes: "A small component"
-  }
+    notes: "A small component",
+  },
 };
 
 const codeString = `element {
