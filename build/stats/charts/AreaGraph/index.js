@@ -301,7 +301,7 @@ var GraphDetails = function GraphDetails(_ref) {
                   fontSize: "11px",
                   marginBottom: "0px",
                   color: currentTotal >= previousTotal ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                }, keys[1], /*#__PURE__*/_react["default"].createElement("br", null), previousTotal))));
+                }, keys[1], /*#__PURE__*/_react["default"].createElement("br", null), (0, _useFormattedNumber.useFormattedNumber)(previousTotal).toLocaleString()))));
               }
             })
           }),
