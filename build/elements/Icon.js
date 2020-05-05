@@ -25,6 +25,266 @@ function Icon(props) {
   var type = props.type;
 
   switch (type) {
+    case "quadpay":
+      return /*#__PURE__*/_react["default"].createElement(SVG, {
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "24px",
+        viewBox: "0 0 20.15 21.9"
+      }, /*#__PURE__*/_react["default"].createElement("path", {
+        d: "M11,18H9c-.31,0-.63,0-.95,0a8.91,8.91,0,0,1-1.83-.39A8.45,8.45,0,0,1,.71,11.74,8.34,8.34,0,0,1,.43,9.36a8.53,8.53,0,0,1,7-8.18,8.71,8.71,0,0,1,2.1-.11,8.55,8.55,0,0,1,7.32,5.36,8.23,8.23,0,0,1,.56,2.4,3,3,0,0,1,0,.42v2.56a.66.66,0,0,1,0,.2.48.48,0,0,1-.45.36H14.48l-.18,0a.47.47,0,0,1-.36-.43.76.76,0,0,1,0-.15V9.51a6.29,6.29,0,0,0-.12-1.3,5.12,5.12,0,0,0-.42-1.27A4.07,4.07,0,0,0,12,5.32a5,5,0,0,0-2.17-.85,5.09,5.09,0,0,0-3.95,1,5,5,0,0,0-1.91,3,4.87,4.87,0,0,0,.47,3.35A5,5,0,0,0,8,14.54a3.82,3.82,0,0,0,.75.08h9.44a.49.49,0,0,1,.43.21l.56.71,1.32,1.69a.49.49,0,0,1-.33.81H17.53a.05.05,0,0,0-.06.06.27.27,0,0,1,0,.09c0,1.4,0,2.79,0,4.18a.55.55,0,0,1,0,.18.48.48,0,0,1-.69.34l-.11-.06L14.2,21.15l-.09-.07a.42.42,0,0,1-.17-.34.71.71,0,0,1,0-.14V18.17c0-.14,0-.13-.13-.13Z",
+        transform: "translate(-0.42 -1.05)",
+        fill: _dashVariables.colorPicker.blue
+      }));
+
+    case "sezzle":
+      return /*#__PURE__*/_react["default"].createElement(SVG, {
+        width: "19px",
+        height: "24px",
+        viewBox: "0 0 19 24",
+        version: "1.1"
+      }, /*#__PURE__*/_react["default"].createElement("title", null, "Sezzle_Logo_FullColor"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Page-1",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-931.000000, -2031.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Checkout-settings",
+        transform: "translate(408.000000, 1071.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Payment-methods",
+        transform: "translate(0.000000, 784.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle",
+        stroke: "#EFEFEF",
+        fill: "#FFFFFF",
+        x: "0",
+        y: "0",
+        width: "980",
+        height: "282"
+      }), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Payment-method-selector",
+        transform: "translate(472.000000, 20.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Cart",
+        transform: "translate(0.000000, 122.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("path", {
+        d: "M120.5,-0.5 L-0.5,-0.5 L-0.5,117 C-0.5,117.966498 -0.108249156,118.841498 0.525126266,119.474874 C1.15850169,120.108249 2.03350169,120.5 3,120.5 L117,120.5 C117.966498,120.5 118.841498,120.108249 119.474874,119.474874 C120.108249,118.841498 120.5,117.966498 120.5,117 L120.5,-0.5 Z",
+        id: "Rectangle-Copy-2",
+        stroke: "#F0F2F5",
+        fill: "#FFFFFF"
+      }), /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "48",
+        y: "34",
+        width: "24",
+        height: "24"
+      }), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Sezzle_Logo_FullColor",
+        transform: "translate(51.000000, 34.000000)",
+        fill: "#373AAF",
+        fillRule: "nonzero"
+      }, /*#__PURE__*/_react["default"].createElement("path", {
+        d: "M9.25341049,15.7395062 C7.13643519,17.8564815 3.70470679,17.8564815 1.58773148,15.7395062 L1.58773148,15.7395062 L1.41146088,15.5548927 C-0.527515684,13.4275054 -0.468758818,10.1303175 1.58773148,8.07382716 L1.58773148,8.07382716 L9.66155864,-7.1942452e-14 C11.778534,2.11697531 11.778534,5.5487037 9.66155864,7.66567901 L9.66155864,7.66567901 C10.718287,6.60895062 12.1057562,6.07882716 13.4932253,6.07999806 C14.8806944,6.07999806 16.2669907,6.60895062 17.3260648,7.66685185 L17.3260648,7.66685185 C19.444213,9.78265432 19.444213,13.2143827 17.3272377,15.331358 L17.3272377,15.331358 L9.25341049,23.4051852 C7.13643519,21.2882099 7.13643519,17.8564815 9.25341049,15.7395062 Z",
+        id: "Combined-Shape"
+      })))))))));
+
+    case "affirm":
+      return /*#__PURE__*/_react["default"].createElement(SVG, {
+        width: "23px",
+        height: "17px",
+        viewBox: "0 0 23 17"
+      }, /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("defs", null, /*#__PURE__*/_react["default"].createElement("polygon", {
+        id: "path-1",
+        points: "0 0 23.9999952 0 23.9999952 23.9999928 0 23.9999928"
+      })), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Page-1",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-1293.000000, -1912.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Checkout-settings",
+        transform: "translate(408.000000, 1071.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Payment-methods",
+        transform: "translate(0.000000, 784.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle",
+        stroke: "#EFEFEF",
+        fill: "#FFFFFF",
+        x: "0",
+        y: "0",
+        width: "980",
+        height: "282"
+      }), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Payment-method-selector",
+        transform: "translate(472.000000, 20.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Collection",
+        transform: "translate(363.000000, 0.000000)",
+        fill: "#FFFFFF",
+        stroke: "#F0F2F5"
+      }, /*#__PURE__*/_react["default"].createElement("path", {
+        d: "M118,-0.5 L-0.5,-0.5 L-0.5,121.5 L118,121.5 C118.966498,121.5 119.841498,121.108249 120.474874,120.474874 C121.108249,119.841498 121.5,118.966498 121.5,118 L121.5,3 C121.5,2.03350169 121.108249,1.15850169 120.474874,0.525126266 C119.841498,-0.108249156 118.966498,-0.5 118,-0.5 Z",
+        id: "Rectangle-Copy"
+      })), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Icon-Affirm",
+        transform: "translate(412.000000, 34.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("mask", {
+        id: "mask-2",
+        fill: "white"
+      }, /*#__PURE__*/_react["default"].createElement("use", {
+        href: "#path-1"
+      })), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "path-1"
+      }), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Group-4",
+        mask: "url(#mask-2)",
+        fill: "#393CB4",
+        fillRule: "nonzero"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        transform: "translate(1.000000, 3.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("path", {
+        d: "M3.7086928,16.3137712 C2.768144,14.8804944 2.2188672,13.1684992 2.2188672,11.3298064 C2.2188672,6.305912 6.3059664,2.21884 11.329752,2.21884 C16.3536192,2.21884 20.4406912,6.305912 20.4406912,11.3298064 C20.4406912,13.1684992 19.8914144,14.8804944 18.9508656,16.3137712 L21.5014096,16.3137712 C22.2418752,14.8087136 22.6595856,13.1173632 22.6595856,11.3298064 C22.6595856,5.0824832 17.5770752,-7.34819613e-14 11.329752,-7.34819613e-14 C5.0825104,-7.34819613e-14 4.8316906e-14,5.0824832 4.8316906e-14,11.3298064 C4.8316906e-14,13.1173632 0.4176832,14.8087136 1.158176,16.3137712 L3.7086928,16.3137712 Z",
+        id: "Fill-4"
+      }), /*#__PURE__*/_react["default"].createElement("path", {
+        d: "M10.6978198,14.5068018 C9.82581504,14.5068018 9.34772064,14.134053 9.34772064,13.5206658 C9.34772064,12.242293 10.909191,11.9335186 12.9430166,11.9335186 C12.9430166,13.2716226 12.0477014,14.5068018 10.6978198,14.5068018 M11.483791,5.94709776 C9.82437344,5.94709776 7.91474304,6.72907056 6.87831424,7.55513456 L7.82506464,9.54745296 C8.65635104,8.78718576 10.0002214,8.13677936 11.2125526,8.13677936 C12.364527,8.13677936 13.0005446,8.52204016 13.0005446,9.29767536 C13.0005446,9.81972496 12.5776118,10.113893 11.7825014,10.187061 C8.79308544,10.462053 6.47006944,11.3953122 6.47006944,13.6897682 C6.47006944,15.5091218 7.78173504,16.6091986 9.93953824,16.6091986 C11.3830422,16.6091986 12.5182614,15.8066898 13.1293366,14.747957 L13.1293366,16.3130722 L15.8206406,16.3130722 L15.8206406,9.75501616 C15.8206406,7.04717456 13.9378022,5.94709776 11.483791,5.94709776",
+        id: "Fill-6"
+      }))))))))));
+
+    case "klarna":
+      return /*#__PURE__*/_react["default"].createElement(SVG, {
+        width: "24px",
+        height: "20px",
+        viewBox: "0 0 24 20",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, /*#__PURE__*/_react["default"].createElement("title", null, "Icon Klarna"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Page-1",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-1170.000000, -1911.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Checkout-settings",
+        transform: "translate(408.000000, 1071.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Payment-methods",
+        transform: "translate(0.000000, 784.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle",
+        stroke: "#EFEFEF",
+        fill: "#FFFFFF",
+        x: "0",
+        y: "0",
+        width: "980",
+        height: "282"
+      }), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Payment-method-selector",
+        transform: "translate(472.000000, 20.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Product",
+        transform: "translate(242.000000, 0.000000)",
+        fill: "#FFFFFF",
+        stroke: "#F0F2F5"
+      }, /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "-0.5",
+        y: "-0.5",
+        width: "122",
+        height: "122"
+      })), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Icon-Klarna",
+        transform: "translate(290.000000, 34.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), /*#__PURE__*/_react["default"].createElement("path", {
+        d: "M20.9675961,16.4979199 C20.308086,16.500375 19.676633,16.7650406 19.212468,17.2335599 C18.7483029,17.7020793 18.4895446,18.3359759 18.4932081,18.9954802 C18.4895446,19.6549845 18.7483029,20.2888811 19.212468,20.7574004 C19.676633,21.2259198 20.308086,21.4905854 20.9675961,21.4930405 C22.3324339,21.4930405 23.4419841,20.3742449 23.4419841,18.9954802 C23.4456477,18.3359759 23.1868894,17.7020793 22.7227243,17.2335599 C22.2585592,16.7650406 21.6271062,16.500375 20.9675961,16.4979199 L20.9675961,16.4979199 Z M2.30926389e-14,21.2168233 L4.37073057,21.2168233 L4.37073057,2 L0.00232115272,2 L2.30926389e-14,21.2168233 Z M15.2871118,2 C15.2871118,6.15950567 13.6808741,10.0311884 10.8165717,12.9070966 L16.856211,21.2168233 L11.459531,21.2168233 L4.89763223,12.1875393 L6.59207372,10.906263 C9.38914527,8.80257647 11.0263216,5.49981846 11.0069062,2 L15.2824695,2 L15.2871118,2 Z",
+        id: "Shape",
+        fill: "#393CB4",
+        fillRule: "nonzero"
+      }))))))));
+
+    case "afterpay":
+      return /*#__PURE__*/_react["default"].createElement(SVG, {
+        width: "24px",
+        height: "14px",
+        viewBox: "0 0 24 14",
+        version: "1.1",
+        xmlns: "http://www.w3.org/2000/svg"
+      }, /*#__PURE__*/_react["default"].createElement("title", null, "Group 5"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Page-1",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "1.0-Store-settings",
+        transform: "translate(-1050.000000, -1914.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Checkout-settings",
+        transform: "translate(408.000000, 1071.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Payment-methods",
+        transform: "translate(0.000000, 784.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle",
+        stroke: "#EFEFEF",
+        fill: "#FFFFFF",
+        x: "0",
+        y: "0",
+        width: "980",
+        height: "282"
+      }), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Payment-method-selector",
+        transform: "translate(472.000000, 20.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Push-opt-in",
+        transform: "translate(121.000000, 0.000000)",
+        fill: "#FFFFFF",
+        stroke: "#F0F2F5"
+      }, /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle-Copy-3",
+        x: "-0.5",
+        y: "-0.5",
+        width: "122",
+        height: "122"
+      })), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "afterpay-logo",
+        transform: "translate(170.000000, 34.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Group-5",
+        transform: "translate(0.000000, 5.000000)",
+        fill: "#393CB4",
+        fillRule: "nonzero"
+      }, /*#__PURE__*/_react["default"].createElement("path", {
+        d: "M12.3840377,5.79731931 L14.8599871,4.3694712 C14.5865694,3.88339525 14.6473289,4.00491424 14.4042909,3.54921804 C14.1460631,3.06314209 14.2372023,2.88086361 14.7840377,2.88086361 C16.3637846,2.86567374 17.9587213,2.86567374 19.5384681,2.88086361 C20.0093542,2.88086361 20.1308732,3.07833196 19.8878352,3.50364842 C19.0979618,4.8859269 18.3080884,6.25301551 17.5030251,7.63529399 C17.2447972,8.07580032 17.0169491,8.07580032 16.7587213,7.65048386 C16.4853036,7.20997753 16.5612529,7.31630665 16.2574555,6.81504082 L13.796696,8.24288893 C13.8422656,8.36440791 13.9030251,8.45554715 13.9637846,8.54668639 C14.5713795,9.60997753 14.8447972,10.1112434 15.4827719,11.1745345 C16.2270757,12.4201041 17.7916327,12.4960535 18.6878352,11.3416231 C18.7941643,11.2201041 18.8701137,11.0833953 18.9612529,10.9314965 C20.4650504,8.33402817 21.953658,5.75174968 23.4422656,3.13909146 C23.5941643,2.88086361 23.7308732,2.59225601 23.7916327,2.28845855 C24.0194808,1.2859269 23.396696,0.283395254 22.3941643,0.0555471532 C22.2574555,0.0251674063 22.1055567,0.0099775329 21.9688479,0.0099775329 C18.7637846,-0.00521234051 15.5435314,-0.00521234051 12.3384681,0.0251674063 C10.8802403,0.0403572797 9.99922761,1.49858513 10.6372023,2.78972437 C10.8498605,3.21504082 11.0928985,3.60997753 11.3359365,4.00491424 C11.7764428,4.74921804 11.8979618,4.94668639 12.3840377,5.79731931",
+        id: "Path"
+      }), /*#__PURE__*/_react["default"].createElement("path", {
+        d: "M5.24479723,13.8023826 L5.24479723,10.9618763 C5.24479723,10.9618763 4.84986052,10.9618763 4.31821495,10.9618763 C3.77137951,10.9618763 3.66505039,10.7644079 3.93846811,10.2935218 C4.71315166,8.92643323 5.50302508,7.55934462 6.30808837,6.20744589 C6.55112634,5.79731931 6.7485947,5.76693956 7.00682254,6.22263576 C7.79669596,7.58972437 8.58656938,8.9416231 9.36125292,10.3239016 C9.6042909,10.7644079 9.49796179,10.9466864 8.99669596,10.9618763 L8.03973394,10.9618763 L8.03973394,13.8175725 L11.3815061,13.8175725 C12.8245441,13.8023826 13.6599871,12.4960535 13.1283415,11.1593446 C13.067582,11.0074459 12.9916327,10.870737 12.9156833,10.7188383 C11.4422656,8.13655981 9.95365799,5.5694712 8.46505039,2.98719272 C8.31315166,2.72896487 8.13087318,2.47073703 7.91821495,2.2580788 C7.17391115,1.55934462 6.0042909,1.60491424 5.30555672,2.34921804 C5.21441748,2.45554715 5.12327824,2.56187627 5.04732887,2.68339525 C3.43720229,5.43276234 1.82707571,8.18212943 0.262518747,10.9466864 C-0.451405303,12.2074459 0.368847861,13.6960535 1.78150609,13.7871927 C2.25239217,13.8175725 4.22707571,13.8023826 5.24479723,13.8023826",
+        id: "Path"
+      })))))))));
+
     case "trash":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
