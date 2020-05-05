@@ -26,23 +26,23 @@ function Icon(props) {
 
   switch (type) {
     case "quadpay":
-      return /*#__PURE__*/_react["default"].createElement(SVG, {
+      return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         xmlns: "http://www.w3.org/2000/svg",
         width: "24px",
         viewBox: "0 0 20.15 21.9"
-      }, /*#__PURE__*/_react["default"].createElement("path", {
+      }, props), /*#__PURE__*/_react["default"].createElement("path", {
         d: "M11,18H9c-.31,0-.63,0-.95,0a8.91,8.91,0,0,1-1.83-.39A8.45,8.45,0,0,1,.71,11.74,8.34,8.34,0,0,1,.43,9.36a8.53,8.53,0,0,1,7-8.18,8.71,8.71,0,0,1,2.1-.11,8.55,8.55,0,0,1,7.32,5.36,8.23,8.23,0,0,1,.56,2.4,3,3,0,0,1,0,.42v2.56a.66.66,0,0,1,0,.2.48.48,0,0,1-.45.36H14.48l-.18,0a.47.47,0,0,1-.36-.43.76.76,0,0,1,0-.15V9.51a6.29,6.29,0,0,0-.12-1.3,5.12,5.12,0,0,0-.42-1.27A4.07,4.07,0,0,0,12,5.32a5,5,0,0,0-2.17-.85,5.09,5.09,0,0,0-3.95,1,5,5,0,0,0-1.91,3,4.87,4.87,0,0,0,.47,3.35A5,5,0,0,0,8,14.54a3.82,3.82,0,0,0,.75.08h9.44a.49.49,0,0,1,.43.21l.56.71,1.32,1.69a.49.49,0,0,1-.33.81H17.53a.05.05,0,0,0-.06.06.27.27,0,0,1,0,.09c0,1.4,0,2.79,0,4.18a.55.55,0,0,1,0,.18.48.48,0,0,1-.69.34l-.11-.06L14.2,21.15l-.09-.07a.42.42,0,0,1-.17-.34.71.71,0,0,1,0-.14V18.17c0-.14,0-.13-.13-.13Z",
         transform: "translate(-0.42 -1.05)",
         fill: _dashVariables.colorPicker.blue
       }));
 
     case "sezzle":
-      return /*#__PURE__*/_react["default"].createElement(SVG, {
+      return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "19px",
         height: "24px",
         viewBox: "0 0 19 24",
         version: "1.1"
-      }, /*#__PURE__*/_react["default"].createElement("title", null, "Sezzle_Logo_FullColor"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
+      }, props), /*#__PURE__*/_react["default"].createElement("title", null, "Sezzle_Logo_FullColor"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
         id: "Page-1",
         stroke: "none",
         strokeWidth: "1",
@@ -93,11 +93,11 @@ function Icon(props) {
       })))))))));
 
     case "affirm":
-      return /*#__PURE__*/_react["default"].createElement(SVG, {
+      return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "23px",
         height: "17px",
         viewBox: "0 0 23 17"
-      }, /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("defs", null, /*#__PURE__*/_react["default"].createElement("polygon", {
+      }, props), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("defs", null, /*#__PURE__*/_react["default"].createElement("polygon", {
         id: "path-1",
         points: "0 0 23.9999952 0 23.9999952 23.9999928 0 23.9999928"
       })), /*#__PURE__*/_react["default"].createElement("g", {
@@ -160,13 +160,13 @@ function Icon(props) {
       }))))))))));
 
     case "klarna":
-      return /*#__PURE__*/_react["default"].createElement(SVG, {
+      return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
         height: "20px",
         viewBox: "0 0 24 20",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
-      }, /*#__PURE__*/_react["default"].createElement("title", null, "Icon Klarna"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
+      }, props), /*#__PURE__*/_react["default"].createElement("title", null, "Icon Klarna"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
         id: "Page-1",
         stroke: "none",
         strokeWidth: "1",
@@ -220,13 +220,13 @@ function Icon(props) {
       }))))))));
 
     case "afterpay":
-      return /*#__PURE__*/_react["default"].createElement(SVG, {
+      return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
         height: "14px",
         viewBox: "0 0 24 14",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
-      }, /*#__PURE__*/_react["default"].createElement("title", null, "Group 5"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
+      }, props), /*#__PURE__*/_react["default"].createElement("title", null, "Group 5"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
         id: "Page-1",
         stroke: "none",
         strokeWidth: "1",

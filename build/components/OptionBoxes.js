@@ -67,7 +67,7 @@ var OptionBoxesWrapper = _styledComponents["default"].ul.withConfig({
 var Option = _styledComponents["default"].li.withConfig({
   displayName: "OptionBoxes__Option",
   componentId: "glmpcy-1"
-})(["height:100px;width:", ";font-size:15px;", " margin-right:-1px;border:1px solid ", ";display:flex;flex-direction:column;background:white;", ";", ";justify-items:center;align-items:center;justify-content:center;color:", ";", ";", ";&:hover{cursor:pointer;}"], function (props) {
+})(["height:100px;width:", ";font-size:15px;", ";margin-right:-1px;border:1px solid ", ";display:flex;flex-direction:column;background:white;", ";", ";justify-items:center;align-items:center;justify-content:center;color:", ";", ";", ";&:hover{cursor:pointer;}"], function (props) {
   return props.size ? props.size : "33.333%";
 }, function (props) {
   return props.fontSize && "font-size: ".concat(props.fontSize);
