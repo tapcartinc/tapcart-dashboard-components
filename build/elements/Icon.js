@@ -25,7 +25,7 @@ function Icon(props) {
   var type = props.type;
 
   switch (type) {
-    case "quadpay":
+    case "quadPay":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         xmlns: "http://www.w3.org/2000/svg",
         width: "24px",
@@ -167,7 +167,7 @@ function Icon(props) {
         fillRule: "nonzero"
       }))))))));
 
-    case "afterpay":
+    case "afterPay":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
         height: "14px",
