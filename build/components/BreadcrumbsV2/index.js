@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.BreadcrumbsV2 = BreadcrumbsV2;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -21,7 +21,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var BreadcrumbsV2 = function BreadcrumbsV2(_ref) {
+function BreadcrumbsV2(_ref) {
   var children = _ref.children,
       className = _ref.className,
       style = _ref.style,
@@ -32,10 +32,8 @@ var BreadcrumbsV2 = function BreadcrumbsV2(_ref) {
   }, rest, {
     style: style
   }), /*#__PURE__*/_react["default"].createElement(_styles.StyledBreadcrumbList, null, children));
-};
+}
 
-var _default = BreadcrumbsV2;
-exports["default"] = _default;
 BreadcrumbsV2.propTypes = _defineProperty({
   /**
    * Classname that can be added for css to the entire Breadcrumb wrapper

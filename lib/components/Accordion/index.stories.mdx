@@ -1,0 +1,70 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {Accordion} from './index';
+import {AccordionPanel} from './AccordionPanel';
+import {AccordionBody} from './AccordionBody';
+import {AccordionLabel} from './AccordionLabel';
+
+
+<Meta title="Docs|Components/Accordion" />
+
+# Accordion
+
+---
+<br />
+<Story id="examples-components-accordion--push" />
+<br />
+
+An Accordion component consists of a parent container with a label and body for each AccordionPanel.
+This component can take it's own design, style entirely or follow the reusable step-by-step pattern from the push form.
+There are a variety of prop options that enhance the functionality of the Accordion.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Push form
+* -Menu builder
+
+<br />
+
+## Quick Start
+To create an Accordion, use import the <pre>`Accordion`</pre> component; this component must include child panels that accept an AccordionLabel
+and an AccordionBody. Each AccordionPanel must be given an id prop in the order of where it is in the parent componet (Accordion).
+
+
+## Accordion Example:
+
+```jsx
+const MyAccordion = () => (
+  <Accordion steps includeBorder spacing={20} panelHeight={65} includeArrows>
+    <AccordionPanel id={1}>
+      <AccordionLabel>
+        label one
+      </AccordionLabel>
+    <AccordionBody>
+        body one
+    </AccordionBody>
+    </AccordionPanel>
+    <AccordionPanel id={2}>
+      <AccordionLabel>
+        label two
+      </AccordionLabel>
+    <AccordionBody>
+        body two
+    </AccordionBody>
+    </AccordionPanel>
+  </Accordion>
+);
+```
+
+## API
+### [Accordion](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/Accordion.js)
+<Props of={Accordion} />
+
+### [AccordionPanel](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/AccordionPanel.js)
+<Props of={AccordionPanel} />
+
+### [AccordionLabel](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/AccordionLabel.js)
+<Props of={AccordionLabel} />
+
+### [AccordionBody](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/AccordionBody.js)
+<Props of={AccordionBody} />
+

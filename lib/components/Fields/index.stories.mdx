@@ -1,0 +1,110 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {Fields} from './index';
+import {Field} from '../Field';
+
+
+
+<Meta title="Docs|Components/Fields" />
+
+# Fields
+
+---
+<br />
+<Story id="examples-components-fields--basic" />
+<br />
+
+
+The <pre>Fields</pre> component consists of a parent container within a form with a list of <pre>Fields</pre> as children.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Settings/AccountSettings
+* -Most of Settings...
+
+<br />
+
+## Quick Start
+To create an Fields component, import the <pre>`Fields`</pre> component and the <pre>`Field`</pre> component as the parent component, Fields, children.
+Fields component must have children but they don't necessarily have to be a <pre>Field</pre> component (reference Submission Steps page on Merchant dashboard).
+
+
+## Fields Example:
+
+```jsx
+  <Fields sectionHeader="Section Header">
+        <Field>
+          <FieldHeader stretch={false}>
+            <FieldLabel>Label here</FieldLabel>
+            <FieldDescription>Description here</FieldDescription>
+          </FieldHeader>
+
+          <Toggle
+            className="flex-end"
+            type="basic"
+            id="toggle"
+            toggleState={state.toggleState}
+            onChange={() =>
+              setState((prevState) => ({
+                ...prevState,
+                toggleState: !state.toggleState,
+              }))
+            }
+          />
+
+          <Input
+            onChange={setInput}
+            value={state.test || ""}
+            placeholder="Enter Popup Text"
+          />
+        </Field>
+        <Field>
+          <FieldHeader stretch={false}>
+            <FieldLabel>Label here</FieldLabel>
+            <FieldDescription>Description here</FieldDescription>
+          </FieldHeader>
+
+          <SegmentedControl
+            type="secondary"
+            items={{
+              disabled: "disabled",
+              optional: "optional",
+              required: "mouse",
+            }}
+            action={changeSection}
+            current={state.currentSelection}
+          />
+        </Field>
+
+        <Field
+          {...props}
+          fieldFlow="vertical"
+          label="Display sold out products"
+          description="This will hide or show sold out products in your mobile app"
+        >
+          <FieldHeader stretch={true}>
+            <FieldLabel>Label here</FieldLabel>
+            <FieldDescription>Description here</FieldDescription>
+          </FieldHeader>
+          <ImageUploader
+            label="Image"
+            value={state.image || ""}
+            handleImageUpload={handleImageUpload}
+          />
+          <Textarea
+            onChange={setInput}
+            value={state.test || ""}
+            label="Popup Custom Text"
+            placeholder="Enter Popup Text"
+          />
+        </Field>
+      </Fields>
+```
+
+## API
+### [Fields](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/Fields.js)
+<Props of={Fields} />
+
+### [Field](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/Field.js)
+<Props of={Field} />
+
+

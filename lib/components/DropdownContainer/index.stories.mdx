@@ -1,0 +1,44 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {DropdownContainer} from './index';
+
+<Meta title="Docs|Components/DropdownContainer" />
+
+# DropdownContainer
+
+---
+<br />
+<Story id="examples-components-editcontainerdropdown--basic" />
+<br />
+
+The `DropdownContainer` component consists of a a list of clickable options that dropdown when the user hovers over the child item being wrapped
+by the `DropdownContainer` component. This component has built in designs; these designs should not be customizable in order to keep this component
+on brand throughout all platforms.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Add Collections Modal
+* -Add Product Modal
+
+<br />
+
+## Quick Start
+To create an DropdownContainer, import the <pre>`DropdownContainer`</pre> component and pass the component a list of options. Each option is an object
+that should contain a label property and an onClick handler. Both the label and onClick handler are required for this component to work as expected.
+
+
+## DropdownContainer Example:
+
+```jsx
+  <DropdownContainer options={options}>
+    <ItemToBeHoveredOver>
+      ...
+    </ItemToBeHoveredOver>
+  </DropdownContainer>
+```
+
+## API
+### [DropdownContainer](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/DropdownContainer.js)
+<Props of={DropdownContainer} />
+
+
+

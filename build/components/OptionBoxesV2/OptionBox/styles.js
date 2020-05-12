@@ -18,7 +18,7 @@ var StyledOption = _styledComponents["default"].li.attrs(function (props) {
 }).withConfig({
   displayName: "styles__StyledOption",
   componentId: "v4or51-0"
-})(["height:100px;max-width:120px;width:", ";margin-right:-1px;border:1px solid ", ";display:flex;flex-direction:column;background:white;", ";", ";justify-items:center;align-items:center;justify-content:center;color:", ";", ";", ";&:hover{cursor:pointer;}"], function (props) {
+})(["height:120px;max-width:120px;min-width:120px;width:", ";margin-right:-1px;border:1px solid ", ";display:flex;flex-direction:column;background:white;", ";", ";justify-items:center;align-items:center;justify-content:center;color:", ";", ";", ";&:hover{cursor:pointer;}"], function (props) {
   return props.size ? props.size : "33.333%";
 }, _dashVariables.colorPicker.border2, function (props) {
   return props.selectedOption && "background: ".concat(_dashVariables.colorPicker.lightBlue);

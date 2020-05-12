@@ -6,7 +6,7 @@
   "scripts": {
     "build-storybook": "build-storybook -c .storybook",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && babel lib -d build",
+    "build": "rm -rf build && babel lib -d build && npx webpack --config webpack.config.js --mode=production",
     "build:watch": "babel lib -w -d build",
     "prepublish": "npm run build",
     "storybook": "start-storybook -p 9001 -c .storybook"
@@ -27,6 +27,7 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
     "@pickra/copy-code-block": "^1.1.7",

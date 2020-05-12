@@ -1,0 +1,68 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import {PopoutContainer} from './index';
+import {PopoutOption} from './PopoutOption';
+
+
+<Meta title="Docs|Components/PopoutContainer" />
+
+# PopoutContainer
+
+---
+<br />
+<Story id="examples-components-popoutcontainer--basic" />
+<br />
+
+This component is a popout container that is triggered on hover. It is used frequently throughout our dashboard.
+Each `PopoutContainer` must include a `PopoutItem`. The `PopoutItem` component is what wraps the item that will
+control the hover trigger. `PopoutContainer` must also include `PopoutOptions`. `PopoutOptions` will include a
+list of options, `PopoutOption`, each having their own set of props and click handlers.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Design blocks
+* -Collections drag and drop parents
+
+<br />
+
+## Quick Start
+To use the PopoutContainer, import `PopoutContainer`, `PopoutItem`, `PopoutOptions`, and `PopoutOption` components.
+
+
+## PopoutContainer Example:
+
+```jsx
+      <PopoutContainer direction="right">
+        <PopoutItem>
+          <ContainerBox
+            customHeight={200}
+            customWidth={300}
+            customWidthMd={100}
+            bg={colorState}
+          />
+        </PopoutItem>
+        <PopoutOptions>
+          <PopoutOption
+            id={1}
+            onClick={() => console.log("edit")}
+            icon="edit"
+            label="edit"
+          ></PopoutOption>
+          <PopoutOption
+            id={2}
+            onClick={() => console.log("edit")}
+            icon="edit"
+            label="edit"
+          ></PopoutOption>
+        </PopoutOptions>
+      </PopoutContainer>
+```
+
+## API
+### [PopoutContainer](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/PopoutContainer)
+<Props of={PopoutContainer} />
+
+
+### [PopoutOption](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/PopoutOption)
+<Props of={PopoutOption} />
+
+

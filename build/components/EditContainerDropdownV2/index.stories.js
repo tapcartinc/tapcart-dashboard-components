@@ -30,7 +30,7 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-(0, _react2.storiesOf)("Examples|Components/EditContainerDropdown", module).add("Basic", function () {
+(0, _react2.storiesOf)("Examples|Components/EditContainerDropdownV2", module).add("Basic", function () {
   var colorOptions = [{
     label: "Blue",
     onClick: function onClick() {
@@ -62,7 +62,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     style: {
       marginBottom: 200
     }
-  }, /*#__PURE__*/_react["default"].createElement(_index.EditContainerDropdown, {
+  }, /*#__PURE__*/_react["default"].createElement(_index.EditContainerDropdownV2, {
     options: colorOptions,
     paddingTop: 20
   }, /*#__PURE__*/_react["default"].createElement(_ContainerBox.ContainerBox, {

@@ -1,0 +1,73 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {ImageUploader} from './index';
+
+
+
+<Meta title="Docs|Components/ImageUploader" />
+
+# ImageUploader
+
+---
+<br />
+<Story id="examples-components-imageuploader--basic" />
+<br />
+
+An ImageUploader component consists uses the react-dropzone library and Dropzone component in order to handle image uploading.
+The handleRef function is required in order for the Dropzone component to access the innerRef.
+
+<em>An example on how to write handleRef in your application:</em>
+
+```jsx
+	const [state, setState] = useState({
+		childRef: null
+	});
+
+	const handleRef = (ref) => {
+		return setState({
+			childRef: ref
+		});
+	};
+  ```
+
+This component is already styled on brand with the Tapcart styleguide. Please ask questions if design presents an ImageUploader outside of the brand design specs.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+<br/>
+
+* -Settings/Customizations
+* -Settings/App listing
+* -Design --> Theme --> App Icon, Menu Background, etc.
+
+<br />
+
+## Quick Start
+To create an ImageUploader, use import the `ImageUploader` component, write your handleRef function, and make sure the function that sets the state of the image inside of your component is using the Parse promise function being used throughout the dashboard to convert and save files in our database as seen below:
+
+<em>Example parse promise:</em>
+
+```jsx
+		const selectedImage = new Parse.File(files[0].name.replace(/\W/g, ""), files[0]);
+		selectedImage.save().then((result) => {
+					return this.setField("giftCardBackground", result.url());
+		});
+```
+
+
+## ImageUploader Example:
+
+```jsx
+const  = () => (
+ <ImageUploader
+   handleRef={handleRef}
+   value={state.image}
+   handleImageUpload={handleImageUpload}
+ />
+);
+```
+
+## API
+### [ImageUploader](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/ImageUploader.js)
+<Props of={ImageUploader} />
+
+
+

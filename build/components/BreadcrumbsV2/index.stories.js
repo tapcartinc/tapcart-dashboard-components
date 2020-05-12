@@ -8,7 +8,7 @@ var _react2 = require("@storybook/react");
 
 var _addonKnobs = require("@storybook/addon-knobs");
 
-var _index = _interopRequireDefault(require("./index"));
+var _index = require("./index");
 
 var _Icon = require("../../elements/Icon");
 
@@ -25,7 +25,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 //   parameters: { docs: { page: null } }
 // })
 .add("Basic", function (props) {
-  return /*#__PURE__*/_react["default"].createElement(_index["default"], null, /*#__PURE__*/_react["default"].createElement(_BreadcrumbItemV["default"], null, /*#__PURE__*/_react["default"].createElement("a", {
+  return /*#__PURE__*/_react["default"].createElement(_index.BreadcrumbsV2, null, /*#__PURE__*/_react["default"].createElement(_BreadcrumbItemV["default"], null, /*#__PURE__*/_react["default"].createElement("a", {
     href: "/#"
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "design",
@@ -36,7 +36,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
     href: "/#"
   }, "crumbies")));
 }).add("with default active prop", function (props) {
-  return /*#__PURE__*/_react["default"].createElement(_index["default"], null, /*#__PURE__*/_react["default"].createElement(_BreadcrumbItemV["default"], {
+  return /*#__PURE__*/_react["default"].createElement(_index.BreadcrumbsV2, null, /*#__PURE__*/_react["default"].createElement(_BreadcrumbItemV["default"], {
     active: true
   }, /*#__PURE__*/_react["default"].createElement("a", {
     href: "/#"
@@ -66,7 +66,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
     textTransform: "lowercase"
   }, "crumbies"))));
 }).add("with class props", function (props) {
-  return /*#__PURE__*/_react["default"].createElement(_index["default"], {
+  return /*#__PURE__*/_react["default"].createElement(_index.BreadcrumbsV2, {
     className: "breadcrumbs"
   }, /*#__PURE__*/_react["default"].createElement(_BreadcrumbItemV["default"], {
     className: "breadcrumbs__crumb active"

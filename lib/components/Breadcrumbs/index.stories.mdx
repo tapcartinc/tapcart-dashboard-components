@@ -1,0 +1,56 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {Breadcrumbs} from './index';
+import {BreadcrumbItem} from './BreadcrumbItem';
+
+
+<Meta title="Docs|Components/Breadcrumbs" />
+
+# Breadcrumbs
+
+---
+<br />
+<Story id="examples-components-breadcrumbs--basic" />
+<br />
+
+The Breadcrumb component is a parent container that wraps a list of BreadcrumbItem components.
+This component and the BreadcrumbItem child can receive it's own designs, classNames, style in the outside application.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Integrations details page
+* -Submit steps page
+
+<br />
+
+## Quick Start
+To use the Breadcrumbs component, use import the `Breadcrumbs` component; this component must include BreadcrumbItem components.
+Each BreadcrumbItem handles its own state for whether the current crub is active or not active.
+
+## Breadcrumbs Example:
+
+```jsx
+const MyAccordion = () => (
+  <Breadcrumbs>
+    <BreadcrumbItem>
+      <a href="/#">
+        <Icon type="design" iconLeft />
+      </a>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <a href="/#">crumbies</a>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <a href="/#">crumbies</a>
+    </BreadcrumbItem>
+  </Breadcrumbs>
+);
+```
+
+
+## API
+### [Breadcrumbs](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/Breadcrumbs.js)
+<Props of={Breadcrumbs} />
+
+### [BreadcrumbItem](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/BreadcrumbItem.js)
+<Props of={BreadcrumbItem} />
+

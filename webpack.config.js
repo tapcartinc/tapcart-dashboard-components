@@ -10,84 +10,85 @@ module.exports = {
     publicPath: "/",
     filename: "[name].js",
     libraryTarget: "umd",
-    library: "tapcart-dashboard-components"
+    library: "tapcart-dashboard-components",
   },
   externals: {
-    react: "react"
+    react: "react",
   },
+
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
         use: {
-          loader: "url-loader"
-        }
+          loader: "url-loader",
+        },
       },
       {
         test: /\.(svg|png|jpg|gif)$/,
-        loader: "url-loader?limit=30000&name=[name]-[hash].[ext]"
+        loader: "url-loader?limit=30000&name=[name]-[hash].[ext]",
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: devMode ? "style-loader" : MiniCssExtractPlugin.loader
+            loader: devMode ? "style-loader" : MiniCssExtractPlugin.loader,
           },
           {
             loader: "css-loader",
             options: {
               sourceMap: true,
-              minimize: true
-            }
+              minimize: true,
+            },
           },
           {
             loader: "postcss-loader",
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
-            loader: "resolve-url-loader"
-          }
-        ]
+            loader: "resolve-url-loader",
+          },
+        ],
       },
       {
         test: /\.scss$/,
         use: [
           {
-            loader: devMode ? "style-loader" : MiniCssExtractPlugin.loader
+            loader: devMode ? "style-loader" : MiniCssExtractPlugin.loader,
           },
           {
             loader: "css-loader",
             options: {
               sourceMap: true,
-              minimize: true
-            }
+              minimize: true,
+            },
           },
           {
             loader: "postcss-loader",
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
-            loader: "resolve-url-loader"
+            loader: "resolve-url-loader",
           },
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true
-            }
-          }
-        ]
-      }
-    ]
-  }
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
 };

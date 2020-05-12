@@ -5,7 +5,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.EditContainerDropdown = void 0;
+exports.EditContainerDropdownV2 = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -39,7 +39,7 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 
-var EditContainerDropdown = function EditContainerDropdown(_ref) {
+var EditContainerDropdownV2 = function EditContainerDropdownV2(_ref) {
   var options = _ref.options,
       icon = _ref.icon,
       children = _ref.children,
@@ -92,8 +92,8 @@ var EditContainerDropdown = function EditContainerDropdown(_ref) {
   })));
 };
 
-exports.EditContainerDropdown = EditContainerDropdown;
-EditContainerDropdown.propTypes = {
+exports.EditContainerDropdownV2 = EditContainerDropdownV2;
+EditContainerDropdownV2.propTypes = {
   options: _propTypes["default"].arrayOf(_propTypes["default"].shape({
     /**
      * Text for the clickable option
@@ -107,4 +107,4 @@ EditContainerDropdown.propTypes = {
   })),
   icon: _propTypes["default"].string
 };
-EditContainerDropdown.defaultProps = {};
+EditContainerDropdownV2.defaultProps = {};

@@ -1,7 +1,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true,
+  value: true
 });
 exports.getBorder = exports.getColors = void 0;
 
@@ -14,128 +14,116 @@ var getColors = function getColors(kind) {
     case "primary":
       return {
         color: "#FFFFFF",
-        background: _dashVariables.colorPicker.blue,
+        background: _dashVariables.colorPicker.blue
       };
 
     case "submit":
       return {
         color: "#FFFFFF",
-        background: _dashVariables.colorPicker.blue,
+        background: _dashVariables.colorPicker.blue
       };
 
     case "gray":
       return {
         color: "#FFFFFF",
-        background: _dashVariables.colorPicker.gray,
+        background: _dashVariables.colorPicker.gray
       };
 
     case "primary--reversed":
       return {
         background: "transparent",
         color: _dashVariables.colorPicker.blue,
-        boxShadow: "inset 0px 0px 0px 2px ".concat(
-          _dashVariables.colorPicker.blue
-        ),
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.blue)
       };
 
     case "gray--reversed":
       return {
         background: "transparent",
         color: _dashVariables.colorPicker.gray,
-        boxShadow: "inset 0px 0px 0px 2px ".concat(
-          _dashVariables.colorPicker.gray
-        ),
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.gray)
       };
 
     case "secondary":
       return {
         color: _dashVariables.colorPicker.black,
         background: "transparent",
-        boxShadow: "inset 0px 0px 0px 2px ".concat(
-          _dashVariables.colorPicker.border1
-        ),
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.border1)
       };
 
     case "delete":
       return {
         color: "#FFFFFF",
-        background: _dashVariables.colorPicker.red,
+        background: _dashVariables.colorPicker.red
       };
 
     case "delete--reversed":
       return {
         background: "transparent",
         color: _dashVariables.colorPicker.red,
-        boxShadow: "inset 0px 0px 0px 2px ".concat(
-          _dashVariables.colorPicker.red
-        ),
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.red)
       };
 
     case "save":
       return {
         color: "#FFFFFF",
-        background: _dashVariables.colorPicker.green100,
+        background: _dashVariables.colorPicker.green100
       };
 
     case "save--reversed":
       return {
         background: "transparent",
         color: _dashVariables.colorPicker.green100,
-        boxShadow: "inset 0px 0px 0px 2px ".concat(
-          _dashVariables.colorPicker.green100
-        ),
+        boxShadow: "inset 0px 0px 0px 2px ".concat(_dashVariables.colorPicker.green100)
       };
 
     case "inverted":
       return {
         color: _dashVariables.colorPicker.blue,
-        background: "#FFFFFF",
+        background: "#FFFFFF"
       };
 
     case "inverted--reversed":
       return {
         background: "transparent",
         color: "#FFFFFF",
-        boxShadow: "inset 0px 0px 0px 2px #FFFFFF",
+        boxShadow: "inset 0px 0px 0px 2px #FFFFFF"
       };
 
     case "transparent--blue":
       return {
         color: _dashVariables.colorPicker.blue,
-        background: "transparent",
+        background: "transparent"
       };
 
     case "transparent--green":
       return {
         color: _dashVariables.colorPicker.green100,
-        background: "transparent",
+        background: "transparent"
       };
 
     case "transparent--red":
       return {
         color: _dashVariables.colorPicker.red,
-        background: "transparent",
+        background: "transparent"
       };
 
     case "transparent--white":
       return {
         color: "white",
-        background: "transparent",
+        background: "transparent"
       };
 
     case "transparent--gray":
       return {
         color: _dashVariables.colorPicker.gray,
-        background: "transparent",
+        background: "transparent"
       };
 
     case "secondary--green":
       return {
         color: "white",
         background: "transparent",
-        boxShadow: "inset 0px 0px 0px 1px ".concat(
-          _dashVariables.colorPicker.green100
-        ),
+        boxShadow: "inset 0px 0px 0px 1px ".concat(_dashVariables.colorPicker.green100)
       };
 
     case "#D94747":

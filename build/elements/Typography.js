@@ -13,7 +13,7 @@ var _variables = require("../utils/_variables");
 
 var _dashVariables = require("../utils/_dashVariables");
 
-var _functions = require("../utils/_functions");
+var _index = require("./SwatchesV2/index");
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
 
@@ -80,7 +80,9 @@ exports.Body = Body;
 var Label = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Label",
   componentId: "iyq6bj-3"
-})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";", ""], function (props) {
+})(["color:", ";font-size:", ";line-height:20px;margin-bottom:3px;", " -webkit-font-smoothing:antialiased;letter-spacing:normal;color:", ";", ""], _index.swatches.black, function (props) {
+  return props.fontSize ? props.fontSize : "14px";
+}, _dashVariables.circularStd.book, function (props) {
   return props.errors ? _variables.colors.red : "#000000";
 }, function (props) {
   return props.style ? props.style : null;
