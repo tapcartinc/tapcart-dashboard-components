@@ -5,11 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 var _exportNames = {
   Icon: true,
-  Button: true,
-  Link: true,
   LinkTag: true,
   IconButton: true,
-  Loader: true,
+  LoaderOld: true,
   DraftStatus: true,
   TapcartPlanLogo: true,
   TapcartLogo: true,
@@ -21,32 +19,27 @@ var _exportNames = {
   Label: true,
   Sofia: true,
   Circular: true,
-  SegmentedControl: true,
-  SearchBar: true,
-  Input: true,
-  Textarea: true,
-  OptionBoxes: true,
-  ClickDropdown: true,
-  HoverDropdown: true,
+  Accordion: true,
+  AccordionBody: true,
+  AccordionLabel: true,
+  AccordionPanel: true,
   Breadcrumbs: true,
-  BreadcrumbsV2: true,
-  SelectDropdown: true,
-  IconToggle: true,
-  Dropdown: true,
-  Pagination: true,
-  Modal: true,
-  Toggle: true,
-  ToolTip: true,
-  EditContainerDropdown: true,
-  SearchableContent: true,
+  BreadcrumbItem: true,
+  Button: true,
+  DropdownContainer: true,
   Fields: true,
   Field: true,
+  FieldDescription: true,
+  FieldHeader: true,
+  FieldLabel: true,
   ImageUploader: true,
-  EditContainer: true,
-  EaseIn: true,
+  Input: true,
+  Link: true,
+  OptionBoxes: true,
+  OptionBox: true,
   Container: true,
   ContainerBox: true,
-  Accordion: true,
+  AccordionOld: true,
   Card: true,
   DottedLineContainer: true,
   ProTip: true,
@@ -87,18 +80,6 @@ Object.defineProperty(exports, "Icon", {
     return _Icon.Icon;
   }
 });
-Object.defineProperty(exports, "Button", {
-  enumerable: true,
-  get: function get() {
-    return _Button.Button;
-  }
-});
-Object.defineProperty(exports, "Link", {
-  enumerable: true,
-  get: function get() {
-    return _Link.Link;
-  }
-});
 Object.defineProperty(exports, "LinkTag", {
   enumerable: true,
   get: function get() {
@@ -111,10 +92,10 @@ Object.defineProperty(exports, "IconButton", {
     return _IconButton.IconButton;
   }
 });
-Object.defineProperty(exports, "Loader", {
+Object.defineProperty(exports, "LoaderOld", {
   enumerable: true,
   get: function get() {
-    return _Loader.Loader;
+    return _LoaderOld.LoaderOld;
   }
 });
 Object.defineProperty(exports, "DraftStatus", {
@@ -183,46 +164,28 @@ Object.defineProperty(exports, "Circular", {
     return _Typography.Circular;
   }
 });
-Object.defineProperty(exports, "SegmentedControl", {
+Object.defineProperty(exports, "Accordion", {
   enumerable: true,
   get: function get() {
-    return _SegmentedControl.SegmentedControl;
+    return _Accordion.Accordion;
   }
 });
-Object.defineProperty(exports, "SearchBar", {
+Object.defineProperty(exports, "AccordionBody", {
   enumerable: true,
   get: function get() {
-    return _SearchBar.SearchBar;
+    return _AccordionBody.AccordionBody;
   }
 });
-Object.defineProperty(exports, "Input", {
+Object.defineProperty(exports, "AccordionLabel", {
   enumerable: true,
   get: function get() {
-    return _Input.Input;
+    return _AccordionLabel.AccordionLabel;
   }
 });
-Object.defineProperty(exports, "Textarea", {
+Object.defineProperty(exports, "AccordionPanel", {
   enumerable: true,
   get: function get() {
-    return _Textarea.Textarea;
-  }
-});
-Object.defineProperty(exports, "OptionBoxes", {
-  enumerable: true,
-  get: function get() {
-    return _OptionBoxes.OptionBoxes;
-  }
-});
-Object.defineProperty(exports, "ClickDropdown", {
-  enumerable: true,
-  get: function get() {
-    return _ClickDropdown.ClickDropdown;
-  }
-});
-Object.defineProperty(exports, "HoverDropdown", {
-  enumerable: true,
-  get: function get() {
-    return _HoverDropdown.HoverDropdown;
+    return _AccordionPanel.AccordionPanel;
   }
 });
 Object.defineProperty(exports, "Breadcrumbs", {
@@ -231,64 +194,22 @@ Object.defineProperty(exports, "Breadcrumbs", {
     return _Breadcrumbs.Breadcrumbs;
   }
 });
-Object.defineProperty(exports, "BreadcrumbsV2", {
+Object.defineProperty(exports, "BreadcrumbItem", {
   enumerable: true,
   get: function get() {
-    return _BreadcrumbsV.BreadcrumbsV2;
+    return _BreadcrumbItem.BreadcrumbItem;
   }
 });
-Object.defineProperty(exports, "SelectDropdown", {
+Object.defineProperty(exports, "Button", {
   enumerable: true,
   get: function get() {
-    return _SelectDropdown.SelectDropdown;
+    return _index.Button;
   }
 });
-Object.defineProperty(exports, "IconToggle", {
+Object.defineProperty(exports, "DropdownContainer", {
   enumerable: true,
   get: function get() {
-    return _IconToggle.IconToggle;
-  }
-});
-Object.defineProperty(exports, "Dropdown", {
-  enumerable: true,
-  get: function get() {
-    return _Dropdown.Dropdown;
-  }
-});
-Object.defineProperty(exports, "Pagination", {
-  enumerable: true,
-  get: function get() {
-    return _Pagination.Pagination;
-  }
-});
-Object.defineProperty(exports, "Modal", {
-  enumerable: true,
-  get: function get() {
-    return _Modal.Modal;
-  }
-});
-Object.defineProperty(exports, "Toggle", {
-  enumerable: true,
-  get: function get() {
-    return _index.Toggle;
-  }
-});
-Object.defineProperty(exports, "ToolTip", {
-  enumerable: true,
-  get: function get() {
-    return _ToolTip.ToolTip;
-  }
-});
-Object.defineProperty(exports, "EditContainerDropdown", {
-  enumerable: true,
-  get: function get() {
-    return _EditContainerDropdown.EditContainerDropdown;
-  }
-});
-Object.defineProperty(exports, "SearchableContent", {
-  enumerable: true,
-  get: function get() {
-    return _SearchableContent.SearchableContent;
+    return _DropdownContainer.DropdownContainer;
   }
 });
 Object.defineProperty(exports, "Fields", {
@@ -303,22 +224,52 @@ Object.defineProperty(exports, "Field", {
     return _Field.Field;
   }
 });
+Object.defineProperty(exports, "FieldDescription", {
+  enumerable: true,
+  get: function get() {
+    return _FieldDescription.FieldDescription;
+  }
+});
+Object.defineProperty(exports, "FieldHeader", {
+  enumerable: true,
+  get: function get() {
+    return _FieldHeader.FieldHeader;
+  }
+});
+Object.defineProperty(exports, "FieldLabel", {
+  enumerable: true,
+  get: function get() {
+    return _FieldLabel.FieldLabel;
+  }
+});
 Object.defineProperty(exports, "ImageUploader", {
   enumerable: true,
   get: function get() {
     return _ImageUploader.ImageUploader;
   }
 });
-Object.defineProperty(exports, "EditContainer", {
+Object.defineProperty(exports, "Input", {
   enumerable: true,
   get: function get() {
-    return _EditContainer.EditContainer;
+    return _index2.Input;
   }
 });
-Object.defineProperty(exports, "EaseIn", {
+Object.defineProperty(exports, "Link", {
   enumerable: true,
   get: function get() {
-    return _EaseIn.EaseIn;
+    return _Link.Link;
+  }
+});
+Object.defineProperty(exports, "OptionBoxes", {
+  enumerable: true,
+  get: function get() {
+    return _index3.OptionBoxes;
+  }
+});
+Object.defineProperty(exports, "OptionBox", {
+  enumerable: true,
+  get: function get() {
+    return _OptionBox.OptionBox;
   }
 });
 Object.defineProperty(exports, "Container", {
@@ -333,10 +284,10 @@ Object.defineProperty(exports, "ContainerBox", {
     return _ContainerBox.ContainerBox;
   }
 });
-Object.defineProperty(exports, "Accordion", {
+Object.defineProperty(exports, "AccordionOld", {
   enumerable: true,
   get: function get() {
-    return _Accordion["default"];
+    return _AccordionOld["default"];
   }
 });
 Object.defineProperty(exports, "Card", {
@@ -540,15 +491,11 @@ Object.defineProperty(exports, "statsColors", {
 
 var _Icon = require("./elements/Icon");
 
-var _Button = require("./elements/Button");
-
-var _Link = require("./elements/Link");
-
 var _LinkTag = require("./elements/LinkTag");
 
 var _IconButton = require("./elements/IconButton");
 
-var _Loader = require("./elements/Loader");
+var _LoaderOld = require("./elements/LoaderOld");
 
 var _DraftStatus = require("./elements/DraftStatus");
 
@@ -558,57 +505,47 @@ var _TapcartLogo = require("./elements/TapcartLogo");
 
 var _Typography = require("./elements/Typography");
 
-var _SegmentedControl = require("./components/SegmentedControl");
+var _Accordion = require("./components/Accordion");
 
-var _SearchBar = require("./components/SearchBar");
+var _AccordionBody = require("./components/Accordion/AccordionBody");
 
-var _Input = require("./components/Input");
+var _AccordionLabel = require("./components/Accordion/AccordionLabel");
 
-var _Textarea = require("./components/Textarea");
-
-var _OptionBoxes = require("./components/OptionBoxes");
-
-var _ClickDropdown = require("./components/ClickDropdown");
-
-var _HoverDropdown = require("./components/HoverDropdown");
+var _AccordionPanel = require("./components/Accordion/AccordionPanel");
 
 var _Breadcrumbs = require("./components/Breadcrumbs");
 
-var _BreadcrumbsV = require("./components/BreadcrumbsV2");
+var _BreadcrumbItem = require("./components/Breadcrumbs/BreadcrumbItem");
 
-var _SelectDropdown = require("./components/SelectDropdown");
+var _index = require("./components/Button/index");
 
-var _IconToggle = require("./components/IconToggle");
-
-var _Dropdown = require("./components/Dropdown");
-
-var _Pagination = require("./components/Pagination");
-
-var _Modal = require("./components/Modal");
-
-var _index = require("./components/Toggle/index");
-
-var _ToolTip = require("./components/ToolTip");
-
-var _EditContainerDropdown = require("./components/EditContainerDropdown");
-
-var _SearchableContent = require("./components/SearchableContent");
+var _DropdownContainer = require("./components/DropdownContainer");
 
 var _Fields = require("./components/Fields");
 
-var _Field = require("./components/Field");
+var _Field = require("./components/Fields/Field");
+
+var _FieldDescription = require("./components/Fields/FieldDescription");
+
+var _FieldHeader = require("./components/Fields/FieldHeader");
+
+var _FieldLabel = require("./components/Fields/FieldLabel");
 
 var _ImageUploader = require("./components/ImageUploader");
 
-var _EditContainer = require("./components/EditContainer");
+var _index2 = require("./components/Input/index");
 
-var _EaseIn = require("./components/EaseIn");
+var _Link = require("./components/Link");
+
+var _index3 = require("./components/OptionBoxes/index");
+
+var _OptionBox = require("./components/OptionBoxes/OptionBox");
 
 var _Container = require("./layout/Container");
 
 var _ContainerBox = require("./layout/ContainerBox");
 
-var _Accordion = _interopRequireDefault(require("./layout/Accordion"));
+var _AccordionOld = _interopRequireDefault(require("./layout/AccordionOld"));
 
 var _Card = require("./layout/Card");
 
@@ -650,6 +587,19 @@ Object.keys(_layout).forEach(function (key) {
     enumerable: true,
     get: function get() {
       return _layout[key];
+    }
+  });
+});
+
+var _swatches = require("./utils/_swatches");
+
+Object.keys(_swatches).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _swatches[key];
     }
   });
 });

@@ -13,7 +13,7 @@ var _index = require("./index");
 
 var _Container = require("../../layout/Container");
 
-var _Button = require("../../elements/Button");
+var _Button = require("../../components/Button");
 
 var _Typography = require("../../elements/Typography");
 

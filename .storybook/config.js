@@ -17,8 +17,8 @@ const theme = create({
 addParameters({
   options: {
     theme,
-    showPanel: false,
-    panelPosition: "right",
+    // showPanel: false,
+    panelPosition: "bottom",
     storySort: (a, b) => {
       if (a[0].includes("intro-")) {
         return -1;
@@ -57,8 +57,6 @@ addDecorator((story) => (
     {story()}
   </>
 ));
-
-let auth = false;
 
 const loadStories = () => {
   return [

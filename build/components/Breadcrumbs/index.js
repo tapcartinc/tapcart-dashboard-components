@@ -3,62 +3,43 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Breadcrumbs = void 0;
+exports.Breadcrumbs = Breadcrumbs;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-var _BreadcrumbItem = require("./BreadcrumbItem");
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _styles = require("./styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var Breadcrumbs = function Breadcrumbs(_ref) {
-  var crumbs = _ref.crumbs;
-  return /*#__PURE__*/_react["default"].createElement(BreadcrumbsStyle, null, crumbs.map(function (item, index) {
-    return /*#__PURE__*/_react["default"].createElement(_BreadcrumbItem.BreadcrumbsItem, {
-      key: item.crumb,
-      onClick: item.onClick,
-      crumb: item.crumb,
-      icon: item.icon,
-      index: index,
-      active: crumbs.length - 1 === index,
-      hasSeparator: item.hasSeparator
-    });
-  }));
-};
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-exports.Breadcrumbs = Breadcrumbs;
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
-var BreadcrumbsStyle = _styledComponents["default"].ul.withConfig({
-  displayName: "Breadcrumbs__BreadcrumbsStyle",
-  componentId: "sc-4btehn-0"
-})(["display:flex;align-items:center;flex-direction:row;width:100%;padding:0px;margin-top:0px;margin-bottom:0px;padding-left:45px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;", ""], function (props) {
-  return props.style ? props.style : null;
-});
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function Breadcrumbs(_ref) {
+  var children = _ref.children,
+      className = _ref.className,
+      style = _ref.style,
+      rest = _objectWithoutProperties(_ref, ["children", "className", "style"]);
+
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledBreadcrumbWrapper, _extends({
+    className: className
+  }, rest, {
+    style: style
+  }), /*#__PURE__*/_react["default"].createElement(_styles.StyledBreadcrumbList, null, children));
+}
 
 Breadcrumbs.propTypes = {
-  crumbs: _propTypes["default"].arrayOf(_propTypes["default"].shape({
-    /**
-     * Crumb label
-     */
-    crumb: _propTypes["default"].string.isRequired,
+  /**
+   * Classname that can be added for css to the entire Breadcrumb wrapper
+   */
+  className: _propTypes["default"].string,
 
-    /**
-     * Icon that displays to the left of the crumb; optional
-     */
-    icon: _propTypes["default"].string,
-
-    /**
-     * onClick functiont that gets called when selecting a breadcrumb
-     */
-    onClick: _propTypes["default"].func,
-
-    /**
-     * The active page in the breadcrumbs list
-     */
-    active: _propTypes["default"].bool
-  })).isRequired
+  /**
+   * Pass in the BreadcrumbItem's for your Breadcrumb
+   */
+  children: _propTypes["default"].node
 };

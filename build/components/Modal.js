@@ -13,7 +13,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _reactModal = _interopRequireDefault(require("react-modal"));
 
-var _Button = require("../elements/Button");
+var _Button = require("../components/Button");
 
 var _Icon = require("../elements/Icon");
 

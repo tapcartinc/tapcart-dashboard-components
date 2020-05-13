@@ -13,7 +13,7 @@ var _variables = require("../utils/_variables");
 
 var _dashVariables = require("../utils/_dashVariables");
 
-var _index = require("./SwatchesV2/index");
+var _swatches = require("../utils/_swatches");
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
 
@@ -32,7 +32,7 @@ var Header = _styledComponents["default"].h1.attrs({
   displayName: "Typography__Header",
   componentId: "iyq6bj-0"
 })(["font-size:25px;color:", ";font-weight:500;font-style:normal;-webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ";", ";", ""], function (props) {
-  return props.color ? props.color : _dashVariables.colorPicker.blue;
+  return props.theme && !props.color ? props.theme.fg : props.color ? props.color : _swatches.swatches.blue;
 }, function (props) {
   return props.align === "center" && "text-align: center";
 }, function (props) {
@@ -80,7 +80,7 @@ exports.Body = Body;
 var Label = _styledComponents["default"].p.withConfig({
   displayName: "Typography__Label",
   componentId: "iyq6bj-3"
-})(["color:", ";font-size:", ";line-height:20px;margin-bottom:3px;", " -webkit-font-smoothing:antialiased;letter-spacing:normal;color:", ";", ""], _index.swatches.black, function (props) {
+})(["color:", ";font-size:", ";line-height:20px;margin-bottom:3px;", " -webkit-font-smoothing:antialiased;letter-spacing:normal;color:", ";", ""], _swatches.swatches.black, function (props) {
   return props.fontSize ? props.fontSize : "14px";
 }, _dashVariables.circularStd.book, function (props) {
   return props.errors ? _variables.colors.red : "#000000";
@@ -106,7 +106,7 @@ var Sofia = _styledComponents["default"].p.withConfig({
 }, function (props) {
   return props.textTransform;
 }, function (props) {
-  return props.color ? props.color : _dashVariables.colorPicker.gray;
+  return props.color ? props.color : _swatches.swatches.gray;
 }, function (props) {
   return props.light ? _dashVariables.sofiaPro.light : props.regular ? _dashVariables.sofiaPro.regular : props.medium ? _dashVariables.sofiaPro.medium : props.bold ? _dashVariables.sofiaPro.bold : _dashVariables.sofiaPro.medium;
 }, function (props) {
@@ -135,7 +135,7 @@ var Circular = _styledComponents["default"].p.withConfig({
 }, function (props) {
   return props.textTransform;
 }, function (props) {
-  return props.color ? props.color : _dashVariables.colorPicker.gray;
+  return props.color ? props.color : _swatches.swatches.gray;
 }, function (props) {
   return props.book ? _dashVariables.circularStd.book : props.medium ? _dashVariables.circularStd.medium : props.bold ? _dashVariables.circularStd.bold : _dashVariables.circularStd.book;
 }, function (props) {

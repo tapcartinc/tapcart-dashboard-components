@@ -1,0 +1,51 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {Button} from './index';
+import {withKnobs} from '@storybook/addon-knobs';
+
+
+
+<Meta title="Docs|Components/Button" component={Button} decorators={[withKnobs]}/>
+
+# Button
+
+---
+<br />
+<Story id="examples-components-button--basic" />
+<br />
+
+
+The <pre>Button</pre> component is the component typically used for onClick handlers/ clicking actions.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Fucking everywhere
+
+<br />
+
+## Quick Start
+To create an Button component, import the <pre>`Button`</pre> component and give it the appropriate props (reference below).
+
+
+## Fields Example:
+
+```jsx
+<Button
+  color={color}
+  onClick={changeColor}
+  isLoading={false}
+  isDisabled={false}
+  thin={false}
+  plainText={false}
+  onChange={() => setToggle(!toggle)}
+>
+  children
+</Button>
+```
+
+## API
+### [Button](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/Button.js)
+<Props of={Button} />
+
+
+
+

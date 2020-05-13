@@ -1,70 +1,64 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.BreadcrumbsItem = void 0;
+exports.BreadcrumbItem = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styles = require("./styles");
 
-var _Icon = require("../../../elements/Icon");
+var _propTypes = _interopRequireWildcard(require("prop-types"));
 
-var _variables = require("../../../utils/_variables");
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _media = _interopRequireDefault(require("../../../utils/_media"));
-
-var _dashVariables = require("../../../utils/_dashVariables");
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var BreadcrumbsItem = function BreadcrumbsItem(_ref) {
-  var crumb = _ref.crumb,
-      icon = _ref.icon,
-      onClick = _ref.onClick,
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var BreadcrumbItem = function BreadcrumbItem(_ref) {
+  var children = _ref.children,
+      className = _ref.className,
       active = _ref.active,
-      index = _ref.index;
-  return /*#__PURE__*/_react["default"].createElement(StyledCrumb, null, index !== 0 ? /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
-    type: "arrow-right",
-    iconLeft: true,
-    iconRight: true,
-    style: {
-      marginRight: 25,
-      marginTop: 3
-    },
-    fill: active ? _dashVariables.colorPicker.gray : _dashVariables.colorPicker.blue
-  }) : null, /*#__PURE__*/_react["default"].createElement(BreadcrumbsItemStyle, {
-    onClick: onClick,
+      rest = _objectWithoutProperties(_ref, ["children", "className", "active"]);
+
+  var href = children.props && children.props.href;
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledBreadcrumb, _extends({
+    className: className,
     active: active
-  }, icon ? /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
-    type: icon,
-    iconLeft: true,
-    fill: _dashVariables.colorPicker.gray,
-    style: {
-      height: 18,
-      marginRight: 15,
-      marginTop: 2
-    }
-  }) : null, /*#__PURE__*/_react["default"].createElement("span", null, crumb)));
+  }, rest), _react["default"].cloneElement(children, _objectSpread({
+    href: href
+  }, rest)));
 };
 
-exports.BreadcrumbsItem = BreadcrumbsItem;
+exports.BreadcrumbItem = BreadcrumbItem;
+BreadcrumbItem.propTypes = {
+  /**
+   * Controls whether more than one panel can be opened at a time in the accordion
+   */
+  active: _propTypes["default"].bool,
 
-var BreadcrumbsItemStyle = _styledComponents["default"].li.withConfig({
-  displayName: "BreadcrumbItem__BreadcrumbsItemStyle",
-  componentId: "nuqiaq-0"
-})(["height:100%;display:flex;flex-direction:row;align-items:center;padding-right:10px;padding-top:10px;padding-bottom:7px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.6;letter-spacing:1px;font-size:14px;margin-right:0px;margin-left:0px;line-height:34px;color:", ";span{margin-left:-5px;height:100%;}transition:all 0.2s ease-in-out;", " ", ";"], function (props) {
-  return props.active ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray;
-}, function (props) {
-  return !props.active && "  &:hover {\n  transform: translateY(-2px);\n  transition: all 0.2s ease-in-out;\n  cursor: pointer;\n}";
-}, function (props) {
-  return props.style ? props.style : null;
-});
-
-var StyledCrumb = _styledComponents["default"].div.withConfig({
-  displayName: "BreadcrumbItem__StyledCrumb",
-  componentId: "nuqiaq-1"
-})(["align-items:center;display:flex;"]);
+  /**
+   * Classname that can be added for css to the individual crumb item
+   */
+  className: _propTypes["default"].string,
+  children: _propTypes["default"].node
+};
+BreadcrumbItem.defaultProps = {
+  active: false
+};

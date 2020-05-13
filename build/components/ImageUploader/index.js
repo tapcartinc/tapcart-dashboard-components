@@ -9,15 +9,13 @@ exports.ImageUploader = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _reactDropzone = _interopRequireWildcard(require("react-dropzone"));
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _reactDropzone = _interopRequireDefault(require("react-dropzone"));
 
 var _Icon = require("../../elements/Icon");
 
-var _dashVariables = require("../../utils/_dashVariables");
+var _propTypes = _interopRequireWildcard(require("prop-types"));
 
-var _Typography = require("../../elements/Typography");
+var _styles = require("./styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -45,7 +43,9 @@ var ImageUploader = function ImageUploader(props) {
   (0, _react.useEffect)(function () {
     handleRef && handleRef(childRef);
   }, []);
-  return /*#__PURE__*/_react["default"].createElement(StyledImageInputWrapper, props, label && /*#__PURE__*/_react["default"].createElement(StyledLabel, null, label), /*#__PURE__*/_react["default"].createElement(StyledImageInput, _extends({
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledImageInputWrapper, _extends({
+    className: className
+  }, props), label && /*#__PURE__*/_react["default"].createElement(_styles.StyledLabel, null, label), /*#__PURE__*/_react["default"].createElement(_styles.StyledImageInput, _extends({
     hasValue: value
   }, props), /*#__PURE__*/_react["default"].createElement(_reactDropzone["default"], _extends({
     ref: childRef,
@@ -56,52 +56,50 @@ var ImageUploader = function ImageUploader(props) {
     var getRootProps = _ref.getRootProps,
         getInputProps = _ref.getInputProps,
         isDragActive = _ref.isDragActive;
-    return /*#__PURE__*/_react["default"].createElement(StyledImageInputHolder, _extends({}, getRootProps(), props), /*#__PURE__*/_react["default"].createElement("input", getInputProps()), value ? /*#__PURE__*/_react["default"].createElement(StyledImage, {
+    return /*#__PURE__*/_react["default"].createElement(_styles.StyledImageInputHolder, _extends({}, getRootProps(), props), /*#__PURE__*/_react["default"].createElement("input", getInputProps()), value ? /*#__PURE__*/_react["default"].createElement(_styles.StyledImage, {
       src: value
-    }) : /*#__PURE__*/_react["default"].createElement(StyledImagePlaceholder, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+    }) : /*#__PURE__*/_react["default"].createElement(_styles.StyledImagePlaceholder, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
       type: "upload-cloud"
     }), /*#__PURE__*/_react["default"].createElement("p", null, placeholder ? placeholder : "Upload an image")));
   })));
 };
 
 exports.ImageUploader = ImageUploader;
+ImageUploader.propTypes = {
+  /**
+   * Allows you to pass a css classname to component for styling
+   * Classname adjusts the style of the wrapper containing the entire component
+   */
+  className: _propTypes["default"].string,
 
-var StyledImageInputWrapper = _styledComponents["default"].div.withConfig({
-  displayName: "ImageUploader__StyledImageInputWrapper",
-  componentId: "sc-14ahekh-0"
-})(["display:flex;flex-direction:column;align-items:flex-start;font-size:13px;padding-right:5px;", ""], _dashVariables.sofiaPro.regular);
+  /**
+   * Placeholder text inside of the empty image box
+   */
+  placeholdeR: _propTypes["default"].string,
 
-var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
-  displayName: "ImageUploader__StyledLabel",
-  componentId: "sc-14ahekh-1"
-})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], _dashVariables.colorPicker.black);
+  /**
+   * This value should be the string that contains the url value for the image will be null if the value has not been set.
+   */
+  value: _propTypes["default"].any.isRequired,
 
-var StyledImageInputHolder = _styledComponents["default"].div.withConfig({
-  displayName: "ImageUploader__StyledImageInputHolder",
-  componentId: "sc-14ahekh-2"
-})(["height:100%;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:3px;", ";overflow:hidden;&:focus{outline:none;}"], function (props) {
-  return props.borderRadius && "border-radius: ".concat(props.borderRadius);
-});
+  /**
+   * Useful if the ImageUploader component has is labeled consistently with the field labels throughout the merchant dashboard
+   */
+  label: _propTypes["default"].string,
 
-var StyledImageInput = _styledComponents["default"].div.withConfig({
-  displayName: "ImageUploader__StyledImageInput",
-  componentId: "sc-14ahekh-3"
-})(["width:320px;min-height:170px;height:auto;border-radius:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px dashed ", ";", ";transition:all 0.2s ease;", ";", ";", ";&:hover{cursor:pointer;box-shadow:0 0 0 2px ", ";}"], _dashVariables.colorPicker.grayBlue, function (props) {
-  return props.hasValue && "border: 1px solid ".concat(_dashVariables.colorPicker.lightGray);
-}, function (props) {
-  return props.borderRadius && "border-radius: ".concat(props.borderRadius);
-}, function (props) {
-  return props.width && "width: ".concat(props.width);
-}, function (props) {
-  return props.height && "height: ".concat(props.height);
-}, _dashVariables.colorPicker.blue);
+  /**
+   * Function that gets called when user selects an image file
+   */
+  handleImageUpload: _propTypes["default"].func,
 
-var StyledImage = _styledComponents["default"].img.withConfig({
-  displayName: "ImageUploader__StyledImage",
-  componentId: "sc-14ahekh-4"
-})(["background:", ";cursor:pointer;width:100%;height:100%;object-fit:cover;"], _dashVariables.colorPicker.offWhite);
+  /**
+   * Often used when the function that sets the value in the parent component sets the value for other fields as well
+   * Lets the function know to correlate the (event target) name of the field with the correct value
+   */
+  name: _propTypes["default"].string,
 
-var StyledImagePlaceholder = _styledComponents["default"].div.withConfig({
-  displayName: "ImageUploader__StyledImagePlaceholder",
-  componentId: "sc-14ahekh-5"
-})(["background:", ";display:flex;flex-direction:column;justify-content:center;align-items:center;font-size:11px;line-height:1.27;text-align:center;color:", ";cursor:pointer;height:100%;width:100%;min-height:170px;p{padding:5px;}&:focus{outline:none;}"], _dashVariables.colorPicker.offWhite, _dashVariables.colorPicker.blue);
+  /** Function that sets the inner ref for the react dropzone component
+   * Reference the component's docs for more details
+   */
+  handleRef: _propTypes["default"].func
+};

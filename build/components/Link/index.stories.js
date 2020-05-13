@@ -12,7 +12,7 @@ var _addonKnobs = require("@storybook/addon-knobs");
 
 var _reactRouterDom = require("react-router-dom");
 
-var _Button = require("../../elements/Button");
+var _Button = require("../../components/Button");
 
 var _Icon = require("../../elements/Icon");
 
