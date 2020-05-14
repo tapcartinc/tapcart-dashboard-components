@@ -38,7 +38,7 @@ var Button = function Button(_ref) {
           return _swatches.swatches.blue;
 
         case "green":
-          return _swatches.swatches.green100;
+          return _swatches.swatches.green;
 
         case "red":
           return _swatches.swatches.red;

@@ -13,7 +13,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _swatches = require("../../utils/_swatches");
 
-var _LabelV = require("../../elements/LabelV2");
+var _Label = require("../../elements/Label");
 
 var _styles = require("./styles");
 
@@ -88,7 +88,7 @@ var Input = function Input(_ref) {
     disabled: disabled,
     errors: errors,
     hasInput: value && value.length >= 1
-  }, label && /*#__PURE__*/_react["default"].createElement(_LabelV.LabelV2, {
+  }, label && /*#__PURE__*/_react["default"].createElement(_Label.Label, {
     errors: errors && errors.length >= 0
   }, errors && errors.length >= 0 ? errors[0] : label), /*#__PURE__*/_react["default"].createElement("input", _extends({
     className: "input-style",

@@ -1,0 +1,60 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import {SegmentedControl} from './index';
+
+
+<Meta title="Docs|Components/SegmentedControl" />
+
+# SegmentedControl
+
+---
+<br />
+<Story id="examples-components-segmentedcontrol--basic" />
+<br />
+
+The `SegmentedControl` component allows for 3 different styles (primary, secondary, field). This component needs an object of items,
+an action handler, and the current state (current selected item) of the component in order to work properly. The items are passed in as an object...
+```items={{itemOne: "itemOne", itemTwo: "itemTwo"}}```. The keys in the items object hold the values for the `SegmentedControl` component and their
+string values are their rendered labels. The icons object works similarly. The each key in the icons object should correlate with a item value. The value of
+the icon keys (string) tells the component which icon to grab from the `Icon` component in this library.
+
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Design Block modals (ex: Create a custom banner)
+* -Top of Engage page
+* -Throughout the Settings tabs
+
+<br />
+
+## Quick Start
+To use the `SegmentedControl` component, import the `SegmentedControl`, pass it the required items object, current state value, and action handler.
+
+
+## SegmentedControl Example:
+
+```jsx
+ const [state, setState] = useState("push");
+
+ const changeSection = (selectedTab) => {
+   if (state === selectedTab) {
+     return;
+   }
+   setState(selectedTab);
+ };
+
+ return (
+   <SegmentedControl
+     type="primary"
+     items={{ push: "push", pop: "pop", plainText: "plain Text" }}
+     action={changeSection}
+     current={state}
+     icons={{ push: "push", pop: "popup", plainText: "text-icon" }}
+   />
+ );
+```
+
+## API
+### [SegmentedControl](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/SegmentedControl)
+<Props of={SegmentedControl} />
+
+

@@ -1,0 +1,46 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {Searchbar} from './index';
+import {withKnobs} from '@storybook/addon-knobs';
+
+
+
+<Meta title="Docs|Components/Searchbar" component={Searchbar}/>
+
+# Searchbar
+
+---
+<br />
+<Story id="examples-components-searchbar--basic" />
+<br />
+
+
+The <pre>Searchbar</pre> component is the component typically used for onClick handlers/ clicking actions.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Menu builder Icon search
+* -Blocks modals
+
+<br />
+
+## Quick Start
+To create an Searchbar component, import the <pre>`Searchbar`</pre> component and give it the appropriate props (reference below).
+
+
+## Fields Example:
+
+```jsx
+<Searchbar
+  innerRef={inputRef}
+  placeholder="Search"
+  onChange={(e) => onSearch(e, e.target.value)}
+/>
+```
+
+## API
+### [Searchbar](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/Searchbar.js)
+<Props of={Searchbar} />
+
+
+
+

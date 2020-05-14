@@ -1,0 +1,44 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {Loader} from './index';
+import {withKnobs} from '@storybook/addon-knobs';
+
+
+
+<Meta title="Docs|Elements/Loader" component={Loader} decorators={[withKnobs]}/>
+
+# Loader
+
+---
+<br />
+<Story id="design-guidelines-loader--basic" />
+<br />
+
+
+The <pre>Loader</pre> component is the component is for loading state whether transitioning to a new page, waiting for a query to return data, or submitting an onClick promise function
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+TODO: WHERE IS LOADER
+* -Fucking everywhere
+
+<br />
+
+## Quick Start
+To create an Loader component, import the <pre>`Loader`</pre> component and give it the appropriate props (reference below).
+You can adjust the size and colors it takes manually. Occassionally a loader will be used inside of a parent div with a background color. For this, add the prop `parentBgColor` so the `Loader` can
+style accordingly. When a loader is shown inside of a `Button` component there are no extra props that need to be added; simply add the correct props for the Button component and use state for the isLoading prop inside of Button.
+
+
+## Fields Example:
+
+```jsx
+<Loader loaderColors={{fg: '', bg: ''}} size={number} />
+```
+
+## API
+### [Loader](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/elements/Loader.js)
+<Props of={Loader} />
+
+
+
+

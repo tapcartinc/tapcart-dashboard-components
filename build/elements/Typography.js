@@ -31,15 +31,15 @@ var Header = _styledComponents["default"].h1.attrs({
 }).withConfig({
   displayName: "Typography__Header",
   componentId: "iyq6bj-0"
-})(["font-size:25px;color:", ";font-weight:500;font-style:normal;-webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ";", ";", ""], function (props) {
-  return props.theme && !props.color ? props.theme.fg : props.color ? props.color : _swatches.swatches.blue;
+})(["font-size:25px;color:", ";font-weight:500;font-style:normal;-webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ";", ";", " ", ""], function (props) {
+  return props.theme && !props.color ? props.theme.header : props.color ? props.color : _swatches.swatches.blue;
 }, function (props) {
   return props.align === "center" && "text-align: center";
 }, function (props) {
   return props.align === "left" && "text-align: left";
 }, function (props) {
   return props.style ? props.style : null;
-});
+}, _dashVariables.circularStd.medium);
 
 exports.Header = Header;
 

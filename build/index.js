@@ -7,7 +7,7 @@ var _exportNames = {
   Icon: true,
   LinkTag: true,
   IconButton: true,
-  LoaderOld: true,
+  Loader: true,
   DraftStatus: true,
   TapcartPlanLogo: true,
   TapcartLogo: true,
@@ -37,6 +37,7 @@ var _exportNames = {
   Link: true,
   OptionBoxes: true,
   OptionBox: true,
+  SegmentedControl: true,
   Container: true,
   ContainerBox: true,
   AccordionOld: true,
@@ -92,10 +93,10 @@ Object.defineProperty(exports, "IconButton", {
     return _IconButton.IconButton;
   }
 });
-Object.defineProperty(exports, "LoaderOld", {
+Object.defineProperty(exports, "Loader", {
   enumerable: true,
   get: function get() {
-    return _LoaderOld.LoaderOld;
+    return _Loader.Loader;
   }
 });
 Object.defineProperty(exports, "DraftStatus", {
@@ -270,6 +271,12 @@ Object.defineProperty(exports, "OptionBox", {
   enumerable: true,
   get: function get() {
     return _OptionBox.OptionBox;
+  }
+});
+Object.defineProperty(exports, "SegmentedControl", {
+  enumerable: true,
+  get: function get() {
+    return _index4.SegmentedControl;
   }
 });
 Object.defineProperty(exports, "Container", {
@@ -495,7 +502,7 @@ var _LinkTag = require("./elements/LinkTag");
 
 var _IconButton = require("./elements/IconButton");
 
-var _LoaderOld = require("./elements/LoaderOld");
+var _Loader = require("./elements/Loader");
 
 var _DraftStatus = require("./elements/DraftStatus");
 
@@ -540,6 +547,8 @@ var _Link = require("./components/Link");
 var _index3 = require("./components/OptionBoxes/index");
 
 var _OptionBox = require("./components/OptionBoxes/OptionBox");
+
+var _index4 = require("./components/SegmentedControl/index");
 
 var _Container = require("./layout/Container");
 

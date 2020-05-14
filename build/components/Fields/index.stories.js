@@ -24,7 +24,7 @@ var _Button = require("../../components/Button");
 
 var _ImageUploader = require("../ImageUploader");
 
-var _SegmentedControl = require("../SegmentedControl");
+var _index3 = require("../SegmentedControl/index");
 
 var _addonKnobs = require("@storybook/addon-knobs");
 
@@ -113,7 +113,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     placeholder: "Enter Popup Text"
   })), /*#__PURE__*/_react["default"].createElement(_Field.Field, null, /*#__PURE__*/_react["default"].createElement(_FieldHeader.FieldHeader, {
     stretch: false
-  }, /*#__PURE__*/_react["default"].createElement(_FieldLabel.FieldLabel, null, "Label here"), /*#__PURE__*/_react["default"].createElement(_FieldDescription.FieldDescription, null, "Description here")), /*#__PURE__*/_react["default"].createElement(_SegmentedControl.SegmentedControl, {
+  }, /*#__PURE__*/_react["default"].createElement(_FieldLabel.FieldLabel, null, "Label here"), /*#__PURE__*/_react["default"].createElement(_FieldDescription.FieldDescription, null, "Description here")), /*#__PURE__*/_react["default"].createElement(_index3.SegmentedControl, {
     type: "secondary",
     items: {
       disabled: "disabled",
