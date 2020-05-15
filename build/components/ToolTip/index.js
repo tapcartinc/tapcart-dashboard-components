@@ -9,15 +9,11 @@ exports.ToolTip = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _swatches = require("../../utils/_swatches");
 
-var _dashVariables = require("../../utils/_dashVariables");
-
-var _variables = require("../../utils/_variables");
+var _styles = require("./styles");
 
 var _propTypes = _interopRequireWildcard(require("prop-types"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -48,7 +44,7 @@ var ToolTip = function ToolTip(props) {
     toggleTooltip(true);
   };
 
-  return /*#__PURE__*/_react["default"].createElement(ToolTipWrapper, {
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledTooltipWrapper, {
     open: open,
     onClick: toggle,
     onMouseLeave: function onMouseLeave() {
@@ -58,7 +54,7 @@ var ToolTip = function ToolTip(props) {
       position: "relative"
     },
     top: props.top ? props.top : "-45px"
-  }, /*#__PURE__*/_react["default"].createElement(ToolTipIcon, _extends({
+  }, /*#__PURE__*/_react["default"].createElement("svg", _extends({
     width: "14px",
     height: "14px",
     viewBox: "0 0 14 14",
@@ -72,7 +68,7 @@ var ToolTip = function ToolTip(props) {
     fillRule: "evenodd"
   }, /*#__PURE__*/_react["default"].createElement("g", {
     transform: "translate(-540.000000, -1650.000000)",
-    fill: props.color ? props.color : _dashVariables.colorPicker.green100,
+    fill: props.color ? props.color : _swatches.swatches.green,
     fillRule: "nonzero",
     id: "Shape"
   }, /*#__PURE__*/_react["default"].createElement("path", {
@@ -83,27 +79,20 @@ var ToolTip = function ToolTip(props) {
 };
 
 exports.ToolTip = ToolTip;
-
-var ToolTipWrapper = _styledComponents["default"].div.withConfig({
-  displayName: "ToolTip__ToolTipWrapper",
-  componentId: "sc-1tvdsd5-0"
-})(["height:14px;width:14px;position:relative;cursor:pointer;margin:8px;", ";svg{transition:0.3s ease;}&:hover .tooltip{", ";}.tooltip{padding:10px;position:absolute;width:auto;white-space:pre;max-width:418px;box-shadow:", ";border-radius:3px;background-color:#fff;top:", ";left:50%;transform:translateX(-50%);transform-style:preserve-3d;z-index:200;display:none;font-size:13px;padding:8px 15px;line-height:1.46;&:after{content:\"\";position:absolute;display:block;width:10px;height:10px;transform-origin:50% 50%;transform:rotate(45deg) translateX(-50%);background-color:#fff;left:50%;bottom:-6px;z-index:400;}&:before{content:\"\";display:block;position:absolute;width:10px;height:10px;transform-origin:50% 50%;transform:rotate(45deg) translateX(-50%) translateZ(-1px);background-color:#fff;left:50%;bottom:-4px;z-index:-1;box-shadow:", ";}}"], _dashVariables.sofiaPro.medium, function (props) {
-  return props.open && "display: block";
-}, _variables.boxShadow.small, function (props) {
-  return props.top;
-}, _variables.boxShadow.small);
-
-var ToolTipIcon = _styledComponents["default"].svg.withConfig({
-  displayName: "ToolTip__ToolTipIcon",
-  componentId: "sc-1tvdsd5-1"
-})([""]);
-
 ToolTip.propTypes = {
   color: _propTypes["default"].string,
 
   /**
-   * message inside of the tooltip pop up
+   * custom space between tooltip icon and pop up message
    */
-  position: _propTypes["default"].node
+  top: _propTypes["default"].string,
+
+  /**
+   * everything that goes inside of the tooltip pop up message
+   */
+  children: _propTypes.node
 };
-ToolTip.defaultProps = {};
+ToolTip.defaultProps = {
+  color: "".concat(_swatches.swatches.green),
+  top: "-45px"
+};

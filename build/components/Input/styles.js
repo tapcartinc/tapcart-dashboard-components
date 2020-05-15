@@ -16,13 +16,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var StyledInputWrapper = _styledComponents["default"].div.withConfig({
   displayName: "styles__StyledInputWrapper",
   componentId: "sc-1blhqu6-0"
-})(["position:relative;width:100%;", ";.input-style{border-radius:3px;color:", ";width:100%;", ";background:", ";padding:10px 14px;letter-spacing:0.25px;", " &::placeholder{color:", ";", "}&:focus{outline:none;}font-size:14px;font-weight:400;transition:all 0.2s ease-in;", ";", ";}"], function (props) {
+})(["position:relative;width:100%;", ";.input-style{border-radius:3px;color:", ";width:100%;", ";background:", ";padding:10px 14px;letter-spacing:0.25px;", " &::placeholder{color:", ";", "}&:focus{outline:none;}font-size:14px;", ";font-weight:400;transition:all 0.2s ease-in;", ";", ";}"], function (props) {
   return props.width && "width: ".concat(props.width);
 }, _swatches.swatches.black, function (props) {
   return props.errors ? "border: 1px solid ".concat(_swatches.swatches.red) : "border: 1px solid ".concat(_swatches.swatches.grayBlue);
 }, function (props) {
   return props.hasInput ? "#ffffff" : _swatches.swatches.offWhite;
 }, _dashVariables.sofiaPro.regular, _swatches.swatches.gray, _dashVariables.sofiaPro.regular, function (props) {
+  return props.fontSize && "font-size: ".concat(props.fontSize, "px");
+}, function (props) {
   return props.disabled && "color: ".concat(_swatches.swatches.grayBlue);
 }, function (props) {
   return props.style ? props.style : null;

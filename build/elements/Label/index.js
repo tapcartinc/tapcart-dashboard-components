@@ -13,7 +13,7 @@ var _dashVariables = require("../../utils/_dashVariables");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var Label = _styledComponents["default"].p.attrs({
+var Label = _styledComponents["default"].div.attrs({
   className: "p"
 }).withConfig({
   displayName: "Label",

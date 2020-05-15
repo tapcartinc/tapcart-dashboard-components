@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Intro|Getting Started/Adding Components" />
+
+# Adding Components
+<br/>
+
+## File Structure
+
+This is the general file/folder structure you should follow when building onto the component library with new components
+
+Each component should consist of at least 4 files:
+-index.js (Core functionality/structure and proptypes)
+-styles.js (styling for the component)
+-mdx file (documentation, contains detailed docs, api links per component, component props, an example component, etc)
+-story file - index.stories.js (examples that go into the storybook for the library)
+
+Example file structure:
+
+```
+Component
+│   index.js
+│   styles.js
+│   index.stories.js
+│   index.stories.mdx
+│
+└───ComponentChildOne
+│   │   index.js
+│   │   styles.js
+│
+└───ComponentChildTwo
+│   │   index.js
+│   │   styles.js
+```
+
+When creating new stories, you can include the styles for the stories that are not included within the component being exported inside of the `index.stories.js` file
+

@@ -102,6 +102,4 @@ PopoutContainer.propTypes = {
 };
 PopoutContainer.defaultProps = {
   disabled: false
-}; // width
-// height
-// children
+};

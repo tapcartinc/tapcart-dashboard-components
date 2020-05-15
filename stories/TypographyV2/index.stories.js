@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
-import { LabelV2 } from "../../lib/elements/LabelV2";
-import { DescriptionV2 } from "../../lib/elements/DescriptionV2";
+import { Label } from "../../lib/elements/Label";
+import { Description } from "../../lib/elements/Description";
 
 storiesOf("Design Guidelines|Foundation/TypographyV2", module)
   .add("Label", () => {
-    return <LabelV2>LabelV2</LabelV2>;
+    return <Label>Label</Label>;
   })
   .add("Description", () => {
-    return <DescriptionV2>DescriptionV2</DescriptionV2>;
+    return <Description>Description</Description>;
   });

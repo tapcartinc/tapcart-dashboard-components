@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.defaultGraphColors = exports.colorPicker = exports.circularStd = exports.sofiaPro = void 0;
+exports.boxShadow = exports.defaultGraphColors = exports.colorPicker = exports.circularStd = exports.sofiaPro = void 0;
 var sofiaPro = {
   black: "font-family: \"SofiaPro-Black\";\n\tfont-weight: 900;\n\tfont-style: normal;\n  font-display: swap;",
   regular: "font-family: \"SofiaPro\";\n\tfont-weight: 400;\n\tfont-style: normal;\n  font-display: swap;",
@@ -50,3 +50,9 @@ var colorPicker = {
 exports.colorPicker = colorPicker;
 var defaultGraphColors = [colorPicker.blue, colorPicker.grayBlue, colorPicker.green100, colorPicker.lightBlue, colorPicker.dullBlue];
 exports.defaultGraphColors = defaultGraphColors;
+var boxShadow = {
+  small: "0 2px 5px 0 rgba(0, 0, 0, 0.05),\n  0 2px 10px 0 rgba(0, 0, 0, 0.025),\n  0 2px 20px 0 rgba(0, 0, 0, 0.025)",
+  medium: "0 2px 10px 0 rgba(0, 0, 0, 0.05),\n  0 2px 20px 0 rgba(0, 0, 0, 0.025),\n  0 2px 30px 0 rgba(0, 0, 0, 0.025)",
+  large: "0 2px 30px 0 rgba(0, 0, 0, 0.05),\n  0 2px 50px 0 rgba(0, 0, 0, 0.025),\n  0 2px 70px 0 rgba(0, 0, 0, 0.025)"
+};
+exports.boxShadow = boxShadow;

@@ -66,7 +66,11 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-(0, _react2.storiesOf)("Examples|Components/Accordion", module).add("Push", function () {
+(0, _react2.storiesOf)("Examples|Components/Accordion", module).addParameters({
+  options: {
+    panelPosition: "bottom"
+  }
+}).add("Push", function () {
   var _useState = (0, _react.useState)({
     values: {
       one: "",

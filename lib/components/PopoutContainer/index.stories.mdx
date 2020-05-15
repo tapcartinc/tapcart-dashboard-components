@@ -31,30 +31,30 @@ To use the PopoutContainer, import `PopoutContainer`, `PopoutItem`, `PopoutOptio
 ## PopoutContainer Example:
 
 ```jsx
-      <PopoutContainer direction="right">
-        <PopoutItem>
-          <ContainerBox
-            customHeight={200}
-            customWidth={300}
-            customWidthMd={100}
-            bg={colorState}
-          />
-        </PopoutItem>
-        <PopoutOptions>
-          <PopoutOption
-            id={1}
-            onClick={() => console.log("edit")}
-            icon="edit"
-            label="edit"
-          ></PopoutOption>
-          <PopoutOption
-            id={2}
-            onClick={() => console.log("edit")}
-            icon="edit"
-            label="edit"
-          ></PopoutOption>
-        </PopoutOptions>
-      </PopoutContainer>
+ <PopoutContainer direction="right">
+   <PopoutItem>
+     <ContainerBox
+       customHeight={200}
+       customWidth={300}
+       customWidthMd={100}
+       bg={colorState}
+     />
+   </PopoutItem>
+   <PopoutOptions>
+     <PopoutOption
+       id={1}
+       onClick={() => console.log("edit")}
+       icon="edit"
+       label="edit"
+     ></PopoutOption>
+     <PopoutOption
+       id={2}
+       onClick={() => console.log("edit")}
+       icon="edit"
+       label="edit"
+     ></PopoutOption>
+   </PopoutOptions>
+ </PopoutContainer>
 ```
 
 ## API

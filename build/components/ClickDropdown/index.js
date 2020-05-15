@@ -9,25 +9,21 @@ exports.ClickDropdown = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _Icon = require("../../elements/Icon");
 
-var _Icon = require("../elements/Icon");
+var _swatches = require("../../utils/_swatches");
 
-var _variables = require("../utils/_variables");
+var _uuid = require("uuid");
 
-var _propTypes = _interopRequireWildcard(require("prop-types"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _Typography = require("../elements/Typography");
-
-var _dashVariables = require("../utils/_dashVariables");
+var _styles = require("./styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -42,9 +38,9 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var ClickDropdown = function ClickDropdown(_ref) {
-  var options = _ref.options,
-      position = _ref.position,
-      style = _ref.style;
+  var position = _ref.position,
+      style = _ref.style,
+      children = _ref.children;
   var node = (0, _react.useRef)();
 
   var _useState = (0, _react.useState)(false),
@@ -77,11 +73,7 @@ var ClickDropdown = function ClickDropdown(_ref) {
     return onClick();
   };
 
-  for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-    props[_key - 1] = arguments[_key];
-  }
-
-  return /*#__PURE__*/_react["default"].createElement(DDWrapper, {
+  return /*#__PURE__*/_react["default"].createElement(_styles.DDWrapper, {
     ref: node,
     position: position,
     style: style
@@ -89,92 +81,40 @@ var ClickDropdown = function ClickDropdown(_ref) {
     style: {
       position: "relative"
     }
-  }, /*#__PURE__*/_react["default"].createElement(DropdownHeader, _extends({}, props, {
+  }, /*#__PURE__*/_react["default"].createElement(_styles.DropdownHeader, {
     onClick: function onClick(e) {
       return handleOpen(e);
     }
-  }), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+  }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "dot-dot-dot",
     style: {
       transform: "rotate(90deg)",
       zIndex: 100,
       marginLeft: 14
     },
-    fill: "darkgray"
+    fill: _swatches.swatches.gray
   })), open && /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       position: "relative"
     }
-  }, /*#__PURE__*/_react["default"].createElement(ClickableDropdown, _extends({}, props, {
+  }, /*#__PURE__*/_react["default"].createElement(_styles.ClickableDropdown, {
     position: position
-  }), options.map(function (option, index) {
-    return /*#__PURE__*/_react["default"].createElement(ClickableDropdownItem, {
+  }, children && children.length > 0 && children.map(function (option, index) {
+    return /*#__PURE__*/_react["default"].createElement(_styles.ClickableDropdownItem, {
       onClick: function onClick(e) {
-        return handleItemClick(e, option.onClick);
+        return handleItemClick(e, option.props.onClick);
       },
-      key: option.title,
-      lastItem: index === options.length - 1
-    }, option.icon && /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
-      iconLeft: true,
-      type: option.icon
-    }), /*#__PURE__*/_react["default"].createElement(_Typography.Body, {
-      style: {
-        marginLeft: 8
-      }
-    }, option.title));
+      key: (0, _uuid.v4)(),
+      lastItem: index === children.length - 1
+    }, option.props.children);
   })))));
 };
 
 exports.ClickDropdown = ClickDropdown;
-
-var DDWrapper = _styledComponents["default"].div.withConfig({
-  displayName: "ClickDropdown__DDWrapper",
-  componentId: "sc-18q6bvz-0"
-})(["position:relative;z-index:100;", ";", ";z-index:100;", ";"], function (props) {
-  return props.position === "right" && "\n  position: absolute;\n  right: 10px";
-}, function (props) {
-  return props.position === "left" && "\n  position: absolute;\n  left: 10px";
-}, function (props) {
-  return props.style ? props.style : null;
-});
-
-var ClickableDropdown = _styledComponents["default"].ul.withConfig({
-  displayName: "ClickDropdown__ClickableDropdown",
-  componentId: "sc-18q6bvz-1"
-})(["margin:0px;border-radius:3px;list-style:none;box-shadow:", ";", ";position:absolute;padding:0px;z-index:1;background:white;width:218px;", " ", " ", ";"], _variables.boxShadow.medium, _variables.sofia.sofiaRegular, function (props) {
-  return props.position === "right" && "right: 0;";
-}, function (props) {
-  return props.position === "left" && "left: 0;";
-}, function (props) {
-  return props.style ? props.style : null;
-});
-
-var ClickableDropdownItem = _styledComponents["default"].li.withConfig({
-  displayName: "ClickDropdown__ClickableDropdownItem",
-  componentId: "sc-18q6bvz-2"
-})(["font-size:15px;background:white;border-bottom:1px solid ", ";", " display:flex;flex-direction:row;align-items:center;flex-wrap:nowrap;padding:10px 17px;&:hover{cursor:pointer;background:", ";}", ";"], _dashVariables.colorPicker.lightGray, function (props) {
-  return props.lastItem && "border-bottom: none;";
-}, _variables.colors.gray10, function (props) {
-  return props.style ? props.style : null;
-});
-
-var DropdownHeader = _styledComponents["default"].div.withConfig({
-  displayName: "ClickDropdown__DropdownHeader",
-  componentId: "sc-18q6bvz-3"
-})(["width:37px;height:100%;z-index:100;&:hover{cursor:pointer;}", ";"], function (props) {
-  return props.style ? props.style : null;
-});
-
 ClickDropdown.propTypes = {
-  options: _propTypes["default"].arrayOf(_propTypes["default"].shape({
-    title: _propTypes["default"].string.isRequired,
-    onClick: _propTypes["default"].func,
-    icon: _propTypes["default"].string
-  })).isRequired,
-
   /**
-   * options: "right" | "left"
+   * options are right and left
    */
-  position: _propTypes["default"].string.isRequired
+  position: _propTypes["default"].string,
+  children: _propTypes["default"].node
 };
-ClickDropdown.defaultProps = {};

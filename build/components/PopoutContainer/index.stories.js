@@ -4,7 +4,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _index = _interopRequireDefault(require("./index"));
+var _index = require("./index");
 
 var _dashVariables = require("../../utils/_dashVariables");
 
@@ -46,21 +46,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       colorState = _useState2[0],
       setColorState = _useState2[1];
 
-  return /*#__PURE__*/_react["default"].createElement(_index["default"], {
+  return /*#__PURE__*/_react["default"].createElement(_index.PopoutContainer, {
     direction: "right"
   }, /*#__PURE__*/_react["default"].createElement(_PopoutItem["default"], null, /*#__PURE__*/_react["default"].createElement(_ContainerBox.ContainerBox, {
     customHeight: 200,
     customWidth: 300,
     customWidthMd: 100,
     bg: colorState
-  })), /*#__PURE__*/_react["default"].createElement(_PopoutOptions["default"], null, /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOptionV2, {
+  })), /*#__PURE__*/_react["default"].createElement(_PopoutOptions["default"], null, /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOption, {
     id: 1,
     onClick: function onClick() {
       return console.log("edit");
     },
     icon: "edit",
     label: "edit"
-  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOptionV2, {
+  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOption, {
     id: 2,
     onClick: function onClick() {
       return console.log("edit");
@@ -73,21 +73,21 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     style: {
       marginLeft: 200
     }
-  }, /*#__PURE__*/_react["default"].createElement(_index["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_index.PopoutContainer, {
     direction: "left"
   }, /*#__PURE__*/_react["default"].createElement(_PopoutItem["default"], null, /*#__PURE__*/_react["default"].createElement(_ContainerBox.ContainerBox, {
     customHeight: 200,
     customWidth: 300,
     customWidthMd: 100,
     bg: _dashVariables.colorPicker.blue
-  })), /*#__PURE__*/_react["default"].createElement(_PopoutOptions["default"], null, /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOptionV2, {
+  })), /*#__PURE__*/_react["default"].createElement(_PopoutOptions["default"], null, /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOption, {
     id: 1,
     onClick: function onClick() {
       return console.log("edit");
     },
     icon: "edit",
     label: "edit"
-  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOptionV2, {
+  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOption, {
     id: 2,
     onClick: function onClick() {
       return console.log("edit");
@@ -101,20 +101,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       toggle = _React$useState2[0],
       setToggle = _React$useState2[1];
 
-  return /*#__PURE__*/_react["default"].createElement(_index["default"], {
+  return /*#__PURE__*/_react["default"].createElement(_index.PopoutContainer, {
     direction: "right"
   }, /*#__PURE__*/_react["default"].createElement(_PopoutItem["default"], null, /*#__PURE__*/_react["default"].createElement(_ContainerBox.ContainerBox, {
     customHeight: 200,
     customWidth: 300,
     customWidthMd: 100,
     bg: _dashVariables.colorPicker.blue
-  })), /*#__PURE__*/_react["default"].createElement(_PopoutOptions["default"], null, /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOptionV2, {
+  })), /*#__PURE__*/_react["default"].createElement(_PopoutOptions["default"], null, /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOption, {
     onClick: function onClick() {
       return console.log("edit title");
     },
     icon: "edit",
     label: "edit title"
-  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOptionV2, {
+  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOption, {
     icon: "text-icon",
     label: "title"
   }, /*#__PURE__*/_react["default"].createElement(_Toggle.Toggle, {
@@ -124,19 +124,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     onChange: function onChange() {
       return setToggle(!toggle);
     }
-  })), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOptionV2, {
+  })), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOption, {
     onClick: function onClick() {
       return console.log("upload banner");
     },
     icon: "images",
     label: "upload banner"
-  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOptionV2, {
+  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOption, {
     onClick: function onClick() {
       return console.log("remove banner");
     },
     icon: "images",
     label: "remove banner"
-  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOptionV2, {
+  }), /*#__PURE__*/_react["default"].createElement(_PopoutOption.PopoutOption, {
     onClick: function onClick() {
       return console.log("delete");
     },

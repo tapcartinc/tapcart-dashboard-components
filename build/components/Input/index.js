@@ -53,6 +53,7 @@ var Input = function Input(_ref) {
       maxLength = props.maxLength,
       disabled = props.disabled,
       width = props.width,
+      fontSize = props.fontSize,
       type = props.type;
 
   var _useState = (0, _react.useState)(false),
@@ -84,6 +85,7 @@ var Input = function Input(_ref) {
   }
 
   return /*#__PURE__*/_react["default"].createElement(_styles.StyledInputWrapper, {
+    fontSize: fontSize,
     width: width,
     disabled: disabled,
     errors: errors,
@@ -100,8 +102,7 @@ var Input = function Input(_ref) {
     onKeyUp: unbounceFunc,
     onChange: props.onChange,
     placeholder: placeholder,
-    disabled: disabled,
-    errors: errors ? errors.length >= 0 : undefined
+    disabled: disabled
   }, props)), maxLength && /*#__PURE__*/_react["default"].createElement(_styles.StyledCharCount, {
     charCountHit: props.value.length === props.maxLength,
     bounce: bounce,
@@ -147,6 +148,29 @@ Input.propTypes = {
   /**
    * custom font size
    */
-  fontSize: _propTypes["default"].string
+  fontSize: _propTypes["default"].number,
+
+  /**
+   * Errors that can be passed into the component for error message handling and error styling
+   */
+  errors: _propTypes["default"].oneOfType([_propTypes["default"].array, _propTypes["default"].bool]),
+
+  /**
+   * Maximum character amount a user can use in the input
+   */
+  maxLength: _propTypes["default"].number,
+
+  /**
+   * Prevents user from changing the current input component and has disabled styling
+   */
+  disabled: _propTypes["default"].bool,
+
+  /**
+   * Custom width for component
+   */
+  width: _propTypes["default"].string
 };
-Input.defaultProps = {};
+Input.defaultProps = {
+  width: "100%",
+  disabled: false
+};

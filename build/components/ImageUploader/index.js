@@ -80,7 +80,7 @@ ImageUploader.propTypes = {
   /**
    * This value should be the string that contains the url value for the image will be null if the value has not been set.
    */
-  value: _propTypes["default"].any.isRequired,
+  value: _propTypes["default"].any,
 
   /**
    * Useful if the ImageUploader component has is labeled consistently with the field labels throughout the merchant dashboard

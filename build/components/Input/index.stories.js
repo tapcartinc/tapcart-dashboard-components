@@ -14,8 +14,6 @@ var _Icon = require("../../elements/Icon");
 
 var _Button = require("../../components/Button");
 
-var _addonKnobs = require("@storybook/addon-knobs");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -115,7 +113,7 @@ var StyledCustomLabel = _styledComponents["default"].div.withConfig({
   };
 
   return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_index.Input, {
-    errors: state.error && ["There's been an error"],
+    errors: state.error ? ["There's been an error"] : false,
     label: /*#__PURE__*/_react["default"].createElement(StyledCustomLabel, null, "Enter Name", /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
       iconRight: true,
       type: "account"

@@ -1,5 +1,4 @@
 import React from "react";
-import { Header } from "../../lib/elements/Typography";
 import { swatches } from "../../lib/utils/_swatches";
 import styled from "styled-components";
 
@@ -7,7 +6,7 @@ const IconGallery = (props) => {
   return (
     <StyledGallery>
       <div className="header">
-        <Header>All Swatches:</Header>
+        <h3>All Swatches:</h3>
       </div>
       <StyledSwatchList>
         {Object.entries(swatches).map((swatch) => {

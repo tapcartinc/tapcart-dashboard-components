@@ -1,0 +1,42 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {ToolTip} from './index';
+
+
+
+<Meta title="Docs|Components/ToolTip" />
+
+# ToolTip
+
+---
+<br />
+<Story id="examples-components-input--basic" />
+<br />
+
+
+The <pre>ToolTip</pre> component is the component used for popup messages that help users navigate and use certain tools.
+
+<em>Examples of where this is used in the Merchant Dashboard:</em>
+
+* -Insights dashboard graph cards
+* -Popout container for the multi collection block in the AppPreview component
+
+<br />
+
+To create an ToolTip component, import the <pre>`ToolTip`</pre> component and inside of it include the message that will pop up when a user clicks on the tooltip icon.
+
+
+## Fields Example:
+
+```jsx
+<ToolTip color={swatches.blue}>
+  This shit is bananas - b a n a n a s.
+</ToolTip>
+```
+
+## API
+### [ToolTip](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/components/ToolTip.js)
+<Props of={ToolTip} />
+
+
+
+

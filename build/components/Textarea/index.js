@@ -11,13 +11,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _swatches = require("../../utils/_swatches");
 
-var _variables = require("../../utils/_variables");
-
-var _Typography = require("../../elements/Typography");
-
-var _dashVariables = require("../../utils/_dashVariables");
+var _styles = require("./styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -50,6 +46,7 @@ var Textarea = function Textarea(_ref) {
   var errors = props.errors,
       label = props.label,
       value = props.value,
+      fontSize = props.fontSize,
       name = props.name,
       placeholder = props.placeholder,
       maxLength = props.maxLength;
@@ -73,16 +70,17 @@ var Textarea = function Textarea(_ref) {
 
   if (bounce) {
     bounceStyle["top"] = "-3px";
-    bounceStyle["color"] = _dashVariables.colorPicker.red;
+    bounceStyle["color"] = _swatches.swatches.red;
     bounceStyle["position"] = "relative";
     bounceStyle["transition"] = "top 0.1s ease 0s";
   }
 
-  return /*#__PURE__*/_react["default"].createElement(StyledTextareaWrapper, _extends({
-    errors: errors
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledTextareaWrapper, _extends({
+    errors: errors,
+    fontSize: fontSize
   }, props, {
     hasInput: value && value.length >= 1
-  }), label && /*#__PURE__*/_react["default"].createElement(StyledLabel, {
+  }), label && /*#__PURE__*/_react["default"].createElement(_styles.StyledLabel, {
     errors: errors
   }, errors ? errors[0] : label), /*#__PURE__*/_react["default"].createElement("div", {
     style: {
@@ -98,7 +96,7 @@ var Textarea = function Textarea(_ref) {
     onChange: props.onChange,
     placeholder: placeholder,
     errors: errors ? errors.length >= 0 : undefined
-  }, props)), maxLength && /*#__PURE__*/_react["default"].createElement(StyledCharCount, {
+  }, props)), maxLength && /*#__PURE__*/_react["default"].createElement(_styles.StyledCharCount, {
     hasInput: value && value.length >= 1,
     charCountHit: props.value.length === props.maxLength,
     bounce: bounce
@@ -109,41 +107,52 @@ var Textarea = function Textarea(_ref) {
 
 exports.Textarea = Textarea;
 Textarea.propTypes = {
+  /**
+   * state value for input
+   */
   value: _propTypes["default"].string.isRequired,
+
+  /**
+   * useful for multiple inputs using the same onChange handler (e.target.name: e.target.value)
+   */
   name: _propTypes["default"].string,
+
+  /**
+   * placeholder text if state value is empty
+   */
   placeholder: _propTypes["default"].string,
+
+  /**
+   * onChange handler
+   */
   onChange: _propTypes["default"].func,
-  label: _propTypes["default"].string
+
+  /**
+   * label to be shown above input value; helpful to use this as a prop of the input value because the error handling is in one component
+   * an good reference example for the label prop is the "error" story
+   */
+  label: _propTypes["default"].oneOfType([_propTypes["default"].string, _propTypes["default"].arrayOf(_propTypes["default"].node), _propTypes["default"].node]),
+
+  /**
+   * custom font size in pixels
+   */
+  fontSize: _propTypes["default"].number,
+
+  /**
+   * custom height of textarea in pixels
+   */
+  height: _propTypes["default"].number,
+
+  /**
+   * Errors that can be passed into the component for error message handling and error styling
+   */
+  errors: _propTypes["default"].oneOfType([_propTypes["default"].array, _propTypes["default"].bool]),
+
+  /**
+   * Maximum character amount a user can use in the input
+   */
+  maxLength: _propTypes["default"].number
 };
 Textarea.defaultProps = {
-  name: ""
+  height: 125
 };
-
-var StyledTextareaWrapper = _styledComponents["default"].div.withConfig({
-  displayName: "Textarea__StyledTextareaWrapper",
-  componentId: "eqovuw-0"
-})(["position:relative;width:100%;.input-style{border-radius:3px;", ";background:", ";padding:8px 17px;line-height:18px;letter-spacing:0.25px;color:#000000;width:100%;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;&::placeholder{font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;color:", ";}&:focus{outline:none;}font-size:14px;font-weight:400;transition:border 200ms ease;min-height:125px;overflow-y:scroll;resize:none;", ";}", ";"], function (props) {
-  return props.errors ? "border: 1px solid ".concat(_dashVariables.colorPicker.red) : "border: 1px solid ".concat(_dashVariables.colorPicker.grayBlue);
-}, function (props) {
-  return props.hasInput ? "#ffffff" : _dashVariables.colorPicker.offWhite;
-}, _dashVariables.colorPicker.gray, function (props) {
-  return props.height && "height: ".concat(props.height);
-}, function (props) {
-  return props.style ? props.style : null;
-});
-
-var StyledCharCount = _styledComponents["default"].div.withConfig({
-  displayName: "Textarea__StyledCharCount",
-  componentId: "eqovuw-1"
-})(["position:absolute;text-align:right;right:6px;bottom:8px;color:", ";", " font-size:14px;transition:top 0.5s ease 0s;"], function (props) {
-  return props.hasInput ? _dashVariables.colorPicker.blue : _dashVariables.colorPicker.gray;
-}, function (props) {
-  return props.charCountHit && "color: ".concat(_dashVariables.colorPicker.red, ";");
-});
-
-var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
-  displayName: "Textarea__StyledLabel",
-  componentId: "eqovuw-2"
-})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], function (props) {
-  return props.errors ? _variables.colors.red : "#000000";
-});

@@ -96,6 +96,7 @@
     "redux-thunk": "^2.3.0",
     "storybook": "^5.3.9",
     "storybook-addon-jsx": "^7.1.14",
-    "styled-jsx": "^3.2.1"
+    "styled-jsx": "^3.2.1",
+    "uuid": "^8.0.0"
   }
 }
