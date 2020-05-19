@@ -9,7 +9,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _dashVariables = require("../../utils/_dashVariables");
 
-var _Typography = require("../../elements/Typography");
+var _TypographyOld = require("../../elements/TypographyOld");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -23,7 +23,7 @@ var StyledImageInputWrapper = _styledComponents["default"].div.attrs(function (p
 })(["display:flex;flex-direction:column;align-items:flex-start;font-size:13px;padding-right:5px;", ""], _dashVariables.sofiaPro.regular);
 
 exports.StyledImageInputWrapper = StyledImageInputWrapper;
-var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
+var StyledLabel = (0, _styledComponents["default"])(_TypographyOld.Body).withConfig({
   displayName: "styles__StyledLabel",
   componentId: "wf7b98-1"
 })(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], _dashVariables.colorPicker.black);

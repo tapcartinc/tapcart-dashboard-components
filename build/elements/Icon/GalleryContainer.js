@@ -13,6 +13,8 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _dashVariables = require("../../utils/_dashVariables");
 
+var _Typography = require("../Typography");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var GalleryContainer = function GalleryContainer(_ref) {
@@ -405,6 +407,11 @@ var GalleryContainer = function GalleryContainer(_ref) {
   })), /*#__PURE__*/_react["default"].createElement(IconWrapper, {
     input: input
   }, /*#__PURE__*/_react["default"].createElement(_index.Icon, {
+    type: "play-btn",
+    iconLeft: true
+  })), /*#__PURE__*/_react["default"].createElement(IconWrapper, {
+    input: input
+  }, /*#__PURE__*/_react["default"].createElement(_index.Icon, {
     type: "phone-with-border",
     iconLeft: true
   })), /*#__PURE__*/_react["default"].createElement(IconWrapper, {
@@ -528,12 +535,14 @@ var GalleryContainer = function GalleryContainer(_ref) {
     type: "toast",
     iconLeft: true
   })), /*#__PURE__*/_react["default"].createElement(IconWrapper, {
-    input: input
+    input: input,
+    addBg: true
   }, /*#__PURE__*/_react["default"].createElement(_index.Icon, {
     type: "toast-alert",
     iconLeft: true
   })), /*#__PURE__*/_react["default"].createElement(IconWrapper, {
-    input: input
+    input: input,
+    addBg: true
   }, /*#__PURE__*/_react["default"].createElement(_index.Icon, {
     type: "toast-checkmark",
     iconLeft: true
@@ -590,20 +599,24 @@ exports["default"] = _default;
 
 var IconWrapper = function IconWrapper(_ref2) {
   var children = _ref2.children,
-      input = _ref2.input;
+      input = _ref2.input,
+      addBg = _ref2.addBg;
   return /*#__PURE__*/_react["default"].createElement(StyledIconWrapper, {
-    showIcon: !input || children.props.type.includes(input)
-  }, children, /*#__PURE__*/_react["default"].createElement("span", null, children.props.type));
+    showIcon: !input || children.props.type.includes(input),
+    addBg: addBg
+  }, children, /*#__PURE__*/_react["default"].createElement(_Typography.P3, null, children.props.type));
 };
 
 var StyledGallery = _styledComponents["default"].div.withConfig({
   displayName: "GalleryContainer__StyledGallery",
   componentId: "sc-37qbey-0"
-})(["width:100%;display:flex;flex-wrap:wrap;border-radius:5px;justify-content:space-between;background-color:#ffffff;padding:1em;margin:1em auto;&:after{content:\"\";flex:auto;}"]);
+})(["width:100%;display:flex;flex-wrap:wrap;border-radius:5px;justify-content:space-between;background-color:#ffffff;padding:1em;margin:1em auto;&:after{content:\"\";flex:auto;}", ""], _dashVariables.sofiaPro.medium);
 
 var StyledIconWrapper = _styledComponents["default"].div.withConfig({
   displayName: "GalleryContainer__StyledIconWrapper",
   componentId: "sc-37qbey-1"
-})(["width:25%;height:80px;align-items:center;display:", ";span{font-weight:200;font-size:14px;}"], function (props) {
+})(["width:25%;height:80px;align-items:center;display:", ";svg{", ";}span{font-weight:200;font-size:14px;}"], function (props) {
   return props.showIcon ? "flex" : "none";
+}, function (props) {
+  return props.addBg && "background: ".concat(_dashVariables.colorPicker.blue, "; padding: 5px; border-radius: 3px");
 });

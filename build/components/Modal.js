@@ -23,7 +23,7 @@ var _propTypes = _interopRequireWildcard(require("prop-types"));
 
 var _dashVariables = require("../utils/_dashVariables");
 
-var _Typography = require("../elements/Typography");
+var _TypographyOld = require("../elements/TypographyOld");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -92,7 +92,7 @@ function ModalType(props) {
           marginBottom: 20,
           marginTop: 20
         }
-      }, /*#__PURE__*/_react["default"].createElement(_Typography.Header, null, props.header), props.description && /*#__PURE__*/_react["default"].createElement(_Typography.Description, null, props.description)), /*#__PURE__*/_react["default"].createElement(StyledDashModalContent, null, props.children), props.buttonText && /*#__PURE__*/_react["default"].createElement(_Button.Button, {
+      }, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Header, null, props.header), props.description && /*#__PURE__*/_react["default"].createElement(_TypographyOld.Description, null, props.description)), /*#__PURE__*/_react["default"].createElement(StyledDashModalContent, null, props.children), props.buttonText && /*#__PURE__*/_react["default"].createElement(_Button.Button, {
         isDisabled: props.saveDisabled,
         onClick: props.save
       }, props.buttonText)));
@@ -108,7 +108,7 @@ function ModalType(props) {
       }, /*#__PURE__*/_react["default"].createElement(ModalHeader, null, /*#__PURE__*/_react["default"].createElement(ModalHeaderLeft, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
         circleIcon: true,
         type: props.icon
-      }), /*#__PURE__*/_react["default"].createElement(_Typography.Header, {
+      }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Header, {
         style: {
           marginLeft: 10
         }
@@ -147,7 +147,7 @@ function ModalType(props) {
       return /*#__PURE__*/_react["default"].createElement(MinimalModalStyle, props, /*#__PURE__*/_react["default"].createElement(ModalHeader, null, /*#__PURE__*/_react["default"].createElement(ModalHeaderLeft, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
         circleIcon: true,
         type: props.icon
-      }), /*#__PURE__*/_react["default"].createElement(_Typography.Header, {
+      }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Header, {
         style: {
           marginLeft: 15
         }

@@ -16,6 +16,8 @@ var _animations = require("../../utils/_animations");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var getColor = function getColor(color) {
+  console.log("color", color);
+
   switch (color) {
     case "blue":
       return _swatches.swatches.blue;
@@ -33,27 +35,28 @@ var getColor = function getColor(color) {
       return _swatches.swatches.gray;
 
     default:
-      break;
+      return null;
   }
 };
 
 var StyledButtonWrapper = _styledComponents["default"].button.attrs(function (props) {
   return {
-    className: props.className
+    className: props.className,
+    themeExists: Object.entries(props.theme).length > 0
   };
 }).withConfig({
   displayName: "styles__StyledButtonWrapper",
   componentId: "jpp4hr-0"
 })(["text-transform:uppercase;outline:none;line-height:1.5;letter-spacing:1px;font-size:14px;display:flex;justify-items:center;justify-content:center;align-items:center;position:relative;", " &:hover{", ";cursor:pointer;}padding:", ";", ";background:", ";", ";color:", ";border-color:", ";border-width:", ";border-style:solid;border-radius:3px;", ";", " ", " a{font-size:14px;color:", ";text-decoration:none;box-shadow:none;", " ", ";", ";}", " ", ";"], _animations.transition, _animations.btnHover, function (props) {
-  return props.theme ? "12px 20px" : "8px 16px";
+  return props.themeExists ? "12px 20px" : "8px 16px";
 }, function (props) {
   return props.thin && "padding-top: 8px; padding-bottom: 8px";
 }, function (props) {
-  return props.color ? getColor(props.color) : props.theme ? props.theme.fg : _swatches.swatches.blue;
+  return props.color ? getColor(props.color) : props.themeExists ? props.theme.fg : _swatches.swatches.blue;
 }, function (props) {
   return props.invert && "background: transparent";
 }, function (props) {
-  return props.color === "white" && !props.plainText && !props.invert ? _swatches.swatches.blue : !props.invert && !props.plainText ? "#FFFFFF" : props.color ? getColor(props.color) : _swatches.swatches.blue;
+  return (props.color === "white" || props.themeExists && props.theme.fg === "#FFFFFF") && !props.plainText && !props.invert ? _swatches.swatches.blue : !props.invert && !props.plainText ? "#FFFFFF" : props.color ? getColor(props.color) : _swatches.swatches.blue;
 }, function (props) {
   return !props.invert ? "transparent" : props.color ? getColor(props.color) : "transparent";
 }, function (props) {

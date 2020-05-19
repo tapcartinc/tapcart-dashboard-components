@@ -23,7 +23,7 @@ var StyledLoaderContainer = _styledComponents["default"].div.withConfig({
   return props.fill && "height: 300px;\n    width: 300px;\n    background: ".concat(_swatches.swatches.blue, ";\n  border-radius: 3px;");
 });
 
-(0, _react2.storiesOf)("Design Guidelines/Loader", module).add("Basic", function () {
+(0, _react2.storiesOf)("Examples|Elements/Loader", module).add("Basic", function () {
   var label = "Loading colors";
   var options = [{
     fg: _swatches.swatches.blue,

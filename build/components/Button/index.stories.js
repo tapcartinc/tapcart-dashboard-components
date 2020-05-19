@@ -12,7 +12,13 @@ var _dashVariables = require("../../utils/_dashVariables");
 
 var _react2 = require("@storybook/react");
 
+var _addonActions = require("@storybook/addon-actions");
+
 var _addonKnobs = require("@storybook/addon-knobs");
+
+var _ThemeProvider = require("../../utils/ThemeProvider");
+
+var _theme = require("../../utils/_theme");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -128,4 +134,11 @@ var StyledRollingBall = _styledComponents["default"].div.attrs(function (props) 
     onClick: triggerBall,
     invert: (0, _addonKnobs["boolean"])("invert", false)
   }, (0, _addonKnobs.text)("btnTwoText", "No, click me!"))));
-}).addDecorator(_addonKnobs.withKnobs);
+}).addDecorator(_addonKnobs.withKnobs).add("wrapped in ThemeProvider", function () {
+  return /*#__PURE__*/_react["default"].createElement(StyledButtons, null, /*#__PURE__*/_react["default"].createElement(_ThemeProvider.ThemeProvider, {
+    theme: _theme.base
+  }, /*#__PURE__*/_react["default"].createElement(_index.Button, {
+    onClick: (0, _addonActions.action)("button-click"),
+    color: "green"
+  }, "Marketing Button")));
+});

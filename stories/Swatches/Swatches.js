@@ -1,19 +1,20 @@
 import React from "react";
 import { swatches } from "../../lib/utils/_swatches";
 import styled from "styled-components";
+import { P3, P2 } from "../../lib/elements/Typography";
 
 const IconGallery = (props) => {
   return (
     <StyledGallery>
       <div className="header">
-        <h3>All Swatches:</h3>
+        <P2>All Swatches:</P2>
       </div>
       <StyledSwatchList>
         {Object.entries(swatches).map((swatch) => {
           return (
-            <StyledSwatchListItem>
+            <StyledSwatchListItem key={swatch[0]}>
               <StyledSwatch color={swatch[1]} />
-              <span>{swatch[0]}</span>
+              <P3>{swatch[0]}</P3>
             </StyledSwatchListItem>
           );
         })}

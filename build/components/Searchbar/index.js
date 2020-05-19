@@ -45,12 +45,7 @@ function Searchbar(_ref) {
     center: center,
     onKeyPress: checkEnter
   }, props), /*#__PURE__*/_react["default"].createElement(_styles.SearchContainer, props, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
-    type: "search",
-    style: {
-      position: "absolute",
-      left: 0,
-      top: 14
-    }
+    type: "search"
   }), /*#__PURE__*/_react["default"].createElement("input", _extends({}, props, {
     onFocus: props.onFocus,
     ref: innerRef,

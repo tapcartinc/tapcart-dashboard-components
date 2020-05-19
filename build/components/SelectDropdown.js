@@ -17,7 +17,7 @@ var _variables = require("../utils/_variables");
 
 var _animations = require("../utils/_animations");
 
-var _Typography = require("../elements/Typography");
+var _TypographyOld = require("../elements/TypographyOld");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -65,7 +65,7 @@ function SelectDropdown(props) {
       });
     },
     menu: function menu(provided, state) {
-      return _objectSpread({}, provided, {}, _Typography.input, {
+      return _objectSpread({}, provided, {}, _TypographyOld.input, {
         boxShadow: "0px transparent !important"
       });
     },
@@ -78,10 +78,10 @@ function SelectDropdown(props) {
       });
     },
     placeholder: function placeholder(provided, state) {
-      return _objectSpread({}, provided, {}, _Typography.placeholder);
+      return _objectSpread({}, provided, {}, _TypographyOld.placeholder);
     },
     valueContainer: function valueContainer(provided, state) {
-      return _objectSpread({}, provided, {}, _Typography.placeholder);
+      return _objectSpread({}, provided, {}, _TypographyOld.placeholder);
     },
     control: function control(provided, state) {
       return _objectSpread({}, provided, {

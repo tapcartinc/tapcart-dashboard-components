@@ -4006,6 +4006,51 @@ function Icon(props) {
         id: "Path"
       })))))))));
 
+    case "play-btn":
+      return /*#__PURE__*/_react["default"].createElement(_styles.StyledSVG, _extends({
+        width: "24px",
+        height: "24px",
+        viewBox: "0 0 24 24"
+      }, props), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Landing-Page",
+        stroke: "none",
+        strokeWidth: "1",
+        fill: "none",
+        fillRule: "evenodd"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "1.0-Landing-Page",
+        transform: "translate(-100.000000, -935.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Above-the-fold",
+        transform: "translate(0.000000, -20.000000)"
+      }), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Button-Full---Large",
+        transform: "translate(100.000000, 935.000000)"
+      }, /*#__PURE__*/_react["default"].createElement("g", {
+        id: "Icon-play"
+      }, /*#__PURE__*/_react["default"].createElement("rect", {
+        id: "Rectangle",
+        x: "0",
+        y: "0",
+        width: "24",
+        height: "24"
+      }), /*#__PURE__*/_react["default"].createElement("g", {
+        id: "frame-c-caret-right",
+        transform: "translate(1.000000, 1.000000)",
+        stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: "2"
+      }, /*#__PURE__*/_react["default"].createElement("circle", {
+        id: "Oval",
+        cx: "11",
+        cy: "11",
+        r: "11"
+      }), /*#__PURE__*/_react["default"].createElement("polygon", {
+        id: "Path",
+        points: "9 15 9 7 15 11"
+      })))))));
+
     case "popup":
       return /*#__PURE__*/_react["default"].createElement(_styles.StyledSVG, _extends({}, props, {
         width: "23px",
@@ -5152,7 +5197,7 @@ function Icon(props) {
       return /*#__PURE__*/_react["default"].createElement(_styles.StyledSVG, _extends({}, props, {
         width: "35px",
         height: "35px",
-        viewBox: "0 0 35 35",
+        viewBox: "0 0 37 37",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }), /*#__PURE__*/_react["default"].createElement("g", {

@@ -11,9 +11,13 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Searchbar = require("../../components/Searchbar");
 
+var _dashVariables = require("../../utils/_dashVariables");
+
 var _GalleryContainer = _interopRequireDefault(require("./GalleryContainer"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _Typography = require("../Typography");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -47,11 +51,10 @@ var IconGallery = function IconGallery(props) {
   }, []);
   return /*#__PURE__*/_react["default"].createElement(StyledIconGallery, null, /*#__PURE__*/_react["default"].createElement("div", {
     className: "header"
-  }, /*#__PURE__*/_react["default"].createElement("h3", null, "All Icons:"), /*#__PURE__*/_react["default"].createElement(_Searchbar.Searchbar, {
+  }, /*#__PURE__*/_react["default"].createElement(_Typography.P2, null, "All Icons:"), /*#__PURE__*/_react["default"].createElement(_Searchbar.Searchbar, {
     onChange: function onChange(e) {
       return setState(e.target.value);
-    } // value={state}
-    ,
+    },
     innerRef: inputRef,
     maxLength: 50,
     placeholder: "Search Icons"
@@ -66,4 +69,4 @@ exports["default"] = _default;
 var StyledIconGallery = _styledComponents["default"].div.withConfig({
   displayName: "IconGallery__StyledIconGallery",
   componentId: "sc-2k5mo2-0"
-})([".header{display:flex;align-items:center;}h3{margin-right:50px;}"]);
+})([".header{display:flex;align-items:center;}p{margin-right:50px;}"]);

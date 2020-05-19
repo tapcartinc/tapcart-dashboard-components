@@ -12,7 +12,11 @@ var _swatches = require("../../utils/_swatches");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var stories = (0, _react2.storiesOf)("Examples|Components/ToolTip", module);
+var stories = (0, _react2.storiesOf)("Examples|Components/ToolTip", module).addParameters({
+  options: {
+    isToolshown: true
+  }
+});
 stories.add("basic", function () {
   return /*#__PURE__*/_react["default"].createElement(_index.ToolTip, null, "This shit is bananas - b a n a n a s.");
 }).add("with custom color", function () {

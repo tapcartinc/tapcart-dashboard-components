@@ -13,7 +13,7 @@ var _Icon = require("../../../elements/Icon");
 
 var _styles = require("./styles");
 
-var _Typography = require("../../../elements/Typography");
+var _TypographyOld = require("../../../elements/TypographyOld");
 
 var _dashVariables = require("../../../utils/_dashVariables");
 
@@ -43,7 +43,7 @@ var PopoutOption = function PopoutOption(_ref) {
     fill: iconColor ? iconColor : _dashVariables.colorPicker.blue,
     iconRight: true,
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
     fontSize: "14px",
     color: _dashVariables.colorPicker.black
   }, label), /*#__PURE__*/_react["default"].createElement("span", {

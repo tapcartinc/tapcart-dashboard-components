@@ -23,7 +23,7 @@ var _moment = _interopRequireDefault(require("moment"));
 
 var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
 
-var _Typography = require("../../../elements/Typography");
+var _TypographyOld = require("../../../elements/TypographyOld");
 
 var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
 
@@ -149,19 +149,19 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
             return /*#__PURE__*/_react["default"].createElement(_styles.StyledTooltip, {
               width: "130px",
               tipAlign: "left"
-            }, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+            }, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
               marginBottom: "2px",
               fontSize: "11px",
               color: _dashVariables.colorPicker.gray
             }, tooltipHeader), d.data.map(function (dataSet, index) {
               return /*#__PURE__*/_react["default"].createElement(_styles.StyledAreaMapTooltip, {
                 key: dataSet.key
-              }, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+              }, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
                 marginBottom: "2px",
                 marginTop: "5px",
                 fontSize: "13px",
                 color: _dashVariables.colorPicker.black
-              }, dataSet.key), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+              }, dataSet.key), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
                 marginBottom: "2px",
                 marginTop: "5px",
                 fontSize: "13px",

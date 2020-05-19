@@ -13,7 +13,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _Icon = require("../elements/Icon");
 
-var _Typography = require("../elements/Typography");
+var _TypographyOld = require("../elements/TypographyOld");
 
 var _variables = require("../utils/_variables");
 
@@ -110,7 +110,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
       onClick: function onClick() {
         return onPageClick(1);
       }
-    }, "1"), /*#__PURE__*/_react["default"].createElement(_Typography.Body, {
+    }, "1"), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Body, {
       color: _variables.colors.grayText
     }, "...")));
   }
@@ -131,7 +131,7 @@ var getPages = function getPages(currentPage, pages, onPageClick, totalRecords, 
   });
 
   if (currentPage < pagRange - 3) {
-    elements.push( /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_Typography.Body, {
+    elements.push( /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Body, {
       color: _variables.colors.grayText
     }, "..."), /*#__PURE__*/_react["default"].createElement(Page, {
       onClick: function onClick() {
@@ -197,7 +197,7 @@ var PaginationContainer = _styledComponents["default"].ul.withConfig({
   componentId: "sc-1h9w1ne-0"
 })(["display:flex;flex-direction:row;user-select:none;align-items:center;justify-content:center;"]);
 
-var Page = (0, _styledComponents["default"])(_Typography.Body).withConfig({
+var Page = (0, _styledComponents["default"])(_TypographyOld.Body).withConfig({
   displayName: "Pagination__Page",
   componentId: "sc-1h9w1ne-1"
 })(["", ";", ";", ";margin-right:10px;margin-left:10px;cursor:pointer;list-style-type:none;letter-spacing:1px;color:", ";&:hover{cursor:pointer;}transition:400ms all ease-in;"], function (props) {

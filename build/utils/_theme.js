@@ -5,14 +5,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.gradient = exports.offWhite = exports.scrollingNav = exports.topNav = exports.neutral = exports.invert = exports.base = void 0;
 
-var _variables = require("./_variables");
+var _swatches = require("./_swatches");
 
 var base = {
-  fg: _variables.colors.blue,
+  fg: _swatches.swatches.blue,
   bg: "#FFFFFF",
-  header: _variables.colors.black,
-  subtext: _variables.colors.black,
-  body: _variables.colors.blue
+  header: _swatches.swatches.black,
+  subtext: _swatches.swatches.black,
+  body: _swatches.swatches.black
 };
 exports.base = base;
 
@@ -40,38 +40,38 @@ var offWhite = function offWhite(_ref2) {
     header: header,
     subtext: subtext,
     body: body,
-    bg: _variables.colors.offwhite
+    bg: _swatches.swatches.offwhite
   };
 };
 
 exports.offWhite = offWhite;
 var neutral = {
-  fg: _variables.colors.black,
+  fg: _swatches.swatches.black,
   bg: "#F3F3F7",
-  header: _variables.colors.black,
-  subtext: _variables.colors.black,
-  body: _variables.colors.blue
+  header: _swatches.swatches.black,
+  subtext: _swatches.swatches.black,
+  body: _swatches.swatches.blue
 };
 exports.neutral = neutral;
 
 var gradient = function gradient(fgColor, bgColor) {
   return {
-    fg: _variables.colors.black,
+    fg: _swatches.swatches.black,
     bg: "linear-gradient(184deg, ".concat(fgColor, ", ").concat(bgColor, ")"),
-    header: _variables.colors.black,
-    subtext: _variables.colors.black,
-    body: _variables.colors.blue
+    header: _swatches.swatches.black,
+    subtext: _swatches.swatches.black,
+    body: _swatches.swatches.blue
   };
 };
 
 exports.gradient = gradient;
 var topNav = {
   background: "transparent",
-  fg: _variables.colors.white
+  fg: _swatches.swatches.white
 };
 exports.topNav = topNav;
 var scrollingNav = {
-  background: "white",
-  fg: _variables.colors.blue
+  background: "#FFFFFF",
+  fg: _swatches.swatches.blue
 };
 exports.scrollingNav = scrollingNav;

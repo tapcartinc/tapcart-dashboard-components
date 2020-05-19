@@ -26,11 +26,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 //////////
 // HEADERS
 //////////
-var Header = _styledComponents["default"].h1.attrs({
-  className: "h1"
+var Header = _styledComponents["default"].h1.attrs(function (props) {
+  return {
+    className: props.className,
+    theme: Object.entries(props.theme).length > 0
+  };
 }).withConfig({
-  displayName: "Typography__Header",
-  componentId: "iyq6bj-0"
+  displayName: "TypographyOld__Header",
+  componentId: "sc-139pomo-0"
 })(["font-size:25px;color:", ";font-weight:500;font-style:normal;-webkit-font-smoothing:antialiased;line-height:29px;letter-spacing:normal;text-transform:capitalize;", ";", ";", " ", ""], function (props) {
   return props.theme && !props.color ? props.theme.header : props.color ? props.color : _swatches.swatches.blue;
 }, function (props) {
@@ -46,8 +49,8 @@ exports.Header = Header;
 var Description = _styledComponents["default"].p.attrs({
   className: "p"
 }).withConfig({
-  displayName: "Typography__Description",
-  componentId: "iyq6bj-1"
+  displayName: "TypographyOld__Description",
+  componentId: "sc-139pomo-1"
 })(["-webkit-font-smoothing:antialiased;font-size:13px;font-weight:normal;font-style:normal;line-height:18px;letter-spacing:normal;color:", ";", ";", ";", " ", ""], function (props) {
   return props.color;
 }, function (props) {
@@ -63,9 +66,9 @@ exports.Description = Description;
 var Body = _styledComponents["default"].p.attrs({
   className: "p"
 }).withConfig({
-  displayName: "Typography__Body",
-  componentId: "iyq6bj-2"
-})(["", " margin-top:8px;margin-bottom:8px;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;line-height:1.5;letter-spacing:normal;color:", ";", ";", ";", ""], _dashVariables.circularStd.book, function (props) {
+  displayName: "TypographyOld__Body",
+  componentId: "sc-139pomo-2"
+})(["margin-top:8px;margin-bottom:8px;-webkit-font-smoothing:antialiased;font-size:14px;font-weight:400;line-height:1.5;letter-spacing:normal;color:", ";", ";", ";", " ", ""], function (props) {
   return props.color;
 }, function (props) {
   return props.align === "center" && "text-align: center";
@@ -73,13 +76,13 @@ var Body = _styledComponents["default"].p.attrs({
   return props.align === "left" && "text-align: left";
 }, function (props) {
   return props.style ? props.style : null;
-});
+}, _dashVariables.circularStd.book);
 
 exports.Body = Body;
 
 var Label = _styledComponents["default"].p.withConfig({
-  displayName: "Typography__Label",
-  componentId: "iyq6bj-3"
+  displayName: "TypographyOld__Label",
+  componentId: "sc-139pomo-3"
 })(["color:", ";font-size:", ";line-height:20px;margin-bottom:3px;", " -webkit-font-smoothing:antialiased;letter-spacing:normal;color:", ";", ""], _swatches.swatches.black, function (props) {
   return props.fontSize ? props.fontSize : "14px";
 }, _dashVariables.circularStd.book, function (props) {
@@ -91,8 +94,8 @@ var Label = _styledComponents["default"].p.withConfig({
 exports.Label = Label;
 
 var Sofia = _styledComponents["default"].p.withConfig({
-  displayName: "Typography__Sofia",
-  componentId: "iyq6bj-4"
+  displayName: "TypographyOld__Sofia",
+  componentId: "sc-139pomo-4"
 })(["-webkit-font-smoothing:antialiased;letter-spacing:", ";margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";text-transform:", ";color:", ";", ";", ";", ";", ""], function (props) {
   return props.letterSpacing ? props.letterSpacing : "normal";
 }, function (props) {
@@ -120,8 +123,8 @@ var Sofia = _styledComponents["default"].p.withConfig({
 exports.Sofia = Sofia;
 
 var Circular = _styledComponents["default"].p.withConfig({
-  displayName: "Typography__Circular",
-  componentId: "iyq6bj-5"
+  displayName: "TypographyOld__Circular",
+  componentId: "sc-139pomo-5"
 })(["-webkit-font-smoothing:antialiased;letter-spacing:", ";margin-bottom:", ";margin-top:", ";font-size:", ";line-height:", ";text-transform:", ";color:", ";", ";", ";", ";", ""], function (props) {
   return props.letterSpacing ? props.letterSpacing : "normal";
 }, function (props) {

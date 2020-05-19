@@ -10,7 +10,7 @@ var _OptionBox = require("./OptionBox");
 
 var _Icon = require("../../elements/Icon");
 
-var _Typography = require("../../elements/Typography");
+var _TypographyOld = require("../../elements/TypographyOld");
 
 var _react2 = require("@storybook/react");
 
@@ -92,13 +92,13 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     id: 1
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "product"
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, null, "Product")), /*#__PURE__*/_react["default"].createElement(_OptionBox.OptionBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, null, "Product")), /*#__PURE__*/_react["default"].createElement(_OptionBox.OptionBox, {
     value: "push",
     onClick: clickOption,
     id: 2
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "push"
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, null, "Push")));
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, null, "Push")));
 }).add("only one selected option", function () {
   var _React$useState3 = _react["default"].useState({
     selectedOptions: []
@@ -129,11 +129,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     id: 1
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "product"
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, null, "Product")), /*#__PURE__*/_react["default"].createElement(_OptionBox.OptionBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, null, "Product")), /*#__PURE__*/_react["default"].createElement(_OptionBox.OptionBox, {
     value: "push",
     onClick: clickOption,
     id: 2
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "push"
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, null, "Push")));
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, null, "Push")));
 });

@@ -23,7 +23,7 @@ var _moment = _interopRequireDefault(require("moment"));
 
 var _dashVariables = require("../../../utils/_dashVariables");
 
-var _Typography = require("../../../elements/Typography");
+var _TypographyOld = require("../../../elements/TypographyOld");
 
 var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
 
@@ -168,9 +168,9 @@ var HeatMapGraph = function HeatMapGraph(props) {
           content: function content(d) {
             return /*#__PURE__*/_react["default"].createElement(_styles.StyledTooltip, {
               width: "70px"
-            }, /*#__PURE__*/_react["default"].createElement(_styles.StyledHeatmapTip, null, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+            }, /*#__PURE__*/_react["default"].createElement(_styles.StyledHeatmapTip, null, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
               color: _dashVariables.colorPicker.blue
-            }, d.y), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+            }, d.y), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
               color: _dashVariables.colorPicker.black
             }, d.data.metadata, "%")));
           }

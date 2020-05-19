@@ -10,7 +10,7 @@ var _Icon = require("../../elements/Icon");
 
 var _BreadcrumbItem = require("./BreadcrumbItem");
 
-var _Typography = require("../../elements/Typography");
+var _TypographyOld = require("../../elements/TypographyOld");
 
 require("./story-styles.scss");
 
@@ -39,7 +39,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "popup",
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     fontSize: "14px",
     textTransform: "lowercase"
   }, "crumbies"))), /*#__PURE__*/_react["default"].createElement(_BreadcrumbItem.BreadcrumbItem, {
@@ -49,7 +49,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "integrations",
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     fontSize: "14px",
     textTransform: "lowercase"
   }, "crumbies"))), /*#__PURE__*/_react["default"].createElement(_BreadcrumbItem.BreadcrumbItem, null, /*#__PURE__*/_react["default"].createElement("a", {
@@ -57,7 +57,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "upgrade",
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     fontSize: "14px",
     textTransform: "lowercase"
   }, "crumbies"))));
@@ -72,7 +72,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
     type: "popup",
     iconLeft: true,
     fill: "#ffffff"
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     fontSize: "14px",
     textTransform: "lowercase",
     color: "#ffffff"
@@ -84,7 +84,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
     type: "integrations",
     iconLeft: true,
     fill: "#ffffff"
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     fontSize: "14px",
     textTransform: "lowercase",
     color: "#ffffff"
@@ -96,7 +96,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
     type: "upgrade",
     iconLeft: true,
     fill: "#ffffff"
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     fontSize: "14px",
     textTransform: "lowercase",
     color: "#ffffff"

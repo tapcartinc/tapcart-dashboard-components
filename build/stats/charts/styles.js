@@ -11,7 +11,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _dashVariables = require("../../utils/_dashVariables");
 
-var _Typography = require("../../elements/Typography");
+var _TypographyOld = require("../../elements/TypographyOld");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -43,12 +43,12 @@ var StyledTitleSection = _styledComponents["default"].div.withConfig({
 })(["display:flex;flex-direction:column;align-items:flex-start;.title{display:flex;align-items:center;}"]);
 
 exports.StyledTitleSection = StyledTitleSection;
-var StyledTitle = (0, _styledComponents["default"])(_Typography.Body).withConfig({
+var StyledTitle = (0, _styledComponents["default"])(_TypographyOld.Body).withConfig({
   displayName: "styles__StyledTitle",
   componentId: "uezup0-3"
 })(["line-height:1;margin-top:8px;margin-bottom:2px;"]);
 exports.StyledTitle = StyledTitle;
-var StyledDescText = (0, _styledComponents["default"])(_Typography.Description).withConfig({
+var StyledDescText = (0, _styledComponents["default"])(_TypographyOld.Description).withConfig({
   displayName: "styles__StyledDescText",
   componentId: "uezup0-4"
 })(["font-size:13px;line-height:1;margin-top:2px;margin-bottom:4px;"]);

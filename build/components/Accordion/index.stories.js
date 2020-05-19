@@ -22,7 +22,7 @@ var _OptionBoxes = require("../OptionBoxes");
 
 var _OptionBox = require("../OptionBoxes/OptionBox");
 
-var _Typography = require("../../elements/Typography");
+var _TypographyOld = require("../../elements/TypographyOld");
 
 var _dashVariables = require("../../utils/_dashVariables");
 
@@ -149,10 +149,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     id: 1,
     complete: state.values.one ? true : false,
     errors: errors && errors["one"]
-  }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, null, errors && errors["one"] && !state.values.one ? /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+  }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, null, errors && errors["one"] && !state.values.one ? /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
     fontSize: "16px",
     color: _dashVariables.colorPicker.red
-  }, errors["one"][0]) : /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+  }, errors["one"][0]) : /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
     fontSize: "16px",
     color: _dashVariables.colorPicker.black
   }, "one")), /*#__PURE__*/_react["default"].createElement(_AccordionBody.AccordionBody, null, /*#__PURE__*/_react["default"].createElement(_index2.Input, {
@@ -163,7 +163,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     id: 2,
     complete: state.values.two ? true : false,
     errors: errors && errors["two"]
-  }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, null, "two"), /*#__PURE__*/_react["default"].createElement(_AccordionBody.AccordionBody, null, /*#__PURE__*/_react["default"].createElement(_index2.Input, {
+  }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, null, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
+    fontSize: "16px",
+    color: _dashVariables.colorPicker.black
+  }, "two")), /*#__PURE__*/_react["default"].createElement(_AccordionBody.AccordionBody, null, /*#__PURE__*/_react["default"].createElement(_index2.Input, {
     name: "two",
     value: state.values.two || "",
     onChange: setField
@@ -171,10 +174,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     id: 3,
     complete: state.values.three ? true : false,
     errors: errors && errors["three"]
-  }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, null, errors && errors["three"] && !state.values.three ? /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+  }, /*#__PURE__*/_react["default"].createElement(_AccordionLabel.AccordionLabel, null, errors && errors["three"] && !state.values.three ? /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
     fontSize: "16px",
     color: _dashVariables.colorPicker.red
-  }, errors["three"][0]) : /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+  }, errors["three"][0]) : /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
     fontSize: "16px",
     color: _dashVariables.colorPicker.black
   }, "three")), /*#__PURE__*/_react["default"].createElement(_AccordionBody.AccordionBody, null, /*#__PURE__*/_react["default"].createElement(_OptionBoxes.OptionBoxes, {
@@ -185,13 +188,13 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     id: 1
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "product"
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, null, "Product")), /*#__PURE__*/_react["default"].createElement(_OptionBox.OptionBox, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, null, "Product")), /*#__PURE__*/_react["default"].createElement(_OptionBox.OptionBox, {
     value: "push",
     onClick: clickOption,
     id: 2
   }, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "push"
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, null, "Push")))))), /*#__PURE__*/_react["default"].createElement(_Button.Button, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, null, "Push")))))), /*#__PURE__*/_react["default"].createElement(_Button.Button, {
     kind: "primary",
     onClick: checkForErrors
   }, "Submit"));
@@ -225,7 +228,7 @@ var StyledMenuExampleLabel = _styledComponents["default"].div.withConfig({
     type: "double-dot-dot-dot",
     fill: _dashVariables.colorPicker.blue,
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     letterSpacing: "1px",
     fontSize: "14px",
     color: _dashVariables.colorPicker.black
@@ -239,7 +242,7 @@ var StyledMenuExampleLabel = _styledComponents["default"].div.withConfig({
     type: "double-dot-dot-dot",
     fill: _dashVariables.colorPicker.blue,
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     letterSpacing: "1px",
     fontSize: "14px",
     color: _dashVariables.colorPicker.black
@@ -253,7 +256,7 @@ var StyledMenuExampleLabel = _styledComponents["default"].div.withConfig({
     type: "double-dot-dot-dot",
     fill: _dashVariables.colorPicker.blue,
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     letterSpacing: "1px",
     fontSize: "14px",
     color: _dashVariables.colorPicker.black
@@ -277,10 +280,10 @@ var StyledMenuExampleLabel = _styledComponents["default"].div.withConfig({
     type: "double-dot-dot-dot",
     fill: "#FFFFFF",
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     letterSpacing: "1px",
     fontSize: "14px",
-    color: "#FFFFFF"
+    color: _dashVariables.colorPicker.black
   }, "FEATURED"))), /*#__PURE__*/_react["default"].createElement(_AccordionBody.AccordionBody, {
     bodyClassName: "accordion-with-classname__body"
   }, "FEATURED BODY")), /*#__PURE__*/_react["default"].createElement(_AccordionPanel.AccordionPanel, {
@@ -292,7 +295,7 @@ var StyledMenuExampleLabel = _styledComponents["default"].div.withConfig({
     type: "double-dot-dot-dot",
     fill: _dashVariables.colorPicker.blue,
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     letterSpacing: "1px",
     fontSize: "14px",
     color: _dashVariables.colorPicker.black
@@ -305,7 +308,7 @@ var StyledMenuExampleLabel = _styledComponents["default"].div.withConfig({
     type: "double-dot-dot-dot",
     fill: _dashVariables.colorPicker.blue,
     iconLeft: true
-  }), /*#__PURE__*/_react["default"].createElement(_Typography.Circular, {
+  }), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Circular, {
     letterSpacing: "1px",
     fontSize: "14px",
     color: _dashVariables.colorPicker.black

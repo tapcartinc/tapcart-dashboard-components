@@ -152,7 +152,6 @@ Button.propTypes = {
   children: _propTypes["default"].node
 };
 Button.defaultProps = {
-  color: "blue",
   isLoading: false,
   isDisabled: false,
   thin: false,

@@ -1,0 +1,83 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import  {ThemeProvider} from '../../lib/utils/ThemeProvider';
+import  {base,  invert} from '../../lib/utils/_theme';
+import  {swatches} from '../../lib/utils/_swatches';
+import {H1, P1} from '../../lib/elements/Typography'
+import {Button} from '../../lib/components/Button'
+
+
+
+<Meta title="Design-Guidelines|Foundation/ThemeProvider"  />
+
+# ThemeProvider
+
+---
+<Story name="ThemeProvider">
+     <ThemeProvider theme={invert(base)}>
+       <div
+         style={{
+           height: "200px",
+           width: "100%",
+           background: `${swatches.blue}`,
+           padding: '20px',
+           display: 'flex',
+           flexDirection: 'column',
+           justifyContent: 'center',
+           alignItems: 'flex-start'
+         }}
+       >
+         <H1>Header</H1>
+         <P1>Subtext</P1>
+         <Button>Button</Button>
+       </div>
+     </ThemeProvider>
+</Story>
+
+<Story name="ThemeProviderTwo">
+  <div>
+    <ThemeProvider theme={base}>
+      <div
+         style={{
+           height: "200px",
+           width: "100%",
+           padding: '20px',
+           display: 'flex',
+           flexDirection: 'column',
+           justifyContent: 'center',
+           alignItems: 'flex-start'
+         }}
+       >
+         <H1>Header</H1>
+         <P1>Header</P1>
+         <Button>Button</Button>
+       </div>
+     </ThemeProvider>
+     </div>
+</Story>
+
+A ThemeProvider component is a wrapper that easily allows you to adjust the styling of the layout of components particularly on the marketing website.
+The theme prop takes predesigned options that correlate with Tapcart branding. This is important for efficient development and consistent styling.
+The current theme options are base, invert(base), offWhite, neutral, gradient(foregroundColor, backgroundColor). The cool thing about using the ThemeProvider is the styling that is adjusted easily based on the theme that is passed to the ThemeProvider component.
+
+
+<br />
+
+
+## ThemeProvider Example:
+
+```jsx
+ <ThemeProvider theme={invert(base)}>
+     <H1>Header</H1>
+     <P1>Header</P1>
+     <Button>Button</Button>
+ </ThemeProvider>
+```
+
+
+
+## API
+### [ThemeProvider](https://github.com/tapcartinc/tapcart-dashboard-components/blob/master/lib/utils/ThemeProvider.js)
+<Props of={ThemeProvider} />
+
+
+

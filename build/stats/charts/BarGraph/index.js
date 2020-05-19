@@ -11,7 +11,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reaviz = require("reaviz");
 
-var _Typography = require("../../../elements/Typography");
+var _TypographyOld = require("../../../elements/TypographyOld");
 
 var _dashVariables = require("../../../utils/_dashVariables");
 
@@ -113,10 +113,10 @@ var BarGraph = function BarGraph(props) {
           content: function content(d) {
             return /*#__PURE__*/_react["default"].createElement(_styles.StyledTooltip, {
               width: "70px"
-            }, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+            }, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
               fontSize: "11px",
               color: _dashVariables.colorPicker.black
-            }, d.key), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+            }, d.key), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
               color: _dashVariables.colorPicker.blue
             }, d.y.toLocaleString()));
           }

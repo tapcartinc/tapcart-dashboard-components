@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _Typography = require("../../elements/Typography");
+var _TypographyOld = require("../../elements/TypographyOld");
 
 var _dashVariables = require("../../utils/_dashVariables");
 
@@ -20,7 +20,7 @@ var PageHeader = function PageHeader(props) {
       description = props.description,
       children = props.children,
       childrenStyles = props.childrenStyles;
-  return /*#__PURE__*/_react["default"].createElement(StyledPageHeader, props, /*#__PURE__*/_react["default"].createElement(StyledPageHeaderMain, null, /*#__PURE__*/_react["default"].createElement(_Typography.Header, {
+  return /*#__PURE__*/_react["default"].createElement(StyledPageHeader, props, /*#__PURE__*/_react["default"].createElement(StyledPageHeaderMain, null, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Header, {
     style: {
       fontSize: 18,
       lineHeight: 1.28

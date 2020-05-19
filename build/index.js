@@ -6,19 +6,15 @@ Object.defineProperty(exports, "__esModule", {
 var _exportNames = {
   Icon: true,
   LinkTag: true,
-  IconButton: true,
   Loader: true,
   DraftStatus: true,
   TapcartPlanLogo: true,
   TapcartLogo: true,
-  Header: true,
-  Description: true,
-  Body: true,
-  placeholder: true,
-  input: true,
-  Label: true,
-  Sofia: true,
-  Circular: true,
+  H1: true,
+  H2: true,
+  P1: true,
+  P2: true,
+  P3: true,
   Accordion: true,
   AccordionBody: true,
   AccordionLabel: true,
@@ -95,12 +91,6 @@ Object.defineProperty(exports, "LinkTag", {
     return _LinkTag.LinkTag;
   }
 });
-Object.defineProperty(exports, "IconButton", {
-  enumerable: true,
-  get: function get() {
-    return _IconButton.IconButton;
-  }
-});
 Object.defineProperty(exports, "Loader", {
   enumerable: true,
   get: function get() {
@@ -125,52 +115,34 @@ Object.defineProperty(exports, "TapcartLogo", {
     return _TapcartLogo.TapcartLogo;
   }
 });
-Object.defineProperty(exports, "Header", {
+Object.defineProperty(exports, "H1", {
   enumerable: true,
   get: function get() {
-    return _Typography.Header;
+    return _Typography.H1;
   }
 });
-Object.defineProperty(exports, "Description", {
+Object.defineProperty(exports, "H2", {
   enumerable: true,
   get: function get() {
-    return _Typography.Description;
+    return _Typography.H2;
   }
 });
-Object.defineProperty(exports, "Body", {
+Object.defineProperty(exports, "P1", {
   enumerable: true,
   get: function get() {
-    return _Typography.Body;
+    return _Typography.P1;
   }
 });
-Object.defineProperty(exports, "placeholder", {
+Object.defineProperty(exports, "P2", {
   enumerable: true,
   get: function get() {
-    return _Typography.placeholder;
+    return _Typography.P2;
   }
 });
-Object.defineProperty(exports, "input", {
+Object.defineProperty(exports, "P3", {
   enumerable: true,
   get: function get() {
-    return _Typography.input;
-  }
-});
-Object.defineProperty(exports, "Label", {
-  enumerable: true,
-  get: function get() {
-    return _Typography.Label;
-  }
-});
-Object.defineProperty(exports, "Sofia", {
-  enumerable: true,
-  get: function get() {
-    return _Typography.Sofia;
-  }
-});
-Object.defineProperty(exports, "Circular", {
-  enumerable: true,
-  get: function get() {
-    return _Typography.Circular;
+    return _Typography.P3;
   }
 });
 Object.defineProperty(exports, "Accordion", {
@@ -555,8 +527,6 @@ Object.defineProperty(exports, "statsColors", {
 var _Icon = require("./elements/Icon");
 
 var _LinkTag = require("./elements/LinkTag");
-
-var _IconButton = require("./elements/IconButton");
 
 var _Loader = require("./elements/Loader");
 

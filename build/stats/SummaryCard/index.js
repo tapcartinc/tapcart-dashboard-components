@@ -17,7 +17,7 @@ var _moment = _interopRequireDefault(require("moment"));
 
 var _StatsIcon = require("../StatsIcon");
 
-var _Typography = require("../../elements/Typography");
+var _TypographyOld = require("../../elements/TypographyOld");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -132,7 +132,7 @@ var StyledCardRight = _styledComponents["default"].div.withConfig({
   componentId: "sc-144rjke-3"
 })(["margin-top:5px;"]);
 
-var StyledBody = (0, _styledComponents["default"])(_Typography.Body).withConfig({
+var StyledBody = (0, _styledComponents["default"])(_TypographyOld.Body).withConfig({
   displayName: "SummaryCard__StyledBody",
   componentId: "sc-144rjke-4"
 })(["font-size:14px;font-weight:500;width:100%;margin-left:7px;", ""], _dashVariables.circularStd.medium);

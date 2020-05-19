@@ -9,7 +9,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _dashVariables = require("../../../utils/_dashVariables");
 
-var _Typography = require("../../../elements/Typography");
+var _TypographyOld = require("../../../elements/TypographyOld");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -51,7 +51,7 @@ var StyledFieldInfo = _styledComponents["default"].div.withConfig({
 });
 
 exports.StyledFieldInfo = StyledFieldInfo;
-var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
+var StyledLabel = (0, _styledComponents["default"])(_TypographyOld.Body).withConfig({
   displayName: "styles__StyledLabel",
   componentId: "sc-2un77p-3"
 })(["line-height:20px;margin-top:0px;margin-bottom:3px;"]);

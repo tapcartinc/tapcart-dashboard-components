@@ -13,7 +13,7 @@ var _reaviz = require("reaviz");
 
 var _styles = require("../styles");
 
-var _Typography = require("../../../elements/Typography");
+var _TypographyOld = require("../../../elements/TypographyOld");
 
 var _ToolTip = require("../../../components/ToolTip");
 
@@ -278,22 +278,22 @@ var GraphDetails = function GraphDetails(_ref) {
                     background: "white",
                     padding: 10
                   }
-                }, /*#__PURE__*/_react["default"].createElement(_styles.StyledAreaMapTooltip, null, /*#__PURE__*/_react["default"].createElement(_styles.StyledLeftTooltip, null, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+                }, /*#__PURE__*/_react["default"].createElement(_styles.StyledAreaMapTooltip, null, /*#__PURE__*/_react["default"].createElement(_styles.StyledLeftTooltip, null, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
                   marginBottom: "2px",
                   marginTop: "5px",
                   fontSize: "11px",
                   color: _dashVariables.colorPicker.black
-                }, getTooltipFormat(d.x)), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, _defineProperty({
+                }, getTooltipFormat(d.x)), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, _defineProperty({
                   marginBottom: "5px",
                   marginTop: "0px",
                   fontSize: "11px",
                   color: _dashVariables.colorPicker.blue
                 }, "fontSize", "13px"), currency && /*#__PURE__*/_react["default"].createElement("span", null, currency), totalFormatted.toLocaleString())), /*#__PURE__*/_react["default"].createElement(_styles.StyledRightTooltip, {
                   upShift: currentTotal >= previousTotal
-                }, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+                }, /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
                   marginBottom: "0px",
                   color: currentTotal >= previousTotal ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                }, currentTotal > previousTotal && /*#__PURE__*/_react["default"].createElement("span", null, "\u2191"), currentTotal < previousTotal && /*#__PURE__*/_react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(currentTotal) - Number(previousTotal)) / ((Number(currentTotal) + Number(previousTotal)) / 2) * 100).toFixed(2)), "%"), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
+                }, currentTotal > previousTotal && /*#__PURE__*/_react["default"].createElement("span", null, "\u2191"), currentTotal < previousTotal && /*#__PURE__*/_react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(currentTotal) - Number(previousTotal)) / ((Number(currentTotal) + Number(previousTotal)) / 2) * 100).toFixed(2)), "%"), /*#__PURE__*/_react["default"].createElement(_TypographyOld.Sofia, {
                   marginTop: "0px",
                   fontSize: "10px",
                   color: currentTotal >= previousTotal ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
