@@ -9,7 +9,8 @@
     "build": "rm -rf build && babel lib -d build && npx webpack --config webpack.config.js --mode=production",
     "build:watch": "babel lib -w -d build",
     "prepublish": "npm run build",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "deploy-storybook": "./node_modules/.bin/chromatic --project-token=lppzth7mdeh"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "@storybook/addon-links": "^5.3.18",
     "@storybook/react": "^5.2.0-beta.32",
     "babel-loader": "^8.0.6",
+    "chromatic": "^4.0.3",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "fibers": "^4.0.2",
