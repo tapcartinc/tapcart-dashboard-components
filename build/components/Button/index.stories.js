@@ -133,7 +133,7 @@ var StyledRollingBall = _styledComponents["default"].div.attrs(function (props) 
     color: "white",
     onClick: triggerBall,
     invert: (0, _addonKnobs["boolean"])("invert", false)
-  }, (0, _addonKnobs.text)("btnTwoText", "No, click me!"))));
+  }, (0, _addonKnobs.text)("btnTwoText", "No, click me!!"))));
 }).addDecorator(_addonKnobs.withKnobs).add("wrapped in ThemeProvider", function () {
   return /*#__PURE__*/_react["default"].createElement(StyledButtons, null, /*#__PURE__*/_react["default"].createElement(_ThemeProvider.ThemeProvider, {
     theme: _theme.base
