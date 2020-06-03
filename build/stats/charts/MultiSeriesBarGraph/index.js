@@ -75,13 +75,13 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
   var colorScheme = (0, _useColorScheme.useColorScheme)(colors);
 
   var getFormat = function getFormat(d) {
-    if (unit === "DAYS" || unit === "WEEKS") {
-      return (0, _moment["default"])(d).format("MMM D");
-    }
-
-    if (unit === "HOURS") {
-      return (0, _moment["default"])("".concat(d, ":00:00"), "HH:mm:ss").format("h A");
-    }
+    // if (unit === "DAYS" || unit === "WEEKS") {
+    //   return moment(d).format("MMM D");
+    // }
+    // if (unit === "HOURS") {
+    //   return moment(`${d}:00:00`, "HH:mm:ss").format("h A");
+    // }
+    return (0, _moment["default"])(d).format("MMM D");
   }; // moment(d.key).format("MMM D")
 
 

@@ -85,16 +85,30 @@ exports.PieGraph = PieGraph;
 var Legend = function Legend(_ref) {
   var colors = _ref.colors,
       data = _ref.data;
+<<<<<<< HEAD
   return /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegend, {
+=======
+  var sortData = data.slice(0).reverse();
+  var sortcolors = colors.slice(0).reverse();
+  return _react["default"].createElement(_reaviz.DiscreteLegend, {
+>>>>>>> develop
     orientation: "horizontal",
     style: {
       margin: "0 auto"
     },
+<<<<<<< HEAD
     entries: data.map(function (dataSet, index) {
       return /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegendEntry, {
         label: dataSet.key,
         color: colors[index],
         symbol: /*#__PURE__*/_react["default"].createElement(_styles.StyledLevelSquare, null)
+=======
+    entries: sortData.map(function (dataSet, index) {
+      return _react["default"].createElement(_reaviz.DiscreteLegendEntry, {
+        label: dataSet.key,
+        color: sortcolors[index],
+        symbol: _react["default"].createElement(_styles.StyledLevelSquare, null)
+>>>>>>> develop
       });
     })
   });

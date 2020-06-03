@@ -43,7 +43,28 @@ var SummaryCard = function SummaryCard(props) {
       key: (0, _moment["default"])(dataSet.key)
     });
   });
+<<<<<<< HEAD
   return /*#__PURE__*/_react["default"].createElement(StyledSummaryCardWrapper, {
+=======
+
+  var getIcon = function getIcon(name) {
+    switch (name) {
+      case "Total App Sales":
+        return "orders";
+
+      case "App Sessions":
+        return "session";
+
+      case "Conversion Rate":
+        return "conversion";
+
+      default:
+        break;
+    }
+  };
+
+  return _react["default"].createElement(StyledSummaryCardWrapper, {
+>>>>>>> develop
     upShift: currentScore > prevPeriodScore,
     onClick: function onClick() {
       return removeCard(info);
@@ -52,9 +73,15 @@ var SummaryCard = function SummaryCard(props) {
     upShift: currentScore > prevPeriodScore
   }), /*#__PURE__*/_react["default"].createElement(StyledCardLeft, null, /*#__PURE__*/_react["default"].createElement("div", {
     className: "summary-card-header"
+<<<<<<< HEAD
   }, /*#__PURE__*/_react["default"].createElement(_StatsIcon.StatsIcon, {
     type: icon
   }), /*#__PURE__*/_react["default"].createElement(StyledBody, null, title)), /*#__PURE__*/_react["default"].createElement(StyledStatHeader, {
+=======
+  }, _react["default"].createElement(_StatsIcon.StatsIcon, {
+    type: getIcon(title)
+  }), _react["default"].createElement(StyledBody, null, title)), _react["default"].createElement(StyledStatHeader, {
+>>>>>>> develop
     lg: true
   }, currency && /*#__PURE__*/_react["default"].createElement("span", null, currency), currentScore), /*#__PURE__*/_react["default"].createElement(StyledDifference, {
     unShift: currentScore > prevPeriodScore
