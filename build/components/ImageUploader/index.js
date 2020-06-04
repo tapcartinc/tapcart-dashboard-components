@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -45,9 +45,9 @@ var ImageUploader = function ImageUploader(props) {
   (0, _react.useEffect)(function () {
     handleRef && handleRef(childRef);
   }, []);
-  return /*#__PURE__*/_react["default"].createElement(StyledImageInputWrapper, props, label && /*#__PURE__*/_react["default"].createElement(StyledLabel, null, label), /*#__PURE__*/_react["default"].createElement(StyledImageInput, _extends({
+  return _react["default"].createElement(StyledImageInputWrapper, props, label && _react["default"].createElement(StyledLabel, null, label), _react["default"].createElement(StyledImageInput, _extends({
     hasValue: value
-  }, props), /*#__PURE__*/_react["default"].createElement(_reactDropzone["default"], _extends({
+  }, props), _react["default"].createElement(_reactDropzone["default"], _extends({
     ref: childRef,
     onDrop: function onDrop(files) {
       return handleImageUpload(files, name);
@@ -56,11 +56,11 @@ var ImageUploader = function ImageUploader(props) {
     var getRootProps = _ref.getRootProps,
         getInputProps = _ref.getInputProps,
         isDragActive = _ref.isDragActive;
-    return /*#__PURE__*/_react["default"].createElement(StyledImageInputHolder, _extends({}, getRootProps(), props), /*#__PURE__*/_react["default"].createElement("input", getInputProps()), value ? /*#__PURE__*/_react["default"].createElement(StyledImage, {
+    return _react["default"].createElement(StyledImageInputHolder, _extends({}, getRootProps(), props), _react["default"].createElement("input", getInputProps()), value ? _react["default"].createElement(StyledImage, {
       src: value
-    }) : /*#__PURE__*/_react["default"].createElement(StyledImagePlaceholder, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+    }) : _react["default"].createElement(StyledImagePlaceholder, null, _react["default"].createElement(_Icon.Icon, {
       type: "upload-cloud"
-    }), /*#__PURE__*/_react["default"].createElement("p", null, placeholder ? placeholder : "Upload an image")));
+    }), _react["default"].createElement("p", null, placeholder ? placeholder : "Upload an image")));
   })));
 };
 

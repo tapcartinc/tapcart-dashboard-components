@@ -39,18 +39,18 @@ function SearchBar(_ref) {
     }
   };
 
-  return /*#__PURE__*/_react["default"].createElement(StyledForm, _extends({
+  return _react["default"].createElement(StyledForm, _extends({
     onSubmit: props.onChange,
     center: center,
     onKeyPress: checkEnter
-  }, props), /*#__PURE__*/_react["default"].createElement(SearchContainer, props, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+  }, props), _react["default"].createElement(SearchContainer, props, _react["default"].createElement(_Icon.Icon, {
     type: "search",
     style: {
       position: "absolute",
       left: 0,
       top: 14
     }
-  }), /*#__PURE__*/_react["default"].createElement("input", _extends({}, props, {
+  }), _react["default"].createElement("input", _extends({}, props, {
     onFocus: props.onFocus,
     ref: innerRef,
     name: name,

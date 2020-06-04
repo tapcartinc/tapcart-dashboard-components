@@ -20,12 +20,12 @@ var PageHeader = function PageHeader(props) {
       description = props.description,
       children = props.children,
       childrenStyles = props.childrenStyles;
-  return /*#__PURE__*/_react["default"].createElement(StyledPageHeader, props, /*#__PURE__*/_react["default"].createElement(StyledPageHeaderMain, null, /*#__PURE__*/_react["default"].createElement(_Typography.Header, {
+  return _react["default"].createElement(StyledPageHeader, props, _react["default"].createElement(StyledPageHeaderMain, null, _react["default"].createElement(_Typography.Header, {
     style: {
       fontSize: 18,
       lineHeight: 1.28
     }
-  }, header), /*#__PURE__*/_react["default"].createElement(StyledBody, props, description)), /*#__PURE__*/_react["default"].createElement(StyledPageHeaderChildren, {
+  }, header), _react["default"].createElement(StyledBody, props, description)), _react["default"].createElement(StyledPageHeaderChildren, {
     childrenStyles: childrenStyles
   }, children));
 };

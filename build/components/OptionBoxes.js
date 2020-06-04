@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -33,11 +33,11 @@ function OptionBoxes(props) {
       selectedOption = props.selectedOption,
       selectedOptions = props.selectedOptions;
   var currSelectedSingleOption = selectedOption;
-  return /*#__PURE__*/_react["default"].createElement(OptionBoxesWrapper, props, options.map(function (option, index) {
+  return _react["default"].createElement(OptionBoxesWrapper, props, options.map(function (option, index) {
     var included = selectedOptions && selectedOptions.filter(function (currOption) {
       return currOption.value === option.value;
     });
-    return /*#__PURE__*/_react["default"].createElement(Option, _extends({}, props, {
+    return _react["default"].createElement(Option, _extends({}, props, {
       first: index === 0,
       last: index === options.length - 1,
       selectedOption: currSelectedSingleOption && currSelectedSingleOption.value === option.value,
@@ -48,7 +48,7 @@ function OptionBoxes(props) {
         return clickOption(option);
       },
       optionCount: options.length
-    }), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+    }), _react["default"].createElement(_Icon.Icon, {
       type: option.icon,
       style: {
         marginBottom: 10

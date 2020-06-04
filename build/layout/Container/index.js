@@ -23,7 +23,7 @@ var ContainerWrapper = _styledComponents["default"].section.withConfig({
 });
 
 var Container = function Container(props) {
-  return /*#__PURE__*/_react["default"].createElement(ContainerWrapper, props);
+  return _react["default"].createElement(ContainerWrapper, props);
 };
 
 exports.Container = Container;

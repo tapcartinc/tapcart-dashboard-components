@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -42,11 +42,11 @@ var _default = {
 exports["default"] = _default;
 
 var statsIcon = function statsIcon() {
-  return /*#__PURE__*/_react["default"].createElement(StyledIcons, null, /*#__PURE__*/_react["default"].createElement(StyledIcon, null, /*#__PURE__*/_react["default"].createElement(_index.StatsIcon, {
+  return _react["default"].createElement(StyledIcons, null, _react["default"].createElement(StyledIcon, null, _react["default"].createElement(_index.StatsIcon, {
     type: "orders"
-  }), "orders"), /*#__PURE__*/_react["default"].createElement(StyledIcon, null, /*#__PURE__*/_react["default"].createElement(_index.StatsIcon, {
+  }), "orders"), _react["default"].createElement(StyledIcon, null, _react["default"].createElement(_index.StatsIcon, {
     type: "session"
-  }), "session"), /*#__PURE__*/_react["default"].createElement(StyledIcon, null, /*#__PURE__*/_react["default"].createElement(_index.StatsIcon, {
+  }), "session"), _react["default"].createElement(StyledIcon, null, _react["default"].createElement(_index.StatsIcon, {
     type: "conversion"
   }), "conversion"));
 };

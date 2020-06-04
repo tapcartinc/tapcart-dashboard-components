@@ -492,7 +492,7 @@ var multiSeriesBarGraph = function multiSeriesBarGraph() {
       data: 29653
     }]
   }];
-  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_index.MultiSeriesBarGraph, {
+  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_index.MultiSeriesBarGraph, {
     data: hourDataSet,
     unit: "HOURS",
     body: [{

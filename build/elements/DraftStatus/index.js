@@ -25,11 +25,11 @@ var DraftStatus = function DraftStatus(_ref) {
   var status = _ref.status,
       props = _objectWithoutProperties(_ref, ["status"]);
 
-  return /*#__PURE__*/_react["default"].createElement(StyledDraftStatusWrapper, {
+  return _react["default"].createElement(StyledDraftStatusWrapper, {
     status: status
-  }, /*#__PURE__*/_react["default"].createElement(StyledStatusCircle, _extends({}, props, {
+  }, _react["default"].createElement(StyledStatusCircle, _extends({}, props, {
     status: status
-  })), /*#__PURE__*/_react["default"].createElement(StyledStatusText, null, status || "Draft"));
+  })), _react["default"].createElement(StyledStatusText, null, status || "Draft"));
 };
 
 exports.DraftStatus = DraftStatus;

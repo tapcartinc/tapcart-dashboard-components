@@ -27,7 +27,7 @@ var IconButton = function IconButton(_ref) {
   var label = _ref.label,
       props = _objectWithoutProperties(_ref, ["label"]);
 
-  return /*#__PURE__*/_react["default"].createElement(IconButtonStyle, props, props.children, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+  return _react["default"].createElement(IconButtonStyle, props, props.children, _react["default"].createElement(_Icon.Icon, {
     type: props.type,
     fill: "white",
     height: "24px",

@@ -60,38 +60,38 @@ var SummaryCard = function SummaryCard(props) {
     }
   };
 
-  return /*#__PURE__*/_react["default"].createElement(StyledSummaryCardWrapper, {
+  return _react["default"].createElement(StyledSummaryCardWrapper, {
     upShift: currentScore > prevPeriodScore,
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, /*#__PURE__*/_react["default"].createElement(StyledBorderTop, {
+  }, _react["default"].createElement(StyledBorderTop, {
     upShift: currentScore > prevPeriodScore
-  }), /*#__PURE__*/_react["default"].createElement(StyledCardLeft, null, /*#__PURE__*/_react["default"].createElement("div", {
+  }), _react["default"].createElement(StyledCardLeft, null, _react["default"].createElement("div", {
     className: "summary-card-header"
-  }, /*#__PURE__*/_react["default"].createElement(_StatsIcon.StatsIcon, {
+  }, _react["default"].createElement(_StatsIcon.StatsIcon, {
     type: getIcon(title)
-  }), /*#__PURE__*/_react["default"].createElement(StyledBody, null, title)), /*#__PURE__*/_react["default"].createElement(StyledStatHeader, {
+  }), _react["default"].createElement(StyledBody, null, title)), _react["default"].createElement(StyledStatHeader, {
     lg: true
-  }, currency && /*#__PURE__*/_react["default"].createElement("span", null, currency), currentScore), /*#__PURE__*/_react["default"].createElement(StyledDifference, {
+  }, currency && _react["default"].createElement("span", null, currency), currentScore), _react["default"].createElement(StyledDifference, {
     unShift: currentScore > prevPeriodScore
-  }, currentScore > prevPeriodScore && /*#__PURE__*/_react["default"].createElement("span", {
+  }, currentScore > prevPeriodScore && _react["default"].createElement("span", {
     className: "arrow"
-  }, "\u2191"), currentScore < prevPeriodScore && /*#__PURE__*/_react["default"].createElement("span", {
+  }, "\u2191"), currentScore < prevPeriodScore && _react["default"].createElement("span", {
     className: "arrow"
-  }, "\u2193"), currency && /*#__PURE__*/_react["default"].createElement("span", null, currency, " "), prevPeriodScore, " (", percentageDifference, "%)")), /*#__PURE__*/_react["default"].createElement(StyledCardRight, null, data.length > 0 && /*#__PURE__*/_react["default"].createElement(_reaviz.AreaSparklineChart, {
+  }, "\u2193"), currency && _react["default"].createElement("span", null, currency, " "), prevPeriodScore, " (", percentageDifference, "%)")), _react["default"].createElement(StyledCardRight, null, data.length > 0 && _react["default"].createElement(_reaviz.AreaSparklineChart, {
     width: 113,
     height: 80,
     data: updatedDataDates,
-    series: /*#__PURE__*/_react["default"].createElement(_reaviz.AreaSeries, {
+    series: _react["default"].createElement(_reaviz.AreaSeries, {
       tooltip: null,
       colorScheme: [currentColor],
       interpolation: "smooth",
-      symbols: /*#__PURE__*/_react["default"].createElement(_reaviz.PointSeries, {
+      symbols: _react["default"].createElement(_reaviz.PointSeries, {
         show: "last",
-        point: /*#__PURE__*/_react["default"].createElement(_reaviz.ScatterPoint, {
+        point: _react["default"].createElement(_reaviz.ScatterPoint, {
           symbol: function symbol(d) {
-            return /*#__PURE__*/_react["default"].createElement("g", null, /*#__PURE__*/_react["default"].createElement("circle", {
+            return _react["default"].createElement("g", null, _react["default"].createElement("circle", {
               cx: "1",
               cy: "0",
               r: "3",
@@ -102,23 +102,23 @@ var SummaryCard = function SummaryCard(props) {
           }
         })
       }),
-      area: /*#__PURE__*/_react["default"].createElement(_reaviz.Area, {
+      area: _react["default"].createElement(_reaviz.Area, {
         style: {
           opacity: 0.6
         },
-        gradient: /*#__PURE__*/_react["default"].createElement(_reaviz.Gradient, {
-          stops: [/*#__PURE__*/_react["default"].createElement(_reaviz.GradientStop, {
+        gradient: _react["default"].createElement(_reaviz.Gradient, {
+          stops: [_react["default"].createElement(_reaviz.GradientStop, {
             offset: "20%",
             stopOpacity: 0,
             key: "stop"
-          }), /*#__PURE__*/_react["default"].createElement(_reaviz.GradientStop, {
+          }), _react["default"].createElement(_reaviz.GradientStop, {
             offset: "90%",
             stopOpacity: 0.3,
             key: "start"
           })]
         })
       }),
-      line: /*#__PURE__*/_react["default"].createElement(_reaviz.Line, {
+      line: _react["default"].createElement(_reaviz.Line, {
         strokeWidth: 2
       })
     })

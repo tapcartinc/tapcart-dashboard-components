@@ -25,9 +25,9 @@ var DottedLineContainerStyle = _styledComponents["default"].section.withConfig({
 var DottedLineContainer = function DottedLineContainer(_ref) {
   var props = _extends({}, _ref);
 
-  return /*#__PURE__*/_react["default"].createElement("div", {
+  return _react["default"].createElement("div", {
     className: "container"
-  }, /*#__PURE__*/_react["default"].createElement(DottedLineContainerStyle, props, props.children));
+  }, _react["default"].createElement(DottedLineContainerStyle, props, props.children));
 };
 
 exports.DottedLineContainer = DottedLineContainer;

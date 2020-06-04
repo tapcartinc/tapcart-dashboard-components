@@ -12,7 +12,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var EaseIn = function EaseIn(props) {
-  return /*#__PURE__*/_react["default"].createElement(StyledEaseIn, {
+  return _react["default"].createElement(StyledEaseIn, {
     easedIn: props.easedIn
   }, props.children);
 };

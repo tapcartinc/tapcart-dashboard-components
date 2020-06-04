@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -29,14 +29,14 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 function BoxedToggle(props) {
   var SunIcon = function SunIcon(props) {
-    return /*#__PURE__*/_react["default"].createElement("svg", _extends({
+    return _react["default"].createElement("svg", _extends({
       width: "20px",
       height: "20px",
       viewBox: "0 0 20 20",
       version: "1.1",
       xmlns: "http://www.w3.org/2000/svg",
       style: props.style
-    }, props), /*#__PURE__*/_react["default"].createElement("g", {
+    }, props), _react["default"].createElement("g", {
       id: "Style-Guide",
       stroke: "none",
       strokeWidth: "1",
@@ -44,41 +44,41 @@ function BoxedToggle(props) {
       fillRule: "evenodd",
       strokeLinecap: "round",
       strokeLinejoin: "round"
-    }, /*#__PURE__*/_react["default"].createElement("g", {
+    }, _react["default"].createElement("g", {
       transform: "translate(-190.000000, -2015.000000)",
       id: "Toggle-Apple",
       stroke: "#FFFFFF",
       strokeWidth: "1.6"
-    }, /*#__PURE__*/_react["default"].createElement("g", {
+    }, _react["default"].createElement("g", {
       transform: "translate(184.000000, 2009.000000)"
-    }, /*#__PURE__*/_react["default"].createElement("g", {
+    }, _react["default"].createElement("g", {
       id: "sun",
       transform: "translate(7.000000, 7.000000)"
-    }, /*#__PURE__*/_react["default"].createElement("path", {
+    }, _react["default"].createElement("path", {
       d: "M0,8.8 L0.8,8.8",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M2.56,2.56 L3.12,3.12",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M8.8,0 L8.8,0.8",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M15.04,2.56 L14.48,3.12",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M17.6,8.8 L16.8,8.8",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M15.04,15.04 L14.48,14.48",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M8.8,17.6 L8.8,16.8",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M2.56,15.04 L3.12,14.48",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("circle", {
+    }), _react["default"].createElement("circle", {
       id: "Oval",
       cx: "8.8",
       cy: "8.8",
@@ -87,14 +87,14 @@ function BoxedToggle(props) {
   };
 
   var MoonIcon = function MoonIcon(props) {
-    return /*#__PURE__*/_react["default"].createElement("svg", _extends({
+    return _react["default"].createElement("svg", _extends({
       width: "20px",
       height: "20px",
       viewBox: "0 0 20 20",
       version: "1.1",
       xmlns: "http://www.w3.org/2000/svg",
       style: props.style
-    }, props), /*#__PURE__*/_react["default"].createElement("g", {
+    }, props), _react["default"].createElement("g", {
       id: "Style-Guide",
       stroke: "none",
       strokeWidth: "1",
@@ -102,29 +102,29 @@ function BoxedToggle(props) {
       fillRule: "evenodd",
       strokeLinecap: "round",
       strokeLinejoin: "round"
-    }, /*#__PURE__*/_react["default"].createElement("g", {
+    }, _react["default"].createElement("g", {
       transform: "translate(-223.000000, -2072.000000)",
       id: "Toggle-Android",
       stroke: "#FFFFFF",
       strokeWidth: "1.6"
-    }, /*#__PURE__*/_react["default"].createElement("g", {
+    }, _react["default"].createElement("g", {
       transform: "translate(184.000000, 2066.000000)"
-    }, /*#__PURE__*/_react["default"].createElement("g", {
+    }, _react["default"].createElement("g", {
       id: "moon-stars",
       transform: "translate(40.000000, 7.000000)"
-    }, /*#__PURE__*/_react["default"].createElement("path", {
+    }, _react["default"].createElement("path", {
       d: "M13.6,12 C9.2,12 5.6,8.4 5.6,4 C5.6,3.28 5.68,2.56 5.92,1.92 C2.48,2.8 0,5.92 0,9.6 C0,14 3.6,17.6 8,17.6 C11.68,17.6 14.8,15.12 15.68,11.68 C15.04,11.92 14.32,12 13.6,12 Z",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M11.2,0 L11.2,3.2",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M9.6,1.6 L12.8,1.6",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M16,4.8 L16,8",
       id: "Path"
-    }), /*#__PURE__*/_react["default"].createElement("path", {
+    }), _react["default"].createElement("path", {
       d: "M14.4,6.4 L17.6,6.4",
       id: "Path"
     }))))));
@@ -132,14 +132,14 @@ function BoxedToggle(props) {
 
   switch (props.type) {
     case "basic":
-      return /*#__PURE__*/_react["default"].createElement(BoxedToggleWrapper, _extends({
+      return _react["default"].createElement(BoxedToggleWrapper, _extends({
         style: {
           margin: 5
         },
         border: _dashVariables.colorPicker.grayBlue,
         backgroundOn: _dashVariables.colorPicker.green100,
         backgroundOff: _dashVariables.colorPicker.offWhite
-      }, props), /*#__PURE__*/_react["default"].createElement(BoxedToggleInput, _extends({
+      }, props), _react["default"].createElement(BoxedToggleInput, _extends({
         type: "checkbox",
         id: props.name,
         checked: props.toggleState,
@@ -155,12 +155,12 @@ function BoxedToggle(props) {
         }
       }, props, {
         autoComplete: "new-password"
-      })), /*#__PURE__*/_react["default"].createElement(BoxedToggleLabel, _extends({
+      })), _react["default"].createElement(BoxedToggleLabel, _extends({
         border: _dashVariables.colorPicker.grayBlue,
         backgroundOn: _dashVariables.colorPicker.green100,
         backgroundOff: _dashVariables.colorPicker.offWhite,
         htmlFor: props.name
-      }, props), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+      }, props), _react["default"].createElement(_Icon.Icon, {
         type: "checkmark-small",
         onClick: function onClick() {
           return props.onChange(!props.toggleState);
@@ -172,7 +172,7 @@ function BoxedToggle(props) {
           left: 10,
           marginTop: 12
         }
-      }), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+      }), _react["default"].createElement(_Icon.Icon, {
         type: "small-close",
         onClick: function onClick() {
           return props.onChange(!props.toggleState);
@@ -187,14 +187,14 @@ function BoxedToggle(props) {
       })));
 
     case "day/night":
-      return /*#__PURE__*/_react["default"].createElement(BoxedToggleWrapper, _extends({
+      return _react["default"].createElement(BoxedToggleWrapper, _extends({
         style: {
           margin: 5
         },
         border: _dashVariables.colorPicker.blue,
         backgroundOn: _dashVariables.colorPicker.yellow,
         backgroundOff: _dashVariables.colorPicker.blue
-      }, props), /*#__PURE__*/_react["default"].createElement(BoxedToggleInput, _extends({
+      }, props), _react["default"].createElement(BoxedToggleInput, _extends({
         type: "checkbox",
         id: props.name,
         checked: props.toggleState,
@@ -209,12 +209,12 @@ function BoxedToggle(props) {
           position: "absolute"
         },
         autoComplete: "new-password"
-      }, props)), /*#__PURE__*/_react["default"].createElement(BoxedToggleLabel, _extends({
+      }, props)), _react["default"].createElement(BoxedToggleLabel, _extends({
         border: _dashVariables.colorPicker.blue,
         backgroundOn: _dashVariables.colorPicker.yellow,
         backgroundOff: _dashVariables.colorPicker.blue,
         htmlFor: props.name
-      }, props), /*#__PURE__*/_react["default"].createElement(SunIcon, {
+      }, props), _react["default"].createElement(SunIcon, {
         type: "checkmark-small",
         onClick: function onClick() {
           return props.onChange(!props.toggleState);
@@ -226,7 +226,7 @@ function BoxedToggle(props) {
           left: 7,
           marginTop: 6
         }
-      }), /*#__PURE__*/_react["default"].createElement(MoonIcon, {
+      }), _react["default"].createElement(MoonIcon, {
         onClick: function onClick() {
           return props.onChange(!props.toggleState);
         },
@@ -240,14 +240,14 @@ function BoxedToggle(props) {
       })));
 
     case "apple/android":
-      return /*#__PURE__*/_react["default"].createElement(BoxedToggleWrapper, _extends({
+      return _react["default"].createElement(BoxedToggleWrapper, _extends({
         style: {
           margin: 5
         },
         border: _dashVariables.colorPicker.androidGreen,
         backgroundOn: _dashVariables.colorPicker.black,
         backgroundOff: _dashVariables.colorPicker.androidGreen
-      }, props), /*#__PURE__*/_react["default"].createElement(BoxedToggleInput, _extends({
+      }, props), _react["default"].createElement(BoxedToggleInput, _extends({
         type: "checkbox",
         id: props.name,
         checked: props.toggleState,
@@ -262,12 +262,12 @@ function BoxedToggle(props) {
           position: "absolute"
         },
         autoComplete: "new-password"
-      }, props)), /*#__PURE__*/_react["default"].createElement(BoxedToggleLabel, _extends({
+      }, props)), _react["default"].createElement(BoxedToggleLabel, _extends({
         border: _dashVariables.colorPicker.androidGreen,
         backgroundOn: _dashVariables.colorPicker.black,
         backgroundOff: _dashVariables.colorPicker.androidGreen,
         htmlFor: props.name
-      }, props), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+      }, props), _react["default"].createElement(_Icon.Icon, {
         type: "apple",
         onClick: function onClick() {
           return props.onChange(!props.toggleState);
@@ -282,7 +282,7 @@ function BoxedToggle(props) {
           width: 18,
           height: 18
         }
-      }), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
+      }), _react["default"].createElement(_Icon.Icon, {
         type: "android",
         onClick: function onClick() {
           return props.onChange(!props.toggleState);
@@ -299,7 +299,7 @@ function BoxedToggle(props) {
       })));
 
     default:
-      return /*#__PURE__*/_react["default"].createElement("div", null);
+      return _react["default"].createElement("div", null);
   }
 }
 
