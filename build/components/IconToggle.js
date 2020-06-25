@@ -18,11 +18,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function IconToggle(props) {
-  return _react["default"].createElement(IconToggleWrapper, _extends({
+  return /*#__PURE__*/_react["default"].createElement(IconToggleWrapper, _extends({
     style: {
       margin: 5
     }
-  }, props), _react["default"].createElement(IconToggleInput, {
+  }, props), /*#__PURE__*/_react["default"].createElement(IconToggleInput, {
     type: "checkbox",
     id: props.name,
     checked: props.value,
@@ -31,9 +31,9 @@ function IconToggle(props) {
     style: {
       position: "absolute"
     }
-  }), _react["default"].createElement(IconToggleLabel, _extends({
+  }), /*#__PURE__*/_react["default"].createElement(IconToggleLabel, _extends({
     htmlFor: props.name
-  }, props), _react["default"].createElement(_Icon.Icon, {
+  }, props), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: props.icons[0],
     fill: props.value ? "darkgray" : "white",
     style: {
@@ -43,7 +43,7 @@ function IconToggle(props) {
       height: "30px",
       padding: "4px"
     }
-  }), _react["default"].createElement(_Icon.Icon, {
+  }), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: props.icons[1],
     fill: props.value ? "white" : "darkgray",
     style: {

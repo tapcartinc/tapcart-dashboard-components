@@ -155,7 +155,7 @@ var barGraph = function barGraph() {
       data: 99782
     }]
   }];
-  return _react["default"].createElement(_react["default"].Fragment, null, _react["default"].createElement(_index.BarGraph // data={deviceData}
+  return /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, /*#__PURE__*/_react["default"].createElement(_index.BarGraph // data={deviceData}
   , {
     data: dataSet,
     colors: ["#4cb7c5", "#02018c"],

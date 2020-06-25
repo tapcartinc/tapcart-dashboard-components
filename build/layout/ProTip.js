@@ -14,7 +14,7 @@ var _variables = require("../utils/_variables");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var ProTip = function ProTip(props) {
-  return _react["default"].createElement(ProTipStyle, props, _react["default"].createElement("span", null, "Pro Tip:"), _react["default"].createElement("span", null, props.tip), props.children);
+  return /*#__PURE__*/_react["default"].createElement(ProTipStyle, props, /*#__PURE__*/_react["default"].createElement("span", null, "Pro Tip:"), /*#__PURE__*/_react["default"].createElement("span", null, props.tip), props.children);
 };
 
 exports.ProTip = ProTip;

@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -37,7 +37,7 @@ function SelectDropdown(props) {
   var _customStyles;
 
   var DropdownIndicator = function DropdownIndicator(props) {
-    return _reactSelect.components.DropdownIndicator && _react["default"].createElement(_reactSelect.components.DropdownIndicator, props, _react["default"].createElement(_Icon.Icon, {
+    return _reactSelect.components.DropdownIndicator && /*#__PURE__*/_react["default"].createElement(_reactSelect.components.DropdownIndicator, props, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
       type: "arrow-down",
       fill: "darkgray",
       style: props.selectProps.menuIsOpen ? {
@@ -118,7 +118,7 @@ function SelectDropdown(props) {
       display: "none"
     });
   }), _customStyles);
-  return _react["default"].createElement(_reactSelect["default"], _extends({}, props, {
+  return /*#__PURE__*/_react["default"].createElement(_reactSelect["default"], _extends({}, props, {
     components: {
       DropdownIndicator: DropdownIndicator
     },

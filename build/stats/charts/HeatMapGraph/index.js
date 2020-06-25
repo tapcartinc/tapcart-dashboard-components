@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -39,19 +39,23 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
@@ -141,32 +145,32 @@ var HeatMapGraph = function HeatMapGraph(props) {
       info = props.info,
       body = props.body,
       colors = props.colors;
-  return _react["default"].createElement(_styles.StyledGraphCard, {
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_CardHeading["default"], {
+  }, /*#__PURE__*/_react["default"].createElement(_CardHeading["default"], {
     range: range,
     info: info,
     body: body,
     tooltip: tooltip,
     currency: currency
-  }), _react["default"].createElement(_reaviz.Heatmap, {
+  }), /*#__PURE__*/_react["default"].createElement(_reaviz.Heatmap, {
     height: 195,
     width: 515,
     data: cells,
-    series: _react["default"].createElement(_reaviz.HeatmapSeries, {
+    series: /*#__PURE__*/_react["default"].createElement(_reaviz.HeatmapSeries, {
       padding: 0.14,
-      cell: _react["default"].createElement(_reaviz.HeatmapCell, {
+      cell: /*#__PURE__*/_react["default"].createElement(_reaviz.HeatmapCell, {
         rx: 1,
         ry: 1,
-        tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
+        tooltip: /*#__PURE__*/_react["default"].createElement(_reaviz.ChartTooltip, {
           content: function content(d) {
-            return _react["default"].createElement(_styles.StyledTooltip, {
+            return /*#__PURE__*/_react["default"].createElement(_styles.StyledTooltip, {
               width: "80px"
-            }, _react["default"].createElement(_styles.StyledHeatmapTip, null, _react["default"].createElement(_Typography.Sofia, {
+            }, /*#__PURE__*/_react["default"].createElement(_styles.StyledHeatmapTip, null, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
               color: _dashVariables.colorPicker.black
-            }, d.data.metadata, "%"), _react["default"].createElement(_Typography.Sofia, {
+            }, d.data.metadata, "%"), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
               color: _dashVariables.colorPicker.blue
             }, d.y, " users")));
           }
@@ -174,12 +178,12 @@ var HeatMapGraph = function HeatMapGraph(props) {
       }),
       colorScheme: colors
     }),
-    xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
+    xAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxis, {
       type: "time",
-      tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
+      tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
         interval: _d3Time.timeDay,
         line: null,
-        label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
+        label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
           padding: 5,
           format: function format(d) {
             return (0, _moment["default"])(d, "HH:mm").format("h a");
@@ -187,17 +191,17 @@ var HeatMapGraph = function HeatMapGraph(props) {
         })
       })
     }),
-    yAxis: _react["default"].createElement(_reaviz.LinearYAxis, {
+    yAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxis, {
       type: "time",
       axisLine: null,
-      tickSeries: _react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
+      tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
         line: null,
-        label: _react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
+        label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
           padding: 10
         })
       })
     })
-  }), legendKeys && _react["default"].createElement(_styles.StyledCustomLegend, {
+  }), legendKeys && /*#__PURE__*/_react["default"].createElement(_styles.StyledCustomLegend, {
     data: legendKeys
   }));
 };
