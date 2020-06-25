@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 require("../../../utils/main.css");
 
+var _moment = _interopRequireDefault(require("moment"));
+
 var _index = require("./index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -20,77 +22,35 @@ var _default = {
 exports["default"] = _default;
 
 var areaGraph = function areaGraph() {
-  var dayDataSales = [{
-    key: "Current",
-    data: [{
-      key: "2020-03-29T19:59:59.000Z",
-      data: 156216888,
-      id: 0
-    }, {
-      key: "2020-03-30T19:59:59.000Z",
-      data: 155696295,
-      id: 1
-    }, {
-      key: "2020-03-31T19:59:59.000Z",
-      data: 156633117,
-      id: 2
-    }, {
-      key: "2020-04-01T19:59:59.000Z",
-      data: 155869120,
-      id: 3
-    }, {
-      key: "2020-04-02T19:59:59.000Z",
-      data: 155868079,
-      id: 4
-    }, {
-      key: "2020-04-03T19:59:59.000Z",
-      data: 139684959,
-      id: 5
-    }, {
-      key: "2020-04-04T19:59:59.000Z",
-      data: 130352320,
-      id: 6
-    }, {
-      key: "2020-04-05T15:59:59.000Z",
-      data: 72494594,
-      id: 7
-    }]
-  }, {
-    key: "Previous",
-    data: [{
-      key: "2020-03-29T19:59:59.000Z",
-      data: 155752079,
-      id: 0
-    }, {
-      key: "2020-03-30T19:59:59.000Z",
-      data: 155980982,
-      id: 1
-    }, {
-      key: "2020-03-31T19:59:59.000Z",
-      data: 156208379,
-      id: 2
-    }, {
-      key: "2020-04-01T19:59:59.000Z",
-      data: 155762202,
-      id: 3
-    }, {
-      key: "2020-04-02T19:59:59.000Z",
-      data: 155822188,
-      id: 4
-    }, {
-      key: "2020-04-03T19:59:59.000Z",
-      data: 155451814,
-      id: 5
-    }, {
-      key: "2020-04-04T19:59:59.000Z",
-      data: 155485583,
-      id: 6
-    }, {
-      key: "2020-04-05T19:59:59.000Z",
-      data: 155971653,
-      id: 7
-    }]
-  }];
+  // const fakeData = [
+  //   {
+  //     key: "Threat Intel",
+  //     data: [
+  //       { key: moment("2020-02-17T08:00:00.000Z").toDate(), id: "0", data: 18 },
+  //       { key: moment("2020-02-21T08:00:00.000Z").toDate(), id: "1", data: 3 },
+  //       { key: moment("2020-02-26T08:00:00.000Z").toDate(), id: "2", data: 14 },
+  //       { key: moment("2020-02-29T08:00:00.000Z").toDate(), id: "3", data: 18 },
+  //     ],
+  //   },
+  //   {
+  //     key: "DLP",
+  //     data: [
+  //       { key: moment("2020-02-17T08:00:00.000Z").toDate(), id: "0", data: 12 },
+  //       { key: moment("2020-02-21T08:00:00.000Z").toDate(), id: "1", data: 8 },
+  //       { key: moment("2020-02-26T08:00:00.000Z").toDate(), id: "2", data: 7 },
+  //       { key: moment("2020-02-29T08:00:00.000Z").toDate(), id: "3", data: 16 },
+  //     ],
+  //   },
+  //   {
+  //     key: "Syslog",
+  //     data: [
+  //       { key: moment("2020-02-17T08:00:00.000Z").toDate(), id: "0", data: 12 },
+  //       { key: moment("2020-02-21T08:00:00.000Z").toDate(), id: "1", data: 9 },
+  //       { key: moment("2020-02-26T08:00:00.000Z").toDate(), id: "2", data: 4 },
+  //       { key: moment("2020-02-29T08:00:00.000Z").toDate(), id: "3", data: 1 },
+  //     ],
+  //   },
+  // ];
   var hourDataSales = [{
     key: "Current",
     data: [{
@@ -1666,7 +1626,7 @@ var areaGraph = function areaGraph() {
     // ]
 
   }];
-  var dayDataSessions = [{
+  var fakeData = [{
     key: "New",
     data: [{
       key: "2020-03-29T23:59:59.000Z",
@@ -1680,27 +1640,12 @@ var areaGraph = function areaGraph() {
       key: "2020-03-31T12:59:59.000Z",
       id: 2,
       data: 156713
-    }, {
-      key: "2020-04-01T12:59:59.000Z",
-      id: 3,
-      data: 154233
-    }, {
-      key: "2020-04-02T12:59:59.000Z",
-      id: 4,
-      data: 156218
-    }, {
-      key: "2020-04-03T12:59:59.000Z",
-      id: 5,
-      data: 146928
-    }, {
-      key: "2020-04-04T12:59:59.000Z",
-      id: 6,
-      data: 130956
-    }, {
-      key: "2020-04-05T11:59:59.000Z",
-      id: 7,
-      data: 111110
-    }]
+    } // { key: "2020-04-01T12:59:59.000Z", id: 3, data: 154233 },
+    // { key: "2020-04-02T12:59:59.000Z", id: 4, data: 156218 },
+    // { key: "2020-04-03T12:59:59.000Z", id: 5, data: 146928 },
+    // { key: "2020-04-04T12:59:59.000Z", id: 6, data: 130956 },
+    // { key: "2020-04-05T11:59:59.000Z", id: 7, data: 111110 },
+    ]
   }, {
     key: "Returning",
     data: [{
@@ -1715,28 +1660,31 @@ var areaGraph = function areaGraph() {
       key: "2020-03-31T12:59:59.000Z",
       id: 2,
       data: 156926
-    }, {
-      key: "2020-04-01T12:59:59.000Z",
-      id: 3,
-      data: 155273
-    }, {
-      key: "2020-04-02T12:59:59.000Z",
-      id: 4,
-      data: 156177
-    }, {
-      key: "2020-04-03T12:59:59.000Z",
-      id: 5,
-      data: 147063
-    }, {
-      key: "2020-04-04T12:59:59.000Z",
-      id: 6,
-      data: 130201
-    }, {
-      key: "2020-04-05T11:59:59.000Z",
-      id: 7,
-      data: 111130
-    }]
-  }];
+    } // { key: "2020-04-01T12:59:59.000Z", id: 3, data: 155273 },
+    // { key: "2020-04-02T12:59:59.000Z", id: 4, data: 156177 },
+    // { key: "2020-04-03T12:59:59.000Z", id: 5, data: 147063 },
+    // { key: "2020-04-04T12:59:59.000Z", id: 6, data: 130201 },
+    // { key: "2020-04-05T11:59:59.000Z", id: 7, data: 111130 },
+    ]
+  }]; // const fakeData = [
+  //   {
+  //     key: "Current",
+  //     data: [
+  //       { key: "2020-04-15", data: 54304715, id: "0" },
+  //       { key: "2020-04-16", data: 104070107, id: "1" },
+  //       { key: "2020-04-17", data: 103928612, id: "2" },
+  //     ],
+  //   },
+  //   {
+  //     key: "Previous",
+  //     data: [
+  //       { key: "2020-04-15", data: 247712, id: "0" },
+  //       { key: "2020-04-16", data: 249488, id: "1" },
+  //       { key: "2020-04-17", data: 145418, id: "2" },
+  //     ],
+  //   },
+  // ];
+
   var hourDataSessions = [{
     key: "New",
     data: [{
@@ -1958,7 +1906,7 @@ var areaGraph = function areaGraph() {
   }]];
   return _react["default"].createElement(_index.AreaGraph, {
     stacked: true,
-    data: weekDataSales,
+    data: fakeData,
     gradient: true,
     body: [{
       title: "Total Sales",
@@ -1966,7 +1914,7 @@ var areaGraph = function areaGraph() {
       previousTotal: "1091.1M",
       percentChange: 0.04
     }],
-    unit: "WEEKS",
+    unit: "DAYS",
     range: {
       start: "2020-04-02T00:00:00.000-07:00",
       end: "2020-04-09T23:59:59.999-07:00"

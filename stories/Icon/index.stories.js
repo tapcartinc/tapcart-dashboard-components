@@ -20,7 +20,7 @@ const StyledIcon = styled.li`
   text-align: center;
   line-height: 14px;
   font-size: 12px;
-  ${props =>
+  ${(props) =>
     props.whiteIcon &&
     `background: ${colorPicker.blue}; border-radius: 3px; color: white; padding: 10px;`}
 
@@ -32,7 +32,7 @@ const StyledIcon = styled.li`
 export default {
   component: Icon,
   title: "Design Elements/Icon",
-  decorators: [withKnobs]
+  decorators: [withKnobs],
 };
 
 export const icon = () => {
@@ -524,6 +524,26 @@ export const icon = () => {
       <StyledIcon>
         <Icon type="empty-chart-icon" />
         empty-chart-icon
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="quadpay" />
+        quadpay
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="afterpay" />
+        afterpay
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="klarna" />
+        klarna
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="affirm" />
+        affirm
+      </StyledIcon>
+      <StyledIcon>
+        <Icon type="sezzle" />
+        sezzle
       </StyledIcon>
     </StyledIcons>
   );

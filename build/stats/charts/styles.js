@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledLevelSquare = exports.StyledRightTooltip = exports.StyledLeftTooltip = exports.StyledAreaMapTooltip = exports.StyledCustomLegend = exports.StyledHeatmapTip = exports.StyledTooltip = exports.StyledDifference = exports.StyledStatHeader = exports.StyledDescText = exports.StyledTitle = exports.StyledHeaderChildren = exports.StyledTitleSection = exports.StyledCardHeader = exports.StyledGraphCard = void 0;
+exports.StyledToolltipText = exports.StyledLevelSquare = exports.StyledRightTooltip = exports.StyledLeftTooltip = exports.StyledAreaMapTooltip = exports.StyledCustomLegend = exports.StyledHeatmapTip = exports.StyledTooltip = exports.StyledDifference = exports.StyledStatHeader = exports.StyledDescText = exports.StyledTitle = exports.StyledHeaderChildren = exports.StyledTitleSection = exports.StyledCardHeader = exports.StyledGraphCard = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -160,3 +160,10 @@ var StyledRightTooltip = _styledComponents["default"].div.withConfig({
 });
 
 exports.StyledRightTooltip = StyledRightTooltip;
+
+var StyledToolltipText = _styledComponents["default"].div.withConfig({
+  displayName: "styles__StyledToolltipText",
+  componentId: "uezup0-16"
+})(["color:", ";", ""], _dashVariables.colorPicker.blue, _dashVariables.sofiaPro.regular);
+
+exports.StyledToolltipText = StyledToolltipText;

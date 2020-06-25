@@ -25,7 +25,7 @@ var _dashVariables = require("../../../utils/_dashVariables");
 
 var _Typography = require("../../../elements/Typography");
 
-var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
+var _CardHeading = require("../../CardHeading");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -95,19 +95,19 @@ var HeatMapGraph = function HeatMapGraph(props) {
   }, [props.data, totalSessions]);
 
   var getCells = function getCells() {
-    var boop = [];
+    var updatedCells = [];
     var dataCopy = props.data.slice(0);
     dataCopy.map(function (dataSet, index) {
-      var cat = _objectSpread({}, dataSet);
+      var updatedData = _objectSpread({}, dataSet);
 
-      cat.data.map(function (day, index) {
+      updatedData.data.map(function (day, index) {
         day["total"] = day.data;
-        var booper = Number((day.total / totalSessions * 100).toFixed(4));
-        day["metadata"] = booper;
+        var updatedCell = Number((day.total / totalSessions * 100).toFixed(4));
+        day["metadata"] = updatedCell;
       });
-      boop.push(cat);
+      updatedCells.push(updatedData);
     });
-    setCells(boop);
+    setCells(updatedCells);
   };
 
   var getLegendKeys = function getLegendKeys(array) {
@@ -145,7 +145,7 @@ var HeatMapGraph = function HeatMapGraph(props) {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_CardHeading["default"], {
+  }, _react["default"].createElement(_CardHeading.CardHeading, {
     range: range,
     info: info,
     body: body,

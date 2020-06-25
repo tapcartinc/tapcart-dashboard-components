@@ -51,7 +51,6 @@
     "@storybook/source-loader": "^5.2.0-beta.32",
     "babel-plugin-styled-components": "^1.10.6",
     "chroma": "0.0.1",
-    "circular-std": "^1.0.0",
     "d3": "^5.15.0",
     "d3-array": "^2.4.0",
     "d3-time": "^1.1.0",

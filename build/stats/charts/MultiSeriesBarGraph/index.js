@@ -25,7 +25,7 @@ var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
 
 var _Typography = require("../../../elements/Typography");
 
-var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
+var _CardHeading = require("../../CardHeading");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -71,13 +71,11 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
   var colorScheme = (0, _useColorScheme.useColorScheme)(colors);
 
   var getFormat = function getFormat(d) {
-    // if (unit === "DAYS" || unit === "WEEKS") {
-    //   return moment(d).format("MMM D");
-    // }
-    // if (unit === "HOURS") {
-    //   return moment(`${d}:00:00`, "HH:mm:ss").format("h A");
-    // }
-    return (0, _moment["default"])(d).format("MMM D");
+    if (unit === "WEEKS") {
+      return "".concat((0, _moment["default"])(d).startOf("isoWeek").format("MMM D"), " - ").concat((0, _moment["default"])(d).endOf("isoWeek").format("MMM D"));
+    }
+
+    return (0, _moment["default"])(d).format("MMM D, h A");
   }; // moment(d.key).format("MMM D")
 
 
@@ -87,7 +85,7 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
     }
 
     if (unit === "HOURS") {
-      return (0, _moment["default"])("".concat(value.key, ":00:00"), "HH:mm:ss").format("h A");
+      return (0, _moment["default"])(value.key).format("MMM D, h A");
     }
   };
 
@@ -95,7 +93,7 @@ var MultiSeriesBarGraph = function MultiSeriesBarGraph(props) {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_CardHeading["default"], {
+  }, _react["default"].createElement(_CardHeading.CardHeading, {
     range: range,
     info: info,
     body: body,

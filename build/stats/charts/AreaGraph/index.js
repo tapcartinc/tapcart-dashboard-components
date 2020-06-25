@@ -21,7 +21,7 @@ var _moment = _interopRequireDefault(require("moment"));
 
 var _dashVariables = require("../../../utils/_dashVariables");
 
-var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
+var _CardHeading = require("../../CardHeading");
 
 var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
 
@@ -147,7 +147,7 @@ var AreaGraph = function AreaGraph(props) {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_CardHeading["default"], {
+  }, _react["default"].createElement(_CardHeading.CardHeading, {
     range: range,
     info: info,
     body: body,
@@ -186,20 +186,24 @@ var GraphDetails = function GraphDetails(_ref) {
       unit = _ref.unit;
 
   var getFormat = function getFormat(d) {
-    return (0, _moment["default"])(d).format("MMM D YY");
+    if (unit === "HOURS") {
+      return (0, _moment["default"])(d).format("MMM D, h A");
+    }
+
+    return (0, _moment["default"])(d).format("MMM D, YY");
   };
 
   var getTooltipFormat = function getTooltipFormat(value) {
     if (unit === "WEEKS") {
-      return (0, _moment["default"])(value).format("MMM D");
+      return (0, _moment["default"])(value).format("MMM D, YY");
     }
 
     if (unit === "DAYS") {
-      return (0, _moment["default"])(value).format("MMM D");
+      return (0, _moment["default"])(value).format("MMM D, YY");
     }
 
     if (unit === "HOURS") {
-      return (0, _moment["default"])("".concat(value, ":00:00"), "HH:mm:ss").format("h A");
+      return (0, _moment["default"])(value).format("MMM D, h A");
     }
   };
 
@@ -235,10 +239,11 @@ var GraphDetails = function GraphDetails(_ref) {
               line: null,
               label: _react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
                 padding: 5,
-                rotation: false,
-                format: function format(data) {
-                  return (0, _useFormattedNumber.useFormattedNumber)(data).toLocaleString();
-                }
+                rotation: false // format={(data) =>
+                //   // useFormattedNumber(data).toLocaleString()
+                //   data
+                // }
+
               })
             })
           }),
@@ -249,6 +254,7 @@ var GraphDetails = function GraphDetails(_ref) {
               line: null,
               label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
                 padding: 5,
+                rotation: -45,
                 format: function format(d) {
                   var cat = getFormat(d);
                   return cat;
@@ -272,28 +278,26 @@ var GraphDetails = function GraphDetails(_ref) {
                   tipAlign: "bottom",
                   style: {
                     background: "white",
-                    padding: 10
+                    padding: 10,
+                    minWidth: 200
                   }
-                }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, {
+                }, _react["default"].createElement(_styles.StyledAreaMapTooltip, null, _react["default"].createElement(_Typography.Sofia, {
                   marginBottom: "2px",
                   marginTop: "5px",
                   fontSize: "11px",
                   color: _dashVariables.colorPicker.black
-                }, getTooltipFormat(d.x)), _react["default"].createElement(_Typography.Sofia, _defineProperty({
+                }, getTooltipFormat(d.x)), _react["default"].createElement(_styles.StyledLeftTooltip, null, _react["default"].createElement(_Typography.Sofia, _defineProperty({
                   marginBottom: "5px",
                   marginTop: "0px",
                   fontSize: "11px",
                   color: _dashVariables.colorPicker.blue
-                }, "fontSize", "13px"), currency && _react["default"].createElement("span", null, currency), totalFormatted.toLocaleString())), _react["default"].createElement(_styles.StyledRightTooltip, {
+                }, "fontSize", "13px"), keys[0], _react["default"].createElement("br", null), currency && _react["default"].createElement("span", null, currency), totalFormatted.toLocaleString())), _react["default"].createElement(_styles.StyledRightTooltip, {
                   upShift: currentTotal >= previousTotal
                 }, _react["default"].createElement(_Typography.Sofia, {
+                  fontSize: "11px",
                   marginBottom: "0px",
                   color: currentTotal >= previousTotal ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                }, currentTotal > previousTotal && _react["default"].createElement("span", null, "\u2191"), currentTotal < previousTotal && _react["default"].createElement("span", null, "\u2193"), Number(parseFloat((Number(currentTotal) - Number(previousTotal)) / ((Number(currentTotal) + Number(previousTotal)) / 2) * 100).toFixed(2)), "%"), _react["default"].createElement(_Typography.Sofia, {
-                  marginTop: "0px",
-                  fontSize: "10px",
-                  color: currentTotal >= previousTotal ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red
-                }, "prev period"))));
+                }, keys[1], _react["default"].createElement("br", null), (0, _useFormattedNumber.useFormattedNumber)(previousTotal).toLocaleString()))));
               }
             })
           }),

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.CardHeading = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -11,13 +11,9 @@ var _styles = require("../charts/styles");
 
 var _moment = _interopRequireDefault(require("moment"));
 
-var _useFormattedNumber = require("../../hooks/useFormattedNumber");
-
 var _dashVariables = require("../../utils/_dashVariables");
 
 var _ToolTip = require("../../components/ToolTip");
-
-var _Typography = require("../../elements/Typography");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -30,9 +26,15 @@ var CardHeading = function CardHeading(props) {
     className: "title"
   }, _react["default"].createElement(_styles.StyledTitle, null, info.name), info.description && _react["default"].createElement(_ToolTip.ToolTip, {
     color: _dashVariables.colorPicker.grayBlue
-  }, _react["default"].createElement(_Typography.Sofia, {
+  }, _react["default"].createElement(_styles.StyledToolltipText, {
     color: _dashVariables.colorPicker.blue
-  }, info.description))), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
+  }, info.description.props ? info.description.props.children.map(function (child) {
+    if (typeof child === "string") {
+      return _react["default"].createElement("div", {
+        key: child
+      }, "".concat(child));
+    }
+  }) : info.description))), _react["default"].createElement(_styles.StyledDescText, null, (0, _moment["default"])(range.start).format("MMM Do"), " -", " ", (0, _moment["default"])(range.end).format("MMM Do"), " ", (0, _moment["default"])(range.end).format("YYYY"))), body && body.length > 0 && body.map(function (statInfo) {
     return _react["default"].createElement(_styles.StyledHeaderChildren, {
       key: statInfo.title
     }, _react["default"].createElement(_styles.StyledDescText, null, statInfo.title), _react["default"].createElement(_styles.StyledStatHeader, {
@@ -51,5 +53,4 @@ var CardHeading = function CardHeading(props) {
   }));
 };
 
-var _default = CardHeading;
-exports["default"] = _default;
+exports.CardHeading = CardHeading;

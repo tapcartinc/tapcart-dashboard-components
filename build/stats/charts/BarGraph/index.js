@@ -23,9 +23,7 @@ var _styles = require("../styles");
 
 var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
 
-var _CardHeading = _interopRequireDefault(require("../../CardHeading"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+var _CardHeading = require("../../CardHeading");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -59,7 +57,7 @@ var BarGraph = function BarGraph(props) {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_CardHeading["default"], {
+  }, _react["default"].createElement(_CardHeading.CardHeading, {
     range: range,
     info: info,
     body: body,
