@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -53,17 +53,17 @@ var BarGraph = function BarGraph(props) {
     }
   };
 
-  return _react["default"].createElement(_styles.StyledGraphCard, {
+  return /*#__PURE__*/_react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
     }
-  }, _react["default"].createElement(_CardHeading.CardHeading, {
+  }, /*#__PURE__*/_react["default"].createElement(_CardHeading.CardHeading, {
     range: range,
     info: info,
     body: body,
     tooltip: tooltip,
     currency: currency
-  }), _react["default"].createElement(_Icon.Icon, {
+  }), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "apple",
     fill: "white",
     style: {
@@ -72,7 +72,7 @@ var BarGraph = function BarGraph(props) {
       right: 435,
       top: 137
     }
-  }), _react["default"].createElement(_Icon.Icon, {
+  }), /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
     type: "android",
     fill: "white",
     style: {
@@ -81,46 +81,46 @@ var BarGraph = function BarGraph(props) {
       right: 437,
       top: 225
     }
-  }), _react["default"].createElement(_reaviz.BarChart, {
+  }), /*#__PURE__*/_react["default"].createElement(_reaviz.BarChart, {
     height: 220,
     width: 500,
     data: data,
-    gridlines: _react["default"].createElement(_reaviz.GridlineSeries, {
-      line: _react["default"].createElement(_reaviz.Gridline, {
+    gridlines: /*#__PURE__*/_react["default"].createElement(_reaviz.GridlineSeries, {
+      line: /*#__PURE__*/_react["default"].createElement(_reaviz.Gridline, {
         direction: "x",
         strokeColor: _dashVariables.colorPicker.gray25,
         strokeDasharray: "0 0"
       })
     }),
-    xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
+    xAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxis, {
       type: "value",
-      tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
-        label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
+      tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
+        label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
           format: _useFormattedNumber.useFormattedNumber
         })
       })
     }),
-    series: _react["default"].createElement(_reaviz.BarSeries, {
+    series: /*#__PURE__*/_react["default"].createElement(_reaviz.BarSeries, {
       colorScheme: getColorScheme(),
       layout: "horizontal",
-      tooltip: _react["default"].createElement(_reaviz.TooltipArea, {
+      tooltip: /*#__PURE__*/_react["default"].createElement(_reaviz.TooltipArea, {
         placement: "top",
-        tooltip: _react["default"].createElement(_reaviz.ChartTooltip, {
+        tooltip: /*#__PURE__*/_react["default"].createElement(_reaviz.ChartTooltip, {
           placement: "top",
           followCursor: true,
           content: function content(d) {
-            return _react["default"].createElement(_styles.StyledTooltip, {
+            return /*#__PURE__*/_react["default"].createElement(_styles.StyledTooltip, {
               width: "70px"
-            }, _react["default"].createElement(_Typography.Sofia, {
+            }, /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
               fontSize: "11px",
               color: _dashVariables.colorPicker.black
-            }, d.key), _react["default"].createElement(_Typography.Sofia, {
+            }, d.key), /*#__PURE__*/_react["default"].createElement(_Typography.Sofia, {
               color: _dashVariables.colorPicker.blue
             }, d.y.toLocaleString()));
           }
         })
       }),
-      bar: _react["default"].createElement(_reaviz.Bar, {
+      bar: /*#__PURE__*/_react["default"].createElement(_reaviz.Bar, {
         width: 60 // mask={<Stripes />}
         ,
         style: function style(data) {
@@ -134,12 +134,12 @@ var BarGraph = function BarGraph(props) {
         }
       })
     }),
-    yAxis: _react["default"].createElement(_reaviz.LinearYAxis, {
+    yAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxis, {
       type: "category",
       line: null,
-      tickSeries: _react["default"].createElement(_reaviz.LinearYAxisTickSeries, null)
+      tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickSeries, null)
     })
-  }), _react["default"].createElement(Legend, {
+  }), /*#__PURE__*/_react["default"].createElement(Legend, {
     colors: colors
   }));
 };
@@ -148,19 +148,19 @@ exports.BarGraph = BarGraph;
 
 var Legend = function Legend(_ref) {
   var colors = _ref.colors;
-  return _react["default"].createElement(_reaviz.DiscreteLegend, {
+  return /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegend, {
     orientation: "horizontal",
     style: {
       margin: "0 auto"
     },
-    entries: [_react["default"].createElement(_reaviz.DiscreteLegendEntry, {
+    entries: [/*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegendEntry, {
       label: "iOS",
       color: colors[0],
-      symbol: _react["default"].createElement(_styles.StyledLevelSquare, null)
-    }), _react["default"].createElement(_reaviz.DiscreteLegendEntry, {
+      symbol: /*#__PURE__*/_react["default"].createElement(_styles.StyledLevelSquare, null)
+    }), /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegendEntry, {
       label: "Android",
       color: colors[1],
-      symbol: _react["default"].createElement(_styles.StyledLevelSquare, null)
+      symbol: /*#__PURE__*/_react["default"].createElement(_styles.StyledLevelSquare, null)
     })]
   });
 };

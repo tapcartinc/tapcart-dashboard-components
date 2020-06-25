@@ -1904,7 +1904,7 @@ var areaGraph = function areaGraph() {
       data: 468198532
     }]
   }]];
-  return _react["default"].createElement(_index.AreaGraph, {
+  return /*#__PURE__*/_react["default"].createElement(_index.AreaGraph, {
     stacked: true,
     data: fakeData,
     gradient: true,

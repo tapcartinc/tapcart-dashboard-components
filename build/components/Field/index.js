@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -38,30 +38,30 @@ var Field = function Field(props) {
       errors = props.errors,
       flexWrap = props.flexWrap,
       justifyContent = props.justifyContent;
-  return _react["default"].createElement(StyledField, _extends({
+  return /*#__PURE__*/_react["default"].createElement(StyledField, _extends({
     lastField: lastField,
     fieldFlow: fieldFlow,
     hasChildren: props.children
   }, props, {
     hasToggle: hasToggle
-  }), label && _react["default"].createElement(StyledFieldInfo, props, _react["default"].createElement(StyledLabel, null, label), _react["default"].createElement(StyledDescription, {
+  }), label && /*#__PURE__*/_react["default"].createElement(StyledFieldInfo, props, /*#__PURE__*/_react["default"].createElement(StyledLabel, null, label), /*#__PURE__*/_react["default"].createElement(StyledDescription, {
     errors: errors
-  }, description), errors && errors.length > 0 && _react["default"].createElement(StyledErrors, {
+  }, description), errors && errors.length > 0 && /*#__PURE__*/_react["default"].createElement(StyledErrors, {
     errors: errors
   }, errors.map(function (error) {
-    return _react["default"].createElement("span", {
+    return /*#__PURE__*/_react["default"].createElement("span", {
       key: error
     }, error);
-  }))), hasToggle && _react["default"].createElement("div", {
+  }))), hasToggle && /*#__PURE__*/_react["default"].createElement("div", {
     style: {
       padding: "19px 24px"
     }
-  }, _react["default"].createElement(_BoxedToggle.BoxedToggle, {
+  }, /*#__PURE__*/_react["default"].createElement(_BoxedToggle.BoxedToggle, {
     type: "basic",
     id: "toggle",
     toggleState: toggleState,
     onChange: setToggleState
-  })), props.children && _react["default"].createElement(StyledChildren, {
+  })), props.children && /*#__PURE__*/_react["default"].createElement(StyledChildren, {
     justifyContent: justifyContent,
     flexWrap: flexWrap,
     toggleState: toggleState,

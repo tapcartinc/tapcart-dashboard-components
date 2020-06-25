@@ -57,10 +57,10 @@ var areaGraphTest = function areaGraphTest() {
       id: "2"
     }]
   }];
-  return _react["default"].createElement("div", null, _react["default"].createElement(_reaviz.AreaChart, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement(_reaviz.AreaChart, {
     width: 470,
     height: 320,
-    series: _react["default"].createElement(_reaviz.AreaSeries, {
+    series: /*#__PURE__*/_react["default"].createElement(_reaviz.AreaSeries, {
       type: "stacked",
       colorScheme: colorSwatches
     }) // gridlines={
@@ -76,22 +76,22 @@ var areaGraphTest = function areaGraphTest() {
     // 	/>
     // }
     ,
-    yAxis: _react["default"].createElement(_reaviz.LinearYAxis, {
+    yAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxis, {
       type: "value",
       axisLine: null,
-      tickSeries: _react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
+      tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickSeries, {
         line: null,
-        label: _react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
+        label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
           padding: 5,
           rotation: false
         })
       })
     }),
-    xAxis: _react["default"].createElement(_reaviz.LinearXAxis, {
+    xAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxis, {
       type: "time",
-      tickSeries: _react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
+      tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
         line: null,
-        label: _react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
+        label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickLabel, {
           padding: 5,
           rotation: -45,
           format: function format(d) {

@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -27,8 +27,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var Breadcrumbs = function Breadcrumbs(_ref) {
   var crumbs = _ref.crumbs;
-  return _react["default"].createElement(BreadcrumbsStyle, null, crumbs.map(function (item, index) {
-    return _react["default"].createElement(_BreadcrumbItem.BreadcrumbsItem, {
+  return /*#__PURE__*/_react["default"].createElement(BreadcrumbsStyle, null, crumbs.map(function (item, index) {
+    return /*#__PURE__*/_react["default"].createElement(_BreadcrumbItem.BreadcrumbsItem, {
       key: item.crumb,
       onClick: item.onClick,
       crumb: item.crumb,
@@ -45,7 +45,7 @@ exports.Breadcrumbs = Breadcrumbs;
 var BreadcrumbsStyle = _styledComponents["default"].ul.withConfig({
   displayName: "Breadcrumbs__BreadcrumbsStyle",
   componentId: "sc-4btehn-0"
-})(["display:flex;align-items:center;flex-direction:row;width:100%;padding:0px;margin-top:0px;margin-bottom:0px;padding-left:45px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;", ""], function (props) {
+})(["display:flex;align-items:center;flex-direction:row;width:100%;padding:0px;margin-top:0px;margin-bottom:0px;padding-left:45px;flex-wrap:wrap;padding-top:20px;padding-bottom:0px;font-family:SofiaPro,-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;font-weight:400;", ""], function (props) {
   return props.style ? props.style : null;
 });
 
