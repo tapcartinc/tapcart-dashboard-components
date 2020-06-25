@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -24,18 +24,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function Toggle(props) {
-  return _react["default"].createElement(ToggleWrapper, _extends({
+  return /*#__PURE__*/_react["default"].createElement(ToggleWrapper, _extends({
     style: {
       margin: 5
     }
-  }, props), _react["default"].createElement(ToggleInput, {
+  }, props), /*#__PURE__*/_react["default"].createElement(ToggleInput, {
     type: "checkbox",
     id: "toggle",
     checked: props.value,
     onChange: props.onToggle,
     name: props.name,
     autoComplete: "off"
-  }), _react["default"].createElement(ToggleLabel, _extends({
+  }), /*#__PURE__*/_react["default"].createElement(ToggleLabel, _extends({
     htmlFor: "toggle"
   }, props)));
 }
