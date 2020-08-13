@@ -128,7 +128,7 @@ var generateDayData = function generateDayData() {
     day["metadata"] = {
       previousPeriod: Number((Math.random() * (800 - 0) + 0).toFixed(2))
     };
-    day.metadata = _objectSpread({}, day.metadata, {
+    day.metadata = _objectSpread(_objectSpread({}, day.metadata), {}, {
       percentageDiff: Number(parseFloat((Number(day.data) - Number(day.metadata.previousPeriod)) / ((Number(day.data) + Number(day.metadata.previousPeriod)) / 2) * 100).toFixed(4))
     });
     dayData.push(day);

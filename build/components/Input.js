@@ -17,6 +17,8 @@ var _variables = require("../utils/_variables");
 
 var _Typography = require("../elements/Typography");
 
+var _ToolTip = require("./ToolTip");
+
 var _dashVariables = require("../utils/_dashVariables");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
@@ -31,7 +33,7 @@ function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArra
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
@@ -47,16 +49,18 @@ var Input = function Input(_ref) {
   var innerRef = _ref.innerRef,
       props = _objectWithoutProperties(_ref, ["innerRef"]);
 
-  var errors = props.errors,
+  var disabled = props.disabled,
+      errors = props.errors,
       label = props.label,
-      value = props.value,
+      maxLength = props.maxLength,
+      minHeight = props.minHeight,
       name = props.name,
       placeholder = props.placeholder,
-      maxLength = props.maxLength,
-      disabled = props.disabled,
-      width = props.width,
+      tooltip = props.tooltip,
       type = props.type,
-      minHeight = props.minHeight;
+      value = props.value,
+      width = props.width;
+  console.log(tooltip);
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -91,7 +95,11 @@ var Input = function Input(_ref) {
     minHeight: minHeight
   }, label && /*#__PURE__*/_react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
-  }, errors && errors.length >= 0 ? errors[0] : label), /*#__PURE__*/_react["default"].createElement("input", _extends({
+  }, errors && errors.length >= 0 ? errors[0] : label, tooltip && tooltip.length && /*#__PURE__*/_react["default"].createElement(_ToolTip.ToolTip, {
+    wrapperStyle: {
+      margin: '0 8px auto'
+    }
+  }, tooltip)), /*#__PURE__*/_react["default"].createElement("input", _extends({
     className: "input-style",
     ref: innerRef,
     value: value,
@@ -158,6 +166,6 @@ var StyledCharCount = _styledComponents["default"].div.withConfig({
 var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "Input__StyledLabel",
   componentId: "l316i3-2"
-})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], function (props) {
+})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;display:flex;flex-flow:row nowrap;align-items:center;letter-spacing:normal;color:", ";"], function (props) {
   return props.errors ? _variables.colors.red : "#000000";
 });

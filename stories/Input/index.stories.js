@@ -26,7 +26,8 @@ export const input = () => {
         innerRef={inputRef}
         maxLength={50}
         // disabled={true}
-        // label={text("Label", "Input Label")}
+        label={text("Label", "Input Label")}
+        tooltip={text('Tooltip', 'This is a test tooltip.')}
         error={boolean("Throw error", false)}
         placeholder="Input placeholder..."
         minHeight={"48px"}

@@ -41,7 +41,7 @@ var multiSeriesBarGraph = function multiSeriesBarGraph() {
   var data = (0, _generateDates.generateDates)(new Date("11/1/2019"), new Date("11/24/2019"));
   var statValues = {};
 
-  var statInfo = _objectSpread({}, statValues, {
+  var statInfo = _objectSpread(_objectSpread({}, statValues), {}, {
     sectionInfo: [{
       title: "Active Sessions",
       currentTotal: "2090000",

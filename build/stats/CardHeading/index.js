@@ -30,7 +30,7 @@ var CardHeading = function CardHeading(props) {
     color: _dashVariables.colorPicker.blue
   }, info.description.props ? info.description.props.children.map(function (child) {
     if (typeof child === "string") {
-      return _react["default"].createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement("div", {
         key: child
       }, "".concat(child));
     }

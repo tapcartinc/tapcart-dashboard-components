@@ -32,7 +32,7 @@ exports["default"] = _default;
 var pieGraph = function pieGraph() {
   var statValues = {};
 
-  var statInfo = _objectSpread({}, statValues, {
+  var statInfo = _objectSpread(_objectSpread({}, statValues), {}, {
     sectionInfo: [{
       title: "iOS Sessions",
       currentTotal: "1320000",

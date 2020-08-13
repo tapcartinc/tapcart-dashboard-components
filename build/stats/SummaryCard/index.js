@@ -39,7 +39,7 @@ var SummaryCard = function SummaryCard(props) {
       currency = props.currency;
   var currentColor = currentScore > prevPeriodScore ? _dashVariables.colorPicker.green100 : _dashVariables.colorPicker.red;
   var updatedDataDates = data.map(function (dataSet) {
-    return _objectSpread({}, dataSet, {
+    return _objectSpread(_objectSpread({}, dataSet), {}, {
       key: (0, _moment["default"])(dataSet.key)
     });
   });

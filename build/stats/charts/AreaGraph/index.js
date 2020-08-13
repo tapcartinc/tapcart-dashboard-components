@@ -49,7 +49,7 @@ function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableTo
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
@@ -86,13 +86,13 @@ var convertData = function convertData(data, unit) {
       return [].concat(_toConsumableArray(acc), [{
         key: dataSet.key,
         data: dataSet.data.map(function (key, index) {
-          return key[index] = _objectSpread({}, key, {
+          return key[index] = _objectSpread(_objectSpread({}, key), {}, {
             key: convert(key.key, unit)
           });
         })
       }]);
     } else {
-      return [].concat(_toConsumableArray(acc), [_objectSpread({}, dataSet, {
+      return [].concat(_toConsumableArray(acc), [_objectSpread(_objectSpread({}, dataSet), {}, {
         key: convert(dataSet.key, unit)
       })]);
     }

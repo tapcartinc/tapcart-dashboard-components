@@ -36,7 +36,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * In order to access styles from the ThemeProvider the children must be wrapped in a `Section` component immediately inside of the ThemeProvider component.
  */
 var ThemeProvider = function ThemeProvider(props) {
-  var theme = _objectSpread({}, _theme.base, {}, props.theme);
+  var theme = _objectSpread(_objectSpread({}, _theme.base), props.theme);
 
   return /*#__PURE__*/_react["default"].createElement(_styledComponents.ThemeProvider, {
     theme: theme

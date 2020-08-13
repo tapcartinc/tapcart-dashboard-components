@@ -36,7 +36,7 @@ exports["default"] = _default;
 var barGraph = function barGraph() {
   var statValues = {};
 
-  var statInfo = _objectSpread({}, statValues, {
+  var statInfo = _objectSpread(_objectSpread({}, statValues), {}, {
     sectionInfo: [{
       title: "iOS Sessions",
       currentTotal: "1320000",
