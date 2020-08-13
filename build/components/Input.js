@@ -17,7 +17,7 @@ var _variables = require("../utils/_variables");
 
 var _Typography = require("../elements/Typography");
 
-var _ToolTip = _interopRequireDefault(require("./ToolTip"));
+var _ToolTip = require("./ToolTip");
 
 var _dashVariables = require("../utils/_dashVariables");
 
@@ -60,6 +60,7 @@ var Input = function Input(_ref) {
       type = props.type,
       value = props.value,
       width = props.width;
+  console.log(tooltip);
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
@@ -94,7 +95,11 @@ var Input = function Input(_ref) {
     minHeight: minHeight
   }, label && /*#__PURE__*/_react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
-  }, errors && errors.length >= 0 ? errors[0] : label, tooltip && tooltip.length && /*#__PURE__*/_react["default"].createElement(_ToolTip["default"], null, tooltip)), /*#__PURE__*/_react["default"].createElement("input", _extends({
+  }, errors && errors.length >= 0 ? errors[0] : label, tooltip && tooltip.length && /*#__PURE__*/_react["default"].createElement(_ToolTip.ToolTip, {
+    wrapperStyle: {
+      margin: '0 8px auto'
+    }
+  }, tooltip)), /*#__PURE__*/_react["default"].createElement("input", _extends({
     className: "input-style",
     ref: innerRef,
     value: value,
@@ -161,6 +166,6 @@ var StyledCharCount = _styledComponents["default"].div.withConfig({
 var StyledLabel = (0, _styledComponents["default"])(_Typography.Body).withConfig({
   displayName: "Input__StyledLabel",
   componentId: "l316i3-2"
-})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;letter-spacing:normal;color:", ";"], function (props) {
+})(["margin-bottom:7px;font-weight:400;font-style:normal;font-display:swap;font-size:14px;line-height:1.5;display:flex;flex-flow:row nowrap;align-items:center;letter-spacing:normal;color:", ";"], function (props) {
   return props.errors ? _variables.colors.red : "#000000";
 });
