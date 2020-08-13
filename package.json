@@ -2,7 +2,7 @@
   "name": "tapcart-dashboard-components",
   "version": "0.0.00",
   "description": "tapcart dashboard component kit",
-  "main": "build/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build-storybook": "build-storybook -c .storybook",
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -53,7 +53,7 @@ function SelectDropdown(props) {
   var sofiaRegular = _variables.sofia.sofiaRegular;
   var customStyles = (_customStyles = {
     option: function option(provided, state) {
-      return _objectSpread({}, provided, {
+      return _objectSpread(_objectSpread({}, provided), {}, {
         sofiaRegular: sofiaRegular,
         "&:hover": {
           background: _variables.colors.lightgray,
@@ -65,26 +65,26 @@ function SelectDropdown(props) {
       });
     },
     menu: function menu(provided, state) {
-      return _objectSpread({}, provided, {}, _Typography.input, {
+      return _objectSpread(_objectSpread(_objectSpread({}, provided), _Typography.input), {}, {
         boxShadow: "0px transparent !important"
       });
     },
     menuList: function menuList(provided, state) {
       var transition = "opacity 300ms";
-      return _objectSpread({}, provided, {}, _variables.inputBorder, {
+      return _objectSpread(_objectSpread(_objectSpread({}, provided), _variables.inputBorder), {}, {
         transition: transition,
         padding: 0,
         boxShadow: "0px transparent !important"
       });
     },
     placeholder: function placeholder(provided, state) {
-      return _objectSpread({}, provided, {}, _Typography.placeholder);
+      return _objectSpread(_objectSpread({}, provided), _Typography.placeholder);
     },
     valueContainer: function valueContainer(provided, state) {
-      return _objectSpread({}, provided, {}, _Typography.placeholder);
+      return _objectSpread(_objectSpread({}, provided), _Typography.placeholder);
     },
     control: function control(provided, state) {
-      return _objectSpread({}, provided, {
+      return _objectSpread(_objectSpread({}, provided), {}, {
         borderRadius: "3px",
         backgroundColor: _variables.colors.offwhite,
         borderColor: state.selectProps.menuIsOpen ? _variables.colors.blue : _variables.colors.bluegray,
@@ -105,16 +105,16 @@ function SelectDropdown(props) {
         isDisabled = _ref.isDisabled,
         isFocused = _ref.isFocused,
         isSelected = _ref.isSelected;
-    return _objectSpread({}, styles, {
+    return _objectSpread(_objectSpread({}, styles), {}, {
       backgroundColor: isDisabled ? null : isSelected ? _variables.colors.blue : isFocused ? _variables.colors.gray10 : null,
       color: isDisabled ? _variables.colors.gray25 : isSelected ? "white" : _variables.colors.black,
       cursor: isDisabled ? "not-allowed" : "default",
-      ":active": _objectSpread({}, styles[":active"], {
+      ":active": _objectSpread(_objectSpread({}, styles[":active"]), {}, {
         backgroundColor: !isDisabled && (isSelected ? _variables.colors.blue : _variables.colors.gray50)
       })
     });
   }), _defineProperty(_customStyles, "indicatorSeparator", function indicatorSeparator(provided, state) {
-    return _objectSpread({}, provided, {
+    return _objectSpread(_objectSpread({}, provided), {}, {
       display: "none"
     });
   }), _customStyles);
