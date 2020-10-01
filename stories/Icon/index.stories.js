@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { Icon } from "../../lib/elements/Icon";
-import { withKnobs, text, boolean } from "@storybook/addon-knobs";
-import styled from "styled-components";
-import { sofia } from "../../lib/utils/_variables";
-import { colorPicker } from "../../lib";
+import React, { useState } from 'react'
+import { Icon } from '../../lib/elements/Icon'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import styled from 'styled-components'
+import { sofia } from '../../lib/utils/_variables'
+import { colorPicker } from '../../lib'
 
 const StyledIcons = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   ${sofia.sofiaMedium};
-`;
+`
 const StyledIcon = styled.li`
   display: flex;
   flex-direction: column;
@@ -27,13 +27,13 @@ const StyledIcon = styled.li`
   svg {
     margin-bottom: 10px;
   }
-`;
+`
 
 export default {
   component: Icon,
-  title: "Design Elements/Icon",
+  title: 'Design Elements/Icon',
   decorators: [withKnobs],
-};
+}
 
 export const icon = () => {
   return (
@@ -526,12 +526,12 @@ export const icon = () => {
         empty-chart-icon
       </StyledIcon>
       <StyledIcon>
-        <Icon type="quadpay" />
+        <Icon type="quadPay" />
         quadpay
       </StyledIcon>
       <StyledIcon>
-        <Icon type="afterpay" />
-        afterpay
+        <Icon type="afterPay" />
+        afterPay
       </StyledIcon>
       <StyledIcon>
         <Icon type="klarna" />
@@ -546,5 +546,5 @@ export const icon = () => {
         sezzle
       </StyledIcon>
     </StyledIcons>
-  );
-};
+  )
+}
