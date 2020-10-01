@@ -60,7 +60,6 @@ var Input = function Input(_ref) {
       type = props.type,
       value = props.value,
       width = props.width;
-  console.log(tooltip);
 
   var _useState = (0, _react.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
