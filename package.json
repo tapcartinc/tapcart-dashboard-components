@@ -1,6 +1,6 @@
 {
   "name": "tapcart-dashboard-components",
-  "version": "0.0.00",
+  "version": "1.0.0",
   "description": "tapcart dashboard component kit",
   "main": "build/index.js",
   "scripts": {
