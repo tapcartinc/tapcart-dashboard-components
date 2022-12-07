@@ -65,7 +65,11 @@ var Input = function Input(_ref) {
     minHeight: minHeight
   }, label && /*#__PURE__*/_react["default"].createElement(StyledLabel, {
     errors: errors && errors.length >= 0
-  }, errors && errors.length >= 0 ? errors[0] : label), /*#__PURE__*/_react["default"].createElement("input", _extends({
+  }, errors && errors.length >= 0 ? errors[0] : label, tooltip && tooltip.length && /*#__PURE__*/_react["default"].createElement(_ToolTip.ToolTip, {
+    wrapperStyle: {
+      margin: '0 8px auto'
+    }
+  }, tooltip)), /*#__PURE__*/_react["default"].createElement("input", _extends({
     className: "input-style",
     ref: innerRef,
     value: value,

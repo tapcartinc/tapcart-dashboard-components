@@ -15,7 +15,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 function Icon(props) {
   var type = props.type;
   switch (type) {
-    case "quadPay":
+    case 'quadPay':
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         xmlns: "http://www.w3.org/2000/svg",
         width: "24px",
@@ -155,9 +155,9 @@ function Icon(props) {
       }))))))));
     case "afterPay":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
-        width: "24px",
-        height: "14px",
-        viewBox: "0 0 24 14",
+        width: "24",
+        height: "24",
+        viewBox: "0 0 24 24",
         version: "1.1",
         xmlns: "http://www.w3.org/2000/svg"
       }, props), /*#__PURE__*/_react["default"].createElement("title", null, "Group 5"), /*#__PURE__*/_react["default"].createElement("desc", null, "Created with Sketch."), /*#__PURE__*/_react["default"].createElement("g", {
@@ -405,7 +405,7 @@ function Icon(props) {
     case "search":
       return /*#__PURE__*/_react["default"].createElement("div", {
         style: {
-          position: props.searchBar ? "absolute" : "static"
+          position: props.searchBar ? 'absolute' : 'static'
         }
       }, /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         xmlns: "http://www.w3.org/2000/SVG"
@@ -3708,7 +3708,7 @@ function Icon(props) {
         version: "1.1",
         xmlns: "http://www.w3.org/2000/SVG",
         style: {
-          marginTop: "-1px",
+          marginTop: '-1px',
           bottom: 1
         }
       }, props), /*#__PURE__*/_react["default"].createElement("g", {
@@ -3718,7 +3718,7 @@ function Icon(props) {
         fill: "none",
         fillRule: "evenodd",
         style: {
-          marginTop: "-1px"
+          marginTop: '-1px'
         }
       }, /*#__PURE__*/_react["default"].createElement("g", {
         transform: "translate(-219.000000, -1675.000000)",
@@ -5308,14 +5308,14 @@ function Icon(props) {
       }, /*#__PURE__*/_react["default"].createElement("g", {
         id: "check-small",
         transform: "translate(7.200000, 10.080000)",
-        fill: props.fill ? props.fill : "#FFFFFF",
+        fill: props.fill ? props.fill : '#FFFFFF',
         fillRule: "nonzero"
       }, /*#__PURE__*/_react["default"].createElement("path", {
         d: "M7.2,14.4 C6.768,14.4 6.48,14.256 6.192,13.968 L0.432,8.208 C-0.144,7.632 -0.144,6.768 0.432,6.192 C1.008,5.616 1.872,5.616 2.448,6.192 L7.2,10.944 L17.712,0.432 C18.288,-0.144 19.152,-0.144 19.728,0.432 C20.304,1.008 20.304,1.872 19.728,2.448 L8.208,13.968 C7.92,14.256 7.632,14.4 7.2,14.4 Z",
         id: "Shape"
       })), /*#__PURE__*/_react["default"].createElement("circle", {
         id: "Oval",
-        stroke: props.fill ? props.fill : "#FFFFFF",
+        stroke: props.fill ? props.fill : '#FFFFFF',
         strokeWidth: "2.88",
         cx: "16.56",
         cy: "16.56",
@@ -5349,18 +5349,18 @@ function Icon(props) {
       }, /*#__PURE__*/_react["default"].createElement("path", {
         d: "M1.8,0 L1.8,11.52",
         id: "Line",
-        stroke: props.fill ? props.fill : "#FFFFFF",
+        stroke: props.fill ? props.fill : '#FFFFFF',
         strokeWidth: "2.88",
         strokeLinecap: "round"
       }), /*#__PURE__*/_react["default"].createElement("circle", {
         id: "Oval-2",
-        fill: props.fill ? props.fill : "#FFFFFF",
+        fill: props.fill ? props.fill : '#FFFFFF',
         cx: "1.8",
         cy: "15.84",
         r: "1.44"
       })), /*#__PURE__*/_react["default"].createElement("circle", {
         id: "Oval",
-        stroke: props.fill ? props.fill : "#FFFFFF",
+        stroke: props.fill ? props.fill : '#FFFFFF',
         strokeWidth: "2.88",
         cx: "16.56",
         cy: "16.56",
@@ -6187,9 +6187,9 @@ var SVG = _styledComponents["default"].svg.withConfig({
 })(["", " margin-left:", ";margin-right:", ";", ";"], function (props) {
   return props.circleIcon && "background: ".concat(_dashVariables.colorPicker.dullBlue, ";\n  border-radius: 50%;\n  padding: 5px;\n  overflow: visible;\n  -webkit-transform: scale(1.5);\n  -ms-transform: scale(1.5);\n  transform: scale(1.5);\n  margin: 0 auto;\n  height: 25px;\n  width: 25px;");
 }, function (props) {
-  return props.iconRight ? "10px" : "0px";
+  return props.iconRight ? '10px' : '0px';
 }, function (props) {
-  return props.iconLeft ? "10px" : "0px";
+  return props.iconLeft ? '10px' : '0px';
 }, function (props) {
   return props.style ? props.style : null;
 });
@@ -6197,9 +6197,9 @@ var DashIconWrapper = _styledComponents["default"].svg.withConfig({
   displayName: "Icon__DashIconWrapper",
   componentId: "sc-1x2dwva-1"
 })(["margin-left:", ";margin-right:", ";", " ", ";"], function (props) {
-  return props.iconRight ? "10px" : "0px";
+  return props.iconRight ? '10px' : '0px';
 }, function (props) {
-  return props.iconLeft ? "10px" : "0px";
+  return props.iconLeft ? '10px' : '0px';
 }, function (props) {
   return props.fill && "color: ".concat(props.fill, ";");
 }, function (props) {

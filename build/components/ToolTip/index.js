@@ -35,7 +35,9 @@ var ToolTip = function ToolTip(props) {
     onMouseLeave: function onMouseLeave() {
       return toggleTooltip(false);
     },
-    style: {
+    style: props.wrapperStyle ? _objectSpread({
+      position: 'relative'
+    }, props.wrapperStyle) : {
       position: "relative"
     },
     top: props.top ? props.top : "-45px"
