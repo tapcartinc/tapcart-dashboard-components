@@ -4,15 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getPrevData = exports.getData = void 0;
-
 var _moment = _interopRequireDefault(require("moment"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 function convert(d) {
   return (0, _moment["default"])(d).toDate();
 }
-
 var getData = function getData(dimmension) {
   switch (dimmension) {
     case "day":
@@ -41,7 +37,6 @@ var getData = function getData(dimmension) {
         id: "7",
         data: 14
       }];
-
     case "week":
       return [{
         key: convert("2020-02-07T01:00:00.000Z"),
@@ -68,7 +63,6 @@ var getData = function getData(dimmension) {
         id: "5",
         data: 13
       }];
-
     case "month":
       return [{
         key: convert("2020-02-13T01:00:00.000Z"),
@@ -107,14 +101,11 @@ var getData = function getData(dimmension) {
         id: "8",
         data: 15
       }];
-
     default:
       break;
   }
 };
-
 exports.getData = getData;
-
 var getPrevData = function getPrevData(dimmension) {
   switch (dimmension) {
     case "day":
@@ -143,7 +134,6 @@ var getPrevData = function getPrevData(dimmension) {
         id: "7",
         data: 12
       }];
-
     case "week":
       return [{
         key: convert("2020-02-07T01:00:00.000Z"),
@@ -170,7 +160,6 @@ var getPrevData = function getPrevData(dimmension) {
         id: "5",
         data: 14
       }];
-
     case "month":
       return [{
         key: convert("2020-02-13T01:00:00.000Z"),
@@ -209,10 +198,8 @@ var getPrevData = function getPrevData(dimmension) {
         id: "8",
         data: 10
       }];
-
     default:
       break;
   }
 };
-
 exports.getPrevData = getPrevData;

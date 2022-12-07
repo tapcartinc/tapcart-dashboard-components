@@ -3,27 +3,19 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.areaGraphTest = exports["default"] = void 0;
-
+exports["default"] = exports.areaGraphTest = void 0;
 var _react = _interopRequireDefault(require("react"));
-
 var _moment = _interopRequireDefault(require("moment"));
-
 var _dashVariables = require("../../utils/_dashVariables");
-
 var _AreaGraph = require("./AreaGraph");
-
 var _reaviz = require("reaviz");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 // import "../../utils/main.css";
 var _default = {
   component: _AreaGraph.AreaGraph,
   title: "Stats/Charts/AreaGraph-testing"
 };
 exports["default"] = _default;
-
 var areaGraphTest = function areaGraphTest() {
   var colorSwatches = [_dashVariables.colorPicker.blue, _dashVariables.colorPicker.green];
   var fakeData = [{
@@ -63,7 +55,8 @@ var areaGraphTest = function areaGraphTest() {
     series: /*#__PURE__*/_react["default"].createElement(_reaviz.AreaSeries, {
       type: "stacked",
       colorScheme: colorSwatches
-    }) // gridlines={
+    })
+    // gridlines={
     // 	<GridlineSeries
     // 		line={
     // 			<Gridline
@@ -99,7 +92,8 @@ var areaGraphTest = function areaGraphTest() {
           }
         })
       })
-    }) // series={
+    })
+    // series={
     //   <StackedAreaSeries
     //     type="stacked"
     //     interpolation="smooth"
@@ -127,5 +121,4 @@ var areaGraphTest = function areaGraphTest() {
     data: fakeData
   }));
 };
-
 exports.areaGraphTest = areaGraphTest;

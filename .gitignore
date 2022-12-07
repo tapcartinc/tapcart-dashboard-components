@@ -4,10 +4,9 @@
 .vscode*
 
 .DS_Store
-node_modules
 *.log
 .idea
 
-/node_modules
+*node_modules*
 config.*
 

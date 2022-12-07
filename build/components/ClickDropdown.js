@@ -1,86 +1,59 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ClickDropdown = void 0;
-
 var _react = _interopRequireWildcard(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _Icon = require("../elements/Icon");
-
 var _variables = require("../utils/_variables");
-
 var _propTypes = _interopRequireWildcard(require("prop-types"));
-
 var _Typography = require("../elements/Typography");
-
 var _dashVariables = require("../utils/_dashVariables");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 var ClickDropdown = function ClickDropdown(_ref) {
   var options = _ref.options,
-      position = _ref.position,
-      style = _ref.style;
+    position = _ref.position,
+    style = _ref.style;
   var node = (0, _react.useRef)();
-
   var _useState = (0, _react.useState)(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      open = _useState2[0],
-      setOpen = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    open = _useState2[0],
+    setOpen = _useState2[1];
   (0, _react.useEffect)(function () {
     document.addEventListener("mousedown", handleClick);
     return function () {
       document.removeEventListener("mousedown", handleClick);
     };
   }, []);
-
   var handleClick = function handleClick(e) {
     if (node.current && node.current.contains(e.target)) {
       return;
     }
-
     setOpen(false);
   };
-
   var handleOpen = function handleOpen(e) {
     e.stopPropagation();
     return setOpen(!open);
   };
-
   var handleItemClick = function handleItemClick(e, onClick) {
     e.stopPropagation();
     return onClick();
   };
-
   for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     props[_key - 1] = arguments[_key];
   }
-
   return /*#__PURE__*/_react["default"].createElement(DDWrapper, {
     ref: node,
     position: position,
@@ -124,9 +97,7 @@ var ClickDropdown = function ClickDropdown(_ref) {
     }, option.title));
   })))));
 };
-
 exports.ClickDropdown = ClickDropdown;
-
 var DDWrapper = _styledComponents["default"].div.withConfig({
   displayName: "ClickDropdown__DDWrapper",
   componentId: "sc-18q6bvz-0"
@@ -137,7 +108,6 @@ var DDWrapper = _styledComponents["default"].div.withConfig({
 }, function (props) {
   return props.style ? props.style : null;
 });
-
 var ClickableDropdown = _styledComponents["default"].ul.withConfig({
   displayName: "ClickDropdown__ClickableDropdown",
   componentId: "sc-18q6bvz-1"
@@ -148,7 +118,6 @@ var ClickableDropdown = _styledComponents["default"].ul.withConfig({
 }, function (props) {
   return props.style ? props.style : null;
 });
-
 var ClickableDropdownItem = _styledComponents["default"].li.withConfig({
   displayName: "ClickDropdown__ClickableDropdownItem",
   componentId: "sc-18q6bvz-2"
@@ -157,21 +126,18 @@ var ClickableDropdownItem = _styledComponents["default"].li.withConfig({
 }, _variables.colors.gray10, function (props) {
   return props.style ? props.style : null;
 });
-
 var DropdownHeader = _styledComponents["default"].div.withConfig({
   displayName: "ClickDropdown__DropdownHeader",
   componentId: "sc-18q6bvz-3"
 })(["width:37px;height:100%;z-index:100;&:hover{cursor:pointer;}", ";"], function (props) {
   return props.style ? props.style : null;
 });
-
 ClickDropdown.propTypes = {
   options: _propTypes["default"].arrayOf(_propTypes["default"].shape({
     title: _propTypes["default"].string.isRequired,
     onClick: _propTypes["default"].func,
     icon: _propTypes["default"].string
   })).isRequired,
-
   /**
    * options: "right" | "left"
    */
