@@ -19,13 +19,11 @@ function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _ty
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 // import GlobalStyle from './_global';
 // <GlobalStyle {...props.global} />
-
 /**
  * Use `ThemeProvider` to wrap sections of content with specific styling in the marketing site. This component provides a theme to all React components underneath itself via the context API.
  *
  * In order to access styles from the ThemeProvider the children must be wrapped in a `Section` component immediately inside of the ThemeProvider component.
  */
-
 var ThemeProvider = function ThemeProvider(props) {
   var theme = _objectSpread(_objectSpread({}, _theme.base), props.theme);
   return /*#__PURE__*/_react["default"].createElement(_styledComponents.ThemeProvider, {
