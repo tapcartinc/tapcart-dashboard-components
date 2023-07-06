@@ -12,7 +12,7 @@ var _variables = require("../utils/_variables");
 var _Typography = require("../elements/Typography");
 var _ToolTip = require("./ToolTip");
 var _dashVariables = require("../utils/_dashVariables");
-var _excluded = ["innerRef", "tooltip"];
+var _excluded = ["innerRef"];
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -27,7 +27,6 @@ function _objectWithoutProperties(source, excluded) { if (source == null) return
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
 var Input = function Input(_ref) {
   var innerRef = _ref.innerRef,
-    tooltip = _ref.tooltip,
     props = _objectWithoutProperties(_ref, _excluded);
   var disabled = props.disabled,
     errors = props.errors,
@@ -36,6 +35,7 @@ var Input = function Input(_ref) {
     minHeight = props.minHeight,
     name = props.name,
     placeholder = props.placeholder,
+    tooltip = props.tooltip,
     type = props.type,
     value = props.value,
     width = props.width;
@@ -100,7 +100,8 @@ Input.propTypes = {
   onChange: _propTypes["default"].func,
   label: _propTypes["default"].string,
   type: _propTypes["default"].string,
-  minHeight: _propTypes["default"].string
+  minHeight: _propTypes["default"].string,
+  tooltip: _propTypes["default"].func
 };
 Input.defaultProps = {
   name: ""
