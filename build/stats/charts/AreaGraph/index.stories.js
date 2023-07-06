@@ -3,24 +3,17 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.areaGraph = exports["default"] = void 0;
-
+exports["default"] = exports.areaGraph = void 0;
 var _react = _interopRequireDefault(require("react"));
-
 require("../../../utils/main.css");
-
 var _moment = _interopRequireDefault(require("moment"));
-
 var _index = require("./index");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 var _default = {
   component: _index.AreaGraph,
   title: "Stats/Charts/AreaGraph"
 };
 exports["default"] = _default;
-
 var areaGraph = function areaGraph() {
   // const fakeData = [
   //   {
@@ -51,6 +44,7 @@ var areaGraph = function areaGraph() {
   //     ],
   //   },
   // ];
+
   var hourDataSales = [{
     key: "Current",
     data: [{
@@ -801,7 +795,8 @@ var areaGraph = function areaGraph() {
       key: "2020-04-09 18:59",
       data: 8286,
       id: 186
-    }] // data: [
+    }]
+    // data: [
     //   { key: 0, data: 43356659, id: 0 },
     //   { key: 1, data: 43073921, id: 1 },
     //   { key: 2, data: 43169696, id: 2 },
@@ -827,7 +822,6 @@ var areaGraph = function areaGraph() {
     //   { key: 22, data: 43125061, id: 22 },
     //   { key: 23, data: 43023124, id: 23 }
     // ]
-
   }, {
     key: "Previous",
     data: [{
@@ -1598,7 +1592,8 @@ var areaGraph = function areaGraph() {
       key: "2020-04-09 23:59",
       data: 6414422,
       id: 191
-    }] // data: [
+    }]
+    // data: [
     //   { key: 0, data: 45462851, id: 0 },
     //   { key: 1, data: 45846553, id: 1 },
     //   { key: 2, data: 45459417, id: 2 },
@@ -1624,8 +1619,8 @@ var areaGraph = function areaGraph() {
     //   { key: 22, data: 45555145, id: 22 },
     //   { key: 23, data: 45502306, id: 23 }
     // ]
-
   }];
+
   var fakeData = [{
     key: "New",
     data: [{
@@ -1640,7 +1635,8 @@ var areaGraph = function areaGraph() {
       key: "2020-03-31T12:59:59.000Z",
       id: 2,
       data: 156713
-    } // { key: "2020-04-01T12:59:59.000Z", id: 3, data: 154233 },
+    }
+    // { key: "2020-04-01T12:59:59.000Z", id: 3, data: 154233 },
     // { key: "2020-04-02T12:59:59.000Z", id: 4, data: 156218 },
     // { key: "2020-04-03T12:59:59.000Z", id: 5, data: 146928 },
     // { key: "2020-04-04T12:59:59.000Z", id: 6, data: 130956 },
@@ -1660,13 +1656,16 @@ var areaGraph = function areaGraph() {
       key: "2020-03-31T12:59:59.000Z",
       id: 2,
       data: 156926
-    } // { key: "2020-04-01T12:59:59.000Z", id: 3, data: 155273 },
+    }
+    // { key: "2020-04-01T12:59:59.000Z", id: 3, data: 155273 },
     // { key: "2020-04-02T12:59:59.000Z", id: 4, data: 156177 },
     // { key: "2020-04-03T12:59:59.000Z", id: 5, data: 147063 },
     // { key: "2020-04-04T12:59:59.000Z", id: 6, data: 130201 },
     // { key: "2020-04-05T11:59:59.000Z", id: 7, data: 111130 },
     ]
-  }]; // const fakeData = [
+  }];
+
+  // const fakeData = [
   //   {
   //     key: "Current",
   //     data: [
@@ -1883,8 +1882,8 @@ var areaGraph = function areaGraph() {
       data: 43165,
       id: 23
     }]
-  }]; // { key: "2020-03-29T19:59:59.000Z", data: 156216888, id: 0 },
-
+  }];
+  // { key: "2020-03-29T19:59:59.000Z", data: 156216888, id: 0 },
   var weekDataSales = [[{
     key: "Current",
     data: [{
@@ -1927,5 +1926,4 @@ var areaGraph = function areaGraph() {
     }
   });
 };
-
 exports.areaGraph = areaGraph;

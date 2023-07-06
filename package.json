@@ -1,6 +1,6 @@
 {
   "name": "tapcart-dashboard-components",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "tapcart dashboard component kit",
   "main": "build/index.js",
   "scripts": {
@@ -58,7 +58,6 @@
     "highlight.js": "^9.18.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
     "nuka-carousel": "^4.5.9",
     "react-confetti": "^5.0.1",
     "react-dropzone": "^10.2.1",
@@ -67,6 +66,7 @@
     "react-select": "^3.0.4",
     "react-syntax-highlighter": "^12.2.1",
     "reaviz": "^8.0.9",
+    "sass": "^1.63.6",
     "sass-loader": "^8.0.2",
     "storybook": "^5.3.9",
     "storybook-addon-jsx": "^7.1.14",

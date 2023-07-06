@@ -1,44 +1,30 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.BarGraph = void 0;
-
 var _react = _interopRequireWildcard(require("react"));
-
 var _reaviz = require("reaviz");
-
 var _Typography = require("../../../elements/Typography");
-
 var _dashVariables = require("../../../utils/_dashVariables");
-
 var _Icon = require("../../../elements/Icon");
-
 var _ToolTip = require("../../../components/ToolTip");
-
 var _styles = require("../styles");
-
 var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
-
 var _CardHeading = require("../../CardHeading");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 var BarGraph = function BarGraph(props) {
   var currency = props.currency,
-      data = props.data,
-      body = props.body,
-      info = props.info,
-      range = props.range,
-      tooltip = props.tooltip,
-      colors = props.colors,
-      removeCard = props.removeCard;
-
+    data = props.data,
+    body = props.body,
+    info = props.info,
+    range = props.range,
+    tooltip = props.tooltip,
+    colors = props.colors,
+    removeCard = props.removeCard;
   var getColorScheme = function getColorScheme() {
     if (colors) {
       return colors;
@@ -52,7 +38,6 @@ var BarGraph = function BarGraph(props) {
       return _colors;
     }
   };
-
   return /*#__PURE__*/_react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
@@ -121,7 +106,8 @@ var BarGraph = function BarGraph(props) {
         })
       }),
       bar: /*#__PURE__*/_react["default"].createElement(_reaviz.Bar, {
-        width: 60 // mask={<Stripes />}
+        width: 60
+        // mask={<Stripes />}
         ,
         style: function style(data) {
           return data && {
@@ -143,9 +129,7 @@ var BarGraph = function BarGraph(props) {
     colors: colors
   }));
 };
-
 exports.BarGraph = BarGraph;
-
 var Legend = function Legend(_ref) {
   var colors = _ref.colors;
   return /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegend, {

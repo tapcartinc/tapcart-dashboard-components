@@ -4,26 +4,16 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Icon = Icon;
-
 var _react = _interopRequireDefault(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _functions = require("../utils/_functions");
-
 var _variables = require("../utils/_variables");
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _dashVariables = require("../utils/_dashVariables");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function Icon(props) {
   var type = props.type;
-
   switch (type) {
     case "quadPay":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
@@ -35,7 +25,6 @@ function Icon(props) {
         transform: "translate(-0.42 -1.05)",
         fill: _dashVariables.colorPicker.blue
       }));
-
     case "sezzle":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "19px",
@@ -91,7 +80,6 @@ function Icon(props) {
         d: "M9.25341049,15.7395062 C7.13643519,17.8564815 3.70470679,17.8564815 1.58773148,15.7395062 L1.58773148,15.7395062 L1.41146088,15.5548927 C-0.527515684,13.4275054 -0.468758818,10.1303175 1.58773148,8.07382716 L1.58773148,8.07382716 L9.66155864,-7.1942452e-14 C11.778534,2.11697531 11.778534,5.5487037 9.66155864,7.66567901 L9.66155864,7.66567901 C10.718287,6.60895062 12.1057562,6.07882716 13.4932253,6.07999806 C14.8806944,6.07999806 16.2669907,6.60895062 17.3260648,7.66685185 L17.3260648,7.66685185 C19.444213,9.78265432 19.444213,13.2143827 17.3272377,15.331358 L17.3272377,15.331358 L9.25341049,23.4051852 C7.13643519,21.2882099 7.13643519,17.8564815 9.25341049,15.7395062 Z",
         id: "Combined-Shape"
       })))))))));
-
     case "affirm":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "23px",
@@ -106,7 +94,6 @@ function Icon(props) {
         transform: "translate(-1.02 -5.04)",
         fill: _dashVariables.colorPicker.blue
       }));
-
     case "klarna":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -166,7 +153,6 @@ function Icon(props) {
         fill: _dashVariables.colorPicker.blue,
         fillRule: "nonzero"
       }))))))));
-
     case "afterPay":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -232,7 +218,6 @@ function Icon(props) {
         d: "M5.24479723,13.8023826 L5.24479723,10.9618763 C5.24479723,10.9618763 4.84986052,10.9618763 4.31821495,10.9618763 C3.77137951,10.9618763 3.66505039,10.7644079 3.93846811,10.2935218 C4.71315166,8.92643323 5.50302508,7.55934462 6.30808837,6.20744589 C6.55112634,5.79731931 6.7485947,5.76693956 7.00682254,6.22263576 C7.79669596,7.58972437 8.58656938,8.9416231 9.36125292,10.3239016 C9.6042909,10.7644079 9.49796179,10.9466864 8.99669596,10.9618763 L8.03973394,10.9618763 L8.03973394,13.8175725 L11.3815061,13.8175725 C12.8245441,13.8023826 13.6599871,12.4960535 13.1283415,11.1593446 C13.067582,11.0074459 12.9916327,10.870737 12.9156833,10.7188383 C11.4422656,8.13655981 9.95365799,5.5694712 8.46505039,2.98719272 C8.31315166,2.72896487 8.13087318,2.47073703 7.91821495,2.2580788 C7.17391115,1.55934462 6.0042909,1.60491424 5.30555672,2.34921804 C5.21441748,2.45554715 5.12327824,2.56187627 5.04732887,2.68339525 C3.43720229,5.43276234 1.82707571,8.18212943 0.262518747,10.9466864 C-0.451405303,12.2074459 0.368847861,13.6960535 1.78150609,13.7871927 C2.25239217,13.8175725 4.22707571,13.8023826 5.24479723,13.8023826",
         id: "Path"
       })))))))));
-
     case "trash":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
@@ -292,7 +277,6 @@ function Icon(props) {
         id: "Path",
         points: "5.83333333 3.33333333 5.83333333 0 12.5 0 12.5 3.33333333"
       })))))))));
-
     case "search":
       return /*#__PURE__*/_react["default"].createElement(SVG, {
         width: "22px",
@@ -324,7 +308,6 @@ function Icon(props) {
         cy: "8",
         r: "8"
       }))))));
-
     case "full-arrow-right":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -368,7 +351,6 @@ function Icon(props) {
         id: "Path",
         points: "13 0 20 7 13 14"
       })))))));
-
     case "account":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -420,7 +402,6 @@ function Icon(props) {
         cy: "11",
         r: "11"
       })))))));
-
     case "search":
       return /*#__PURE__*/_react["default"].createElement("div", {
         style: {
@@ -440,7 +421,6 @@ function Icon(props) {
           fill: props.fill ? props.fill : _variables.colors.blue
         }
       })));
-
     case "add":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -476,7 +456,6 @@ function Icon(props) {
         d: "M22.9090909,10.9090909 L13.0909091,10.9090909 L13.0909091,1.09090909 C13.0909091,0.436363636 12.6545455,0 12,0 C11.3454545,0 10.9090909,0.436363636 10.9090909,1.09090909 L10.9090909,10.9090909 L1.09090909,10.9090909 C0.436363636,10.9090909 0,11.3454545 0,12 C0,12.6545455 0.436363636,13.0909091 1.09090909,13.0909091 L10.9090909,13.0909091 L10.9090909,22.9090909 C10.9090909,23.5636364 11.3454545,24 12,24 C12.6545455,24 13.0909091,23.5636364 13.0909091,22.9090909 L13.0909091,13.0909091 L22.9090909,13.0909091 C23.5636364,13.0909091 24,12.6545455 24,12 C24,11.3454545 23.5636364,10.9090909 22.9090909,10.9090909 Z",
         id: "Path"
       })))))));
-
     case "alert":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -534,7 +513,6 @@ function Icon(props) {
         rx: "11",
         ry: "3"
       })))))));
-
     case "analytics-stats":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -578,7 +556,6 @@ function Icon(props) {
         d: "M17.9,18.8 C19.2,16.9 20,14.5 20,12 C20,5.4 14.6,0 8,0 L8,12 L17.9,18.8 Z",
         id: "Path"
       })))))));
-
     case "go-live":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
@@ -634,7 +611,6 @@ function Icon(props) {
         cy: "5.83333333",
         r: "1.66666667"
       }))))))));
-
     case "apple-dev":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
@@ -680,7 +656,6 @@ function Icon(props) {
         fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       })))))));
-
     case "android-dev":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -798,7 +773,6 @@ function Icon(props) {
         strokeLinecap: "round",
         strokeLinejoin: "round"
       })))))));
-
     case "arrow-down":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "10px",
@@ -840,7 +814,6 @@ function Icon(props) {
         transform: "translate(4.000000, 2.000000) scale(1, -1) translate(-4.000000, -2.000000) ",
         points: "0 4 4 0 8 4"
       })))))));
-
     case "arrow-up":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "10px",
@@ -881,7 +854,6 @@ function Icon(props) {
         id: "Path",
         points: "0 4 4 0 8 4"
       })))))));
-
     case "arrow-right":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "6px",
@@ -921,7 +893,6 @@ function Icon(props) {
         transform: "translate(2.000000, 4.000000) scale(1, -1) rotate(90.000000) translate(-2.000000, -4.000000) ",
         points: "-2 6 2 2 6 6"
       })))))));
-
     case "arrow-left":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "6px",
@@ -963,7 +934,6 @@ function Icon(props) {
         transform: "translate(2.000000, 4.000000) scale(1, -1) rotate(90.000000) translate(-2.000000, -4.000000) ",
         points: "-2 6 2 2 6 6"
       })))))));
-
     case "attach":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -1004,7 +974,6 @@ function Icon(props) {
         d: "M20,10.4 L11.2,19.2 C8.7,21.7 4.5,21.7 2,19.2 L2,19.2 C-0.5,16.7 -0.5,12.5 2,10 L9.8,2.2 C11.6,0.4 14.4,0.4 16.2,2.2 L16.2,2.2 C18,4 18,6.8 16.2,8.6 L9,15.7 C8,16.7 6.4,16.7 5.5,15.7 L5.5,15.7 C4.5,14.7 4.5,13.1 5.5,12.2 L11.5,6.2",
         id: "Path"
       })))))));
-
     case "bag":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -1048,7 +1017,6 @@ function Icon(props) {
         d: "M6,9 L6,4 C6.0065896,1.79359627 7.79359627,0.00658960222 10,0 L10,0 C12.2064037,0.00658960222 13.9934104,1.79359627 14,4 L14,9",
         id: "Path"
       })))))));
-
     case "calendar":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -1105,7 +1073,6 @@ function Icon(props) {
         d: "M0,7 L22,7",
         id: "Path"
       })))))));
-
     case "carousel":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -1178,7 +1145,6 @@ function Icon(props) {
         cy: "20",
         r: "2"
       })))))));
-
     case "cart":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "23px",
@@ -1255,7 +1221,6 @@ function Icon(props) {
         strokeLinejoin: "round",
         points: "3.8 5 21 5 19 15 5 15 3 0 0 0"
       })))))));
-
     case "collection":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -1305,7 +1270,6 @@ function Icon(props) {
         id: "Path",
         points: "8 0 20 0 20 14"
       })))))));
-
     case "close":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -1349,7 +1313,6 @@ function Icon(props) {
         d: "M21,21 L0,0",
         id: "Path"
       })))))));
-
     case "small-close":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "10px",
@@ -1393,7 +1356,6 @@ function Icon(props) {
         d: "M8,8 L0,0",
         id: "Path"
       })))))));
-
     case "checkmark":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "14px",
@@ -1434,7 +1396,6 @@ function Icon(props) {
         id: "Path",
         points: "0 4 4 8 12 0"
       })))))));
-
     case "drag-and-drop":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "47px",
@@ -1486,7 +1447,6 @@ function Icon(props) {
         id: "Path",
         transform: "translate(11.553572, 12.599546) rotate(-5.000000) translate(-11.553572, -12.599546) "
       })))))));
-
     case "download-cloud":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -1533,7 +1493,6 @@ function Icon(props) {
         d: "M16,16 L18,16 C20.209,16 22,14.207 22,11.998 C22,9.801 20.218,7.985 17.975,8.001 C17.718,4.092 14.474,0.998 10.5,0.998 C6.481,0.998 3.21,4.162 3.018,8.134 C1.287,8.573 0,10.129 0,11.998 C0,14.207 1.791,16 4,16 L6,16",
         id: "Path"
       })))))));
-
     case "dot-dot-dot":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "6px",
@@ -1582,7 +1541,6 @@ function Icon(props) {
         cy: "2",
         r: "2"
       })))))));
-
     case "dismiss":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -1636,7 +1594,6 @@ function Icon(props) {
         width: "10",
         height: "10"
       })))))));
-
     case "discount":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "23px",
@@ -1691,7 +1648,6 @@ function Icon(props) {
         d: "M6,8 L6,21",
         id: "Path"
       })))))));
-
     case "edit":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "21px",
@@ -1735,7 +1691,6 @@ function Icon(props) {
         id: "Path",
         points: "4.79166667 18.2083333 0 19.1666667 0.958333333 14.375 15.3333333 0 19.1666667 3.83333333"
       }))))))));
-
     case "edit-content":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
@@ -1785,7 +1740,6 @@ function Icon(props) {
         d: "M2.91666667,11.6666667 L2.91666667,11.6666667 C4.52083333,11.6666667 5.83333333,12.9791667 5.83333333,14.5833333 L5.83333333,14.5833333 C5.83333333,16.1875 4.52083333,17.5 2.91666667,17.5 L2.91666667,17.5 C1.3125,17.5 0,16.1875 0,14.5833333 L0,14.5833333 C0,12.9791667 1.3125,11.6666667 2.91666667,11.6666667 Z",
         id: "Path"
       }))))))));
-
     case "google-play":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "23px",
@@ -1831,7 +1785,6 @@ function Icon(props) {
         width: "24",
         height: "24"
       }))))));
-
     case "engage":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -1878,7 +1831,6 @@ function Icon(props) {
         d: "M6,10 L12,10",
         id: "Path"
       })))))));
-
     case "support":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -1925,7 +1877,6 @@ function Icon(props) {
         id: "Path",
         points: "12 0 12 10 16 7 22 7 22 0"
       })))))));
-
     case "email":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -1969,7 +1920,6 @@ function Icon(props) {
         id: "Path",
         points: "0 8 20 0 16 20"
       })))))));
-
     case "homepage":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "18px",
@@ -2022,7 +1972,6 @@ function Icon(props) {
         d: "M0,4 L16,4",
         id: "Path"
       })))))));
-
     case "modal":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "18px",
@@ -2078,7 +2027,6 @@ function Icon(props) {
         height: "14",
         rx: "1"
       })))))));
-
     case "menu-two":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -2125,7 +2073,6 @@ function Icon(props) {
         d: "M0,15 L22,15",
         id: "Path"
       })))))));
-
     case "large-right-arrow":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "10px",
@@ -2166,7 +2113,6 @@ function Icon(props) {
         id: "Path",
         points: "0 0 8 11 0 22"
       })))))));
-
     case "large-left-arrow":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "10px",
@@ -2207,7 +2153,6 @@ function Icon(props) {
         id: "Path",
         points: "0 0 8 11 0 22"
       })))))));
-
     case "integrations":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "19px",
@@ -2248,7 +2193,6 @@ function Icon(props) {
         id: "Path",
         points: "11.5789474 0 3.47368421 0 0 12.7368421 6.94736842 12.7368421 4.63157895 22 16.2105263 8.10526316 9.26315789 8.10526316"
       })))))));
-
     case "megaphone":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -2315,7 +2259,6 @@ function Icon(props) {
         fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       })))))));
-
     case "product":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
@@ -2367,7 +2310,6 @@ function Icon(props) {
         d: "M9,12 C6.23857625,12 4,14.2385763 4,17 L14,17 C14,14.2385763 11.7614237,12 9,12 L9,12 Z",
         id: "Path"
       })))))));
-
     case "toast":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "18px",
@@ -2423,7 +2365,6 @@ function Icon(props) {
         height: "3",
         rx: "1"
       })))))));
-
     case "settings":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -2494,7 +2435,6 @@ function Icon(props) {
         cy: "19",
         r: "3"
       })))))));
-
     case "show-six-products":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -2543,7 +2483,6 @@ function Icon(props) {
         d: "M16,20 L2,20 C0.8954305,20 0,19.1045695 0,18 L0,0 L8,0 L11,4 L22,4 L22,14",
         id: "Path"
       })))))));
-
     case "images":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -2612,7 +2551,6 @@ function Icon(props) {
         cy: "10",
         r: "2"
       })))))));
-
     case "webpage":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -2674,7 +2612,6 @@ function Icon(props) {
         d: "M5,0 L5,4",
         id: "Path"
       })))))));
-
     case "dismiss":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -2728,7 +2665,6 @@ function Icon(props) {
         width: "10",
         height: "10"
       })))))));
-
     case "draft":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -2775,7 +2711,6 @@ function Icon(props) {
         id: "Path",
         points: "6 16 1 17 2 12 14 0 18 4"
       })))))));
-
     case "apple-developer":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "26px",
@@ -2813,7 +2748,6 @@ function Icon(props) {
         d: "M0,15.9685291 L23.9671875,15.9685291",
         id: "Path-5"
       }))))));
-
     case "warning":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -2872,7 +2806,6 @@ function Icon(props) {
         cy: "16",
         r: "1"
       })))))));
-
     case "order":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -2922,7 +2855,6 @@ function Icon(props) {
         id: "Path",
         points: "22 6 22 16 12 22 0 16 0 5 10 0"
       })))))));
-
     case "homepage":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "18px",
@@ -2975,7 +2907,6 @@ function Icon(props) {
         d: "M0,4 L16,4",
         id: "Path"
       })))))));
-
     case "new-group":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -3014,7 +2945,6 @@ function Icon(props) {
         d: "M18.7826087,24 L1.04347826,24 C0.467181131,24 0,23.5328189 0,22.9565217 L0,5.2173913 C0,4.64109417 0.467181131,4.17391304 1.04347826,4.17391304 L9.39130435,4.17391304 L9.39130435,6.26086957 L2.08695652,6.26086957 L2.08695652,21.9130435 L17.7391304,21.9130435 L17.7391304,14.6086957 L19.826087,14.6086957 L19.826087,22.9565217 C19.826087,23.5328189 19.3589058,24 18.7826087,24 Z",
         id: "Path"
       })))))));
-
     case "image-fit":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
@@ -3079,7 +3009,6 @@ function Icon(props) {
         cy: "8.33333333",
         r: "1.66666667"
       }))))))));
-
     case "text-icon":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "21px",
@@ -3135,7 +3064,6 @@ function Icon(props) {
         d: "M11.3043478,19.1304348 L16.5217391,19.1304348",
         id: "Path"
       }))))))));
-
     case "search-folder":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
@@ -3185,7 +3113,6 @@ function Icon(props) {
         d: "M13.3333333,16.6666667 L1.66666667,16.6666667 C0.746192084,16.6666667 0,15.9204746 0,15 L0,0 L6.66666667,0 L9.16666667,3.33333333 L18.3333333,3.33333333 L18.3333333,11.6666667",
         id: "Path"
       }))))))));
-
     case "remove-image":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "29px",
@@ -3263,7 +3190,6 @@ function Icon(props) {
         strokeWidth: "1.75",
         strokeLinecap: "round"
       })))))));
-
     case "preview-app":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -3312,7 +3238,6 @@ function Icon(props) {
         cy: "17",
         r: "3"
       })))))));
-
     case "new-version":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "21px",
@@ -3359,7 +3284,6 @@ function Icon(props) {
         id: "Path",
         points: "19 18 16 21 13 18"
       })))))));
-
     case "static":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "26px",
@@ -3403,7 +3327,6 @@ function Icon(props) {
         width: "24",
         height: "24"
       })))))));
-
     case "upgrade":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -3484,7 +3407,6 @@ function Icon(props) {
         fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       })))))));
-
     case "phone":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -3531,7 +3453,6 @@ function Icon(props) {
         d: "M13,4 C15.761,4 18,6.239 18,9",
         id: "Path"
       })))))));
-
     case "time":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -3578,7 +3499,6 @@ function Icon(props) {
         id: "Path",
         points: "10 5 10 10 5 10"
       })))))));
-
     case "talkable-friends":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -3628,7 +3548,6 @@ function Icon(props) {
         d: "M16,15 L22,15",
         id: "Path"
       })))))));
-
     case "rewards":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "16px",
@@ -3674,7 +3593,6 @@ function Icon(props) {
         cy: "7",
         r: "7"
       })))))));
-
     case "small-add":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "12px",
@@ -3718,7 +3636,6 @@ function Icon(props) {
         d: "M10,5 L0,5",
         id: "Path"
       })))))));
-
     case "tip":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "14px",
@@ -3740,7 +3657,6 @@ function Icon(props) {
       }, /*#__PURE__*/_react["default"].createElement("path", {
         d: "M191,1220 C187.140083,1220 184,1223.14008 184,1227 C184,1230.85992 187.140083,1234 191,1234 C194.859917,1234 198,1230.85992 198,1227 C198,1223.14008 194.859917,1220 191,1220 Z M190.708333,1231.08333 C190.225333,1231.08333 189.833333,1230.69133 189.833333,1230.20833 C189.833333,1229.72533 190.225333,1229.33333 190.708333,1229.33333 C191.191333,1229.33333 191.583333,1229.72533 191.583333,1230.20833 C191.583333,1230.69133 191.191333,1231.08333 190.708333,1231.08333 Z M193.223083,1225.90742 C193.042833,1226.19617 192.700417,1226.5205 192.19525,1226.881 C191.378,1227.48533 191.400167,1227.6195 191.400167,1228.16667 L189.966917,1228.16667 C189.966917,1227.73908 189.957583,1227.41067 190.188583,1227.01108 C190.336167,1226.755 190.606833,1226.48258 191,1226.19442 C191.471917,1225.85725 191.930417,1225.53233 191.930417,1224.9665 C191.930417,1224.43625 191.476583,1224.24725 190.946333,1224.24725 C190.405583,1224.24725 189.789,1224.424 189.096583,1224.7775 L188.506833,1223.59333 C189.765083,1222.88808 191.75075,1222.569 192.836333,1223.45275 C193.633167,1224.102 193.637833,1225.24358 193.223083,1225.90742 Z"
       }))));
-
     case "android":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "18px",
@@ -3756,7 +3672,8 @@ function Icon(props) {
         fillRule: "evenodd"
       }, /*#__PURE__*/_react["default"].createElement("g", {
         transform: "translate(-262.000000, -1676.000000)",
-        fill: props.fill ? props.fill : _variables.colors.blue // style={{ fill: props.fill ? props.fill: colors.blue }}
+        fill: props.fill ? props.fill : _variables.colors.blue
+        // style={{ fill: props.fill ? props.fill: colors.blue }}
         ,
         fillRule: "nonzero",
         id: "Buttons"
@@ -3783,7 +3700,6 @@ function Icon(props) {
         d: "M17,9 C16.448,9 16,9.448 16,10 L16,15 C16,15.552 16.448,16 17,16 C17.552,16 18,15.552 18,15 L18,10 C18,9.448 17.552,9 17,9 Z",
         id: "Path"
       }))))))));
-
     case "apple":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "21px",
@@ -3826,7 +3742,6 @@ function Icon(props) {
         d: "M14.1,3.45 C14.75,2.616 15.243,1.439 15.064,0.236 C14.002,0.309 12.762,0.984 12.037,1.864 C11.379,2.663 10.836,3.847 11.047,4.999 C12.205,5.035 13.404,4.343 14.1,3.45 L14.1,3.45 Z",
         id: "Path"
       }))))))));
-
     case "push":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -3867,7 +3782,6 @@ function Icon(props) {
         strokeWidth: "1.75",
         strokeLinecap: "round"
       }))))));
-
     case "android-two":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -3969,7 +3883,6 @@ function Icon(props) {
         strokeLinecap: "round",
         strokeLinejoin: "round"
       })))))));
-
     case "apple-two":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
@@ -4013,7 +3926,6 @@ function Icon(props) {
         fill: props.fill ? props.fill : _variables.colors.blue,
         fillRule: "nonzero"
       })))))));
-
     case "subtract":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "12px",
@@ -4038,7 +3950,6 @@ function Icon(props) {
         d: "M10,1 L0,1",
         id: "Path"
       }))));
-
     case "infographic":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "22px",
@@ -4101,7 +4012,6 @@ function Icon(props) {
         stroke: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         points: "10 10 15 7 20 10 15 13"
       }))))));
-
     case "ebook":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "20px",
@@ -4155,7 +4065,6 @@ function Icon(props) {
         id: "Path",
         stroke: props.fill ? props.fill : _variables.colors.blue
       })))))))));
-
     case "guide":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -4216,7 +4125,6 @@ function Icon(props) {
         id: "Path",
         stroke: props.fill ? props.fill : _variables.colors.blue
       }))))));
-
     case "webinar":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -4279,7 +4187,6 @@ function Icon(props) {
         id: "Path",
         stroke: props.fill ? props.fill : _variables.colors.blue
       }))))));
-
     case "download":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -4331,7 +4238,6 @@ function Icon(props) {
         d: "M16,16 L18,16 C20.209,16 22,14.207 22,11.998 C22,9.801 20.218,7.985 17.975,8.001 C17.718,4.092 14.474,0.998 10.5,0.998 C6.481,0.998 3.21,4.162 3.018,8.134 C1.287,8.573 0,10.129 0,11.998 C0,14.207 1.791,16 4,16 L6,16",
         id: "Path"
       })))))))));
-
     case "clock":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "18px",
@@ -4367,7 +4273,6 @@ function Icon(props) {
         strokeWidth: "1",
         stroke: props.fill ? props.fill : _variables.colors.blue
       }))))));
-
     case "blocks":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -4419,7 +4324,6 @@ function Icon(props) {
         d: "M0,11 L22,11",
         id: "Path"
       }))))))));
-
     case "theme":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -4475,7 +4379,6 @@ function Icon(props) {
         id: "Path",
         strokeWidth: "1.75"
       }))))))));
-
     case "menu-icon":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -4521,7 +4424,6 @@ function Icon(props) {
         d: "M0,15 L11,15",
         id: "Path"
       }))))))));
-
     case "checkmark-small":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "14px",
@@ -4560,7 +4462,6 @@ function Icon(props) {
         id: "Path",
         points: "0 4 4 8 12 0"
       })))))));
-
     case "add-section":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "24px",
@@ -4610,7 +4511,6 @@ function Icon(props) {
         d: "M16,5 L6,5",
         id: "Path"
       })))))))));
-
     case "double-dot-dot-dot":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         width: "13px",
@@ -4653,7 +4553,6 @@ function Icon(props) {
         d: "M12.611,16.14288 C12.611,17.1139794 11.82428,17.9006992 10.85318,17.9006992 C9.88208,17.9006992 9.09536,17.1139794 9.09536,16.14288 C9.09536,15.17178 9.88208,14.38506 10.85318,14.38506 C11.82428,14.38506 12.611,15.17178 12.611,16.14288",
         id: "Fill-6"
       }))))));
-
     case "android":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "23px",
@@ -4701,7 +4600,6 @@ function Icon(props) {
         d: "M18.5590603,15.8082656 C18.5590603,16.6601201 19.2432882,17.3507239 20.0874181,17.3507239 L20.0874181,17.3507239 C20.9314853,17.3507239 21.6157758,16.6601201 21.6157758,15.8082656 L21.6157758,9.56927078 C21.6157758,8.71741631 20.9314853,8.02681251 20.0874181,8.02681251 L20.0874181,8.02681251 C19.2432882,8.02681251 18.5590603,8.71741631 18.5590603,9.56927078 L18.5590603,15.8082656 Z",
         id: "Shape"
       }))))))));
-
     case "apple":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "21.85px",
@@ -4722,7 +4620,6 @@ function Icon(props) {
           fill: props.fill ? props.fill : _dashVariables.colorPicker.green100
         }
       }));
-
     case "design":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -4781,7 +4678,6 @@ function Icon(props) {
         id: "Path",
         points: "13 15 15 15 15 13"
       }))))))))));
-
     case "engage":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -4832,7 +4728,6 @@ function Icon(props) {
         d: "M6,10 L12,10",
         id: "Path"
       })))))))));
-
     case "drops":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "21px",
@@ -4918,7 +4813,6 @@ function Icon(props) {
         id: "Line-Copy",
         strokeLinecap: "round"
       }))))))))));
-
     case "stats":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "22px",
@@ -4966,7 +4860,6 @@ function Icon(props) {
         d: "M17.9,18.8 C19.2,16.9 20,14.5 20,12 C20,5.4 14.6,0 8,0 L8,12 L17.9,18.8 Z",
         id: "Path"
       })))))))));
-
     case "settings":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -5041,7 +4934,6 @@ function Icon(props) {
         cy: "19",
         r: "3"
       })))))))));
-
     case "dropdown-arrow":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "10px",
@@ -5076,7 +4968,6 @@ function Icon(props) {
         id: "Path-Copy",
         points: "129 13 125 17 121 13"
       }))))))));
-
     case "chat-multicolored":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -5123,7 +5014,6 @@ function Icon(props) {
         id: "Path",
         stroke: _dashVariables.colorPicker.blue
       }))))))));
-
     case "preview-app-multicolored":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "20px",
@@ -5145,7 +5035,6 @@ function Icon(props) {
         strokeLinecap: "round",
         strokeLinejoin: "round"
       }));
-
     case "duplicate":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "22px",
@@ -5185,7 +5074,6 @@ function Icon(props) {
         cy: "7.27272727",
         r: "7.27272727"
       }))))))));
-
     case "blank-draft":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "18px",
@@ -5226,7 +5114,6 @@ function Icon(props) {
         width: "16",
         height: "18"
       })))))))));
-
     case "current-draft":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "18px",
@@ -5274,7 +5161,6 @@ function Icon(props) {
         width: "16",
         height: "18"
       })))))))));
-
     case "upload-image":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -5338,7 +5224,6 @@ function Icon(props) {
         cy: "5",
         r: "2"
       }))))))))));
-
     case "collections-icon":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "23px",
@@ -5398,7 +5283,6 @@ function Icon(props) {
         id: "Path",
         points: "8 0 20 0 20 14"
       })))))))))));
-
     case "toast-checkmark":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "37px",
@@ -5437,7 +5321,6 @@ function Icon(props) {
         cy: "16.56",
         r: "16.56"
       }))))));
-
     case "toast-alert":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "35px",
@@ -5483,7 +5366,6 @@ function Icon(props) {
         cy: "16.56",
         r: "16.56"
       }))))));
-
     case "popup":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "23px",
@@ -5542,7 +5424,6 @@ function Icon(props) {
         d: "M5.786,6.786 L9.471,17.843",
         id: "Path"
       }))))))));
-
     case "small-drag":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "7px",
@@ -5596,7 +5477,6 @@ function Icon(props) {
         cy: "9",
         r: "1"
       }))))));
-
     case "video":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -5644,7 +5524,6 @@ function Icon(props) {
         id: "Path",
         points: "9 6 15 10 9 14"
       })))))))));
-
     case "users":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "20px",
@@ -5691,7 +5570,6 @@ function Icon(props) {
         d: "M7.5,10.8333333 L7.5,10.8333333 C5.19916667,10.8333333 3.33333333,8.9675 3.33333333,6.66666667 L3.33333333,5 C3.33333333,2.69916667 5.19916667,0.833333333 7.5,0.833333333 L7.5,0.833333333 C9.80083333,0.833333333 11.6666667,2.69916667 11.6666667,5 L11.6666667,6.66666667 C11.6666667,8.9675 9.80083333,10.8333333 7.5,10.8333333 Z",
         id: "Path"
       })))))));
-
     case "app-settings":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -5763,7 +5641,6 @@ function Icon(props) {
         d: "M14.879,14.879 L13.464,13.464",
         id: "Path"
       })))))))));
-
     case "customizations":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -5824,7 +5701,6 @@ function Icon(props) {
         cy: "17",
         r: "1"
       }))))))));
-
     case "account-settings":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "22px",
@@ -5868,7 +5744,6 @@ function Icon(props) {
         d: "M10,15 L10,15 C6.686,15 4,12.314 4,9 L4,6 C4,2.686 6.686,0 10,0 L10,0 C13.314,0 16,2.686 16,6 L16,9 C16,12.314 13.314,15 10,15 Z",
         id: "Path"
       }))))))));
-
     case "listing":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -5918,7 +5793,6 @@ function Icon(props) {
         d: "M11,11 L17,11",
         id: "Path"
       }))))))));
-
     case "upload-cloud":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -5973,7 +5847,6 @@ function Icon(props) {
         d: "M16,16 L18,16 C20.209,16 22,14.207 22,11.998 C22,9.801 20.218,7.985 17.975,8.001 C17.718,4.092 14.474,0.998 10.5,0.998 C6.481,0.998 3.21,4.162 3.018,8.134 C1.287,8.573 0,10.129 0,11.998 C0,14.207 1.791,16 4,16 L6,16",
         id: "Path"
       }))))))))));
-
     case "google":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -6014,7 +5887,6 @@ function Icon(props) {
         fill: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         fillRule: "nonzero"
       })))))))));
-
     case "paypal":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "22px",
@@ -6067,7 +5939,6 @@ function Icon(props) {
         d: "M20.32578,7.05404 C19.25664,12.02654 15.84648,14.65853 10.4365,14.65853 L8.47408,14.65853 L7.0107,24 L10.19359,24 C10.65299,24 11.044,23.66543 11.11568,23.21198 L11.15352,23.01417 L11.88509,18.37774 L11.93225,18.1215 C12.00393,17.66805 12.39494,17.33349 12.85434,17.33349 L13.43522,17.33349 C17.19535,17.33349 20.13958,15.80592 20.99996,11.38793 C21.34476,9.61549 21.17952,8.12845 20.32578,7.05404 Z",
         id: "Path"
       }))))))))));
-
     case "phone-with-border":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "35px",
@@ -6118,7 +5989,6 @@ function Icon(props) {
         d: "M13.7142857,11.1428571 L11.1428571,13.7142857 L4.28571429,6.85714286 L6.85714286,4.28571429 L2.57142857,0 L0,2.57142857 C0,11.0922857 6.90771429,18 15.4285714,18 L18,15.4285714 L13.7142857,11.1428571 Z",
         id: "Path"
       })))))))));
-
     case "automation":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "23px",
@@ -6158,7 +6028,6 @@ function Icon(props) {
         strokeLinejoin: "round",
         points: "13.6666667 2 2 14.8333333 12.5 14.8333333 11.3333333 23 23 10.1666667 12.5 10.1666667"
       }))))))));
-
     case "integrations-header":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "22px",
@@ -6222,7 +6091,6 @@ function Icon(props) {
         d: "M17,1 L17,5",
         id: "Path"
       })))))))));
-
     case "empty-chart-icon":
       return /*#__PURE__*/_react["default"].createElement(DashIconWrapper, _extends({}, props, {
         width: "24px",
@@ -6299,7 +6167,6 @@ function Icon(props) {
         cy: "15",
         r: "5"
       })))))));
-
     case "copy":
       return /*#__PURE__*/_react["default"].createElement(SVG, _extends({
         xmlns: "http://www.w3.org/2000/svg",
@@ -6310,12 +6177,10 @@ function Icon(props) {
         fill: props.fill ? props.fill : _dashVariables.colorPicker.blue,
         d: "M13 0H2C.9 0 0 .9 0 2v13c0 .552.448 1 1 1s1-.448 1-1V2h11c.552 0 1-.448 1-1s-.448-1-1-1zm4 4H6c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H6V6h11v14z"
       }));
-
     default:
       return /*#__PURE__*/_react["default"].createElement("span", null);
   }
 }
-
 var SVG = _styledComponents["default"].svg.withConfig({
   displayName: "Icon__SVG",
   componentId: "sc-1x2dwva-0"
@@ -6328,7 +6193,6 @@ var SVG = _styledComponents["default"].svg.withConfig({
 }, function (props) {
   return props.style ? props.style : null;
 });
-
 var DashIconWrapper = _styledComponents["default"].svg.withConfig({
   displayName: "Icon__DashIconWrapper",
   componentId: "sc-1x2dwva-1"
@@ -6341,20 +6205,16 @@ var DashIconWrapper = _styledComponents["default"].svg.withConfig({
 }, function (props) {
   return props.style ? props.style : null;
 });
-
 Icon.propTypes = {
   type: _propTypes["default"].string.isRequired,
-
   /**
    * margin creating separation to the left of the icon
    */
   iconRight: _propTypes["default"].bool,
-
   /**
    * margin creating separation to the right of the icon
    */
   iconLeft: _propTypes["default"].bool,
-
   /**
    * icon color
    */

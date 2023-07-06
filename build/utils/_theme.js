@@ -3,10 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.gradient = exports.offWhite = exports.scrollingNav = exports.topNav = exports.neutral = exports.invert = exports.base = void 0;
-
+exports.topNav = exports.scrollingNav = exports.offWhite = exports.neutral = exports.invert = exports.gradient = exports.base = void 0;
 var _variables = require("./_variables");
-
 var base = {
   fg: _variables.colors.blue,
   bg: "#FFFFFF",
@@ -15,10 +13,9 @@ var base = {
   body: _variables.colors.blue
 };
 exports.base = base;
-
 var invert = function invert(_ref) {
   var fg = _ref.fg,
-      bg = _ref.bg;
+    bg = _ref.bg;
   return {
     fg: bg,
     bg: fg,
@@ -27,14 +24,12 @@ var invert = function invert(_ref) {
     body: "#FFFFFF"
   };
 };
-
 exports.invert = invert;
-
 var offWhite = function offWhite(_ref2) {
   var fg = _ref2.fg,
-      header = _ref2.header,
-      subtext = _ref2.subtext,
-      body = _ref2.body;
+    header = _ref2.header,
+    subtext = _ref2.subtext,
+    body = _ref2.body;
   return {
     fg: fg,
     header: header,
@@ -43,7 +38,6 @@ var offWhite = function offWhite(_ref2) {
     bg: _variables.colors.offwhite
   };
 };
-
 exports.offWhite = offWhite;
 var neutral = {
   fg: _variables.colors.black,
@@ -53,7 +47,6 @@ var neutral = {
   body: _variables.colors.blue
 };
 exports.neutral = neutral;
-
 var gradient = function gradient(fgColor, bgColor) {
   return {
     fg: _variables.colors.black,
@@ -63,7 +56,6 @@ var gradient = function gradient(fgColor, bgColor) {
     body: _variables.colors.blue
   };
 };
-
 exports.gradient = gradient;
 var topNav = {
   background: "transparent",
