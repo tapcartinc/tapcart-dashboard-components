@@ -4,24 +4,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.CardHeading = void 0;
-
 var _react = _interopRequireDefault(require("react"));
-
 var _styles = require("../charts/styles");
-
 var _moment = _interopRequireDefault(require("moment"));
-
 var _dashVariables = require("../../utils/_dashVariables");
-
 var _ToolTip = require("../../components/ToolTip");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 var CardHeading = function CardHeading(props) {
   var range = props.range,
-      info = props.info,
-      body = props.body,
-      currency = props.currency;
+    info = props.info,
+    body = props.body,
+    currency = props.currency;
   return /*#__PURE__*/_react["default"].createElement(_styles.StyledCardHeader, null, /*#__PURE__*/_react["default"].createElement(_styles.StyledTitleSection, null, /*#__PURE__*/_react["default"].createElement("span", {
     className: "title"
   }, /*#__PURE__*/_react["default"].createElement(_styles.StyledTitle, null, info.name), info.description && /*#__PURE__*/_react["default"].createElement(_ToolTip.ToolTip, {
@@ -30,7 +23,7 @@ var CardHeading = function CardHeading(props) {
     color: _dashVariables.colorPicker.blue
   }, info.description.props ? info.description.props.children.map(function (child) {
     if (typeof child === "string") {
-      return _react["default"].createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement("div", {
         key: child
       }, "".concat(child));
     }
@@ -52,5 +45,4 @@ var CardHeading = function CardHeading(props) {
     }, "\u2193"), currency && /*#__PURE__*/_react["default"].createElement("span", null, currency, " "), statInfo.previousTotal, statInfo.percentChange && /*#__PURE__*/_react["default"].createElement(_react["default"].Fragment, null, "\xA0 (", statInfo.percentChange, "%)")));
   }));
 };
-
 exports.CardHeading = CardHeading;

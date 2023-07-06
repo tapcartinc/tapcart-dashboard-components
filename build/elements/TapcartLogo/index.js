@@ -1,28 +1,18 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.TapcartLogo = void 0;
-
 var _react = _interopRequireDefault(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _dashVariables = require("../../utils/_dashVariables");
-
 var _propTypes = _interopRequireWildcard(require("prop-types"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 var TapcartLogo = function TapcartLogo(props) {
   switch (props.type) {
     case "black-and-blue":
@@ -117,7 +107,6 @@ var TapcartLogo = function TapcartLogo(props) {
         fill: "#000000",
         mask: "url(#mask-2)"
       })))))));
-
     case "white":
       return /*#__PURE__*/_react["default"].createElement(StyledSVG, _extends({
         width: "117px",
@@ -210,14 +199,11 @@ var TapcartLogo = function TapcartLogo(props) {
         fill: "white",
         mask: "url(#mask-2)"
       })))))));
-
     default:
       return /*#__PURE__*/_react["default"].createElement("div", null);
   }
 };
-
 exports.TapcartLogo = TapcartLogo;
-
 var StyledSVG = _styledComponents["default"].svg.withConfig({
   displayName: "TapcartLogo__StyledSVG",
   componentId: "sc-1jxrm4o-0"
@@ -226,18 +212,15 @@ var StyledSVG = _styledComponents["default"].svg.withConfig({
 }, function (props) {
   return props.logoLeft ? "10px" : "0px";
 });
-
 TapcartLogo.propTypes = {
   /**
    * options: "core", "plus", "enterprise"
    */
   type: _propTypes["default"].string.isRequired,
-
   /**
    *  creatins separation to the right of the logo
    */
   logoLeft: _propTypes["default"].bool,
-
   /**
    *  creatins separation to the left of the logo
    */

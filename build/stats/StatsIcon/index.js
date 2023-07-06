@@ -4,22 +4,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.StatsIcon = StatsIcon;
-
 var _react = _interopRequireDefault(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _dashVariables = require("../../utils/_dashVariables");
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function StatsIcon(props) {
   var type = props.type;
-
   switch (type) {
     case "orders":
       return /*#__PURE__*/_react["default"].createElement(StatsIconWrapper, _extends({}, props, {
@@ -73,7 +65,6 @@ function StatsIcon(props) {
         stroke: _dashVariables.colorPicker.blue,
         points: "22 6 22 16 12 22 0 16 0 5 10 0"
       }))))))));
-
     case "session":
       return /*#__PURE__*/_react["default"].createElement(StatsIconWrapper, _extends({}, props, {
         width: "19px",
@@ -119,7 +110,6 @@ function StatsIcon(props) {
         stroke: _dashVariables.colorPicker.green100,
         points: "9.08985025 8 6 10.9189189 10.1198003 10.9189189 7.02995008 13.8378378"
       }))))))));
-
     case "conversion":
       return /*#__PURE__*/_react["default"].createElement(StatsIconWrapper, _extends({}, props, {
         width: "25px",
@@ -165,12 +155,10 @@ function StatsIcon(props) {
         id: "Path",
         stroke: _dashVariables.colorPicker.blue
       }))))))));
-
     default:
       return /*#__PURE__*/_react["default"].createElement("span", null);
   }
 }
-
 var StatsIconWrapper = _styledComponents["default"].svg.withConfig({
   displayName: "StatsIcon__StatsIconWrapper",
   componentId: "sc-143zybq-0"

@@ -1,37 +1,25 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.OptionBoxes = OptionBoxes;
-
 var _react = _interopRequireDefault(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _Icon = require("../elements/Icon");
-
 var _variables = require("../utils/_variables");
-
 var _dashVariables = require("../utils/_dashVariables");
-
 var _propTypes = _interopRequireWildcard(require("prop-types"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function OptionBoxes(props) {
   var options = props.options,
-      clickOption = props.clickOption,
-      selectedOption = props.selectedOption,
-      selectedOptions = props.selectedOptions;
+    clickOption = props.clickOption,
+    selectedOption = props.selectedOption,
+    selectedOptions = props.selectedOptions;
   var currSelectedSingleOption = selectedOption;
   return /*#__PURE__*/_react["default"].createElement(OptionBoxesWrapper, props, options.map(function (option, index) {
     var included = selectedOptions && selectedOptions.filter(function (currOption) {
@@ -56,17 +44,15 @@ function OptionBoxes(props) {
     }), option.label);
   }));
 }
-
 var OptionBoxesWrapper = _styledComponents["default"].ul.withConfig({
   displayName: "OptionBoxes__OptionBoxesWrapper",
-  componentId: "glmpcy-0"
+  componentId: "sc-glmpcy-0"
 })(["display:flex;justify-content:flex-start;width:100%;flex-wrap:wrap;", " font-size:15px;text-transform:capitalize;border-radius:4px;", ";"], _dashVariables.sofiaPro.regular, function (props) {
   return props.style ? props.style : null;
 });
-
 var Option = _styledComponents["default"].li.withConfig({
   displayName: "OptionBoxes__Option",
-  componentId: "glmpcy-1"
+  componentId: "sc-glmpcy-1"
 })(["height:100px;width:", ";font-size:15px;", ";margin-right:-1px;border:1px solid ", ";display:flex;flex-direction:column;background:white;", ";", ";justify-items:center;align-items:center;justify-content:center;color:", ";", ";", ";&:hover{cursor:pointer;}"], function (props) {
   return props.size ? props.size : "33.333%";
 }, function (props) {
@@ -80,7 +66,6 @@ var Option = _styledComponents["default"].li.withConfig({
 }, function (props) {
   return props.last && "border-radius: 0px 3px 3px 0px";
 });
-
 OptionBoxes.propTypes = {
   size: _propTypes["default"].string,
   options: _propTypes["default"].arrayOf(_propTypes["default"].shape({

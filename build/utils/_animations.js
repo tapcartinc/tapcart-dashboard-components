@@ -3,10 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.hoverWithBorder = exports.onClickTransition = exports.hover = exports.transition = void 0;
+exports.transition = exports.onClickTransition = exports.hoverWithBorder = exports.hover = void 0;
 ///////////
 // HOVER
 //////////
+
 var transition = {
   transition: 'transform .2s;'
 };

@@ -4,21 +4,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Loader = void 0;
-
 var _react = _interopRequireDefault(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _variables = require("../utils/_variables");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 var Loader = function Loader(props) {
   return /*#__PURE__*/_react["default"].createElement(LoaderWrapper, props);
 };
-
 exports.Loader = Loader;
-
 var LoaderWrapper = _styledComponents["default"].span.withConfig({
   displayName: "Loader__LoaderWrapper",
   componentId: "sc-11230ix-0"

@@ -1,54 +1,35 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Modal = void 0;
-
 var _react = _interopRequireWildcard(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _reactModal = _interopRequireDefault(require("react-modal"));
-
 var _Button = require("../elements/Button");
-
 var _Icon = require("../elements/Icon");
-
 var _variables = require("../utils/_variables");
-
 var _propTypes = _interopRequireWildcard(require("prop-types"));
-
 var _dashVariables = require("../utils/_dashVariables");
-
 var _Typography = require("../elements/Typography");
-
+var _excluded = ["className"];
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 function ReactModalAdapter(_ref) {
   var className = _ref.className,
-      props = _objectWithoutProperties(_ref, ["className"]);
-
+    props = _objectWithoutProperties(_ref, _excluded);
   var contentClassName = "".concat(className, "__content");
   var overlayClassName = "".concat(className, "__overlay");
   var bodyOpenClassName = "ReactModal__Body--open";
-
   if (props.type === "generic") {
     bodyOpenClassName = "ReactModal__Body--open-full";
   }
-
   return /*#__PURE__*/_react["default"].createElement(_reactModal["default"], _extends({
     portalClassName: className,
     className: contentClassName,
@@ -57,24 +38,19 @@ function ReactModalAdapter(_ref) {
     bodyOpenClassName: bodyOpenClassName
   }, props));
 }
-
 var Modal = function Modal(props) {
   (0, _react.useEffect)(function () {
     _reactModal["default"].setAppElement(props.rootElement || "#root");
   }, []);
   return /*#__PURE__*/_react["default"].createElement(StyledModal, props, /*#__PURE__*/_react["default"].createElement(ModalType, props, props.children));
 };
-
 exports.Modal = Modal;
-
 function ModalType(props) {
   switch (props.type) {
     case "custom":
       return /*#__PURE__*/_react["default"].createElement(MinimalModalStyle, props, props.children);
-
     case "generic":
       return /*#__PURE__*/_react["default"].createElement(GenericModalStyle, props, props.children);
-
     case "dash":
       return /*#__PURE__*/_react["default"].createElement(DashModal, props, /*#__PURE__*/_react["default"].createElement("div", {
         onClick: props.closeModal,
@@ -96,10 +72,8 @@ function ModalType(props) {
         isDisabled: props.saveDisabled,
         onClick: props.save
       }, props.buttonText)));
-
     case "full":
       return /*#__PURE__*/_react["default"].createElement(FullscreenModal, props, props.children);
-
     case "modal-with-graphic":
       return /*#__PURE__*/_react["default"].createElement(ModalWithGraphic, props, /*#__PURE__*/_react["default"].createElement("div", {
         style: {
@@ -142,7 +116,6 @@ function ModalType(props) {
           margin: 20
         }
       })));
-
     case "alert":
       return /*#__PURE__*/_react["default"].createElement(MinimalModalStyle, props, /*#__PURE__*/_react["default"].createElement(ModalHeader, null, /*#__PURE__*/_react["default"].createElement(ModalHeaderLeft, null, /*#__PURE__*/_react["default"].createElement(_Icon.Icon, {
         circleIcon: true,
@@ -171,12 +144,10 @@ function ModalType(props) {
           onClick: button.onClick
         }, button.button));
       })));
-
     default:
       return /*#__PURE__*/_react["default"].createElement("div", null);
   }
 }
-
 var StyledModal = (0, _styledComponents["default"])(ReactModalAdapter).withConfig({
   displayName: "Modal__StyledModal",
   componentId: "sc-10ogjb3-0"
@@ -185,24 +156,20 @@ var StyledModal = (0, _styledComponents["default"])(ReactModalAdapter).withConfi
 }, function (props) {
   return props.type === "dash" && "position: relative;padding: .75em 1em; overflow: scroll; background: ".concat(_dashVariables.colorPicker.modalBg, ";");
 });
-
 var ModalStyle = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalStyle",
   componentId: "sc-10ogjb3-1"
 })(["", ""], function (props) {
   return props.style ? props.style : null;
 });
-
 var StyledDashModalContent = _styledComponents["default"].div.withConfig({
   displayName: "Modal__StyledDashModalContent",
   componentId: "sc-10ogjb3-2"
 })(["background:#ffffff;border:1px solid ", ";height:60vh;min-height:400px;margin-bottom:30px;padding:30px 50px;overflow:scroll;"], _dashVariables.colorPicker.lightGray);
-
 var StyledDashContent = _styledComponents["default"].div.withConfig({
   displayName: "Modal__StyledDashContent",
   componentId: "sc-10ogjb3-3"
 })(["margin-left:0px;text-align:left;padding-left:30px;padding-right:30px;button{margin:0 auto;margin-bottom:10px;}"]);
-
 var DashModal = (0, _styledComponents["default"])(ModalStyle).withConfig({
   displayName: "Modal__DashModal",
   componentId: "sc-10ogjb3-4"
@@ -231,29 +198,24 @@ var FullscreenModal = (0, _styledComponents["default"])(ModalStyle).withConfig({
 })(["position:fixed;width:100%;height:100%;top:0;left:0;", ""], function (props) {
   return props.style ? props.style : null;
 });
-
 var ButtonsStyle = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ButtonsStyle",
   componentId: "sc-10ogjb3-9"
 })(["display:flex;flex-direction:row;align-items:center;justify-content:flex-end;margin-top:25px;", ""], function (props) {
   return props.style ? props.style : null;
 });
-
 var ModalHeader = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalHeader",
   componentId: "sc-10ogjb3-10"
 })(["display:flex;flex-direction:row;justify-content:space-between;align-items:center;position:relative;margin-bottom:30px;"]);
-
 var ModalHeaderLeft = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalHeaderLeft",
   componentId: "sc-10ogjb3-11"
 })(["display:flex;flex-direction:row;justify-items:flex-start;align-items:center;"]);
-
 var ModalGraphic = _styledComponents["default"].div.withConfig({
   displayName: "Modal__ModalGraphic",
   componentId: "sc-10ogjb3-12"
 })(["position:relative;object-fit:cover;height:100%;width:250px;"]);
-
 var CloseIcon = (0, _styledComponents["default"])(_Icon.Icon).withConfig({
   displayName: "Modal__CloseIcon",
   componentId: "sc-10ogjb3-13"
@@ -268,41 +230,34 @@ Modal.propTypes = {
      * Button text to be dispalyed; ex: "Save"
      */
     button: _propTypes["default"].string,
-
     /**
      * Function returned once button is clicked
      */
     onClick: _propTypes["default"].func,
-
     /**
      * Kind of button styling that should be applies
      * options: "primary", "secondary", "delete", "etc..."
      */
     kind: _propTypes["default"].string
   })),
-
   /**
    * Modal header
    */
   header: _propTypes["default"].string,
-
   /**
    * Text rendered under modal header
    * ONLY applies to modal of type "dash"
    */
   description: _propTypes["default"].string,
-
   /**
    * Icon rendered to the left of the modal header
    * ONLY applies to modal of type "alert"
    */
   icon: _propTypes["default"].string,
-
   /**
    *  Modal close function
    */
   closeModal: _propTypes["default"].func,
-
   /**
    * Button text for the button that saves any functionality shown in the children/content of the modal
    *
@@ -311,7 +266,6 @@ Modal.propTypes = {
    */
   buttonText: _propTypes["default"].string,
   isOpen: _propTypes["default"].bool,
-
   /**
    * Modal content/ body of the modal
    */
