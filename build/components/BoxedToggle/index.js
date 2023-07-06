@@ -1,32 +1,20 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.BoxedToggle = BoxedToggle;
-
 var _react = _interopRequireDefault(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _variables = require("../../utils/_variables");
-
 var _dashVariables = require("../../utils/_dashVariables");
-
 var _Icon = require("../../elements/Icon");
-
 var _propTypes = _interopRequireWildcard(require("prop-types"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 function BoxedToggle(props) {
   var SunIcon = function SunIcon(props) {
     return /*#__PURE__*/_react["default"].createElement("svg", _extends({
@@ -85,7 +73,6 @@ function BoxedToggle(props) {
       r: "4.8"
     }))))));
   };
-
   var MoonIcon = function MoonIcon(props) {
     return /*#__PURE__*/_react["default"].createElement("svg", _extends({
       width: "20px",
@@ -129,7 +116,6 @@ function BoxedToggle(props) {
       id: "Path"
     }))))));
   };
-
   switch (props.type) {
     case "basic":
       return /*#__PURE__*/_react["default"].createElement(BoxedToggleWrapper, _extends({
@@ -185,7 +171,6 @@ function BoxedToggle(props) {
           marginTop: 12
         }
       })));
-
     case "day/night":
       return /*#__PURE__*/_react["default"].createElement(BoxedToggleWrapper, _extends({
         style: {
@@ -238,7 +223,6 @@ function BoxedToggle(props) {
           marginTop: 6
         }
       })));
-
     case "apple/android":
       return /*#__PURE__*/_react["default"].createElement(BoxedToggleWrapper, _extends({
         style: {
@@ -297,17 +281,14 @@ function BoxedToggle(props) {
           height: 20
         }
       })));
-
     default:
       return /*#__PURE__*/_react["default"].createElement("div", null);
   }
 }
-
 var BoxedToggleWrapper = _styledComponents["default"].div.withConfig({
   displayName: "BoxedToggle__BoxedToggleWrapper",
   componentId: "sc-1wzsyt4-0"
 })(["position:relative;display:flex;align-items:center;&:hover{cursor:pointer;}"]);
-
 var BoxedToggleLabel = _styledComponents["default"].label.withConfig({
   displayName: "BoxedToggle__BoxedToggleLabel",
   componentId: "sc-1wzsyt4-1"
@@ -320,12 +301,10 @@ var BoxedToggleLabel = _styledComponents["default"].label.withConfig({
 }, function (props) {
   return !props.toggleState ? "left: -1px; top: -1px;" : "right: -1px; top: -1px;";
 });
-
 var BoxedToggleInput = _styledComponents["default"].input.withConfig({
   displayName: "BoxedToggle__BoxedToggleInput",
   componentId: "sc-1wzsyt4-2"
 })(["opacity:0;z-index:1;width:64px;height:32px;transition:0.2s;&:hover{cursor:pointer;}&:checked{transition:0.2s;&::after{content:\"\";display:block;width:32px;height:32px;margin-left:34px;left:0px;transition:0.2s;}}"]);
-
 BoxedToggle.propTypes = {
   /**
    * options: "basic" | "day/night" | "apple/android"
@@ -333,7 +312,6 @@ BoxedToggle.propTypes = {
   type: _propTypes["default"].string.isRequired,
   id: _propTypes["default"].string,
   toggleState: _propTypes["default"].bool,
-
   /** takes the function that sets the state for the toggle in your component */
   onChange: _propTypes["default"].func
 };

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.defaultGraphColors = exports.colorPicker = exports.circularStd = exports.sofiaPro = void 0;
+exports.sofiaPro = exports.defaultGraphColors = exports.colorPicker = exports.circularStd = void 0;
 var sofiaPro = {
   black: "font-family: \"SofiaPro-Black\";\n\tfont-weight: 900;\n\tfont-style: normal;\n  font-display: swap;",
   regular: "font-family: \"SofiaPro\";\n\tfont-weight: 400;\n\tfont-style: normal;\n  font-display: swap;",

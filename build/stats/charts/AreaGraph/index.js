@@ -1,65 +1,39 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.AreaGraph = void 0;
-
 var _react = _interopRequireWildcard(require("react"));
-
 var _reaviz = require("reaviz");
-
 var _styles = require("../styles");
-
 var _Typography = require("../../../elements/Typography");
-
 var _ToolTip = require("../../../components/ToolTip");
-
 var _moment = _interopRequireDefault(require("moment"));
-
 var _dashVariables = require("../../../utils/_dashVariables");
-
 var _CardHeading = require("../../CardHeading");
-
 var _useFormattedNumber = require("../../../hooks/useFormattedNumber");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function convert(d, unit) {
   var date;
-
   if (unit === "WEEKS") {
     // const startDate = moment()
     //   .week(d)
@@ -72,14 +46,13 @@ function convert(d, unit) {
     // date = `${startDate} - ${endDate}`;
     // console.log("startDate", startDate);
     // date = startDate;
+
     return (0, _moment["default"])().week(d).toDate();
   } else {
     date = (0, _moment["default"])(d).toDate();
   }
-
   return date;
 }
-
 var convertData = function convertData(data, unit) {
   return data && data.reduce(function (acc, dataSet, index) {
     if (dataSet.data.length) {
@@ -98,55 +71,47 @@ var convertData = function convertData(data, unit) {
     }
   }, []);
 };
-
 var AreaGraph = function AreaGraph(props) {
   // const updatedData = props.data && convertData(props.data);
   var updatedData = props.data && props.unit === "WEEKS" ? convertData(props.data[0], props.unit) : convertData(props.data, props.unit);
-
   var _useState = (0, _react.useState)(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      currUnit = _useState2[0],
-      setCurrUnit = _useState2[1];
-
+    _useState2 = _slicedToArray(_useState, 2),
+    currUnit = _useState2[0],
+    setCurrUnit = _useState2[1];
   var unitRef = (0, _react.useRef)();
   (0, _react.useEffect)(function () {
     if (props.unit !== currUnit && previousUnit !== props.unit) {
       return setCurrUnit(props.unit);
     }
-
     if (!currUnit && props.unit) {
       return setCurrUnit(props.unit);
     }
   }, [props.unit]);
   var previousUnit = unitRef.current;
   var stacked = props.stacked,
-      currency = props.currency,
-      colors = props.colors,
-      tooltip = props.tooltip,
-      range = props.range,
-      gradient = props.gradient,
-      fillColors = props.fillColors,
-      info = props.info,
-      body = props.body,
-      removeCard = props.removeCard,
-      unit = props.unit;
-
+    currency = props.currency,
+    colors = props.colors,
+    tooltip = props.tooltip,
+    range = props.range,
+    gradient = props.gradient,
+    fillColors = props.fillColors,
+    info = props.info,
+    body = props.body,
+    removeCard = props.removeCard,
+    unit = props.unit;
   var getColorScheme = function getColorScheme() {
     if (colors) {
       return colors;
     } else {
       var _colors = [];
-
       _dashVariables.defaultGraphColors.map(function (color, index) {
         if (index <= updatedData.length) {
           _colors.push(color);
         }
       });
-
       return _colors;
     }
   };
-
   return /*#__PURE__*/_react["default"].createElement(_styles.StyledGraphCard, {
     onClick: function onClick() {
       return removeCard(info);
@@ -172,50 +137,40 @@ var AreaGraph = function AreaGraph(props) {
     data: updatedData
   }));
 };
-
 exports.AreaGraph = AreaGraph;
-
 var GraphDetails = function GraphDetails(_ref) {
   var _React$createElement2;
-
   var data = _ref.data,
-      currency = _ref.currency,
-      getColorScheme = _ref.getColorScheme,
-      stacked = _ref.stacked,
-      gradient = _ref.gradient,
-      fillColors = _ref.fillColors,
-      strokes = _ref.strokes,
-      colors = _ref.colors,
-      info = _ref.info,
-      unit = _ref.unit;
-
+    currency = _ref.currency,
+    getColorScheme = _ref.getColorScheme,
+    stacked = _ref.stacked,
+    gradient = _ref.gradient,
+    fillColors = _ref.fillColors,
+    strokes = _ref.strokes,
+    colors = _ref.colors,
+    info = _ref.info,
+    unit = _ref.unit;
   var getFormat = function getFormat(d) {
     if (unit === "HOURS") {
       return (0, _moment["default"])(d).format("MMM D, h A");
     }
-
     return (0, _moment["default"])(d).format("MMM D, YY");
   };
-
   var getTooltipFormat = function getTooltipFormat(value) {
     if (unit === "WEEKS") {
       return (0, _moment["default"])(value).format("MMM D, YY");
     }
-
     if (unit === "DAYS") {
       return (0, _moment["default"])(value).format("MMM D, YY");
     }
-
     if (unit === "HOURS") {
       return (0, _moment["default"])(value).format("MMM D, h A");
     }
   };
-
   var keys = [];
   data && data.map(function (dataSet) {
     return keys.push(dataSet.key);
   });
-
   if (data && data.length) {
     switch (stacked) {
       case true:
@@ -243,15 +198,17 @@ var GraphDetails = function GraphDetails(_ref) {
               line: null,
               label: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearYAxisTickLabel, {
                 padding: 5,
-                rotation: false // format={(data) =>
+                rotation: false
+                // format={(data) =>
                 //   // useFormattedNumber(data).toLocaleString()
                 //   data
                 // }
-
               })
             })
           }),
-          xAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxis // type="time"
+
+          xAxis: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxis
+          // type="time"
           , {
             type: unit === "DAYS" ? "time" : unit === "WEEKS" ? "value" : "value",
             tickSeries: /*#__PURE__*/_react["default"].createElement(_reaviz.LinearXAxisTickSeries, {
@@ -336,7 +293,6 @@ var GraphDetails = function GraphDetails(_ref) {
             } : null
           })
         })), _defineProperty(_React$createElement2, "data", data), _React$createElement2));
-
       case false:
         return /*#__PURE__*/_react["default"].createElement(_reaviz.AreaChart, {
           width: 470,
@@ -379,7 +335,6 @@ var GraphDetails = function GraphDetails(_ref) {
           }),
           data: data
         });
-
       default:
         return /*#__PURE__*/_react["default"].createElement("div", null, "loading");
     }
@@ -387,10 +342,9 @@ var GraphDetails = function GraphDetails(_ref) {
     return /*#__PURE__*/_react["default"].createElement("div", null, "loading");
   }
 };
-
 var Legend = function Legend(_ref2) {
   var colors = _ref2.colors,
-      data = _ref2.data;
+    data = _ref2.data;
   return /*#__PURE__*/_react["default"].createElement(_reaviz.DiscreteLegend, {
     orientation: "horizontal",
     style: {
